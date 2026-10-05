@@ -19,6 +19,8 @@ summary: Palantir Ontology は名詞（object/link）に加えて動詞（Action
 
 # オントロジーを AI エージェントに適用する: Palantir Ontology/AIP、セマンティックレイヤー、論文と標準
 
+[専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
+
 本稿は、Palantir Ontology/AIP を中心に、エージェント向けのオントロジー／セマンティックレイヤー製品、関連論文（2023〜2026）、標準（RDF 1.2、SHACL 1.2 ほか）を 2026-10-02 時点で調査したものである。主題は「オントロジーを、LLM エージェントが業務データを読み書きするための型付きインタフェースとして使えるか」である。
 
 既存調査（ai-native-company リポジトリ research/technology/ 配下）との関係は次のとおりである。認可調査（authorization_zanzibar_openfga_cedar.md）は「誰が何をしてよいか」を OpenFGA（ReBAC）と Cedar の二層で判定し、判定をランタイムの PDP 一箇所に集約するとした。情報フロー制御調査（information_flow_control_and_exfiltration.md）は、ラベル伝播とシンク検査を Gateway で行うとした。メモリ調査（Zep/Graphiti を扱ったもの）は「メモリを正本にしない」とした。本稿で加わるのは、これらが判定・検査する対象である「業務世界のモデル（名詞と動詞）」そのものをどう型付けするか、という層である。認可・IFC・メモリの各推奨は再説明せず、オントロジー層との写像と差分だけを書く。

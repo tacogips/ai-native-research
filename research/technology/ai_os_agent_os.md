@@ -19,6 +19,8 @@ summary: 研究系の "Agent OS"（AIOS、MemOS 等）は本番基盤として�
 
 # AI OS / Agent OS: 研究・産業動向・相互運用標準（2026）
 
+[専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
+
 本ノートは、自律エージェントを動かす「OS 層」（スケジューラ、メモリ、隔離、ID、権限、監査、相互運用プロトコル）について、研究・産業・標準の 2026-10-02 時点の状況を整理する。既存調査（information_flow_control_and_exfiltration.md の FIDES/CaMeL/lethal trifecta、isolation_durable_execution_prompt_injection.md の隔離と Temporal、authorization_zanzibar_openfga_cedar.md の OpenFGA/Cedar 二層認可、エージェントメモリ調査）は再説明しない。
 
 既存調査との差分は、(a) 「Agent OS」という枠組みで研究・製品がどこまで収束したか、(b) Windows・OpenAI・Meta・Anthropic などの製品がどの OS 機能（ID、隔離、秘密情報、承認、監査）を実装したか、(c) MCP/A2A/Skills 等の標準を OS の syscall/IPC/パッケージとして読み替えた場合の成熟度、の 3 点である。

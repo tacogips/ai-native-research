@@ -20,6 +20,8 @@ summary: 2026 年秋、主要ベンダーのエージェント制御面は「専
 
 # 自律エージェントのエンタープライズ制御面: 主要ベンダー、OSS 部品、OSS/SaaS エージェントの包み方、本番事例
 
+[専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
+
 既存調査（`information_flow_control_and_exfiltration.md`、長期メモリ調査、`authorization_zanzibar_openfga_cedar.md`、`isolation_durable_execution_prompt_injection.md`。いずれも ai-native-company リポジトリ）で扱った IFC / CaMeL / FIDES、memory、Zanzibar / OpenFGA / Cedar の説明は繰り返さず、関係する箇所の接続だけを示す。本稿は、自律エージェントをエンタープライズで運用するための「制御面（コントロールプレーン）」について、hyperscaler / 主要ベンダーの到達点（2026-10-02 時点）、中立な OSS 部品、self-hosted OSS エージェント（Hermes / OpenClaw）と SaaS エージェント（dots 型）の統治パターン、本番運用事例を整理する。
 
 主要な事実は vendor の一次資料（docs、公式ブログ、プレスリリース）で確認した。二次情報は「二次」、裏付けが取れなかったものは「未検証」と明記する。調査途中でセッション全体の WebSearch 上限（200 回）に達し、以降は WebFetch で一次資料を直接読み、一部は subagent 2 体に分担させた。Hermes / dots 単体の適用性は `hermes_openai_dots_enterprise.md`、隔離・機密計算は `agent_sandbox_isolation_confidential_computing.md`、リスク・インシデントは `autonomous_agent_risks_papers_incidents.md`、AI OS と標準は `ai_os_agent_os.md`、オントロジー（Palantir）は `ontology_palantir_kinetic_layer.md` を参照。

@@ -1,59 +1,50 @@
-# ai-native-research
+# 企業AI基盤の調査
 
-機密データを扱い、自律的に改善・運用する「ほぼ無人で AI のみが企業活動を行うシステム（AI-only company）」の設計に向けた調査ノート集。
+機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
-## 前段の調査（ai-native-company リポジトリ, 2026-10-02）
+## 今回の重点調査（2026年10月6日）
 
-本リポジトリの調査は、以下の既存調査を引き継ぐ。各ノートではこれらを再説明せず、差分と接続を書いている。
+[検索認可・漏えい防止・知識構造・自己改善の監査と説明可能性](research/technology/enterprise_data_authorization_audit_xai_20261006.md)
 
-| 既存調査 | 要旨（推奨） |
+検索認可から派生資料の認可へ、漏えい防止から業務の知識構造へ、作業記録から独立した監査と説明の検証へ、問いを発展させる調査を3回・12問実施した。論文、製品の公式資料、標準を比較し、データ項目、監査項目、検証条件を整理した。
+
+## 論文の取得と日本語解説
+
+[論文索引・取得方法](research/papers/README.md)。引用したarXiv論文148本を全て取得し、各論文の概要・重要点・限界・企業設計への示唆を日本語で説明した。PDFの要旨と本文の関連箇所を確認したが、全付録の精読や実験の再現は行っていない。
+
+PDFと抽出本文は `research/papers/arxiv/` にローカル保存する。Gitでは日本語解説、取得台帳、再取得用スクリプトを管理する。保存した版・容量・頁数・ハッシュ値は台帳で確認できる。
+
+## 問いを反復する拡張調査（2026年10月5日）
+
+| 資料 | 内容 |
 |---|---|
-| `research/technology/information_flow_control_and_exfiltration.md`（FIDES、lethal trifecta、contextual integrity） | 外部送信シンクを構造的に持たない。制御フローは Temporal Workflow で固定（CaMeL 的）、データフローは Gateway でラベル伝播とシンク検査（FIDES 的）、権限を持つ引数は出所を検査。Model Armor 等の検出器は適応的攻撃で 90% 超破られるため境界にしない。外部送信・降格・untrusted 由来の権限引数は人の承認に残す |
-| 業務を長期間継続するための AI エージェントのメモリ（MemGPT 以降、Letta / Mem0 / Zep） | メモリを正本にしない（業務 DB が正）。業務記録・エピソード・手続き・人のフィードバックの 4 種を物理分離。エンティティ単位は bi-temporal。判断時の参照メモリは ID と版で固定。自己改善は人のフィードバック → 候補ルール → PR レビュー → 評価回帰 → 段階適用で、メモリへの自動書き込みは禁止 |
-| `research/technology/authorization_zanzibar_openfga_cedar.md` | 二層構成: 「誰が何を見られるか」は OpenFGA（ReBAC）、「この操作をしてよいか（業務ルール）」は Cedar。判定はランタイムの認可サービス（PDP）一箇所に集約 |
-| `research/technology/isolation_durable_execution_prompt_injection.md` | CaMeL の基本、Dual LLM、Rule of Two、隔離、durable execution |
+| [拡張調査](research/strategy/ai_native_recursive_expansion_20261005.md) | 3回・15問。顧客対応・調達・人事・医療周辺・支払い、企業成果、組織、契約、例外処理、採算、退出 |
+| [問いと出典の記録](research/ai_native_recursive_research_log_20261005.md) | 問いの親子関係、34件の一次資料、検証深度、訂正、検算、次の問い。重点調査を含め合計6回・27問 |
 
-## 本リポジトリの調査（2026-10-02）
+## 写真の10テーマを再調査した資料（2026年10月5日）
 
-| ファイル | 内容 |
+| 資料 | 内容 |
 |---|---|
-| [research/technology/hermes_openai_dots_enterprise.md](research/technology/hermes_openai_dots_enterprise.md) | **メイン**: Hermes Agent と OpenAI dots のエンタープライズ適用性、技術的アプローチ、課題、論文・事例 |
-| [research/technology/enterprise_agent_control_plane.md](research/technology/enterprise_agent_control_plane.md) | 主要ベンダーの制御面（AgentCore / Entra Agent ID・Agent 365 / Google / Anthropic / Salesforce / OpenAI）、OSS 部品、OSS・SaaS エージェントの包み方、本番事例 |
-| [research/technology/autonomous_agent_risks_papers_incidents.md](research/technology/autonomous_agent_risks_papers_incidents.md) | 常駐・自己改善エージェントのリスク: 2025〜2026 の論文、実インシデント、エージェント ID 標準、規制 |
-| [research/technology/agent_sandbox_isolation_confidential_computing.md](research/technology/agent_sandbox_isolation_confidential_computing.md) | サンドボックス・コンテナ・microVM、egress / 秘密情報の隔離、Confidential Computing（GPU TEE と物理攻撃）、データ保護技術 |
-| [research/technology/ai_os_agent_os.md](research/technology/ai_os_agent_os.md) | AI OS / Agent OS の研究・産業動向（Windows agentic OS、dots、Muse、Managed Agents）、MCP / A2A / Skills 等の標準 |
-| [research/technology/ontology_palantir_kinetic_layer.md](research/technology/ontology_palantir_kinetic_layer.md) | オントロジーの AI 適用: Palantir Ontology / AIP、セマンティックレイヤー製品、論文、標準、AI-only company への写像 |
+| [共通基盤](research/technology/ai_native_company_platform_20261005.md) | 実行基盤、データ・検索・モデル、機密保護、本人確認、認可、記憶、監査 |
+| [法務・業務設計](research/legal_domain/ai_native_operations_20261005.md) | 法務・評価、業務アプリ、自律度、自己改善、運用、経営・広報 |
+| [企業事例](research/benchmarks/ai_native_companies_20261005.md) | Harper、Panta、Crosby、Basisなどの事例、全社展開、品質低下・撤回・製品停止 |
+| [範囲と検証台帳](research/ai_native_research_audit_20261005.md) | 元写真との対応、出典の検証深度、限定、未実施の社内検証 |
 
-## 追加調査（Apple Notes のコンソール写真からの再調査, 2026-10-05）
+## 前段の調査（2026年10月2日）
 
-今日の画像付きメモにある10テーマを再調査した。法務の一部で AI autonomy / Human on the Loop を実現し、全社へ展開するための比較・設計案を整理している。一次資料で確認した事実、企業の公表値、設計仮説、未検証の社内条件を区別した。
-
-| ファイル | 内容 |
+| 資料 | 内容 |
 |---|---|
-| [共通基盤](research/technology/ai_native_company_platform_20261005.md) | ①実行基盤、②データ・検索・モデル、③機密保護。認可・隔離・メモリ・RAG・モデル最適化・音声・IFC・ID・監査 |
-| [法務・業務設計](research/legal_domain/ai_native_operations_20261005.md) | ④法務・評価、⑥適用設計、⑦再調査の確認点、⑧業務アプリ、⑨自律度・自己改善・運用、⑩経営・IR・広報 |
-| [企業事例・全社展開](research/benchmarks/ai_native_companies_20261005.md) | ⑤Harper、Panta、Crosby、Basis/Baker Tilly、国内外の転換、品質低下・撤回・製品停止 |
-| [調査範囲・検証台帳](research/ai_native_research_audit_20261005.md) | 元写真の全項目との対応、出典の検証深度、修正・限定、社内導入で未実施の検証 |
+| [Hermes・dotsの企業適用](research/technology/hermes_openai_dots_enterprise.md) | 機能、実行権限、企業導入の課題、論文・事例 |
+| [企業向け制御基盤](research/technology/enterprise_agent_control_plane.md) | 主要企業の制御機能、公開ソフトウェア、外部AIを包む構成、運用例 |
+| [常駐・自己改善AIのリスク](research/technology/autonomous_agent_risks_papers_incidents.md) | 論文、実際の問題事例、本人性と委任、規制 |
+| [隔離と機密計算](research/technology/agent_sandbox_isolation_confidential_computing.md) | 隔離環境、外部通信・資格情報の保護、計算中の機密保護 |
+| [AI向けの実行基盤](research/technology/ai_os_agent_os.md) | OSとAIの統合、実行・記憶・道具・標準 |
+| [概念体系と業務データ](research/technology/ontology_palantir_kinetic_layer.md) | Palantir、業務指標の意味の定義、関係図、研究・標準 |
 
-主な再確認は、Harper / Panta の高リスク操作には人の gate が残ること、法務省の AI 法務支援指針が2026年8月に拡充されたこと、Klarna の現行報告は AI と人の併用であること。公開情報で自社の権限・契約・日本語法務性能を保証するものではない。以下の横断的結論と末尾の注記は10月2日の既存調査に対応する。
+別の `ai-native-company` リポジトリで行った、情報の流れの制御、長期記憶、Zanzibar・OpenFGA・Cedarによる認可、隔離と継続実行の調査を前提とする。別リポジトリの資料は、このリポジトリ内のファイルとしては扱わない。
 
-## 横断的な結論（2026-10-02の既存調査）
+## 読み方
 
-1. **エージェントは「信頼できない実行器」、統制は外側の制御面に置く。** Hermes は境界を OS に委ね、dots の Auto-review も決定的保証ではない。ID・PDP・IFC・監査・egress・予算・kill switch は制御面で強制する。
-2. **書き込み経路を型付き Action に一本化する。** Palantir の Ontology Action（提出条件・action log・revert）の形で、Action ↔ Cedar/OpenFGA ↔ IFC ラベル ↔ 監査を 1 対 1 に写像し、エージェントには Action 由来の MCP ツールしか渡さない。
-3. **永続状態への書き込み（メモリ・スキル・cron・設定）は権限昇格として扱う。** 2026 年の研究は攻撃の主戦場が入力から状態に移ったことを示し、自己進化だけで安全性が劣化する（misevolution）。staged → エージェントから見えない固定評価 → 署名昇格に限定する。
-4. **隔離は microVM / gVisor が最低ライン、egress proxy やパッケージミラーも攻撃面。** 秘密情報は credential injection proxy でエージェントに見せない。TEE はクラウド運営者対策には有効だが物理攻撃は防げない。
-5. **非人間 ID とスポンサー、層ごとの kill switch。** Entra Agent ID / Google Agent Identity / IETF WIMSE AIMS が整いつつある。人の承認は不可逆・外部送信・降格・権限拡大の例外処理に絞る（承認の大半はノイズ化する）。
-6. **SaaS エージェント（dots 型）は機密系に直結しない。** 自社 MCP Gateway を唯一の経路にし、ベンダーの compliance API の対象範囲が確認できるまで周辺業務に限定する。
+製品機能の説明、企業の公表値、研究の結果、本調査の設計案、社内で未検証の条件を区別する。過去の報告は記載された日付・版の情報であり、現在の製品条件や性能へ自動的に適用しない。各資料の再検証・訂正も参照する。
 
-## 注記
-
-- 調査は 2026-10-02 時点。各ノートの「未検証」は一次情報で裏付けが取れなかった項目。
-- 調査途中で Web 検索のセッション上限に達したため、後半は一次資料の直接取得（WebFetch / arXiv API / GitHub API）で確認している。
-- 同日に中断分の再検証を実施し、各ファイル末尾の「追補: 再検証ログ」に検証・訂正・追加・残課題を記録した。主な訂正:
-  - Hermes v0.21.0 の「protected instruction files は常に承認」は、実装上はプロジェクト側の AGENTS.md 等だけが対象で、`~/.hermes` 配下の skill・memory は対象外（既定 false の `write_approval` のみ）
-  - Unit 42 の Hermes + DeepSeek 悪用事例では、自律攻撃は失敗し、成功した侵入は手動
-  - Claude Managed Agents は self-hosted sandbox を含め ZDR / HIPAA 対象外
-  - dots はデータレジデンシー対象外（ベータ機能除外）、Business Premium は HIPAA BAA 対象外
-  - Palantir MCP / Ontology MCP の GA は 2026-06-25
-  - Entra Agent ID の GA は 2026-04
+認可・機密保護・監査はAIの外側で強制することを設計の出発点とする。実案件の品質、権限変更の反映時間、契約、費用、説明の忠実性は、公開資料だけでは自社への適合を立証できない。

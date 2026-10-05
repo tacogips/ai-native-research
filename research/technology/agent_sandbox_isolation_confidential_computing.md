@@ -19,6 +19,8 @@ summary: コンテナはセキュリティ境界にならず、信頼しない�
 
 # 自律エージェントの隔離・コンテナ・機密計算・データ保護技術（2026 最新）
 
+[専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
+
 本ノートは、機密データを扱い常時稼働して自己改善する AI-only company の「隔離・計算基盤・データ保護レイヤ」について、2026-10-02 時点の最新ランタイム、バージョン、性能値、インシデント、研究を整理する。既存調査 isolation_durable_execution_prompt_injection.md（ai-native-company リポジトリ）は CaMeL 基本、Dual LLM、Rule of Two、隔離、Temporal を扱っており、基本的な隔離の考え方はそちらを参照する。本ノートはその差分として、sandbox ランタイム/マネージドサービスの最新版と数値、egress・秘密情報の隔離パターン、OpenAI × Hugging Face 事件の教訓、AI 向け Confidential Computing と 2025〜2026 年の物理攻撃、LLM 向けデータ保護技術の到達点を扱う。
 
 情報フロー制御（FIDES, CaMeL, lethal trifecta）は既存調査 information_flow_control_and_exfiltration.md、認可（OpenFGA + Cedar の PDP 集約）は authorization_zanzibar_openfga_cedar.md を参照し、ここでは再説明しない。凡例：**[一次]** はベンダー公式、arXiv、GitHub API で確認したもの。**[二次]** はメディアやブログ経由。**未検証** は一次情報で裏付けが取れなかったもの。なお原調査の途中で WebSearch の上限（200回）に達し、それ以降は WebFetch、arXiv API、GitHub API で一次情報を直接確認している。

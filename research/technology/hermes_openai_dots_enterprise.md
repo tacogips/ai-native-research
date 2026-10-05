@@ -20,6 +20,8 @@ summary: Hermes Agent は「single-tenant personal agent」で境界を OS に�
 
 # 常駐自律エージェントのエンタープライズ適用性: Hermes Agent と OpenAI dots
 
+[専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
+
 既存調査（`information_flow_control_and_exfiltration.md`、長期メモリ調査、`authorization_zanzibar_openfga_cedar.md`、`isolation_durable_execution_prompt_injection.md`。いずれも ai-native-company リポジトリ）で扱った IFC・メモリ・認可・隔離の基本は繰り返さない。本稿は、2026 年に急速に普及した「常駐し、自分でスキルを書き、チャネル越しに働く」2 系統のエージェント — OSS セルフホストの **Hermes Agent（Nous Research）** と SaaS の **OpenAI dots** — について、エンタープライズ（機密データ・無人運用）に適用する可能性、技術的アプローチ、課題、それを裏付ける論文・事例を整理する。
 
 横断的なトピックは別ファイルに分けた: 論文・インシデント・規制は `autonomous_agent_risks_papers_incidents.md`、隔離・機密計算は `agent_sandbox_isolation_confidential_computing.md`、AI OS と標準は `ai_os_agent_os.md`、オントロジー（Palantir）は `ontology_palantir_kinetic_layer.md`、エンタープライズ制御面は `enterprise_agent_control_plane.md`。
