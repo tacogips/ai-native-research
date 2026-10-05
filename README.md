@@ -24,7 +24,20 @@
 | [research/technology/ai_os_agent_os.md](research/technology/ai_os_agent_os.md) | AI OS / Agent OS の研究・産業動向（Windows agentic OS、dots、Muse、Managed Agents）、MCP / A2A / Skills 等の標準 |
 | [research/technology/ontology_palantir_kinetic_layer.md](research/technology/ontology_palantir_kinetic_layer.md) | オントロジーの AI 適用: Palantir Ontology / AIP、セマンティックレイヤー製品、論文、標準、AI-only company への写像 |
 
-## 横断的な結論
+## 追加調査（Apple Notes のコンソール写真からの再調査, 2026-10-05）
+
+今日の画像付きメモにある10テーマを再調査した。法務の一部で AI autonomy / Human on the Loop を実現し、全社へ展開するための比較・設計案を整理している。一次資料で確認した事実、企業の公表値、設計仮説、未検証の社内条件を区別した。
+
+| ファイル | 内容 |
+|---|---|
+| [共通基盤](research/technology/ai_native_company_platform_20261005.md) | ①実行基盤、②データ・検索・モデル、③機密保護。認可・隔離・メモリ・RAG・モデル最適化・音声・IFC・ID・監査 |
+| [法務・業務設計](research/legal_domain/ai_native_operations_20261005.md) | ④法務・評価、⑥適用設計、⑦再調査の確認点、⑧業務アプリ、⑨自律度・自己改善・運用、⑩経営・IR・広報 |
+| [企業事例・全社展開](research/benchmarks/ai_native_companies_20261005.md) | ⑤Harper、Panta、Crosby、Basis/Baker Tilly、国内外の転換、品質低下・撤回・製品停止 |
+| [調査範囲・検証台帳](research/ai_native_research_audit_20261005.md) | 元写真の全項目との対応、出典の検証深度、修正・限定、社内導入で未実施の検証 |
+
+主な再確認は、Harper / Panta の高リスク操作には人の gate が残ること、法務省の AI 法務支援指針が2026年8月に拡充されたこと、Klarna の現行報告は AI と人の併用であること。公開情報で自社の権限・契約・日本語法務性能を保証するものではない。以下の横断的結論と末尾の注記は10月2日の既存調査に対応する。
+
+## 横断的な結論（2026-10-02の既存調査）
 
 1. **エージェントは「信頼できない実行器」、統制は外側の制御面に置く。** Hermes は境界を OS に委ね、dots の Auto-review も決定的保証ではない。ID・PDP・IFC・監査・egress・予算・kill switch は制御面で強制する。
 2. **書き込み経路を型付き Action に一本化する。** Palantir の Ontology Action（提出条件・action log・revert）の形で、Action ↔ Cedar/OpenFGA ↔ IFC ラベル ↔ 監査を 1 対 1 に写像し、エージェントには Action 由来の MCP ツールしか渡さない。
