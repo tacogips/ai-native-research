@@ -1,0 +1,150 @@
+{
+  "checked_date": "2026-10-06",
+  "gadjit_commit": "614b211dd41728603d1edf159483d8421a2a8158",
+  "sources": [
+    {
+      "url": "https://www.immuta.com/platform/provision",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.c1.ai/customers/instacart",
+      "checked_date": "2026-10-06",
+      "evidence_type": "顧客の運用紹介",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.27443",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.02668",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/purview/apply-sensitivity-label-automatically",
+      "checked_date": "2026-10-06",
+      "evidence_type": "公式技術文書",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://github.com/instacart/gadjit/blob/614b211dd41728603d1edf159483d8421a2a8158/gadjit/plugins/scoring/requester_profile_attribute_proximity/plugin.py",
+      "checked_date": "2026-10-06",
+      "evidence_type": "固定版の公開コード",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://github.com/instacart/gadjit/blob/614b211dd41728603d1edf159483d8421a2a8158/gadjit/handler.py",
+      "checked_date": "2026-10-06",
+      "evidence_type": "固定版の公開コード",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://github.com/instacart/gadjit/blob/614b211dd41728603d1edf159483d8421a2a8158/gadjit/plugins/iga/conductorone_cron/plugin.py",
+      "checked_date": "2026-10-06",
+      "evidence_type": "固定版の公開コード",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://documentation.immuta.com/SaaS/request/access-data-products/how-to-guides/requesting-access-to-a-data-product",
+      "checked_date": "2026-10-06",
+      "evidence_type": "公式技術文書",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://documentation.immuta.com/saas/request/review-access-requests/reference-guides/understanding-review-assist",
+      "checked_date": "2026-10-06",
+      "evidence_type": "公式技術文書",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.immuta.com/platform/agentic-data-access",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.c1.ai/labs/research/splitting-ai-agents-to-contain-prompt-injection",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.c1.ai/blog/introducing-agent-runtime-governance",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.sailpoint.com/why-us/trust/ai",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://documentation.sailpoint.com/saas/help/requests/approvals_admin.html",
+      "checked_date": "2026-10-06",
+      "evidence_type": "公式技術文書",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://saviynt.com/blog/intelligent-recommendations-while-requesting-and-approving-access",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://veza.com/product/access-requests/",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.immuta.com/resources/roche-data-mesh-federated-governance-access-control",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://www.immuta.com/",
+      "checked_date": "2026-10-06",
+      "evidence_type": "提供元の説明",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.23474",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2511.20284",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.14341",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.13718",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.00037",
+      "checked_date": "2026-10-06",
+      "evidence_type": "論文の本文",
+      "verification": "本文の関連箇所を確認。実環境の試験と実験再現は未実施。"
+    }
+  ]
+}

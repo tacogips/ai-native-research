@@ -10,6 +10,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/1503.02531",
       "resolved_url": "https://arxiv.org/pdf/1503.02531",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/1503.02531/paper.pdf",
       "text_path": "research/papers/arxiv/1503.02531/paper.txt",
@@ -17,8 +18,7 @@
       "sha256": "74e6689115c539db499f9d6153edecb364059926fd45402454f8210442444c5a",
       "pages": 9,
       "text_characters": 39844,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2004.10964",
@@ -29,6 +29,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2004.10964",
       "resolved_url": "https://arxiv.org/pdf/2004.10964",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2004.10964/paper.pdf",
       "text_path": "research/papers/arxiv/2004.10964/paper.txt",
@@ -36,8 +37,7 @@
       "sha256": "a1dfe1375e615814f6b78c0d431c27e85a1559640c755c6f513eb2dd7b87db41",
       "pages": 19,
       "text_characters": 99813,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2106.09685",
@@ -48,6 +48,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2106.09685",
       "resolved_url": "https://arxiv.org/pdf/2106.09685",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2106.09685/paper.pdf",
       "text_path": "research/papers/arxiv/2106.09685/paper.txt",
@@ -55,8 +56,7 @@
       "sha256": "e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a",
       "pages": 26,
       "text_characters": 115360,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2212.04356",
@@ -67,6 +67,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2212.04356",
       "resolved_url": "https://arxiv.org/pdf/2212.04356",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2212.04356/paper.pdf",
       "text_path": "research/papers/arxiv/2212.04356/paper.txt",
@@ -74,8 +75,7 @@
       "sha256": "6337bde031b2f237547a977b022f831169a7e05b4d9047f29501166d83594566",
       "pages": 28,
       "text_characters": 243767,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2304.02711",
@@ -86,6 +86,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2304.02711",
       "resolved_url": "https://arxiv.org/pdf/2304.02711",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2304.02711/paper.pdf",
       "text_path": "research/papers/arxiv/2304.02711/paper.txt",
@@ -93,8 +94,7 @@
       "sha256": "2de0afde5b966174ca52909332681422507d9c6559bc25f9186e26d5940bd685",
       "pages": 21,
       "text_characters": 72522,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2304.11771",
@@ -108,6 +108,7 @@
       "requested_version": "v2",
       "url": "https://arxiv.org/pdf/2304.11771v2",
       "resolved_url": "https://arxiv.org/pdf/2304.11771v2",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2304.11771/paper.pdf",
       "text_path": "research/papers/arxiv/2304.11771/paper.txt",
@@ -115,8 +116,7 @@
       "sha256": "146dcc7459824f0f1fe4a1f9ac7e8be06ee098b8b34e686a75131b77e42ce951",
       "pages": 106,
       "text_characters": 310485,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2305.04388",
@@ -127,6 +127,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2305.04388",
       "resolved_url": "https://arxiv.org/pdf/2305.04388",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2305.04388/paper.pdf",
       "text_path": "research/papers/arxiv/2305.04388/paper.txt",
@@ -134,8 +135,7 @@
       "sha256": "f68cfafe59e7acef0f03ec0bdcfe34fb64154db8c354e17b0ee11e0c2c4bb708",
       "pages": 32,
       "text_characters": 207338,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2306.05685",
@@ -147,6 +147,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2306.05685",
       "resolved_url": "https://arxiv.org/pdf/2306.05685",
+      "pdf_version": "v4",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2306.05685/paper.pdf",
       "text_path": "research/papers/arxiv/2306.05685/paper.txt",
@@ -154,8 +155,7 @@
       "sha256": "1574982845157569b85c1214bfa9987000384d7a5e3b5fbdcc5a29afec59cb81",
       "pages": 29,
       "text_characters": 108144,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v4"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2307.07697",
@@ -166,6 +166,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2307.07697",
       "resolved_url": "https://arxiv.org/pdf/2307.07697",
+      "pdf_version": "v6",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2307.07697/paper.pdf",
       "text_path": "research/papers/arxiv/2307.07697/paper.txt",
@@ -173,8 +174,7 @@
       "sha256": "a6a5cfcd3725d74f46a5e65b0f7f3dbca76724b06022ec6dec6275773a73873a",
       "pages": 31,
       "text_characters": 124555,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v6"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2307.16648",
@@ -185,6 +185,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2307.16648",
       "resolved_url": "https://arxiv.org/pdf/2307.16648",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2307.16648/paper.pdf",
       "text_path": "research/papers/arxiv/2307.16648/paper.txt",
@@ -192,8 +193,7 @@
       "sha256": "586ea4a177d57a8e2893afafdec6b4004f7dd0b5047f07c534dd174b2fd623a7",
       "pages": 27,
       "text_characters": 88606,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2307.16699",
@@ -204,6 +204,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2307.16699",
       "resolved_url": "https://arxiv.org/pdf/2307.16699",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2307.16699/paper.pdf",
       "text_path": "research/papers/arxiv/2307.16699/paper.txt",
@@ -211,8 +212,7 @@
       "sha256": "c531bd1fed4c8b23a18ee29c7cf1acb5fea6e84a3bb166ed0bfbd23d6168ca97",
       "pages": 5,
       "text_characters": 32440,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2309.15817",
@@ -223,6 +223,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2309.15817",
       "resolved_url": "https://arxiv.org/pdf/2309.15817",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2309.15817/paper.pdf",
       "text_path": "research/papers/arxiv/2309.15817/paper.txt",
@@ -230,8 +231,7 @@
       "sha256": "2d746c512086bd47084e616a0848c6dd25052dfe8b6da64e42e4c5e2f0050722",
       "pages": 70,
       "text_characters": 338890,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2310.01798",
@@ -243,6 +243,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2310.01798",
       "resolved_url": "https://arxiv.org/pdf/2310.01798",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2310.01798/paper.pdf",
       "text_path": "research/papers/arxiv/2310.01798/paper.txt",
@@ -250,8 +251,7 @@
       "sha256": "15e1731e255ec6b217792a1e077926807da77e8e46b69e6c57dda30d67794761",
       "pages": 17,
       "text_characters": 66739,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2310.06816",
@@ -262,6 +262,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2310.06816",
       "resolved_url": "https://arxiv.org/pdf/2310.06816",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2310.06816/paper.pdf",
       "text_path": "research/papers/arxiv/2310.06816/paper.txt",
@@ -269,8 +270,7 @@
       "sha256": "e624561474ea2782e40eb10ddf7e8c515a398343e5f6dac6acb21d795ab45264",
       "pages": 13,
       "text_characters": 68970,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2310.08560",
@@ -281,6 +281,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2310.08560",
       "resolved_url": "https://arxiv.org/pdf/2310.08560",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2310.08560/paper.pdf",
       "text_path": "research/papers/arxiv/2310.08560/paper.txt",
@@ -288,8 +289,7 @@
       "sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0",
       "pages": 13,
       "text_characters": 94090,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2311.07509",
@@ -300,6 +300,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2311.07509",
       "resolved_url": "https://arxiv.org/pdf/2311.07509",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2311.07509/paper.pdf",
       "text_path": "research/papers/arxiv/2311.07509/paper.txt",
@@ -307,8 +308,7 @@
       "sha256": "1a0cb23795bea7f11c64b7f700d9088d2d08b004f7117951030733c8b0ee45c6",
       "pages": 34,
       "text_characters": 115444,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2402.07456",
@@ -319,6 +319,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2402.07456",
       "resolved_url": "https://arxiv.org/pdf/2402.07456",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2402.07456/paper.pdf",
       "text_path": "research/papers/arxiv/2402.07456/paper.txt",
@@ -326,8 +327,7 @@
       "sha256": "05cf9834874c837604161eba30ef1ee472836e9f8045d9432aaf65821178d98b",
       "pages": 22,
       "text_characters": 98032,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2402.11163",
@@ -338,6 +338,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2402.11163",
       "resolved_url": "https://arxiv.org/pdf/2402.11163",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2402.11163/paper.pdf",
       "text_path": "research/papers/arxiv/2402.11163/paper.txt",
@@ -345,8 +346,7 @@
       "sha256": "4a9e56b0f62e77fd9cbb6bd2860661fbf07594a96f3da3eae039dc48282ccf12",
       "pages": 16,
       "text_characters": 92403,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2403.02691",
@@ -357,6 +357,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2403.02691",
       "resolved_url": "https://arxiv.org/pdf/2403.02691",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2403.02691/paper.pdf",
       "text_path": "research/papers/arxiv/2403.02691/paper.txt",
@@ -364,8 +365,7 @@
       "sha256": "49e6e6a4a00c797a772ef905a154c0839426655027d5fa0ce6b632e6c1db2bfb",
       "pages": 36,
       "text_characters": 147574,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2403.04960",
@@ -376,6 +376,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2403.04960",
       "resolved_url": "https://arxiv.org/pdf/2403.04960",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2403.04960/paper.pdf",
       "text_path": "research/papers/arxiv/2403.04960/paper.txt",
@@ -383,8 +384,7 @@
       "sha256": "1b5c4daa16650b006332780d9b450e5ee46bb5047585c03e50f7e7e24d12fc52",
       "pages": 20,
       "text_characters": 164573,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2403.16971",
@@ -395,6 +395,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2403.16971",
       "resolved_url": "https://arxiv.org/pdf/2403.16971",
+      "pdf_version": "v5",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2403.16971/paper.pdf",
       "text_path": "research/papers/arxiv/2403.16971/paper.txt",
@@ -402,8 +403,7 @@
       "sha256": "6ac427d318869e82ea5dc2f1e4b1db91a482c640d527cc3f3812eb2d3f835b12",
       "pages": 34,
       "text_characters": 134043,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v5"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2404.16130",
@@ -414,6 +414,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2404.16130",
       "resolved_url": "https://arxiv.org/pdf/2404.16130",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2404.16130/paper.pdf",
       "text_path": "research/papers/arxiv/2404.16130/paper.txt",
@@ -421,8 +422,7 @@
       "sha256": "730f1a9f38d16689900969a3eeeb1b31e45eda1dcc1f37a043afa90aff76c867",
       "pages": 26,
       "text_characters": 103196,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2405.11706",
@@ -433,6 +433,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2405.11706",
       "resolved_url": "https://arxiv.org/pdf/2405.11706",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2405.11706/paper.pdf",
       "text_path": "research/papers/arxiv/2405.11706/paper.txt",
@@ -440,8 +441,7 @@
       "sha256": "429d6a0914f74f4d5aa3b407a31675cdc67527173053a5e85acbe4693dbe8f22",
       "pages": 16,
       "text_characters": 52428,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2405.14831",
@@ -453,6 +453,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2405.14831",
       "resolved_url": "https://arxiv.org/pdf/2405.14831",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2405.14831/paper.pdf",
       "text_path": "research/papers/arxiv/2405.14831/paper.txt",
@@ -460,8 +461,7 @@
       "sha256": "14671c78fc7de99d83bb9e52e2d5b335d4756066925e67df1a25c0e272133aad",
       "pages": 31,
       "text_characters": 125962,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2405.20362",
@@ -473,6 +473,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2405.20362",
       "resolved_url": "https://arxiv.org/pdf/2405.20362",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2405.20362/paper.pdf",
       "text_path": "research/papers/arxiv/2405.20362/paper.txt",
@@ -480,8 +481,7 @@
       "sha256": "8fd2abfeabd7bc122152146f4ef25102a818816a0149163fbc20d955c017c956",
       "pages": 38,
       "text_characters": 152643,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2406.12045",
@@ -495,6 +495,7 @@
       "requested_version": "v1",
       "url": "https://arxiv.org/pdf/2406.12045v1",
       "resolved_url": "https://arxiv.org/pdf/2406.12045v1",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2406.12045/paper.pdf",
       "text_path": "research/papers/arxiv/2406.12045/paper.txt",
@@ -502,8 +503,7 @@
       "sha256": "0ce66a1763d698c61bb311c3c874bf593d1e9a5bfff11bb35f6f72b981f6da56",
       "pages": 50,
       "text_characters": 147606,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2406.13352",
@@ -514,6 +514,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2406.13352",
       "resolved_url": "https://arxiv.org/pdf/2406.13352",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2406.13352/paper.pdf",
       "text_path": "research/papers/arxiv/2406.13352/paper.txt",
@@ -521,8 +522,7 @@
       "sha256": "349884fffbf43282591c5accffd57bb651632f38e412fe303114941bdd111b05",
       "pages": 26,
       "text_characters": 93886,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2406.13356",
@@ -533,6 +533,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2406.13356",
       "resolved_url": "https://arxiv.org/pdf/2406.13356",
+      "pdf_version": "v4",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2406.13356/paper.pdf",
       "text_path": "research/papers/arxiv/2406.13356/paper.txt",
@@ -540,8 +541,7 @@
       "sha256": "16f69b34ed2543b8c91bb5cf90943893016775dcae0856c6c55f5e48f4f202bd",
       "pages": 32,
       "text_characters": 134546,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v4"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2407.10805",
@@ -552,6 +552,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2407.10805",
       "resolved_url": "https://arxiv.org/pdf/2407.10805",
+      "pdf_version": "v7",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2407.10805/paper.pdf",
       "text_path": "research/papers/arxiv/2407.10805/paper.txt",
@@ -559,8 +560,7 @@
       "sha256": "4436219a91566cbc92a5049d1439e781fabe6924e9e6092051481207da02895d",
       "pages": 25,
       "text_characters": 91432,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v7"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2407.12784",
@@ -571,6 +571,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2407.12784",
       "resolved_url": "https://arxiv.org/pdf/2407.12784",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2407.12784/paper.pdf",
       "text_path": "research/papers/arxiv/2407.12784/paper.txt",
@@ -578,8 +579,7 @@
       "sha256": "008c4b0f70150ae2e26cead8ca6bad773cb4e2cd370154a10db320a456ea5ee1",
       "pages": 22,
       "text_characters": 100400,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2408.15256",
@@ -590,6 +590,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2408.15256",
       "resolved_url": "https://arxiv.org/pdf/2408.15256",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2408.15256/paper.pdf",
       "text_path": "research/papers/arxiv/2408.15256/paper.txt",
@@ -597,8 +598,7 @@
       "sha256": "faf5fe6f85374ea0eafa3f09182a4b3c67f603bc45bd0df7ca8b354d4fcb35b8",
       "pages": 5,
       "text_characters": 32693,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2409.07489",
@@ -609,6 +609,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2409.07489",
       "resolved_url": "https://arxiv.org/pdf/2409.07489",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2409.07489/paper.pdf",
       "text_path": "research/papers/arxiv/2409.07489/paper.txt",
@@ -616,8 +617,7 @@
       "sha256": "cde784f4534004db747840d78193e5a018d8379765bc7f7f3dddfeb5ccfc5ca9",
       "pages": 22,
       "text_characters": 144520,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2409.12917",
@@ -631,6 +631,7 @@
       "requested_version": "v2",
       "url": "https://arxiv.org/pdf/2409.12917v2",
       "resolved_url": "https://arxiv.org/pdf/2409.12917v2",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2409.12917/paper.pdf",
       "text_path": "research/papers/arxiv/2409.12917/paper.txt",
@@ -638,8 +639,7 @@
       "sha256": "b384619e6083baa17bd0bdb7dd7ac8deb4faf7ddb0639c9bfb44723e0deeb90d",
       "pages": 29,
       "text_characters": 108596,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2409.19091",
@@ -650,6 +650,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2409.19091",
       "resolved_url": "https://arxiv.org/pdf/2409.19091",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2409.19091/paper.pdf",
       "text_path": "research/papers/arxiv/2409.19091/paper.txt",
@@ -657,8 +658,7 @@
       "sha256": "d67c3a6280a917369b80c41528ee6bbcf3776ff696cd4c2ff0b40ec2b00d0c4f",
       "pages": 23,
       "text_characters": 176651,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2410.05779",
@@ -669,6 +669,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2410.05779",
       "resolved_url": "https://arxiv.org/pdf/2410.05779",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2410.05779/paper.pdf",
       "text_path": "research/papers/arxiv/2410.05779/paper.txt",
@@ -676,8 +677,7 @@
       "sha256": "bd72eebf611df1366b251c16ce4eac7aac699e519783c586feb2c5c43899347a",
       "pages": 16,
       "text_characters": 72331,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2410.11843",
@@ -690,6 +690,7 @@
       "requested_version": "v1",
       "url": "https://arxiv.org/pdf/2410.11843v1",
       "resolved_url": "https://arxiv.org/pdf/2410.11843v1",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2410.11843/paper.pdf",
       "text_path": "research/papers/arxiv/2410.11843/paper.txt",
@@ -697,8 +698,7 @@
       "sha256": "7d624b8c010c02ad97ad44997691d9d19a9ea18c83d4c49a007a80dc6da2436e",
       "pages": 21,
       "text_characters": 91283,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2411.07763",
@@ -709,6 +709,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2411.07763",
       "resolved_url": "https://arxiv.org/pdf/2411.07763",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2411.07763/paper.pdf",
       "text_path": "research/papers/arxiv/2411.07763/paper.txt",
@@ -716,8 +717,7 @@
       "sha256": "b27bcee967778e864809adf241acd4c250a52d59f4ff301a34b4f4f3e6be7908",
       "pages": 45,
       "text_characters": 202391,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2411.07781",
@@ -728,6 +728,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2411.07781",
       "resolved_url": "https://arxiv.org/pdf/2411.07781",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2411.07781/paper.pdf",
       "text_path": "research/papers/arxiv/2411.07781/paper.txt",
@@ -735,8 +736,7 @@
       "sha256": "66c304641580b58bc6cdfdd56a0fb48ddeee7f7516c50f4982d66901c654f9a7",
       "pages": 46,
       "text_characters": 269168,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2411.09601",
@@ -747,6 +747,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2411.09601",
       "resolved_url": "https://arxiv.org/pdf/2411.09601",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2411.09601/paper.pdf",
       "text_path": "research/papers/arxiv/2411.09601/paper.txt",
@@ -754,8 +755,7 @@
       "sha256": "cdf8b92771b1f06e46c3b9711cec2387418d05f607461ee82b9806556fa6ba22",
       "pages": 7,
       "text_characters": 56488,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2412.14161",
@@ -766,6 +766,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2412.14161",
       "resolved_url": "https://arxiv.org/pdf/2412.14161",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2412.14161/paper.pdf",
       "text_path": "research/papers/arxiv/2412.14161/paper.txt",
@@ -773,8 +774,7 @@
       "sha256": "9574c7c5d4f1592dd1a0c9615cb3c2f8bd130f18b2c2cde4d0bbace4e80ef620",
       "pages": 24,
       "text_characters": 104023,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2412.15235",
@@ -785,6 +785,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2412.15235",
       "resolved_url": "https://arxiv.org/pdf/2412.15235",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2412.15235/paper.pdf",
       "text_path": "research/papers/arxiv/2412.15235/paper.txt",
@@ -792,8 +793,7 @@
       "sha256": "2d468b9505eed20a5c8e4dfa3d2fdd749c98da42bc7cd9418ea2f330d21d626b",
       "pages": 22,
       "text_characters": 127944,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2501.13956",
@@ -805,6 +805,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2501.13956",
       "resolved_url": "https://arxiv.org/pdf/2501.13956",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2501.13956/paper.pdf",
       "text_path": "research/papers/arxiv/2501.13956/paper.txt",
@@ -812,8 +813,7 @@
       "sha256": "d26f7eb599540e8b14d75e7efda58a07661abbb1b864e58323b5768475a15d42",
       "pages": 12,
       "text_characters": 46773,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2502.11371",
@@ -824,6 +824,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2502.11371",
       "resolved_url": "https://arxiv.org/pdf/2502.11371",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2502.11371/paper.pdf",
       "text_path": "research/papers/arxiv/2502.11371/paper.txt",
@@ -831,8 +832,7 @@
       "sha256": "61db034d4bff754013f2012f318a5ce100c82eeaff78b056e809966d30139e9b",
       "pages": 20,
       "text_characters": 144580,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2503.03704",
@@ -843,6 +843,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2503.03704",
       "resolved_url": "https://arxiv.org/pdf/2503.03704",
+      "pdf_version": "v5",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2503.03704/paper.pdf",
       "text_path": "research/papers/arxiv/2503.03704/paper.txt",
@@ -850,8 +851,7 @@
       "sha256": "1f56154cb0a68c839c52bb76ac10a56d39ed605fa4a9fb77a7b7536475fd4b3b",
       "pages": 35,
       "text_characters": 118122,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v5"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2503.11444",
@@ -862,6 +862,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2503.11444",
       "resolved_url": "https://arxiv.org/pdf/2503.11444",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2503.11444/paper.pdf",
       "text_path": "research/papers/arxiv/2503.11444/paper.txt",
@@ -869,8 +870,7 @@
       "sha256": "0ba60e9536aacacc001fcbd18f8748e0e794b743ee73a1d9ad3760e0ee1fb75f",
       "pages": 8,
       "text_characters": 33779,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2503.13657",
@@ -885,6 +885,7 @@
       "requested_version": "v3",
       "url": "https://arxiv.org/pdf/2503.13657v3",
       "resolved_url": "https://arxiv.org/pdf/2503.13657v3",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2503.13657/paper.pdf",
       "text_path": "research/papers/arxiv/2503.13657/paper.txt",
@@ -892,8 +893,7 @@
       "sha256": "1b9e317a2a421e60ca2b2eda4a30844557a01e63286a790890c0ecef32d25460",
       "pages": 47,
       "text_characters": 183560,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2503.18666",
@@ -904,6 +904,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2503.18666",
       "resolved_url": "https://arxiv.org/pdf/2503.18666",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2503.18666/paper.pdf",
       "text_path": "research/papers/arxiv/2503.18666/paper.txt",
@@ -911,8 +912,7 @@
       "sha256": "a8ef39247392eb49e275768c19aca11a111c997e432225dcbcf74dfbf31abae7",
       "pages": 12,
       "text_characters": 104887,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2503.18813",
@@ -928,6 +928,7 @@
       "requested_version": "v2",
       "url": "https://arxiv.org/pdf/2503.18813v2",
       "resolved_url": "https://arxiv.org/pdf/2503.18813v2",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2503.18813/paper.pdf",
       "text_path": "research/papers/arxiv/2503.18813/paper.txt",
@@ -935,8 +936,7 @@
       "sha256": "c3719f6ce73eecf45e3764debef8a3d8ff8c9233b37d128c558b694ec3790cc7",
       "pages": 125,
       "text_characters": 432228,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2504.00018",
@@ -947,6 +947,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2504.00018",
       "resolved_url": "https://arxiv.org/pdf/2504.00018",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2504.00018/paper.pdf",
       "text_path": "research/papers/arxiv/2504.00018/paper.txt",
@@ -954,8 +955,7 @@
       "sha256": "6c4057cb30f41f6a311428c6ef56875a8d733630524deb6e979e182713bc763e",
       "pages": 11,
       "text_characters": 75889,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2504.11703",
@@ -968,6 +968,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2504.11703",
       "resolved_url": "https://arxiv.org/pdf/2504.11703",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2504.11703/paper.pdf",
       "text_path": "research/papers/arxiv/2504.11703/paper.txt",
@@ -975,8 +976,7 @@
       "sha256": "6b96e0a25ddd5df8afc368e8f8f3798bf911caf40db23945617cc5d1f2f36f26",
       "pages": 17,
       "text_characters": 144297,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2504.18575",
@@ -987,6 +987,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2504.18575",
       "resolved_url": "https://arxiv.org/pdf/2504.18575",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2504.18575/paper.pdf",
       "text_path": "research/papers/arxiv/2504.18575/paper.txt",
@@ -994,8 +995,7 @@
       "sha256": "460fd2adff8d31a62f7743fc7f30e63f83ac3ed1c0eca2bd957fd2d5ba0b4290",
       "pages": 22,
       "text_characters": 80568,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2505.01538",
@@ -1006,6 +1006,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2505.01538",
       "resolved_url": "https://arxiv.org/pdf/2505.01538",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2505.01538/paper.pdf",
       "text_path": "research/papers/arxiv/2505.01538/paper.txt",
@@ -1013,8 +1014,7 @@
       "sha256": "fb7fbdc02249db29ac4fb21b4885b4a74225b204a4fa79792dd179e3ccdab212",
       "pages": 28,
       "text_characters": 128173,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2505.05410",
@@ -1025,6 +1025,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2505.05410",
       "resolved_url": "https://arxiv.org/pdf/2505.05410",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2505.05410/paper.pdf",
       "text_path": "research/papers/arxiv/2505.05410/paper.txt",
@@ -1032,8 +1033,7 @@
       "sha256": "546afa672e0c50d50b7c86b7dbacb6f51d200be74f33577012d98cb18eee7600",
       "pages": 18,
       "text_characters": 68983,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2505.21936",
@@ -1044,6 +1044,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2505.21936",
       "resolved_url": "https://arxiv.org/pdf/2505.21936",
+      "pdf_version": "v5",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2505.21936/paper.pdf",
       "text_path": "research/papers/arxiv/2505.21936/paper.txt",
@@ -1051,8 +1052,7 @@
       "sha256": "f0622cc48b654aeeb2f2872162d7df21b3a32ee8475156b254544260e696b3b2",
       "pages": 46,
       "text_characters": 165333,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v5"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2505.22101",
@@ -1063,6 +1063,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2505.22101",
       "resolved_url": "https://arxiv.org/pdf/2505.22101",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2505.22101/paper.pdf",
       "text_path": "research/papers/arxiv/2505.22101/paper.txt",
@@ -1070,8 +1071,7 @@
       "sha256": "39fcd2d6cbd3d75c2d0b7373c56ad8228906306accb6af2a20e74947d50c859e",
       "pages": 10,
       "text_characters": 49082,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2505.22954",
@@ -1082,6 +1082,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2505.22954",
       "resolved_url": "https://arxiv.org/pdf/2505.22954",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2505.22954/paper.pdf",
       "text_path": "research/papers/arxiv/2505.22954/paper.txt",
@@ -1089,8 +1090,7 @@
       "sha256": "13ff4abe0c7ad4a7dd3b4876d19a8bf940e39e70dabbf06065aa774a6c3457de",
       "pages": 72,
       "text_characters": 268747,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2505.23643",
@@ -1103,6 +1103,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2505.23643",
       "resolved_url": "https://arxiv.org/pdf/2505.23643",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2505.23643/paper.pdf",
       "text_path": "research/papers/arxiv/2505.23643/paper.txt",
@@ -1110,8 +1111,7 @@
       "sha256": "5fa1de1932aad07d3bae5c1401782b84c431f3b2c49cb3dfef06654b862b8813",
       "pages": 40,
       "text_characters": 141186,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2506.08837",
@@ -1122,6 +1122,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2506.08837",
       "resolved_url": "https://arxiv.org/pdf/2506.08837",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2506.08837/paper.pdf",
       "text_path": "research/papers/arxiv/2506.08837/paper.txt",
@@ -1129,8 +1130,7 @@
       "sha256": "c202a240f8f03c93cfafd157f218ec790c9e503beeaf80e229fb5e1645ab7f9c",
       "pages": 32,
       "text_characters": 91049,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2506.12618",
@@ -1141,6 +1141,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2506.12618",
       "resolved_url": "https://arxiv.org/pdf/2506.12618",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2506.12618/paper.pdf",
       "text_path": "research/papers/arxiv/2506.12618/paper.txt",
@@ -1148,8 +1149,7 @@
       "sha256": "bab57b96756ff746227c1a29f5d4d62b97c0491e7b39c878ff12b9072f0ee160",
       "pages": 31,
       "text_characters": 133027,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2506.14866",
@@ -1160,6 +1160,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2506.14866",
       "resolved_url": "https://arxiv.org/pdf/2506.14866",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2506.14866/paper.pdf",
       "text_path": "research/papers/arxiv/2506.14866/paper.txt",
@@ -1167,8 +1168,7 @@
       "sha256": "5a1133e729d882a7bc0a19fe3a08889072ecfa3789e7c5c2773aa3c6e18bdb6a",
       "pages": 32,
       "text_characters": 146361,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2507.02735",
@@ -1179,6 +1179,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2507.02735",
       "resolved_url": "https://arxiv.org/pdf/2507.02735",
+      "pdf_version": "v4",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2507.02735/paper.pdf",
       "text_path": "research/papers/arxiv/2507.02735/paper.txt",
@@ -1186,8 +1187,7 @@
       "sha256": "57e798e0f6418e8086c826a6bbb4291e42bfe809e9adb6d0437bddfa3ca2f61e",
       "pages": 20,
       "text_characters": 101033,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v4"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2507.03724",
@@ -1198,6 +1198,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2507.03724",
       "resolved_url": "https://arxiv.org/pdf/2507.03724",
+      "pdf_version": "v4",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2507.03724/paper.pdf",
       "text_path": "research/papers/arxiv/2507.03724/paper.txt",
@@ -1205,8 +1206,7 @@
       "sha256": "9b9b71b61487ce9f01d2de014b80201d9a30c4fd43effa33e84ef7d2db824977",
       "pages": 37,
       "text_characters": 164141,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v4"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2507.08432",
@@ -1217,6 +1217,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2507.08432",
       "resolved_url": "https://arxiv.org/pdf/2507.08432",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2507.08432/paper.pdf",
       "text_path": "research/papers/arxiv/2507.08432/paper.txt",
@@ -1224,8 +1225,7 @@
       "sha256": "84f81d15e13629c6dd8b9236d938fb9f59f5e7263efb0a80c7de75ab7d14d7c0",
       "pages": 12,
       "text_characters": 98830,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2507.09089",
@@ -1236,6 +1236,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2507.09089",
       "resolved_url": "https://arxiv.org/pdf/2507.09089",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2507.09089/paper.pdf",
       "text_path": "research/papers/arxiv/2507.09089/paper.txt",
@@ -1243,8 +1244,7 @@
       "sha256": "3e18d9e097a3163dbae662e8b7c68ace0510be433891994b136ae7730beab25c",
       "pages": 51,
       "text_characters": 164013,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2509.10540",
@@ -1256,6 +1256,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2509.10540",
       "resolved_url": "https://arxiv.org/pdf/2509.10540",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2509.10540/paper.pdf",
       "text_path": "research/papers/arxiv/2509.10540/paper.txt",
@@ -1263,8 +1264,7 @@
       "sha256": "4f0939532c477922ab9d501adbfc3f25433d1df72da7d33e4e7834a2b064969c",
       "pages": 9,
       "text_characters": 52833,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2509.25926",
@@ -1275,6 +1275,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2509.25926",
       "resolved_url": "https://arxiv.org/pdf/2509.25926",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2509.25926/paper.pdf",
       "text_path": "research/papers/arxiv/2509.25926/paper.txt",
@@ -1282,8 +1283,7 @@
       "sha256": "963a67e0b5252e511f8d1ec739733d3472b39b33304ada01e4790db66e528a2e",
       "pages": 15,
       "text_characters": 110414,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2509.26354",
@@ -1295,6 +1295,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2509.26354",
       "resolved_url": "https://arxiv.org/pdf/2509.26354",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2509.26354/paper.pdf",
       "text_path": "research/papers/arxiv/2509.26354/paper.txt",
@@ -1302,8 +1303,7 @@
       "sha256": "a16cab4cc97f1ab360ed19e548ab12c155575b78652b79d602c583327fa8d3bb",
       "pages": 66,
       "text_characters": 241542,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2510.09023",
@@ -1314,6 +1314,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2510.09023",
       "resolved_url": "https://arxiv.org/pdf/2510.09023",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2510.09023/paper.pdf",
       "text_path": "research/papers/arxiv/2510.09023/paper.txt",
@@ -1321,8 +1322,7 @@
       "sha256": "5067f88c7c14a007c205a452e8cdc5bcbf2e87f0958efcc620aa23c81465a9c3",
       "pages": 29,
       "text_characters": 122976,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2510.12469",
@@ -1333,6 +1333,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2510.12469",
       "resolved_url": "https://arxiv.org/pdf/2510.12469",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2510.12469/paper.pdf",
       "text_path": "research/papers/arxiv/2510.12469/paper.txt",
@@ -1340,8 +1341,7 @@
       "sha256": "c8a69d57b6611a73cc162bc84986d5b9e2ef2bc95d79ad1cc70c9cf1d72fe1b7",
       "pages": 22,
       "text_characters": 165006,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2510.15001",
@@ -1352,6 +1352,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2510.15001",
       "resolved_url": "https://arxiv.org/pdf/2510.15001",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2510.15001/paper.pdf",
       "text_path": "research/papers/arxiv/2510.15001/paper.txt",
@@ -1359,8 +1360,26 @@
       "sha256": "dff92e9b2e3c5527cd0fd4bcd01f21d26547783f82e7dd5808fc9151f0d62049",
       "pages": 8,
       "text_characters": 35978,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2510.23474",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2510.23474",
+      "resolved_url": "https://arxiv.org/pdf/2510.23474",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2510.23474/paper.pdf",
+      "text_path": "research/papers/arxiv/2510.23474/paper.txt",
+      "bytes": 243930,
+      "sha256": "3030e80733724d877311d9e74b653fcb81ecdc6ee434325fe85daac122ea1ec7",
+      "pages": 6,
+      "text_characters": 49067,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2511.15203",
@@ -1371,6 +1390,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2511.15203",
       "resolved_url": "https://arxiv.org/pdf/2511.15203",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2511.15203/paper.pdf",
       "text_path": "research/papers/arxiv/2511.15203/paper.txt",
@@ -1378,8 +1398,7 @@
       "sha256": "ada6210f63d42ce6c29a8e8a2bda57c804883b266d8be79de80d9f8e947d00b3",
       "pages": 18,
       "text_characters": 146473,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2511.17959",
@@ -1390,6 +1409,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2511.17959",
       "resolved_url": "https://arxiv.org/pdf/2511.17959",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2511.17959/paper.pdf",
       "text_path": "research/papers/arxiv/2511.17959/paper.txt",
@@ -1397,8 +1417,26 @@
       "sha256": "c474204c4c62de67999f0b288b3712912c9212221007692eaa81e17d7845f602",
       "pages": 19,
       "text_characters": 150662,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-06"
+    },
+    {
+      "id": "2511.20284",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2511.20284",
+      "resolved_url": "https://arxiv.org/pdf/2511.20284",
+      "pdf_version": "v2",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2511.20284/paper.pdf",
+      "text_path": "research/papers/arxiv/2511.20284/paper.txt",
+      "bytes": 1014655,
+      "sha256": "3b588b6687ae045deeeeac9af61b79fc95b32c41667e001d3604d68e34ec15ca",
+      "pages": 18,
+      "text_characters": 141474,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2512.01295",
@@ -1409,6 +1447,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2512.01295",
       "resolved_url": "https://arxiv.org/pdf/2512.01295",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2512.01295/paper.pdf",
       "text_path": "research/papers/arxiv/2512.01295/paper.txt",
@@ -1416,8 +1455,7 @@
       "sha256": "a6afdd4020ac8007ea062fe5c7e6aab1e5200d969a416999282c7a6a63d9d4df",
       "pages": 27,
       "text_characters": 115027,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2512.11147",
@@ -1428,6 +1466,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2512.11147",
       "resolved_url": "https://arxiv.org/pdf/2512.11147",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2512.11147/paper.pdf",
       "text_path": "research/papers/arxiv/2512.11147/paper.txt",
@@ -1435,8 +1474,7 @@
       "sha256": "081d6074ae88302799a47ac2b36e1535dd11f0dce1ea541df0f07d1673f2651d",
       "pages": 23,
       "text_characters": 155913,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2512.12594",
@@ -1447,6 +1485,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2512.12594",
       "resolved_url": "https://arxiv.org/pdf/2512.12594",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2512.12594/paper.pdf",
       "text_path": "research/papers/arxiv/2512.12594/paper.txt",
@@ -1454,8 +1493,7 @@
       "sha256": "3bcee9a85cbcca525351e9b1b184fb86a7ac1641cd15e623fac4c3345fa34491",
       "pages": 19,
       "text_characters": 120536,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2512.12806",
@@ -1466,6 +1504,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2512.12806",
       "resolved_url": "https://arxiv.org/pdf/2512.12806",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2512.12806/paper.pdf",
       "text_path": "research/papers/arxiv/2512.12806/paper.txt",
@@ -1473,8 +1512,7 @@
       "sha256": "90898c44fbb760d35d3fa76c8375f08c859a890e04f292febdab300b94a0c503",
       "pages": 7,
       "text_characters": 39748,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2512.20275",
@@ -1485,6 +1523,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2512.20275",
       "resolved_url": "https://arxiv.org/pdf/2512.20275",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2512.20275/paper.pdf",
       "text_path": "research/papers/arxiv/2512.20275/paper.txt",
@@ -1492,8 +1531,7 @@
       "sha256": "9e30e7b776e7c418e15bfdf54163b8eb248737ef1b32933bcab23f257b00b478",
       "pages": 15,
       "text_characters": 37552,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2601.05504",
@@ -1504,6 +1542,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2601.05504",
       "resolved_url": "https://arxiv.org/pdf/2601.05504",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2601.05504/paper.pdf",
       "text_path": "research/papers/arxiv/2601.05504/paper.txt",
@@ -1511,8 +1550,7 @@
       "sha256": "edd9f7d4356a2c656a3550b2012bd1444871774e1cdfe755f08a4130fe4a9566",
       "pages": 19,
       "text_characters": 61128,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2601.11893",
@@ -1523,6 +1561,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2601.11893",
       "resolved_url": "https://arxiv.org/pdf/2601.11893",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2601.11893/paper.pdf",
       "text_path": "research/papers/arxiv/2601.11893/paper.txt",
@@ -1530,8 +1569,7 @@
       "sha256": "5e6b02bcfb5546c4f6625010bdf0c0fbb4373cebeae146e7e991053ac1688801",
       "pages": 25,
       "text_characters": 217495,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2601.14242",
@@ -1545,6 +1583,7 @@
       "requested_version": "v3",
       "url": "https://arxiv.org/pdf/2601.14242v3",
       "resolved_url": "https://arxiv.org/pdf/2601.14242v3",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2601.14242/paper.pdf",
       "text_path": "research/papers/arxiv/2601.14242/paper.txt",
@@ -1552,8 +1591,7 @@
       "sha256": "4f253c14f71cb9a1d17c9204e5b0812f42280f867d1f189f817286029e63594a",
       "pages": 12,
       "text_characters": 56762,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2601.18511",
@@ -1564,6 +1602,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2601.18511",
       "resolved_url": "https://arxiv.org/pdf/2601.18511",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2601.18511/paper.pdf",
       "text_path": "research/papers/arxiv/2601.18511/paper.txt",
@@ -1571,8 +1610,7 @@
       "sha256": "11fa21050f82f75b8909d6198ab1641baeae11644acde8db280f2d0ff4bd6add",
       "pages": 17,
       "text_characters": 118559,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2602.03117",
@@ -1583,6 +1621,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2602.03117",
       "resolved_url": "https://arxiv.org/pdf/2602.03117",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2602.03117/paper.pdf",
       "text_path": "research/papers/arxiv/2602.03117/paper.txt",
@@ -1590,8 +1629,7 @@
       "sha256": "93f790cf9a1e5a24f88521ec08cb9476db92cf9c53833d143ec1285d30e74706",
       "pages": 26,
       "text_characters": 110505,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2602.08235",
@@ -1602,6 +1640,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2602.08235",
       "resolved_url": "https://arxiv.org/pdf/2602.08235",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2602.08235/paper.pdf",
       "text_path": "research/papers/arxiv/2602.08235/paper.txt",
@@ -1609,8 +1648,7 @@
       "sha256": "b4178cf1b74dcb71ed3777cb0cd6ea3b4bbd76f3b054a0ecb7a876ac80db60b2",
       "pages": 84,
       "text_characters": 361489,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2602.08668",
@@ -1621,6 +1659,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2602.08668",
       "resolved_url": "https://arxiv.org/pdf/2602.08668",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2602.08668/paper.pdf",
       "text_path": "research/papers/arxiv/2602.08668/paper.txt",
@@ -1628,8 +1667,7 @@
       "sha256": "045fc3999eebe95a76d8a3a09f0d8da87538ce7de9722dd5793e2b41f4c6646f",
       "pages": 21,
       "text_characters": 131271,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2602.10133",
@@ -1640,6 +1678,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2602.10133",
       "resolved_url": "https://arxiv.org/pdf/2602.10133",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2602.10133/paper.pdf",
       "text_path": "research/papers/arxiv/2602.10133/paper.txt",
@@ -1647,8 +1686,7 @@
       "sha256": "ac15fc5be0bfcf073df687ef6a951ff5cebc89591b54c59f78c451e4bbc51583",
       "pages": 5,
       "text_characters": 31261,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2602.14211",
@@ -1659,6 +1697,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2602.14211",
       "resolved_url": "https://arxiv.org/pdf/2602.14211",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2602.14211/paper.pdf",
       "text_path": "research/papers/arxiv/2602.14211/paper.txt",
@@ -1666,8 +1705,7 @@
       "sha256": "794fa7db051962731925c85c09dc1e0e650f35b3793850e0a7bfd0362c29c2fa",
       "pages": 22,
       "text_characters": 154444,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2602.20021",
@@ -1679,6 +1717,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2602.20021",
       "resolved_url": "https://arxiv.org/pdf/2602.20021",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2602.20021/paper.pdf",
       "text_path": "research/papers/arxiv/2602.20021/paper.txt",
@@ -1686,8 +1725,7 @@
       "sha256": "80dbb0539b8d1d3f656c224729d1efe8e2994b42c4397d6e853db5c4043e7c76",
       "pages": 84,
       "text_characters": 227936,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2603.02277",
@@ -1698,6 +1736,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2603.02277",
       "resolved_url": "https://arxiv.org/pdf/2603.02277",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2603.02277/paper.pdf",
       "text_path": "research/papers/arxiv/2603.02277/paper.txt",
@@ -1705,8 +1744,7 @@
       "sha256": "621821bcae4a198efa089f0d67b742d8ca22f907ac7d80be98e21bb32b31883f",
       "pages": 35,
       "text_characters": 165918,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2603.08938",
@@ -1717,6 +1755,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2603.08938",
       "resolved_url": "https://arxiv.org/pdf/2603.08938",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2603.08938/paper.pdf",
       "text_path": "research/papers/arxiv/2603.08938/paper.txt",
@@ -1724,8 +1763,7 @@
       "sha256": "0c3f7d589aaaa8e00638ae08c69d7073c6963d5a473b8599b41af60b9ee2b56b",
       "pages": 6,
       "text_characters": 52535,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2603.13424",
@@ -1736,6 +1774,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2603.13424",
       "resolved_url": "https://arxiv.org/pdf/2603.13424",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2603.13424/paper.pdf",
       "text_path": "research/papers/arxiv/2603.13424/paper.txt",
@@ -1743,8 +1782,26 @@
       "sha256": "263ef11677e553fae34a029b5d0c67cf9032508b01aad6179ea292923da7c410",
       "pages": 6,
       "text_characters": 34431,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2603.14341",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2603.14341",
+      "resolved_url": "https://arxiv.org/pdf/2603.14341",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2603.14341/paper.pdf",
+      "text_path": "research/papers/arxiv/2603.14341/paper.txt",
+      "bytes": 400882,
+      "sha256": "a644c846c6fe6f27d3f9201d74845b4c2c404c77dd7735aee9ea2c2d9c357b9c",
+      "pages": 14,
+      "text_characters": 64396,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2603.15714",
@@ -1755,6 +1812,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2603.15714",
       "resolved_url": "https://arxiv.org/pdf/2603.15714",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2603.15714/paper.pdf",
       "text_path": "research/papers/arxiv/2603.15714/paper.txt",
@@ -1762,8 +1820,7 @@
       "sha256": "98a028477662b0410c6740f47ce940be6c6045ba8a879b659e91967cbf56f44d",
       "pages": 38,
       "text_characters": 146549,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2603.24775",
@@ -1774,6 +1831,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2603.24775",
       "resolved_url": "https://arxiv.org/pdf/2603.24775",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2603.24775/paper.pdf",
       "text_path": "research/papers/arxiv/2603.24775/paper.txt",
@@ -1781,8 +1839,7 @@
       "sha256": "d9b9b6105a33c05326bab85bf408527e2725f4b47affceff2711cfbb7f4800ba",
       "pages": 17,
       "text_characters": 63716,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2603.27517",
@@ -1793,6 +1850,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2603.27517",
       "resolved_url": "https://arxiv.org/pdf/2603.27517",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2603.27517/paper.pdf",
       "text_path": "research/papers/arxiv/2603.27517/paper.txt",
@@ -1800,8 +1858,7 @@
       "sha256": "0260d88e74d3914aae167ec707ee83067e7530ec24051a2ac292457edcf5258d",
       "pages": 28,
       "text_characters": 95835,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.00169",
@@ -1812,6 +1869,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.00169",
       "resolved_url": "https://arxiv.org/pdf/2604.00169",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.00169/paper.pdf",
       "text_path": "research/papers/arxiv/2604.00169/paper.txt",
@@ -1819,8 +1877,7 @@
       "sha256": "5519d140e1e2ce45f768cc1de4684a84fed71a39a56ce8869b4a838b883d776f",
       "pages": 12,
       "text_characters": 97137,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.01344",
@@ -1831,6 +1888,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.01344",
       "resolved_url": "https://arxiv.org/pdf/2604.01344",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.01344/paper.pdf",
       "text_path": "research/papers/arxiv/2604.01344/paper.txt",
@@ -1838,8 +1896,7 @@
       "sha256": "993c146f9236898a04dc93ab9773d9a24843b0374a2c533649316863611731b5",
       "pages": 19,
       "text_characters": 63146,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.03081",
@@ -1850,6 +1907,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.03081",
       "resolved_url": "https://arxiv.org/pdf/2604.03081",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.03081/paper.pdf",
       "text_path": "research/papers/arxiv/2604.03081/paper.txt",
@@ -1857,8 +1915,7 @@
       "sha256": "a65fe077f3d28a8a8273804428d109aeae51cc2a571e84636293c0ddcaee69bf",
       "pages": 12,
       "text_characters": 109678,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.08304",
@@ -1869,6 +1926,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.08304",
       "resolved_url": "https://arxiv.org/pdf/2604.08304",
+      "pdf_version": "v3",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.08304/paper.pdf",
       "text_path": "research/papers/arxiv/2604.08304/paper.txt",
@@ -1876,8 +1934,7 @@
       "sha256": "f2577f7ba47ad2a190aa7561cb31bd4767a7a11fe36bb4a757649d08abfd7483",
       "pages": 19,
       "text_characters": 113472,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v3"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2604.08552",
@@ -1888,6 +1945,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.08552",
       "resolved_url": "https://arxiv.org/pdf/2604.08552",
+      "pdf_version": "not-detected",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.08552/paper.pdf",
       "text_path": "research/papers/arxiv/2604.08552/paper.txt",
@@ -1895,8 +1953,7 @@
       "sha256": "ccc6f7759063ff4517afedb54a6ac11f506af2a863b3b1ba4d2fc4d72d439f4f",
       "pages": 14,
       "text_characters": 57362,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "not-detected"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.18231",
@@ -1907,6 +1964,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.18231",
       "resolved_url": "https://arxiv.org/pdf/2604.18231",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.18231/paper.pdf",
       "text_path": "research/papers/arxiv/2604.18231/paper.txt",
@@ -1914,8 +1972,7 @@
       "sha256": "2c75012dda6ffd07bd005c838681857f2e8fa0ef53fa0adc25b105ad6c84fa31",
       "pages": 8,
       "text_characters": 58422,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.23178",
@@ -1929,6 +1986,7 @@
       "requested_version": "v2",
       "url": "https://arxiv.org/pdf/2604.23178v2",
       "resolved_url": "https://arxiv.org/pdf/2604.23178v2",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.23178/paper.pdf",
       "text_path": "research/papers/arxiv/2604.23178/paper.txt",
@@ -1936,8 +1994,7 @@
       "sha256": "5625b462b33aff2e5449c2095ee02845f087ef6cd3a89f90a7d2ca7ad9654701",
       "pages": 22,
       "text_characters": 81438,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.23280",
@@ -1948,6 +2005,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.23280",
       "resolved_url": "https://arxiv.org/pdf/2604.23280",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.23280/paper.pdf",
       "text_path": "research/papers/arxiv/2604.23280/paper.txt",
@@ -1955,8 +2013,7 @@
       "sha256": "fc7e57732addc2c9f2aca9db8b5fd1255b1e8215ba4c32f11d69979b7e31c6ad",
       "pages": 19,
       "text_characters": 99220,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.25149",
@@ -1968,6 +2025,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2604.25149",
       "resolved_url": "https://arxiv.org/pdf/2604.25149",
+      "pdf_version": "not-detected",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.25149/paper.pdf",
       "text_path": "research/papers/arxiv/2604.25149/paper.txt",
@@ -1975,8 +2033,7 @@
       "sha256": "d45f3731583760cda45ec9193cf99b88a1e4db935df60d677a4884dee3ee1250",
       "pages": 25,
       "text_characters": 72405,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "not-detected"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2604.26851",
@@ -1990,6 +2047,7 @@
       "requested_version": "v1",
       "url": "https://arxiv.org/pdf/2604.26851v1",
       "resolved_url": "https://arxiv.org/pdf/2604.26851v1",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2604.26851/paper.pdf",
       "text_path": "research/papers/arxiv/2604.26851/paper.txt",
@@ -1997,8 +2055,7 @@
       "sha256": "8009026f5e9f5570ba8760888b7bfee9bdf0fed9fc89c23e95b6c1b5bec05cfa",
       "pages": 22,
       "text_characters": 102113,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.03213",
@@ -2009,6 +2066,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.03213",
       "resolved_url": "https://arxiv.org/pdf/2605.03213",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.03213/paper.pdf",
       "text_path": "research/papers/arxiv/2605.03213/paper.txt",
@@ -2016,8 +2074,7 @@
       "sha256": "981217bdf8f81e0fade145752ce48d658758e2f56b3f601b67c04a21992b768f",
       "pages": 20,
       "text_characters": 154116,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.08442",
@@ -2029,6 +2086,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.08442",
       "resolved_url": "https://arxiv.org/pdf/2605.08442",
+      "pdf_version": "v5",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.08442/paper.pdf",
       "text_path": "research/papers/arxiv/2605.08442/paper.txt",
@@ -2036,8 +2094,7 @@
       "sha256": "05b659019cf0c2e43c20c45d402400ba07e458b8526a6e235a654284acb9beab",
       "pages": 32,
       "text_characters": 142427,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v5"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.09045",
@@ -2048,6 +2105,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.09045",
       "resolved_url": "https://arxiv.org/pdf/2605.09045",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.09045/paper.pdf",
       "text_path": "research/papers/arxiv/2605.09045/paper.txt",
@@ -2055,8 +2113,7 @@
       "sha256": "06e699209e2bd6ba5fe5d34160261c4e96c6bb1e61979818d6e19de95c0cb396",
       "pages": 14,
       "text_characters": 86611,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.11418",
@@ -2068,6 +2125,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.11418",
       "resolved_url": "https://arxiv.org/pdf/2605.11418",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.11418/paper.pdf",
       "text_path": "research/papers/arxiv/2605.11418/paper.txt",
@@ -2075,8 +2133,7 @@
       "sha256": "92f1ef46b10ecdaa08060ec2a66530fcd3a859b2984a2d8c10accca934bb00eb",
       "pages": 31,
       "text_characters": 117546,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.13471",
@@ -2088,6 +2145,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.13471",
       "resolved_url": "https://arxiv.org/pdf/2605.13471",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.13471/paper.pdf",
       "text_path": "research/papers/arxiv/2605.13471/paper.txt",
@@ -2095,8 +2153,7 @@
       "sha256": "c2ddd8158d47f8e7ac62b8e624170a1736d76f4c3e0b949702e8502c238b1db5",
       "pages": 8,
       "text_characters": 60218,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.14932",
@@ -2107,6 +2164,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.14932",
       "resolved_url": "https://arxiv.org/pdf/2605.14932",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.14932/paper.pdf",
       "text_path": "research/papers/arxiv/2605.14932/paper.txt",
@@ -2114,8 +2172,7 @@
       "sha256": "b884928875a1da0ecd6d7da4d64a491e97994b1b683a1b3a1273cce0488fc159",
       "pages": 17,
       "text_characters": 125548,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.15338",
@@ -2127,6 +2184,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.15338",
       "resolved_url": "https://arxiv.org/pdf/2605.15338",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.15338/paper.pdf",
       "text_path": "research/papers/arxiv/2605.15338/paper.txt",
@@ -2134,8 +2192,7 @@
       "sha256": "7d816dd4e468bf1fe688a592f4aa097826d504bf8acec3077fd5b7a679ce011c",
       "pages": 86,
       "text_characters": 326940,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.17634",
@@ -2146,6 +2203,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.17634",
       "resolved_url": "https://arxiv.org/pdf/2605.17634",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.17634/paper.pdf",
       "text_path": "research/papers/arxiv/2605.17634/paper.txt",
@@ -2153,8 +2211,7 @@
       "sha256": "2524e213a3d38c43fc70b5ff944fa8903608a68d210fa4c10a203af411094f28",
       "pages": 45,
       "text_characters": 147198,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.18930",
@@ -2165,6 +2222,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.18930",
       "resolved_url": "https://arxiv.org/pdf/2605.18930",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.18930/paper.pdf",
       "text_path": "research/papers/arxiv/2605.18930/paper.txt",
@@ -2172,8 +2230,7 @@
       "sha256": "03271fee40e7cff67e502e8b50c6748c38a9954ce6bf17b36ea7958b6839bcd3",
       "pages": 23,
       "text_characters": 85038,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2605.22781",
@@ -2184,6 +2241,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2605.22781",
       "resolved_url": "https://arxiv.org/pdf/2605.22781",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2605.22781/paper.pdf",
       "text_path": "research/papers/arxiv/2605.22781/paper.txt",
@@ -2191,8 +2249,7 @@
       "sha256": "74c96242a33cb0aa72a614520e886fcb8c4bec58bed381841936cd742762ef41",
       "pages": 15,
       "text_characters": 120645,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.01508",
@@ -2203,6 +2260,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.01508",
       "resolved_url": "https://arxiv.org/pdf/2606.01508",
+      "pdf_version": "not-detected",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.01508/paper.pdf",
       "text_path": "research/papers/arxiv/2606.01508/paper.txt",
@@ -2210,8 +2268,26 @@
       "sha256": "391f9f2a359f10303e957e219a04715989f20cf14b782019c51b7fd52de1508d",
       "pages": 24,
       "text_characters": 60945,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "not-detected"
+      "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2606.02668",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2606.02668",
+      "resolved_url": "https://arxiv.org/pdf/2606.02668",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2606.02668/paper.pdf",
+      "text_path": "research/papers/arxiv/2606.02668/paper.txt",
+      "bytes": 219428,
+      "sha256": "f3eac37c97efb996d1e66f99691782b72ebd96ed4afd9df38269330da8ca0efa",
+      "pages": 7,
+      "text_characters": 54743,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2606.04141",
@@ -2222,6 +2298,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.04141",
       "resolved_url": "https://arxiv.org/pdf/2606.04141",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.04141/paper.pdf",
       "text_path": "research/papers/arxiv/2606.04141/paper.txt",
@@ -2229,8 +2306,7 @@
       "sha256": "2d95945b31e7888661b82938384e994e91a1fe978cc6808d5d9c1b4c61dcf23a",
       "pages": 9,
       "text_characters": 57362,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.04329",
@@ -2241,6 +2317,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.04329",
       "resolved_url": "https://arxiv.org/pdf/2606.04329",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.04329/paper.pdf",
       "text_path": "research/papers/arxiv/2606.04329/paper.txt",
@@ -2248,8 +2325,7 @@
       "sha256": "36999ed0cb2d15b93897fa1f8be9ff2291516b633889e16e377f19db4288f482",
       "pages": 14,
       "text_characters": 93715,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.04425",
@@ -2260,6 +2336,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.04425",
       "resolved_url": "https://arxiv.org/pdf/2606.04425",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.04425/paper.pdf",
       "text_path": "research/papers/arxiv/2606.04425/paper.txt",
@@ -2267,8 +2344,7 @@
       "sha256": "0252ad96426214977c6a6f6d552c2eb8fb4cfd0f5cdcc51e8b140fb7c9a7b9eb",
       "pages": 11,
       "text_characters": 66863,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.05233",
@@ -2280,6 +2356,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.05233",
       "resolved_url": "https://arxiv.org/pdf/2606.05233",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.05233/paper.pdf",
       "text_path": "research/papers/arxiv/2606.05233/paper.txt",
@@ -2287,8 +2364,7 @@
       "sha256": "28b4f0b6912a35f891bf363ff57af88d2a439bea9b17e514546e0798bde8becf",
       "pages": 24,
       "text_characters": 102205,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.05634",
@@ -2299,6 +2375,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.05634",
       "resolved_url": "https://arxiv.org/pdf/2606.05634",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.05634/paper.pdf",
       "text_path": "research/papers/arxiv/2606.05634/paper.txt",
@@ -2306,8 +2383,7 @@
       "sha256": "af3a672b511a2bf0fa1a42b18bb19266b8d82ca01e9a6302193da17eebd3710b",
       "pages": 24,
       "text_characters": 139464,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.08433",
@@ -2318,6 +2394,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.08433",
       "resolved_url": "https://arxiv.org/pdf/2606.08433",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.08433/paper.pdf",
       "text_path": "research/papers/arxiv/2606.08433/paper.txt",
@@ -2325,8 +2402,7 @@
       "sha256": "8930cdde1411e70340b3b1d76f1bb1d6aa28534f7e6c96f7c70a6f6a3b79b9d9",
       "pages": 61,
       "text_characters": 216535,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.23075",
@@ -2337,6 +2413,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.23075",
       "resolved_url": "https://arxiv.org/pdf/2606.23075",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.23075/paper.pdf",
       "text_path": "research/papers/arxiv/2606.23075/paper.txt",
@@ -2344,8 +2421,7 @@
       "sha256": "58066b748368b8c7afa0e0352c39d9a853c3058568c005e8feefa18852ba19a5",
       "pages": 60,
       "text_characters": 252143,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2606.27379",
@@ -2357,6 +2433,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2606.27379",
       "resolved_url": "https://arxiv.org/pdf/2606.27379",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2606.27379/paper.pdf",
       "text_path": "research/papers/arxiv/2606.27379/paper.txt",
@@ -2364,8 +2441,7 @@
       "sha256": "4dccec29930634cfaba0440489b27dd4a34992a2ef278b4af1649fe4a22d3f3f",
       "pages": 13,
       "text_characters": 84777,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2607.05518",
@@ -2378,6 +2454,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2607.05518",
       "resolved_url": "https://arxiv.org/pdf/2607.05518",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2607.05518/paper.pdf",
       "text_path": "research/papers/arxiv/2607.05518/paper.txt",
@@ -2385,8 +2462,26 @@
       "sha256": "172d027ecd92d9c21cc12d781f7552049060a0af34dd505abf61566932cda64a",
       "pages": 17,
       "text_characters": 75589,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2607.13718",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2607.13718",
+      "resolved_url": "https://arxiv.org/pdf/2607.13718",
+      "pdf_version": "v2",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2607.13718/paper.pdf",
+      "text_path": "research/papers/arxiv/2607.13718/paper.txt",
+      "bytes": 305673,
+      "sha256": "0004b537084eb86b219bc7df770c04a746a43f1ab4e1b5a1e9f86c9eaad7ddae",
+      "pages": 15,
+      "text_characters": 93210,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2607.22571",
@@ -2398,6 +2493,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2607.22571",
       "resolved_url": "https://arxiv.org/pdf/2607.22571",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2607.22571/paper.pdf",
       "text_path": "research/papers/arxiv/2607.22571/paper.txt",
@@ -2405,8 +2501,7 @@
       "sha256": "fa83d63a274e370e5a924544d954002e75e3c8b8256c077683633f0e6fc8ae04",
       "pages": 16,
       "text_characters": 84395,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2607.24300",
@@ -2419,6 +2514,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2607.24300",
       "resolved_url": "https://arxiv.org/pdf/2607.24300",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2607.24300/paper.pdf",
       "text_path": "research/papers/arxiv/2607.24300/paper.txt",
@@ -2426,8 +2522,7 @@
       "sha256": "0a1434ea1c9b533855c856bf49ff5271d1bcc70aa1cb3ac8f040250b5f46f372",
       "pages": 9,
       "text_characters": 65118,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2607.24625",
@@ -2439,6 +2534,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2607.24625",
       "resolved_url": "https://arxiv.org/pdf/2607.24625",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2607.24625/paper.pdf",
       "text_path": "research/papers/arxiv/2607.24625/paper.txt",
@@ -2446,8 +2542,7 @@
       "sha256": "5919cb22556c90687d30e91a15580eb9a3bae5f70ef06c875fba6750efd80342",
       "pages": 22,
       "text_characters": 90060,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2607.25076",
@@ -2458,6 +2553,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2607.25076",
       "resolved_url": "https://arxiv.org/pdf/2607.25076",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2607.25076/paper.pdf",
       "text_path": "research/papers/arxiv/2607.25076/paper.txt",
@@ -2465,8 +2561,7 @@
       "sha256": "1e28ff86bfb848af7cf4f78f4d23b0bc3bfcb66ad31c65fdf79328f7127a25f2",
       "pages": 12,
       "text_characters": 89716,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.01759",
@@ -2477,6 +2572,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.01759",
       "resolved_url": "https://arxiv.org/pdf/2608.01759",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.01759/paper.pdf",
       "text_path": "research/papers/arxiv/2608.01759/paper.txt",
@@ -2484,8 +2580,7 @@
       "sha256": "f26f1c3fbd08b8b3d24bdb788985e0cafd72aa5b25f209f385fa8285e7224e58",
       "pages": 14,
       "text_characters": 95984,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.06477",
@@ -2496,6 +2591,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.06477",
       "resolved_url": "https://arxiv.org/pdf/2608.06477",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.06477/paper.pdf",
       "text_path": "research/papers/arxiv/2608.06477/paper.txt",
@@ -2503,8 +2599,7 @@
       "sha256": "be4ef5b5f665a39c799fffb25c606e0a94d30bf3933ae8fb15b75c4f3ed69bfb",
       "pages": 17,
       "text_characters": 106432,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.06984",
@@ -2515,6 +2610,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.06984",
       "resolved_url": "https://arxiv.org/pdf/2608.06984",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.06984/paper.pdf",
       "text_path": "research/papers/arxiv/2608.06984/paper.txt",
@@ -2522,8 +2618,7 @@
       "sha256": "1775a629f500f92731fdaf4023c2450d536a9afcb2014e733c733ec5912c0205",
       "pages": 21,
       "text_characters": 148070,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.07530",
@@ -2535,6 +2630,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.07530",
       "resolved_url": "https://arxiv.org/pdf/2608.07530",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.07530/paper.pdf",
       "text_path": "research/papers/arxiv/2608.07530/paper.txt",
@@ -2542,8 +2638,7 @@
       "sha256": "99d7144a7cb4a57f6b4299ef0370d0184d9199beac8bc176e6cefb230b1f05aa",
       "pages": 18,
       "text_characters": 57440,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.09028",
@@ -2555,6 +2650,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.09028",
       "resolved_url": "https://arxiv.org/pdf/2608.09028",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.09028/paper.pdf",
       "text_path": "research/papers/arxiv/2608.09028/paper.txt",
@@ -2562,8 +2658,7 @@
       "sha256": "0ab43cb251b10f2d4b5169392bf47e315333547aef29cc99bcc1edbd412c1683",
       "pages": 23,
       "text_characters": 71395,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.09732",
@@ -2575,6 +2670,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.09732",
       "resolved_url": "https://arxiv.org/pdf/2608.09732",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.09732/paper.pdf",
       "text_path": "research/papers/arxiv/2608.09732/paper.txt",
@@ -2582,8 +2678,7 @@
       "sha256": "cb202d96f0f411bb2cfc5ea0b2e7f53b688d58c4ed2c6d6240dbc274a4b39d24",
       "pages": 9,
       "text_characters": 68600,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.11323",
@@ -2597,6 +2692,7 @@
       "requested_version": "v1",
       "url": "https://arxiv.org/pdf/2608.11323v1",
       "resolved_url": "https://arxiv.org/pdf/2608.11323v1",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.11323/paper.pdf",
       "text_path": "research/papers/arxiv/2608.11323/paper.txt",
@@ -2604,8 +2700,7 @@
       "sha256": "af601300703e06468836e6d977f9634686dd18b07e71dc0df5ae54f344a9b9f7",
       "pages": 11,
       "text_characters": 45707,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.12851",
@@ -2617,6 +2712,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.12851",
       "resolved_url": "https://arxiv.org/pdf/2608.12851",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.12851/paper.pdf",
       "text_path": "research/papers/arxiv/2608.12851/paper.txt",
@@ -2624,8 +2720,7 @@
       "sha256": "d865eda92a60851720d57dd41b20159cfbd416e5b5b5aabb9d7adff905f39d92",
       "pages": 21,
       "text_characters": 150347,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.26108",
@@ -2636,6 +2731,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.26108",
       "resolved_url": "https://arxiv.org/pdf/2608.26108",
+      "pdf_version": "not-detected",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.26108/paper.pdf",
       "text_path": "research/papers/arxiv/2608.26108/paper.txt",
@@ -2643,8 +2739,7 @@
       "sha256": "3c12cd66b28a623f5d04d8f60cca036af6a3d1e417ad24e84e14f0734c728db4",
       "pages": 19,
       "text_characters": 55227,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "not-detected"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.26157",
@@ -2656,6 +2751,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.26157",
       "resolved_url": "https://arxiv.org/pdf/2608.26157",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.26157/paper.pdf",
       "text_path": "research/papers/arxiv/2608.26157/paper.txt",
@@ -2663,8 +2759,7 @@
       "sha256": "063b1b3d0dfa17e28c68f74ff06fded24d85c5c67a7da17166afcbe8594c6650",
       "pages": 20,
       "text_characters": 66647,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2608.26575",
@@ -2675,6 +2770,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.26575",
       "resolved_url": "https://arxiv.org/pdf/2608.26575",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.26575/paper.pdf",
       "text_path": "research/papers/arxiv/2608.26575/paper.txt",
@@ -2682,8 +2778,26 @@
       "sha256": "6507d0d86503e17d94b1c4e71f3f386c451744716426ed2c79d7a6882a91719d",
       "pages": 23,
       "text_characters": 69283,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2608.27443",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2608.27443",
+      "resolved_url": "https://arxiv.org/pdf/2608.27443",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2608.27443/paper.pdf",
+      "text_path": "research/papers/arxiv/2608.27443/paper.txt",
+      "bytes": 1191476,
+      "sha256": "e75ae1de2f037a052c7a34d5e0ad7a6da31f998eb500026d2993ac749a7873c3",
+      "pages": 15,
+      "text_characters": 114987,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2608.27800",
@@ -2694,6 +2808,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2608.27800",
       "resolved_url": "https://arxiv.org/pdf/2608.27800",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2608.27800/paper.pdf",
       "text_path": "research/papers/arxiv/2608.27800/paper.txt",
@@ -2701,8 +2816,7 @@
       "sha256": "5ece4f5591c38133b94e28dcb24f8c58e9920873cadf6a7bf811722078c2755e",
       "pages": 28,
       "text_characters": 100279,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.00069",
@@ -2714,6 +2828,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.00069",
       "resolved_url": "https://arxiv.org/pdf/2609.00069",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.00069/paper.pdf",
       "text_path": "research/papers/arxiv/2609.00069/paper.txt",
@@ -2721,8 +2836,7 @@
       "sha256": "21625f4ce1c6c9019325e5965db30febd0d14a1d208b09d3516a728943d7fabc",
       "pages": 9,
       "text_characters": 64423,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.17817",
@@ -2734,6 +2848,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.17817",
       "resolved_url": "https://arxiv.org/pdf/2609.17817",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.17817/paper.pdf",
       "text_path": "research/papers/arxiv/2609.17817/paper.txt",
@@ -2741,8 +2856,7 @@
       "sha256": "1bfbcd46be7f6f10a37ac794d1704a2cb35846b207096cc0125c9af2f05f04d9",
       "pages": 22,
       "text_characters": 155285,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.23700",
@@ -2753,6 +2867,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.23700",
       "resolved_url": "https://arxiv.org/pdf/2609.23700",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.23700/paper.pdf",
       "text_path": "research/papers/arxiv/2609.23700/paper.txt",
@@ -2760,8 +2875,7 @@
       "sha256": "995a407d4d3d19b66096d966946a37bbf28fc1c2bf62777e9312ce690ad7ce34",
       "pages": 32,
       "text_characters": 208903,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.26457",
@@ -2772,6 +2886,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.26457",
       "resolved_url": "https://arxiv.org/pdf/2609.26457",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.26457/paper.pdf",
       "text_path": "research/papers/arxiv/2609.26457/paper.txt",
@@ -2779,8 +2894,7 @@
       "sha256": "8ba79e0ad1028e43b0a47ee06162c9b3996ec90f7990b7ec35993444e505409b",
       "pages": 28,
       "text_characters": 121329,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.31039",
@@ -2791,6 +2905,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.31039",
       "resolved_url": "https://arxiv.org/pdf/2609.31039",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.31039/paper.pdf",
       "text_path": "research/papers/arxiv/2609.31039/paper.txt",
@@ -2798,8 +2913,7 @@
       "sha256": "ec588228d1834ca8ab2651d977d4e92ef0a882ace6e2f4ce6685b7962c07bde7",
       "pages": 16,
       "text_characters": 110079,
-      "retrieved_date": "2026-10-06",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2609.32390",
@@ -2810,6 +2924,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.32390",
       "resolved_url": "https://arxiv.org/pdf/2609.32390",
+      "pdf_version": "not-detected",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.32390/paper.pdf",
       "text_path": "research/papers/arxiv/2609.32390/paper.txt",
@@ -2817,8 +2932,7 @@
       "sha256": "29a50cb08024ac2da9f8e356836ee53edddae7a559320ce9cc2f5900750d2d27",
       "pages": 14,
       "text_characters": 38644,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "not-detected"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.35596",
@@ -2829,6 +2943,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.35596",
       "resolved_url": "https://arxiv.org/pdf/2609.35596",
+      "pdf_version": "v2",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.35596/paper.pdf",
       "text_path": "research/papers/arxiv/2609.35596/paper.txt",
@@ -2836,8 +2951,7 @@
       "sha256": "cae7a3acee644dc9134cdd73bd195cf940fb67434563dfc30638744f830bd69e",
       "pages": 24,
       "text_characters": 113883,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v2"
+      "retrieved_date": "2026-10-05"
     },
     {
       "id": "2609.38983",
@@ -2848,6 +2962,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2609.38983",
       "resolved_url": "https://arxiv.org/pdf/2609.38983",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2609.38983/paper.pdf",
       "text_path": "research/papers/arxiv/2609.38983/paper.txt",
@@ -2855,8 +2970,26 @@
       "sha256": "a1c13d650d185b9b5fa1e02c5f1f733ca8117b2b24015b86c667c9f7ef5d61cc",
       "pages": 20,
       "text_characters": 160269,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2610.00037",
+      "references": [
+        "research/technology/data_clearance_access_grant_workflows_20261006.md"
+      ],
+      "versions": [],
+      "requested_version": "latest-at-retrieval",
+      "url": "https://arxiv.org/pdf/2610.00037",
+      "resolved_url": "https://arxiv.org/pdf/2610.00037",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2610.00037/paper.pdf",
+      "text_path": "research/papers/arxiv/2610.00037/paper.txt",
+      "bytes": 264560,
+      "sha256": "abe4a20b7f3c60e62e65699963195872cc96935389fa840bcfebe6f52b4ea2ee",
+      "pages": 13,
+      "text_characters": 55771,
+      "retrieved_date": "2026-10-06"
     },
     {
       "id": "2610.01073",
@@ -2869,6 +3002,7 @@
       "requested_version": "latest-at-retrieval",
       "url": "https://arxiv.org/pdf/2610.01073",
       "resolved_url": "https://arxiv.org/pdf/2610.01073",
+      "pdf_version": "v1",
       "status": "downloaded",
       "pdf_path": "research/papers/arxiv/2610.01073/paper.pdf",
       "text_path": "research/papers/arxiv/2610.01073/paper.txt",
@@ -2876,8 +3010,7 @@
       "sha256": "3aed8fb9ddee5d5be2cc7e406bfdcdc2eb67006360b2e60685dd63fdfee88548",
       "pages": 44,
       "text_characters": 166235,
-      "retrieved_date": "2026-10-05",
-      "pdf_version": "v1"
+      "retrieved_date": "2026-10-05"
     }
   ]
 }
