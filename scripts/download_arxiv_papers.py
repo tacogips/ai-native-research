@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""引用されたarXiv論文を取得し、再確認に使う取得台帳を保存する。"""
+"""引用されたarXiv論文を取得し、本文抽出・全頁OCRと検証台帳を保存する。"""
 
 import hashlib
 import json
 import re
+import shutil
 import subprocess
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -33,6 +35,9 @@ def inventory():
 
 
 def main():
+    missing = [name for name in ('pdftotext', 'pdfinfo', 'ocrmypdf', 'tesseract') if not shutil.which(name)]
+    if missing:
+        raise SystemExit('必要な道具がない: ' + ', '.join(missing) + '。macOSでは brew install poppler ocrmypdf')
     today = datetime.now(ZoneInfo('Asia/Tokyo')).date().isoformat()
     DEST.mkdir(parents=True, exist_ok=True)
     previous = {}
@@ -72,13 +77,16 @@ def main():
             pdf_version = re.search(r'arXiv:\s*' + re.escape(identifier) + r'(v\d+)', text_body)
             item['pdf_version'] = pdf_version[1] if pdf_version else 'not-detected'
             item.update(status='downloaded', pdf_path=str(pdf.relative_to(ROOT)), text_path=str(txt.relative_to(ROOT)), bytes=pdf.stat().st_size, sha256=hashlib.sha256(pdf.read_bytes()).hexdigest(), pages=int(pages[1]) if pages else None, text_characters=len(txt.read_text()), retrieved_date=retrieved_date)
-            print(f'OK {identifier} {item["pages"]} pages {item["bytes"]} bytes', flush=True)
+            print(f'取得完了 {identifier} {item["pages"]}頁 {item["bytes"]}バイト', flush=True)
         except Exception as exc:
             item.update(status='failed', error=f'{type(exc).__name__}: {exc}', attempted_date=today)
-            print(f'FAILED {identifier}: {item["error"]}', flush=True)
+            print(f'取得失敗 {identifier}: {item["error"]}', flush=True)
         entries.append(item)
         MANIFEST.write_text(json.dumps({'checked_date': today, 'papers': entries}, ensure_ascii=False, indent=2) + '\n')
-    print(f'Finished: {sum(x["status"] == "downloaded" for x in entries)}/{len(entries)} downloaded', flush=True)
+    print(f'取得結果: {sum(x["status"] == "downloaded" for x in entries)}/{len(entries)}本', flush=True)
+    if any(x['status'] != 'downloaded' for x in entries):
+        raise SystemExit('取得失敗があるためOCR開始前に停止。再実行すると取得を再試行する。')
+    subprocess.run([sys.executable, str(ROOT / 'scripts/ocr_arxiv_papers.py')], check=True)
 
 
 if __name__ == '__main__':
