@@ -1,0 +1,288 @@
+{
+  "title": "海外企業AIの技術調査の出典台帳",
+  "verified_date": "2026-10-06",
+  "systems_count": 11,
+  "sources_count": 30,
+  "new_pdf_downloads": 0,
+  "limitations": [
+    "顧客の本番環境へのアクセスなし",
+    "製品説明と顧客導入時の構成を区別",
+    "公開コードは静的確認のみ",
+    "検索で見つけただけの論文・PDFは引用へ追加していない"
+  ],
+  "sources": [
+    {
+      "id": "TS01",
+      "url": "https://www.harperinsure.com/privacypolicy",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "情報取扱方針。保存・学習・人の確認。内部認可の実装は未開示。"
+    },
+    {
+      "id": "TS02",
+      "url": "https://www.harvey.ai/blog/biglaw-bench-retrieval",
+      "verified_date": "2026-10-06",
+      "source_date": "2024-11-13",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "提供者の技術・安全性説明。以前の顧客導入の実装版を示す資料ではない。"
+    },
+    {
+      "id": "TS03",
+      "url": "https://www.harvey.ai/blog/how-harvey-secures-embeddings-at-scale",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-04-30",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "提供者の技術・安全性説明。以前の顧客導入の実装版を示す資料ではない。"
+    },
+    {
+      "id": "TS04",
+      "url": "https://www.harvey.ai/blog/rebuilding-playbook-review-as-a-multi-agent-system",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-09-02",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "提供者の技術・安全性説明。以前の顧客導入の実装版を示す資料ではない。"
+    },
+    {
+      "id": "TS05",
+      "url": "https://www.harvey.ai/blog/how-we-built-harvey-connector-library",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-10-01",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "提供者の技術・安全性説明。以前の顧客導入の実装版を示す資料ではない。"
+    },
+    {
+      "id": "TS06",
+      "url": "https://support.ironcladapp.com/hc/en-us/articles/28661084734999-Use-AI-Precise-Redlining-to-Review-a-Contract",
+      "verified_date": "2026-10-06",
+      "source_date": "2025-07-28",
+      "date_kind": "更新",
+      "verification": "本文確認",
+      "scope_note": "管理者・開発者手順。設定条件、記録項目、追加機能の範囲。"
+    },
+    {
+      "id": "TS07",
+      "url": "https://developer.ironcladapp.com/docs/data-exports-details",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "管理者・開発者手順。設定条件、記録項目、追加機能の範囲。"
+    },
+    {
+      "id": "TS08",
+      "url": "https://support.ironcladapp.com/hc/en-us/articles/32989670632343-Configure-Audit-Log-Streaming-to-SIEM-Tools",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-07-16",
+      "date_kind": "更新",
+      "verification": "本文確認",
+      "scope_note": "管理者・開発者手順。設定条件、記録項目、追加機能の範囲。"
+    },
+    {
+      "id": "TS09",
+      "url": "https://support.ramp.com/ramp-accounting-agent-enablement-daily-use-admin-guide",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "管理者・開発者向け現行仕様。顧客固有の設定を立証しない。"
+    },
+    {
+      "id": "TS10",
+      "url": "https://agents.ramp.com/docs/overview/introduction",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "管理者・開発者向け現行仕様。顧客固有の設定を立証しない。"
+    },
+    {
+      "id": "TS11",
+      "url": "https://trullion.com/products/platform/",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "製品説明。予定機能を実装済みと扱わない。"
+    },
+    {
+      "id": "TS12",
+      "url": "https://trullion.com/products/audit/",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "製品説明。予定機能を実装済みと扱わない。"
+    },
+    {
+      "id": "TS13",
+      "url": "https://www.ibm.com/case-studies/ibm-askhr",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "AskHRの顧客報告と本人性の試験提供を区別。"
+    },
+    {
+      "id": "TS14",
+      "url": "https://community.ibm.com/community/user/blogs/watsonx-watsonx-orchestrate-blog-team/2026/09/17/why-ai-agents-need-their-own-identities-introducin",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-09-17",
+      "date_kind": "公表。試験提供",
+      "verification": "本文確認",
+      "scope_note": "AskHRの顧客報告と本人性の試験提供を区別。"
+    },
+    {
+      "id": "TS15",
+      "url": "https://gloat.com/academy/knowledge-graph-retrieval-embeddings/",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "製品の技術教材。顧客固有の本番構成は未確認。"
+    },
+    {
+      "id": "TS16",
+      "url": "https://gloat.com/academy/coexistence-workday-apis-security/",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "製品の技術教材。顧客固有の本番構成は未確認。"
+    },
+    {
+      "id": "TS17",
+      "url": "https://gloat.com/academy/agentic-layer-runtime-goal-action/",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "製品の技術教材。顧客固有の本番構成は未確認。"
+    },
+    {
+      "id": "TS18",
+      "url": "https://sierra.ai/blog/agent-traces",
+      "verified_date": "2026-10-06",
+      "source_date": "2025-10-01",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "技術説明または提供者が掲載するBrexの顧客報告。"
+    },
+    {
+      "id": "TS19",
+      "url": "https://sierra.ai/uk/customers/brex",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "技術説明または提供者が掲載するBrexの顧客報告。"
+    },
+    {
+      "id": "TS20",
+      "url": "https://www.happyrobot.ai/customer-story/circle",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "技術者の構成説明またはCircleの顧客報告。"
+    },
+    {
+      "id": "TS21",
+      "url": "https://www.happyrobot.ai/blog/technical-overview",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-09-22",
+      "date_kind": "本文表示の更新日。索引の初回公表日は2025-07-03",
+      "verification": "本文確認",
+      "scope_note": "技術者の構成説明またはCircleの顧客報告。"
+    },
+    {
+      "id": "TS22",
+      "url": "https://anterior.com/insights/building-ai/bias-evaluation/",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-03-16",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "技術者の設計方針、専門家の評価、提供者の群別評価報告。"
+    },
+    {
+      "id": "TS23",
+      "url": "https://anterior.com/insights/building-ai/data-integrity/",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-03-23",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "技術者の設計方針、専門家の評価、提供者の群別評価報告。"
+    },
+    {
+      "id": "TS24",
+      "url": "https://anterior.com/insights/building-ai/vertical-ai-takeaways/",
+      "verified_date": "2026-10-06",
+      "source_date": "2025-07-09",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "技術者の設計方針、専門家の評価、提供者の群別評価報告。"
+    },
+    {
+      "id": "TS25",
+      "url": "https://www.brex.com/journal/long-running-agents-need-bash",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "導入企業自身の技術説明。独立した比較試験ではない。"
+    },
+    {
+      "id": "TS26",
+      "url": "https://www.brex.com/journal/rebuilding-onboarding-ai-native",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "本文確認",
+      "scope_note": "導入企業自身の技術説明。独立した比較試験ではない。"
+    },
+    {
+      "id": "TS27",
+      "url": "https://www.brex.com/journal/building-crabtrap-open-source",
+      "verified_date": "2026-10-06",
+      "source_date": "2026-04-21",
+      "date_kind": "公表",
+      "verification": "本文確認",
+      "scope_note": "導入企業自身の技術説明。独立した比較試験ではない。"
+    },
+    {
+      "id": "TS28",
+      "url": "https://github.com/brexhq/CrabTrap/blob/9cfde5e8a687afb47ed0c7dcd832801d049e067b/README.md",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "固定版のREADME・該当ソースを静的確認",
+      "scope_note": "公開ソースの固定版をローカル読取り。実行・動作試験なし。",
+      "commit": "9cfde5e8a687afb47ed0c7dcd832801d049e067b"
+    },
+    {
+      "id": "TS29",
+      "url": "https://github.com/brexhq/CrabTrap/blob/9cfde5e8a687afb47ed0c7dcd832801d049e067b/internal/approval/manager.go#L245",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "固定版のREADME・該当ソースを静的確認",
+      "scope_note": "公開ソースの固定版をローカル読取り。実行・動作試験なし。",
+      "commit": "9cfde5e8a687afb47ed0c7dcd832801d049e067b"
+    },
+    {
+      "id": "TS30",
+      "url": "https://github.com/brexhq/CrabTrap/blob/9cfde5e8a687afb47ed0c7dcd832801d049e067b/internal/judge/llm_judge.go#L18",
+      "verified_date": "2026-10-06",
+      "source_date": null,
+      "date_kind": "公表・更新日は本文から確定していない",
+      "verification": "固定版のREADME・該当ソースを静的確認",
+      "scope_note": "公開ソースの固定版をローカル読取り。実行・動作試験なし。",
+      "commit": "9cfde5e8a687afb47ed0c7dcd832801d049e067b"
+    }
+  ]
+}
