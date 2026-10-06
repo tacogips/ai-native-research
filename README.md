@@ -2,6 +2,10 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## AIを前提に業務・組織を小さくする事例（2026年10月6日）
+
+[Treasure AIと国内外15社の比較](research/benchmarks/treasure_ai_compact_organization_cases_20261006.md)。Fluentdの開発元Treasure Dataの文書作成・業務製品の集約を調べ、日本6社・海外9社の課題、技術、成果、人の確認、自己改善の記録を整理した。DeNAとShopifyの実装を掘り下げ、人員削減・作業時間の短縮・将来目標を区別する。[26出典の確認台帳](research/benchmarks/treasure_ai_compact_sources_20261006.json)。
+
 ## データの機密区分とアクセス権の申請・付与（2026年10月6日）
 
 [事例・論文と業務手順の調査](research/technology/data_clearance_access_grant_workflows_20261006.md)で9つの導入・製品構成を比較し、Instacartの公開コードまで確認した。通常申請の自動付与と、規則変更・高リスク例外の人による承認を分け、承認と実行の一致、取消し、自己改善の監査を整理する。[出典台帳](research/technology/data_clearance_access_sources_20261006.json)。追加論文7本・88頁を取得し、全頁OCRと[日本語解説11](research/papers/paper_notes_11.md)を追加した。
@@ -35,7 +39,7 @@ PDF原本と抽出本文、全頁OCRによる検索可能なPDFと認識本文�
 | 資料 | 内容 |
 |---|---|
 | [拡張調査](research/strategy/ai_native_recursive_expansion_20261005.md) | 3回・15問。顧客対応・調達・人事・医療周辺・支払い、企業成果、組織、契約、例外処理、採算、退出 |
-| [問いと出典の記録](research/ai_native_recursive_research_log_20261005.md) | 問いの親子関係、一次資料、検証深度、訂正、検算、次の問い。重点調査・事故調査・企業事例の追加を含め合計18回・60問 |
+| [問いと出典の記録](research/ai_native_recursive_research_log_20261005.md) | 問いの親子関係、一次資料、検証深度、訂正、検算、次の問い。重点調査・事故調査・企業事例の追加を含め合計21回・69問 |
 
 ## 写真の10テーマを再調査した資料（2026年10月5日）
 
