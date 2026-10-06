@@ -283,11 +283,13 @@
       "発行者": "Klarna／SEC",
       "題名": "2025年上場時の開示",
       "url": "https://www.sec.gov/Archives/edgar/data/2003292/000200329225000052/klarnagroupplc424b4.htm",
-      "公表日": null,
-      "確認深度": "検索掲載のみ",
+      "公表日": "2025-09-09",
+      "確認深度": "全文取得・該当本文確認（再配信版）",
       "区分": "提出文書",
-      "限定": "全文は取得上限超過・HTTP403で未確認。本文確認済み資料と分ける",
-      "確認日": "2026-10-06"
+      "限定": "原配信への取得制限をOTC Markets再配信HTMLで解消。全章の精読・公表値の独立検証は未実施。",
+      "確認日": "2026-10-06",
+      "取得URL": "https://www.otcmarkets.com/filing/html?guid=rut-kq7l5IyeJth&id=18768243",
+      "取得台帳": "klarna_2025_disclosure_retrieval_20261006.json"
     },
     {
       "id": "S26",

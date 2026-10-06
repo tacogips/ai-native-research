@@ -1,0 +1,41 @@
+{
+  "確認日": "2026-10-06",
+  "発行者": "Klarna Group plc",
+  "文書": "Form 424B4／上場目論見書",
+  "文書日": "2025-09-09",
+  "SEC提出識別子": "0002003292-25-000052",
+  "原配信URL": "https://www.sec.gov/Archives/edgar/data/2003292/000200329225000052/klarnagroupplc424b4.htm",
+  "取得URL": "https://www.otcmarkets.com/filing/html?guid=rut-kq7l5IyeJth&id=18768243",
+  "取得状態": "HTTP 200、HTML全文取得、終端のHTMLタグを確認",
+  "成果物": {
+    "html": {
+      "path": "research/disclosures/raw/klarna_20250909_424b4.html",
+      "bytes": 6810847,
+      "sha256": "7c3983bdae81db55db60f5b15e067cc7f82e7c2ece30aeab1b8d8fcf6ba34fc8"
+    },
+    "txt": {
+      "path": "research/disclosures/raw/klarna_20250909_424b4.txt",
+      "bytes": 1416890,
+      "sha256": "779bb0bf637de8890363810a445550834bc31cc809c35616a8607b3072116c2a"
+    }
+  },
+  "文字抽出方法": "HTMLタグを除去し、実体参照を復元して空白を正規化",
+  "確認箇所": {
+    "目論見書日": "2025年9月9日",
+    "経営成績・財務状態の説明に含まれるAI導入と運営効率の記述": "顧客対応比率69%、700人超相当の算定根拠、2024年費用削減約3,900万ドル、人による支援との併用"
+  },
+  "従前の取得失敗": [
+    {
+      "手段": "閲覧ツール／SEC・OTC Markets",
+      "原因": "Content length is too large: 4194305+（約4 MiB超）"
+    },
+    {
+      "手段": "SECへの直接HTTP取得",
+      "原因": "HTTP 403 Forbidden"
+    }
+  ],
+  "確認の限定": "全文の取得とAI関連の該当本文の確認を行った。全章の精読、SEC版とのバイト単位の一致、企業公表値の独立検証は未実施。",
+  "PDF取得": false,
+  "OCR": "新規PDFは取得していないため対象なし",
+  "Git管理": "生のHTMLと抽出本文はローカル保存。取得台帳と説明をGit管理。"
+}

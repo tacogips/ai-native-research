@@ -4,7 +4,7 @@
 
 ## AIを前提に業務・組織を小さくする事例（2026年10月6日）
 
-[Treasure AIと国内外15社の比較](research/benchmarks/treasure_ai_compact_organization_cases_20261006.md)。Fluentdの開発元Treasure Dataの文書作成・業務製品の集約を調べ、日本6社・海外9社の課題、技術、成果、人の確認、自己改善の記録を整理した。DeNAとShopifyの実装を掘り下げ、人員削減・作業時間の短縮・将来目標を区別する。[26出典の確認台帳](research/benchmarks/treasure_ai_compact_sources_20261006.json)。
+[Treasure AIと国内外15社の比較](research/benchmarks/treasure_ai_compact_organization_cases_20261006.md)。Fluentdの開発元Treasure Dataの文書作成・業務製品の集約を調べ、日本6社・海外9社の課題、技術、成果、人の確認、自己改善の記録を整理した。DeNAとShopifyの実装を掘り下げ、人員削減・作業時間の短縮・将来目標を区別する。[26出典の確認台帳](research/benchmarks/treasure_ai_compact_sources_20261006.json)。 Klarnaの2025年開示は再配信HTMLの全文取得で確認制限を解消した。[取得記録](research/benchmarks/klarna_2025_disclosure_retrieval_20261006.json)。
 
 ## データの機密区分とアクセス権の申請・付与（2026年10月6日）
 

@@ -74,7 +74,7 @@ flowchart LR
 | Shopify・カナダ／2026年 | 個人のAI利用で知識が残らない、環境構築、教育 | Riverを社内Slackの共有チャンネルで利用。コード・試験・運用記録を参照。共通基盤Aquifer | 6月の説明では変更案の統合率36%→77%。知識整備が改善に寄与。育成目的の採用は拡大方針 | AI単独では変更を統合しない。人数削減の例ではない。[責任者の説明](https://internships.shopify.com/pages/zero-experience-infinite-leverage) |
 | Sanofi・フランス／2026-02-24 | 研究開発投資の根拠集約、会議の確認作業 | Aily Labsと開発したPlaiが10億超のデータ点を集約し、費用・試験期間・成功確率を予測 | 資料確認から将来の判断へ会議の重点が移ったという説明。時短率未開示 | 委員会が決定。人の関与を保つ方針。人数削減の証拠ではない。[導入記事](https://www.sanofi.com/en/magazine/ai-in-healthcare/ai-across-the-research-development-value-chain-portfolio-decision-making) |
 | Fiverr・イスラエル／2025-09、2026年年次報告 | 旧来の技術構成と管理階層 | AIを前提に技術・製品を再編し、階層を減らす方針 | 約250人の削減を発表。年次報告で人員約30%縮小の計画と解雇関連費用を確認 | 各職務のAIによる代替の検証は未公表。[CEO文書](https://investors.fiverr.com/node/9736/html)、[年次報告](https://www.sec.gov/Archives/edgar/data/1762301/000117891326000858/zk2634486.htm) |
-| Klarna・スウェーデン／2024-02、2025年確認制限あり | 多言語の支払・返金問い合わせ | アプリ内のAI対応と人を選べる窓口 | 初月230万会話、約3分の2の対応、700人相当の作業量 | 700人解雇の人数でも現在の品質でもない。[当初の企業発表](https://www.prnewswire.com/news-releases/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month-302072744.html) |
+| Klarna・スウェーデン／2024-02、2025-09開示 | 多言語の支払・返金問い合わせ | アプリ内のAI対応と人を選べる窓口 | 2025年6月までの12か月で69%の対応、700人超相当。2024年費用削減約3,900万ドル | 人数相当は作業量の推計。人を選べる窓口も併用。[2025年開示の再配信](https://www.otcmarkets.com/filing/html?guid=rut-kq7l5IyeJth&id=18768243) |
 | Duolingo・米国／2025-04-30 | 教材の個別制作と展開時間 | 基礎教材を再利用し、AIと内部の道具で制作・検証 | 148講座を1年未満で制作・公開。主に初級 | 専門家の判断を残す。教育効果の比較実験ではない。[公式発表](https://investors.duolingo.com/news-releases/news-release-details/duolingo-launches-148-new-language-courses) |
 
 ### Shopify：共通基盤で保守を集約し、作業記録を残す
@@ -98,7 +98,9 @@ flowchart LR
 
 ### Klarna：有名な数字を現在の運用へ持ち込まない
 
-[2025年の上場時開示](https://www.sec.gov/Archives/edgar/data/2003292/000200329225000052/klarnagroupplc424b4.htm)は検索掲載で、2025年6月までの12か月の対応比率69%、2024年の費用削減約3,900万ドル、人による支援との併用を確認した。HTML全文は取得上限とSEC側の拒否で読めず、本文確認済み資料と区別する。当初発表の利益改善4,000万ドルは予測である。両者を同じ実績として合算しない。
+[2025年9月9日付の上場時開示](https://www.sec.gov/Archives/edgar/data/2003292/000200329225000052/klarnagroupplc424b4.htm)について、[OTC Marketsの再配信HTML](https://www.otcmarkets.com/filing/html?guid=rut-kq7l5IyeJth&id=18768243)の全文を取得し、AI関連の該当本文を確認した。2025年6月までの12か月の対応比率69%、2024年の費用削減約3,900万ドル、人による支援との併用が記載されている。700人超相当は、AI導入後の2024年の人によるチャット・電話対応の月平均減少から算定した作業量であり、解雇人数ではない。満足度の比較も自社調査による。
+
+前回は閲覧ツールの約4 MiBの上限と、SECへの直接取得のHTTP 403で全文確認できなかった。今回は再配信元への直接取得で約6.8 MBのHTMLを保存して制限を解消した。[取得URL・容量・ハッシュ値・確認範囲の台帳](klarna_2025_disclosure_retrieval_20261006.json)を参照。全文を取得したことと全章を精読したことは区別する。[当初発表](https://www.prnewswire.com/news-releases/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month-302072744.html)の利益改善4,000万ドルは予測であり、費用削減実績と合算しない。
 
 ## 4. 課題と技術を横断した比較
 
@@ -151,4 +153,4 @@ flowchart LR
 
 一次資料と当事者の説明を優先した。企業の公表値、製品仕様、実装記事、本調査の推論を区別する。人数・売上の変化をAIだけの因果効果とは扱わない。
 
-追加資料はHTMLで確認した。新規PDF・arXivは取得しておらず、既存155本・3,894頁の全頁OCR台帳は変更していない。Klarnaの2025年開示は検索掲載のみ。社内環境での動作試験、第三者監査、費用の再計算は行っていない。
+追加資料はHTMLで確認した。新規PDF・arXivは取得しておらず、既存155本・3,894頁の全頁OCR台帳は変更していない。Klarnaの2025年開示は再配信HTMLの全文を取得し、AI関連の該当本文を確認した。社内環境での動作試験、第三者監査、費用の再計算は行っていない。
