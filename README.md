@@ -2,6 +2,22 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## 個人情報・機密データの管理と秘密計算（2026年10月7日）
+
+[AIによるメール誤送信防止：Outlook・GmailとCC混入対策](research/technology/email_misdirection_ai_controls_20261007.md)。国内外の導入例、文脈・宛先の検査、警告と強制停止の違い、社内検査サーバの構成案を整理。[取得台帳](research/technology/email_misdirection_sources_20261007.json)。
+
+[BERTとJev、手元で動く軽量判断モデル](research/technology/bert_jev_local_decision_models_20261007.md)。日本語ModernBERT、Laya、小型LLMを使うJev Local、AnyJev・Tacitを比較。固定区分と可変候補、確率の信頼性、非公式実装と公式モデルの違いを整理した。
+
+[医療データとLLMの管理](research/technology/medical_data_llm_controls_20261007.md)。Stanfordの専用外部接続、施設内情報抽出、複数形式の非識別化、国内病院の文書作成、Imperialの退院要約を比較。公開実装の固定版を確認し、周辺制御とモデルが平文を読む範囲を整理した。[取得台帳](research/technology/medical_llm_sources_20261007.json)。
+
+[ゼロ知識証明と関連技術](research/technology/zero_knowledge_sensitive_data_research_20261007.md)。EUの年齢確認、銀行の条件証明、スイスの電子投票、医療保険の公開実装、AI推論の証明を調査。証明する条件、公開される情報、実運用と模擬評価、機密性分類への適用を区別した。[取得台帳](research/technology/zero_knowledge_sources_20261007.json)。
+
+[公的資料・書籍・論文の要約と日本／海外の比較](research/disclosures/privacy_data_management_reading_summary_20261007.md)。20件のPDFと9件のHTMLを保存し、重要箇所を頁番号付きで整理した。[取得記録](research/disclosures/privacy_retrieval_20261007.json)。
+
+[企業のAI利用・秘密計算の事例調査](research/technology/enterprise_sensitive_data_ai_cases_20261007.md)。暗号文・秘密分散での学習と推論、銀行・製薬の共同学習、暗号化検索、TEEでの文章生成を比較。企業内の権限管理と機密情報削除、2026年の暗号化言語モデル研究、保護する主体と公開証拠の限界を整理した。[出典・取得記録](research/technology/enterprise_sensitive_ai_sources_20261007.json)。
+
+[平文を開示せず機密性を判定する補足調査](research/technology/confidentiality_classification_without_plaintext_20261007.md)。秘密計算での文章分類、既知の秘密との照合、平文を読む前処理の有無を整理。企業内に限定せず研究機関等を含む。
+
 ## Master Report（最新版を保持し続ける統合資料）
 
 | 資料 | 内容 |

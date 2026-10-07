@@ -1,0 +1,403 @@
+{
+  "research_date": "2026-10-07",
+  "note": "公開原本と抽出本文はGit管理外。査読前原稿・提供者事例・研究実装を区別する。",
+  "documents": [
+    {
+      "id": "stanford_secure",
+      "title": "Development of Secure Infrastructure for Advancing Generative AI Research in Healthcare at an Academic Medical Center",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11469521/",
+      "retrieved_at_utc": "2026-10-07T07:02:16.388156+00:00",
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11469521/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/stanford_secure.html",
+      "bytes": 110915,
+      "sha256": "994a2cc49b3f938b02eadbdbfb08b940c1575d37b44f9636aa2d1941a0c192e8",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/stanford_secure.txt",
+      "text_characters": 25112,
+      "status": "取得済み"
+    },
+    {
+      "id": "oncology_pipeline",
+      "title": "A software pipeline for medical information extraction with large language models, open source and suitable for oncology",
+      "source_url": "https://www.nature.com/articles/s41698-025-01103-4",
+      "retrieved_at_utc": "2026-10-07T07:02:16.389005+00:00",
+      "resolved_url": "https://www.nature.com/articles/s41698-025-01103-4?error=cookies_not_supported&code=9987db8a-8c5e-45a6-b473-ac463276cc5a",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/oncology_pipeline.html",
+      "bytes": 417255,
+      "sha256": "c6a04e03a532752fe2cd968f9de76677dae8474c75b55a1eccfcd2470646c16e",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/oncology_pipeline.txt",
+      "text_characters": 75290,
+      "status": "取得済み"
+    },
+    {
+      "id": "oncology_pipeline_pdf",
+      "title": "A software pipeline for medical information extraction with large language models, open source and suitable for oncology PDF",
+      "source_url": "https://www.nature.com/articles/s41698-025-01103-4.pdf",
+      "retrieved_at_utc": "2026-10-07T07:02:16.389599+00:00",
+      "resolved_url": "https://www.nature.com/articles/s41698-025-01103-4.pdf?error=cookies_not_supported&code=76f81f88-fba1-4046-bdb6-6696579a5fe3",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/oncology_pipeline_pdf.pdf",
+      "bytes": 2292703,
+      "sha256": "f78c5b8f2b42815adf0a611f444545ce37617504228b2ae21d6734acd1c2a3f2",
+      "format": "pdf",
+      "pages": 12,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/oncology_pipeline_pdf.txt",
+      "text_characters": 80168,
+      "status": "取得済み"
+    },
+    {
+      "id": "llm_anonymizer",
+      "title": "Deidentifying Medical Documents with Local, Privacy-Preserving Large Language Models: The LLM-Anonymizer",
+      "source_url": "https://ai.nejm.org/doi/full/10.1056/AIdbp2400537",
+      "retrieved_at_utc": "2026-10-07T07:02:16.389905+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "llm_anonymizer_preprint",
+      "title": "LLM-Anonymizer 2024年公開原稿",
+      "source_url": "https://www.medrxiv.org/content/10.1101/2024.06.11.24308355v1.full.pdf",
+      "retrieved_at_utc": "2026-10-07T07:02:16.390141+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "local_small",
+      "title": "Small Large Language Models in the Hospital",
+      "source_url": "https://www.jmir.org/2026/1/e86453/PDF",
+      "retrieved_at_utc": "2026-10-07T07:02:16.390495+00:00",
+      "resolved_url": "https://www.jmir.org/2026/1/e86453/PDF",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "取得失敗",
+      "error": "応答本文が空"
+    },
+    {
+      "id": "imperial_sde",
+      "title": "Real-World Implementation of Large Language Models for Writing Clinical Discharge Summaries Within a Secure Data Environment",
+      "source_url": "https://ai.jmir.org/2026/1/e88816/PDF",
+      "retrieved_at_utc": "2026-10-07T07:02:16.510519+00:00",
+      "resolved_url": "https://ai.jmir.org/2026/1/e88816/PDF",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "取得失敗",
+      "error": "応答本文が空"
+    },
+    {
+      "id": "urology_privacy",
+      "title": "Privacy-by-Design Framework for Large Language Model Chatbots in Urology",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12688312/",
+      "retrieved_at_utc": "2026-10-07T07:02:16.538116+00:00",
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12688312/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/urology_privacy.html",
+      "bytes": 158275,
+      "sha256": "1291c870accfd3ec4e729c5121fd08523355679305089f99b8def8e3764b853d",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/urology_privacy.txt",
+      "text_characters": 43839,
+      "status": "取得済み"
+    },
+    {
+      "id": "multimodal_anonymizer",
+      "title": "The Multimodal Anonymizer: a fully local multi-agent AI system for medical data deidentification v2",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.05.28.26353952v2.full.pdf",
+      "retrieved_at_utc": "2026-10-07T07:02:16.897710+00:00",
+      "resolved_url": "https://www.medrxiv.org/content/10.64898/2026.05.28.26353952v2.full.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/multimodal_anonymizer.pdf",
+      "bytes": 19412979,
+      "sha256": "52e33cf95e74f0717fb226ad9112dc7c5857c7be651517723a43aed5fcfbb458",
+      "format": "pdf",
+      "pages": 55,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/multimodal_anonymizer.txt",
+      "text_characters": 204795,
+      "status": "取得済み"
+    },
+    {
+      "id": "temporal_phi",
+      "title": "Leveraging Large Language Models for Temporal PHI De-identification in Real-World Clinical Notes",
+      "source_url": "https://www.medrxiv.org/content/10.64898/2026.09.22.26360316v1.full.pdf",
+      "retrieved_at_utc": "2026-10-07T07:02:17.127651+00:00",
+      "resolved_url": "https://www.medrxiv.org/content/10.64898/2026.09.22.26360316v1.full.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/temporal_phi.pdf",
+      "bytes": 1510761,
+      "sha256": "fbcbb632f562dd0f503e08e98923eb00aa8d9de609bbe30611d3ac9ceb918c23",
+      "format": "pdf",
+      "pages": 10,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/temporal_phi.txt",
+      "text_characters": 53411,
+      "status": "取得済み"
+    },
+    {
+      "id": "yokosuka",
+      "title": "横須賀共済病院 生成AI医療文書作成",
+      "source_url": "https://www.txpmedical.jp/case-study/sbir-ai-1-ai/",
+      "retrieved_at_utc": "2026-10-07T07:02:17.186094+00:00",
+      "resolved_url": "https://www.txpmedical.jp/case-study/sbir-ai-1-ai/",
+      "content_type": "text/html",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/yokosuka.html",
+      "bytes": 108794,
+      "sha256": "a94254b586ca99e71e338fc032f0deef7673e432228bfc21ebcfd6477b2f61e2",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/yokosuka.txt",
+      "text_characters": 6208,
+      "status": "取得済み"
+    },
+    {
+      "id": "fujita",
+      "title": "藤田医科大学 退院サマリー作成支援",
+      "source_url": "https://www.fujita-hu.ac.jp/news/vsfo8q000000286b.html",
+      "retrieved_at_utc": "2026-10-07T07:02:17.266423+00:00",
+      "resolved_url": "https://www.fujita-hu.ac.jp/news/vsfo8q000000286b.html",
+      "content_type": "text/html",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/fujita.html",
+      "bytes": 56496,
+      "sha256": "b6df763cab02bf72795aa070ff16347d2919e89a6973009335efedeb3e4a31a4",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/fujita.txt",
+      "text_characters": 12701,
+      "status": "取得済み"
+    },
+    {
+      "id": "deidentifier_code",
+      "title": "KatherLab 医療文書非識別化 公開実装",
+      "source_url": "https://github.com/KatherLab/deidentifier",
+      "retrieved_at_utc": "2026-10-07T07:02:17.327903+00:00",
+      "resolved_url": "https://github.com/KatherLab/deidentifier",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/deidentifier_code.html",
+      "bytes": 370648,
+      "sha256": "68d5163cead08906ad466332d45a72ec49b4a73a60993609d928a075b6753e2d",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/deidentifier_code.txt",
+      "text_characters": 10707,
+      "status": "取得済み"
+    },
+    {
+      "id": "local_small_html",
+      "title": "Small Large Language Models in the Hospital 論文HTML",
+      "source_url": "https://www.jmir.org/2026/1/e86453/",
+      "retrieved_at_utc": "2026-10-07T07:03:33.369476+00:00",
+      "resolved_url": "https://www.jmir.org/2026/1/e86453/",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "取得失敗",
+      "error": "応答本文が空"
+    },
+    {
+      "id": "imperial_sde_html",
+      "title": "Imperial 医療要約の保護環境 論文HTML",
+      "source_url": "https://ai.jmir.org/2026/1/e88816/",
+      "retrieved_at_utc": "2026-10-07T07:03:33.369932+00:00",
+      "resolved_url": "https://ai.jmir.org/2026/1/e88816/",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "取得失敗",
+      "error": "応答本文が空"
+    },
+    {
+      "id": "hhs_deid",
+      "title": "米国HHS PHI非識別化の指針",
+      "source_url": "https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/understanding/coveredentities/De-identification/hhs_deid_guidance.pdf",
+      "retrieved_at_utc": "2026-10-07T07:03:33.370115+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "mhlw_medical_security",
+      "title": "厚生労働省 医療情報システムの安全管理ガイドライン 第7.0版 公開ページ",
+      "source_url": "https://www.mhlw.go.jp/stf/shingi/0000516275_00006.html",
+      "retrieved_at_utc": "2026-10-07T07:03:33.370278+00:00",
+      "resolved_url": "https://www.mhlw.go.jp/stf/shingi/0000516275_00006.html",
+      "content_type": "text/html",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/mhlw_medical_security.html",
+      "bytes": 59883,
+      "sha256": "c5dfe412245d25d4d5ce646e66819676c52cd8b10fdb1cb5c1e95eacbc6e03a8",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/mhlw_medical_security.txt",
+      "text_characters": 6826,
+      "status": "取得済み"
+    },
+    {
+      "id": "mhlw_overview",
+      "title": "厚生労働省 安全管理 第7.0版 概説編",
+      "source_url": "https://www.mhlw.go.jp/content/10808000/001716290.pdf",
+      "retrieved_at_utc": "2026-10-07T07:07:30.149463+00:00",
+      "resolved_url": "https://www.mhlw.go.jp/content/10808000/001716290.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/mhlw_overview.pdf",
+      "bytes": 821728,
+      "sha256": "e3d8c9b5f6cc178f6e4033c4f05900b9b4c42def9037cb6e9f00ac416320f85d",
+      "format": "pdf",
+      "pages": 11,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/mhlw_overview.txt",
+      "text_characters": 14014,
+      "status": "取得済み"
+    },
+    {
+      "id": "mhlw_planning",
+      "title": "厚生労働省 安全管理 第7.0版 企画管理編",
+      "source_url": "https://www.mhlw.go.jp/content/10808000/001716292.pdf",
+      "retrieved_at_utc": "2026-10-07T07:07:30.149951+00:00",
+      "resolved_url": "https://www.mhlw.go.jp/content/10808000/001716292.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/mhlw_planning.pdf",
+      "bytes": 2149115,
+      "sha256": "f87040d2793bdb98c83b494288b1b2b79dedddd61b2fbac514e853fa45202cf7",
+      "format": "pdf",
+      "pages": 59,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/mhlw_planning.txt",
+      "text_characters": 83088,
+      "status": "取得済み"
+    },
+    {
+      "id": "mhlw_operations",
+      "title": "厚生労働省 安全管理 第7.0版 システム運用編",
+      "source_url": "https://www.mhlw.go.jp/content/10808000/001716295.pdf",
+      "retrieved_at_utc": "2026-10-07T07:07:30.150135+00:00",
+      "resolved_url": "https://www.mhlw.go.jp/content/10808000/001716295.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/mhlw_operations.pdf",
+      "bytes": 1664941,
+      "sha256": "45542199fecd9ba54a501857bb8939d7e9e4068c5541f01076b5190b7adc4b8d",
+      "format": "pdf",
+      "pages": 51,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/mhlw_operations.txt",
+      "text_characters": 72109,
+      "status": "取得済み"
+    },
+    {
+      "id": "mhlw_qa",
+      "title": "厚生労働省 安全管理 Q&A 2026年9月",
+      "source_url": "https://www.mhlw.go.jp/content/10808000/001752355.pdf",
+      "retrieved_at_utc": "2026-10-07T07:07:30.150312+00:00",
+      "resolved_url": "https://www.mhlw.go.jp/content/10808000/001752355.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/mhlw_qa.pdf",
+      "bytes": 1155736,
+      "sha256": "7e4f630b0dcaf6edc4380fe8d03fad6c818931d2b893fc73ae977c5f14bab84a",
+      "format": "pdf",
+      "pages": 32,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/mhlw_qa.txt",
+      "text_characters": 40441,
+      "status": "取得済み"
+    },
+    {
+      "id": "imperial_pmc",
+      "title": "Imperial退院要約 論文PMC全文",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13379688/",
+      "retrieved_at_utc": "2026-10-07T07:16:59.450039+00:00",
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13379688/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/imperial_pmc.html",
+      "bytes": 201189,
+      "sha256": "6559d1ef72c0991cf07536088702429036d46d423dac703dc2c10e53018bb3ab",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/imperial_pmc.txt",
+      "text_characters": 67984,
+      "status": "取得済み"
+    },
+    {
+      "id": "stanford_journal",
+      "title": "Stanford Secure基盤 査読済論文2025",
+      "source_url": "https://academic.oup.com/jamia/article/32/3/586/7979332",
+      "retrieved_at_utc": "2026-10-07T07:17:00.433816+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "imperial_accepted",
+      "title": "Imperial退院要約 著者受理原稿",
+      "source_url": "https://s3.ca-central-1.amazonaws.com/assets.jmir.org/assets/preprints/preprint-88816-accepted.pdf",
+      "retrieved_at_utc": "2026-10-07T07:17:00.630151+00:00",
+      "resolved_url": "https://s3.ca-central-1.amazonaws.com/assets.jmir.org/assets/preprints/preprint-88816-accepted.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/imperial_accepted.pdf",
+      "bytes": 1865868,
+      "sha256": "de0ef7dc62a920014a20072905391f333257ff8b3ddd38eccd5cb7f7228f6e3d",
+      "format": "pdf",
+      "pages": 42,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/imperial_accepted.txt",
+      "text_characters": 71582,
+      "status": "取得済み"
+    },
+    {
+      "id": "stanford_journal_pmc",
+      "title": "Stanford Secure基盤 査読済論文2025 PMC本文",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833461/",
+      "retrieved_at_utc": "2026-10-07T07:17:11.678267+00:00",
+      "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833461/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/stanford_journal_pmc.html",
+      "bytes": 118257,
+      "sha256": "1ee7760d2715f6598cea97e4b93003082898b2d1d10df483136bcd3091cdd586",
+      "format": "html",
+      "text_file": "research/disclosures/raw/medical_llm_20261007/stanford_journal_pmc.txt",
+      "text_characters": 31271,
+      "status": "取得済み"
+    },
+    {
+      "id": "korean_bert_comparison",
+      "title": "Korean medical de-identification BERT LLM comparison",
+      "source_url": "https://www.nature.com/articles/s44401-025-00036-1.pdf",
+      "retrieved_at_utc": "2026-10-07T07:28:15.973370+00:00",
+      "resolved_url": "https://www.nature.com/articles/s44401-025-00036-1.pdf?error=cookies_not_supported&code=14d2c58e-309b-4eb8-b6be-db868375c7ce",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/medical_llm_20261007/korean_bert_comparison.pdf",
+      "bytes": 1539671,
+      "sha256": "ac2d8e02407fca77631706de27c5f38c1b1e9b22e1166be4caa8b2492c2d6bb3",
+      "format": "pdf",
+      "pages": 11,
+      "text_file": "research/disclosures/raw/medical_llm_20261007/korean_bert_comparison.txt",
+      "text_characters": 77299,
+      "status": "取得済み"
+    }
+  ],
+  "code_snapshots": [
+    {
+      "repository": "KatherLab/deidentifier",
+      "commit": "d50cfd821774050fde3e3449a77bc47d0d348322",
+      "retrieved_at_utc": "2026-10-07T07:05:30.819482+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "file": "research/disclosures/raw/medical_llm_20261007/code/README.md",
+          "sha256": "922bfd63ca243da84741fb93dfe7044803cb1be23833c8576dd145ecb5bd15be"
+        },
+        {
+          "path": "backend/src/utils/safe_logging.py",
+          "file": "research/disclosures/raw/medical_llm_20261007/code/backend/src/utils/safe_logging.py",
+          "sha256": "accf2c186c2433de6f01e21ebce37df2717cb591aebcdbb0a218460caeed3bcf"
+        },
+        {
+          "path": "backend/tests/unit/test_safe_logging.py",
+          "file": "research/disclosures/raw/medical_llm_20261007/code/backend/tests/unit/test_safe_logging.py",
+          "sha256": "bc26147204d2197141b794956f0d0d335fe56890073d72acf34c197e92fc240c"
+        }
+      ]
+    },
+    {
+      "repository": "KatherLab/deidentifier",
+      "commit": "d50cfd821774050fde3e3449a77bc47d0d348322",
+      "retrieved_at_utc": "2026-10-07T07:06:41.685722+00:00",
+      "files": [
+        {
+          "path": "backend/src/core/config.py",
+          "file": "research/disclosures/raw/medical_llm_20261007/code/KatherLab_deidentifier/backend/src/core/config.py",
+          "sha256": "3cf5a8f39ae1dee9e296e309b86cef70802697785fed8e06245ae1bbffcbb65c"
+        },
+        {
+          "path": "docs/evaluation/index.md",
+          "file": "research/disclosures/raw/medical_llm_20261007/code/KatherLab_deidentifier/docs/evaluation/index.md",
+          "sha256": "7e800503d3f75c779a053bc5867f52cb39a63220e299c08f9605873209beca96"
+        },
+        {
+          "path": "docs/operations/configuration.md",
+          "file": "research/disclosures/raw/medical_llm_20261007/code/KatherLab_deidentifier/docs/operations/configuration.md",
+          "sha256": "a8dbbfd83dfc5c57ccd72d203c01b923a72d01560c32d1a6c3ec53070e4ec99c"
+        }
+      ]
+    }
+  ]
+}
