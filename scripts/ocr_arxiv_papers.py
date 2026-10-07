@@ -49,6 +49,10 @@ def main():
         data = {'updated_at': datetime.now(ZoneInfo('Asia/Tokyo')).isoformat(),
                 'method': 'force-ocr-all-pages', 'language': args.language,
                 'papers': [records[item['id']] for item in papers if item['id'] in records]}
+        # 手動の全件照合・代表頁確認は、再処理後の現状と区別して履歴へ残す。
+        prior_verification = previous.get('verification') or previous.get('previous_verification')
+        if prior_verification:
+            data['previous_verification'] = prior_verification
         temp = DEST.with_suffix('.tmp')
         temp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
         temp.replace(DEST)

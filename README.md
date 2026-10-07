@@ -21,6 +21,10 @@ Master Report は日付付きの調査版ではなく、新しい一次資料や
 
 [Treasure AIと国内外15社の比較](research/benchmarks/treasure_ai_compact_organization_cases_20261006.md)。Fluentdの開発元Treasure Dataの文書作成・業務製品の集約を調べ、日本6社・海外9社の課題、技術、成果、人の確認、自己改善の記録を整理した。DeNAとShopifyの実装を掘り下げ、人員削減・作業時間の短縮・将来目標を区別する。[26出典の確認台帳](research/benchmarks/treasure_ai_compact_sources_20261006.json)。 Klarnaの2025年開示は再配信HTMLの全文取得で確認制限を解消した。[取得記録](research/benchmarks/klarna_2025_disclosure_retrieval_20261006.json)。
 
+## 意味検索・関係検索・RAGの代替（2026年10月7日）
+
+[最新研究と企業での比較案](research/technology/rag_semantic_graph_alternatives_20261007.md)。2026年10月6日のAutoRAG、9月のNexusRAG・G³RAG・ConRAG・TAGGRAPH等を、文書構造、長文、頁画像、DB集計、反復検索と比較。初稿と改訂の年代、関係抽出を省く技術、単純な検索に負ける条件、費用の分母、企業の認可・更新への未解決点を整理した。3回・9問の追加調査と、4公開実装の固定版確認を含む。[25出典の台帳](research/technology/rag_sources_20261007.json)。追加18論文・307頁を取得・全頁OCRし、[日本語解説13](research/papers/paper_notes_13.md)を追加した。
+
 ## AIの実行基盤と隔離技術（2026年10月7日）
 
 [技術調査](research/technology/agent_os_sandbox_deep_dive_20261007.md)。17の技術・基盤を比較し、権限、外部通信、資格情報、共有領域、継続実行、復元、性能、自己変更、外部監査を調べた。4回・12問の追加調査を記録し、公開コードの固定版と初期設定まで照合した。[42出典の確認台帳](research/technology/agent_os_sandbox_sources_20261007.json)。新規12論文・206頁を取得し、全頁OCRと[日本語解説12](research/papers/paper_notes_12.md)を追加。最新の論文初稿は2026年10月5日。
@@ -49,7 +53,7 @@ Master Report は日付付きの調査版ではなく、新しい一次資料や
 
 [最近のAI関連事故・攻撃・脆弱性](research/technology/ai_incident_reports_20261006.md)。2026年10月1日の対応続報まで確認し、14の事例群を実侵入、阻止された攻撃、データ露出、研究での再現に分け、企業AI基盤の認可・監査・自己改善への教訓を整理した。
 
-[論文索引・取得方法](research/papers/README.md)。引用したarXiv論文167本・4,100頁を全て取得し、各論文の概要・重要点・限界・企業設計への示唆を日本語で説明した。PDFの要旨と本文の関連箇所を確認したが、全付録の精読や実験の再現は行っていない。
+[論文索引・取得方法](research/papers/README.md)。引用したarXiv論文185本・4,407頁を全て取得し、各論文の概要・重要点・限界・企業設計への示唆を日本語で説明した。PDFの要旨と本文の関連箇所を確認したが、全付録の精読や実験の再現は行っていない。
 
 PDF原本と抽出本文、全頁OCRによる検索可能なPDFと認識本文は `research/papers/arxiv/` にローカル保存する。Gitでは日本語解説、取得・OCR台帳、再取得・OCR用スクリプトを管理する。保存した版・容量・頁数・ハッシュ値・OCRの処理状態は台帳で確認できる。
 

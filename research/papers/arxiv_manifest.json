@@ -353,6 +353,27 @@
       "retrieved_date": "2026-10-07"
     },
     {
+      "id": "2401.18059",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2401.18059v1",
+      "resolved_url": "https://arxiv.org/pdf/2401.18059v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2401.18059/paper.pdf",
+      "text_path": "research/papers/arxiv/2401.18059/paper.txt",
+      "bytes": 2547113,
+      "sha256": "01319e2e6e6ecfd504ee1bbda41d023f9e060bd3505ab3c161baa1d6d696cf75",
+      "pages": 23,
+      "text_characters": 90584,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2402.07456",
       "references": [
         "research/technology/ai_os_agent_os.md"
@@ -431,8 +452,8 @@
     {
       "id": "2403.16971",
       "references": [
-        "research/technology/ai_os_agent_os.md",
-        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md",
+        "research/technology/ai_os_agent_os.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -451,7 +472,8 @@
     {
       "id": "2404.16130",
       "references": [
-        "research/technology/ontology_palantir_kinetic_layer.md"
+        "research/technology/ontology_palantir_kinetic_layer.md",
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -510,6 +532,7 @@
       "id": "2405.20362",
       "references": [
         "research/legal_domain/ai_native_operations_20261005.md",
+        "research/legal_domain/legaltech_practitioner_perspectives.md",
         "research/technology/ai_native_company_platform_20261005.md"
       ],
       "versions": [],
@@ -587,6 +610,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2407.01449",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v6"
+      ],
+      "requested_version": "v6",
+      "url": "https://arxiv.org/pdf/2407.01449v6",
+      "resolved_url": "https://arxiv.org/pdf/2407.01449v6",
+      "pdf_version": "v6",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2407.01449/paper.pdf",
+      "text_path": "research/papers/arxiv/2407.01449/paper.txt",
+      "bytes": 8260302,
+      "sha256": "852ec724f3d48316265611579f4c556a14fea24f29360b5929d02e4604662631",
+      "pages": 26,
+      "text_characters": 92780,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2407.10805",
       "references": [
         "research/technology/ontology_palantir_kinetic_layer.md"
@@ -625,6 +669,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2408.14717",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2408.14717v1",
+      "resolved_url": "https://arxiv.org/pdf/2408.14717v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2408.14717/paper.pdf",
+      "text_path": "research/papers/arxiv/2408.14717/paper.txt",
+      "bytes": 803506,
+      "sha256": "a0bbe3e61ea7e43a0695324fa37d5e3c99059467c4a178d0e9d0d90dd00331e7",
+      "pages": 10,
+      "text_characters": 63293,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2408.15256",
       "references": [
         "research/technology/ontology_palantir_kinetic_layer.md"
@@ -642,6 +707,27 @@
       "pages": 5,
       "text_characters": 32693,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2409.04701",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v3"
+      ],
+      "requested_version": "v3",
+      "url": "https://arxiv.org/pdf/2409.04701v3",
+      "resolved_url": "https://arxiv.org/pdf/2409.04701v3",
+      "pdf_version": "v3",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2409.04701/paper.pdf",
+      "text_path": "research/papers/arxiv/2409.04701/paper.txt",
+      "bytes": 470179,
+      "sha256": "3415e83ae4d180859481349fd5d0c6fdf22bbe3d864c4d276f499491a8eed109",
+      "pages": 14,
+      "text_characters": 51951,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2409.07489",
@@ -822,7 +908,8 @@
     {
       "id": "2412.15235",
       "references": [
-        "research/technology/ontology_palantir_kinetic_layer.md"
+        "research/technology/ontology_palantir_kinetic_layer.md",
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -876,6 +963,27 @@
       "pages": 20,
       "text_characters": 144580,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2502.14802",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v2"
+      ],
+      "requested_version": "v2",
+      "url": "https://arxiv.org/pdf/2502.14802v2",
+      "resolved_url": "https://arxiv.org/pdf/2502.14802v2",
+      "pdf_version": "v2",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2502.14802/paper.pdf",
+      "text_path": "research/papers/arxiv/2502.14802/paper.txt",
+      "bytes": 2498688,
+      "sha256": "90fa6af3ee8298a6c3abef6df0a9b0f092496cb7d6b1c3e8b55c5c8f5b552eb3",
+      "pages": 19,
+      "text_characters": 110456,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2503.03704",
@@ -1157,6 +1265,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2506.03989",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v2"
+      ],
+      "requested_version": "v2",
+      "url": "https://arxiv.org/pdf/2506.03989v2",
+      "resolved_url": "https://arxiv.org/pdf/2506.03989v2",
+      "pdf_version": "v2",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2506.03989/paper.pdf",
+      "text_path": "research/papers/arxiv/2506.03989/paper.txt",
+      "bytes": 355163,
+      "sha256": "24e5672f670ca8c35ce46e490f012fa558ff98ae8230dd2f7d98d3d1b17263f7",
+      "pages": 11,
+      "text_characters": 55982,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2506.08837",
       "references": [
         "research/technology/agent_sandbox_isolation_confidential_computing.md"
@@ -1366,6 +1495,27 @@
       "pages": 29,
       "text_characters": 122976,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2510.10114",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v4"
+      ],
+      "requested_version": "v4",
+      "url": "https://arxiv.org/pdf/2510.10114v4",
+      "resolved_url": "https://arxiv.org/pdf/2510.10114v4",
+      "pdf_version": "v4",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2510.10114/paper.pdf",
+      "text_path": "research/papers/arxiv/2510.10114/paper.txt",
+      "bytes": 1524607,
+      "sha256": "1df0bd67b590f331d7928c65bbdc0a086ce6c41195428a8f3670683dcd3de533",
+      "pages": 20,
+      "text_characters": 90694,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2510.12469",
@@ -1675,6 +1825,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2602.03442",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2602.03442v1",
+      "resolved_url": "https://arxiv.org/pdf/2602.03442v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2602.03442/paper.pdf",
+      "text_path": "research/papers/arxiv/2602.03442/paper.txt",
+      "bytes": 4870286,
+      "sha256": "b167650db7b6ba73f8f4462ce4147f7b826dfb700cca00ef8bfa226f8d02de60",
+      "pages": 18,
+      "text_characters": 62174,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2602.08235",
       "references": [
         "research/technology/autonomous_agent_risks_papers_incidents.md"
@@ -1773,8 +1944,8 @@
     {
       "id": "2603.02277",
       "references": [
-        "research/technology/agent_sandbox_isolation_confidential_computing.md",
-        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md",
+        "research/technology/agent_sandbox_isolation_confidential_computing.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2202,8 +2373,8 @@
     {
       "id": "2605.14932",
       "references": [
-        "research/technology/ai_os_agent_os.md",
-        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md",
+        "research/technology/ai_os_agent_os.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2299,8 +2470,8 @@
     {
       "id": "2606.01508",
       "references": [
-        "research/technology/ai_os_agent_os.md",
-        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md",
+        "research/technology/ai_os_agent_os.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2511,6 +2682,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2607.05803",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2607.05803v1",
+      "resolved_url": "https://arxiv.org/pdf/2607.05803v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2607.05803/paper.pdf",
+      "text_path": "research/papers/arxiv/2607.05803/paper.txt",
+      "bytes": 460016,
+      "sha256": "be53e3dd87b83c9f89163fb7c72ee035ac5539cae9b436a7790f0a13777d51ab",
+      "pages": 21,
+      "text_characters": 90101,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2607.13718",
       "references": [
         "research/technology/data_clearance_access_grant_workflows_20261006.md"
@@ -2614,8 +2806,8 @@
     {
       "id": "2607.25076",
       "references": [
-        "research/technology/ai_os_agent_os.md",
-        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md",
+        "research/technology/ai_os_agent_os.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2630,6 +2822,27 @@
       "pages": 12,
       "text_characters": 89716,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2608.00824",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2608.00824v1",
+      "resolved_url": "https://arxiv.org/pdf/2608.00824v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2608.00824/paper.pdf",
+      "text_path": "research/papers/arxiv/2608.00824/paper.txt",
+      "bytes": 309965,
+      "sha256": "25ad7caf1b936f8dbcdb97f58f72560854b50bd690ec908dc0e9e53c27b96b06",
+      "pages": 8,
+      "text_characters": 25009,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2608.01759",
@@ -2812,6 +3025,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2608.16628",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2608.16628v1",
+      "resolved_url": "https://arxiv.org/pdf/2608.16628v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2608.16628/paper.pdf",
+      "text_path": "research/papers/arxiv/2608.16628/paper.txt",
+      "bytes": 950764,
+      "sha256": "7a8fc645c7e8ddb3b3e0a8951fd03820dc5d4fdc265f99f8ec577e12c4070eb5",
+      "pages": 9,
+      "text_characters": 70335,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2608.26108",
       "references": [
         "research/technology/agent_sandbox_isolation_confidential_computing.md"
@@ -2990,10 +3224,31 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2609.19622",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.19622v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.19622v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.19622/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.19622/paper.txt",
+      "bytes": 4109820,
+      "sha256": "84456dca81dee6263a2fcfd269b46a22ea0ffe84156db7d111d270d241fac0fb",
+      "pages": 17,
+      "text_characters": 103597,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2609.23700",
       "references": [
-        "research/technology/ai_os_agent_os.md",
-        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md",
+        "research/technology/ai_os_agent_os.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -3090,6 +3345,27 @@
       "retrieved_date": "2026-10-07"
     },
     {
+      "id": "2609.32327",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.32327v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.32327v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.32327/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.32327/paper.txt",
+      "bytes": 919380,
+      "sha256": "b15f7d3a4ae99121443363e92e0e13aec13b11aac7a8cb4ccc8837a6c053e180",
+      "pages": 22,
+      "text_characters": 99110,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2609.32390",
       "references": [
         "research/technology/agent_sandbox_isolation_confidential_computing.md"
@@ -3109,6 +3385,48 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2609.34776",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.34776v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.34776v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.34776/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.34776/paper.txt",
+      "bytes": 260016,
+      "sha256": "a829c371b6191a6c42e21e0f3080ab06fb895596cb9c3b92c3ff0bd68e758db7",
+      "pages": 5,
+      "text_characters": 19503,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2609.35193",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.35193v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.35193v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.35193/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.35193/paper.txt",
+      "bytes": 1269648,
+      "sha256": "0389d5623f193898527057341bdac62017889e8a7957b8b2089503c2e7dcfc1c",
+      "pages": 26,
+      "text_characters": 105248,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2609.35596",
       "references": [
         "research/technology/autonomous_agent_risks_papers_incidents.md"
@@ -3126,6 +3444,48 @@
       "pages": 24,
       "text_characters": 113883,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2609.37661",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.37661v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.37661v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.37661/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.37661/paper.txt",
+      "bytes": 1247275,
+      "sha256": "85e2565b8d7336f4e5142692ea8bc07d71754cfad08c54b35f4b088da22559ed",
+      "pages": 22,
+      "text_characters": 105554,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2609.38353",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v2"
+      ],
+      "requested_version": "v2",
+      "url": "https://arxiv.org/pdf/2609.38353v2",
+      "resolved_url": "https://arxiv.org/pdf/2609.38353v2",
+      "pdf_version": "v2",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.38353/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.38353/paper.txt",
+      "bytes": 208056,
+      "sha256": "677f2e609b052b18505948e44da7d2632b4270a4a85b5a2f99433f4a269bfcdf",
+      "pages": 20,
+      "text_characters": 71869,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2609.38983",
@@ -3268,6 +3628,27 @@
       "sha256": "497b567e6c7ec890f967dae6048d5d7e34288227f307b3e8168f67846d24ea5e",
       "pages": 14,
       "text_characters": 56814,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2610.08452",
+      "references": [
+        "research/technology/rag_semantic_graph_alternatives_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2610.08452v1",
+      "resolved_url": "https://arxiv.org/pdf/2610.08452v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2610.08452/paper.pdf",
+      "text_path": "research/papers/arxiv/2610.08452/paper.txt",
+      "bytes": 470806,
+      "sha256": "c20667fa92cd393880e238e526fb14107aeedbdcc5b0a6f675fac77d4442abd8",
+      "pages": 16,
+      "text_characters": 91378,
       "retrieved_date": "2026-10-07"
     }
   ]

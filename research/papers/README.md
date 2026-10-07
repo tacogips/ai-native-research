@@ -1,6 +1,6 @@
 # 引用論文の取得台帳と日本語解説
 
-2026年10月5〜7日に、引用されたarXiv論文を重複を除いて167本取得した。合計4,100頁、約273.3 MiB。全件でPDFの形式、本文抽出、容量、SHA-256を確認した。
+2026年10月5〜7日に、引用されたarXiv論文を重複を除いて185本取得した。合計4,407頁、約303.4 MiB。全件でPDFの形式、本文抽出、容量、SHA-256を確認した。
 
 各解説は取得したPDFの要旨と本文の手法・結果・議論の関連箇所に基づく。全付録の精読と実験の再現は行っていない。著者の主張、評価条件・限界、企業設計への解釈を分けた。
 
@@ -16,7 +16,7 @@ python3 scripts/download_arxiv_papers.py
 
 ## OCRの保存方法と検証
 
-2026年10月7日、全167本・4,100頁のOCRを完了した。既存の文字層がある頁も `--force-ocr` で画像化し、英語の文字認識を実行する。原本の文字抽出だけでOCR済みとは扱わない。原本は変更しない。OCRmyPDF 17以上を使用する。付属の拡張で描画解像度を300 dpiへ制限し、小さな高解像度画像が頁全体を数億画素へ膨らませることを防ぐ。初期に完了した一部は標準の解像度で処理した。頁を飛ばす設定は使わない。
+2026年10月7日、全185本・4,407頁のOCRを完了した。既存の文字層がある頁も `--force-ocr` で画像化し、英語の文字認識を実行する。原本の文字抽出だけでOCR済みとは扱わない。原本は変更しない。OCRmyPDF 17以上を使用する。付属の拡張で描画解像度を300 dpiへ制限し、小さな高解像度画像が頁全体を数億画素へ膨らませることを防ぐ。初期に完了した一部は標準の解像度で処理した。頁を飛ばす設定は使わない。
 
 付属拡張による解像度制限時にGhostscriptで頁の描画が失敗した場合は、同じ解像度と頁の範囲でPopplerへ切り替える。切替条件は処理ログへ残し、対応できない変換条件では停止する。
 
@@ -30,7 +30,7 @@ python3 scripts/download_arxiv_papers.py
 
 [OCR台帳](ocr_manifest.json)に全件の処理状態、原本と成果物のSHA-256、認識言語、処理の版、頁数、認識本文の文字数、開始・完了日時を記録する。原本・OCR版PDF・認識本文の頁数が一致し、認識本文が空でなく、頁を省略した記録がなく、原本のハッシュ値が変更されていないことを検証する。途中で失敗した場合は停止し、再実行時には検証済みの成果物を再利用する。
 
-最終照合では、167本・4,100頁の頁数一致、原本と成果物のハッシュ値、全PDFの検索用文字層を確認した。省略頁の記録と空の認識頁は0件だった。過去の代表7頁に加えて新規2頁の原本・OCR版の見た目も確認し、検証範囲と日時をOCR台帳へ記録した。OCR版PDFの合計容量は約1,360.0 MiB。認識器の品質警告84件は処理ログと台帳に保持し、誤認識がないことの保証とは扱わない。
+最終照合では、185本・4,407頁の頁数一致、原本と成果物のハッシュ値、全PDFの検索用文字層を確認した。省略頁の記録と空の認識頁は0件だった。過去の代表9頁に加えて新規2頁の原本・OCR版の見た目も確認し、検証範囲と日時をOCR台帳へ記録した。OCR版PDFの合計容量は約1,473.9 MiB。認識器の品質警告98件は処理ログと台帳に保持し、誤認識がないことの保証とは扱わない。
 
 OCRだけを再実行する場合：
 
@@ -41,6 +41,8 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 数式、図中の小さな文字、表の列順、英語以外の文字には誤認識があり得る。これは全文翻訳や数式の構造認識ではない。引用・数値の確定には原本を照合する。全頁の自動処理・構造検証と、代表的な頁の見た目の確認を行い、全頁の文字を人手で校正したとは扱わない。
 
 ## 今回の重点テーマから読む
+
+- 意味検索・関係検索・代替方式：追加18論文・307頁（[解説13](paper_notes_13.md)）、[最新研究と企業での比較案](../technology/rag_semantic_graph_alternatives_20261007.md)。
 
 - AIの実行基盤・隔離・復元・自己変更：追加12論文・206頁（[解説12](paper_notes_12.md)）、[17技術の比較](../technology/agent_os_sandbox_deep_dive_20261007.md)。
 
@@ -75,6 +77,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2310.08560](https://arxiv.org/abs/2310.08560) | 長い対話のための階層的な記憶 | [解説](paper_notes_02.md) | [原本](arxiv/2310.08560/paper.pdf)・[OCR版](arxiv/2310.08560/paper_ocr.pdf)・[認識本文](arxiv/2310.08560/paper_ocr.txt) | v2 |
 | [2311.07509](https://arxiv.org/abs/2311.07509) | 企業の質問に対する関係データと SQL の比較 | [解説](paper_notes_02.md) | [原本](arxiv/2311.07509/paper.pdf)・[OCR版](arxiv/2311.07509/paper_ocr.pdf)・[認識本文](arxiv/2311.07509/paper_ocr.txt) | v1 |
 | [2311.15999](https://arxiv.org/abs/2311.15999v1) | Firecrackerと共有CPUの漏えい経路 | [解説](paper_notes_12.md) | [原本](arxiv/2311.15999/paper.pdf)・[OCR版](arxiv/2311.15999/paper_ocr.pdf)・[認識本文](arxiv/2311.15999/paper_ocr.txt) | v1 |
+| [2401.18059](https://arxiv.org/abs/2401.18059v1) | 断片と階層要約をまとめて検索 | [解説](paper_notes_13.md) | [原本](arxiv/2401.18059/paper.pdf)・[OCR版](arxiv/2401.18059/paper_ocr.pdf)・[認識本文](arxiv/2401.18059/paper_ocr.txt) | v1 |
 | [2402.07456](https://arxiv.org/abs/2402.07456) | 操作手順を蓄積する汎用計算機操作支援 | [解説](paper_notes_02.md) | [原本](arxiv/2402.07456/paper.pdf)・[OCR版](arxiv/2402.07456/paper_ocr.pdf)・[認識本文](arxiv/2402.07456/paper_ocr.txt) | v2 |
 | [2402.11163](https://arxiv.org/abs/2402.11163) | 知識グラフ上の複雑な質問を道具で解く | [解説](paper_notes_02.md) | [原本](arxiv/2402.11163/paper.pdf)・[OCR版](arxiv/2402.11163/paper_ocr.pdf)・[認識本文](arxiv/2402.11163/paper_ocr.txt) | v1 |
 | [2403.02691](https://arxiv.org/abs/2403.02691) | 外部文書に埋め込まれた不正指示の評価 | [解説](paper_notes_02.md) | [原本](arxiv/2403.02691/paper.pdf)・[OCR版](arxiv/2403.02691/paper_ocr.pdf)・[認識本文](arxiv/2403.02691/paper_ocr.txt) | v3 |
@@ -87,9 +90,12 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2406.12045](https://arxiv.org/abs/2406.12045) | τ-bench | [解説](paper_notes_03.md) | [原本](arxiv/2406.12045/paper.pdf)・[OCR版](arxiv/2406.12045/paper_ocr.pdf)・[認識本文](arxiv/2406.12045/paper_ocr.txt) | v1 |
 | [2406.13352](https://arxiv.org/abs/2406.13352) | AgentDojo | [解説](paper_notes_03.md) | [原本](arxiv/2406.13352/paper.pdf)・[OCR版](arxiv/2406.13352/paper_ocr.pdf)・[認識本文](arxiv/2406.13352/paper_ocr.txt) | v3 |
 | [2406.13356](https://arxiv.org/abs/2406.13356) | Unlearning or Obfuscating? | [解説](paper_notes_03.md) | [原本](arxiv/2406.13356/paper.pdf)・[OCR版](arxiv/2406.13356/paper_ocr.pdf)・[認識本文](arxiv/2406.13356/paper_ocr.txt) | v4 |
+| [2407.01449](https://arxiv.org/abs/2407.01449v6) | PDF頁画像を直接検索する | [解説](paper_notes_13.md) | [原本](arxiv/2407.01449/paper.pdf)・[OCR版](arxiv/2407.01449/paper_ocr.pdf)・[認識本文](arxiv/2407.01449/paper_ocr.txt) | v6 |
 | [2407.10805](https://arxiv.org/abs/2407.10805) | Think-on-Graph 2.0 | [解説](paper_notes_03.md) | [原本](arxiv/2407.10805/paper.pdf)・[OCR版](arxiv/2407.10805/paper_ocr.pdf)・[認識本文](arxiv/2407.10805/paper_ocr.txt) | v7 |
 | [2407.12784](https://arxiv.org/abs/2407.12784) | AgentPoison | [解説](paper_notes_03.md) | [原本](arxiv/2407.12784/paper.pdf)・[OCR版](arxiv/2407.12784/paper_ocr.pdf)・[認識本文](arxiv/2407.12784/paper_ocr.txt) | v1 |
+| [2408.14717](https://arxiv.org/abs/2408.14717v1) | DB集計と文章の意味判断を組み合わせる | [解説](paper_notes_13.md) | [原本](arxiv/2408.14717/paper.pdf)・[OCR版](arxiv/2408.14717/paper_ocr.pdf)・[認識本文](arxiv/2408.14717/paper_ocr.txt) | v1 |
 | [2408.15256](https://arxiv.org/abs/2408.15256) | OntoChat and Participatory Prompting | [解説](paper_notes_03.md) | [原本](arxiv/2408.15256/paper.pdf)・[OCR版](arxiv/2408.15256/paper_ocr.pdf)・[認識本文](arxiv/2408.15256/paper_ocr.txt) | v3 |
+| [2409.04701](https://arxiv.org/abs/2409.04701v3) | 文書全体の文脈から断片の表現を作る | [解説](paper_notes_13.md) | [原本](arxiv/2409.04701/paper.pdf)・[OCR版](arxiv/2409.04701/paper_ocr.pdf)・[認識本文](arxiv/2409.04701/paper_ocr.txt) | v3 |
 | [2409.07489](https://arxiv.org/abs/2409.07489) | RAGent | [解説](paper_notes_10.md) | [原本](arxiv/2409.07489/paper.pdf)・[OCR版](arxiv/2409.07489/paper_ocr.pdf)・[認識本文](arxiv/2409.07489/paper_ocr.txt) | v2 |
 | [2409.12917](https://arxiv.org/abs/2409.12917) | Training Language Models to Self-Correct via Reinforcement Learning | [解説](paper_notes_03.md) | [原本](arxiv/2409.12917/paper.pdf)・[OCR版](arxiv/2409.12917/paper_ocr.pdf)・[認識本文](arxiv/2409.12917/paper_ocr.txt) | v2 |
 | [2409.19091](https://arxiv.org/abs/2409.19091) | System-Level Defense against Indirect Prompt Injection Attacks | [解説](paper_notes_03.md) | [原本](arxiv/2409.19091/paper.pdf)・[OCR版](arxiv/2409.19091/paper_ocr.pdf)・[認識本文](arxiv/2409.19091/paper_ocr.txt) | v2 |
@@ -102,6 +108,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2412.15235](https://arxiv.org/abs/2412.15235) | OG-RAG | [解説](paper_notes_03.md) | [原本](arxiv/2412.15235/paper.pdf)・[OCR版](arxiv/2412.15235/paper_ocr.pdf)・[認識本文](arxiv/2412.15235/paper_ocr.txt) | v1 |
 | [2501.13956](https://arxiv.org/abs/2501.13956) | Zep: A Temporal Knowledge Graph Architecture for Agent Memory | [解説](paper_notes_03.md) | [原本](arxiv/2501.13956/paper.pdf)・[OCR版](arxiv/2501.13956/paper_ocr.pdf)・[認識本文](arxiv/2501.13956/paper_ocr.txt) | v1 |
 | [2502.11371](https://arxiv.org/abs/2502.11371) | RAG vs. GraphRAG | [解説](paper_notes_04.md) | [原本](arxiv/2502.11371/paper.pdf)・[OCR版](arxiv/2502.11371/paper_ocr.pdf)・[認識本文](arxiv/2502.11371/paper_ocr.txt) | v3 |
+| [2502.14802](https://arxiv.org/abs/2502.14802v2) | 事実・連想・文脈をつなぐHippoRAG 2 | [解説](paper_notes_13.md) | [原本](arxiv/2502.14802/paper.pdf)・[OCR版](arxiv/2502.14802/paper_ocr.pdf)・[認識本文](arxiv/2502.14802/paper_ocr.txt) | v2 |
 | [2503.03704](https://arxiv.org/abs/2503.03704) | Memory Injection Attacks via Query-Only Interaction | [解説](paper_notes_04.md) | [原本](arxiv/2503.03704/paper.pdf)・[OCR版](arxiv/2503.03704/paper_ocr.pdf)・[認識本文](arxiv/2503.03704/paper_ocr.txt) | v5 |
 | [2503.11444](https://arxiv.org/abs/2503.11444) | Cerebrum (AIOS SDK) | [解説](paper_notes_04.md) | [原本](arxiv/2503.11444/paper.pdf)・[OCR版](arxiv/2503.11444/paper_ocr.pdf)・[認識本文](arxiv/2503.11444/paper_ocr.txt) | v1 |
 | [2503.13657](https://arxiv.org/abs/2503.13657) | Why Do Multi-Agent LLM Systems Fail? | [解説](paper_notes_04.md) | [原本](arxiv/2503.13657/paper.pdf)・[OCR版](arxiv/2503.13657/paper_ocr.pdf)・[認識本文](arxiv/2503.13657/paper_ocr.txt) | v3 |
@@ -116,6 +123,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2505.22101](https://arxiv.org/abs/2505.22101) | MemOS (Short Version) | [解説](paper_notes_04.md) | [原本](arxiv/2505.22101/paper.pdf)・[OCR版](arxiv/2505.22101/paper_ocr.pdf)・[認識本文](arxiv/2505.22101/paper_ocr.txt) | v1 |
 | [2505.22954](https://arxiv.org/abs/2505.22954) | Darwin Gödel Machine | [解説](paper_notes_04.md) | [原本](arxiv/2505.22954/paper.pdf)・[OCR版](arxiv/2505.22954/paper_ocr.pdf)・[認識本文](arxiv/2505.22954/paper_ocr.txt) | v3 |
 | [2505.23643](https://arxiv.org/abs/2505.23643) | Securing AI Agents with Information-Flow Control | [解説](paper_notes_04.md) | [原本](arxiv/2505.23643/paper.pdf)・[OCR版](arxiv/2505.23643/paper_ocr.pdf)・[認識本文](arxiv/2505.23643/paper_ocr.txt) | v2 |
+| [2506.03989](https://arxiv.org/abs/2506.03989v2) | 原文の順序・構造を保つDOSRAG | [解説](paper_notes_13.md) | [原本](arxiv/2506.03989/paper.pdf)・[OCR版](arxiv/2506.03989/paper_ocr.pdf)・[認識本文](arxiv/2506.03989/paper_ocr.txt) | v2 |
 | [2506.08837](https://arxiv.org/abs/2506.08837) | Design Patterns for Securing LLM Agents | [解説](paper_notes_04.md) | [原本](arxiv/2506.08837/paper.pdf)・[OCR版](arxiv/2506.08837/paper_ocr.pdf)・[認識本文](arxiv/2506.08837/paper_ocr.txt) | v3 |
 | [2506.12618](https://arxiv.org/abs/2506.12618) | OpenUnlearning | [解説](paper_notes_04.md) | [原本](arxiv/2506.12618/paper.pdf)・[OCR版](arxiv/2506.12618/paper_ocr.pdf)・[認識本文](arxiv/2506.12618/paper_ocr.txt) | v2 |
 | [2506.14866](https://arxiv.org/abs/2506.14866) | OS-Harm | [解説](paper_notes_05.md) | [原本](arxiv/2506.14866/paper.pdf)・[OCR版](arxiv/2506.14866/paper_ocr.pdf)・[認識本文](arxiv/2506.14866/paper_ocr.txt) | v2 |
@@ -127,6 +135,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2509.25926](https://arxiv.org/abs/2509.25926) | Type-Directed Privilege Separation | [解説](paper_notes_05.md) | [原本](arxiv/2509.25926/paper.pdf)・[OCR版](arxiv/2509.25926/paper_ocr.pdf)・[認識本文](arxiv/2509.25926/paper_ocr.txt) | v2 |
 | [2509.26354](https://arxiv.org/abs/2509.26354) | Your Agent May Misevolve | [解説](paper_notes_05.md) | [原本](arxiv/2509.26354/paper.pdf)・[OCR版](arxiv/2509.26354/paper_ocr.pdf)・[認識本文](arxiv/2509.26354/paper_ocr.txt) | v2 |
 | [2510.09023](https://arxiv.org/abs/2510.09023) | The Attacker Moves Second | [解説](paper_notes_05.md) | [原本](arxiv/2510.09023/paper.pdf)・[OCR版](arxiv/2510.09023/paper_ocr.pdf)・[認識本文](arxiv/2510.09023/paper_ocr.txt) | v1 |
+| [2510.10114](https://arxiv.org/abs/2510.10114v4) | 実体・文・文章の図で生成AIの関係抽出を省く | [解説](paper_notes_13.md) | [原本](arxiv/2510.10114/paper.pdf)・[OCR版](arxiv/2510.10114/paper_ocr.pdf)・[認識本文](arxiv/2510.10114/paper_ocr.txt) | v4 |
 | [2510.12469](https://arxiv.org/abs/2510.12469) | Proof of Cloud | [解説](paper_notes_05.md) | [原本](arxiv/2510.12469/paper.pdf)・[OCR版](arxiv/2510.12469/paper_ocr.pdf)・[認識本文](arxiv/2510.12469/paper_ocr.txt) | v2 |
 | [2510.15001](https://arxiv.org/abs/2510.15001) | VaultGemma | [解説](paper_notes_05.md) | [原本](arxiv/2510.15001/paper.pdf)・[OCR版](arxiv/2510.15001/paper_ocr.pdf)・[認識本文](arxiv/2510.15001/paper_ocr.txt) | v2 |
 | [2510.23474](https://arxiv.org/abs/2510.23474) | Policy-Aware Generative AI for Safe, Auditable Data Access Governance | [解説](paper_notes_11.md) | [原本](arxiv/2510.23474/paper.pdf)・[OCR版](arxiv/2510.23474/paper_ocr.pdf)・[認識本文](arxiv/2510.23474/paper_ocr.txt) | v1 |
@@ -143,6 +152,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2601.14242](https://arxiv.org/abs/2601.14242) | APEX–Agents | [解説](paper_notes_06.md) | [原本](arxiv/2601.14242/paper.pdf)・[OCR版](arxiv/2601.14242/paper_ocr.pdf)・[認識本文](arxiv/2601.14242/paper_ocr.txt) | v3 |
 | [2601.18511](https://arxiv.org/abs/2601.18511) | Scaling up FHE-based Privacy-Preserving ML | [解説](paper_notes_06.md) | [原本](arxiv/2601.18511/paper.pdf)・[OCR版](arxiv/2601.18511/paper_ocr.pdf)・[認識本文](arxiv/2601.18511/paper_ocr.txt) | v2 |
 | [2602.03117](https://arxiv.org/abs/2602.03117) | AgentDyn | [解説](paper_notes_06.md) | [原本](arxiv/2602.03117/paper.pdf)・[OCR版](arxiv/2602.03117/paper_ocr.pdf)・[認識本文](arxiv/2602.03117/paper_ocr.txt) | v3 |
+| [2602.03442](https://arxiv.org/abs/2602.03442v1) | 単語・意味検索・全文読出しをAIが反復選択 | [解説](paper_notes_13.md) | [原本](arxiv/2602.03442/paper.pdf)・[OCR版](arxiv/2602.03442/paper_ocr.pdf)・[認識本文](arxiv/2602.03442/paper_ocr.txt) | v1 |
 | [2602.08235](https://arxiv.org/abs/2602.08235) | When Benign Inputs Lead to Severe Harms | [解説](paper_notes_06.md) | [原本](arxiv/2602.08235/paper.pdf)・[OCR版](arxiv/2602.08235/paper_ocr.pdf)・[認識本文](arxiv/2602.08235/paper_ocr.txt) | v2 |
 | [2602.08668](https://arxiv.org/abs/2602.08668) | Retrieval Pivot Attacks in Hybrid RAG | [解説](paper_notes_10.md) | [原本](arxiv/2602.08668/paper.pdf)・[OCR版](arxiv/2602.08668/paper_ocr.pdf)・[認識本文](arxiv/2602.08668/paper_ocr.txt) | v3 |
 | [2602.10133](https://arxiv.org/abs/2602.10133) | AgentTrace | [解説](paper_notes_10.md) | [原本](arxiv/2602.10133/paper.pdf)・[OCR版](arxiv/2602.10133/paper_ocr.pdf)・[認識本文](arxiv/2602.10133/paper_ocr.txt) | v1 |
@@ -186,12 +196,14 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2606.23075](https://arxiv.org/abs/2606.23075) | Safety in Self-Evolving LLM Agent Systems | [解説](paper_notes_08.md) | [原本](arxiv/2606.23075/paper.pdf)・[OCR版](arxiv/2606.23075/paper_ocr.pdf)・[認識本文](arxiv/2606.23075/paper_ocr.txt) | v1 |
 | [2606.27379](https://arxiv.org/abs/2606.27379) | The Term Machine Unlearning Is Overused | [解説](paper_notes_08.md) | [原本](arxiv/2606.27379/paper.pdf)・[OCR版](arxiv/2606.27379/paper_ocr.pdf)・[認識本文](arxiv/2606.27379/paper_ocr.txt) | v1 |
 | [2607.05518](https://arxiv.org/abs/2607.05518) | aiAuthZ | [解説](paper_notes_08.md) | [原本](arxiv/2607.05518/paper.pdf)・[OCR版](arxiv/2607.05518/paper_ocr.pdf)・[認識本文](arxiv/2607.05518/paper_ocr.txt) | v1 |
+| [2607.05803](https://arxiv.org/abs/2607.05803v1) | 語ごとの照合に負の寄与を導入するSigned MaxSim | [解説](paper_notes_13.md) | [原本](arxiv/2607.05803/paper.pdf)・[OCR版](arxiv/2607.05803/paper_ocr.pdf)・[認識本文](arxiv/2607.05803/paper_ocr.txt) | v1 |
 | [2607.13718](https://arxiv.org/abs/2607.13718) | How Agents Ask for Permission: User Permissions for AI Agents, from Interfaces to Enforcement | [解説](paper_notes_11.md) | [原本](arxiv/2607.13718/paper.pdf)・[OCR版](arxiv/2607.13718/paper_ocr.pdf)・[認識本文](arxiv/2607.13718/paper_ocr.txt) | v2 |
 | [2607.22571](https://arxiv.org/abs/2607.22571) | SCAIR | [解説](paper_notes_08.md) | [原本](arxiv/2607.22571/paper.pdf)・[OCR版](arxiv/2607.22571/paper_ocr.pdf)・[認識本文](arxiv/2607.22571/paper_ocr.txt) | v1 |
 | [2607.23933](https://arxiv.org/abs/2607.23933v2) | SpecBox：予測による環境準備と結果再利用 | [解説](paper_notes_12.md) | [原本](arxiv/2607.23933/paper.pdf)・[OCR版](arxiv/2607.23933/paper_ocr.pdf)・[認識本文](arxiv/2607.23933/paper_ocr.txt) | v2 |
 | [2607.24300](https://arxiv.org/abs/2607.24300) | Self-Authored Verification Is Unreliable | [解説](paper_notes_08.md) | [原本](arxiv/2607.24300/paper.pdf)・[OCR版](arxiv/2607.24300/paper_ocr.pdf)・[認識本文](arxiv/2607.24300/paper_ocr.txt) | v1 |
 | [2607.24625](https://arxiv.org/abs/2607.24625) | APPA | [解説](paper_notes_08.md) | [原本](arxiv/2607.24625/paper.pdf)・[OCR版](arxiv/2607.24625/paper_ocr.pdf)・[認識本文](arxiv/2607.24625/paper_ocr.txt) | v2 |
 | [2607.25076](https://arxiv.org/abs/2607.25076) | Towards an Agent Operating System | [解説](paper_notes_08.md) | [原本](arxiv/2607.25076/paper.pdf)・[OCR版](arxiv/2607.25076/paper_ocr.pdf)・[認識本文](arxiv/2607.25076/paper_ocr.txt) | v1 |
+| [2608.00824](https://arxiv.org/abs/2608.00824v1) | 見出しを保持する意味分割と採点の不安定性 | [解説](paper_notes_13.md) | [原本](arxiv/2608.00824/paper.pdf)・[OCR版](arxiv/2608.00824/paper_ocr.pdf)・[認識本文](arxiv/2608.00824/paper_ocr.txt) | v1 |
 | [2608.01759](https://arxiv.org/abs/2608.01759) | Benign Alone, Harmful Together | [解説](paper_notes_08.md) | [原本](arxiv/2608.01759/paper.pdf)・[OCR版](arxiv/2608.01759/paper_ocr.pdf)・[認識本文](arxiv/2608.01759/paper_ocr.txt) | v1 |
 | [2608.06477](https://arxiv.org/abs/2608.06477) | StepJack | [解説](paper_notes_08.md) | [原本](arxiv/2608.06477/paper.pdf)・[OCR版](arxiv/2608.06477/paper_ocr.pdf)・[認識本文](arxiv/2608.06477/paper_ocr.txt) | v1 |
 | [2608.06984](https://arxiv.org/abs/2608.06984) | HarnessSafe | [解説](paper_notes_08.md) | [原本](arxiv/2608.06984/paper.pdf)・[OCR版](arxiv/2608.06984/paper_ocr.pdf)・[認識本文](arxiv/2608.06984/paper_ocr.txt) | v1 |
@@ -201,6 +213,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2608.11274](https://arxiv.org/abs/2608.11274v1) | 実行時の制約と成功の証拠を要求する | [解説](paper_notes_12.md) | [原本](arxiv/2608.11274/paper.pdf)・[OCR版](arxiv/2608.11274/paper_ocr.pdf)・[認識本文](arxiv/2608.11274/paper_ocr.txt) | v1 |
 | [2608.11323](https://arxiv.org/abs/2608.11323) | Deployment Decision Reliability | [解説](paper_notes_09.md) | [原本](arxiv/2608.11323/paper.pdf)・[OCR版](arxiv/2608.11323/paper_ocr.pdf)・[認識本文](arxiv/2608.11323/paper_ocr.txt) | v1 |
 | [2608.12851](https://arxiv.org/abs/2608.12851) | Practice Makes Unsafe | [解説](paper_notes_09.md) | [原本](arxiv/2608.12851/paper.pdf)・[OCR版](arxiv/2608.12851/paper_ocr.pdf)・[認識本文](arxiv/2608.12851/paper_ocr.txt) | v1 |
+| [2608.16628](https://arxiv.org/abs/2608.16628v1) | 図表・文章をまとめて結び、局所的に抽出を補う | [解説](paper_notes_13.md) | [原本](arxiv/2608.16628/paper.pdf)・[OCR版](arxiv/2608.16628/paper_ocr.pdf)・[認識本文](arxiv/2608.16628/paper_ocr.txt) | v1 |
 | [2608.26108](https://arxiv.org/abs/2608.26108) | Agentic AI Containment Architecture | [解説](paper_notes_09.md) | [原本](arxiv/2608.26108/paper.pdf)・[OCR版](arxiv/2608.26108/paper_ocr.pdf)・[認識本文](arxiv/2608.26108/paper_ocr.txt) | not-detected |
 | [2608.26157](https://arxiv.org/abs/2608.26157) | GROUND | [解説](paper_notes_09.md) | [原本](arxiv/2608.26157/paper.pdf)・[OCR版](arxiv/2608.26157/paper_ocr.pdf)・[認識本文](arxiv/2608.26157/paper_ocr.txt) | v1 |
 | [2608.26575](https://arxiv.org/abs/2608.26575) | Confidential Computing on Blackwell GPUs | [解説](paper_notes_09.md) | [原本](arxiv/2608.26575/paper.pdf)・[OCR版](arxiv/2608.26575/paper_ocr.pdf)・[認識本文](arxiv/2608.26575/paper_ocr.txt) | v2 |
@@ -210,13 +223,19 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2609.00267](https://arxiv.org/abs/2609.00267v1) | 複数AIへの本人性・認可・権限委任 | [解説](paper_notes_12.md) | [原本](arxiv/2609.00267/paper.pdf)・[OCR版](arxiv/2609.00267/paper_ocr.pdf)・[認識本文](arxiv/2609.00267/paper_ocr.txt) | v1 |
 | [2609.11294](https://arxiv.org/abs/2609.11294v1) | AgentZip：多数の実行環境の記憶圧縮 | [解説](paper_notes_12.md) | [原本](arxiv/2609.11294/paper.pdf)・[OCR版](arxiv/2609.11294/paper_ocr.pdf)・[認識本文](arxiv/2609.11294/paper_ocr.txt) | v1 |
 | [2609.17817](https://arxiv.org/abs/2609.17817) | Reflections on Trusting Trust, Revisited | [解説](paper_notes_09.md) | [原本](arxiv/2609.17817/paper.pdf)・[OCR版](arxiv/2609.17817/paper_ocr.pdf)・[認識本文](arxiv/2609.17817/paper_ocr.txt) | v1 |
+| [2609.19622](https://arxiv.org/abs/2609.19622v1) | 角度と密度から補完的な資料を探すG³RAG | [解説](paper_notes_13.md) | [原本](arxiv/2609.19622/paper.pdf)・[OCR版](arxiv/2609.19622/paper_ocr.pdf)・[認識本文](arxiv/2609.19622/paper_ocr.txt) | v1 |
 | [2609.23700](https://arxiv.org/abs/2609.23700) | When the Agent Becomes the Kernel | [解説](paper_notes_09.md) | [原本](arxiv/2609.23700/paper.pdf)・[OCR版](arxiv/2609.23700/paper_ocr.pdf)・[認識本文](arxiv/2609.23700/paper_ocr.txt) | v1 |
 | [2609.26457](https://arxiv.org/abs/2609.26457) | Recursive Self-Improvement of AI Research Agents | [解説](paper_notes_09.md) | [原本](arxiv/2609.26457/paper.pdf)・[OCR版](arxiv/2609.26457/paper_ocr.pdf)・[認識本文](arxiv/2609.26457/paper_ocr.txt) | v1 |
 | [2609.29647](https://arxiv.org/abs/2609.29647v1) | AgentKernel：本人性・入力・記憶・実行の保護 | [解説](paper_notes_12.md) | [原本](arxiv/2609.29647/paper.pdf)・[OCR版](arxiv/2609.29647/paper_ocr.pdf)・[認識本文](arxiv/2609.29647/paper_ocr.txt) | v1 |
 | [2609.31039](https://arxiv.org/abs/2609.31039) | MetaPermit | [解説](paper_notes_10.md) | [原本](arxiv/2609.31039/paper.pdf)・[OCR版](arxiv/2609.31039/paper_ocr.pdf)・[認識本文](arxiv/2609.31039/paper_ocr.txt) | v1 |
 | [2609.31318](https://arxiv.org/abs/2609.31318v1) | AgentXploit：コード分析と実行環境での安全性検査 | [解説](paper_notes_12.md) | [原本](arxiv/2609.31318/paper.pdf)・[OCR版](arxiv/2609.31318/paper_ocr.pdf)・[認識本文](arxiv/2609.31318/paper_ocr.txt) | v1 |
+| [2609.32327](https://arxiv.org/abs/2609.32327v1) | 学習した複数実体の図で根拠を連結 | [解説](paper_notes_13.md) | [原本](arxiv/2609.32327/paper.pdf)・[OCR版](arxiv/2609.32327/paper_ocr.pdf)・[認識本文](arxiv/2609.32327/paper_ocr.txt) | v1 |
 | [2609.32390](https://arxiv.org/abs/2609.32390) | Reward Hacking and Agent Containment Failure | [解説](paper_notes_09.md) | [原本](arxiv/2609.32390/paper.pdf)・[OCR版](arxiv/2609.32390/paper_ocr.pdf)・[認識本文](arxiv/2609.32390/paper_ocr.txt) | not-detected |
+| [2609.34776](https://arxiv.org/abs/2609.34776v1) | PDF頁単位の検索を五つの構成で比較 | [解説](paper_notes_13.md) | [原本](arxiv/2609.34776/paper.pdf)・[OCR版](arxiv/2609.34776/paper_ocr.pdf)・[認識本文](arxiv/2609.34776/paper_ocr.txt) | v1 |
+| [2609.35193](https://arxiv.org/abs/2609.35193v1) | 二つの既知実体を結ぶ関係を軽く推定 | [解説](paper_notes_13.md) | [原本](arxiv/2609.35193/paper.pdf)・[OCR版](arxiv/2609.35193/paper_ocr.pdf)・[認識本文](arxiv/2609.35193/paper_ocr.txt) | v1 |
 | [2609.35596](https://arxiv.org/abs/2609.35596) | SEABench | [解説](paper_notes_09.md) | [原本](arxiv/2609.35596/paper.pdf)・[OCR版](arxiv/2609.35596/paper_ocr.pdf)・[認識本文](arxiv/2609.35596/paper_ocr.txt) | v2 |
+| [2609.37661](https://arxiv.org/abs/2609.37661v1) | 実体の近隣構造で橋渡し資料を探すNexusRAG | [解説](paper_notes_13.md) | [原本](arxiv/2609.37661/paper.pdf)・[OCR版](arxiv/2609.37661/paper_ocr.pdf)・[認識本文](arxiv/2609.37661/paper_ocr.txt) | v1 |
+| [2609.38353](https://arxiv.org/abs/2609.38353v2) | AIの履歴を標識付きの図で検索 | [解説](paper_notes_13.md) | [原本](arxiv/2609.38353/paper.pdf)・[OCR版](arxiv/2609.38353/paper_ocr.pdf)・[認識本文](arxiv/2609.38353/paper_ocr.txt) | v2 |
 | [2609.38983](https://arxiv.org/abs/2609.38983) | Approval Laundering | [解説](paper_notes_09.md) | [原本](arxiv/2609.38983/paper.pdf)・[OCR版](arxiv/2609.38983/paper_ocr.pdf)・[認識本文](arxiv/2609.38983/paper_ocr.txt) | v1 |
 | [2610.00037](https://arxiv.org/abs/2610.00037) | Guarded Commits: Transactional Human Approvals for LLM Workflows | [解説](paper_notes_11.md) | [原本](arxiv/2610.00037/paper.pdf)・[OCR版](arxiv/2610.00037/paper_ocr.pdf)・[認識本文](arxiv/2610.00037/paper_ocr.txt) | v1 |
 | [2610.01073](https://arxiv.org/abs/2610.01073) | Safety Must Survive Self-Improvement | [解説](paper_notes_09.md) | [原本](arxiv/2610.01073/paper.pdf)・[OCR版](arxiv/2610.01073/paper_ocr.pdf)・[認識本文](arxiv/2610.01073/paper_ocr.txt) | v1 |
@@ -224,3 +243,4 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2610.04083](https://arxiv.org/abs/2610.04083v1) | 不正な目標が永続情報から後のAIへ伝わる | [解説](paper_notes_12.md) | [原本](arxiv/2610.04083/paper.pdf)・[OCR版](arxiv/2610.04083/paper_ocr.pdf)・[認識本文](arxiv/2610.04083/paper_ocr.txt) | v1 |
 | [2610.06001](https://arxiv.org/abs/2610.06001v1) | AgentSpy：AIと子プロセスの外部観測 | [解説](paper_notes_12.md) | [原本](arxiv/2610.06001/paper.pdf)・[OCR版](arxiv/2610.06001/paper_ocr.pdf)・[認識本文](arxiv/2610.06001/paper_ocr.txt) | v1 |
 | [2610.06274](https://arxiv.org/abs/2610.06274v1) | 自己設定で安全上の制約を変更させない | [解説](paper_notes_12.md) | [原本](arxiv/2610.06274/paper.pdf)・[OCR版](arxiv/2610.06274/paper_ocr.pdf)・[認識本文](arxiv/2610.06274/paper_ocr.txt) | v1 |
+| [2610.08452](https://arxiv.org/abs/2610.08452v1) | 検索と生成の失敗を分けて構成を探索 | [解説](paper_notes_13.md) | [原本](arxiv/2610.08452/paper.pdf)・[OCR版](arxiv/2610.08452/paper_ocr.pdf)・[認識本文](arxiv/2610.08452/paper_ocr.txt) | v1 |
