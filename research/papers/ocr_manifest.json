@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T11:42:53.121394+09:00",
+  "updated_at": "2026-10-07T11:19:35.402822+09:00",
   "method": "force-ocr-all-pages",
   "language": "eng",
   "papers": [
@@ -85,6 +85,49 @@
       "recognition_warnings": [
         "7 [tesseract] lots of diacritics - possibly poor OCR"
       ],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2102.12892",
+      "source_pdf_path": "research/papers/arxiv/2102.12892/paper.pdf",
+      "status": "completed",
+      "source_sha256": "438cfafe475d749a47917100dc699bd3aa523b47ceba9e4ba32fbe649b6ea5bb",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:17:11.854119+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2102.12892/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2102.12892/paper_ocr.txt",
+      "pages": 7,
+      "ocr_pages": 7,
+      "ocr_bytes": 2497317,
+      "ocr_sha256": "26e14dc41e5b9f9de2299400e186ffb4256656f7d99134470f48e7dc21634002",
+      "text_sha256": "514ddc7dde59cd016a383596cee9f443488868a7024de681982f5d3f5fd73fb8",
+      "text_characters": 33440,
+      "searchable_text_characters": 33685,
+      "completed_at": "2026-10-07T11:17:46.214819+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
       "blank_ocr_pages": 0
     },
     {
@@ -672,6 +715,49 @@
         "<OCR版PDF>"
       ],
       "searchable_text_characters": 104741,
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2311.15999",
+      "source_pdf_path": "research/papers/arxiv/2311.15999/paper.pdf",
+      "status": "completed",
+      "source_sha256": "9559571512c4842dda5463c23f40651707169d435d9bbfdec8613ab13fc470a6",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:17:46.540272+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2311.15999/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2311.15999/paper_ocr.txt",
+      "pages": 14,
+      "ocr_pages": 14,
+      "ocr_bytes": 5237902,
+      "ocr_sha256": "aecf5646cce5ac4cc7ad4d99e158294e2df50d7348bf5332fbfb3e9216af1348",
+      "text_sha256": "8d8efbfaf444441e00bdb66c1fe804a4308bdcc243083c10276dbfb354576081",
+      "text_characters": 76412,
+      "searchable_text_characters": 77340,
+      "completed_at": "2026-10-07T11:19:35.402264+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
       "recognition_warnings": [],
       "blank_ocr_pages": 0
     },
@@ -3050,7 +3136,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2511.15203",
@@ -3180,7 +3267,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2512.01295",
@@ -4021,7 +4109,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2603.15714",
@@ -5101,7 +5190,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2606.04141",
@@ -5532,7 +5622,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2607.22571",
@@ -5554,6 +5645,49 @@
       "text_characters": 62093,
       "searchable_text_characters": 62795,
       "completed_at": "2026-10-06T09:22:58.981713+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2607.23933",
+      "source_pdf_path": "research/papers/arxiv/2607.23933/paper.pdf",
+      "status": "completed",
+      "source_sha256": "48fec6709abcd7bbb4c28dde2ebbefae8c372ee1c361c982a569fe9d1fcf8056",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:06:33.289088+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2607.23933/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2607.23933/paper_ocr.txt",
+      "pages": 13,
+      "ocr_pages": 13,
+      "ocr_bytes": 7385813,
+      "ocr_sha256": "4c54b2c6f0338aa17b62dbae4cdf982abe197be36d62282767f6f0a0d606f6b7",
+      "text_sha256": "a28b35e229fbda6cd8a92dd5167e6408efa3ab7a166317756b3a7524ab665940",
+      "text_characters": 83686,
+      "searchable_text_characters": 84474,
+      "completed_at": "2026-10-07T11:07:17.787292+09:00",
       "command": [
         "ocrmypdf",
         "--force-ocr",
@@ -5975,6 +6109,51 @@
       "blank_ocr_pages": 0
     },
     {
+      "id": "2608.11274",
+      "source_pdf_path": "research/papers/arxiv/2608.11274/paper.pdf",
+      "status": "completed",
+      "source_sha256": "e68b802929857fb1a288150b78794f466180a7c3b8224fb697b162d5c7815aa1",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:07:17.891045+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2608.11274/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2608.11274/paper_ocr.txt",
+      "pages": 15,
+      "ocr_pages": 15,
+      "ocr_bytes": 2176385,
+      "ocr_sha256": "a6b555af7352bab3644eca0393611545aea1d7b2726c065cc48b8aaae951f9f1",
+      "text_sha256": "f6c7d1cd97c4c7ecb5cbfb3a02f7f30a1742b52bdc8df68c5294c9b40c73a8c9",
+      "text_characters": 57292,
+      "searchable_text_characters": 57361,
+      "completed_at": "2026-10-07T11:07:41.592872+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [
+        "5 [tesseract] lots of diacritics - possibly poor OCR"
+      ],
+      "blank_ocr_pages": 0
+    },
+    {
       "id": "2608.11323",
       "source_pdf_path": "research/papers/arxiv/2608.11323/paper.pdf",
       "status": "completed",
@@ -6231,7 +6410,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2608.27800",
@@ -6317,6 +6497,95 @@
         "<OCR版PDF>"
       ],
       "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2609.00267",
+      "source_pdf_path": "research/papers/arxiv/2609.00267/paper.pdf",
+      "status": "completed",
+      "source_sha256": "3e70ed2b15f1311cb45f8bf358e0a573f4daa7a6a34d424c175a08bce574bec8",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:07:41.662506+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2609.00267/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2609.00267/paper_ocr.txt",
+      "pages": 14,
+      "ocr_pages": 14,
+      "ocr_bytes": 1480572,
+      "ocr_sha256": "9579e390edef029c3f3ce7c6ffdb26616a3cef332d950c59488de539baef56bc",
+      "text_sha256": "561a629c3e6e90ed99a25a8abf09bf5ce5184f86203dc36598fe6918eb3325d8",
+      "text_characters": 40448,
+      "searchable_text_characters": 40752,
+      "completed_at": "2026-10-07T11:08:11.109033+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2609.11294",
+      "source_pdf_path": "research/papers/arxiv/2609.11294/paper.pdf",
+      "status": "completed",
+      "source_sha256": "9c2ec7b1c0277bae74687a615e6d0068a5fa486b3791d7599ecaa67709c84245",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:08:11.113854+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2609.11294/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2609.11294/paper_ocr.txt",
+      "pages": 12,
+      "ocr_pages": 12,
+      "ocr_bytes": 5506435,
+      "ocr_sha256": "256ccba7121dea36d592e7d5ad0454ed10ebd79254fb6de92816701b28a947f3",
+      "text_sha256": "c25a0b120f808c89d59d08a4017853361c287777f0448ec854111c9ae5f7041f",
+      "text_characters": 60657,
+      "searchable_text_characters": 61403,
+      "completed_at": "2026-10-07T11:08:51.241676+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [
+        "1 [tesseract] lots of diacritics - possibly poor OCR",
+        "9 [tesseract] lots of diacritics - possibly poor OCR"
+      ],
       "blank_ocr_pages": 0
     },
     {
@@ -6451,6 +6720,49 @@
       "blank_ocr_pages": 0
     },
     {
+      "id": "2609.29647",
+      "source_pdf_path": "research/papers/arxiv/2609.29647/paper.pdf",
+      "status": "completed",
+      "source_sha256": "6f445930d60f41bb0a4b8b4067c06222f5880f131df7e24c7adc838bab3ec42c",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:08:51.286002+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2609.29647/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2609.29647/paper_ocr.txt",
+      "pages": 38,
+      "ocr_pages": 38,
+      "ocr_bytes": 15969861,
+      "ocr_sha256": "13a8176d8c047281c993a1adf9db1f2918ca6325cc0c2a9399ce9e36a122df54",
+      "text_sha256": "6b11053d2d3ea085a6343505c3ad9b7c99d86cc82445ceaba93376a70bdfb247",
+      "text_characters": 137453,
+      "searchable_text_characters": 137883,
+      "completed_at": "2026-10-07T11:09:27.205849+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
       "id": "2609.31039",
       "source_pdf_path": "research/papers/arxiv/2609.31039/paper.pdf",
       "status": "completed",
@@ -6492,6 +6804,51 @@
       ],
       "recognition_warnings": [
         "3 [tesseract] lots of diacritics - possibly poor OCR"
+      ],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2609.31318",
+      "source_pdf_path": "research/papers/arxiv/2609.31318/paper.pdf",
+      "status": "completed",
+      "source_sha256": "12c3480ae3d919517e5e2c5e9eb4eb779bd716d3bf66b34bfe58ab6286d58e09",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:09:27.217444+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2609.31318/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2609.31318/paper_ocr.txt",
+      "pages": 20,
+      "ocr_pages": 20,
+      "ocr_bytes": 11001719,
+      "ocr_sha256": "eee25ff57090b63645b70ec02426e2265f867e2abc28a5267c8e2794f72af430",
+      "text_sha256": "5fdb847cada29775532ce5de0362c75b76b3f9eb8bfb54cd9c06cf7bd40e347d",
+      "text_characters": 86658,
+      "searchable_text_characters": 88326,
+      "completed_at": "2026-10-07T11:09:51.443297+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [
+        "2 [tesseract] lots of diacritics - possibly poor OCR"
       ],
       "blank_ocr_pages": 0
     },
@@ -6666,7 +7023,8 @@
         "<原本>",
         "<OCR版PDF>"
       ],
-      "recognition_warnings": []
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     },
     {
       "id": "2610.01073",
@@ -6710,48 +7068,248 @@
       ],
       "recognition_warnings": [],
       "blank_ocr_pages": 0
+    },
+    {
+      "id": "2610.02456",
+      "source_pdf_path": "research/papers/arxiv/2610.02456/paper.pdf",
+      "status": "completed",
+      "source_sha256": "299e4e1e94ff9aba57302a1e312c978256234b390db2cbfa1aa441b1bd57c81c",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:09:51.474817+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2610.02456/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2610.02456/paper_ocr.txt",
+      "pages": 17,
+      "ocr_pages": 17,
+      "ocr_bytes": 6142519,
+      "ocr_sha256": "c0edf8b89c9d02d689988ac488cb2afe4fcdb6df57f541cdf25891d673206b6d",
+      "text_sha256": "9e44fd63c43969b60aa5b8fc2e74ec2c76556ab4a5d1af9071f292bc451e7ca5",
+      "text_characters": 69408,
+      "searchable_text_characters": 70779,
+      "completed_at": "2026-10-07T11:10:09.688474+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2610.04083",
+      "source_pdf_path": "research/papers/arxiv/2610.04083/paper.pdf",
+      "status": "completed",
+      "source_sha256": "b122e5879109a3dc85682ac7a0c28c89a0dcb8237cd4408666f3bf5335bd85cd",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:10:09.692801+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2610.04083/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2610.04083/paper_ocr.txt",
+      "pages": 20,
+      "ocr_pages": 20,
+      "ocr_bytes": 8446641,
+      "ocr_sha256": "817290ec68f05f8a27e993edc7e5357f9bf82e711d9609a1b8ee6aa4db852e0b",
+      "text_sha256": "bd8078ef6eca70e70b559172919d58ed70d4dc8fac4d924ccbc49b48704f87b4",
+      "text_characters": 108159,
+      "searchable_text_characters": 109717,
+      "completed_at": "2026-10-07T11:10:44.727887+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2610.06001",
+      "source_pdf_path": "research/papers/arxiv/2610.06001/paper.pdf",
+      "status": "completed",
+      "source_sha256": "292332742df7bac8d900548185b54eb895a82cea50b95ac34b24ad75589ec8c8",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:10:44.732150+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2610.06001/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2610.06001/paper_ocr.txt",
+      "pages": 22,
+      "ocr_pages": 22,
+      "ocr_bytes": 5647924,
+      "ocr_sha256": "155872c1a57f3cfbe0a35172b42877bd16ebee3b0602d27c771520225e5ba6e1",
+      "text_sha256": "a223bef6d46259f2ec67b3cf4b8597caf4f6a2933cf7ab26136b0b2fb8e1a52f",
+      "text_characters": 84694,
+      "searchable_text_characters": 85060,
+      "completed_at": "2026-10-07T11:11:19.173322+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
+    },
+    {
+      "id": "2610.06274",
+      "source_pdf_path": "research/papers/arxiv/2610.06274/paper.pdf",
+      "status": "completed",
+      "source_sha256": "497b567e6c7ec890f967dae6048d5d7e34288227f307b3e8168f67846d24ea5e",
+      "language": "eng",
+      "engine": "OCRmyPDF 17.13.0",
+      "tesseract": "tesseract 5.5.3",
+      "rendering_plugin_sha256": "af6d2198280ab4afc7c88409b89f519548966036a1cf78bc1d70c10e6e301432",
+      "started_at": "2026-10-07T11:11:19.177820+09:00",
+      "ocr_pdf_path": "research/papers/arxiv/2610.06274/paper_ocr.pdf",
+      "ocr_text_path": "research/papers/arxiv/2610.06274/paper_ocr.txt",
+      "pages": 14,
+      "ocr_pages": 14,
+      "ocr_bytes": 3463783,
+      "ocr_sha256": "14108c9f27f858c4cda1b96d86c933907172264818d23a6965a10a30151ff3b3",
+      "text_sha256": "c9b0204977e58c60ed77afeed816c738915c7ccdd6f7e6f1369ed469b8173ba5",
+      "text_characters": 51243,
+      "searchable_text_characters": 51523,
+      "completed_at": "2026-10-07T11:11:46.497446+09:00",
+      "command": [
+        "ocrmypdf",
+        "--force-ocr",
+        "--output-type",
+        "pdf",
+        "--optimize",
+        "1",
+        "--plugin",
+        "/Users/taco/gits/tacogips/ai-native-research/scripts/ocr_dpi_limit.py",
+        "--jobs",
+        "8",
+        "--language",
+        "eng",
+        "--tesseract-timeout",
+        "3600",
+        "--sidecar",
+        "<本文保存先>",
+        "<原本>",
+        "<OCR版PDF>"
+      ],
+      "recognition_warnings": [],
+      "blank_ocr_pages": 0
     }
   ],
   "verification": {
-    "checked_at": "2026-10-06T11:48:13.713377+09:00",
-    "papers": 155,
-    "pages": 3894,
-    "original_hashes_unchanged": true,
-    "output_hashes_match": true,
-    "all_pdf_and_sidecar_page_counts_match": true,
-    "all_pdf_searchable_text_nonempty": true,
-    "skipped_page_markers": 0,
-    "empty_ocr_pages": 0,
-    "visual_samples": [
+    "checked_at": "2026-10-07T11:21:50.509421+09:00",
+    "paper_count": 167,
+    "page_count": 4100,
+    "source_and_output_sha256_checked": true,
+    "all_page_counts_match": true,
+    "all_pdf_text_layers_nonempty": true,
+    "skipped_pages": 0,
+    "blank_ocr_pages": 0,
+    "recognition_warning_count": 84,
+    "new_paper_count": 12,
+    "new_page_count": 206,
+    "visual_checks": [
       {
-        "id": "1503.02531",
-        "page": 1
+        "id": "2610.06274",
+        "page": 1,
+        "checked_date": "2026-10-07",
+        "result": "原本とOCR版の見た目を照合。本文・構成を保持。原本の参照枠はOCR画像化で消失"
       },
       {
-        "id": "2309.15817",
-        "page": 8
-      },
-      {
-        "id": "2412.14161",
-        "page": 2
-      },
-      {
-        "id": "2505.01538",
-        "page": 1
-      },
-      {
-        "id": "2602.10133",
-        "page": 1
-      },
-      {
-        "id": "2603.14341",
-        "page": 10
-      },
-      {
-        "id": "2608.27443",
-        "page": 1
+        "id": "2609.11294",
+        "page": 4,
+        "checked_date": "2026-10-07",
+        "result": "図と二段組本文を原本とOCR版で照合。本文・図の構成を保持"
       }
     ],
-    "visual_review_scope": "2回の確認で代表7頁を検査。全頁の文字を人手で校正したものではない。"
+    "previous_verification": {
+      "checked_at": "2026-10-06T11:48:13.713377+09:00",
+      "papers": 155,
+      "pages": 3894,
+      "original_hashes_unchanged": true,
+      "output_hashes_match": true,
+      "all_pdf_and_sidecar_page_counts_match": true,
+      "all_pdf_searchable_text_nonempty": true,
+      "skipped_page_markers": 0,
+      "empty_ocr_pages": 0,
+      "visual_samples": [
+        {
+          "id": "1503.02531",
+          "page": 1
+        },
+        {
+          "id": "2309.15817",
+          "page": 8
+        },
+        {
+          "id": "2412.14161",
+          "page": 2
+        },
+        {
+          "id": "2505.01538",
+          "page": 1
+        },
+        {
+          "id": "2602.10133",
+          "page": 1
+        },
+        {
+          "id": "2603.14341",
+          "page": 10
+        },
+        {
+          "id": "2608.27443",
+          "page": 1
+        }
+      ],
+      "visual_review_scope": "2回の確認で代表7頁を検査。全頁の文字を人手で校正したものではない。"
+    },
+    "limitations": "全頁自動処理と構造照合、代表頁の見た目確認。全頁の認識文字を人手で校正したものではない"
   }
 }

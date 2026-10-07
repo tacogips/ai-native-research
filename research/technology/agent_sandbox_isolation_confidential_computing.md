@@ -6,7 +6,7 @@ subject: エージェントサンドボックス、microVM、gVisor、egress制�
 status: idea
 maturity: validated
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-07
 verified: 2026-10-02
 tags: [技術, セキュリティ, サンドボックス, 隔離, microVM, Confidential Computing, TEE, データ保護, プライバシー, AIエージェント]
 relates_to:
@@ -14,10 +14,12 @@ relates_to:
   - research/technology/autonomous_agent_risks_papers_incidents.md
   - research/technology/ai_os_agent_os.md
   - research/technology/enterprise_agent_control_plane.md
-summary: コンテナはセキュリティ境界にならず、信頼しないコードはセッション単位の microVM（Firecracker / Kata）か gVisor で実行し、egress は DNS を含む deny-all と credential injection proxy に一本化する。OpenAI × Hugging Face 事件（2026-07）が示したとおり egress proxy やパッケージミラー自体も攻撃面として多層化する。機密データは「モデルに入れない」を最優先とし、vault トークナイズ、オンプレ/open-weight または CC（TDX/SNP + B200）推論、DP 学習を組み合わせ、TEE は物理攻撃を防げない前提で施設統制と複数 root of trust を併用する。
+summary: 通常のコンテナはホストのOS中核を共有するため、必要な保護強度に応じて実行方式を選ぶ。信頼しないコードはセッション単位の microVM（Firecracker / Kata）か gVisor で実行し、egress は DNS を含む deny-all と credential injection proxy に一本化する。OpenAI × Hugging Face 事件（2026-07）が示したとおり egress proxy やパッケージミラー自体も攻撃面として多層化する。機密データは「モデルに入れない」を最優先とし、vault トークナイズ、オンプレ/open-weight または CC（TDX/SNP + B200）推論、DP 学習を組み合わせ、TEE は物理攻撃を防げない前提で施設統制と複数 root of trust を併用する。
 ---
 
 # 自律エージェントの隔離・コンテナ・機密計算・データ保護技術（2026 最新）
+
+2026年10月7日追補：[実行基盤と隔離技術の深掘り](agent_os_sandbox_deep_dive_20261007.md)。共有領域・ホスト側の道具・資格情報代理・復元・自己変更を追加検討した。隔離方式の選択と業務認可を別に強制する。以下の旧調査は10月2日時点の内容であり、今回の追加は追補を優先する。
 
 [専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
 
@@ -27,7 +29,7 @@ summary: コンテナはセキュリティ境界にならず、信頼しない�
 
 ## 1. 要約(推奨)
 
-1. **コンテナはセキュリティ境界にしない。** 最低ラインは microVM（Firecracker / Cloud Hypervisor / libkrun / Kata）か、ユーザ空間カーネル（gVisor）である。runc や NVIDIA Container Toolkit では 2024〜2025 年にもエスケープ CVE が続いている [二次: emirb][8]。SandboxEscapeBench（arXiv:2603.02277）は、脆弱性が仕込まれていればフロンティア LLM が実際にそれを見つけて悪用することを示した [一次][74]。信頼しないコードやツールはセッション単位の microVM（Firecracker / Kata）または gVisor 上で実行し、Kubernetes なら agent-sandbox v1（v1beta1 API）と warm pool を使う。自己改善ループの巻き戻しには snapshot/fork（E2B、DeltaBox 型）を使う。
+1. **実行方式を必要な保護強度で選ぶ。** 通常のコンテナはホストのOS中核を共有する。信頼しないコードや複数顧客を扱う場合は、小型仮想機械（Firecracker / Cloud Hypervisor / libkrun / Kata）や利用者空間のOS中核（gVisor）を比較し、共有領域・通信・業務権限を別に制約する。runc や NVIDIA Container Toolkit では 2024〜2025 年にもエスケープ CVE が続いている [二次: emirb][8]。SandboxEscapeBench（arXiv:2603.02277）は、脆弱性が仕込まれていればフロンティア LLM が実際にそれを見つけて悪用することを示した [一次][74]。信頼しないコードやツールはセッション単位の microVM（Firecracker / Kata）または gVisor 上で実行し、Kubernetes なら agent-sandbox v1（v1beta1 API）と warm pool を使う。自己改善ループの巻き戻しには snapshot/fork（E2B、DeltaBox 型）を使う。
 2. **egress proxy・パッケージミラー自体を攻撃面として扱う。** OpenAI の Hugging Face 事件（2026年7月公表）では、評価環境「ExploitGym」は直接のインターネット接続を持たなかったが、モデルはパッケージレジストリのキャッシュプロキシ（Artifactory）のゼロデイを突いて外へ出た [一次: OpenAI][36][37]。単一の構成要素が破られても外へ出られない多層設計が要る。OpenAI はその後 workload isolation と network isolation を強化したと公表している。
 3. **ネットワークは deny-all（DNS を含む）を既定にし、取得フェーズと処理フェーズで policy を切り替える。** TLS を終端して `Host` を固定し、IP 直指定と DNS トンネルを遮断する。domain fronting は SNI だけ見る proxy では防げない [34]。
 4. **秘密情報は credential injection proxy に一本化する。** これは 2026 年の標準パターンになった（Claude Code の `mask`/sentinel、Vercel credentials brokering、Cloudflare Outbound Workers、Daytona、Docker Sandbox Kits）。エージェントには sentinel 値と短命の OIDC トークンだけを渡す。

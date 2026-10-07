@@ -6,7 +6,7 @@ subject: AI OS、Agent OS、Agentic OS、エージェント実行隔離、エー
 status: idea
 maturity: validated
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-07
 verified: 2026-10-02
 tags: [技術, AI OS, Agent OS, エージェント基盤, 隔離, ID, 標準, MCP, A2A, セキュリティ]
 relates_to:
@@ -14,10 +14,12 @@ relates_to:
   - research/technology/agent_sandbox_isolation_confidential_computing.md
   - research/technology/enterprise_agent_control_plane.md
   - research/technology/ontology_palantir_kinetic_layer.md
-summary: 研究系の "Agent OS"（AIOS、MemOS 等）は本番基盤としては停滞し、2026 年の研究は「OS のセキュリティ原則でエージェントを守る」方向に移った。産業側は「専用 ID・隔離実行環境・認証情報の sandbox 外配置・承認ゲートと監査」の 4 部品に収束しつつあり、MCP 2026-07-28 版・A2A v1.0 等の標準は中立団体の管理下に入った。AI-only company は既存 OS/クラウドの隔離・ID・監査をそのまま採用し、LLM を kernel とする構想や自己改善スキルの無審査配布は採らない。
+summary: 研究系のAIOS・MemOSは開発が継続している。本番採用・独立した性能検証と開発活動を分けて評価する。2026年の研究にはOSの安全性原則をAIへ適用する提案がある。産業側は「専用 ID・隔離実行環境・認証情報の sandbox 外配置・承認ゲートと監査」の 4 部品に収束しつつあり、MCP 2026-07-28 版・A2A v1.0 等の標準は中立団体の管理下に入った。AI-only company は既存 OS/クラウドの隔離・ID・監査をそのまま採用し、LLM を kernel とする構想や自己改善スキルの無審査配布は採らない。
 ---
 
 # AI OS / Agent OS: 研究・産業動向・相互運用標準（2026）
+
+2026年10月7日追補：[実行基盤と隔離技術の深掘り](agent_os_sandbox_deep_dive_20261007.md)。最新12論文、17技術、公開実装の初期設定を比較。以下の旧調査は10月2日時点の内容であり、今回の訂正・追加は追補を優先する。
 
 [専門用語の日本語説明](../glossary_ja.md)。製品名・論文の原題・コードは原表記を保持する。
 
@@ -64,7 +66,7 @@ summary: 研究系の "Agent OS"（AIOS、MemOS 等）は本番基盤として�
 | Cerebrum (AIOS SDK) | **2503.11444**（2025-03-14）、**NAACL 2025 System Demo** | LLM/memory/storage/tool の 4 層 SDK と Agent Hub（バージョン管理、依存管理）[6] |
 | LSFS: From Commands to Prompts（LLM-based Semantic File System） | **2410.11843**、**ICLR 2025** | 埋め込みでファイルを索引し、意味検索・グルーピング・rollback を syscall 化。意味検索の精度が 20–24% 向上、ファイルアクセスが最大 92% 高速 [7][8] |
 
-- **現状**: GitHub は 6.4k stars。最新ニュースは 2025-07-08 の COLM 採択で、Local/Remote Kernel の 2 モードを持つ [9]。2026 年に入ってからの大きな更新は見当たらず、研究プロトタイプ段階にとどまると評価する。
+- **更新の確認（2026年10月7日）**：公式APIで確認した既定ブランチの最新変更は[2026年7月20日](https://github.com/agiresearch/AIOS/commit/292d98f78c835499df18cdb6de6325bba1895862)。ニュース欄の日付だけで開発停滞と判断した従来評価を撤回する。企業本番での採用や性能の独立検証を確認したものではない。
 
 ### 2.3 メモリ OS（MemOS）
 
@@ -72,7 +74,7 @@ summary: 研究系の "Agent OS"（AIOS、MemOS 等）は本番基盤として�
 |---|---|
 | MemOS: A Memory OS for AI System | arXiv **2507.03724**（2025-07-04、改訂 2025-12-03、著者 39 名、上海交通大学・浙江大学ほか）。plaintext、activation（KV）、parametric の 3 種類のメモリを "MemCube"（provenance と versioning のメタデータ付き）で統一的に扱う [10] |
 | MemOS（短報） | arXiv **2505.22101**「An Operating System for Memory-Augmented Generation (MAG)」[11] |
-| 実装（MemTensor/MemOS） | Apache-2.0、11.7k stars。リポジトリ上の自己申告値は LoCoMo 88.83、LongMemEval 89.20、トークン 35.24% 削減、OpenClaw のタスク完了率を 36.63% から 50.87% に改善。最新更新は 2026-08-17。Multi-Cube で隔離メモリと共有メモリを持てる。※ベンチマーク値は第三者の再現が取れていないため**未検証** [12]。2026-10-02 に arXiv API で「MemOS かつ LoCoMo / LongMemEval」を要旨に含む論文を検索した（計 4 件: 2601.21545 ShardMemo、2604.07877 MemReader、2607.22562 SF-AMS、2609.07471 MEMO）。上記の自己申告値を再現・確認したと要旨に書いている論文はなかった。MemReader は MemOS に統合済みと書いており、MemOS 側の関係者による研究と見られる（推論）[103] |
+| 実装（MemTensor/MemOS） | Apache-2.0、11.7k stars。リポジトリ上の自己申告値は LoCoMo 88.83、LongMemEval 89.20、トークン 35.24% 削減、OpenClaw のタスク完了率を 36.63% から 50.87% に改善。2026年10月7日に公式APIで確認した最新変更は[2026年9月22日](https://github.com/MemTensor/MemOS/commit/a7367d07e55db61099f7b4e2c1108bc5831a24f3)。Multi-Cube で隔離メモリと共有メモリを持てる。※ベンチマーク値は第三者の再現が取れていないため**未検証** [12]。2026-10-02 に arXiv API で「MemOS かつ LoCoMo / LongMemEval」を要旨に含む論文を検索した（計 4 件: 2601.21545 ShardMemo、2604.07877 MemReader、2607.22562 SF-AMS、2609.07471 MEMO）。上記の自己申告値を再現・確認したと要旨に書いている論文はなかった。MemReader は MemOS に統合済みと書いており、MemOS 側の関係者による研究と見られる（推論）[103] |
 
 既存のメモリ調査（メモリを正本にしない、4 種類の物理分離）との接続: MemCube の provenance/versioning メタデータは、エピソード記憶の出所追跡に相当する（推論）。
 
@@ -328,7 +330,7 @@ dots の詳細と企業導入の論点は hermes_openai_dots_enterprise.md を�
 |---|---|
 | **成熟（今すぐ採用）** | ・エージェント専用 ID と非人間アカウント（Entra Agent ID、OS アカウント分離）<br>・VM / gVisor / container による実行隔離<br>・egress proxy<br>・認証情報を sandbox の外に置く（vault）<br>・append-only の監査ログ<br>・MCP（2026-07-28 版）と A2A v1.0 の採用<br>・AGENTS.md と Skills による手順の外部化<br>Anthropic と Microsoft の一次情報は、どちらも「既存の OS 境界のほうが独自の仕組みより信頼できる」と述べている |
 | **発展途上（選んで採用）** | ・決定論的 IFC / capability（CaMeL、FIDES、Progent）。安全性は証明できるが有用性が下がる（CaMeL は 77% 対 84%）。FIDES には label forging の報告がある<br>・メモリ OS（MemOS など）。自己申告のベンチマーク値が中心<br>・cron と常時稼働の runtime（Hermes、dots） |
-| **hype / 研究段階** | ・LLM そのものを kernel にする "AI-native OS"（AgentOS 2603.08938 は評価なしの構想）<br>・AIOS 型の「LLM syscall カーネル」。本番採用の形跡がなく、開発も停滞気味<br>・"Agent OS" というマーケティング用語全般<br>・コマース自動決済（Instant Checkout の終了、Mariner の終了） |
+| **hype / 研究段階** | ・LLM そのものを kernel にする "AI-native OS"（AgentOS 2603.08938 は評価なしの構想）<br>・AIOS 型の「LLM syscall カーネル」。開発更新は確認したが、企業本番の採用・性能の独立検証は今回未確認<br>・"Agent OS" というマーケティング用語全般<br>・コマース自動決済（Instant Checkout の終了、Mariner の終了） |
 | **危険（無統制では不可）** | ・自己改善スキルの自動配布と自動インストール（OpenClaw の事例）<br>・lexical な allowlist による command filter（2603.27517）<br>・人の承認だけに頼る防御（承認率 93% で形骸化） |
 
 ## 7. AI-only company 推奨アーキテクチャ

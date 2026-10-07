@@ -6,6 +6,10 @@
 
 [Treasure AIと国内外15社の比較](research/benchmarks/treasure_ai_compact_organization_cases_20261006.md)。Fluentdの開発元Treasure Dataの文書作成・業務製品の集約を調べ、日本6社・海外9社の課題、技術、成果、人の確認、自己改善の記録を整理した。DeNAとShopifyの実装を掘り下げ、人員削減・作業時間の短縮・将来目標を区別する。[26出典の確認台帳](research/benchmarks/treasure_ai_compact_sources_20261006.json)。 Klarnaの2025年開示は再配信HTMLの全文取得で確認制限を解消した。[取得記録](research/benchmarks/klarna_2025_disclosure_retrieval_20261006.json)。
 
+## AIの実行基盤と隔離技術（2026年10月7日）
+
+[技術調査](research/technology/agent_os_sandbox_deep_dive_20261007.md)。17の技術・基盤を比較し、権限、外部通信、資格情報、共有領域、継続実行、復元、性能、自己変更、外部監査を調べた。4回・12問の追加調査を記録し、公開コードの固定版と初期設定まで照合した。[42出典の確認台帳](research/technology/agent_os_sandbox_sources_20261007.json)。新規12論文・206頁を取得し、全頁OCRと[日本語解説12](research/papers/paper_notes_12.md)を追加。最新の論文初稿は2026年10月5日。
+
 ## データの機密区分とアクセス権の申請・付与（2026年10月6日）
 
 [事例・論文と業務手順の調査](research/technology/data_clearance_access_grant_workflows_20261006.md)で9つの導入・製品構成を比較し、Instacartの公開コードまで確認した。通常申請の自動付与と、規則変更・高リスク例外の人による承認を分け、承認と実行の一致、取消し、自己改善の監査を整理する。[出典台帳](research/technology/data_clearance_access_sources_20261006.json)。追加論文7本・88頁を取得し、全頁OCRと[日本語解説11](research/papers/paper_notes_11.md)を追加した。
@@ -30,7 +34,7 @@
 
 [最近のAI関連事故・攻撃・脆弱性](research/technology/ai_incident_reports_20261006.md)。2026年10月1日の対応続報まで確認し、14の事例群を実侵入、阻止された攻撃、データ露出、研究での再現に分け、企業AI基盤の認可・監査・自己改善への教訓を整理した。
 
-[論文索引・取得方法](research/papers/README.md)。引用したarXiv論文155本を全て取得し、各論文の概要・重要点・限界・企業設計への示唆を日本語で説明した。PDFの要旨と本文の関連箇所を確認したが、全付録の精読や実験の再現は行っていない。
+[論文索引・取得方法](research/papers/README.md)。引用したarXiv論文167本・4,100頁を全て取得し、各論文の概要・重要点・限界・企業設計への示唆を日本語で説明した。PDFの要旨と本文の関連箇所を確認したが、全付録の精読や実験の再現は行っていない。
 
 PDF原本と抽出本文、全頁OCRによる検索可能なPDFと認識本文は `research/papers/arxiv/` にローカル保存する。Gitでは日本語解説、取得・OCR台帳、再取得・OCR用スクリプトを管理する。保存した版・容量・頁数・ハッシュ値・OCRの処理状態は台帳で確認できる。
 

@@ -1,6 +1,6 @@
 # 引用論文の取得台帳と日本語解説
 
-2026年10月5〜6日に、引用されたarXiv論文を重複を除いて155本取得した。合計3,894頁、約263.4 MiB。全件でPDFの形式、本文抽出、容量、SHA-256を確認した。
+2026年10月5〜7日に、引用されたarXiv論文を重複を除いて167本取得した。合計4,100頁、約273.3 MiB。全件でPDFの形式、本文抽出、容量、SHA-256を確認した。
 
 各解説は取得したPDFの要旨と本文の手法・結果・議論の関連箇所に基づく。全付録の精読と実験の再現は行っていない。著者の主張、評価条件・限界、企業設計への解釈を分けた。
 
@@ -16,7 +16,7 @@ python3 scripts/download_arxiv_papers.py
 
 ## OCRの保存方法と検証
 
-2026年10月6日、全155本・3,894頁のOCRを完了した。既存の文字層がある頁も `--force-ocr` で画像化し、英語の文字認識を実行する。原本の文字抽出だけでOCR済みとは扱わない。原本は変更しない。OCRmyPDF 17以上を使用する。付属の拡張で描画解像度を300 dpiへ制限し、小さな高解像度画像が頁全体を数億画素へ膨らませることを防ぐ。初期に完了した一部は標準の解像度で処理した。頁を飛ばす設定は使わない。
+2026年10月7日、全167本・4,100頁のOCRを完了した。既存の文字層がある頁も `--force-ocr` で画像化し、英語の文字認識を実行する。原本の文字抽出だけでOCR済みとは扱わない。原本は変更しない。OCRmyPDF 17以上を使用する。付属の拡張で描画解像度を300 dpiへ制限し、小さな高解像度画像が頁全体を数億画素へ膨らませることを防ぐ。初期に完了した一部は標準の解像度で処理した。頁を飛ばす設定は使わない。
 
 付属拡張による解像度制限時にGhostscriptで頁の描画が失敗した場合は、同じ解像度と頁の範囲でPopplerへ切り替える。切替条件は処理ログへ残し、対応できない変換条件では停止する。
 
@@ -30,7 +30,7 @@ python3 scripts/download_arxiv_papers.py
 
 [OCR台帳](ocr_manifest.json)に全件の処理状態、原本と成果物のSHA-256、認識言語、処理の版、頁数、認識本文の文字数、開始・完了日時を記録する。原本・OCR版PDF・認識本文の頁数が一致し、認識本文が空でなく、頁を省略した記録がなく、原本のハッシュ値が変更されていないことを検証する。途中で失敗した場合は停止し、再実行時には検証済みの成果物を再利用する。
 
-最終照合では、155本・3,894頁の頁数一致、原本と成果物のハッシュ値、全PDFの検索用文字層を確認した。省略頁の記録と空の認識頁は0件だった。代表7頁の見た目も確認し、検証範囲と日時をOCR台帳へ記録した。OCR版PDFの合計容量は約1,288.5 MiB。認識器の品質警告80件は処理ログと台帳に保持し、誤認識がないことの保証とは扱わない。
+最終照合では、167本・4,100頁の頁数一致、原本と成果物のハッシュ値、全PDFの検索用文字層を確認した。省略頁の記録と空の認識頁は0件だった。過去の代表7頁に加えて新規2頁の原本・OCR版の見た目も確認し、検証範囲と日時をOCR台帳へ記録した。OCR版PDFの合計容量は約1,360.0 MiB。認識器の品質警告84件は処理ログと台帳に保持し、誤認識がないことの保証とは扱わない。
 
 OCRだけを再実行する場合：
 
@@ -41,6 +41,8 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 数式、図中の小さな文字、表の列順、英語以外の文字には誤認識があり得る。これは全文翻訳や数式の構造認識ではない。引用・数値の確定には原本を照合する。全頁の自動処理・構造検証と、代表的な頁の見た目の確認を行い、全頁の文字を人手で校正したとは扱わない。
 
 ## 今回の重点テーマから読む
+
+- AIの実行基盤・隔離・復元・自己変更：追加12論文・206頁（[解説12](paper_notes_12.md)）、[17技術の比較](../technology/agent_os_sandbox_deep_dive_20261007.md)。
 
 - 機密区分と権限の申請・付与、人の承認、取消し、規則の改善：追加7論文（[解説11](paper_notes_11.md)）、[事例と設計案](../technology/data_clearance_access_grant_workflows_20261006.md)。
 
@@ -57,6 +59,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 |---|---|---|---|---|
 | [1503.02531](https://arxiv.org/abs/1503.02531) | 大きなモデルの知識を小さなモデルへ移す | [解説](paper_notes_01.md) | [原本](arxiv/1503.02531/paper.pdf)・[OCR版](arxiv/1503.02531/paper_ocr.pdf)・[認識本文](arxiv/1503.02531/paper_ocr.txt) | v1 |
 | [2004.10964](https://arxiv.org/abs/2004.10964) | 汎用言語モデルを分野・業務に合わせて追加学習する | [解説](paper_notes_01.md) | [原本](arxiv/2004.10964/paper.pdf)・[OCR版](arxiv/2004.10964/paper_ocr.pdf)・[認識本文](arxiv/2004.10964/paper_ocr.txt) | v3 |
+| [2102.12892](https://arxiv.org/abs/2102.12892v1) | 保存状態を複製しても秘密と識別子の一意性を守る | [解説](paper_notes_12.md) | [原本](arxiv/2102.12892/paper.pdf)・[OCR版](arxiv/2102.12892/paper_ocr.pdf)・[認識本文](arxiv/2102.12892/paper_ocr.txt) | v1 |
 | [2106.09685](https://arxiv.org/abs/2106.09685) | 更新する重みを絞る追加学習 | [解説](paper_notes_01.md) | [原本](arxiv/2106.09685/paper.pdf)・[OCR版](arxiv/2106.09685/paper_ocr.pdf)・[認識本文](arxiv/2106.09685/paper_ocr.txt) | v2 |
 | [2212.04356](https://arxiv.org/abs/2212.04356) | 大量の音声と文字による音声認識 | [解説](paper_notes_01.md) | [原本](arxiv/2212.04356/paper.pdf)・[OCR版](arxiv/2212.04356/paper_ocr.pdf)・[認識本文](arxiv/2212.04356/paper_ocr.txt) | v1 |
 | [2304.02711](https://arxiv.org/abs/2304.02711) | 定義済みの知識構造に合わせた情報抽出 | [解説](paper_notes_01.md) | [原本](arxiv/2304.02711/paper.pdf)・[OCR版](arxiv/2304.02711/paper_ocr.pdf)・[認識本文](arxiv/2304.02711/paper_ocr.txt) | v2 |
@@ -71,6 +74,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2310.06816](https://arxiv.org/abs/2310.06816) | 検索用ベクトルから元の文章を復元する | [解説](paper_notes_02.md) | [原本](arxiv/2310.06816/paper.pdf)・[OCR版](arxiv/2310.06816/paper_ocr.pdf)・[認識本文](arxiv/2310.06816/paper_ocr.txt) | v1 |
 | [2310.08560](https://arxiv.org/abs/2310.08560) | 長い対話のための階層的な記憶 | [解説](paper_notes_02.md) | [原本](arxiv/2310.08560/paper.pdf)・[OCR版](arxiv/2310.08560/paper_ocr.pdf)・[認識本文](arxiv/2310.08560/paper_ocr.txt) | v2 |
 | [2311.07509](https://arxiv.org/abs/2311.07509) | 企業の質問に対する関係データと SQL の比較 | [解説](paper_notes_02.md) | [原本](arxiv/2311.07509/paper.pdf)・[OCR版](arxiv/2311.07509/paper_ocr.pdf)・[認識本文](arxiv/2311.07509/paper_ocr.txt) | v1 |
+| [2311.15999](https://arxiv.org/abs/2311.15999v1) | Firecrackerと共有CPUの漏えい経路 | [解説](paper_notes_12.md) | [原本](arxiv/2311.15999/paper.pdf)・[OCR版](arxiv/2311.15999/paper_ocr.pdf)・[認識本文](arxiv/2311.15999/paper_ocr.txt) | v1 |
 | [2402.07456](https://arxiv.org/abs/2402.07456) | 操作手順を蓄積する汎用計算機操作支援 | [解説](paper_notes_02.md) | [原本](arxiv/2402.07456/paper.pdf)・[OCR版](arxiv/2402.07456/paper_ocr.pdf)・[認識本文](arxiv/2402.07456/paper_ocr.txt) | v2 |
 | [2402.11163](https://arxiv.org/abs/2402.11163) | 知識グラフ上の複雑な質問を道具で解く | [解説](paper_notes_02.md) | [原本](arxiv/2402.11163/paper.pdf)・[OCR版](arxiv/2402.11163/paper_ocr.pdf)・[認識本文](arxiv/2402.11163/paper_ocr.txt) | v1 |
 | [2403.02691](https://arxiv.org/abs/2403.02691) | 外部文書に埋め込まれた不正指示の評価 | [解説](paper_notes_02.md) | [原本](arxiv/2403.02691/paper.pdf)・[OCR版](arxiv/2403.02691/paper_ocr.pdf)・[認識本文](arxiv/2403.02691/paper_ocr.txt) | v3 |
@@ -184,6 +188,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2607.05518](https://arxiv.org/abs/2607.05518) | aiAuthZ | [解説](paper_notes_08.md) | [原本](arxiv/2607.05518/paper.pdf)・[OCR版](arxiv/2607.05518/paper_ocr.pdf)・[認識本文](arxiv/2607.05518/paper_ocr.txt) | v1 |
 | [2607.13718](https://arxiv.org/abs/2607.13718) | How Agents Ask for Permission: User Permissions for AI Agents, from Interfaces to Enforcement | [解説](paper_notes_11.md) | [原本](arxiv/2607.13718/paper.pdf)・[OCR版](arxiv/2607.13718/paper_ocr.pdf)・[認識本文](arxiv/2607.13718/paper_ocr.txt) | v2 |
 | [2607.22571](https://arxiv.org/abs/2607.22571) | SCAIR | [解説](paper_notes_08.md) | [原本](arxiv/2607.22571/paper.pdf)・[OCR版](arxiv/2607.22571/paper_ocr.pdf)・[認識本文](arxiv/2607.22571/paper_ocr.txt) | v1 |
+| [2607.23933](https://arxiv.org/abs/2607.23933v2) | SpecBox：予測による環境準備と結果再利用 | [解説](paper_notes_12.md) | [原本](arxiv/2607.23933/paper.pdf)・[OCR版](arxiv/2607.23933/paper_ocr.pdf)・[認識本文](arxiv/2607.23933/paper_ocr.txt) | v2 |
 | [2607.24300](https://arxiv.org/abs/2607.24300) | Self-Authored Verification Is Unreliable | [解説](paper_notes_08.md) | [原本](arxiv/2607.24300/paper.pdf)・[OCR版](arxiv/2607.24300/paper_ocr.pdf)・[認識本文](arxiv/2607.24300/paper_ocr.txt) | v1 |
 | [2607.24625](https://arxiv.org/abs/2607.24625) | APPA | [解説](paper_notes_08.md) | [原本](arxiv/2607.24625/paper.pdf)・[OCR版](arxiv/2607.24625/paper_ocr.pdf)・[認識本文](arxiv/2607.24625/paper_ocr.txt) | v2 |
 | [2607.25076](https://arxiv.org/abs/2607.25076) | Towards an Agent Operating System | [解説](paper_notes_08.md) | [原本](arxiv/2607.25076/paper.pdf)・[OCR版](arxiv/2607.25076/paper_ocr.pdf)・[認識本文](arxiv/2607.25076/paper_ocr.txt) | v1 |
@@ -193,6 +198,7 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2608.07530](https://arxiv.org/abs/2608.07530) | NL2SHACL-Bench | [解説](paper_notes_09.md) | [原本](arxiv/2608.07530/paper.pdf)・[OCR版](arxiv/2608.07530/paper_ocr.pdf)・[認識本文](arxiv/2608.07530/paper_ocr.txt) | v2 |
 | [2608.09028](https://arxiv.org/abs/2608.09028) | PolicyKG | [解説](paper_notes_09.md) | [原本](arxiv/2608.09028/paper.pdf)・[OCR版](arxiv/2608.09028/paper_ocr.pdf)・[認識本文](arxiv/2608.09028/paper_ocr.txt) | v1 |
 | [2608.09732](https://arxiv.org/abs/2608.09732) | ColluSkill | [解説](paper_notes_09.md) | [原本](arxiv/2608.09732/paper.pdf)・[OCR版](arxiv/2608.09732/paper_ocr.pdf)・[認識本文](arxiv/2608.09732/paper_ocr.txt) | v1 |
+| [2608.11274](https://arxiv.org/abs/2608.11274v1) | 実行時の制約と成功の証拠を要求する | [解説](paper_notes_12.md) | [原本](arxiv/2608.11274/paper.pdf)・[OCR版](arxiv/2608.11274/paper_ocr.pdf)・[認識本文](arxiv/2608.11274/paper_ocr.txt) | v1 |
 | [2608.11323](https://arxiv.org/abs/2608.11323) | Deployment Decision Reliability | [解説](paper_notes_09.md) | [原本](arxiv/2608.11323/paper.pdf)・[OCR版](arxiv/2608.11323/paper_ocr.pdf)・[認識本文](arxiv/2608.11323/paper_ocr.txt) | v1 |
 | [2608.12851](https://arxiv.org/abs/2608.12851) | Practice Makes Unsafe | [解説](paper_notes_09.md) | [原本](arxiv/2608.12851/paper.pdf)・[OCR版](arxiv/2608.12851/paper_ocr.pdf)・[認識本文](arxiv/2608.12851/paper_ocr.txt) | v1 |
 | [2608.26108](https://arxiv.org/abs/2608.26108) | Agentic AI Containment Architecture | [解説](paper_notes_09.md) | [原本](arxiv/2608.26108/paper.pdf)・[OCR版](arxiv/2608.26108/paper_ocr.pdf)・[認識本文](arxiv/2608.26108/paper_ocr.txt) | not-detected |
@@ -201,12 +207,20 @@ python3 scripts/ocr_arxiv_papers.py --jobs 8 --language eng
 | [2608.27443](https://arxiv.org/abs/2608.27443) | Do User-Authored Permission Policies Improve Protection Against AI Agent Overreach? | [解説](paper_notes_11.md) | [原本](arxiv/2608.27443/paper.pdf)・[OCR版](arxiv/2608.27443/paper_ocr.pdf)・[認識本文](arxiv/2608.27443/paper_ocr.txt) | v1 |
 | [2608.27800](https://arxiv.org/abs/2608.27800) | ContextLeak | [解説](paper_notes_09.md) | [原本](arxiv/2608.27800/paper.pdf)・[OCR版](arxiv/2608.27800/paper_ocr.pdf)・[認識本文](arxiv/2608.27800/paper_ocr.txt) | v1 |
 | [2609.00069](https://arxiv.org/abs/2609.00069) | Auditing Harness Tampering | [解説](paper_notes_09.md) | [原本](arxiv/2609.00069/paper.pdf)・[OCR版](arxiv/2609.00069/paper_ocr.pdf)・[認識本文](arxiv/2609.00069/paper_ocr.txt) | v1 |
+| [2609.00267](https://arxiv.org/abs/2609.00267v1) | 複数AIへの本人性・認可・権限委任 | [解説](paper_notes_12.md) | [原本](arxiv/2609.00267/paper.pdf)・[OCR版](arxiv/2609.00267/paper_ocr.pdf)・[認識本文](arxiv/2609.00267/paper_ocr.txt) | v1 |
+| [2609.11294](https://arxiv.org/abs/2609.11294v1) | AgentZip：多数の実行環境の記憶圧縮 | [解説](paper_notes_12.md) | [原本](arxiv/2609.11294/paper.pdf)・[OCR版](arxiv/2609.11294/paper_ocr.pdf)・[認識本文](arxiv/2609.11294/paper_ocr.txt) | v1 |
 | [2609.17817](https://arxiv.org/abs/2609.17817) | Reflections on Trusting Trust, Revisited | [解説](paper_notes_09.md) | [原本](arxiv/2609.17817/paper.pdf)・[OCR版](arxiv/2609.17817/paper_ocr.pdf)・[認識本文](arxiv/2609.17817/paper_ocr.txt) | v1 |
 | [2609.23700](https://arxiv.org/abs/2609.23700) | When the Agent Becomes the Kernel | [解説](paper_notes_09.md) | [原本](arxiv/2609.23700/paper.pdf)・[OCR版](arxiv/2609.23700/paper_ocr.pdf)・[認識本文](arxiv/2609.23700/paper_ocr.txt) | v1 |
 | [2609.26457](https://arxiv.org/abs/2609.26457) | Recursive Self-Improvement of AI Research Agents | [解説](paper_notes_09.md) | [原本](arxiv/2609.26457/paper.pdf)・[OCR版](arxiv/2609.26457/paper_ocr.pdf)・[認識本文](arxiv/2609.26457/paper_ocr.txt) | v1 |
+| [2609.29647](https://arxiv.org/abs/2609.29647v1) | AgentKernel：本人性・入力・記憶・実行の保護 | [解説](paper_notes_12.md) | [原本](arxiv/2609.29647/paper.pdf)・[OCR版](arxiv/2609.29647/paper_ocr.pdf)・[認識本文](arxiv/2609.29647/paper_ocr.txt) | v1 |
 | [2609.31039](https://arxiv.org/abs/2609.31039) | MetaPermit | [解説](paper_notes_10.md) | [原本](arxiv/2609.31039/paper.pdf)・[OCR版](arxiv/2609.31039/paper_ocr.pdf)・[認識本文](arxiv/2609.31039/paper_ocr.txt) | v1 |
+| [2609.31318](https://arxiv.org/abs/2609.31318v1) | AgentXploit：コード分析と実行環境での安全性検査 | [解説](paper_notes_12.md) | [原本](arxiv/2609.31318/paper.pdf)・[OCR版](arxiv/2609.31318/paper_ocr.pdf)・[認識本文](arxiv/2609.31318/paper_ocr.txt) | v1 |
 | [2609.32390](https://arxiv.org/abs/2609.32390) | Reward Hacking and Agent Containment Failure | [解説](paper_notes_09.md) | [原本](arxiv/2609.32390/paper.pdf)・[OCR版](arxiv/2609.32390/paper_ocr.pdf)・[認識本文](arxiv/2609.32390/paper_ocr.txt) | not-detected |
 | [2609.35596](https://arxiv.org/abs/2609.35596) | SEABench | [解説](paper_notes_09.md) | [原本](arxiv/2609.35596/paper.pdf)・[OCR版](arxiv/2609.35596/paper_ocr.pdf)・[認識本文](arxiv/2609.35596/paper_ocr.txt) | v2 |
 | [2609.38983](https://arxiv.org/abs/2609.38983) | Approval Laundering | [解説](paper_notes_09.md) | [原本](arxiv/2609.38983/paper.pdf)・[OCR版](arxiv/2609.38983/paper_ocr.pdf)・[認識本文](arxiv/2609.38983/paper_ocr.txt) | v1 |
 | [2610.00037](https://arxiv.org/abs/2610.00037) | Guarded Commits: Transactional Human Approvals for LLM Workflows | [解説](paper_notes_11.md) | [原本](arxiv/2610.00037/paper.pdf)・[OCR版](arxiv/2610.00037/paper_ocr.pdf)・[認識本文](arxiv/2610.00037/paper_ocr.txt) | v1 |
 | [2610.01073](https://arxiv.org/abs/2610.01073) | Safety Must Survive Self-Improvement | [解説](paper_notes_09.md) | [原本](arxiv/2610.01073/paper.pdf)・[OCR版](arxiv/2610.01073/paper_ocr.pdf)・[認識本文](arxiv/2610.01073/paper_ocr.txt) | v1 |
+| [2610.02456](https://arxiv.org/abs/2610.02456v1) | SideKernel：macOSの隔離の使いやすさ | [解説](paper_notes_12.md) | [原本](arxiv/2610.02456/paper.pdf)・[OCR版](arxiv/2610.02456/paper_ocr.pdf)・[認識本文](arxiv/2610.02456/paper_ocr.txt) | v1 |
+| [2610.04083](https://arxiv.org/abs/2610.04083v1) | 不正な目標が永続情報から後のAIへ伝わる | [解説](paper_notes_12.md) | [原本](arxiv/2610.04083/paper.pdf)・[OCR版](arxiv/2610.04083/paper_ocr.pdf)・[認識本文](arxiv/2610.04083/paper_ocr.txt) | v1 |
+| [2610.06001](https://arxiv.org/abs/2610.06001v1) | AgentSpy：AIと子プロセスの外部観測 | [解説](paper_notes_12.md) | [原本](arxiv/2610.06001/paper.pdf)・[OCR版](arxiv/2610.06001/paper_ocr.pdf)・[認識本文](arxiv/2610.06001/paper_ocr.txt) | v1 |
+| [2610.06274](https://arxiv.org/abs/2610.06274v1) | 自己設定で安全上の制約を変更させない | [解説](paper_notes_12.md) | [原本](arxiv/2610.06274/paper.pdf)・[OCR版](arxiv/2610.06274/paper_ocr.pdf)・[認識本文](arxiv/2610.06274/paper_ocr.txt) | v1 |

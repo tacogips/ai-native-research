@@ -1,5 +1,5 @@
 {
-  "checked_date": "2026-10-06",
+  "checked_date": "2026-10-07",
   "papers": [
     {
       "id": "1503.02531",
@@ -38,6 +38,27 @@
       "pages": 19,
       "text_characters": 99813,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2102.12892",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2102.12892v1",
+      "resolved_url": "https://arxiv.org/pdf/2102.12892v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2102.12892/paper.pdf",
+      "text_path": "research/papers/arxiv/2102.12892/paper.txt",
+      "bytes": 195896,
+      "sha256": "438cfafe475d749a47917100dc699bd3aa523b47ceba9e4ba32fbe649b6ea5bb",
+      "pages": 7,
+      "text_characters": 46641,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2106.09685",
@@ -311,6 +332,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2311.15999",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2311.15999v1",
+      "resolved_url": "https://arxiv.org/pdf/2311.15999v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2311.15999/paper.pdf",
+      "text_path": "research/papers/arxiv/2311.15999/paper.txt",
+      "bytes": 809414,
+      "sha256": "9559571512c4842dda5463c23f40651707169d435d9bbfdec8613ab13fc470a6",
+      "pages": 14,
+      "text_characters": 107082,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2402.07456",
       "references": [
         "research/technology/ai_os_agent_os.md"
@@ -389,7 +431,8 @@
     {
       "id": "2403.16971",
       "references": [
-        "research/technology/ai_os_agent_os.md"
+        "research/technology/ai_os_agent_os.md",
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -1730,7 +1773,8 @@
     {
       "id": "2603.02277",
       "references": [
-        "research/technology/agent_sandbox_isolation_confidential_computing.md"
+        "research/technology/agent_sandbox_isolation_confidential_computing.md",
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2158,7 +2202,8 @@
     {
       "id": "2605.14932",
       "references": [
-        "research/technology/ai_os_agent_os.md"
+        "research/technology/ai_os_agent_os.md",
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2254,7 +2299,8 @@
     {
       "id": "2606.01508",
       "references": [
-        "research/technology/ai_os_agent_os.md"
+        "research/technology/ai_os_agent_os.md",
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2504,6 +2550,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2607.23933",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v2"
+      ],
+      "requested_version": "v2",
+      "url": "https://arxiv.org/pdf/2607.23933v2",
+      "resolved_url": "https://arxiv.org/pdf/2607.23933v2",
+      "pdf_version": "v2",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2607.23933/paper.pdf",
+      "text_path": "research/papers/arxiv/2607.23933/paper.txt",
+      "bytes": 3655339,
+      "sha256": "48fec6709abcd7bbb4c28dde2ebbefae8c372ee1c361c982a569fe9d1fcf8056",
+      "pages": 13,
+      "text_characters": 115712,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2607.24300",
       "references": [
         "research/technology/autonomous_agent_risks_papers_incidents.md",
@@ -2547,7 +2614,8 @@
     {
       "id": "2607.25076",
       "references": [
-        "research/technology/ai_os_agent_os.md"
+        "research/technology/ai_os_agent_os.md",
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2679,6 +2747,27 @@
       "pages": 9,
       "text_characters": 68600,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2608.11274",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2608.11274v1",
+      "resolved_url": "https://arxiv.org/pdf/2608.11274v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2608.11274/paper.pdf",
+      "text_path": "research/papers/arxiv/2608.11274/paper.txt",
+      "bytes": 311860,
+      "sha256": "e68b802929857fb1a288150b78794f466180a7c3b8224fb697b162d5c7815aa1",
+      "pages": 15,
+      "text_characters": 63025,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2608.11323",
@@ -2839,6 +2928,48 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2609.00267",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.00267v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.00267v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.00267/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.00267/paper.txt",
+      "bytes": 342297,
+      "sha256": "3e70ed2b15f1311cb45f8bf358e0a573f4daa7a6a34d424c175a08bce574bec8",
+      "pages": 14,
+      "text_characters": 45621,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2609.11294",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.11294v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.11294v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.11294/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.11294/paper.txt",
+      "bytes": 1193064,
+      "sha256": "9c2ec7b1c0277bae74687a615e6d0068a5fa486b3791d7599ecaa67709c84245",
+      "pages": 12,
+      "text_characters": 113956,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2609.17817",
       "references": [
         "research/technology/autonomous_agent_risks_papers_incidents.md",
@@ -2861,7 +2992,8 @@
     {
       "id": "2609.23700",
       "references": [
-        "research/technology/ai_os_agent_os.md"
+        "research/technology/ai_os_agent_os.md",
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
       ],
       "versions": [],
       "requested_version": "latest-at-retrieval",
@@ -2897,6 +3029,27 @@
       "retrieved_date": "2026-10-05"
     },
     {
+      "id": "2609.29647",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.29647v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.29647v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.29647/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.29647/paper.txt",
+      "bytes": 739858,
+      "sha256": "6f445930d60f41bb0a4b8b4067c06222f5880f131df7e24c7adc838bab3ec42c",
+      "pages": 38,
+      "text_characters": 151986,
+      "retrieved_date": "2026-10-07"
+    },
+    {
       "id": "2609.31039",
       "references": [
         "research/technology/enterprise_data_authorization_audit_xai_20261006.md"
@@ -2914,6 +3067,27 @@
       "pages": 16,
       "text_characters": 110079,
       "retrieved_date": "2026-10-06"
+    },
+    {
+      "id": "2609.31318",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2609.31318v1",
+      "resolved_url": "https://arxiv.org/pdf/2609.31318v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2609.31318/paper.pdf",
+      "text_path": "research/papers/arxiv/2609.31318/paper.txt",
+      "bytes": 572940,
+      "sha256": "12c3480ae3d919517e5e2c5e9eb4eb779bd716d3bf66b34bfe58ab6286d58e09",
+      "pages": 20,
+      "text_characters": 125470,
+      "retrieved_date": "2026-10-07"
     },
     {
       "id": "2609.32390",
@@ -3011,6 +3185,90 @@
       "pages": 44,
       "text_characters": 166235,
       "retrieved_date": "2026-10-05"
+    },
+    {
+      "id": "2610.02456",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2610.02456v1",
+      "resolved_url": "https://arxiv.org/pdf/2610.02456v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2610.02456/paper.pdf",
+      "text_path": "research/papers/arxiv/2610.02456/paper.txt",
+      "bytes": 530061,
+      "sha256": "299e4e1e94ff9aba57302a1e312c978256234b390db2cbfa1aa441b1bd57c81c",
+      "pages": 17,
+      "text_characters": 100711,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2610.04083",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2610.04083v1",
+      "resolved_url": "https://arxiv.org/pdf/2610.04083v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2610.04083/paper.pdf",
+      "text_path": "research/papers/arxiv/2610.04083/paper.txt",
+      "bytes": 1064241,
+      "sha256": "b122e5879109a3dc85682ac7a0c28c89a0dcb8237cd4408666f3bf5335bd85cd",
+      "pages": 20,
+      "text_characters": 150261,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2610.06001",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2610.06001v1",
+      "resolved_url": "https://arxiv.org/pdf/2610.06001v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2610.06001/paper.pdf",
+      "text_path": "research/papers/arxiv/2610.06001/paper.txt",
+      "bytes": 671784,
+      "sha256": "292332742df7bac8d900548185b54eb895a82cea50b95ac34b24ad75589ec8c8",
+      "pages": 22,
+      "text_characters": 95668,
+      "retrieved_date": "2026-10-07"
+    },
+    {
+      "id": "2610.06274",
+      "references": [
+        "research/technology/agent_os_sandbox_deep_dive_20261007.md"
+      ],
+      "versions": [
+        "v1"
+      ],
+      "requested_version": "v1",
+      "url": "https://arxiv.org/pdf/2610.06274v1",
+      "resolved_url": "https://arxiv.org/pdf/2610.06274v1",
+      "pdf_version": "v1",
+      "status": "downloaded",
+      "pdf_path": "research/papers/arxiv/2610.06274/paper.pdf",
+      "text_path": "research/papers/arxiv/2610.06274/paper.txt",
+      "bytes": 326325,
+      "sha256": "497b567e6c7ec890f967dae6048d5d7e34288227f307b3e8168f67846d24ea5e",
+      "pages": 14,
+      "text_characters": 56814,
+      "retrieved_date": "2026-10-07"
     }
   ]
 }
