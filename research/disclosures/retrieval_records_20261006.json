@@ -1,0 +1,210 @@
+{
+  "retrieved_at": "2026-10-06",
+  "retrieved_by": "ユーザーがブラウザで取得し ~/Downloads へ保存。Claude Code はリポジトリのローカル保存先へ複製し、pdftotext で本文を抽出して照合した",
+  "local_dir": "（任意）research/disclosures/raw/。.gitignore によりGit管理外。無くても本記録と source_url で参照できる",
+  "documents": [
+    {
+      "id": "mckinsey_state_of_ai_2026_aug",
+      "title": "The state of AI in 2026: On the road to ROI",
+      "publisher": "McKinsey & Company (QuantumBlack)",
+      "published": "2026-08-25（本文の調査期間は2026-05-04〜06-08、PDF作成日2026-09-03）",
+      "source_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/the-state-of-ai-in-2026-on-the-road-to-roi-aug-2026.pdf",
+      "landing_url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "local_file": "research/disclosures/raw/mckinsey_state_of_ai_2026_aug.pdf",
+      "sha256": "6a327b1d99cabc05c00186d66b7e93ee99052106d70752322dce60fd1b875a8e",
+      "bytes": 3577371,
+      "pages": 31,
+      "prior_failure": "Claude Code からの直接取得がタイムアウト。概要ページと要約記事に依拠していた",
+      "verified_claims": [
+        {
+          "claim": "1,719名・97か国・2026年5月4日〜6月8日のオンライン調査",
+          "page": 29,
+          "status": "確認"
+        },
+        {
+          "claim": "全社規模で本格展開44%（前年38%）",
+          "page": 4,
+          "status": "確認"
+        },
+        {
+          "claim": "売上10億ドル超企業で作業主体のAIを本格展開40%（前年27%）、小規模22%横ばい",
+          "page": 5,
+          "status": "確認"
+        },
+        {
+          "claim": "個人生産性向上80%、EBIT寄与37%で横ばい",
+          "page": [
+            2,
+            13
+          ],
+          "status": "確認"
+        },
+        {
+          "claim": "高業績企業は約6%、EBITの5%以上をAIに帰属し大きな価値と回答",
+          "page": 16,
+          "status": "確認"
+        },
+        {
+          "claim": "高業績企業の特徴は『工程削減・引継ぎ変更・人間は例外処理のみ』",
+          "page": null,
+          "status": "原文になし。要約記事由来。原文は『既存業務へのAI挿入ではなく業務の流れの再設計』『成長・革新を目標』『経営層の関与と運用の規律』（p.4）。再設計実施は約4分の3（前年55%、p.18）。master report を訂正"
+        },
+        {
+          "claim": "どの職能でも作業主体のAIの本格展開は10%以下",
+          "page": 19,
+          "status": "条件付き訂正。高業績企業以外は3〜10%、高業績企業は15〜32%（図表12）"
+        },
+        {
+          "claim": "32%がソフトウェア購入を見送り内製",
+          "page": 8,
+          "status": "確認"
+        },
+        {
+          "claim": "人員減の予想39%、実績14%（前年の予想32%）",
+          "page": 24,
+          "status": "確認"
+        },
+        {
+          "claim": "約20%がAI運用費用に利用を制約された、28%がICT予算の10%超をAIに支出",
+          "page": [
+            2,
+            15
+          ],
+          "status": "確認（新規追加）"
+        },
+        {
+          "claim": "高業績企業の実務8項目（成果定量化、人の確認の決定、費用管理、人事評価、要員計画、再設計、意味定義層・知識グラフ、変革推進組織）",
+          "page": 18,
+          "status": "確認（図表11、指標 master report へ追加）"
+        }
+      ],
+      "not_done": "全章の精読、図表の数値の全件転記",
+      "page_numbering": "verified_claims の page は原本の印刷頁（各頁上部の番号）。表紙は無番号",
+      "summary": "research/disclosures/mckinsey_state_of_ai_2026_summary.md"
+    },
+    {
+      "id": "meti_ai_guidelines_v1_2_20260331",
+      "title": "AI 事業者ガイドライン（第 1.2 版）",
+      "publisher": "総務省・経済産業省",
+      "published": "令和8年3月31日（PDF作成日2026-03-25）",
+      "source_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+      "local_file": "research/disclosures/raw/meti_ai_guidelines_v1_2_20260331.pdf",
+      "sha256": "64dff6280a873c76e6adb824a57ce770272cef8a2354ba59db3c04888f60f55d",
+      "bytes": 2120041,
+      "pages": 42,
+      "prior_failure": "経路によりHTTP 403。公式検索掲載の抜粋のみ確認していた",
+      "verified_claims": [
+        {
+          "claim": "第1.2版、令和8年3月31日、総務省・経済産業省",
+          "page": 1,
+          "status": "確認"
+        },
+        {
+          "claim": "AIエージェントとフィジカルAIを追加",
+          "page": [
+            10,
+            12
+          ],
+          "status": "定義の存在は確認（AI エージェント＝特定の目標を達成するために環境を感知し自律的に行動するAIシステム、ISO/IEC 22989:2022参照。フィジカル AI＝センシングで物理環境を取り込みアクチュエータで物理的行動へつなげるシステム。脚注でエージェンティック AI を区別）。第1.1版との差分は未照合のため『追加』は断定しない"
+        },
+        {
+          "claim": "AI推進法（令和7年法律第53号）は2025年6月公布・9月全面施行、2025年12月19日に適正性確保指針",
+          "page": 2,
+          "status": "確認"
+        }
+      ],
+      "not_done": "第1.1版との差分、第3〜5部の精読",
+      "page_numbering": "PDF通し頁（表紙を1頁目と数える）",
+      "summary": "research/disclosures/meti_ai_guidelines_v1_2_summary.md"
+    },
+    {
+      "id": "ax_criteria_20261006",
+      "title": "AX Criteria — Agentic Transformation Criteria（設問50項目・用語集・ガイド）",
+      "publisher": "一般社団法人日本CTO協会（AX Criteria WG）",
+      "published": "2026-10-05（WG設置発表は2026-07-01）",
+      "license": "CC BY-SA 4.0",
+      "source_url": [
+        "https://axcriteria.cto-a.org/",
+        "https://axcriteria.cto-a.org/api/assessment/items",
+        "https://axcriteria.cto-a.org/api/glossary",
+        "https://axcriteria.cto-a.org/api/guide",
+        "https://prtimes.jp/main/html/rd/p/000000058.000081310.html"
+      ],
+      "retrieval_note": "サイトはJavaScript描画のためHTML本文は空。ログイン不要の公開APIから設問JSONを取得。/api/criteria は401（会員用）。各項目の解説文（has_doc）は未取得",
+      "local_files": [
+        {
+          "file": "research/disclosures/raw/ax_criteria_assessment_items_20261006.json",
+          "sha256": "71e5d5d0c3a507b2588dfe00f7bb9b27892adbaa5eacd6b155d5346de9a2c4dc",
+          "content": "5カテゴリ・50項目の題名、サブテーマ、項目別Score 0〜4基準、共通尺度"
+        },
+        {
+          "file": "research/disclosures/raw/ax_criteria_glossary_20261006.json",
+          "sha256": "220213a44b7b17a7ee8ba7695cef49b50ea924ee67d2159e408302e7c7e12ce3",
+          "content": "用語集（AIエージェント、守りのエージェント、本番、証跡 ほか）"
+        },
+        {
+          "file": "research/disclosures/raw/ax_criteria_guide_20261006.json",
+          "sha256": "aae7dbf25dfe04ab11742a9a1c7bc875d8ae5d472c8f31c721f46599a2550816",
+          "content": "ガイド本文（目的、5S、採点尺度、使い方の注意、CC BY-SA 4.0）"
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "5カテゴリ×5サブテーマ×2項目=50項目、0〜4の5段階",
+          "status": "確認（API本文とガイド）"
+        },
+        {
+          "claim": "公開日2026年10月5日、CC BY-SA 4.0、WGリーダー広木大地",
+          "status": "PR TIMES本文で確認"
+        },
+        {
+          "claim": "ガイドが点数の人事評価・ランキング直結を戒める",
+          "status": "確認"
+        }
+      ],
+      "not_done": "各項目の解説文、採用企業数、採点分布、AXIS採点補助とMCP診断APIの動作確認",
+      "output": "research/strategy/ax_criteria_crosswalk.md",
+      "summary": "research/disclosures/ax_criteria_items_summary.md"
+    },
+    {
+      "id": "moj_ai_legal_services_72",
+      "title": "法務省 AI等法務業務支援サービスと弁護士法第72条に関する指針ほか（4文書）",
+      "publisher": "法務省大臣官房司法法制部",
+      "landing_url": "https://www.moj.go.jp/housei/shihouseido/housei10_00134.html",
+      "files": [
+        {
+          "name": "ビジネス分野におけるＡＩ等法務業務支援サービス提供と弁護士法第７２条の関係について（本文）",
+          "url": "https://www.moj.go.jp/content/001469040.pdf",
+          "published": "2026-08-21",
+          "pages": 21,
+          "sha256": "21dff60f752e07aae115968d3af90eb0b78652f55a0386435e807d555e720060"
+        },
+        {
+          "name": "同（ガイドライン概要）",
+          "url": "https://www.moj.go.jp/content/001469039.pdf",
+          "published": "2026-08",
+          "pages": 3,
+          "sha256": "506ef764b60c57064a100b8e84d942f6d609f663a94d6d5d88527eebae7deb58"
+        },
+        {
+          "name": "AI等を活用した法務業務及びその支援の将来像を見据えたルールメイキングの在り方検討のロードマップ",
+          "url": "https://www.moj.go.jp/content/001469041.pdf",
+          "published": "2026-08",
+          "pages": 1,
+          "sha256": "9f00a39684a1e595deb0b99ff98a83e46d2999768578c18315d4d5e535a1cde2"
+        },
+        {
+          "name": "AI等を用いた契約書等関連業務支援サービスの提供と弁護士法第72条との関係について（令和5年ガイドライン）",
+          "url": "https://www.moj.go.jp/content/001400675.pdf",
+          "published": "2023-08",
+          "pages": 6,
+          "sha256": "1af369d047aada58f70c58e1031769caf24ce0d1c8b56661b51c020ef5292233"
+        }
+      ],
+      "retrieval_note": "ブラウザのUser-AgentとRefererを付けたHTTP取得で4文書とも200。以前の調査でブラウザ取得が403だった経路とは別",
+      "not_done": "親子会社間の法律事務の取扱い（/content/001400727.pdf）と産業競争力強化法に基づく回答は未取得",
+      "summary": "research/disclosures/moj_ai_legal_services_72_summary.md"
+    }
+  ],
+  "policy": "PDF・JSONの原本はGitで管理しない。参照は各 source_url を正とし、本記録にはURL・取得日・ハッシュ値・照合結果のみを残す。ローカル複製は任意で、.gitignore の research/disclosures/raw/ 配下に置く"
+}

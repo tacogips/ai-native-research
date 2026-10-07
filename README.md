@@ -2,6 +2,21 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## Master Report（最新版を保持し続ける統合資料）
+
+| 資料 | 内容 |
+|---|---|
+| [業務基盤の Master Report](research/strategy/master_ai_native_operations_platform.md) | 既存大企業の業務の80%以上をAIが担う基盤に有効な技術・アプローチと課題。既存調査（基盤、事例、事故、論文155本）と2026年10月時点のウェブ調査（企業基盤、MCP・A2A・ID標準、企業の発表と決算、調査会社の報告、2026年の研究、EU・日本の規制）を統合。80%を「AIが実行し人が例外・承認・改善の採否を担う比率」として定義し直し、層別の技術選択、業務・組織のアプローチ、段階計画、受入条件を設計案として整理 |
+| [指標・データ基盤・機能の Master Report](research/strategy/master_ai_native_metrics_data_platform.md) | AIを前提にしたことによる効率化を測る指標体系（投入・活動・成果の区別、四層と反証指標、二つの分母、監督の有効性、安全・採算・自己改善・組織）、構築するデータベース（知識系7層、運用記録系A〜N、記憶系の分離、最小スキーマ、設計原則）、提供する17機能と利用者別権限、受入条件 |
+
+[AX Criteria（日本CTO協会、2026年10月5日公開）との対応表](research/strategy/ax_criteria_crosswalk.md)。50項目の成熟度基準と本調査の指標・データベース・機能・基盤の対応、双方の空白、使い方を整理した。設問本文・用語集・ガイドは公開APIから取得した。McKinsey「The State of AI in 2026」とAI事業者ガイドライン第1.2版のPDF原本と合わせ、原本はGitで管理せず、[取得記録](research/disclosures/retrieval_records_20261006.json)に参照元URL・取得日・ハッシュ値・照合結果だけを残す。
+
+原本を持たない読者のために、重要情報を落とさない内容要約を置く: [McKinsey「The state of AI in 2026」要約](research/disclosures/mckinsey_state_of_ai_2026_summary.md)（18図表の数値を含む）、[AI事業者ガイドライン第1.2版 要約](research/disclosures/meti_ai_guidelines_v1_2_summary.md)、[AX Criteria 50項目・採点基準・用語集・ガイドの記録](research/disclosures/ax_criteria_items_summary.md)、[法務省 AI法務支援サービスと弁護士法72条の指針（令和8年・令和5年）とロードマップの要約](research/disclosures/moj_ai_legal_services_72_summary.md)、[日本政府のAI関連指針25文書の調査](research/disclosures/japan_gov_ai_guidelines_survey.md)（内閣府・AISI・経産省・総務省・デジタル庁・個人情報保護委員会・金融庁・公取委・文化庁）。
+
+[リーガルテックを実務家視点で見る](research/legal_domain/legaltech_practitioner_perspectives.md)。企業法務（当事者）と法務事業者（ベンダー・法律事務所・AIネイティブ法律事務所）のブログ・note・調査・事例を国内外で集め、法務省72条新指針への反応、ハルシネーション制裁、報酬体系と若手育成の変化、法務業務のうちAIが担える範囲と企業AI基盤への示唆を整理した。
+
+Master Report は日付付きの調査版ではなく、新しい一次資料や検証結果が出るたびに更新し、末尾の改訂履歴へ変更点を記録する。
+
 ## AIを前提に業務・組織を小さくする事例（2026年10月6日）
 
 [Treasure AIと国内外15社の比較](research/benchmarks/treasure_ai_compact_organization_cases_20261006.md)。Fluentdの開発元Treasure Dataの文書作成・業務製品の集約を調べ、日本6社・海外9社の課題、技術、成果、人の確認、自己改善の記録を整理した。DeNAとShopifyの実装を掘り下げ、人員削減・作業時間の短縮・将来目標を区別する。[26出典の確認台帳](research/benchmarks/treasure_ai_compact_sources_20261006.json)。 Klarnaの2025年開示は再配信HTMLの全文取得で確認制限を解消した。[取得記録](research/benchmarks/klarna_2025_disclosure_retrieval_20261006.json)。
