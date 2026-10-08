@@ -1,0 +1,190 @@
+{
+  "checked_date": "2026-10-08",
+  "status": "企業ごとの設定が必要な初期案",
+  "jurisdiction": "日本の一般企業。国外・業種別要件は追加設定",
+  "not_a_runtime_policy": true,
+  "unset_period_means": "保存無期限の許可ではない。規則を確定するまで新規の永続保存を許可しない",
+  "inventory_fields": [
+    "data_category",
+    "fields",
+    "subject_scope",
+    "purpose_id",
+    "necessity_reason",
+    "source",
+    "collection_trigger",
+    "notice_version",
+    "consent_required",
+    "consent_evidence_ref",
+    "legal_requirement_refs",
+    "policy_version",
+    "owner",
+    "actual_storage_locations",
+    "processor_and_subprocessor_refs",
+    "derived_from",
+    "retention_start_event",
+    "retention_end_at",
+    "review_at",
+    "exception_basis",
+    "exception_approver",
+    "exception_review_at",
+    "deletion_trigger",
+    "deletion_due_at",
+    "deletion_state",
+    "execution_result_ref",
+    "independent_verification_ref",
+    "backup_expiry_at",
+    "subject_notification_ref"
+  ],
+  "category_rules": [
+    {
+      "id": "PDL-01",
+      "category": "問合せ",
+      "collect_minimum": "応答に必要な連絡先と本文",
+      "collection_trigger": "応答が必要になった時",
+      "deletion_or_review_trigger": "対応・必要な苦情処理が終了",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-02",
+      "category": "配送",
+      "collect_minimum": "配送先と必要な注文情報",
+      "collection_trigger": "配送の手続時",
+      "deletion_or_review_trigger": "配送・返品等が終了。法定保存の対象書類は分離",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-03",
+      "category": "採用選考",
+      "collect_minimum": "選考に必要な応募情報と評価",
+      "collection_trigger": "選考時",
+      "deletion_or_review_trigger": "選考終了後の合理的な必要期間が終了",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-04",
+      "category": "給与と雇用",
+      "collect_minimum": "支払口座と必要な雇用情報",
+      "collection_trigger": "給与・雇用手続が必要な時",
+      "deletion_or_review_trigger": "業務終了と該当法定保存を確認",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-05",
+      "category": "健康情報",
+      "collect_minimum": "対象業務に必要な情報だけ",
+      "collection_trigger": "適用業務の必要時",
+      "deletion_or_review_trigger": "目的終了と業種・帳票別の法定保存を確認",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-06",
+      "category": "マイナンバー",
+      "collect_minimum": "法定事務に必要な番号等",
+      "collection_trigger": "該当する法定事務の必要時",
+      "deletion_or_review_trigger": "事務上の必要がなく、該当保存期間が経過",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-07",
+      "category": "本人確認画像",
+      "collect_minimum": "確認と証拠保存に必要な部分だけ",
+      "collection_trigger": "確認が必要な手続時",
+      "deletion_or_review_trigger": "確認終了後に画像の保管が不要となった時",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-08",
+      "category": "AIへの入力と出力",
+      "collect_minimum": "作業に必要な部分だけ",
+      "collection_trigger": "許可された作業の実行時",
+      "deletion_or_review_trigger": "作業終了と承認済み履歴期間の終了",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-09",
+      "category": "検索派生情報",
+      "collect_minimum": "許可原本の断片・埋込み・辺・要約",
+      "collection_trigger": "索引作成の許可時",
+      "deletion_or_review_trigger": "原本の終了・改訂・消去対象化に連動",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-10",
+      "category": "AIの記憶と改善資料",
+      "collect_minimum": "その目的で保存が許可された情報だけ",
+      "collection_trigger": "別の目的と保存を承認した時",
+      "deletion_or_review_trigger": "当該目的終了又は原本の消去対象化",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    },
+    {
+      "id": "PDL-11",
+      "category": "作業と監査の記録",
+      "collect_minimum": "操作者・認可・処理結果の最小限",
+      "collection_trigger": "許可された処理の記録時",
+      "deletion_or_review_trigger": "承認された記録目的の必要期間が終了",
+      "retention_days": null,
+      "retention_status": "目的・契約・適用法で要確定"
+    }
+  ],
+  "verified_retention_examples": [
+    {
+      "category": "法人税の帳簿・取引書類",
+      "period_years": 7,
+      "start_event": "該当する事業年度の確定申告書提出期限の翌日",
+      "exceptions": "該当する欠損金・災害損失の年度は10年等。他法の保存義務も確認",
+      "source": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5930.htm"
+    },
+    {
+      "category": "労働者名簿・賃金台帳等",
+      "statutory_years": 5,
+      "transitional_years": 3,
+      "start_event": "書類別の法定起算を確認",
+      "exceptions": "当分の間3年。退職金・紛争等で必要が続く場合を区別",
+      "source": "https://www.startup-roudou.mhlw.go.jp/qa/zigyonushi/syuugyoukisoku/q6.html"
+    }
+  ],
+  "deletion_states": [
+    "判定待ち",
+    "利用停止",
+    "保存先確定",
+    "実行中",
+    "通常保存先消去済み",
+    "復旧用複製の期限待ち",
+    "法的保全中",
+    "確認失敗",
+    "完了"
+  ],
+  "completion_checks": [
+    "対象保存先の一覧と各処理の件数を照合",
+    "未処理・失敗・例外を個別に記録",
+    "実行主体とは別の権限で残存と検索再出現を検査",
+    "委託先・再委託先の対象範囲と証拠を確認",
+    "復旧で消去済み情報が再利用されないことを検査",
+    "復旧用複製に残る間は全消去完了としない",
+    "本人への説明と実際の状態を一致させる"
+  ],
+  "audit_schedule_proposal": {
+    "expiry_jobs": "日次と業務終了の事象",
+    "outstanding_deletions": "日次",
+    "unnecessary_data_and_copies": "月次の標本点検",
+    "policy_review": "四半期",
+    "independent_audit": "年次と重要変更時",
+    "legal_status": "一律の法定頻度ではない。危険度・量・業務で変更"
+  },
+  "limits": [
+    "全世界・全業種の規律の網羅ではない",
+    "実保存先の消去実績を検査したものではない",
+    "モデル重みの忘却は検索資料の消去とは別に評価",
+    "監査証拠自体の個人情報・権限・期限を管理"
+  ]
+}
