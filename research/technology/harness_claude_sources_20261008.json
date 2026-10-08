@@ -1,0 +1,2203 @@
+{
+  "retrieved_at": "2026-10-08T01:11:21.091062+00:00",
+  "research_date": "2026-10-08",
+  "report": "research/technology/harness_claude_security_20261008.md",
+  "scope": "Claude Code公式仕様と公開sandbox-runtime固定ソース",
+  "sources": [
+    {
+      "id": "sandboxing",
+      "url": "https://code.claude.com/docs/en/sandboxing.md",
+      "resolved_url": "https://code.claude.com/docs/en/sandboxing.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/sandboxing.md",
+      "sha256": "5cf6cdc79f6442a700cab2f3a1efc5b632d85dedf6722c094c1cde56aefaec7f",
+      "status": "saved",
+      "bytes": 92862
+    },
+    {
+      "id": "permissions",
+      "url": "https://code.claude.com/docs/en/permissions.md",
+      "resolved_url": "https://code.claude.com/docs/en/permissions.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/permissions.md",
+      "sha256": "487a51f83edd0c35a6128a2492e288c86aa24bbc07a0c975eb3f61acd5d45452",
+      "status": "saved",
+      "bytes": 78110
+    },
+    {
+      "id": "permission-modes",
+      "url": "https://code.claude.com/docs/en/permission-modes.md",
+      "resolved_url": "https://code.claude.com/docs/en/permission-modes.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/permission-modes.md",
+      "sha256": "b6c78ae3ef22a18d2ec6e4f9b2d42bd3299890be23c65f3c57d3712869cb44e2",
+      "status": "saved",
+      "bytes": 89704
+    },
+    {
+      "id": "security",
+      "url": "https://code.claude.com/docs/en/security.md",
+      "resolved_url": "https://code.claude.com/docs/en/security.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/security.md",
+      "sha256": "0adfb745929b46c9ecd30cc80f7dc28d5be43140209a7d6299d803ff8cbda96f",
+      "status": "saved",
+      "bytes": 14362
+    },
+    {
+      "id": "hooks",
+      "url": "https://code.claude.com/docs/en/hooks.md",
+      "resolved_url": "https://code.claude.com/docs/en/hooks.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/hooks.md",
+      "sha256": "403645d3a96659f4eaed1755a30ef28fff4477f711fd84acc7833a1949c168dd",
+      "status": "saved",
+      "bytes": 250548
+    },
+    {
+      "id": "settings",
+      "url": "https://code.claude.com/docs/en/settings.md",
+      "resolved_url": "https://code.claude.com/docs/en/settings.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/settings.md",
+      "sha256": "5c41248aea5764d32b14f90b77f4aa149486ca6bad6517c400398d9096b0ee25",
+      "status": "saved",
+      "bytes": 57393
+    },
+    {
+      "id": "data-usage",
+      "url": "https://code.claude.com/docs/en/data-usage.md",
+      "resolved_url": "https://code.claude.com/docs/en/data-usage.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/data-usage.md",
+      "sha256": "ef5260591575f5c4d2cc649054349b427fb6f3aa91388f9162662d7e3ba0bb03",
+      "status": "saved",
+      "bytes": 18976
+    },
+    {
+      "id": "mcp",
+      "url": "https://code.claude.com/docs/en/mcp.md",
+      "resolved_url": "https://code.claude.com/docs/en/mcp.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/mcp.md",
+      "sha256": "7eb0c33f565bf4b1e6e2e1c6bb85c2dc9387ed8ddc0d9900ad78305f02b4ceb7",
+      "status": "saved",
+      "bytes": 118258
+    },
+    {
+      "id": "sub-agents",
+      "url": "https://code.claude.com/docs/en/sub-agents.md",
+      "resolved_url": "https://code.claude.com/docs/en/sub-agents.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/sub-agents.md",
+      "sha256": "971c1eed381526aa7382d9339cb62b3023daac266ca30adb65ab20eb6188cf87",
+      "status": "saved",
+      "bytes": 107296
+    },
+    {
+      "id": "monitoring-usage",
+      "url": "https://code.claude.com/docs/en/monitoring-usage.md",
+      "resolved_url": "https://code.claude.com/docs/en/monitoring-usage.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/monitoring-usage.md",
+      "sha256": "416b73c6df32813e6bb795b67f9985910bd9e47543f032ad96a35052a7459d07",
+      "status": "saved",
+      "bytes": 149389
+    },
+    {
+      "id": "sandbox-environments",
+      "url": "https://code.claude.com/docs/en/sandbox-environments.md",
+      "resolved_url": "https://code.claude.com/docs/en/sandbox-environments.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/sandbox-environments.md",
+      "sha256": "5966807613fd6d8ba1c8f8a8062a946adbc1c9b638c3465b71ac90aa41e57fb1",
+      "status": "saved",
+      "bytes": 17846
+    },
+    {
+      "id": "claude-code-on-the-web",
+      "url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
+      "resolved_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/claude-code-on-the-web.md",
+      "sha256": "8d8dafb92ee1a3513400e23506a0f81e86144f4dcf5e4b755781ad4a704dd2e2",
+      "status": "saved",
+      "bytes": 40018
+    },
+    {
+      "id": "llm-gateway",
+      "url": "https://code.claude.com/docs/en/llm-gateway.md",
+      "resolved_url": "https://code.claude.com/docs/en/llm-gateway.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/llm-gateway.md",
+      "sha256": "3acb15a32a7a4ad0608c3bfdc50703a6fbca3b79fcddb0de8c89717db0b8b1a1",
+      "status": "saved",
+      "bytes": 7105
+    },
+    {
+      "id": "network-config",
+      "url": "https://code.claude.com/docs/en/network-config.md",
+      "resolved_url": "https://code.claude.com/docs/en/network-config.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/network-config.md",
+      "sha256": "501c3eb0e0ae39e760070707354957e1435293a310f436f31db0d0bf38be1e87",
+      "status": "saved",
+      "bytes": 30860
+    },
+    {
+      "id": "zero-data-retention",
+      "url": "https://code.claude.com/docs/en/zero-data-retention.md",
+      "resolved_url": "https://code.claude.com/docs/en/zero-data-retention.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/zero-data-retention.md",
+      "sha256": "1368ba8ccfc4647f6a8ad883effe559734af2b2811cb98184eacf5c8276fc27d",
+      "status": "saved",
+      "bytes": 7935
+    },
+    {
+      "id": "managed-settings",
+      "url": "https://code.claude.com/docs/en/managed-settings.md",
+      "resolved_url": "https://code.claude.com/docs/en/managed-settings.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/managed-settings.md",
+      "sha256": "ad7a2e450e26f1a35ae0b229106b731c6d77ff779849032b39f7354e175d1d28",
+      "status": "saved",
+      "bytes": 60442
+    },
+    {
+      "id": "authentication",
+      "url": "https://code.claude.com/docs/en/authentication.md",
+      "resolved_url": "https://code.claude.com/docs/en/authentication.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/authentication.md",
+      "sha256": "ef9a969e136e06600e98d28e717dc39e97a5fc74d67ea0426f2a9d0b82109975",
+      "status": "saved",
+      "bytes": 31193
+    },
+    {
+      "id": "settings-reference",
+      "url": "https://code.claude.com/docs/en/settings-reference.md",
+      "resolved_url": "https://code.claude.com/docs/en/settings-reference.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/settings-reference.md",
+      "sha256": "336052874e175d06cc9749156c3addc4bb06beac85aa2487e59dd72948c79104",
+      "status": "saved",
+      "bytes": 419423
+    },
+    {
+      "id": "env-vars",
+      "url": "https://code.claude.com/docs/en/env-vars.md",
+      "resolved_url": "https://code.claude.com/docs/en/env-vars.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/env-vars.md",
+      "sha256": "f0dea63ef86f07bb9cfc3f0b18387f131967a1c5bbbeffc6c1b87841a568cb13",
+      "status": "saved",
+      "bytes": 165660
+    },
+    {
+      "id": "managed-mcp",
+      "url": "https://code.claude.com/docs/en/managed-mcp.md",
+      "resolved_url": "https://code.claude.com/docs/en/managed-mcp.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/managed-mcp.md",
+      "sha256": "45a53673fa9e07f69610a79437bb4c0cc477090311097772bf740c0e7dbbb6ad",
+      "status": "saved",
+      "bytes": 45147
+    },
+    {
+      "id": "plugins",
+      "url": "https://code.claude.com/docs/en/plugins.md",
+      "resolved_url": "https://code.claude.com/docs/en/plugins.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/plugins.md",
+      "sha256": "eb8b9f92d75d42d777d3bdbc89273c2df881b6a3cf58afaa63418d55a70538f5",
+      "status": "saved",
+      "bytes": 14823
+    },
+    {
+      "id": "memory",
+      "url": "https://code.claude.com/docs/en/memory.md",
+      "resolved_url": "https://code.claude.com/docs/en/memory.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/memory.md",
+      "sha256": "68487618d6ef302c774974b3785717310eb9b12199f9e8486fa5e7c9b6bd65bd",
+      "status": "saved",
+      "bytes": 51540
+    },
+    {
+      "id": "agent-sdk/hooks",
+      "url": "https://code.claude.com/docs/en/agent-sdk/hooks.md",
+      "resolved_url": "https://code.claude.com/docs/en/agent-sdk/hooks.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/agent-sdk_hooks.md",
+      "sha256": "f2953b067b70792b976ad546edd6610fa2bcec2f2df92c88ae7687cc7efa1056",
+      "status": "saved",
+      "bytes": 45487
+    },
+    {
+      "id": "auto-mode-config",
+      "url": "https://code.claude.com/docs/en/auto-mode-config.md",
+      "resolved_url": "https://code.claude.com/docs/en/auto-mode-config.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/auto-mode-config.md",
+      "sha256": "a8feb7dac2f2070bdb140462603d1c6ef3bc86560eff5ea4e8443792382aa3a7",
+      "status": "saved",
+      "bytes": 30848
+    },
+    {
+      "id": "llm-gateway-protocol",
+      "url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
+      "resolved_url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/llm-gateway-protocol.md",
+      "sha256": "3fc23c8d58b77e43a3fffebb722112d760aa06b2e8c1574005de55dcffcd8624",
+      "status": "saved",
+      "bytes": 43648
+    },
+    {
+      "id": "cloud-security",
+      "url": "https://code.claude.com/docs/en/cloud-security.md",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "tools-reference",
+      "url": "https://code.claude.com/docs/en/tools-reference.md",
+      "resolved_url": "https://code.claude.com/docs/en/tools-reference.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/tools-reference.md",
+      "sha256": "9dff373c68a2072871dc8c4f4155902d5d55e275f79eca082dceaec5b87a2377",
+      "status": "saved",
+      "bytes": 77929
+    },
+    {
+      "id": "cloud-environments",
+      "url": "https://code.claude.com/docs/en/cloud-environments.md",
+      "resolved_url": "https://code.claude.com/docs/en/cloud-environments.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/cloud-environments.md",
+      "sha256": "8c54460a12a00943d17786bc297c70b3d3167d506ba24348797c37ff2385a1e5",
+      "status": "saved",
+      "bytes": 60334
+    },
+    {
+      "id": "claude-directory",
+      "url": "https://code.claude.com/docs/en/claude-directory.md",
+      "resolved_url": "https://code.claude.com/docs/en/claude-directory.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/claude-directory.md",
+      "sha256": "93f1978339d3a4811e42de406e885c40c865b385760eab07683c0fa254e4f6b3",
+      "status": "saved",
+      "bytes": 92536
+    },
+    {
+      "id": "agent-sdk/permissions",
+      "url": "https://code.claude.com/docs/en/agent-sdk/permissions.md",
+      "resolved_url": "https://code.claude.com/docs/en/agent-sdk/permissions.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/agent-sdk_permissions.md",
+      "sha256": "ebe15d4c985593c7fcc34f3906eb1f6fd88e764de9aa912ed30343a71e8273a4",
+      "status": "saved",
+      "bytes": 24453
+    },
+    {
+      "id": "plugins/org",
+      "url": "https://code.claude.com/docs/en/plugins/org.md",
+      "resolved_url": "https://code.claude.com/docs/en/plugins/org.md",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/plugins_org.md",
+      "sha256": "e1348d89d6546ed32a542c7c32fbd4ebc60b56e19755ec174ee526f6231ef69b",
+      "status": "saved",
+      "bytes": 40254
+    },
+    {
+      "id": "sandbox-runtime-main",
+      "url": "https://github.com/anthropics/sandbox-runtime",
+      "status": "saved",
+      "commit": "fedc0bbe206c2705b3de990fdbed51b3255214c9",
+      "commit_time": "2026-10-07T23:02:18+01:00",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/sandbox-runtime",
+      "package_metadata_version": "0.0.79",
+      "code_and_fixture_file_count": 313,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "bytes": 88,
+          "sha256": "0b2011a037ec2fa6a7652a91faea730b63f2ac8cfe9203435e9ea072ff9deb81",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.dockerignore"
+        },
+        {
+          "path": ".gitattributes",
+          "bytes": 307,
+          "sha256": "a5274b7f4f39bee4f84ad8b94114b2aafc6caf7e63825437a20a4ad9fd2bc5f8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.gitattributes"
+        },
+        {
+          "path": ".github/workflows/integration-tests.yml",
+          "bytes": 15110,
+          "sha256": "5915974a67e9d15def2049196f4950061acb79df8b6de8a05bc92e225854d3d9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.github/workflows/integration-tests.yml"
+        },
+        {
+          "path": ".github/workflows/release.yml",
+          "bytes": 9507,
+          "sha256": "bbb1734c80d1c1d8043a059d71b3f42b711f90d70e66be3ea0180c84ddb6e36b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.github/workflows/release.yml"
+        },
+        {
+          "path": ".gitignore",
+          "bytes": 187,
+          "sha256": "0af067b4d50b2bf052d04e1b4204484c69023a3e25acc94927a93f88d29f0a55",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.gitignore"
+        },
+        {
+          "path": ".husky/pre-commit",
+          "bytes": 34,
+          "sha256": "7318db84a6ce41287dd92e3c4f24ada1d2cc54c0c44b8cc58efef47faa8a7659",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.husky/pre-commit"
+        },
+        {
+          "path": ".npmrc",
+          "bytes": 37,
+          "sha256": "3a951f66e7e0f3e2dd1832473a871357c4a507b51100636b73bcf6ff0dd78b6c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.npmrc"
+        },
+        {
+          "path": ".prettierrc.json",
+          "bytes": 92,
+          "sha256": "d0f3d3e5d6dc8ba5d648e7a52939fa73c8e3144b6bb29f728cf87ab902bc7133",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.prettierrc.json"
+        },
+        {
+          "path": ".vscode/settings.json",
+          "bytes": 246,
+          "sha256": "573e322825077d0ffa3febfd1e00811da898a64a029ad38acb31a8d221276c8c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/.vscode/settings.json"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 11339,
+          "sha256": "1210bc93eb85dd786c33192d5bcb7153a93922fa99fbc1512af6a7199cb41080",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "bytes": 84250,
+          "sha256": "a951e66f71eae60103028e88f119bed42f5a91e2544f88fdf1f02a960f817caf",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/README.md"
+        },
+        {
+          "path": "eslint.config.js",
+          "bytes": 4319,
+          "sha256": "7248a2dcb591a18c3cbeea044b01d50889c2d23c293c9ef21b6772d51d1954ba",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/eslint.config.js"
+        },
+        {
+          "path": "package-lock.json",
+          "bytes": 172375,
+          "sha256": "b4e63c2e2082a9da696c342c5944afa537e6fe4029d33cc15617bc3ef959a2b1",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/package-lock.json"
+        },
+        {
+          "path": "package.json",
+          "bytes": 2570,
+          "sha256": "a311b4277529c52b73105618b33c0b4d4eef3658693829534717dc6a354f7112",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/package.json"
+        },
+        {
+          "path": "rust-toolchain.toml",
+          "bytes": 275,
+          "sha256": "e73c09da6cf841d9fe126cf89266da77d41c308e42ddf73ae835c9cc5c0e06f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/rust-toolchain.toml"
+        },
+        {
+          "path": "src/cli.ts",
+          "bytes": 23557,
+          "sha256": "b4a509dc9ec253f7f66459f0dc6fc2ad9a000bbd95e5cf72e436d9c9f445085a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/cli.ts"
+        },
+        {
+          "path": "src/index.ts",
+          "bytes": 3523,
+          "sha256": "93b71d65505df32840912637c727dde1718b9bd206150cea0377ad9f14b14471",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/index.ts"
+        },
+        {
+          "path": "src/sandbox/address.ts",
+          "bytes": 6225,
+          "sha256": "4407f377daf4869742fc8586e9ddda82317807a2690d0301fcdfb56447f61358",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/address.ts"
+        },
+        {
+          "path": "src/sandbox/aws-sigv4.ts",
+          "bytes": 13099,
+          "sha256": "fd097173dbd61593fa932c95b60d93e8bc56cde3fea7b43bf51732ef98353e48",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/aws-sigv4.ts"
+        },
+        {
+          "path": "src/sandbox/body-substitution.ts",
+          "bytes": 6741,
+          "sha256": "f9e3c653c46ab08cb7ff8fba95fc7c032a3fe7012e3eafaca096f27a20a97013",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/body-substitution.ts"
+        },
+        {
+          "path": "src/sandbox/credential-aws-pairs.ts",
+          "bytes": 13828,
+          "sha256": "83fa65aa698f90b172364add2a3dbacfc05b52eb50dae6274ffa62afb9b7185f",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/credential-aws-pairs.ts"
+        },
+        {
+          "path": "src/sandbox/credential-decode.ts",
+          "bytes": 6773,
+          "sha256": "e8fb2100b7a1b8dc56479f6800907a30f8662be549109e4849833273343aaaf4",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/credential-decode.ts"
+        },
+        {
+          "path": "src/sandbox/credential-extract.ts",
+          "bytes": 6759,
+          "sha256": "49917e64f9a67fc6563c0b9ccb82e5b0ae367e2331cdd3f2ea77e5493408cc02",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/credential-extract.ts"
+        },
+        {
+          "path": "src/sandbox/credential-mask-env.ts",
+          "bytes": 10085,
+          "sha256": "d197354774e5009dd62f652065b21455b7f7adc86c0744834b63e5cb4c7fd64b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/credential-mask-env.ts"
+        },
+        {
+          "path": "src/sandbox/credential-mask-files.ts",
+          "bytes": 15685,
+          "sha256": "6edcd584c2e587979eddfe929d5ee0e7d09de80425414c13c98fb6fb0b975e41",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/credential-mask-files.ts"
+        },
+        {
+          "path": "src/sandbox/credential-sentinel.ts",
+          "bytes": 9646,
+          "sha256": "fe445a5ff16267879d8d8406864346bf34d4ef8c9ee9ccfdc832bfab5e768191",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/credential-sentinel.ts"
+        },
+        {
+          "path": "src/sandbox/domain-pattern.ts",
+          "bytes": 9908,
+          "sha256": "ad9c8d3f803ef1256e050a5e6023ebebfef963ac3a6a02ff88a690d0e1fb1aa4",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/domain-pattern.ts"
+        },
+        {
+          "path": "src/sandbox/generate-seccomp-filter.ts",
+          "bytes": 9797,
+          "sha256": "a6e1b37fd6f0a68b6352c6dae7a838dedc832d9106b58afc48cdb14dc72c95a6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/generate-seccomp-filter.ts"
+        },
+        {
+          "path": "src/sandbox/http-proxy.ts",
+          "bytes": 38672,
+          "sha256": "06be63e8a2467d477ff4b8572f11ab9b3620c5da606c16f883c92cbdecb607df",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/http-proxy.ts"
+        },
+        {
+          "path": "src/sandbox/java-proxy-agent.ts",
+          "bytes": 5122,
+          "sha256": "9b77ccd12f63ea4e5c4edeb0832507bddc03328306d79b81eb3c8d05e27cba6c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/java-proxy-agent.ts"
+        },
+        {
+          "path": "src/sandbox/linux-sandbox-utils.ts",
+          "bytes": 153277,
+          "sha256": "75e8402990c3e7430d75b4df62dc7f96241b1b444845c81d44492365b8d6f5c8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/linux-sandbox-utils.ts"
+        },
+        {
+          "path": "src/sandbox/linux-violation-monitor.ts",
+          "bytes": 8138,
+          "sha256": "f3c7a34a6ea9334ab185d034dba3d768374fc971f6b06eb1577af09f7b03d7f3",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/linux-violation-monitor.ts"
+        },
+        {
+          "path": "src/sandbox/listen-in-range.ts",
+          "bytes": 1806,
+          "sha256": "8798d04727454348f95b6c026948e289cb38382f617d03889ff27f5d38477bc2",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/listen-in-range.ts"
+        },
+        {
+          "path": "src/sandbox/macos-sandbox-utils.ts",
+          "bytes": 61402,
+          "sha256": "4931a232a0ea96a3a5182b7a5fd7a56818dadb5faec9735869b6cc1fd7239c91",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/macos-sandbox-utils.ts"
+        },
+        {
+          "path": "src/sandbox/mitm-ca.ts",
+          "bytes": 22615,
+          "sha256": "5af6a29ab6ce90f52ceeb4d96be4984651a373294e87824997f3e57111c21748",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/mitm-ca.ts"
+        },
+        {
+          "path": "src/sandbox/mitm-leaf.ts",
+          "bytes": 5037,
+          "sha256": "d32ea59b57dcfd72bd0ba0c6946864af0d54320c728c349e695086d9eaafc72c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/mitm-leaf.ts"
+        },
+        {
+          "path": "src/sandbox/mux-proxy.ts",
+          "bytes": 8993,
+          "sha256": "0d3cbd2a903a78db242e2e4607d7605e628fca092e3a4f3a6a7b8b11cf4051db",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/mux-proxy.ts"
+        },
+        {
+          "path": "src/sandbox/parent-proxy.ts",
+          "bytes": 20536,
+          "sha256": "fa37508bec8564fd797715b5a08e034f6ebe308d1ecfa5b87831d207fcafc2b5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/parent-proxy.ts"
+        },
+        {
+          "path": "src/sandbox/path-entries.ts",
+          "bytes": 15438,
+          "sha256": "46eb27a8f0a1ff2bb1f7c541b2ef973f3205556d7c2b1b39137453ffc5631c80",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/path-entries.ts"
+        },
+        {
+          "path": "src/sandbox/read-deny-glob.ts",
+          "bytes": 9275,
+          "sha256": "4ad9758612e8213f5b8d085fe6494bc73afe5a32fb6bbd60160b3543f0834680",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/read-deny-glob.ts"
+        },
+        {
+          "path": "src/sandbox/request-filter.ts",
+          "bytes": 10136,
+          "sha256": "ff2e0c17c5581bd0df6688e7bfd518409549f694e3c4b1f342118878b8e1cc37",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/request-filter.ts"
+        },
+        {
+          "path": "src/sandbox/resolved-address-guard.ts",
+          "bytes": 12361,
+          "sha256": "7867160651c916d7c09c8e9df6d3b3218bf60397c4516db37cdbaa1d0a2b5f11",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/resolved-address-guard.ts"
+        },
+        {
+          "path": "src/sandbox/sandbox-config.ts",
+          "bytes": 63656,
+          "sha256": "f85a10557dc41d2884b74ff63625a187d6cc1a6a6e06ad8e57eca6498ef22894",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/sandbox-config.ts"
+        },
+        {
+          "path": "src/sandbox/sandbox-manager.ts",
+          "bytes": 110662,
+          "sha256": "b3cb80342938257e08729ad4f52c8d4a0f9e3b9913b66ccb4b14605001e844d7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/sandbox-manager.ts"
+        },
+        {
+          "path": "src/sandbox/sandbox-schemas.ts",
+          "bytes": 6908,
+          "sha256": "16780cb88a53acc341df5fec1f67ae680bb1409b5fd4505d11ae418ef2727891",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/sandbox-schemas.ts"
+        },
+        {
+          "path": "src/sandbox/sandbox-utils.ts",
+          "bytes": 77448,
+          "sha256": "8fac48fb390fa18ea68f5cb09b7874b5926f4567afeff87c8c60e2b96e6284fb",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/sandbox-utils.ts"
+        },
+        {
+          "path": "src/sandbox/sandbox-violation-store.ts",
+          "bytes": 6065,
+          "sha256": "5b68a3385da0a11246a6b792906e2867727b062f50d0336f91ac8442bc9cf798",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/sandbox-violation-store.ts"
+        },
+        {
+          "path": "src/sandbox/socks-proxy.ts",
+          "bytes": 16087,
+          "sha256": "1a29c94986cbe196a74bce50a5a5e286cd316cc6f57d5366e772b419e7d812e1",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/socks-proxy.ts"
+        },
+        {
+          "path": "src/sandbox/tls-terminate-proxy.ts",
+          "bytes": 27560,
+          "sha256": "14fac8208293afd329a4a8ad10584af0ae68e1269d64f04d14c80400bbd534eb",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/tls-terminate-proxy.ts"
+        },
+        {
+          "path": "src/sandbox/windows-sandbox-utils.ts",
+          "bytes": 87148,
+          "sha256": "abd28b5e004bc586828425c4356ebd88038e9bc2b13a82e41553b18cb0c5a814",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/sandbox/windows-sandbox-utils.ts"
+        },
+        {
+          "path": "src/utils/config-loader.ts",
+          "bytes": 2501,
+          "sha256": "d5009f85c4427b70a2f242b142acefb5a0f71c8f177b92717536211198701603",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/utils/config-loader.ts"
+        },
+        {
+          "path": "src/utils/debug.ts",
+          "bytes": 781,
+          "sha256": "92d12ea838f58bf8b30660b54f6ad9669535a8aa79299b39e59d535b2172169d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/utils/debug.ts"
+        },
+        {
+          "path": "src/utils/platform.ts",
+          "bytes": 1458,
+          "sha256": "fb603d7306dffd6759713f2e3f03db33a115fb17190a070b2d7bee3af1ba7b44",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/utils/platform.ts"
+        },
+        {
+          "path": "src/utils/ripgrep.ts",
+          "bytes": 2095,
+          "sha256": "aa4250ce8a59a674eb85bc040ed75087d6d4c882c4f14e1f4058666078353b26",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/utils/ripgrep.ts"
+        },
+        {
+          "path": "src/utils/shell-quote.ts",
+          "bytes": 2273,
+          "sha256": "a16abf00dd2ecee544bf0635e1ef10dbe48cc8479273363472362401fa86b9cd",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/utils/shell-quote.ts"
+        },
+        {
+          "path": "src/utils/which.ts",
+          "bytes": 771,
+          "sha256": "c659a449728ae1bdc047e86dfb412122b0d765d35b653901cbd9073de23276dc",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/src/utils/which.ts"
+        },
+        {
+          "path": "test/cli-config-loading.test.ts",
+          "bytes": 3827,
+          "sha256": "81fee09cef5e4eb75d220fd7282fb176bcfc654b97e1c162f3ddf8f10dfad97c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/cli-config-loading.test.ts"
+        },
+        {
+          "path": "test/cli.test.ts",
+          "bytes": 13907,
+          "sha256": "555689dd0d774980352c278c42fae02903eb41d766ac51f182058217332881aa",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/cli.test.ts"
+        },
+        {
+          "path": "test/config-validation.test.ts",
+          "bytes": 69818,
+          "sha256": "3fe44850bf6fcd405c9c3d4abb4fafa57186c70f579d5bad7cde99ded5b53581",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/config-validation.test.ts"
+        },
+        {
+          "path": "test/configurable-proxy-ports.test.ts",
+          "bytes": 13924,
+          "sha256": "5c27ab057ba203511e19f308f108b18ce2a6d807a6da05cf4656c51480233261",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/configurable-proxy-ports.test.ts"
+        },
+        {
+          "path": "test/control-fd.test.ts",
+          "bytes": 21408,
+          "sha256": "02efbd20257b148ba8193e6709ae63e992f5dcdd8012bb47dbdb7ea6c476ed92",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/control-fd.test.ts"
+        },
+        {
+          "path": "test/docker-weak-sandbox.test.ts",
+          "bytes": 6495,
+          "sha256": "8b4320878892e4947adecd89aa0d6ad2724e770176178ae7536fd796d96799dc",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/docker-weak-sandbox.test.ts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/NOTICE",
+          "bytes": 107,
+          "sha256": "b7ca0afda6a7019856ad0f6f096d3558ea4865e02e35fc13c02205d1852d5905",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/NOTICE"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/README.md",
+          "bytes": 850,
+          "sha256": "d73538eace6cecd8206e2c33e6010c29022c9f38c8ca580df14e13f171d320b9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/README.md"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.authz",
+          "bytes": 197,
+          "sha256": "2702900729aa057cd46545da188dc8a44c035795509b57ed09b17068527208c1",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.creq",
+          "bytes": 186,
+          "sha256": "dc7f04a3abfde8d472b0ab1a418b741b7c67174dad1551b4117b15527fbe966c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.req",
+          "bytes": 123,
+          "sha256": "36ef759ae0182931c8b543263dd56259a3d45f5be1d28bd3fbde0bb028693727",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.sreq",
+          "bytes": 336,
+          "sha256": "4af4bad660be671c37ad081d330baad7cb6b7e90981ffec4d9611ebfdcc059d3",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.sts",
+          "bytes": 138,
+          "sha256": "c6242de698f8b40fc6d4a849e41e8d5662aff6c1a8f411575f522ed53c45c2c1",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-key-duplicate/get-header-key-duplicate.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.authz",
+          "bytes": 208,
+          "sha256": "4fe5a63189af9a819464b28857b43bd2feeb85aa3115b6be2cb75316f05acb2a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.creq",
+          "bytes": 202,
+          "sha256": "a726db9b0df21c14f559d0a978e563112acb1b9e05476f0a6a1c7d68f28605c7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.req",
+          "bytes": 112,
+          "sha256": "83f5b26f5caf8b91f998228789091b4ddf62a1bdbe7e78c50c513c8c727a29c2",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.sreq",
+          "bytes": 336,
+          "sha256": "2faa51d747a0d09198022e71e4ecf36b999b8b7f9f8a4fff9d3a2533ba1e3638",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.sts",
+          "bytes": 138,
+          "sha256": "0108d35bd09f7f117e2101d06677ebccd51df2015fdd7284edc8ca49afab994b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-header-value-trim/get-header-value-trim.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.authz",
+          "bytes": 186,
+          "sha256": "f9d9f0d99aece8847b2a342dd41b6ffc166243ff84d9bf25f9739d5ababef04b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.creq",
+          "bytes": 209,
+          "sha256": "6a968768eefaa713e2a6b16b589a8ea192661f098f37349f4e2c0082757446f9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.req",
+          "bytes": 135,
+          "sha256": "b4b9262cd09f60ffbf47781a3b908007b4e198c62e3b9289a0639c8c0fa60f6b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.sreq",
+          "bytes": 337,
+          "sha256": "a89d09142f95d697df127330540e2189f29f1fc27caafe7fadefa9e5fc7b4a34",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.sts",
+          "bytes": 138,
+          "sha256": "5aa8c0aeac75b71539d7554e880d53c6ea412ddc36543183f1672e7ad8a14dbe",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-unreserved/get-unreserved.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.authz",
+          "bytes": 186,
+          "sha256": "5bfb281a7d2934291e697b7e43127bf14a60090634a7848ce88cff1475ef079e",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.creq",
+          "bytes": 152,
+          "sha256": "2a0a97d02205e45ce2e994789806b19270cfbbb0921b278ccf58f5249ac42102",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.req",
+          "bytes": 72,
+          "sha256": "8b619f2831e44ce8cd39fa55289a9cead7ae742e36919f6f977dab9dfd737c6b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.sreq",
+          "bytes": 274,
+          "sha256": "6d80d5128710cba2bc8c884338eb771b7b6b600e2bc1e0f9783961adeff4d4ca",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.sts",
+          "bytes": 138,
+          "sha256": "2530860ffa3c645b610c1b10bb7b511d59c274f6eee7eee2f92c70b2887cbd2d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-utf8/get-utf8.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.authz",
+          "bytes": 186,
+          "sha256": "ac00b2338dafc370cb18f2cd25477a28f41c4bbba4696ced42fdf078c6e139f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.creq",
+          "bytes": 143,
+          "sha256": "bb579772317eb040ac9ed261061d46c1f17a8133879d6129b6e1c25292927e63",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.req",
+          "bytes": 69,
+          "sha256": "509955df496ae2f4fdc25af95ccf5406099e4a2556523b7ed80f4fab21ac1869",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.sreq",
+          "bytes": 271,
+          "sha256": "951cd70fbe92cc79af9dc0664fdf1abed869e376fd787ea3ce389a92eed17ddb",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.sts",
+          "bytes": 138,
+          "sha256": "9fea9fcbf5a67a7393fb14fd3c1b6e80d4f55dbbddad4302bb6905c0decd5570",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla/get-vanilla.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.authz",
+          "bytes": 186,
+          "sha256": "ac00b2338dafc370cb18f2cd25477a28f41c4bbba4696ced42fdf078c6e139f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.creq",
+          "bytes": 143,
+          "sha256": "bb579772317eb040ac9ed261061d46c1f17a8133879d6129b6e1c25292927e63",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.req",
+          "bytes": 69,
+          "sha256": "509955df496ae2f4fdc25af95ccf5406099e4a2556523b7ed80f4fab21ac1869",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.sreq",
+          "bytes": 271,
+          "sha256": "951cd70fbe92cc79af9dc0664fdf1abed869e376fd787ea3ce389a92eed17ddb",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.sts",
+          "bytes": 138,
+          "sha256": "9fea9fcbf5a67a7393fb14fd3c1b6e80d4f55dbbddad4302bb6905c0decd5570",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query/get-vanilla-query.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.authz",
+          "bytes": 186,
+          "sha256": "fe6f49f1d92951d185f6b66cd76cf18de51dbab547163954c40b3efe795fd555",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.creq",
+          "bytes": 170,
+          "sha256": "816cd5b414d056048ba4f7c5386d6e0533120fb1fcfa93762cf0fc39e2cf19e0",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.req",
+          "bytes": 97,
+          "sha256": "64d4b86be62c3d78f6ba37ef1bc9ab89ba1e3b621ebc94dba3e7a178398c3703",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sreq",
+          "bytes": 299,
+          "sha256": "331f8cf81b0e01ea3a9ee4955dd6009fa25919c3a5f7558c52af5e5b37e59d06",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sts",
+          "bytes": 138,
+          "sha256": "003cbc3b1170b64f9cb91b6f5d8bc34c8880f68aa7aaccda1c8c89784685d75b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.authz",
+          "bytes": 186,
+          "sha256": "2a2126215831df4305140ec9b81e62fe490b21481bc5316099db2fb9c776ffe6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.creq",
+          "bytes": 276,
+          "sha256": "c30d4703d9f799439be92736156d47ccfb2d879ddf56f5befa6d1d6aab979177",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.req",
+          "bytes": 203,
+          "sha256": "02f9dd4d04d90b3d7aa78c2ca2d54f1cabaca48a6572010cbf9317001f99265d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sreq",
+          "bytes": 405,
+          "sha256": "0852b93388884d7b35692831eb5f07ad1a7e5aab170e358601a6c5b81b055b17",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sts",
+          "bytes": 138,
+          "sha256": "1e07a253b77c390af5524f8703b469939d1022a98e97de879f4a2ed14812f24c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.authz",
+          "bytes": 207,
+          "sha256": "05b3dcfecb3d97a31bc37b96c79fba9e5829fb41ee7e994519a569dccc4d3486",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.creq",
+          "bytes": 250,
+          "sha256": "067b36aa60031588cea4a4cde1f21215227a047690c72247f1d70b32fbbfad2b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.req",
+          "bytes": 69,
+          "sha256": "509955df496ae2f4fdc25af95ccf5406099e4a2556523b7ed80f4fab21ac1869",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.sreq",
+          "bytes": 378,
+          "sha256": "bf84692568fed4cbcf59facdbecf70c774700d0ca431e81f89d006fc2bcec911",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.sts",
+          "bytes": 138,
+          "sha256": "cf288f2c6f975eafad67cb4bc9ce1c1bb3c6ddda46ed83e006ec48f133b8c665",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/get-vanilla-with-session-token/get-vanilla-with-session-token.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.authz",
+          "bytes": 186,
+          "sha256": "ac00b2338dafc370cb18f2cd25477a28f41c4bbba4696ced42fdf078c6e139f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.creq",
+          "bytes": 143,
+          "sha256": "bb579772317eb040ac9ed261061d46c1f17a8133879d6129b6e1c25292927e63",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.req",
+          "bytes": 79,
+          "sha256": "64586168f0ec2cac5bb754028b02b98df711a8d3221b77b475c9f9dac2355260",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.sreq",
+          "bytes": 281,
+          "sha256": "a27184977cd7eefb01c3d83dad85ea01b2e0803c060d69ea0d6a29a20b359368",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.sts",
+          "bytes": 138,
+          "sha256": "9fea9fcbf5a67a7393fb14fd3c1b6e80d4f55dbbddad4302bb6905c0decd5570",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative/get-relative.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.authz",
+          "bytes": 186,
+          "sha256": "ac00b2338dafc370cb18f2cd25477a28f41c4bbba4696ced42fdf078c6e139f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.creq",
+          "bytes": 143,
+          "sha256": "bb579772317eb040ac9ed261061d46c1f17a8133879d6129b6e1c25292927e63",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.req",
+          "bytes": 92,
+          "sha256": "c16d80cb9db6663a0e92dd57fd2d88d56a98861882f42c49084aab81aeb48e51",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.sreq",
+          "bytes": 294,
+          "sha256": "008cdc1069e80fa9161478bbec3fb94ac15b4720d9c84d92e48d72ee8d1b2f06",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.sts",
+          "bytes": 138,
+          "sha256": "9fea9fcbf5a67a7393fb14fd3c1b6e80d4f55dbbddad4302bb6905c0decd5570",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-relative-relative/get-relative-relative.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.authz",
+          "bytes": 186,
+          "sha256": "ac00b2338dafc370cb18f2cd25477a28f41c4bbba4696ced42fdf078c6e139f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.creq",
+          "bytes": 143,
+          "sha256": "bb579772317eb040ac9ed261061d46c1f17a8133879d6129b6e1c25292927e63",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.req",
+          "bytes": 70,
+          "sha256": "f2f45a7282382ffae5f386845dd670c6532fe9c2d3141f599e592dae96b90339",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.sreq",
+          "bytes": 272,
+          "sha256": "1303a6c7caa0ca22685a98b6627ba8289e2840d378a062bd115aa197862ab729",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.sts",
+          "bytes": 138,
+          "sha256": "9fea9fcbf5a67a7393fb14fd3c1b6e80d4f55dbbddad4302bb6905c0decd5570",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash/get-slash.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.authz",
+          "bytes": 186,
+          "sha256": "ac00b2338dafc370cb18f2cd25477a28f41c4bbba4696ced42fdf078c6e139f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.creq",
+          "bytes": 143,
+          "sha256": "bb579772317eb040ac9ed261061d46c1f17a8133879d6129b6e1c25292927e63",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.req",
+          "bytes": 71,
+          "sha256": "8447d82296c4b889eeb625ef21cc0af7e8ae6a55e387b72a3a81485ba90abee9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sreq",
+          "bytes": 273,
+          "sha256": "41690e11f2d76fd79bd834eb02170919a9462cec9271956afc0ca95ff5c9beae",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sts",
+          "bytes": 138,
+          "sha256": "9fea9fcbf5a67a7393fb14fd3c1b6e80d4f55dbbddad4302bb6905c0decd5570",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.authz",
+          "bytes": 186,
+          "sha256": "781605fa462904a35843fac45416b491c21d643111f6d5a9ff889158fd5e818c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.creq",
+          "bytes": 150,
+          "sha256": "214d50c111a8edc4819da6a636336472c916b5240f51e9a51b5c3305180cf702",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.req",
+          "bytes": 78,
+          "sha256": "02de9ee8f36c35a60218e373a6015b973a53c67285b61886642024b19ef564d8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sreq",
+          "bytes": 280,
+          "sha256": "3c8d8e11ffb61800ebca0eb32c1c63698aed6fb631fdc49def7032696987f824",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sts",
+          "bytes": 138,
+          "sha256": "2835f7fac92431324cd0c5fa589554c49a3766ad30ab5bcecb865ebace06d0b2",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.authz",
+          "bytes": 186,
+          "sha256": "1eb0dbdb3e7678a10232d89f26b0a9e84d6b93b1d544648e088ad7f76cc25064",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.creq",
+          "bytes": 151,
+          "sha256": "cb96b4ac96d501f7c5c15bc6d67b3035061cfced4af6585ad927f7e6c985c015",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.req",
+          "bytes": 79,
+          "sha256": "b73340f93c893597313ba490dcb342eb0a6df925e8db23a4f38ce52dd954cba5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.sreq",
+          "bytes": 281,
+          "sha256": "7b7ffd2d928abae64623ed579d763c2fcf17a5f4f932a51cefa16c6f793e8e5d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.sts",
+          "bytes": 138,
+          "sha256": "27bed0e57aed8d64d0448e73407daf8909ee0e56ca95b2f8973a1c94fff1b9f2",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-slashes/get-slashes.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.authz",
+          "bytes": 186,
+          "sha256": "df4c57e8624a5b0f74e82efe48f55d81fafc07a64980ea4c1c49bd43e670ef7f",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.creq",
+          "bytes": 159,
+          "sha256": "63ee75631ed7234ae61b5f736dfc7754cdccfedbff4b5128a915706ee9390d86",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.req",
+          "bytes": 83,
+          "sha256": "9acee8d7748a54cfd727056270a7b59d607cfa5226e60e7f5d8815ab535e6c61",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.sreq",
+          "bytes": 285,
+          "sha256": "f8d24128b5c7d7ccf7df20627ac26d20f3988ef748a64ad351c3a9bc8b946145",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.sts",
+          "bytes": 138,
+          "sha256": "2e8d72a7e2c454df4e75a46801ccd0a35975a7b46424bda1b835755715852e69",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-space/get-space.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.authz",
+          "bytes": 186,
+          "sha256": "d73e1ba700e51b87f44de324ab3775f6aabf82cd4ced5c32310b171700e52ef5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.creq",
+          "bytes": 160,
+          "sha256": "4053e45b5cef7cec5e17f736b1c12b3faf0388fd4c0bd24326386f132039ce5c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.req",
+          "bytes": 85,
+          "sha256": "bf21b16d41af5d9549b1e93c7d34bdd428de8e0adde4b094502f3460479a8d0c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.sreq",
+          "bytes": 286,
+          "sha256": "04474591504e3f00b753326335faf1c430952a8075a96cc5d8397afab602f496",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.sts",
+          "bytes": 138,
+          "sha256": "b29511f03359b13f31acf574112625791ec83222ddeae79df78f183802170cc1",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/get-special-character/get-special-character.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/normalize-path/normalize-path.txt",
+          "bytes": 519,
+          "sha256": "36af39f8fa2d461f33c3720faa7f645d41703560dfd692dd7f571f67603ae725",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/normalize-path/normalize-path.txt"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.authz",
+          "bytes": 186,
+          "sha256": "7a43256234f30d900cee9641b2064d731d5e2be4c310a894637713dd7c6df535",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.creq",
+          "bytes": 144,
+          "sha256": "553f88c9e4d10fc9e109e2aeb65f030801b70c2f6468faca261d401ae622fc87",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.req",
+          "bytes": 70,
+          "sha256": "f6602fd96bc24fe964d47550456e8e117ccade2d639e16b14507b19e2c48aca6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sreq",
+          "bytes": 630,
+          "sha256": "1d9fcc926741dfc41c2d7e6baaabe2b3e479111e96d55c24dbfbd86dfd6ac9d8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sts",
+          "bytes": 138,
+          "sha256": "73fd75fb7e71e1e9be6b5982cfe16f79f2a2ab9c33518a12183b481f28d25206",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.authz",
+          "bytes": 207,
+          "sha256": "33e082ece5f264def401d930f8cebc30360a769eb9f1db7b1d0bd1238c31e202",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.creq",
+          "bytes": 523,
+          "sha256": "c237e1b440d4c63c32ca95b5b99481081cb7b13c7e40434868e71567c1a882f6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.req",
+          "bytes": 428,
+          "sha256": "a7b72caac6f1184e4e54697935d89db921ebe539651f80b8e27648e20958b995",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sreq",
+          "bytes": 651,
+          "sha256": "5d08c51940a5f26207818eca9099697cd6394abc40c80b4abd66647c785f7227",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sts",
+          "bytes": 138,
+          "sha256": "63bc10877d08fb9f46e95a03f2082a0539ebc2085ccb07fa9def20b0fe2e2b29",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-sts-token/readme.txt",
+          "bytes": 1438,
+          "sha256": "460327e54381f141393c7974f901625a400d0b3d069f74ee4c274816161b82e6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-sts-token/readme.txt"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.authz",
+          "bytes": 186,
+          "sha256": "7a43256234f30d900cee9641b2064d731d5e2be4c310a894637713dd7c6df535",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.creq",
+          "bytes": 144,
+          "sha256": "553f88c9e4d10fc9e109e2aeb65f030801b70c2f6468faca261d401ae622fc87",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.req",
+          "bytes": 70,
+          "sha256": "f6602fd96bc24fe964d47550456e8e117ccade2d639e16b14507b19e2c48aca6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.sreq",
+          "bytes": 272,
+          "sha256": "96d01c4302ab2dceb9e2dafedacd05b062b9c0bc02761968eac376b95156a401",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.sts",
+          "bytes": 138,
+          "sha256": "73fd75fb7e71e1e9be6b5982cfe16f79f2a2ab9c33518a12183b481f28d25206",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla/post-vanilla.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.authz",
+          "bytes": 186,
+          "sha256": "eba2330aede9b06a9894156fb4b917ae07b2cf638ecd16a80a5e6569eecf2eed",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.creq",
+          "bytes": 157,
+          "sha256": "9d659678c1756bb3113e2ce898845a0a79dbbc57b740555917687f1b3340fbbd",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.req",
+          "bytes": 84,
+          "sha256": "a2ee016974ea1928a038472cc70588b54014dbb983590b96611ba7e47b8e6af0",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.sreq",
+          "bytes": 286,
+          "sha256": "7851eb4b462edd89f58215f18cc82bc5508169c80c8615884102ed09ead7d38c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.sts",
+          "bytes": 138,
+          "sha256": "13275c2dab349dbf6475d0edf1566e296001bb62ba7a9d9d9128d7ca1b945190",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-vanilla-query/post-vanilla-query.sts"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.authz",
+          "bytes": 199,
+          "sha256": "29b6ae9c5c23974d525e67e4687d560328a25d762cc95637ed41366f5944016a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.authz"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.creq",
+          "bytes": 204,
+          "sha256": "42a5e5bb34198acb3e84da4f085bb7927f2bc277ca766e6d19c73c2154021281",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.creq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.req",
+          "bytes": 132,
+          "sha256": "3168a2c3b23e8d012052896debad562dc46676e8881fb6b5d4b36fd9d97e8fba",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.req"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sreq",
+          "bytes": 347,
+          "sha256": "62703acd993586b7b87e8f5b1c8d8a8f328b8966c1b6c4c31882b141b02052a3",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sreq"
+        },
+        {
+          "path": "test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sts",
+          "bytes": 138,
+          "sha256": "fedb5ec5dd53c464911b1336547143cbedcd85977740bd63b2a622489f5fc246",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/aws-sigv4-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sts"
+        },
+        {
+          "path": "test/fixtures/java-proxy-agent/ProxyProbe.java",
+          "bytes": 2587,
+          "sha256": "a3184e2111918e1d8629f6a58ec9f2a1719873eb4c8c24f155cbbebcef890b9f",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/java-proxy-agent/ProxyProbe.java"
+        },
+        {
+          "path": "test/fixtures/tls-terminate/README.md",
+          "bytes": 821,
+          "sha256": "447deead9bfe888f17593d8de1a7187d104897353e4874dc09504c9007d4d31b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/tls-terminate/README.md"
+        },
+        {
+          "path": "test/fixtures/tls-terminate/ca.crt",
+          "bytes": 1285,
+          "sha256": "485173e15025cd9e88629b4d13f826baf3fc2c5cde58cd3d2f482aa15d27616f",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/tls-terminate/ca.crt"
+        },
+        {
+          "path": "test/fixtures/tls-terminate/ca.key",
+          "bytes": 1704,
+          "sha256": "afbec09bfb3a691499926065c06eec421f88516fb599c86d8333e8dad591e5ee",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/fixtures/tls-terminate/ca.key"
+        },
+        {
+          "path": "test/helpers/bwrap-argv.ts",
+          "bytes": 4166,
+          "sha256": "85039809545c7a6b97ebeb8734fdb9aa62bb6ef5f5ecfed4d04b9fe25aafa180",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/bwrap-argv.ts"
+        },
+        {
+          "path": "test/helpers/bwrap-namespace.ts",
+          "bytes": 1657,
+          "sha256": "1c81813fa7f3b32679523db327e2a0bc2a1ade9b4adeb01193753c979f479d46",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/bwrap-namespace.ts"
+        },
+        {
+          "path": "test/helpers/captured-warnings.ts",
+          "bytes": 1014,
+          "sha256": "5fb45fb7f267857bac162351cd97728383558a28f8fd92ed9cd9d7de3ce33ffe",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/captured-warnings.ts"
+        },
+        {
+          "path": "test/helpers/captured.ts",
+          "bytes": 712,
+          "sha256": "e1a8b205fedf34b0c27f07f47f29cd9e1799cdb46063f500fdec0110ae8e54c4",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/captured.ts"
+        },
+        {
+          "path": "test/helpers/platform.ts",
+          "bytes": 294,
+          "sha256": "48b0827f9fec874fe68226d23c11f7694fa904a35e473ee9b42ccf25e1d1d681",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/platform.ts"
+        },
+        {
+          "path": "test/helpers/socks-noauth-pipe.ts",
+          "bytes": 2554,
+          "sha256": "b3cd95bf91f1b46cea7dc172d432e2079a5c7ba8b8e39070c7aff3a963bb82f9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/socks-noauth-pipe.ts"
+        },
+        {
+          "path": "test/helpers/spawn.ts",
+          "bytes": 2231,
+          "sha256": "d2a89e3ee0e3900a1438288865bafe657928ae307a414be82d2a3a2bad671182",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/helpers/spawn.ts"
+        },
+        {
+          "path": "test/public-exports.test.ts",
+          "bytes": 2458,
+          "sha256": "1606cfefce8439d6b0b1b411ca21c561a852281302f2dacd187eb674dbe33678",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/public-exports.test.ts"
+        },
+        {
+          "path": "test/sandbox/allow-read.test.ts",
+          "bytes": 38895,
+          "sha256": "fb017fc8720e7ff5a3ba2ee576ffc3555d9d4d156342addd7e7ffe909a207d19",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/allow-read.test.ts"
+        },
+        {
+          "path": "test/sandbox/aws-sigv4.test.ts",
+          "bytes": 13270,
+          "sha256": "f85a04af3171e347d94b11a10a1dd51d6c37d86d9a48fa2bb06b9cf626de9f85",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/aws-sigv4.test.ts"
+        },
+        {
+          "path": "test/sandbox/body-substitution.test.ts",
+          "bytes": 7219,
+          "sha256": "98e87e430d155a469102fcbfe61e84f01112d4a22a3f4fabd0786d2647316aaa",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/body-substitution.test.ts"
+        },
+        {
+          "path": "test/sandbox/canonical-host-routing.test.ts",
+          "bytes": 23890,
+          "sha256": "6f0ef1784c64aa4da3b5e22a975c5d564a12ba6346ee3bb62c6328395526de34",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/canonical-host-routing.test.ts"
+        },
+        {
+          "path": "test/sandbox/check-dependencies.test.ts",
+          "bytes": 2656,
+          "sha256": "180a1091ac9095fa8c5aeb3adbd536744d4aae107ca4e70015fdd4e8582aa1f8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/check-dependencies.test.ts"
+        },
+        {
+          "path": "test/sandbox/client-abort.test.ts",
+          "bytes": 25804,
+          "sha256": "b99161c005fbe03417e9101ebe7dbe4cf3048df16d6954fbee40e9f6b9c0042e",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/client-abort.test.ts"
+        },
+        {
+          "path": "test/sandbox/command-text-registry.test.ts",
+          "bytes": 8839,
+          "sha256": "029e415ef9ecb00f6c2e826d7c1b437e537aeac14429d97e820bfd485291d339",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/command-text-registry.test.ts"
+        },
+        {
+          "path": "test/sandbox/connect-non-tls.test.ts",
+          "bytes": 5713,
+          "sha256": "e3897eab2514f17b6537e94fb4f6eb00b9e7a9b906127b91b3dfd084030ccc5e",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/connect-non-tls.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-aws-pairs.test.ts",
+          "bytes": 21927,
+          "sha256": "2bf2894f69ecf38f1ff41b3ceb9801f6c9b995bd46111eb73838ed4695b63e91",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-aws-pairs.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-decode.test.ts",
+          "bytes": 10382,
+          "sha256": "e5f14d019f399c2a66a1424604e90b627c4656a5fa343e415983125995a54699",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-decode.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-deny.test.ts",
+          "bytes": 18275,
+          "sha256": "3475c61995b105ec4a30cdb96536c5b8a6030ed7e9dc8faf956d1fb6cffd3129",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-deny.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-mask-body.test.ts",
+          "bytes": 17001,
+          "sha256": "8ff66234a7f5564270b7cc9973926ce7e9accea3aaed74ff2e5c5bf37f3fe79b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-mask-body.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-mask-env.test.ts",
+          "bytes": 22153,
+          "sha256": "ba3a5c992c6a2a4b8cacb18f4f5c961d2b619a9dc9551aa589fb42d295985c6a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-mask-env.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-mask-files.test.ts",
+          "bytes": 76026,
+          "sha256": "d2807f2e64b363133423c5e6887f506f30aae45f4381b776e9582178b03be153",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-mask-files.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-mask-sigv4.test.ts",
+          "bytes": 33235,
+          "sha256": "f9802e113e8a85a248c96d4058f233a4193cb046edc2fc29d3bc8e9897f7c6dc",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-mask-sigv4.test.ts"
+        },
+        {
+          "path": "test/sandbox/credential-mask.test.ts",
+          "bytes": 53952,
+          "sha256": "5adc2b0c06970e93c6d310ef48f00f718d1a951689afaf06941257c84c6b7852",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/credential-mask.test.ts"
+        },
+        {
+          "path": "test/sandbox/default-write-paths.test.ts",
+          "bytes": 8955,
+          "sha256": "56e27fa49103c31deca909acc25da1106f5ff7fa1a8bcf36df6dcc4f405a97bf",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/default-write-paths.test.ts"
+        },
+        {
+          "path": "test/sandbox/deny-path-made-meanwhile.test.ts",
+          "bytes": 2601,
+          "sha256": "208bde167c3daa40c211f195d05a1625e135f25b47ef87f3bbf50ceca5bd7c40",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/deny-path-made-meanwhile.test.ts"
+        },
+        {
+          "path": "test/sandbox/domain-pattern.test.ts",
+          "bytes": 7488,
+          "sha256": "6ba628ee490010c7a79c1fcea6d2ee8503dd80082fb627dfb0e494fd471fe31c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/domain-pattern.test.ts"
+        },
+        {
+          "path": "test/sandbox/execute-only-binary.test.ts",
+          "bytes": 5045,
+          "sha256": "38b07270f382ffbddc5463eccc57d2b3986a52c7a43f851785811878241df087",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/execute-only-binary.test.ts"
+        },
+        {
+          "path": "test/sandbox/filesystem-disabled.test.ts",
+          "bytes": 6209,
+          "sha256": "598d3599faf78b771b55bfcc551f18b2712a6783a25b62c5167d6ca30c91a0f0",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/filesystem-disabled.test.ts"
+        },
+        {
+          "path": "test/sandbox/glob-expand.test.ts",
+          "bytes": 95717,
+          "sha256": "6dd89c5d5be1b5dac92815247b5b215eea14d0c30f8d511524e4ea2f7163ddfe",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/glob-expand.test.ts"
+        },
+        {
+          "path": "test/sandbox/http-proxy-verdict-liveness.test.ts",
+          "bytes": 15035,
+          "sha256": "0f67070cc9ae34b5ad7218451950118504eed13ec5d8561f25237f994e17c8d9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/http-proxy-verdict-liveness.test.ts"
+        },
+        {
+          "path": "test/sandbox/integration.test.ts",
+          "bytes": 50294,
+          "sha256": "455f66b0d96f2a72a0e9680bb70f5b618cee024ed0db6c9e84cbb40d48c47a8d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/integration.test.ts"
+        },
+        {
+          "path": "test/sandbox/invalid-upstream-response.test.ts",
+          "bytes": 10059,
+          "sha256": "a4af5ba59c24b66bb96005205e029ad31df23aed574524b0bb32dd87fc842876",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/invalid-upstream-response.test.ts"
+        },
+        {
+          "path": "test/sandbox/java-proxy-agent.test.ts",
+          "bytes": 13680,
+          "sha256": "4db3dae69409ef420a3b154c083097a15921c8fad5441c9b4f30e835d1005c6d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/java-proxy-agent.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-ancestor-pin-errno.test.ts",
+          "bytes": 7027,
+          "sha256": "c78c837a4fe02cc1fccd82d5c2a3a81a6df8fd6ca50fb8b9bab1ca51026b9911",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-ancestor-pin-errno.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-ancestor-pin.test.ts",
+          "bytes": 71730,
+          "sha256": "26056f46cb5b3c7fd499bbf3aa42c44d3a349996746ef6d2cc8121c3cafed0f5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-ancestor-pin.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-bridge-spawn-error.test.ts",
+          "bytes": 1622,
+          "sha256": "dc50e4622ec07c582519d6c57260b69e3e8847668174d219f74af780f8671a43",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-bridge-spawn-error.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-bwrap-args-file.test.ts",
+          "bytes": 20573,
+          "sha256": "09f7c7d815ac49a560c1328cdb772e7c376634e2dbc058dbf9be05fd887ffb0d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-bwrap-args-file.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-dependency-error.test.ts",
+          "bytes": 14132,
+          "sha256": "e766f3aeef636139cd49b11e45dc729846c91572a675b05d2c8f2fa123bb0d92",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-dependency-error.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-mount-plan-record.test.ts",
+          "bytes": 28465,
+          "sha256": "45247cc3c23e8f6028f9bd46fb4bba77cef0a4af26994dae65c8c0964d74e83d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-mount-plan-record.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-one-mount-per-destination.test.ts",
+          "bytes": 14427,
+          "sha256": "5c05d2bb725833c865fa99eabb5d7dde0a8b1ee4e714ab452295fcbee2a85fe9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-one-mount-per-destination.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-relays-listen.test.ts",
+          "bytes": 6095,
+          "sha256": "cbaf34b014f342da3238ffc37d312ccbf047c8ac5a6c64c364905f7ac666c8ef",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-relays-listen.test.ts"
+        },
+        {
+          "path": "test/sandbox/linux-violation-monitor.test.ts",
+          "bytes": 16447,
+          "sha256": "02b5c7faaf93561a03f8f34306560a60a69f7165094c553062152b07d289f3b6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/linux-violation-monitor.test.ts"
+        },
+        {
+          "path": "test/sandbox/literal-path-entries.test.ts",
+          "bytes": 88776,
+          "sha256": "07d6571c8f0acc94ee37507ceb5ba4770182878e89f3da7b3fa0a4249f8a6f09",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/literal-path-entries.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-allow-local-binding.test.ts",
+          "bytes": 4509,
+          "sha256": "01dfa747b0bb398c04760883ecd2fab52ba9d736d97ccbac88d58dbe2eba290a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-allow-local-binding.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-apple-events.test.ts",
+          "bytes": 4338,
+          "sha256": "bc6c24070c3302a09de5317ff5dee40437bf9620cff054c314b8ec5dbc28031a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-apple-events.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-deny-grouping.test.ts",
+          "bytes": 8155,
+          "sha256": "360b91990495dcb6b5d95611f219d07cc8f1b0ee890803a142d9ec6f88061e26",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-deny-grouping.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-glob-deny-reemit.test.ts",
+          "bytes": 18460,
+          "sha256": "5b55db65288a81d091c974290b6762fc682b7be450e2c0808f7cb05237634cc9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-glob-deny-reemit.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-literal-deny-brackets.test.ts",
+          "bytes": 16394,
+          "sha256": "966fd0ddef13996acba5e1553abc39bfc8669bb0e6ca4476dac6f3bb96a1ecdd",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-literal-deny-brackets.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-profile-size.test.ts",
+          "bytes": 5822,
+          "sha256": "b43b264e1d5dca1454ad452c6685cbba448818a50f898625e96bd5194d0068f0",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-profile-size.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-pty.test.ts",
+          "bytes": 2305,
+          "sha256": "54d4bce99e91958809716edd623c3201fb877ca4fdf706d7ddde9192efb44e8a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-pty.test.ts"
+        },
+        {
+          "path": "test/sandbox/macos-seatbelt.test.ts",
+          "bytes": 34076,
+          "sha256": "4d2cc0c30c8d6a8e8b3683b9cf35d307e66b56f8188b4240194cd6b24202c8f6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/macos-seatbelt.test.ts"
+        },
+        {
+          "path": "test/sandbox/mandatory-deny-paths.test.ts",
+          "bytes": 50722,
+          "sha256": "5c3de15a9fa62cd8f8160d12f39d6b005ee9d0c07309d0a7c09715675a5c9418",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/mandatory-deny-paths.test.ts"
+        },
+        {
+          "path": "test/sandbox/mitm-ca.test.ts",
+          "bytes": 17433,
+          "sha256": "fbe91b3681bba8c8a2cbb0ab40dd9d76bdc522991b0eff8a04cd6f60b8673a74",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/mitm-ca.test.ts"
+        },
+        {
+          "path": "test/sandbox/mitm-leaf.test.ts",
+          "bytes": 9854,
+          "sha256": "067e04c3449d8a568aff2b793401f15e6961b159d44d99b65371bf1d163c91ca",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/mitm-leaf.test.ts"
+        },
+        {
+          "path": "test/sandbox/mux-proxy-e2e.test.ts",
+          "bytes": 4626,
+          "sha256": "7e14f792220d9b6bd01d924b813e4fe9a60beb869c05e8f0e859b37bde53ec87",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/mux-proxy-e2e.test.ts"
+        },
+        {
+          "path": "test/sandbox/mux-proxy.test.ts",
+          "bytes": 4553,
+          "sha256": "3c6a66d00ea8db5e875d9f01fb44614fdd76ff8a53c664c231011542eceae9ea",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/mux-proxy.test.ts"
+        },
+        {
+          "path": "test/sandbox/parent-proxy-tunnel.test.ts",
+          "bytes": 6190,
+          "sha256": "aec4e231dccceb5623b398842f334a5acaa8f3293d0235b832706c8f80312fb8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/parent-proxy-tunnel.test.ts"
+        },
+        {
+          "path": "test/sandbox/parent-proxy.test.ts",
+          "bytes": 14578,
+          "sha256": "3c0f05d3884f23aeb2e23e70dba06ca8b5393afd5f1ff95c1fd8f55395cd9b78",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/parent-proxy.test.ts"
+        },
+        {
+          "path": "test/sandbox/path-canonicalization.test.ts",
+          "bytes": 8965,
+          "sha256": "6e68885a6c08bc2152c8710498e6ef091756c277b0a7287615501f0334f31c2c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/path-canonicalization.test.ts"
+        },
+        {
+          "path": "test/sandbox/pid-namespace-isolation.test.ts",
+          "bytes": 12740,
+          "sha256": "9740aedf3e76291f1e007b1453ecb492e77758feda749a65d5b8cc6a15ec6aae",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/pid-namespace-isolation.test.ts"
+        },
+        {
+          "path": "test/sandbox/proxy-deny-violations.test.ts",
+          "bytes": 8681,
+          "sha256": "4146e9f873c096928994912b8d5d8a4e97e6ebbe76a265f4c1b32961fbc41ca7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/proxy-deny-violations.test.ts"
+        },
+        {
+          "path": "test/sandbox/proxy-env-vars.test.ts",
+          "bytes": 6467,
+          "sha256": "c80b27fcee1abad12219aecdaedf5c475298064b534aeecadb21b058437b6b33",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/proxy-env-vars.test.ts"
+        },
+        {
+          "path": "test/sandbox/read-deny-glob.test.ts",
+          "bytes": 87594,
+          "sha256": "65fa09d24c02953196ba1c4ac056527e70e74ab4698f441b818b8575379fbbb6",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/read-deny-glob.test.ts"
+        },
+        {
+          "path": "test/sandbox/readonly-deny-dir-binds.test.ts",
+          "bytes": 46166,
+          "sha256": "cd735c089a304da417f5224cdccd360140b50999b1b4e368531d0114e03b7f14",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/readonly-deny-dir-binds.test.ts"
+        },
+        {
+          "path": "test/sandbox/readonly-deny-dir-stubs.test.ts",
+          "bytes": 43355,
+          "sha256": "2c830994296fd46230194058a8aa2d86a64eeadefb1bab584668bc7cf7e69a11",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/readonly-deny-dir-stubs.test.ts"
+        },
+        {
+          "path": "test/sandbox/request-filter.test.ts",
+          "bytes": 13095,
+          "sha256": "90db5e5ee628b4a169e35be019172c7b84c0de107ae7d420e0e080032a7a5b70",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/request-filter.test.ts"
+        },
+        {
+          "path": "test/sandbox/resolved-address-guard.test.ts",
+          "bytes": 41556,
+          "sha256": "6d2639e4e660b5fa58095cd8dd401dc94759b8b6c080054f08958fa525b94e83",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/resolved-address-guard.test.ts"
+        },
+        {
+          "path": "test/sandbox/sandbox-env-tmpdir.test.ts",
+          "bytes": 1714,
+          "sha256": "d0e98782a765b56cdbabbfd82084a6d1f1c08dc472c5d0a6e9f06133454fedc7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/sandbox-env-tmpdir.test.ts"
+        },
+        {
+          "path": "test/sandbox/seccomp-filter.test.ts",
+          "bytes": 4894,
+          "sha256": "259556d4c885cbc818a78326dcba7c8585c749a24ee23a861ff8a1b05419c0fb",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/seccomp-filter.test.ts"
+        },
+        {
+          "path": "test/sandbox/socks-unauthenticated-probe.test.ts",
+          "bytes": 9880,
+          "sha256": "684e6c22d964d92e3ec81a117c94d0088e38b394db3b231fba550df4e7dc67e9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/socks-unauthenticated-probe.test.ts"
+        },
+        {
+          "path": "test/sandbox/stale-mount-point.test.ts",
+          "bytes": 21191,
+          "sha256": "48bc2627c6e854c919e2a6ab241ff44be1ffe861d92e9413beeabbc27be06275",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/stale-mount-point.test.ts"
+        },
+        {
+          "path": "test/sandbox/symlink-boundary.test.ts",
+          "bytes": 15506,
+          "sha256": "c08bf5444a2411b682217cee302d5dc4ddddfd997f8c6887db3e8923aed6f4fe",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/symlink-boundary.test.ts"
+        },
+        {
+          "path": "test/sandbox/symlink-write-path.test.ts",
+          "bytes": 9527,
+          "sha256": "1eb5211247cd26e5bf5e3fba2747a7efc67708acd5562c69d0a27143e6505ffa",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/symlink-write-path.test.ts"
+        },
+        {
+          "path": "test/sandbox/symlinked-deny-paths.test.ts",
+          "bytes": 12658,
+          "sha256": "86f4ee28656630964434f5987b252e6b0cc5daf7d69a9cb049ed11bc8588e267",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/symlinked-deny-paths.test.ts"
+        },
+        {
+          "path": "test/sandbox/tls-terminate-keepalive.test.ts",
+          "bytes": 6191,
+          "sha256": "a77d816d15fa7a79675d4c5a7bf0d2b56b4be01477209c8fc68beab4acd46e8b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/tls-terminate-keepalive.test.ts"
+        },
+        {
+          "path": "test/sandbox/tls-terminate-proxy.test.ts",
+          "bytes": 26356,
+          "sha256": "a65ff5d291d622388abbfa394f19d64be43e77e68f5b34926350ca08475f5d74",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/tls-terminate-proxy.test.ts"
+        },
+        {
+          "path": "test/sandbox/tls-terminate-trust-env.test.ts",
+          "bytes": 1800,
+          "sha256": "09353f718b23cf9b2f065ad9d820f0fdfce6b7c54bc7f3ce74679d2dd0857172",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/tls-terminate-trust-env.test.ts"
+        },
+        {
+          "path": "test/sandbox/trailing-slash-deny-spellings.test.ts",
+          "bytes": 8190,
+          "sha256": "ab3a1c646646ce381802bf47cba13fa081e63b07a19acbb74dc78aceb7fcc8f3",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/trailing-slash-deny-spellings.test.ts"
+        },
+        {
+          "path": "test/sandbox/update-config.test.ts",
+          "bytes": 61899,
+          "sha256": "8a5d21902f0e0aeb0ee68fe2f416a87d3bb50eebdc1717d5b4c5e115e6934dcc",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/update-config.test.ts"
+        },
+        {
+          "path": "test/sandbox/winsrt-paths.property.test.ts",
+          "bytes": 3051,
+          "sha256": "eb216369c19e15844a8c81a739bb32cc631f7d208d5c1f5e43807ca06c0571fa",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/winsrt-paths.property.test.ts"
+        },
+        {
+          "path": "test/sandbox/winsrt.test.ts",
+          "bytes": 104517,
+          "sha256": "6bce2925a769daba7eebd81cc629cad96a56a26f831f7bde7564603c4849374b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/winsrt.test.ts"
+        },
+        {
+          "path": "test/sandbox/wrap-with-sandbox.test.ts",
+          "bytes": 34920,
+          "sha256": "f5851dd22e7e74ffb608631a3dad35023f284db901738d9031c849ecfb91ff06",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/wrap-with-sandbox.test.ts"
+        },
+        {
+          "path": "test/sandbox/write-through-links.test.ts",
+          "bytes": 8180,
+          "sha256": "799cd9b71bf4076864d4ea92343b324731930abb7f741f220ccde704844a5d4a",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/sandbox/write-through-links.test.ts"
+        },
+        {
+          "path": "test/utils/platform.test.ts",
+          "bytes": 927,
+          "sha256": "3627d967a76401373e17f580ded400641d6d24dab60152cb45c9b4a0e68770c7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/utils/platform.test.ts"
+        },
+        {
+          "path": "test/utils/ripgrep.test.ts",
+          "bytes": 3520,
+          "sha256": "54a121556760993147895c6358c118c72b9e814dc1a1e0e0705e5aaa0641f4a9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/utils/ripgrep.test.ts"
+        },
+        {
+          "path": "test/utils/shell-quote.test.ts",
+          "bytes": 5505,
+          "sha256": "8e5dd027bdc1bd8c809c977ffe92a5f8b41e05caff91060a28c78c1005670d06",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/utils/shell-quote.test.ts"
+        },
+        {
+          "path": "test/utils/which-node-test.mjs",
+          "bytes": 1885,
+          "sha256": "8d2192f5066cb21365a81c6eda502600c301bafb660e9543522f85e3f1a682af",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/utils/which-node-test.mjs"
+        },
+        {
+          "path": "test/utils/which.test.ts",
+          "bytes": 1614,
+          "sha256": "586fd88b6950b3cc308bfcb4d952365f6022a30c367eb33a79d9b1bf076ec1f4",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/test/utils/which.test.ts"
+        },
+        {
+          "path": "tsconfig.json",
+          "bytes": 768,
+          "sha256": "73bf018d8c063744059ba57099a929e86a26d64ddc83ff783c61f2e3c98f252e",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/tsconfig.json"
+        },
+        {
+          "path": "tsconfig.test.json",
+          "bytes": 148,
+          "sha256": "99b3b0c388265cdb0636bbb8b0b0eb5c78b9959e5192d524fd3ead40d0e090d7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/tsconfig.test.json"
+        },
+        {
+          "path": "vendor/build-common.ts",
+          "bytes": 1968,
+          "sha256": "35e0e061440111043c5753c522cf9f58d9bbd4e22c983740afdbcf622003e7d9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/build-common.ts"
+        },
+        {
+          "path": "vendor/java-proxy-agent/build.ts",
+          "bytes": 2882,
+          "sha256": "634d19288aa5efd690c27965d1d4de334ee2f0994ae45825d82f483b81400c44",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/java-proxy-agent/build.ts"
+        },
+        {
+          "path": "vendor/java-proxy-agent-src/com/anthropic/srt/ProxyAgent.java",
+          "bytes": 16789,
+          "sha256": "246b81a1ba6e0efc711e1007849da7383fe08fb503e7052c93fe7aa429e601c9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/java-proxy-agent-src/com/anthropic/srt/ProxyAgent.java"
+        },
+        {
+          "path": "vendor/seccomp/build.ts",
+          "bytes": 1640,
+          "sha256": "d0589bdfb3c9ad8e46380e237ae93c71f7f3caa82c8c27589ad18bd65aa141de",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/seccomp/build.ts"
+        },
+        {
+          "path": "vendor/seccomp-src/apply-seccomp.c",
+          "bytes": 37104,
+          "sha256": "74e2ddfdef60edaf849ce13ab03def2d3ef42bf784ed79b86bab2823098f15dc",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/seccomp-src/apply-seccomp.c"
+        },
+        {
+          "path": "vendor/seccomp-src/seccomp-unix-block.c",
+          "bytes": 5418,
+          "sha256": "6802faf04898a488d0ba1d512ef23fc65a43545c017a8d516a567063a2b315dc",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/seccomp-src/seccomp-unix-block.c"
+        },
+        {
+          "path": "vendor/srt-win/build.ts",
+          "bytes": 638,
+          "sha256": "5e27cf1cd3fd6b0952870ba8eb9410a796c28f3b6f22546fb092e2cf31713a78",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win/build.ts"
+        },
+        {
+          "path": "vendor/srt-win-src/.gitignore",
+          "bytes": 8,
+          "sha256": "b53ee26e6ff1da219b0563333a76d2c9ec19eec713d6ee54e11a1edacb0e9f3d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/.gitignore"
+        },
+        {
+          "path": "vendor/srt-win-src/Cargo.lock",
+          "bytes": 13464,
+          "sha256": "c41cf41050c2b1e2986ed7ca690a703415cabadfed9219788a451df0da0967ec",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/Cargo.lock"
+        },
+        {
+          "path": "vendor/srt-win-src/Cargo.toml",
+          "bytes": 1857,
+          "sha256": "281fb1762ecf788466eb61c184078c51184da197c56f426252cf65a3ecf60e38",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/Cargo.toml"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/cleanup.ps1",
+          "bytes": 2862,
+          "sha256": "6ae30edaa8fcae7c9c4f461fe390dd73dbe9aafa37c25c2283dd69b84c2ae34d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/cleanup.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/smoke-aces.ps1",
+          "bytes": 21604,
+          "sha256": "3ce4b68b9a4826ca3656c998b11ee1c71fb17aec23ef5ab7984bc89b6980fb6d",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/smoke-aces.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/smoke-ambient.ps1",
+          "bytes": 6254,
+          "sha256": "ace308adfee4d12c1bc3d3473dcab14fb846e728652569f06f395b4ff1dc2ebe",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/smoke-ambient.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/smoke-exec.ps1",
+          "bytes": 35331,
+          "sha256": "e54a85680b56dc69ae4096baa9ff64eb2ed9d7e8a58220cb9c5682406a4d19d8",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/smoke-exec.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/smoke-kill.ps1",
+          "bytes": 6766,
+          "sha256": "abd1f58a59ac3b51271dd17ff9cde3858a37e11906552b276df4b9c0bb10cd84",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/smoke-kill.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/smoke-machine-store.ps1",
+          "bytes": 17074,
+          "sha256": "8ea6f083aa26d0cc31090f63a5d28e7e1acfb4c2fa350871772a6aa187e759c2",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/smoke-machine-store.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/ci/smoke.ps1",
+          "bytes": 22680,
+          "sha256": "193618db83a1817121478c978538cb9398e80ea3290b8486bd59a1b7405e92ec",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/ci/smoke.ps1"
+        },
+        {
+          "path": "vendor/srt-win-src/rustfmt.toml",
+          "bytes": 274,
+          "sha256": "f9a583540be5e2f397df00db75fbb7405828dc36eb2bcfb951c39b1dada53f02",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/rustfmt.toml"
+        },
+        {
+          "path": "vendor/srt-win-src/src/acl.rs",
+          "bytes": 42799,
+          "sha256": "8d1df6d165f8885e8b6de08c0ebd8b22bb7f688c074f3a4c759b3e5a1fca95a4",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/acl.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/ambient.rs",
+          "bytes": 3817,
+          "sha256": "de17a43491b5b2d6c645e9cef6f9fc463cd9ec9c23ddd2687228d945068a740c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/ambient.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/cert_store.rs",
+          "bytes": 13586,
+          "sha256": "2ac25f5bed8fa2c084961fbcd286d01288f27ed333b15bce7aa3c6c15a32ce47",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/cert_store.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/cli.rs",
+          "bytes": 79994,
+          "sha256": "84506f83fc4d96798ba89a46895e7426642ad5dc4d7f22befd528521c37d9460",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/cli.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/dpapi.rs",
+          "bytes": 4022,
+          "sha256": "0a331e9ee6e5b41d2727c833941b02a1264c15b10b698496a9e57e9c797cd4b5",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/dpapi.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/install.rs",
+          "bytes": 19567,
+          "sha256": "4b6158177c5fff29ea2822a929869d60f94e4b9ba402f612843d8297e38285be",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/install.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/job.rs",
+          "bytes": 5521,
+          "sha256": "a4c729c97e67cdf055a9f664da63c54edec73446e666cdfd45519c3ecd36c37c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/job.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/launch.rs",
+          "bytes": 33337,
+          "sha256": "b8304db36889e6f02cb58aadfbc9a8a36a8b6f5b3479812ee29daa1a45ac3e55",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/launch.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/lib.rs",
+          "bytes": 951,
+          "sha256": "94d3debf3c97cb6cfd63d583ff624bf24ddd7759cb15df83afec6b1a2eeb1120",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/lib.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/logon.rs",
+          "bytes": 19417,
+          "sha256": "1bd52b19b81a39fe725170c7dd87bdb40938f90388f629c44b1975e828db1ac7",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/logon.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/main.rs",
+          "bytes": 598,
+          "sha256": "f63e12f9943bbb07815472853df32284a1be0c78f3dde83cfd1fd7b5275a5ba9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/main.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/path_id.rs",
+          "bytes": 27445,
+          "sha256": "e62b9be426b5ea173a9eaca0a5165dde5230b89a43cd8673c5a5c44f0d55c0c9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/path_id.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/reg.rs",
+          "bytes": 12931,
+          "sha256": "98bade54b1495dfa24c27720b85fc9a231e8191c91832f63a1c410f23ec16b0c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/reg.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/runner.rs",
+          "bytes": 9371,
+          "sha256": "ad3ff6c7249ad0e30fbac8894ee41ab5b6eb86f6aebc4ec529b232dbec586b03",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/runner.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/sam.rs",
+          "bytes": 4470,
+          "sha256": "ec0b1899c11f57aa324435c94a445f7e34b9e5049c7447e6bcd7b5bc44aa3d27",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/sam.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/self_protect.rs",
+          "bytes": 8757,
+          "sha256": "d7da443a8cff5388730b819dd9f0cef0e3192616cfaccd820ac55d95a0b5c1ab",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/self_protect.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/sid.rs",
+          "bytes": 8876,
+          "sha256": "d32de003c65d61ec8a24a3e46b230a6706cdd0aa8d05f5a537c320489462470b",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/sid.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/state_db.rs",
+          "bytes": 59404,
+          "sha256": "e70df3c739fe30fc5dce54a8aceac2e634864bc08ba0ad96a02450d17703917c",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/state_db.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/token.rs",
+          "bytes": 12716,
+          "sha256": "afb6393729a41cdc246c817a2cbcb8d0bb394993a792de204ad51a5c702035ea",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/token.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/user.rs",
+          "bytes": 26887,
+          "sha256": "e7c2ede50968ad5af1a04d44ab73319f7d171ec4842d8e12e2d2839d94a2d129",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/user.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/util.rs",
+          "bytes": 8756,
+          "sha256": "9da88ef9f835d7195637535bbfed833e322ecb099b2760e44edfd232430fe719",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/util.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/wfp.rs",
+          "bytes": 32839,
+          "sha256": "3b451fea5e57188e9987067f5e4ce7062df3fdd319d8813f08bb389bbcd02d15",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/wfp.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/src/winsta.rs",
+          "bytes": 21413,
+          "sha256": "708b27141ee16dd5856ed3abcc8a2be8fac6f51d584b66faf0c16afc7092bd60",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/src/winsta.rs"
+        },
+        {
+          "path": "vendor/srt-win-src/tests/sd_access_check_matrix.rs",
+          "bytes": 4888,
+          "sha256": "9dcc32df0a8d747a2752a0a353533818e28738b867b377e930d69f4962b0dea9",
+          "url": "https://github.com/anthropics/sandbox-runtime/blob/fedc0bbe206c2705b3de990fdbed51b3255214c9/vendor/srt-win-src/tests/sd_access_check_matrix.rs"
+        }
+      ],
+      "verification": "静的調査。依存導入・テスト一式実行なし。ファイル保存は全コードの精査を意味しない。"
+    },
+    {
+      "id": "sandbox-runtime-v0.0.79",
+      "url": "https://github.com/anthropics/sandbox-runtime/tree/d9aac2098351ca17f3743fbaf6ecbd0051b7e00e",
+      "status": "saved",
+      "tag": "v0.0.79",
+      "commit": "d9aac2098351ca17f3743fbaf6ecbd0051b7e00e",
+      "local_file": "research/disclosures/raw/harness_20261008/claude/sandbox-runtime-v0.0.79.tar.gz",
+      "sha256": "f1d98ed8197aee463bca75938ad01bef1e4c97e82edc0629126fa435c01c068f",
+      "verification": "公開タグとpackage版を確認。mainとの差分は同一視しない。"
+    }
+  ],
+  "counts": {
+    "official_documents_saved": 30,
+    "official_documents_failed": 1,
+    "repo_files_saved": 313
+  },
+  "known_limitations": [
+    "Claude Code本体は非公開部分がありSRT mainの同梱を未検証",
+    "全OS実行試験なし",
+    "v0.0.79の配布物とmainは別"
+  ],
+  "independent_review": "research/technology/harness_review_oss_to_claude_20261008.md",
+  "review_improvements": [
+    "結果置換schema不一致の原文復帰",
+    "JWT decode/項目maskの未加工env残存",
+    "hostname guardのIP/localhost例外",
+    "ZDR最大2年等の保持例外",
+    "管理設定補修v2.1.282最低版"
+  ]
+}

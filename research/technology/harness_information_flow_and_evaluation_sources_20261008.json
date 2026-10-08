@@ -1,0 +1,504 @@
+{
+  "research_date": "2026-10-08",
+  "language": "ja",
+  "scope": "information_flow_prompt_injection_authorization_and_evaluation",
+  "method": "Downloaded full text and official documentation; fixed public source commits; selected static boundary checks. No external LLM/API calls or attack experiments.",
+  "sources": [
+    {
+      "id": "camel",
+      "url": "https://arxiv.org/pdf/2503.18813",
+      "resolved_url": "https://arxiv.org/pdf/2503.18813",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/camel.pdf",
+      "sha256": "c3719f6ce73eecf45e3764debef8a3d8ff8c9233b37d128c558b694ec3790cc7",
+      "bytes": 5531468,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/camel.txt",
+      "pages": 125,
+      "arxiv_version_in_saved_text": "2503.18813v2",
+      "versioned_url": "https://arxiv.org/pdf/2503.18813v2"
+    },
+    {
+      "id": "multi_camel",
+      "url": "https://arxiv.org/pdf/2610.05640v1",
+      "resolved_url": "https://arxiv.org/pdf/2610.05640v1",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/multi_camel.pdf",
+      "sha256": "3d7d809a5fa229110a02818b1d3569f9a1100e7668c9443f3dbdb14702be485f",
+      "bytes": 1304821,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/multi_camel.txt",
+      "pages": 24,
+      "arxiv_version_in_saved_text": "2610.05640v1",
+      "versioned_url": "https://arxiv.org/pdf/2610.05640v1"
+    },
+    {
+      "id": "agentdojo",
+      "url": "https://arxiv.org/pdf/2406.13352",
+      "resolved_url": "https://arxiv.org/pdf/2406.13352",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/agentdojo.pdf",
+      "sha256": "349884fffbf43282591c5accffd57bb651632f38e412fe303114941bdd111b05",
+      "bytes": 1042076,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/agentdojo.txt",
+      "pages": 26,
+      "arxiv_version_in_saved_text": "2406.13352v3",
+      "versioned_url": "https://arxiv.org/pdf/2406.13352v3"
+    },
+    {
+      "id": "asb",
+      "url": "https://arxiv.org/pdf/2410.02644",
+      "resolved_url": "https://arxiv.org/pdf/2410.02644",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/asb.pdf",
+      "sha256": "e20155df01b3a1f6c0a947c4e9e4871957cff2e507939f7ea21a5fe967d84504",
+      "bytes": 922877,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/asb.txt",
+      "pages": 36,
+      "arxiv_version_in_saved_text": "2410.02644v4",
+      "versioned_url": "https://arxiv.org/pdf/2410.02644v4"
+    },
+    {
+      "id": "agentdyn",
+      "url": "https://arxiv.org/pdf/2602.03117",
+      "resolved_url": "https://arxiv.org/pdf/2602.03117",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/agentdyn.pdf",
+      "sha256": "93f790cf9a1e5a24f88521ec08cb9476db92cf9c53833d143ec1285d30e74706",
+      "bytes": 808394,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/agentdyn.txt",
+      "pages": 26,
+      "arxiv_version_in_saved_text": "2602.03117v3",
+      "versioned_url": "https://arxiv.org/pdf/2602.03117v3"
+    },
+    {
+      "id": "pii_agentdojo",
+      "url": "https://arxiv.org/pdf/2506.01055",
+      "resolved_url": "https://arxiv.org/pdf/2506.01055",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/pii_agentdojo.pdf",
+      "sha256": "d4f0751a1296c55642c19af40108088e3283335d93d5512062438b5cf2d78d56",
+      "bytes": 3352570,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/pii_agentdojo.txt",
+      "pages": 25,
+      "arxiv_version_in_saved_text": "2506.01055v1",
+      "versioned_url": "https://arxiv.org/pdf/2506.01055v1"
+    },
+    {
+      "id": "owasp_agentic",
+      "url": "https://genai.owasp.org/download/52117/?tmstv=1765059207",
+      "resolved_url": "https://genai.owasp.org/download/52117/?tmstv=1765059207",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/owasp_agentic.pdf",
+      "sha256": "a2db94cd00b08e0b3a5e5b619afe024bdbcd74503111085705e4f3dd886fcb5c",
+      "bytes": 1274186,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/owasp_agentic.txt",
+      "pages": 57
+    },
+    {
+      "id": "llmbda",
+      "url": "https://arxiv.org/pdf/2602.20064",
+      "resolved_url": "https://arxiv.org/pdf/2602.20064",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/llmbda.pdf",
+      "sha256": "7214cc6201da593047f04bbf7b18e9764215952fc21567813b667cf71f37f1a2",
+      "bytes": 1116876,
+      "text_file": "research/disclosures/raw/harness_20261008/information_flow/llmbda.txt",
+      "pages": 63,
+      "arxiv_version_in_saved_text": "2602.20064v2",
+      "versioned_url": "https://arxiv.org/pdf/2602.20064v2"
+    },
+    {
+      "id": "camel_html",
+      "url": "https://arxiv.org/html/2503.18813v2",
+      "resolved_url": "https://arxiv.org/html/2503.18813v2",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/camel_html.html",
+      "sha256": "b5cd7970e905f1504439c3eddb3855ab18d951d10bf806ec2f5f3baa02ca8a51",
+      "bytes": 2554718
+    },
+    {
+      "id": "multi_camel_html",
+      "url": "https://arxiv.org/html/2610.05640v1",
+      "resolved_url": "https://arxiv.org/html/2610.05640v1",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/multi_camel_html.html",
+      "sha256": "c28f44b75b2843dc2fc46c70352e76bb5d8591ca8399293fa8a310c69d7880a2",
+      "bytes": 701143
+    },
+    {
+      "id": "cedar_authorization",
+      "url": "https://docs.cedarpolicy.com/auth/authorization.html",
+      "resolved_url": "https://docs.cedarpolicy.com/auth/authorization.html",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/cedar_authorization.html",
+      "sha256": "6f3dfe980a5f14c00713d28e24d43a078297bafcbaa31b6a6ef37c8754240d09",
+      "bytes": 35706
+    },
+    {
+      "id": "cedar_security",
+      "url": "https://docs.cedarpolicy.com/other/security.html",
+      "resolved_url": "https://docs.cedarpolicy.com/other/security.html",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/cedar_security.html",
+      "sha256": "7574fe80fce96049304bcde25a7d84e8e7adad57721ec0a70f7c2482e7d738e6",
+      "bytes": 30721
+    },
+    {
+      "id": "openfga_consistency",
+      "url": "https://openfga.dev/docs/interacting/consistency",
+      "resolved_url": "https://openfga.dev/docs/interacting/consistency",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/openfga_consistency.html",
+      "sha256": "af8943c439671f415349217a513c98c7ac4a76b5b851e96fd59865162868e6c9",
+      "bytes": 984660
+    },
+    {
+      "id": "openfga_models",
+      "url": "https://openfga.dev/docs/interacting/authorization-models",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "opa_api",
+      "url": "https://www.openpolicyagent.org/docs/rest-api",
+      "resolved_url": "https://www.openpolicyagent.org/docs/rest-api",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/opa_api.html",
+      "sha256": "3720c47cbcaecf5a4f3371bc20ae2d55a61ba7a92efeaaac23921dbffa4ea001",
+      "bytes": 517451
+    },
+    {
+      "id": "opa_decision_logs",
+      "url": "https://www.openpolicyagent.org/docs/management-decision-logs",
+      "resolved_url": "https://www.openpolicyagent.org/docs/management-decision-logs",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/opa_decision_logs.html",
+      "sha256": "93364e1452a2024a8676fd3e69c1e2e668e0e6738defb5fc18fc0ecfce3f7ee8",
+      "bytes": 78520
+    },
+    {
+      "id": "opa_language",
+      "url": "https://www.openpolicyagent.org/docs/policy-language",
+      "resolved_url": "https://www.openpolicyagent.org/docs/policy-language",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/opa_language.html",
+      "sha256": "4cac12ad081c613f86d47bd76bb5f496657603fb46be3309c8af872578a6bbec",
+      "bytes": 836654
+    },
+    {
+      "id": "openfga_models_correct",
+      "url": "https://openfga.dev/docs/getting-started/immutable-models",
+      "resolved_url": "https://openfga.dev/docs/getting-started/immutable-models",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/openfga_models_correct.html",
+      "sha256": "c121d44aafd42053fb5f0378982b11ad592cff67e3fe8d958989097ee7ea224b",
+      "bytes": 989824
+    },
+    {
+      "id": "llmbda_project",
+      "url": "https://llmbdacalculus.github.io/",
+      "resolved_url": "https://llmbdacalculus.github.io/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/llmbda_project.html",
+      "sha256": "b6f58adab930c23b30867ef97616d8b27e6474e8358409c517f84cce25b4eba0",
+      "bytes": 5125
+    },
+    {
+      "id": "llmbda_github_org",
+      "url": "https://api.github.com/orgs/llmbdacalculus/repos",
+      "resolved_url": "https://api.github.com/orgs/llmbdacalculus/repos",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/llmbda_github_org.json",
+      "sha256": "cb49b4fbccc0e363fe375ce41235089bd4bf0c26bb307d249e3750ea40812e5a",
+      "bytes": 6141
+    },
+    {
+      "id": "multi_camel_github_search",
+      "url": "https://api.github.com/search/repositories?q=multi-camel",
+      "resolved_url": "https://api.github.com/search/repositories?q=multi-camel",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/multi_camel_github_search.json",
+      "sha256": "fac7901da65407799db1a12fa67d6b8f333055e0a4ef0a49428500fc5899b0c2",
+      "bytes": 170018
+    },
+    {
+      "id": "opa_api_md",
+      "url": "https://www.openpolicyagent.org/docs/rest-api.md",
+      "resolved_url": "https://www.openpolicyagent.org/docs/rest-api.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/opa_api_md.md",
+      "sha256": "edb50c41c70db96e96a7687781099befe2eed0b23d6a505ce3ccf8f9360a5381",
+      "bytes": 65927
+    },
+    {
+      "id": "opa_logs_md",
+      "url": "https://www.openpolicyagent.org/docs/management-decision-logs.md",
+      "resolved_url": "https://www.openpolicyagent.org/docs/management-decision-logs.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/opa_logs_md.md",
+      "sha256": "0741aedf46d3c8a6c504cd91fe0c21d5ef71756d4e8d731fcb3dd1edb90c2589",
+      "bytes": 14259
+    },
+    {
+      "id": "opa_language_md",
+      "url": "https://www.openpolicyagent.org/docs/policy-language.md",
+      "resolved_url": "https://www.openpolicyagent.org/docs/policy-language.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/opa_language_md.md",
+      "sha256": "421859f72cca5bd7a41dfe8d7fb012132a3547eb73a29b5774cbc2ce8bee7b53",
+      "bytes": 106859
+    },
+    {
+      "id": "multiagentdojo_code_search",
+      "url": "https://api.github.com/search/repositories?q=MultiAgentDojo",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/multiagentdojo_code_search.json",
+      "bytes": 5559,
+      "sha256": "252f5bc1420f0128bb5be69650b2f87873185bc9ab78a97518b279bfa8e1aadf"
+    },
+    {
+      "id": "multicamel_code_search",
+      "url": "https://api.github.com/search/repositories?q=multi-CaMeL%20in%3Aname",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/multicamel_code_search.json",
+      "bytes": 171356,
+      "sha256": "0273f9c69496d53a735baf8b45db16ad0c1a75dc7e8fc309b09acd47c70a0fc2"
+    },
+    {
+      "id": "llmbda_code_search",
+      "url": "https://api.github.com/search/repositories?q=llmbdacalculus%20in%3Aname",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/harness_20261008/information_flow/llmbda_code_search.json",
+      "bytes": 6096,
+      "sha256": "d1d64c3c54b898e948b4eaa6bac3f31be45e910961647c9da93bf43a671efd81"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "camel",
+      "url": "https://github.com/google-research/camel-prompt-injection.git",
+      "commit": "f083b6b396399d3b3c7f2ddaf613a5945eaf32d8",
+      "commit_datetime": "2025-06-20T15:59:27+02:00",
+      "local_checkout": "research/disclosures/raw/harness_20261008/information_flow/camel",
+      "verification": "selected_source_static_review_no_runtime_execution",
+      "reviewed_files": [
+        {
+          "path": "src/camel/security_policy.py",
+          "sha256": "e7a060e0192314613494d7a24ca660a39ddf5bdf0f0cc6300fb9bf3cd4dd5b65",
+          "bytes": 3318,
+          "lines": 110
+        },
+        {
+          "path": "src/camel/quarantined_llm.py",
+          "sha256": "95e62fca524fb18e830f00e95df7c68168fe0b8df2acb2785c4e775cbb1a8b42",
+          "bytes": 4934,
+          "lines": 103
+        },
+        {
+          "path": "src/camel/interpreter/interpreter.py",
+          "sha256": "a3af5e3f2a3a06e0ae9635214710574b1740d6cab5c8e9d064c0f10bac0b86cb",
+          "bytes": 100476,
+          "lines": 2716
+        },
+        {
+          "path": "src/camel/pipeline_elements/security_policies/banking.py",
+          "sha256": "bfce5b74684ee3d25c8c843b761042329fc755bdeeca62551cead8d6a7313ebc",
+          "bytes": 5090,
+          "lines": 122
+        },
+        {
+          "path": "src/camel/capabilities/capabilities.py",
+          "sha256": "46a779a6eff0e3e7f35639abe5eff57b2afeee76e8cd02f60f547f56d07ef19f",
+          "bytes": 1296,
+          "lines": 38
+        },
+        {
+          "path": "README.md",
+          "sha256": "8f6152538ff3b72461e04b080010a6a08bcf52b3b6f575d6d2ac0fc6e2f71129",
+          "bytes": 2301,
+          "lines": 47
+        },
+        {
+          "path": "src/camel/pipeline_elements/privileged_llm.py",
+          "sha256": "848982dc88dea51f15b454f119a8d775f76449ccddd892a208599c5899d58d75",
+          "bytes": 18806,
+          "lines": 483
+        }
+      ]
+    },
+    {
+      "id": "agentdojo",
+      "url": "https://github.com/ethz-spylab/agentdojo.git",
+      "commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+      "commit_datetime": "2026-06-02T11:59:58+02:00",
+      "local_checkout": "research/disclosures/raw/harness_20261008/information_flow/agentdojo",
+      "verification": "selected_source_static_review_no_runtime_execution",
+      "reviewed_files": [
+        {
+          "path": "src/agentdojo/task_suite/task_suite.py",
+          "sha256": "2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+          "bytes": 19818,
+          "lines": 491
+        },
+        {
+          "path": "README.md",
+          "sha256": "d8c6460ecce9bbf59ed300fbc74b4440188f74cd147a7611836270be49e7660e",
+          "bytes": 3184,
+          "lines": 76
+        }
+      ]
+    },
+    {
+      "id": "asb",
+      "url": "https://github.com/agiresearch/ASB.git",
+      "commit": "544540ff0788998072f7df463056fd17e62cc9f4",
+      "commit_datetime": "2026-09-29T23:52:20-07:00",
+      "local_checkout": "research/disclosures/raw/harness_20261008/information_flow/asb",
+      "verification": "selected_source_static_review_no_runtime_execution",
+      "reviewed_files": [
+        {
+          "path": "scripts/res_retrieval.py",
+          "sha256": "9dfdb760cc0f60d901c3353b2f632cea53ab4e529a13e98ae281a19d2730c635",
+          "bytes": 5986,
+          "lines": 115
+        },
+        {
+          "path": "README.md",
+          "sha256": "f9d8db1086d3af665d79581a274ff4eccff7272254922db89490291fb6cd6327",
+          "bytes": 22594,
+          "lines": 272
+        }
+      ]
+    },
+    {
+      "id": "multiagentdojo",
+      "url": "https://github.com/james-pete/multiagentdojo.git",
+      "commit": "e71647382155dc6949d6ccf9a9d7ec7cf429b856",
+      "commit_datetime": "2026-10-01T20:28:29-04:00",
+      "local_checkout": "research/disclosures/raw/harness_20261008/information_flow/multiagentdojo",
+      "verification": "selected_source_static_review_no_runtime_execution",
+      "reviewed_files": [
+        {
+          "path": "src/agentdojo/agent_pipeline/multi_agent.py",
+          "sha256": "6a1f114a0e87d615a2b9974c517f61a4510aa6eed97c9c2298ad09b987c13fcf",
+          "bytes": 32446,
+          "lines": 696
+        },
+        {
+          "path": "src/agentdojo/agent_pipeline/llms/sequrity_llm.py",
+          "sha256": "e1b6faeda457510241aab19a520344fa0a6a9a8a961030736884079f301d5cfb",
+          "bytes": 19293,
+          "lines": 397
+        },
+        {
+          "path": "README.md",
+          "sha256": "a5adeb81517b28911a7a32153fa463de9587bfcc21510c66171bd24af1dcf4ae",
+          "bytes": 5052,
+          "lines": 85
+        },
+        {
+          "path": "uv.lock",
+          "sha256": "2066f44517e140c85540b952c47695f03f1ad3ab2fb42f359f919a0c3d95a955",
+          "bytes": 680015,
+          "lines": 4273
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "87e07031b4ccdf253d9742267079639a3130cd18be2415ee2af8b3722fbe3399",
+          "bytes": 3233,
+          "lines": 126
+        },
+        {
+          "path": "tests/test_multi_agent.py",
+          "sha256": "0bf944c4bd050a753526bd8c301afb76e39fdc97affcdc0860bc20d22280b9b9",
+          "bytes": 9434,
+          "lines": 216
+        },
+        {
+          "path": "tests/test_camel.py",
+          "sha256": "4888d5eb2e7f107627703aee1fa744e36846037ea1b99df740cd51af404c9f16",
+          "bytes": 13521,
+          "lines": 358
+        }
+      ]
+    }
+  ],
+  "existing_repository_reports": [
+    "research/technology/enterprise_data_authorization_audit_xai_20261006.md",
+    "research/technology/harness_guardrail_mechanisms_20261008.md"
+  ],
+  "limitations": [
+    "Multi-CaMeL empirical evaluations use the trivial confidentiality/security policy S=empty; 0 ASR is not a universal PII protection proof.",
+    "Multi-CaMeL public orchestration code delegates single-agent runtime to remote Sequrity Control API; runtime server code and retention are unverified.",
+    "LLMbda Lean implementation/proofs download location not confirmed; only paper/project website/GitHub organization listing were obtained.",
+    "OpenFGA/Cedar/OPA documentation checks do not certify production settings/storage/runtime."
+  ],
+  "critical_evidence": [
+    {
+      "claim": "Multi-CaMeL trivial policy",
+      "source": "multi_camel",
+      "pdf_pages": [
+        4,
+        7
+      ],
+      "section": "II / IV-C"
+    },
+    {
+      "claim": "implicit-flow and retry limitations",
+      "source": "multi_camel",
+      "pdf_pages": [
+        12
+      ],
+      "section": "VI-B"
+    },
+    {
+      "claim": "ASR sample count and confidence intervals",
+      "source": "multi_camel",
+      "pdf_pages": [
+        10
+      ],
+      "section": "Table III"
+    },
+    {
+      "claim": "utility denominators",
+      "source": "multi_camel",
+      "pdf_pages": [
+        24
+      ],
+      "section": "Appendix D"
+    },
+    {
+      "claim": "LLMbda endorsement residual successful attacks",
+      "source": "llmbda",
+      "pdf_pages": [
+        24,
+        26
+      ]
+    },
+    {
+      "claim": "Cedar skip-on-error",
+      "source": "cedar_authorization"
+    },
+    {
+      "claim": "OPA undefined decision can return HTTP200 without result",
+      "source": "opa_api_md",
+      "local_lines": [
+        242,
+        313
+      ]
+    }
+  ],
+  "verification_result": {
+    "source_anchor_hash_and_local_link_errors": [],
+    "runtime_security_tests": "not_run",
+    "review_requested_from": "root"
+  },
+  "review_improvements": {
+    "review_file": "research/technology/harness_review_root_to_information_flow_20261008.md",
+    "status": "root_review_completed_no_major_correction_supplement_applied",
+    "supplements": [
+      "CaMeL denial reason embeds raw private dependency values; exception construction verified without claiming universal external leakage.",
+      "Japanese terminology normalized to 道具."
+    ],
+    "final_source_anchor_hash_and_local_link_errors": []
+  }
+}

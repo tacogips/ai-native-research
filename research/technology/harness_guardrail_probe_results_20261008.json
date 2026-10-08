@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-10-08",
+  "external_model_calls": 0,
+  "note": "依存を代替した局所的な上流関数の意味確認。全システムの耐性試験ではない。",
+  "results": [
+    {
+      "probe": "LlamaFirewall PIICheckの評価中例外",
+      "observed": {
+        "decision": "allow",
+        "reason": "No PII detected or confidence below threshold",
+        "score": 0.0,
+        "status": "success"
+      },
+      "source_files": [
+        "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/scanners/experimental/piicheck_scanner.py",
+        "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/scanners/custom_check_scanner.py"
+      ],
+      "scope": "上流4メソッドは未変更。通信部・結果型・ログだけをローカル代替。完全なライブラリ起動やAPI試験ではない。",
+      "source_sha256": {
+        "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/scanners/experimental/piicheck_scanner.py": "386bf57c38d94f75799ddeaf32703283383b751affcac15f6fe216049101b1a1",
+        "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/scanners/custom_check_scanner.py": "5ae7135cff31bd6367851929add74c21899d040b481937caf0c9e366316a210b"
+      }
+    },
+    {
+      "probe": "LLM Guard fail_fastの不合格",
+      "observed": [
+        "完全な合成試験文",
+        {
+          "RejectingScanner": false
+        },
+        {
+          "RejectingScanner": 0.99
+        }
+      ],
+      "source_files": [
+        "research/disclosures/raw/harness_20261008/guardrails/llmguard/llm_guard/evaluate.py"
+      ],
+      "scope": "上流scan_promptは未変更。scannerとログのみローカル代替。アプリの送信停止処理は別。",
+      "source_sha256": {
+        "research/disclosures/raw/harness_20261008/guardrails/llmguard/llm_guard/evaluate.py": "513f5f701052cfcf4e25086262d56dc36efd514dead4037efaffb2fc42bd425d"
+      }
+    }
+  ]
+}

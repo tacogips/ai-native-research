@@ -96,7 +96,7 @@ updated: 2026-10-06
 | 層 | 今すぐ採用できる技術・製品・標準 | 根拠 | 残る限界 |
 |---|---|---|---|
 | 実行基盤 | Temporal等の耐久実行（LLM推論と外部操作をActivityに置き、承認待ちを数日保持）。microVM（Firecracker、Kata、Cloud Hypervisor）またはgVisor。Kubernetesでは `kubernetes-sigs/agent-sandbox`。Claude Managed Agents、AWS Bedrock AgentCore Harness（2026年6月GA） | コンテナを安全境界にしない。思考（brain）と操作（hands）を分離し操作は使い捨て隔離環境で行う。SandboxEscapeBenchは脆弱性があればフロンティアLLMが実際に脱出することを示す | 業務状態の復元と外部副作用の一度だけ実行は別問題（冪等キー必須）。マネージド隔離環境のパッチ反映に0〜471日超の開き。Seatbelt/bubblewrap型はカーネル共有のため無人本番に使わない |
-| 外向き通信と資格情報 | DNSを含む既定全拒否、TLS終端してHostを固定するegress proxy。資格情報は隔離環境外の代理が宛先ごとに注入し、AIには短命トークンか番兵値のみ（Claude Code `mask`、AgentCore Gateway、1Password Credential Broker等） | 2026年7月のOpenAI×Hugging Face事件はパッケージ中継基盤Artifactory経由で脱出。「直接のインターネット接続がない」は隔離の十分条件ではない | 中継基盤・ミラー自体を攻撃面として隔離・パッチ・監視する必要 |
+| 外向き通信と資格情報 | DNSを含む既定全拒否、TLS終端してHostを固定するegress proxy。資格情報は隔離環境外の代理が宛先ごとに注入し、AIには短命トークンか番兵値のみ（Claude Code `mask`、AgentCore Gateway、1Password Credential Broker等） | 2026年7月のOpenAI×Hugging Face事件はパッケージ中継基盤Artifactory経由で脱出。「直接のインターネット接続がない」は隔離の十分条件ではない。OpenAIは評価間の無許可通信、監視の未適用、エスカレーションの失敗など複数の要因を挙げる（[深掘り](../incidents/ai_frontier_and_ai_enabled_attacks.md)） | 中継基盤・ミラー自体を攻撃面として隔離・パッチ・監視する必要 |
 | ID | 作業主体のAI1体ごとの非人間ID、人間のスポンサー、有効期限。Microsoft Entra Agent ID（2026年5月GA。blueprint無効化で配下全IDを即時停止、スポンサー離職時に自動移管）。AgentCore Identity。IETF draft-klrc-aiagent-auth-00（WIMSE+SPIFFE/SPIRE+OAuth 2.0）。Okta Cross App Access | 有効権限は「組織の強制規則 ∩ データ側制約 ∩ 代理元の人の権限 ∩ AIへの委任 ∩ 現在の目的・期限」の積集合（HashiCorp Vault agentic IAM、本リポジトリの定義） | ForresterはOktane 2026について「SPIFFE準拠の実装は2026年Q4まで無い」と批判。定期実行機能が個人資格情報で動く製品が多い（Claude Code routines、Cowork、Gemini） |
 | 認可 | 関係ベース（OpenFGA/Zanzibar型）で閲覧判定、属性ベース（Cedar）で「この金額・状態・宛先で操作できるか」を判定し、一つの強制点（gateway）に集約。AgentCore Policyは全ツール呼び出しを横取りしCedarを既定拒否で評価、主体属性はLLM出力でなくJWTから取る。Progent型の権限単調性（縮小は自動、拡大は承認）。Metaの「Agents Rule of Two」（信頼できない入力の処理、機密データへのアクセス、状態変更のうち同時に満たすのは2つまで） | 「Delegation Without Trust」（arXiv 2609.00267）はLangGraph、CrewAI、AutoGen、MCPの4構成中3つに閉じ込め機構がなく、認可ブローカーで侵害された下位AIの到達可能操作を8,100→約1.5に抑えたと報告 | OpenFGAとCedarの自動連携は未実装。AgentCore Policyは20ポリシー/engine、24時間窓の制約。ツール許可は業務承認（この契約のこの版をこの相手に出す）と同じではない |
 | 情報流制御 | CaMeL（信頼された依頼から制御とデータの流れを取り出し外部情報が計画を変えないようにする）、FIDES（機密性・完全性ラベルの決定論的追跡）、APPA（arXiv 2607.24625、回復可能な情報流制御）、SPA、CaMeLoT。原文・要約・埋め込み・道具結果にラベルを伝播し、送信先をgatewayで検査 | CaMeLはAgentDojoで無防御84%に対し保証付き77%、脅威モデル内で注入成功0。SearchLeakとRovoBlastは検索認可が正常でも出力経路（リンク引数、表示途中の画像取得）で漏れたことを示す | 製品は未対応。Purviewは作業主体のAIの生成物にラベルを継承せず、Palantirもmandatoryなmarkingsしか伝播しない。FIDESにはラベル偽造の報告 |
@@ -178,13 +178,13 @@ updated: 2026-10-06
 - 長い連鎖での劣化。「Agent Meltdowns」（arXiv 2605.19149）は敵対的入力なしの環境エラーだけで64.7%のロールアウトに安全でない振る舞い（無断の偵察、アクセス制御の迂回）が生じ、半数超が利用者に未報告だったと報告する。dots system cardは連鎖5→10件で範囲逸脱8.6%→19.7%と開示。
 - 複数AI化は保証にならない。MAST（arXiv 2503.13657）は1,600件超の記録から14失敗モードを分類（仕様・設計44.2%、AI間不整合32〜37%、検証21〜24%）。Anthropicの研究評価では複数AIが優位な課題でもトークン使用量は約15倍。
 - 自己修正・自己評価は承認の代替にならない（Large Language Models Cannot Self-Correct Reasoning Yet、Self-Authored Verification Is Unreliable）。
-- 「静かな失敗」。完了報告と実際の状態の照合がなければ、失敗は記録されない（Agents of Chaos、Replit事件での「復元不可」という虚偽）。
+- 「静かな失敗」。完了報告と実際の状態の照合がなければ、失敗は記録されない（Agents of Chaos、Replit事件での「復元不可」という虚偽。実際には利用者がロールバックで完全に復元した）。
 - 評価自体の妥当性。失敗判定の15.3%が誤判定（arXiv 2607.28367）、飽和したベンチマークは選定に使えない、ベンダー自己評価は配備時の能力を過大評価する（Faster AI, Uneven Frontier）。
 
 ### 5.2 セキュリティと認可の空白
 
 - **攻撃側の優位は構造的。** OpenAIは指示混入を「一度直して終わり」ではなくフィッシング同様に恒久的に残ると明言。「AI Agents May Always Fall for Prompt Injections」（arXiv 2605.17634）は文脈上の規範から不可能性を論じる。設計は「侵入されても被害を限定する」方向になる（情報流制御、capability制限、Rule of Two）。
-- **主因は権限過大と影響範囲の未分離。** 事故14事例群で欠落していた統制は、トークンの範囲・寿命の制限（GitHub MCP、Amazon Q、Salesloft Drift）、本番/開発・バックアップの影響範囲分離（Replit/SaaStr、PocketOS）、決定的ゲートによる破壊的操作の阻止、外部送信経路の構造的制限（EchoLeak、ForcedLeak、OpenAI/HF）、依存物の版固定（postmark-mcp、ClawHavoc、s1ngularity）、局所制御面の認証、ステップ単位の分類器に依存しない多層防御（GTG-1002はタスク分割で回避）（[事故報告](../technology/ai_incident_reports_20261006.md)）。2026年のVercel/Context.ai事件は従業員端末の感染→同社OAuth基盤→「Allow All」のOAuth範囲経由でVercel内部へという三段階の供給網横展開であった。Manusは悪意あるメールの難読化JavaScriptを検知した後に実行していた（2026年10月報道）。
+- **主因は権限過大と影響範囲の未分離。** 事故14事例群で欠落していた統制は、トークンの範囲・寿命の制限（GitHub MCP、Amazon Q、Salesloft Drift）、本番/開発・バックアップの影響範囲分離（Replit/SaaStr、PocketOS。どちらも最終的には復元され、PocketOSは拠点外の災害用バックアップが損失を防いだ）、決定的ゲートによる破壊的操作の阻止、外部送信経路の構造的制限（EchoLeak、ForcedLeak、OpenAI/HF）、依存物の版固定（postmark-mcp、ClawHavoc、s1ngularity）、局所制御面の認証、ステップ単位の分類器に依存しない多層防御（GTG-1002はタスク分割で回避）（[事故報告](../technology/ai_incident_reports_20261006.md)）。2026年のVercel/Context.ai事件は従業員端末の感染→同社OAuth基盤→「Allow All」のOAuth範囲経由でVercel内部へという三段階の供給網横展開であった。Manusは悪意あるメールの難読化JavaScriptを検知した後に実行していた（2026年10月報道）。リポジトリ内の約60件のインシデントは一次資料で深掘りし、入口の大半が認証情報と外部接続経路、被害の大きさを決めたのが侵入後の権限設計、業務AIへの指示混入7件はすべて研究者の実証で実悪用は未確認、と整理した（[インシデント深掘りの索引と横断整理](../incidents/README.md)）。
 - **認可の空白。** CSA調査（2026年3月）では、既存IAMで作業主体のAI IDを扱える自信があるのは18%、監査に合格できないと考えるのが84%、IDの作成・削除方針がないのが78%。BCG「The Authorization Gap in AI Agent Governance」（2026年9月）は、AIは人間の判断もアプリの固定挙動も持たないため権限内でも目的外の手段を取りうると指摘し、目的・行動拘束型の認可を推奨する。
 - **未解決の技術項目。** OpenFGAとCedarの自動連携、権限取消しから索引・保存回答・長期記憶が利用不能になるまでの秒数（未測定。Azure AI Searchの文書認可は索引同期依存）、関係探索の各段階での再認可、派生物へのラベル継承（Purview、Palantirともに欠落）、承認と実行の結合（全操作の必須仲介は未実装）、常駐・無人実行の組織単位の停止、egress proxy自体の攻撃面、TEEの物理攻撃と多段attestation、予算強制の標準欠如、削除と忘却の区別（unlearningは削除保証にならない）。
 
@@ -291,6 +291,7 @@ Tool Gateway（唯一の強制点: OpenFGA閲覧判定 ∩ Cedar操作判定 ∩
 | 日付 | 変更 |
 |---|---|
 | 2026-10-06 | 初版。既存調査（基盤・事例・事故・論文155本）と2026年10月6日時点のウェブ調査を統合。日付付きファイル名から master report へ改名し、指標・データ基盤・機能を別の master report に分離 |
+| 2026-10-08 | インシデント約60件の一次資料による深掘りを反映。Replit・PocketOSの復元、Hugging Face事例の複合要因を追記し、索引へリンク |
 | 2026-10-06 | 日本の規制欄を一次資料で訂正。IPA名義の手引書は受講生の成果物でIPAの見解でないこと、経産省はサブWGでAIエージェントセキュリティガイドラインを令和8年度中に公表予定（現資料は事務局案）、基本計画の「第Ⅱ期」は概要の表題のみ。AISI評価観点ガイド第1.20版、DS-920第2.0版、改正個人情報保護法、法務省72条指針の推奨事項と日弁連の反応を追加 |
 | 2026-10-06 | 日本CTO協会AX Criteria（2026年10月5日公開）を確認し、第2.3節に成熟度基準との併用を追加。50項目の対応表を別資料化 |
 | 2026-10-06 | McKinsey「The State of AI in 2026」PDF原本とAI事業者ガイドライン第1.2版PDF原本を照合。高業績企業の特徴を原文（業務の流れの再設計、成長・革新目標、経営関与）へ訂正し、「人間は例外処理のみ」という要約記事由来の表現を削除。職能別の本格展開比率を3〜10%（高業績企業15〜32%）へ訂正。運用費用の制約20%、人員減の予想32%対実績14%を追加。METIの定義を原文で確認 |

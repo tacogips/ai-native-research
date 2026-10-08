@@ -1,0 +1,626 @@
+{
+  "retrieved_date": "2026-10-08",
+  "requested_repository": "https://github.com/badlogic/pi-mono",
+  "canonical_repository": "https://github.com/earendil-works/pi",
+  "commit": "1cedd32724abfcb0915f76cc61b6827e2c16dbad",
+  "commit_timestamp": "2026-10-08T00:23:06+02:00",
+  "package": "@earendil-works/pi-coding-agent",
+  "package_version": "1.1.0",
+  "latest_release_tag_verified": "v1.1.0",
+  "release_commit": "abe508e1b89912adde45528136c3221eb69acdd7",
+  "release_timestamp": "2026-10-07T23:33:33+02:00",
+  "method": "read-only shallow git clone; no dependencies installed, no user credential files read; static source inspection",
+  "sources": [
+    {
+      "path": "SECURITY.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/SECURITY.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/SECURITY.md",
+      "sha256": "2d8b299904ce69d14b9378b643964d86f79fb619578cdc2ee390f843dab1b6cb",
+      "lines": 87,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/package.json",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/package.json",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/package.json",
+      "sha256": "c662a36f8bc47843393a60dc8616a34dfcc8376e8fcc96dbc2f1020c60e38e2a",
+      "lines": 108,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/security.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/security.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/security.md",
+      "sha256": "3b1e40a8d28b17c9eb7e496a7ba88fbe04665e3e6ae02873a58b943e325ad504",
+      "lines": 99,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/containerization.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/containerization.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/containerization.md",
+      "sha256": "e309fcb9a0a7592c0dba000ef8ee90f2d7ef1e01e6a1ac2f0cd9760dd63dee0c",
+      "lines": 183,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/extensions.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/extensions.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/extensions.md",
+      "sha256": "bd2ed1f728173c1defc035e90c3894c308ae153fa08575c12b4a9988e11f8108",
+      "lines": 274,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/models.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/models.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/models.md",
+      "sha256": "9b11e5db77ce952d6830a074c7e4a0bf07e4e797a82f0b0898cb79c811bbfd33",
+      "lines": 208,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/mcp.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/mcp.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/mcp.md",
+      "sha256": "a635d721e58b0cbf43f7443a29fd43b8201b62602c62763c1f5fdb3910d7d938",
+      "lines": 272,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/providers.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/providers.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/providers.md",
+      "sha256": "ee4df2a7c9dbd632744d31b4c0dcd35042efd45fc5dafa2a8d7e530225e52d39",
+      "lines": 227,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/sessions.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/sessions.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/sessions.md",
+      "sha256": "5ad5bda19caaa0794bb44f86c85c8e66be6f493c52bb5e6a4d127b58cd8c2c1e",
+      "lines": 66,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/compaction.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/compaction.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/compaction.md",
+      "sha256": "190b8c651148504613aea98b0637807c536ed0362948fda1bcd1ae137d75ff4a",
+      "lines": 463,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/environment-variables.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/environment-variables.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/environment-variables.md",
+      "sha256": "dac9e3bda323132770ab8290198d7b43f37e9eba29ba6b99d8d1dec2e8f12b6e",
+      "lines": 99,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/docs/packages.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/docs/packages.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/docs/packages.md",
+      "sha256": "5fe4a3009d7260fe1e2f54b64086fc3c8b4d678232bfa2dbc7e91fe588fc9ea5",
+      "lines": 129,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/tools/path-utils.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/tools/path-utils.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/tools/path-utils.ts",
+      "sha256": "ab6f420d2388a41366113c17a25e356867820b87b02a169d044cfcf83e1997d3",
+      "lines": 118,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/utils/paths.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/utils/paths.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/utils/paths.ts",
+      "sha256": "64c3ebef724fa21ed0042e127908b4323a5d2f1b8aaa91eee550442332fe8502",
+      "lines": 140,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/tools/bash.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/tools/bash.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/tools/bash.ts",
+      "sha256": "de2b54d4f4bfbb844ce6d8077f63d715f7d8e80079dd9689b561e45b6679c81b",
+      "lines": 442,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/tools/read.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/tools/read.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/tools/read.ts",
+      "sha256": "c3c64f7105599455d3066568074796e2ddb143cb210da4981b0eb632aa3d2811",
+      "lines": 224,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/tools/write.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/tools/write.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/tools/write.ts",
+      "sha256": "2ee0a438c24cf83fefd733e349d55a21aa5b633c18934b2c80759fcf14b6f297",
+      "lines": 97,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/tools/edit.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/tools/edit.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/tools/edit.ts",
+      "sha256": "31a368c14cf5437ecac157765660001b16063302d9bd746303d6d1b1dcb5625d",
+      "lines": 220,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/extensions/types.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/extensions/types.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/extensions/types.ts",
+      "sha256": "d9a24065cc9830dc8bdc8d2e41299ad6ce125b3d156a0de1674faeabcb439122",
+      "lines": 2273,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/extensions/runner.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/extensions/runner.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/extensions/runner.ts",
+      "sha256": "2a3bd7f81623928070eb956cdac37b861a787297046f9ce7af0522ff6d41a98a",
+      "lines": 1560,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/agent-session.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/agent-session.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/agent-session.ts",
+      "sha256": "19186bf8a79876131a296fe17333c6276a671f8f48401df238c9814eeba0f5df",
+      "lines": 4398,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/sdk.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/sdk.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/sdk.ts",
+      "sha256": "61f398403c7510bec849583b2c46272df11ac5aa8d2e24b4ded97a108dd55b28",
+      "lines": 487,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/model-runtime.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/model-runtime.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/model-runtime.ts",
+      "sha256": "5f07a8c675f8ec6acffebf91fd0675910bdbd6348e6e100cf35ad4993fc84b30",
+      "lines": 1034,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/auth-storage.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/auth-storage.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/auth-storage.ts",
+      "sha256": "32d36165760959766807b8797042e69b65a65c7aad7d1b79a2621c41fe29b48d",
+      "lines": 506,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/resolve-config-value.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/resolve-config-value.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/resolve-config-value.ts",
+      "sha256": "0f53dad47fe5d5d8837c022b7951ccd3bd5a9b577bd662f0986272110e83bcc7",
+      "lines": 287,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/session-manager.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/session-manager.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/session-manager.ts",
+      "sha256": "450d82c529933214e088b8422f00061815e617f352f6c834689787a314064bff",
+      "lines": 2013,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/compaction/compaction.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/compaction/compaction.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/compaction/compaction.ts",
+      "sha256": "d5aebd41333957b57fa3f1bee2a18b3c00b5d47bb1b4af6f913cf8cd791099c8",
+      "lines": 1119,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/cache-warmer.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/cache-warmer.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/cache-warmer.ts",
+      "sha256": "596080fbe60702a44bcd8a31aeca45a5048d24c53fb0f0b40dd8781f776a8842",
+      "lines": 453,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/bug-report.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/bug-report.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/bug-report.ts",
+      "sha256": "fe83a233e4f38e6d234b54cdf8e8177c6caf0bfb08846830fc7c6d319adc6b9a",
+      "lines": 375,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/package-manager.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/package-manager.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/package-manager.ts",
+      "sha256": "c571e652abec58e1302177137e6640c228afa1d68089afd904d3073693691863",
+      "lines": 2760,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/trust-manager.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/trust-manager.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/trust-manager.ts",
+      "sha256": "3098117ebea573afa6be81d669b2b0fe9cbc948cb4c10ef4ef12e54ca6758cac",
+      "lines": 246,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/core/project-trust.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/core/project-trust.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/core/project-trust.ts",
+      "sha256": "39d5874a2a001ae7ac797ea297e31bf061eff07f9b2883f3eeaf6d3e1f5637ba",
+      "lines": 96,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/utils/output-files.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/utils/output-files.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/utils/output-files.ts",
+      "sha256": "a7ad819c4087b6f3ac79147d5e052718e181b105efc112be16a779a78a333620",
+      "lines": 34,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/utils/shell.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/utils/shell.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/utils/shell.ts",
+      "sha256": "c93b05fef8d75072adeff45cdec2abfa2e03eb2910d9755c1edb45ce237e614a",
+      "lines": 218,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/extensions/mcp/runtime.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/extensions/mcp/runtime.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/extensions/mcp/runtime.ts",
+      "sha256": "becea01e2afdea8363bacd56e2d4c4d59f55e69358e0780f170463eee1705e79",
+      "lines": 491,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/extensions/mcp/oauth.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/extensions/mcp/oauth.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/extensions/mcp/oauth.ts",
+      "sha256": "7a92a0c405058929582fcd27d9e586f309281e3d4dc980a20caab5b288b050d9",
+      "lines": 558,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/extensions/codemode/execute.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/extensions/codemode/execute.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/extensions/codemode/execute.ts",
+      "sha256": "3e1d957d40d395b1b3743cb56fc9333b247c33d6e2420574f4422cdfcd6d2a40",
+      "lines": 733,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/extensions/codemode/tool.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/extensions/codemode/tool.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/extensions/codemode/tool.ts",
+      "sha256": "e7570c32fd43de3d75c05cc966f47972688b2a89c20240e0d968916d337546bf",
+      "lines": 419,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/src/modes/interactive/interactive-mode.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/src/modes/interactive/interactive-mode.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/src/modes/interactive/interactive-mode.ts",
+      "sha256": "b38fc2eb1647d702f8bf09c6ba4e69dc6fda6941d6cb2edad214277aef8e8b8d",
+      "lines": 7109,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/permission-gate.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/examples/extensions/permission-gate.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/examples/extensions/permission-gate.ts",
+      "sha256": "e32086ba9dd9b4ba0fd308b65241d9affa0b5ecd3f90ef7ea1b9f2b30cab8cc1",
+      "lines": 34,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/protected-paths.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/examples/extensions/protected-paths.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/examples/extensions/protected-paths.ts",
+      "sha256": "9ca66b1f3b1b9a61cc5ddc660f92cca2ea66c4264a1bdb6b00e0da5844399fe2",
+      "lines": 30,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/sandbox/index.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/examples/extensions/sandbox/index.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/examples/extensions/sandbox/index.ts",
+      "sha256": "b5e527aac27254002f27b8bb9de7bc62e242e39eeb7c963683096039e0aa173e",
+      "lines": 321,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/coding-agent/examples/extensions/gondolin/index.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/coding-agent/examples/extensions/gondolin/index.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/coding-agent/examples/extensions/gondolin/index.ts",
+      "sha256": "9a9897639de8127a2abe6bb0d00f0005cd9e9cf9d51fd15893a827e67326bf62",
+      "lines": 531,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/codemode/README.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/codemode/README.md",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/codemode/README.md",
+      "sha256": "1aafb5f80143309df1df6d5d06cf5a0876a13decaccd027b81e458bbcd24043a",
+      "lines": 190,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/codemode/src/runtime/host.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/codemode/src/runtime/host.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/codemode/src/runtime/host.ts",
+      "sha256": "f4e16b656af936daf92e1c672cf9a27430184d1cdff3e4c204bc6e84f6e5864f",
+      "lines": 416,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/codemode/src/runtime/worker.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/codemode/src/runtime/worker.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/codemode/src/runtime/worker.ts",
+      "sha256": "9fe9607f2bff39ca2edec278ffff58954cb45b25142961834e282d20fd346097",
+      "lines": 161,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/mcp/src/transports/stdio.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/mcp/src/transports/stdio.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/mcp/src/transports/stdio.ts",
+      "sha256": "1f69dae42bae51698bee843d6340225072b6f29c006ca422a60f19a798d7bde6",
+      "lines": 216,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/mcp/src/oauth/flow.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/mcp/src/oauth/flow.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/mcp/src/oauth/flow.ts",
+      "sha256": "26cee1ab76dde6453b63b9942bda8eef33fadb4914eae5efc3bef7a37d9161dd",
+      "lines": 481,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/mcp/src/oauth/callback.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/mcp/src/oauth/callback.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/mcp/src/oauth/callback.ts",
+      "sha256": "1ac372dd5a1bffe81727e983b537e8cabcc53e5d22d23ffbc99d9cf2d72b0660",
+      "lines": 164,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "path": "packages/mcp/src/oauth/discovery.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/mcp/src/oauth/discovery.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/mcp/src/oauth/discovery.ts",
+      "sha256": "4b8998154db0c0ec188fc6a61269d4cd2ece08d1cdb6d2ef7d611bab1f49b91f",
+      "lines": 215,
+      "status": "saved",
+      "evidence_type": "primary_source_code_or_official_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "package.json",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/package.json",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/package.json",
+      "sha256": "2dc62f0a5e5bfd40d1e225168d6b1fd65c097d85564827060cec6ee917477b0d",
+      "lines": 71,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "README.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/README.md",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/README.md",
+      "sha256": "1ba7f195bcae65999b01d7798d2e258f615db57ec93c1d2c6c243b28fc64ff04",
+      "lines": 557,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "SECURITY.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/SECURITY.md",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/SECURITY.md",
+      "sha256": "a6b6d533be88c28bc633eca71fbcb1fe0029aa43e14b965737c1845efc6cf477",
+      "lines": 187,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "src/bash-enforce.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/src/bash-enforce.ts",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/src/bash-enforce.ts",
+      "sha256": "73ccc9a476c079eee8988f1faade95167e228da77df42718f3c78dc04cb433a8",
+      "lines": 111,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "src/resolve.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/src/resolve.ts",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/src/resolve.ts",
+      "sha256": "83c1f7b124b13347620acd51484782e2aba66d5bd0d60de5a0d87d3813864761",
+      "lines": 177,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "src/config-load.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/src/config-load.ts",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/src/config-load.ts",
+      "sha256": "0e9e221d3b6fd489913ad39e47f7090c8b28798b8bc88577299cf8fdcef7861c",
+      "lines": 652,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "path": "src/sandbox.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-modes/src/sandbox.ts",
+      "url": "https://github.com/wynainfo/pi-permission-modes/blob/07dae7ec54b56bf795f67c52308e20ef2f0acc62/src/sandbox.ts",
+      "sha256": "0d956a66245b8345d4ed8729385f4cb5166eafbdb4c1b3a1abfeedbda7148b3c",
+      "lines": 713,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "MasuRii/pi-permission-system",
+      "commit": "9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8",
+      "path": "package.json",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-system/package.json",
+      "url": "https://github.com/MasuRii/pi-permission-system/blob/9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8/package.json",
+      "sha256": "6f60d89e0dba82ccb0410505d77121c7713c7cac76bb4af6c4e4c2c6e5fec4bb",
+      "lines": 80,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "MasuRii/pi-permission-system",
+      "commit": "9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8",
+      "path": "README.md",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-system/README.md",
+      "url": "https://github.com/MasuRii/pi-permission-system/blob/9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8/README.md",
+      "sha256": "c9d9789598e0ed4e75ba258fd09270c76b89c7a7b3416cb475ae8c339e98a0e1",
+      "lines": 699,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "MasuRii/pi-permission-system",
+      "commit": "9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8",
+      "path": "src/index.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-system/src/index.ts",
+      "url": "https://github.com/MasuRii/pi-permission-system/blob/9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8/src/index.ts",
+      "sha256": "196dca23f7d4a6f0a25fe949faefe5fb6142a065ad4f5476c85dd82cae3f749e",
+      "lines": 2236,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "MasuRii/pi-permission-system",
+      "commit": "9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8",
+      "path": "src/permission-manager.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-system/src/permission-manager.ts",
+      "url": "https://github.com/MasuRii/pi-permission-system/blob/9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8/src/permission-manager.ts",
+      "sha256": "2b7465dc6831a8f055cd646dbb0818c8fa902b74c2e21be35fc9a4f8e8563735",
+      "lines": 1039,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "repository": "MasuRii/pi-permission-system",
+      "commit": "9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8",
+      "path": "src/logging.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-permission-system/src/logging.ts",
+      "url": "https://github.com/MasuRii/pi-permission-system/blob/9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8/src/logging.ts",
+      "sha256": "503693284a4e877eef44f26820b6a235865d2d8b33db4b92c753ada12f167a48",
+      "lines": 105,
+      "status": "saved",
+      "evidence_type": "primary_third_party_extension_code_or_author_documentation"
+    },
+    {
+      "path": "packages/agent/src/agent-loop.ts",
+      "local_file": "research/disclosures/raw/harness_20261008/pi/pi-mono/packages/agent/src/agent-loop.ts",
+      "url": "https://github.com/earendil-works/pi/blob/1cedd32724abfcb0915f76cc61b6827e2c16dbad/packages/agent/src/agent-loop.ts",
+      "sha256": "28a2b03e34a7e32f004aa851e54d3b5be9dad71c392205614cbc9abdf3a9020a",
+      "lines": 949,
+      "status": "saved",
+      "evidence_type": "primary_source_code_independent_review"
+    }
+  ],
+  "third_party_extensions": [
+    {
+      "repository": "wynainfo/pi-permission-modes",
+      "commit": "07dae7ec54b56bf795f67c52308e20ef2f0acc62",
+      "package_version": "2.4.1",
+      "scope": "third_party_extension_static_read_only"
+    },
+    {
+      "repository": "MasuRii/pi-permission-system",
+      "commit": "9affcc9d1b52cd79b8bb7da2bebb761ac7e5b1d8",
+      "package_version": "0.8.0",
+      "scope": "third_party_extension_static_read_only"
+    }
+  ],
+  "review_improvements": [
+    "tool_call blocks current tool, not necessarily process/conversation",
+    "codemode automatic arguments and errors retained in details/session",
+    "script errors automatically output to model",
+    "corrected stdio environment inheritance source lines"
+  ]
+}

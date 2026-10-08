@@ -2,7 +2,25 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## 個人情報を扱うAIハーネスの保護機構（2026年10月8日）
+
+[統合調査と開発要件](research/technology/ai_harness_privacy_security_master_20261008.md)。入力・分類・道具認可・承認・OS隔離・通信・資格情報・逐次出力・履歴・子エージェント・拡張・組織管理・失敗時動作・評価まで20分野を比較。担当を分けて調査し、担当を入れ替えたレビューで改善した。公開固定コードの確認と実機試験の範囲を区別する。
+
+[Codex](research/technology/harness_codex_security_20261008.md)、[Claude Code](research/technology/harness_claude_security_20261008.md)、[pi.dev](research/technology/harness_pi_security_20261008.md)、[その他7製品とOpenHands SDK](research/technology/harness_oss_security_20261008.md)、[ガードレール5基盤](research/technology/harness_guardrail_mechanisms_20261008.md)、[OpenAI Agents・LangChain・LangGraph・Deep Agents](research/technology/harness_sdk_security_20261008.md)、[情報フロー・認可・評価研究](research/technology/harness_information_flow_and_evaluation_20261008.md)。各稿に固定資料・取得ハッシュ・独立レビューへの参照を記載。
+
+## PIIの定義と分類例（2026年10月8日）
+
+[日本・EU・米国の定義と43例](research/technology/pii_definitions_and_classification_examples_20261008.md)。陽性20例、前提付きの陰性11例、文脈次第12例を比較。個人関連情報、公開情報、暗号化・仮名加工・匿名加工、医療情報の制度要件と、個人情報ではない企業秘密を区別する。[CSV](research/technology/pii_classification_examples_20261008.csv)、[JSON](research/technology/pii_classification_examples_20261008.json)、[一次資料の取得台帳](research/technology/pii_definition_sources_20261008.json)。
+
+## 最近5年の大規模な個人情報流出・事故（2026年10月8日）
+
+[日本・海外の事件、原因、事後調査、再発防止策](research/technology/personal_data_incidents_postmortem_20261008.md)。日本10事例・海外16事例と補足2事例を比較。流出確認・可能性・紛失、人数・件数・アカウント数、実施済み対策・命令・改善提案を区別する。[事件データ](research/technology/personal_data_incident_cases_20261008.json)、[出典・取得台帳](research/technology/personal_data_incident_sources_20261008.json)。
+
+[ランサムウェアの業務被害と生成AI公開前後の動向](research/technology/ransomware_damage_and_ai_era_trends_20261008.md)。同じ5年間の14事例と警察庁、FBI、Verizon、Sophos、Chainalysisの年次比較。停止・復旧・費用を流出と分け、発行年と観測期間、暗号化しない恐喝の定義変更、AI悪用の観測と因果関係を整理した。[比較データ](research/technology/ransomware_trends_20261008.json)、[CSV](research/technology/ransomware_trends_20261008.csv)、[事例](research/technology/ransomware_cases_20261008.json)、[取得台帳](research/technology/ransomware_sources_20261008.json)。
+
 ## 個人情報・機密データの管理と秘密計算（2026年10月7日）
+
+[機密情報管理の新興企業と投資会社](research/technology/sensitive_data_startups_and_investors_20261007.md)。YC採択5社、国内企業、文脈による機密分類、機密計算、メールの宛先との整合性、投資会社の出資理由を比較。17社を対象に、2026年10月8日にMINDの直近調達・医療機関での利用説明を追加。調達年月・出資と融資・買収済み企業を区別した。[取得台帳](research/technology/sensitive_data_startup_sources_20261007.json)。
 
 [AIによるメール誤送信防止：Outlook・GmailとCC混入対策](research/technology/email_misdirection_ai_controls_20261007.md)。国内外の導入例、文脈・宛先の検査、警告と強制停止の違い、社内検査サーバの構成案を整理。[取得台帳](research/technology/email_misdirection_sources_20261007.json)。
 
@@ -17,6 +35,10 @@
 [企業のAI利用・秘密計算の事例調査](research/technology/enterprise_sensitive_data_ai_cases_20261007.md)。暗号文・秘密分散での学習と推論、銀行・製薬の共同学習、暗号化検索、TEEでの文章生成を比較。企業内の権限管理と機密情報削除、2026年の暗号化言語モデル研究、保護する主体と公開証拠の限界を整理した。[出典・取得記録](research/technology/enterprise_sensitive_ai_sources_20261007.json)。
 
 [平文を開示せず機密性を判定する補足調査](research/technology/confidentiality_classification_without_plaintext_20261007.md)。秘密計算での文章分類、既知の秘密との照合、平文を読む前処理の有無を整理。企業内に限定せず研究機関等を含む。
+
+## インシデントの深掘り（2026年10月8日）
+
+[インシデント深掘りの索引と横断整理](research/incidents/README.md)。既存資料で概要だけだった約60件（国内外の個人情報流出、ランサムウェア、AI関連の事故・脆弱性）を一次資料で深掘りした。KADOKAWA／ドワンゴと[角川ドワンゴ学園の漏洩](research/incidents/kadokawa_dwango_gakuen_leak.md)を含む。漏洩人数・費用・原因・復元の有無など80件の訂正候補を見つけ、72件を既存資料へ反映した（[適用記録](research/incidents/corrections_applied_20261008.md)）。侵入経路は欠けていた統制の水準で書き、攻撃手順は記載しない。
 
 ## Master Report（最新版を保持し続ける統合資料）
 

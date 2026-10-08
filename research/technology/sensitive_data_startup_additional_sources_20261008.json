@@ -1,0 +1,37 @@
+{
+  "research_date": "2026-10-08",
+  "note": "2026年10月7日の調査への追加。製品性能・顧客の発言は会社掲載資料であり独立評価ではない。原本と抽出本文はGit管理外。",
+  "documents": [
+    {
+      "id": "mind_funding",
+      "title": "MIND 2026年9月シリーズB・利用事例",
+      "source_url": "https://mind.io/newsroom/mind-raises-usd72m-series-b-funding-to-bring-complete-dlp-to-the-ai-era",
+      "retrieved_at_utc": "2026-10-07T23:06:02.894242+00:00",
+      "resolved_url": "https://mind.io/newsroom/mind-raises-usd72m-series-b-funding-to-bring-complete-dlp-to-the-ai-era",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/startup_sensitive_data_20261008/mind_funding.html",
+      "bytes": 120221,
+      "sha256": "65789597d745b5d03046416a5adec65d86d2c80fd3bb6470d7d0ecfde312fa68",
+      "format": "html",
+      "text_file": "research/disclosures/raw/startup_sensitive_data_20261008/mind_funding.txt",
+      "text_characters": 8651,
+      "status": "取得済み"
+    },
+    {
+      "id": "yl_portfolio",
+      "title": "YL Venturesの投資先・会社紹介",
+      "source_url": "https://www.ylventures.com/",
+      "retrieved_at_utc": "2026-10-07T23:06:02.895609+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "yl_mind",
+      "title": "YL VenturesのMIND投資理由",
+      "source_url": "https://www.ylventures.com/news-and-insights/blog/minds-series-a-signals-the-future-of-dlp/",
+      "retrieved_at_utc": "2026-10-07T23:06:02.896174+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

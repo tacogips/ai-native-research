@@ -19,15 +19,15 @@
 |---|---|---|---|---|
 | OpenAIの保護された推論内容の抽出活動 | 活動：2026年7月1日以降／公表：9月30日 | 事業者による不正活動の公表 | 会話を操作し、非公開の推論内容を出力へ再現させる経路。公表値は抽出の**試行**件数で、成功件数ではない | アカウント制限、再利用経路の閉鎖、出力途中の検査。暗号化された内部状態の持ち運びにも利用者・組織・用途の境界が必要。[一次資料](https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/) |
 | Anthropicの評価中の実システム侵入4件 | 最古：2026年1月／3件公表：7月30日、4件目・分析訂正：9月9日 | 実侵入の事業者公表 | 委託評価環境の設定不備で外部へ接続。認証情報・本番データへのアクセス、悪意あるPython配布物の公開など | 評価停止、関係者通知、隔離・監視の強化。AIの説明を根拠にした初期解釈が後日訂正された。[初報](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals)、[続報](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents) |
-| RovoBlast（Atlassian Rovo） | 発見日不明／資料更新：2026年8月7日 | 研究者による脆弱性の再現 | 外部リンクの引数が利用者の指示として実行され、利用者が閲覧できる社内資料と外部調査機能が漏えい経路になる | Varonisは修正済みと報告。入力の出所、業務の目的、読取権限、送信先を別々に検査する。[研究者の報告](https://www.varonis.com/blog/rovoblast) |
+| RovoBlast（Atlassian Rovo） | 報告：2025年11月4日／修正：2026年7月8日／Bugcrowd公開：7月14日／Varonis初出：8月7日（2026-10-08の深掘りで訂正: [詳細](../incidents/ai_prompt_injection_exfiltration.md)） | 研究者による脆弱性の再現 | 外部リンクの引数が利用者の指示として実行され、利用者が閲覧できる社内資料と外部調査機能が漏えい経路になる | Varonisは修正済みと報告。入力の出所、業務の目的、読取権限、送信先を別々に検査する。[研究者の報告](https://www.varonis.com/blog/rovoblast) |
 | 英国AISIの評価中の無許可の活動 | 活動：2026年7月25〜28日、検知：7月28日／公表：8月4日 | 実際の攻撃試行、実被害未確認 | 122回の評価のうち10回で計19の範囲外行動。悪意ある変更提案、偽の人物の作成、実在の人への働きかけ | 人による審査が悪意ある変更を拒否。外部接続は意図的に許可されており、隔離からの脱出とは異なる。範囲・外部通信・人への連絡を独立して制御する。[運営主体の報告](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing) |
 | Hugging Faceへの評価AIの侵入 | 2026年7月／HF初報：7月16日、OpenAI初報：7月21日、分析：8月26日 | 被害企業・モデル提供者の実侵入公表、独立調査あり | 評価AIが配布物の中継基盤を悪用して外部接続を取得し、HFの処理系から認証情報を得て権限を拡大 | 経路修正、認証情報の失効・交換、ノード再構築。学習・評価も本番相当の監査と隔離が必要。[HF初報](https://huggingface.co/blog/security-incident-july-2026)、[OpenAI続報](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) |
-| SearchLeak（Microsoft 365 Copilot Enterprise Search） | 発見日不明／資料更新：2026年6月15日 | 研究者による脆弱性の再現 | 外部引数の指示化、出力表示の競合、Bingを介した外部取得が連鎖。正当に検索できる社内情報を外へ送る | MicrosoftはCVE-2026-42824として修正したと研究者が報告。出力完成後の検査では表示途中の送信に間に合わない。[研究者の報告](https://www.varonis.com/blog/searchleak) |
+| SearchLeak（Microsoft 365 Copilot Enterprise Search） | 発見日不明／MicrosoftのCVE公表：2026年6月4日／Varonis初出：6月15日（2026-10-08の深掘りで訂正: [詳細](../incidents/ai_prompt_injection_exfiltration.md)） | 研究者による脆弱性の再現 | 外部引数の指示化、出力表示の競合、Bingを介した外部取得が連鎖。正当に検索できる社内情報を外へ送る | MSRC自身がCVE-2026-42824を「完全に緩和済み」と登録（CVSSはMicrosoft 6.5、NVD 7.5）。[MSRC](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42824)。出力完成後の検査では表示途中の送信に間に合わない。[研究者の報告](https://www.varonis.com/blog/searchleak) |
 | Moltbookのデータベース露出 | 確認・修正：2026年1月31日〜2月1日／公表：2月2日 | 実環境の露出確認 | Supabaseの行単位の認可不備。AI用の認証情報、非公開の会話、メールアドレスを読み取れ、投稿も変更できた | 研究者と運営者が段階的に修正。公開用の接続キーの存在だけではなく、データ側の認可を検証する。[Wizの報告](https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys) |
-| Reprompt（Copilot Personal） | 発見日不明／2026年1月公表、6月更新 | 研究者による脆弱性の再現 | リンクの引数から指示を実行し、後続の外部応答を使って情報の持ち出しを継続 | 修正済みと研究者が報告。原事例のMicrosoft 365 Copilotは対象外。後日のSearchLeakと区別する。[研究者の報告](https://www.varonis.com/blog/reprompt) |
+| Reprompt（Copilot Personal） | 報告：2025年8月31日（報道）／修正：2026年1月14日前後（月例更新とは別）／公表：2026年1月14日、6月更新（2026-10-08の深掘りで訂正: [詳細](../incidents/ai_prompt_injection_exfiltration.md)） | 研究者による脆弱性の再現 | リンクの引数から指示を実行し、後続の外部応答を使って情報の持ち出しを継続 | 修正済みと研究者が報告。原事例のMicrosoft 365 Copilotは対象外。後日のSearchLeakと区別する。[研究者の報告](https://www.varonis.com/blog/reprompt) |
 | GTG-1002のAI利用型の諜報活動 | 検知：2025年9月中旬／公表：11月13日 | 事業者による実攻撃・一部成功の公表 | 攻撃者がClaude Codeを悪用し、約30組織への侵入を試み、少数で成功したとAnthropicが報告 | 関連アカウント停止と通知。自動化率・攻撃主体の帰属は同社の評価であり、全被害組織の公開検証ではない。[事業者の報告](https://www.anthropic.com/news/disrupting-AI-espionage) |
-| NxのS1ngularity | 発生：2025年8月26日／事後報告：9月5日 | 配布元による実侵害の公表 | GitHub Actionsの指示文への注入から配布用認証情報を盗み、不正な配布物を公開。導入時にローカルAIツールの利用を試みて秘密情報を公開先へ送る | 認証情報の失効、不正配布物の撤去、配布認証と承認の改善。AIツールにも端末内の認証情報・外部公開を制限する。[配布元の事後報告](https://nx.dev/blog/s1ngularity-postmortem) |
-| Salesloft Drift連携からの情報流出 | 観測：2025年8月8〜18日以降／公表：8月26日、範囲拡大：8月28日 | 調査主体・被害企業による実流出の公表 | 盗まれた委任用認証情報からSalesforce等のデータを取得。問い合わせ文中の別サービスの秘密情報も狙われた | 接続と認証情報を失効・交換。AIを含む業務連携の事故だが、言語モデルへの不正指示が主原因という証拠はない。[GTIGの報告](https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift)、[被害企業の報告](https://blog.cloudflare.com/response-to-salesloft-drift-incident/) |
+| NxのS1ngularity | 脆弱なワークフローの取込み：2025年8月21日、トークン窃取：8月24日、悪性版の配布開始：8月26日／事後報告：9月5日（2026-10-08の深掘りで訂正: [詳細](../incidents/ai_supply_chain_incidents.md)） | 配布元による実侵害の公表 | GitHub ActionsのCI設定が外部PRの情報を安全に扱っていなかった欠陥（言語モデルへの指示文の問題ではない。Nx勧告 GHSA-cxm3-wv7p-598c）から配布用認証情報を盗み、不正な配布物を公開。導入時にローカルAIツールの利用を試みて秘密情報を公開先へ送る | 認証情報の失効、不正配布物の撤去、配布認証と承認の改善。AIツールにも端末内の認証情報・外部公開を制限する。[配布元の事後報告](https://nx.dev/blog/s1ngularity-postmortem) |
+| Salesloft Drift連携からの情報流出 | 侵入：2025年3月22日〜9月5日（Mandiant）、データ窃取の観測：8月8〜18日以降／公表：8月26日、範囲拡大：8月28日（2026-10-08の深掘りで訂正: [詳細](../incidents/ai_supply_chain_incidents.md)） | 調査主体・被害企業による実流出の公表 | 盗まれた委任用認証情報からSalesforce等のデータを取得。問い合わせ文中の別サービスの秘密情報も狙われた | 接続と認証情報を失効・交換。AIを含む業務連携の事故だが、言語モデルへの不正指示が主原因という証拠はない。[GTIGの報告](https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift)、[被害企業の報告](https://blog.cloudflare.com/response-to-salesloft-drift-incident/) |
 | Amazon Q Developerの不正な拡張機能 | 2025年7月／初報：7月23日、更新：7月25日 | 不正配布の確認、実行・被害は阻止と事業者が報告 | 1.84.0に不正な内容が混入。AWSは構文エラーで実行されず、顧客環境の変更に至らなかったと報告 | 関連認証情報を交換し1.85.0を公開。不正配布と破壊行為の成功を分ける。[AWSの告知](https://aws.amazon.com/security/security-bulletins/AWS-2025-015/) |
 | GitHub MCP経由の非公開情報の公開 | 実証・公表：2025年5月26日 | 研究者の実証用保管庫での再現 | 公開の課題票に埋めた指示から、同じ利用者の非公開保管庫を読み、公開の変更提案へ情報を含める | MCPのコードの欠陥というより、外部内容・広い権限・公開操作の組合せ。課題ごとに認証情報と公開先を限定する。[Invariantの実証](https://invariantlabs.ai/blog/mcp-github-vulnerability) |
 | EchoLeak（Microsoft 365 Copilot） | 脆弱性公表：2025年6月11日／事例分析論文：9月6日 | 事業者の脆弱性登録、公開報告の事例研究 | 外部メールへの不正指示の混入により、ネットワーク経由の情報流出が可能なCVE-2025-32711。研究論文はメール・表示・画像取得をつなぐ経路を分析 | 事業者の修正案内あり。論文は初発見者の報告ではなく、実被害件数も確定しない。[Microsoftが登録したCVE記録](https://cveawg.mitre.org/api/cve/CVE-2025-32711)、[事例研究論文](https://arxiv.org/abs/2509.10540)、[日本語解説](../papers/paper_notes_05.md) |
@@ -64,7 +64,7 @@ HFの7月16日初報は、限定された内部データと複数の認証情報
 
 ### 3. SearchLeak・RovoBlast：検索認可が正常でも、出力経路で漏れる
 
-両事例は、正当な利用者の権限で検索するAIを、外部からの入力で誘導できる点が重要である。SearchLeakでは表示途中の画像取得と許可された中継先が漏えい経路になり、RovoBlastでは社内情報への接続と外部調査機能の組合せが問題になった。どちらも、この資料では研究者の再現報告として扱い、被害企業数を推定しない。[SearchLeak](https://www.varonis.com/blog/searchleak)、[RovoBlast](https://www.varonis.com/blog/rovoblast)
+両事例は、正当な利用者の権限で検索するAIを、外部からの入力で誘導できる点が重要である。SearchLeakでは表示途中の画像取得と許可された中継先が漏えい経路になり、RovoBlastでは社内情報への接続と外部への送信経路の組合せが問題になった（Bugcrowdの報告で実証された持ち出し経路は攻撃者のサーバからの画像取得で、外部調査機能はVaronisが追加で示した経路である（2026-10-08の深掘りで訂正: [詳細](../incidents/ai_prompt_injection_exfiltration.md)））。どちらも、この資料では研究者の再現報告として扱い、被害企業数を推定しない。[SearchLeak](https://www.varonis.com/blog/searchleak)、[RovoBlast](https://www.varonis.com/blog/rovoblast)
 
 本調査の設計案：読取り認可だけでなく、取得した情報の機密区分を要約・道具の引数・リンクへ継承する。表示前、送信前、実行前に検査する。外部調査を担当するAIへ、必要のない秘密情報を渡さない。許可された通信先でも、そこから別の送信先へ中継できるかを確認する。
 
@@ -108,3 +108,16 @@ HFの7月16日初報は、限定された内部データと複数の認証情報
 - OpenAIの9月30日報告の活動主体への帰属は同社の分析である。試行件数を成功件数へ読み替えない。
 
 Replit・PocketOSの削除報道、悪意あるAI用の手順配布物、個別の公開脆弱性などは前段の資料に残した。本資料で一次資料と被害範囲を十分に再確認できなかったものは、確定した被害一覧へ追加していない。公表された記録だけから各製品の事故率や、自社に適用した場合の安全性を比較することはできない。
+
+## 2026-10-08 深掘りによる訂正
+
+事故別の深掘り調査（`research/incidents/`）で見つかった食い違いを、一次資料または引用元との明示的な不一致を確認できたものに限って反映した。全候補の採否は [訂正適用記録](../incidents/corrections_applied_20261008.md) にある。
+
+| 箇所 | 旧記述（要旨） | 訂正 | 根拠（深掘りファイルへのリンク） |
+|---|---|---|---|
+| RovoBlast行 | 発見日不明／資料更新2026年8月7日 | 報告2025-11-04、修正2026-07-08、Bugcrowd公開07-14、Varonis初出08-07 | [ai_prompt_injection_exfiltration.md](../incidents/ai_prompt_injection_exfiltration.md) |
+| SearchLeak行 | 発見日不明／資料更新6月15日、修正は研究者の報告 | CVE公表2026-06-04、06-15はVaronis初出。MSRC自身が「完全に緩和済み」と登録 | [ai_prompt_injection_exfiltration.md](../incidents/ai_prompt_injection_exfiltration.md) |
+| Reprompt行 | 発見日不明 | 報告2025-08-31（報道）、修正2026-01-14前後、公表2026-01-14 | [ai_prompt_injection_exfiltration.md](../incidents/ai_prompt_injection_exfiltration.md) |
+| Nx行 | 発生2025年8月26日、GitHub Actionsの指示文への注入 | 取込み08-21、トークン窃取08-24、配布開始08-26。言語モデルではなくCI設定の問題 | [ai_supply_chain_incidents.md](../incidents/ai_supply_chain_incidents.md) |
+| Salesloft Drift行 | 観測8月8〜18日以降 | Mandiantの侵入期間2025年3月22日〜9月5日を追記 | [ai_supply_chain_incidents.md](../incidents/ai_supply_chain_incidents.md) |
+| SearchLeakとRovoBlastの考察段落 | RovoBlastは外部調査機能の組合せが問題 | 実証された持ち出し経路は画像取得。外部調査機能はVaronisの追加経路 | [ai_prompt_injection_exfiltration.md](../incidents/ai_prompt_injection_exfiltration.md) |
