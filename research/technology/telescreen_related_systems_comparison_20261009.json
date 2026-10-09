@@ -1,0 +1,507 @@
+{
+  "調査日": "2026-10-09",
+  "凡例": "未確認は不在ではない。機構・部品・参考を含み独立企業数ではない。精度順位ではない。",
+  "対象数": 50,
+  "比較": [
+    {
+      "対象": "Teleskope",
+      "区分": "直接候補",
+      "確認した検査対象": "複数クラウド保存・DB・SMB・業務クラウド",
+      "確認した警告運用": "状態・所有者通知・外部依頼・修正手順",
+      "主な限界": "標準Outpostは抽出平文を遠隔処理。再発/再検査の全条件未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://docs.teleskope.ai/the-platform/policy-maker",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Sentra",
+      "区分": "直接候補",
+      "確認した検査対象": "複数保存先・DB・業務クラウド",
+      "確認した警告運用": "状態・履歴・再検査要求・検査範囲",
+      "主な限界": "手動状態と確認済み修正は別",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://sentra.io/learn/sentra-mcp-server-ai-driven-data-security-operations",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Datadog SDS Cloud Storage",
+      "区分": "直接候補",
+      "確認した検査対象": "S3テキスト。顧客AWS内検査",
+      "確認した警告運用": "保存先/所有者・関連設定警告の担当/履歴/手順",
+      "主な限界": "ログ側の集約・原文保持をS3へ一般化しない",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.datadoghq.com/security/sensitive_data_scanner/setup/cloud_storage/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "IBM Guardium Exposure Manager",
+      "区分": "直接候補",
+      "確認した検査対象": "保存先・端末の方針違反",
+      "確認した警告運用": "担当・履歴・再検査待ち・外部依頼",
+      "主な限界": "端末と保存先の状態遷移が違う。例外承認は削除と別",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://www.ibm.com/docs/en/exposure-manager?topic=managing-issues",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Rubrik DSPM",
+      "区分": "直接候補",
+      "確認した検査対象": "クラウド・自社保存先・M365",
+      "確認した警告運用": "方針継続評価・既存違反解消・修正案",
+      "主な限界": "方針停止でも閉じる。バックアップ検査と別",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.rubrik.com/en-us/saas/dspm/dsp_policies.html",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "BigID",
+      "区分": "直接候補",
+      "確認した検査対象": "DB・ファイル・業務クラウド",
+      "確認した警告運用": "case/担当/状態API・外部管理",
+      "主な限界": "resolved変更が再検査を意味しない",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://developer.bigid.com/api/data-posture-api-tutorial/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Cyera",
+      "区分": "直接候補",
+      "確認した検査対象": "複数クラウド・業務クラウド",
+      "確認した警告運用": "所有者・修正前確認・権限修正・監査",
+      "主な限界": "再発/期限API・検出値保持の詳細は未確認",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.cyera.com/solutions/remediation",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Varonis",
+      "区分": "直接候補",
+      "確認した検査対象": "クラウド・NAS・業務クラウド",
+      "確認した警告運用": "公開リンク/権限修正・優先化",
+      "主な限界": "配置別原文処理とAI監視の保持例外",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.varonis.com/trust/security",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Concentric AI",
+      "区分": "直接候補",
+      "確認した検査対象": "S3・自社保存先・構造化/非構造化",
+      "確認した警告運用": "同種文書と権限から危険評価・修正",
+      "主な限界": "自社SaaSが本文処理。氏名メール保持の例外",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://concentric.ai/wp-content/uploads/2025/06/AI_FAQs_June2025-Mary-B.pdf",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Symmetry DataGuard",
+      "区分": "直接候補",
+      "確認した検査対象": "クラウド・自社保存先・権限",
+      "確認した警告運用": "危険可視化・修正",
+      "主な限界": "重複/再発/期限詳細は未確認",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://aws.amazon.com/blogs/apn/cloud-native-data-security-posture-management-deployments-on-aws-with-symmetry-systems/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Securiti DSPM",
+      "区分": "直接候補",
+      "確認した検査対象": "保存分類・権限・公開",
+      "確認した警告運用": "方針・修正支援",
+      "主な限界": "成熟度提案を搭載仕様としない",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://securiti.ai/dspm/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Cortex Cloud Data Security",
+      "区分": "直接候補",
+      "確認した検査対象": "バケット・ファイル・DB・業務クラウド",
+      "確認した警告運用": "優先化・XSOAR等修正手順",
+      "主な限界": "現行提供と旧Prisma終了/将来予定を区別",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://www.paloaltonetworks.com/blog/security-operations/cortex-data-security-ga-dlp-ddr/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Wiz DSPM",
+      "区分": "直接候補",
+      "確認した検査対象": "クラウド保存・機密分類・攻撃経路",
+      "確認した警告運用": "危険の優先化・対応",
+      "主な限界": "全文保持/検査範囲/再発条件詳細未確認",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://www.wiz.io/customers/matillion",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Netwrix Auditor + Data Classification",
+      "区分": "直接候補",
+      "確認した検査対象": "Windows/NAS・SharePoint・SQLServer",
+      "確認した警告運用": "報告・検索・警告",
+      "主な限界": "別処理の分類更新に時間差",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.netwrix.com/docs/auditor/10_8/admin/settings/sensitivedatadiscovery",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Netwrix Access Analyzer Sensitive Data Discovery",
+      "区分": "直接候補",
+      "確認した検査対象": "AWS・Dropbox・DB・ファイル等",
+      "確認した警告運用": "内容検査とアクセス監査",
+      "主な限界": "Auditorと別製品系統",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.netwrix.com/docs/accessanalyzer/11_6/sensitivedatadiscovery/overview",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Amazon Macie",
+      "区分": "限定保存先の直接候補",
+      "確認した検査対象": "対応S3オブジェクト",
+      "確認した警告運用": "検出API・EventBridge・外部管理",
+      "主な限界": "標本あり。機密finding新規。配送最善努力",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://docs.aws.amazon.com/macie/latest/user/findings-publish-event-schemas.html",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Google Sensitive Data Protection",
+      "区分": "限定保存先の直接候補",
+      "確認した検査対象": "GCS・BigQuery・Datastore・API",
+      "確認した警告運用": "job・概要変更通知・外部管理",
+      "主な限界": "quoteと保存設定、外部管理を別に設計",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Google Workspace Drive DLP",
+      "区分": "限定保存先の直接候補",
+      "確認した検査対象": "Driveファイルと共有",
+      "確認した警告運用": "管理者通知・担当・状態",
+      "主な限界": "snippet保持と再検査条件を確認",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://knowledge.workspace.google.com/admin/security/dlp-for-drive-faq",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Microsoft Purview Data Map/DSPM/DLP",
+      "区分": "直接候補・複数機構",
+      "確認した検査対象": "Azure・M365等、機構別",
+      "確認した警告運用": "DLP担当/履歴/集約、DSPM危険分析",
+      "主な限界": "各機構の対応/課金/原文処理を合成しない",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Cyberhaven DSPM",
+      "区分": "直接候補",
+      "確認した検査対象": "端末・クラウド保存・SaaS等",
+      "確認した警告運用": "保存先横断検出・所有者経路",
+      "主な限界": "再検査/原文送信の具体条件未確認",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.cyberhaven.com/product/dspm",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Nightfall",
+      "区分": "限定保存先の直接候補",
+      "確認した検査対象": "Slack・Drive・GitHub・M365等、API",
+      "確認した警告運用": "Event集約・重複・サービス別自動解決",
+      "主な限界": "任意storage管理接続・再発条件は未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.nightfall.ai/dlp-for-data-at-rest",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Strac",
+      "区分": "直接候補",
+      "確認した検査対象": "S3・DB・業務クラウド",
+      "確認した警告運用": "伏字・隔離・削除・共有制限・通知",
+      "主な限界": "重複/再発/期限/再検査詳細未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.strac.io/saas-dlp",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "elba",
+      "区分": "限定保存先の直接候補",
+      "確認した検査対象": "Google/Microsoft・Dropbox・Confluence・Slack公開",
+      "確認した警告運用": "利用者作業・通知/再通知・追跡",
+      "主な限界": "S3/任意ファイル、日本語未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.elba.security/platform/data-protection",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Metomic",
+      "区分": "現行範囲要確認",
+      "確認した検査対象": "業務クラウド保存DLP、現行AI通信管理",
+      "確認した警告運用": "伏字・アクセス・利用者通知",
+      "主な限界": "現行重点変更。storage対応を旧機能から推測しない",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.metomic.io/solution/data-security-posture-management/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "MIND",
+      "区分": "直接/隣接候補",
+      "確認した検査対象": "業務クラウド・自社共有",
+      "確認した警告運用": "incident・所有者・権限/削除・監査",
+      "主な限界": "個別storage接続・再発詳細未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://mind.io/product",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Polymer",
+      "区分": "直接/隣接候補",
+      "確認した検査対象": "Slack・Drive・Teams等",
+      "確認した警告運用": "伏字・権限・人の確認",
+      "主な限界": "公開操作仕様/保持詳細未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.polymerhq.io/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "GitGuardian Platform",
+      "区分": "認証情報の直接候補",
+      "確認した検査対象": "コード・CI・業務ツール・storage等",
+      "確認した警告運用": "出現集約・修正・再発",
+      "主な限界": "企業秘密一般の意味分類とは別",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://docs.gitguardian.com/platform/getting-started/first-incident",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "TruffleHog Enterprise",
+      "区分": "認証情報の直接候補",
+      "確認した検査対象": "S3等、接続別",
+      "確認した警告運用": "画面・状態・出現箇所・共有",
+      "主な限界": "公開CLIの原文出力と別。認証先確認通信",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://trufflesecurity.com/docs/how-we-handle-your-data",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "TruffleHog 公開版",
+      "区分": "構築部品",
+      "確認した検査対象": "Git・ファイル・S3・GCS等",
+      "確認した警告運用": "CLI出力、運用は別途",
+      "主な限界": "標準出力原秘密・有効性確認通信",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/trufflesecurity/trufflehog",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Gitleaks",
+      "区分": "構築部品",
+      "確認した検査対象": "Git・ディレクトリ・標準入力",
+      "確認した警告運用": "結果差分/除外。問題台帳は別",
+      "主な限界": "伏字既定0・補助出力別確認",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/gitleaks/gitleaks",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "detect-secrets",
+      "区分": "構築部品",
+      "確認した検査対象": "ファイル・コミット前検査",
+      "確認した警告運用": "baseline・audit",
+      "主な限界": "SHA1値の推測耐性/外部確認通信",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/Yelp/detect-secrets",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "DefectDojo",
+      "区分": "構築部品",
+      "確認した検査対象": "他検査器の結果",
+      "確認した警告運用": "取込み・重複・解決・再発",
+      "主な限界": "parserで原秘密やメール保存し得る",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/DefectDojo/django-DefectDojo",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Presidio",
+      "区分": "構築部品",
+      "確認した検査対象": "入力テキスト等のPII",
+      "確認した警告運用": "検出/匿名化API",
+      "主な限界": "監視/担当/再発管理は別",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/microsoft/presidio",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "OpenMetadata",
+      "区分": "構築部品",
+      "確認した検査対象": "DB等の目録・分類",
+      "確認した警告運用": "資産/タグ/品質管理",
+      "主な限界": "利用許諾・sample保存・旧資料との差",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/open-metadata/OpenMetadata",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "DataHub",
+      "区分": "構築部品",
+      "確認した検査対象": "データ目録・独自分類基盤",
+      "確認した警告運用": "資産管理",
+      "主な限界": "旧標準PII分類器は現行固定版で削除",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/datahub-project/datahub",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "P-Pointer File Security",
+      "区分": "国内直接候補",
+      "確認した検査対象": "PC・ファイルサーバ",
+      "確認した警告運用": "更新/差分検査・利用者移動/削除",
+      "主な限界": "再発/期限API・形式制限",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.ppointer.jp/product",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "InterSafe PIS",
+      "区分": "国内直接/部品候補",
+      "確認した検査対象": "Windows PC/server",
+      "確認した警告運用": "検出・暗号化・承認連携",
+      "主な限界": "追加option。すみずみ君engine",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.alsi.co.jp/solution/cybersecurity/ilp/alliance/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "すみずみ君",
+      "区分": "国内構築部品",
+      "確認した検査対象": "Windows可読ファイル等",
+      "確認した警告運用": "検出・定期実行",
+      "主な限界": "PISと同じengineを二重計上しない",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.sumizumikun.jp/sumizumikun/qa.html",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "ManageEngine Log360",
+      "区分": "部分直接候補",
+      "確認した検査対象": "network保存PII・アクセス",
+      "確認した警告運用": "探索・アクセス警告・問題管理",
+      "主な限界": "module/版別対応は未確定",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://download.manageengine.com/log-management/use-cases/discover-sensitive-data-in-the-network-log360.pdf",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Netskope DLP",
+      "区分": "隣接/部分直接",
+      "確認した検査対象": "cloud/web/email/API",
+      "確認した警告運用": "case・重複低減・修正",
+      "主な限界": "forensics原object保存は別",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://docs.netskope.com/en/forensics",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Forcepoint DLP",
+      "区分": "隣接/部分直接",
+      "確認した検査対象": "discovery/email/web/endpoint",
+      "確認した警告運用": "incident管理",
+      "主な限界": "forensics本文保持と版差",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://help.forcepoint.com/dlp/10.3.0/dlphelp/57B64CC0-C480-42E4-B0A6-851594E0AF06.html",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Proofpoint Enterprise DLP",
+      "区分": "隣接/部分直接",
+      "確認した検査対象": "email/cloud/endpoint",
+      "確認した警告運用": "統合incident・外部連携",
+      "主な限界": "本文/画面保持は製品別",
+      "詳細資料": "telescreen_related_enterprise_20261009.md",
+      "一次資料URL": "https://www.proofpoint.com/us/products/data-loss-prevention",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Harmonic Security",
+      "区分": "隣接",
+      "確認した検査対象": "AI向け通信・端末・MCP",
+      "確認した警告運用": "助言・警告・遮断",
+      "主な限界": "既存storage全文巡回は未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.harmonic.security/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Candor Security",
+      "区分": "隣接",
+      "確認した検査対象": "利用者/端末/業務基盤",
+      "確認した警告運用": "人物/ケース調査・優先化",
+      "主な限界": "独立保存先全件検査は未確認",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://candor.security/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Datadog Observability Pipelines",
+      "区分": "隣接/構築部品",
+      "確認した検査対象": "流れるログ",
+      "確認した警告運用": "局所機密検出・伏字",
+      "主な限界": "保存S3巡回と別、可逆mask別",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.datadoghq.com/observability_pipelines/processors/sensitive_data_scanner/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "CloudWatch Logs data protection",
+      "区分": "隣接",
+      "確認した検査対象": "新規取り込みログ",
+      "確認した警告運用": "検出監査・件数監視",
+      "主な限界": "遡及検査なし。unmask可",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Sentry",
+      "区分": "運用の参考",
+      "確認した検査対象": "アプリerror等",
+      "確認した警告運用": "集約・状態・解決後再発",
+      "主な限界": "任意storage機密分類ではない",
+      "詳細資料": "telescreen_related_storage_monitoring_20261009.md",
+      "一次資料URL": "https://docs.sentry.io/product/issues/states-triage/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "OpenDLP / MyDLP",
+      "区分": "歴史的参考",
+      "確認した検査対象": "ファイル/DB等の旧公開実装",
+      "確認した警告運用": "旧検出/管理実装",
+      "主な限界": "2026保守運用を実証できない",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://github.com/ezarko/opendlp",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Gamma.AI",
+      "区分": "買収済み参考",
+      "確認した検査対象": "旧業務クラウドDLP",
+      "確認した警告運用": "CASB/DLP統合系統",
+      "主な限界": "Palo Alto統合、独立現行企業と数えない",
+      "詳細資料": "telescreen_related_saas_dlp_20261009.md",
+      "一次資料URL": "https://www.paloaltonetworks.com/blog/2022/04/next-gen-casb-gamma-ai-data-protection/",
+      "調査日": "2026-10-09"
+    },
+    {
+      "対象": "Cloud Custodian / Prowler",
+      "区分": "隣接構築部品",
+      "確認した検査対象": "クラウド設定・統制",
+      "確認した警告運用": "規則/監査結果",
+      "主な限界": "本文機密分類と問題台帳は別",
+      "詳細資料": "telescreen_related_oss_and_research_20261009.md",
+      "一次資料URL": "https://www.cloudcustodian.io/docs/filters.html",
+      "調査日": "2026-10-09"
+    }
+  ]
+}

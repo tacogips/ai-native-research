@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-09T08:26:47.083059+00:00",
+  "scope": "公開資料の存在・記録済みハッシュ・内部リンク・比較表整合。実操作・通信・精度の試験ではない。",
+  "source_groups": {
+    "storage": {
+      "records": 48,
+      "status_counts": {
+        "saved": 37,
+        "saved_login_page_only": 5,
+        "failed": 5,
+        "web_index_text_reviewed": 1
+      },
+      "saved_original_files_including_noncontent": 42
+    },
+    "enterprise": {
+      "records": 68,
+      "status_counts": {
+        "saved": 64,
+        "saved_redirect_not_evidence": 1,
+        "download_failed": 3
+      },
+      "saved_original_files_including_noncontent": 65
+    },
+    "saas": {
+      "records": 81,
+      "status_counts": {
+        "saved": 78,
+        "failed": 3
+      },
+      "saved_original_files_including_noncontent": 78
+    },
+    "oss": {
+      "records": 74,
+      "status_counts": {
+        "saved": 63,
+        "failed": 4,
+        "redirect_notice_only": 1,
+        "extracted": 6
+      },
+      "saved_original_files_including_noncontent": 70
+    }
+  },
+  "source_record_count": 271,
+  "file_hash_checks": 446,
+  "local_link_checks": 48,
+  "comparison_rows": 50,
+  "errors": [],
+  "passed": true
+}

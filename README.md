@@ -2,6 +2,12 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## 保存された機密データの監視・警告管理（2026年10月9日）
+
+[ストレージ等を監視し、Sentryのように警告するシステムの比較](research/technology/telescreen_related_systems_20261009.md)。S3等のオブジェクト保存、ファイル共有、データベース、業務クラウドを含めて調査。50行の製品・機構・部品・参考を整理し、内容分類とアクセス方針、問題集約、担当、修正後再検査、再発、原文の処理・保持を比較した。独立企業50社や実測精度順位を意味しない。[比較CSV](research/technology/telescreen_related_systems_comparison_20261009.csv)、[JSON](research/technology/telescreen_related_systems_comparison_20261009.json)、[レビュー記録](research/technology/telescreen_related_review_summary_20261009.md)。
+
+[ストレージ中心](research/technology/telescreen_related_storage_monitoring_20261009.md)、[企業基盤・国内製品](research/technology/telescreen_related_enterprise_20261009.md)、[業務クラウドの10系統](research/technology/telescreen_related_saas_dlp_20261009.md)、[公開実装・関連研究](research/technology/telescreen_related_oss_and_research_20261009.md)。公開一次資料の原本と取得台帳を保存し、担当を入れ替えてレビュー・改善した。HTTP成功と本文取得成功、局所検査と外部送信、手動終了と修正確認を分ける。
+
 ## 個人情報を扱うAIハーネスの保護機構（2026年10月8日）
 
 [統合調査と開発要件](research/technology/ai_harness_privacy_security_master_20261008.md)。入力・分類・道具認可・承認・OS隔離・通信・資格情報・逐次出力・履歴・子エージェント・拡張・組織管理・失敗時動作・評価まで20分野を比較。担当を分けて調査し、担当を入れ替えたレビューで改善した。公開固定コードの確認と実機試験の範囲を区別する。

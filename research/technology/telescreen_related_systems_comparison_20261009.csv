@@ -1,0 +1,51 @@
+﻿対象,区分,確認した検査対象,確認した警告運用,主な限界,詳細資料,一次資料URL,調査日
+Teleskope,直接候補,複数クラウド保存・DB・SMB・業務クラウド,状態・所有者通知・外部依頼・修正手順,標準Outpostは抽出平文を遠隔処理。再発/再検査の全条件未確認,telescreen_related_saas_dlp_20261009.md,https://docs.teleskope.ai/the-platform/policy-maker,2026-10-09
+Sentra,直接候補,複数保存先・DB・業務クラウド,状態・履歴・再検査要求・検査範囲,手動状態と確認済み修正は別,telescreen_related_storage_monitoring_20261009.md,https://sentra.io/learn/sentra-mcp-server-ai-driven-data-security-operations,2026-10-09
+Datadog SDS Cloud Storage,直接候補,S3テキスト。顧客AWS内検査,保存先/所有者・関連設定警告の担当/履歴/手順,ログ側の集約・原文保持をS3へ一般化しない,telescreen_related_storage_monitoring_20261009.md,https://docs.datadoghq.com/security/sensitive_data_scanner/setup/cloud_storage/,2026-10-09
+IBM Guardium Exposure Manager,直接候補,保存先・端末の方針違反,担当・履歴・再検査待ち・外部依頼,端末と保存先の状態遷移が違う。例外承認は削除と別,telescreen_related_storage_monitoring_20261009.md,https://www.ibm.com/docs/en/exposure-manager?topic=managing-issues,2026-10-09
+Rubrik DSPM,直接候補,クラウド・自社保存先・M365,方針継続評価・既存違反解消・修正案,方針停止でも閉じる。バックアップ検査と別,telescreen_related_storage_monitoring_20261009.md,https://docs.rubrik.com/en-us/saas/dspm/dsp_policies.html,2026-10-09
+BigID,直接候補,DB・ファイル・業務クラウド,case/担当/状態API・外部管理,resolved変更が再検査を意味しない,telescreen_related_enterprise_20261009.md,https://developer.bigid.com/api/data-posture-api-tutorial/,2026-10-09
+Cyera,直接候補,複数クラウド・業務クラウド,所有者・修正前確認・権限修正・監査,再発/期限API・検出値保持の詳細は未確認,telescreen_related_enterprise_20261009.md,https://www.cyera.com/solutions/remediation,2026-10-09
+Varonis,直接候補,クラウド・NAS・業務クラウド,公開リンク/権限修正・優先化,配置別原文処理とAI監視の保持例外,telescreen_related_enterprise_20261009.md,https://www.varonis.com/trust/security,2026-10-09
+Concentric AI,直接候補,S3・自社保存先・構造化/非構造化,同種文書と権限から危険評価・修正,自社SaaSが本文処理。氏名メール保持の例外,telescreen_related_storage_monitoring_20261009.md,https://concentric.ai/wp-content/uploads/2025/06/AI_FAQs_June2025-Mary-B.pdf,2026-10-09
+Symmetry DataGuard,直接候補,クラウド・自社保存先・権限,危険可視化・修正,重複/再発/期限詳細は未確認,telescreen_related_storage_monitoring_20261009.md,https://aws.amazon.com/blogs/apn/cloud-native-data-security-posture-management-deployments-on-aws-with-symmetry-systems/,2026-10-09
+Securiti DSPM,直接候補,保存分類・権限・公開,方針・修正支援,成熟度提案を搭載仕様としない,telescreen_related_storage_monitoring_20261009.md,https://securiti.ai/dspm/,2026-10-09
+Cortex Cloud Data Security,直接候補,バケット・ファイル・DB・業務クラウド,優先化・XSOAR等修正手順,現行提供と旧Prisma終了/将来予定を区別,telescreen_related_storage_monitoring_20261009.md,https://www.paloaltonetworks.com/blog/security-operations/cortex-data-security-ga-dlp-ddr/,2026-10-09
+Wiz DSPM,直接候補,クラウド保存・機密分類・攻撃経路,危険の優先化・対応,全文保持/検査範囲/再発条件詳細未確認,telescreen_related_storage_monitoring_20261009.md,https://www.wiz.io/customers/matillion,2026-10-09
+Netwrix Auditor + Data Classification,直接候補,Windows/NAS・SharePoint・SQLServer,報告・検索・警告,別処理の分類更新に時間差,telescreen_related_storage_monitoring_20261009.md,https://docs.netwrix.com/docs/auditor/10_8/admin/settings/sensitivedatadiscovery,2026-10-09
+Netwrix Access Analyzer Sensitive Data Discovery,直接候補,AWS・Dropbox・DB・ファイル等,内容検査とアクセス監査,Auditorと別製品系統,telescreen_related_storage_monitoring_20261009.md,https://docs.netwrix.com/docs/accessanalyzer/11_6/sensitivedatadiscovery/overview,2026-10-09
+Amazon Macie,限定保存先の直接候補,対応S3オブジェクト,検出API・EventBridge・外部管理,標本あり。機密finding新規。配送最善努力,telescreen_related_enterprise_20261009.md,https://docs.aws.amazon.com/macie/latest/user/findings-publish-event-schemas.html,2026-10-09
+Google Sensitive Data Protection,限定保存先の直接候補,GCS・BigQuery・Datastore・API,job・概要変更通知・外部管理,quoteと保存設定、外部管理を別に設計,telescreen_related_enterprise_20261009.md,https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage,2026-10-09
+Google Workspace Drive DLP,限定保存先の直接候補,Driveファイルと共有,管理者通知・担当・状態,snippet保持と再検査条件を確認,telescreen_related_enterprise_20261009.md,https://knowledge.workspace.google.com/admin/security/dlp-for-drive-faq,2026-10-09
+Microsoft Purview Data Map/DSPM/DLP,直接候補・複数機構,Azure・M365等、機構別,DLP担当/履歴/集約、DSPM危険分析,各機構の対応/課金/原文処理を合成しない,telescreen_related_enterprise_20261009.md,https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about,2026-10-09
+Cyberhaven DSPM,直接候補,端末・クラウド保存・SaaS等,保存先横断検出・所有者経路,再検査/原文送信の具体条件未確認,telescreen_related_enterprise_20261009.md,https://www.cyberhaven.com/product/dspm,2026-10-09
+Nightfall,限定保存先の直接候補,Slack・Drive・GitHub・M365等、API,Event集約・重複・サービス別自動解決,任意storage管理接続・再発条件は未確認,telescreen_related_saas_dlp_20261009.md,https://www.nightfall.ai/dlp-for-data-at-rest,2026-10-09
+Strac,直接候補,S3・DB・業務クラウド,伏字・隔離・削除・共有制限・通知,重複/再発/期限/再検査詳細未確認,telescreen_related_saas_dlp_20261009.md,https://www.strac.io/saas-dlp,2026-10-09
+elba,限定保存先の直接候補,Google/Microsoft・Dropbox・Confluence・Slack公開,利用者作業・通知/再通知・追跡,S3/任意ファイル、日本語未確認,telescreen_related_saas_dlp_20261009.md,https://www.elba.security/platform/data-protection,2026-10-09
+Metomic,現行範囲要確認,業務クラウド保存DLP、現行AI通信管理,伏字・アクセス・利用者通知,現行重点変更。storage対応を旧機能から推測しない,telescreen_related_saas_dlp_20261009.md,https://www.metomic.io/solution/data-security-posture-management/,2026-10-09
+MIND,直接/隣接候補,業務クラウド・自社共有,incident・所有者・権限/削除・監査,個別storage接続・再発詳細未確認,telescreen_related_saas_dlp_20261009.md,https://mind.io/product,2026-10-09
+Polymer,直接/隣接候補,Slack・Drive・Teams等,伏字・権限・人の確認,公開操作仕様/保持詳細未確認,telescreen_related_saas_dlp_20261009.md,https://www.polymerhq.io/,2026-10-09
+GitGuardian Platform,認証情報の直接候補,コード・CI・業務ツール・storage等,出現集約・修正・再発,企業秘密一般の意味分類とは別,telescreen_related_oss_and_research_20261009.md,https://docs.gitguardian.com/platform/getting-started/first-incident,2026-10-09
+TruffleHog Enterprise,認証情報の直接候補,S3等、接続別,画面・状態・出現箇所・共有,公開CLIの原文出力と別。認証先確認通信,telescreen_related_oss_and_research_20261009.md,https://trufflesecurity.com/docs/how-we-handle-your-data,2026-10-09
+TruffleHog 公開版,構築部品,Git・ファイル・S3・GCS等,CLI出力、運用は別途,標準出力原秘密・有効性確認通信,telescreen_related_oss_and_research_20261009.md,https://github.com/trufflesecurity/trufflehog,2026-10-09
+Gitleaks,構築部品,Git・ディレクトリ・標準入力,結果差分/除外。問題台帳は別,伏字既定0・補助出力別確認,telescreen_related_oss_and_research_20261009.md,https://github.com/gitleaks/gitleaks,2026-10-09
+detect-secrets,構築部品,ファイル・コミット前検査,baseline・audit,SHA1値の推測耐性/外部確認通信,telescreen_related_oss_and_research_20261009.md,https://github.com/Yelp/detect-secrets,2026-10-09
+DefectDojo,構築部品,他検査器の結果,取込み・重複・解決・再発,parserで原秘密やメール保存し得る,telescreen_related_oss_and_research_20261009.md,https://github.com/DefectDojo/django-DefectDojo,2026-10-09
+Presidio,構築部品,入力テキスト等のPII,検出/匿名化API,監視/担当/再発管理は別,telescreen_related_oss_and_research_20261009.md,https://github.com/microsoft/presidio,2026-10-09
+OpenMetadata,構築部品,DB等の目録・分類,資産/タグ/品質管理,利用許諾・sample保存・旧資料との差,telescreen_related_oss_and_research_20261009.md,https://github.com/open-metadata/OpenMetadata,2026-10-09
+DataHub,構築部品,データ目録・独自分類基盤,資産管理,旧標準PII分類器は現行固定版で削除,telescreen_related_oss_and_research_20261009.md,https://github.com/datahub-project/datahub,2026-10-09
+P-Pointer File Security,国内直接候補,PC・ファイルサーバ,更新/差分検査・利用者移動/削除,再発/期限API・形式制限,telescreen_related_enterprise_20261009.md,https://www.ppointer.jp/product,2026-10-09
+InterSafe PIS,国内直接/部品候補,Windows PC/server,検出・暗号化・承認連携,追加option。すみずみ君engine,telescreen_related_enterprise_20261009.md,https://www.alsi.co.jp/solution/cybersecurity/ilp/alliance/,2026-10-09
+すみずみ君,国内構築部品,Windows可読ファイル等,検出・定期実行,PISと同じengineを二重計上しない,telescreen_related_enterprise_20261009.md,https://www.sumizumikun.jp/sumizumikun/qa.html,2026-10-09
+ManageEngine Log360,部分直接候補,network保存PII・アクセス,探索・アクセス警告・問題管理,module/版別対応は未確定,telescreen_related_enterprise_20261009.md,https://download.manageengine.com/log-management/use-cases/discover-sensitive-data-in-the-network-log360.pdf,2026-10-09
+Netskope DLP,隣接/部分直接,cloud/web/email/API,case・重複低減・修正,forensics原object保存は別,telescreen_related_enterprise_20261009.md,https://docs.netskope.com/en/forensics,2026-10-09
+Forcepoint DLP,隣接/部分直接,discovery/email/web/endpoint,incident管理,forensics本文保持と版差,telescreen_related_enterprise_20261009.md,https://help.forcepoint.com/dlp/10.3.0/dlphelp/57B64CC0-C480-42E4-B0A6-851594E0AF06.html,2026-10-09
+Proofpoint Enterprise DLP,隣接/部分直接,email/cloud/endpoint,統合incident・外部連携,本文/画面保持は製品別,telescreen_related_enterprise_20261009.md,https://www.proofpoint.com/us/products/data-loss-prevention,2026-10-09
+Harmonic Security,隣接,AI向け通信・端末・MCP,助言・警告・遮断,既存storage全文巡回は未確認,telescreen_related_saas_dlp_20261009.md,https://www.harmonic.security/,2026-10-09
+Candor Security,隣接,利用者/端末/業務基盤,人物/ケース調査・優先化,独立保存先全件検査は未確認,telescreen_related_saas_dlp_20261009.md,https://candor.security/,2026-10-09
+Datadog Observability Pipelines,隣接/構築部品,流れるログ,局所機密検出・伏字,保存S3巡回と別、可逆mask別,telescreen_related_storage_monitoring_20261009.md,https://docs.datadoghq.com/observability_pipelines/processors/sensitive_data_scanner/,2026-10-09
+CloudWatch Logs data protection,隣接,新規取り込みログ,検出監査・件数監視,遡及検査なし。unmask可,telescreen_related_storage_monitoring_20261009.md,https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html,2026-10-09
+Sentry,運用の参考,アプリerror等,集約・状態・解決後再発,任意storage機密分類ではない,telescreen_related_storage_monitoring_20261009.md,https://docs.sentry.io/product/issues/states-triage/,2026-10-09
+OpenDLP / MyDLP,歴史的参考,ファイル/DB等の旧公開実装,旧検出/管理実装,2026保守運用を実証できない,telescreen_related_oss_and_research_20261009.md,https://github.com/ezarko/opendlp,2026-10-09
+Gamma.AI,買収済み参考,旧業務クラウドDLP,CASB/DLP統合系統,Palo Alto統合、独立現行企業と数えない,telescreen_related_saas_dlp_20261009.md,https://www.paloaltonetworks.com/blog/2022/04/next-gen-casb-gamma-ai-data-protection/,2026-10-09
+Cloud Custodian / Prowler,隣接構築部品,クラウド設定・統制,規則/監査結果,本文機密分類と問題台帳は別,telescreen_related_oss_and_research_20261009.md,https://www.cloudcustodian.io/docs/filters.html,2026-10-09

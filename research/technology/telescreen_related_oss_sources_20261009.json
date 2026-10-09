@@ -1,0 +1,879 @@
+{
+  "retrieved_at": "2026-10-09",
+  "scope": "公開情報のみ。非公開実装・本物の秘密・制限付き研究データを使用せず、固定コード・原論文・公式資料を静的分析。",
+  "repositories": [
+    {
+      "name": "trufflehog",
+      "repo": "trufflesecurity/trufflehog",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "commit_date": "2026-10-08T09:39:09-07:00",
+      "latest_release": "v3.99.2",
+      "release_date": "2026-10-08T13:54:04Z"
+    },
+    {
+      "name": "gitleaks",
+      "repo": "gitleaks/gitleaks",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "commit_date": "2026-07-22T09:50:33-07:00",
+      "latest_release": "v8.30.1",
+      "release_date": "2026-03-21T02:17:58Z"
+    },
+    {
+      "name": "detect-secrets",
+      "repo": "Yelp/detect-secrets",
+      "commit": "5e141933554a0b74e7341841f318be21e895339c",
+      "commit_date": "2026-04-02T10:10:40-07:00",
+      "latest_release": "v1.5.0",
+      "release_date": "2024-05-06T18:05:06Z"
+    },
+    {
+      "name": "defectdojo",
+      "repo": "DefectDojo/django-DefectDojo",
+      "commit": "258344266af19de33d721e511f2fc34834f67bdb",
+      "commit_date": "2026-10-05T10:57:26-06:00",
+      "latest_release": "3.4.0",
+      "release_date": "2026-10-05T17:08:29Z"
+    },
+    {
+      "name": "datahub",
+      "repo": "datahub-project/datahub",
+      "commit": "12a7d7e5d831d282866602b00d3cdfad4a7f1bc2",
+      "commit_date": "2026-10-08T15:04:45-07:00",
+      "latest_release": "v1.7.0.1",
+      "release_date": "2026-09-03T19:36:36Z"
+    },
+    {
+      "name": "openmetadata",
+      "repo": "open-metadata/OpenMetadata",
+      "commit": "fc6a14d76d6ea58c4a13d49991e44e9423dc805a",
+      "commit_date": "2026-10-08T18:34:11Z",
+      "latest_release": "2.0.4-release",
+      "release_date": "2026-10-06T06:19:28Z"
+    },
+    {
+      "name": "mydlp",
+      "repo": "mydlp/mydlp",
+      "commit": "14d3fa1da2a212746f24fa2316d62e2b5f1f5ea1",
+      "commit_date": "2014-02-27T14:44:08-08:00",
+      "release_status": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "opendlp",
+      "repo": "ezarko/opendlp",
+      "commit": "b02568fdac225bd8c8c237b1120b4657d71556ec",
+      "commit_date": "2014-05-15T16:17:38-07:00",
+      "release_status": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "ggshield",
+      "repo": "GitGuardian/ggshield",
+      "commit": "36dd4ec67ee3f43963e9c12f4d90ab89a8e382ed",
+      "commit_date": "2026-10-08T17:34:51+02:00",
+      "latest_release": "v1.55.0",
+      "release_date": "2026-09-24T13:56:44Z"
+    },
+    {
+      "name": "issueguard",
+      "repo": "disa-lab/IssueGuard",
+      "commit": "70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4",
+      "commit_date": "2026-07-19T15:17:41+06:00",
+      "release_status": "not queried; research prototype"
+    }
+  ],
+  "sources": [
+    {
+      "id": "TH",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/README.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/README.md",
+      "sha256": "ac99fa9b5d9746fa5996ca7bbf10fe1974ed5d5f726185e0cbc38747e9556da1",
+      "status": "saved",
+      "title": "trufflehog: README.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 244,
+      "line_end": 288
+    },
+    {
+      "id": "THCUSTOM",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/README.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/README.md",
+      "sha256": "ac99fa9b5d9746fa5996ca7bbf10fe1974ed5d5f726185e0cbc38747e9556da1",
+      "status": "saved",
+      "title": "trufflehog: README.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 839,
+      "line_end": 900
+    },
+    {
+      "id": "THMAIN",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/main.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/main.go",
+      "sha256": "d4418e4f5b941148ef553e5a2edeb67d35862f12d52a98e6c774c5cad6e17f07",
+      "status": "saved",
+      "title": "trufflehog: main.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 40,
+      "line_end": 110
+    },
+    {
+      "id": "THJSON",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/pkg/output/json.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/pkg/output/json.go",
+      "sha256": "2f6b16fd0e984fd7e14d317fd0f5e8c837e310cc67c691865bf0022e7c07a980",
+      "status": "saved",
+      "title": "trufflehog: pkg/output/json.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 44,
+      "line_end": 86
+    },
+    {
+      "id": "THPLAIN",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/pkg/output/plain.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/pkg/output/plain.go",
+      "sha256": "851e807151108acca90d3c53f720628900147ebfda873ce16b1b7280e64f4c9d",
+      "status": "saved",
+      "title": "trufflehog: pkg/output/plain.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 30,
+      "line_end": 68
+    },
+    {
+      "id": "THVERIFY",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/pkg/detectors/github/v2/github.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/pkg/detectors/github/v2/github.go",
+      "sha256": "f7ea205b9a5bfb639701d0c2853aff9178a20536c110acec4f076b1b0b894469",
+      "status": "saved",
+      "title": "trufflehog: pkg/detectors/github/v2/github.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 75,
+      "line_end": 115
+    },
+    {
+      "id": "THREQ",
+      "url": "https://github.com/trufflesecurity/trufflehog/blob/0e427395344c7039c0b15a1147f5782805685b3e/pkg/detectors/github/v1/github_old.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog/pkg/detectors/github/v1/github_old.go",
+      "sha256": "792f5c8f583ae21df622f4dffb8ea50d320ade4d097f5680c23450dee1f94732",
+      "status": "saved",
+      "title": "trufflehog: pkg/detectors/github/v1/github_old.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "0e427395344c7039c0b15a1147f5782805685b3e",
+      "line_start": 140,
+      "line_end": 172
+    },
+    {
+      "id": "GLFLAG",
+      "url": "https://github.com/gitleaks/gitleaks/blob/b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b/cmd/root.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks/cmd/root.go",
+      "sha256": "275516f78724a075530898e6354e096f2b33ef78de8856f9a5f1b68b9552d994",
+      "status": "saved",
+      "title": "gitleaks: cmd/root.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "line_start": 75,
+      "line_end": 92
+    },
+    {
+      "id": "GLREDACT",
+      "url": "https://github.com/gitleaks/gitleaks/blob/b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b/report/finding.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks/report/finding.go",
+      "sha256": "a1ecd3837f6d89b8ddf95f2b0a6c301103b8d3e67f84e1b3520ffc6f7d7751a6",
+      "status": "saved",
+      "title": "gitleaks: report/finding.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "line_start": 77,
+      "line_end": 126
+    },
+    {
+      "id": "GLJSON",
+      "url": "https://github.com/gitleaks/gitleaks/blob/b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b/report/json.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks/report/json.go",
+      "sha256": "7cce5d031a4b6fde50e52bd9cd551781a0f00f9a0de79852cfa10ac3385ff733",
+      "status": "saved",
+      "title": "gitleaks: report/json.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "line_start": 1,
+      "line_end": 17
+    },
+    {
+      "id": "GLFINGER",
+      "url": "https://github.com/gitleaks/gitleaks/blob/b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b/detect/detect.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks/detect/detect.go",
+      "sha256": "2bac563a09f22ff76c56b200c3b9b5dc865c1de699eb0ba2a27cca741fa9bd13",
+      "status": "saved",
+      "title": "gitleaks: detect/detect.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "line_start": 709,
+      "line_end": 718
+    },
+    {
+      "id": "GLFILTER",
+      "url": "https://github.com/gitleaks/gitleaks/blob/b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b/detect/utils.go",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks/detect/utils.go",
+      "sha256": "9bc4ef65bee3afdf0c4b51cd7e9f3d7ec8c4acf72a04905d1bb1e9ce0a6c55db",
+      "status": "saved",
+      "title": "gitleaks: detect/utils.go",
+      "retrieved_at": "2026-10-09",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "line_start": 136,
+      "line_end": 166
+    },
+    {
+      "id": "GLCONFIG",
+      "url": "https://github.com/gitleaks/gitleaks/blob/b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b/README.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks/README.md",
+      "sha256": "65e87e68f4a16aefa1f1fba55b2e7a9b9bc8716393b7ddb013fc7c7bef4e4bc1",
+      "status": "saved",
+      "title": "gitleaks: README.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b",
+      "line_start": 383,
+      "line_end": 407
+    },
+    {
+      "id": "DSHASH",
+      "url": "https://github.com/Yelp/detect-secrets/blob/5e141933554a0b74e7341841f318be21e895339c/detect_secrets/core/potential_secret.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/detect-secrets/detect_secrets/core/potential_secret.py",
+      "sha256": "109814aea014f95076a7b6fbe181d421cca80631e791aca59e13c6096c65ed50",
+      "status": "saved",
+      "title": "detect-secrets: detect_secrets/core/potential_secret.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "5e141933554a0b74e7341841f318be21e895339c",
+      "line_start": 50,
+      "line_end": 115
+    },
+    {
+      "id": "DSVERIFY",
+      "url": "https://github.com/Yelp/detect-secrets/blob/5e141933554a0b74e7341841f318be21e895339c/detect_secrets/core/usage/filters.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/detect-secrets/detect_secrets/core/usage/filters.py",
+      "sha256": "ceb3fd8b00f0b79d5437eec7bc50ff1ec6b18e6866cd7b20166d5051dade4d14",
+      "status": "saved",
+      "title": "detect-secrets: detect_secrets/core/usage/filters.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "5e141933554a0b74e7341841f318be21e895339c",
+      "line_start": 166,
+      "line_end": 184
+    },
+    {
+      "id": "DSSEND",
+      "url": "https://github.com/Yelp/detect-secrets/blob/5e141933554a0b74e7341841f318be21e895339c/detect_secrets/plugins/slack.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/detect-secrets/detect_secrets/plugins/slack.py",
+      "sha256": "4893ef80231d22a3015f29f5bf12a1641fefb5158e1c549017c6143367f547e6",
+      "status": "saved",
+      "title": "detect-secrets: detect_secrets/plugins/slack.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "5e141933554a0b74e7341841f318be21e895339c",
+      "line_start": 29,
+      "line_end": 51
+    },
+    {
+      "id": "DSREADME",
+      "url": "https://github.com/Yelp/detect-secrets/blob/5e141933554a0b74e7341841f318be21e895339c/README.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/detect-secrets/README.md",
+      "sha256": "ec24601f17ace05b95ec05d2d94f730e51af126fd8a4aab88bd697e272217457",
+      "status": "saved",
+      "title": "detect-secrets: README.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "5e141933554a0b74e7341841f318be21e895339c",
+      "line_start": 1,
+      "line_end": 150
+    },
+    {
+      "id": "DOGITLEAKS",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/blob/258344266af19de33d721e511f2fc34834f67bdb/dojo/tools/gitleaks/parser.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/defectdojo/dojo/tools/gitleaks/parser.py",
+      "sha256": "f7973c52dd5be62b099fa65128facc6437fc9e7f5bd693dd9e140e9526c726e2",
+      "status": "saved",
+      "title": "defectdojo: dojo/tools/gitleaks/parser.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "258344266af19de33d721e511f2fc34834f67bdb",
+      "line_start": 160,
+      "line_end": 219
+    },
+    {
+      "id": "DOTRUFFLE",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/blob/258344266af19de33d721e511f2fc34834f67bdb/dojo/tools/trufflehog/parser.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/defectdojo/dojo/tools/trufflehog/parser.py",
+      "sha256": "e04afebb472ef8643186c081412bc51c0305070aad0d5708b89e37383e859140",
+      "status": "saved",
+      "title": "defectdojo: dojo/tools/trufflehog/parser.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "258344266af19de33d721e511f2fc34834f67bdb",
+      "line_start": 125,
+      "line_end": 193
+    },
+    {
+      "id": "DOREIMPORT",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/blob/258344266af19de33d721e511f2fc34834f67bdb/docs/content/import_data/import_intro/reimport.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/defectdojo/docs/content/import_data/import_intro/reimport.md",
+      "sha256": "6acd482c71f4688de08c2de3161d9a027ef85508ddefc333dfbcb3b57a4b15cd",
+      "status": "saved",
+      "title": "defectdojo: docs/content/import_data/import_intro/reimport.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "258344266af19de33d721e511f2fc34834f67bdb",
+      "line_start": 8,
+      "line_end": 73
+    },
+    {
+      "id": "DODEDUPE",
+      "url": "https://github.com/DefectDojo/django-DefectDojo/blob/258344266af19de33d721e511f2fc34834f67bdb/docs/content/triage_findings/finding_deduplication/OS__deduplication_tuning.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/defectdojo/docs/content/triage_findings/finding_deduplication/OS__deduplication_tuning.md",
+      "sha256": "85069b95f71458360afbdfbb34dbf8a6bc7dc251fa60c99172bfb053a51294fc",
+      "status": "saved",
+      "title": "defectdojo: docs/content/triage_findings/finding_deduplication/OS__deduplication_tuning.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "258344266af19de33d721e511f2fc34834f67bdb",
+      "line_start": 8,
+      "line_end": 78
+    },
+    {
+      "id": "DHREMOVED",
+      "url": "https://github.com/datahub-project/datahub/blob/12a7d7e5d831d282866602b00d3cdfad4a7f1bc2/metadata-ingestion/src/datahub/ingestion/glossary/classifier_registry.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/datahub/metadata-ingestion/src/datahub/ingestion/glossary/classifier_registry.py",
+      "sha256": "55ff9853cf22a7d4c1fce90dbbaa6d7fe68251a9df7b3a5ac11164e0e7f151fe",
+      "status": "saved",
+      "title": "datahub: metadata-ingestion/src/datahub/ingestion/glossary/classifier_registry.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "12a7d7e5d831d282866602b00d3cdfad4a7f1bc2",
+      "line_start": 1,
+      "line_end": 21
+    },
+    {
+      "id": "DHCLASS",
+      "url": "https://github.com/datahub-project/datahub/blob/12a7d7e5d831d282866602b00d3cdfad4a7f1bc2/metadata-ingestion/src/datahub/ingestion/glossary/classifier.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/datahub/metadata-ingestion/src/datahub/ingestion/glossary/classifier.py",
+      "sha256": "c2d6e372ced61f5eb8dfc3fb1d13b3c8f2a4ca75f643a75fb4f09347c5df3152",
+      "status": "saved",
+      "title": "datahub: metadata-ingestion/src/datahub/ingestion/glossary/classifier.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "12a7d7e5d831d282866602b00d3cdfad4a7f1bc2",
+      "line_start": 16,
+      "line_end": 67
+    },
+    {
+      "id": "DHINCIDENT",
+      "url": "https://github.com/datahub-project/datahub/blob/12a7d7e5d831d282866602b00d3cdfad4a7f1bc2/docs/incidents/incidents.md",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/datahub/docs/incidents/incidents.md",
+      "sha256": "6d8ab29ada69b632bbf032b6d0f0a16dacbfef08f5de6afde8a486119eaa1bd7",
+      "status": "saved",
+      "title": "datahub: docs/incidents/incidents.md",
+      "retrieved_at": "2026-10-09",
+      "commit": "12a7d7e5d831d282866602b00d3cdfad4a7f1bc2",
+      "line_start": 12,
+      "line_end": 72
+    },
+    {
+      "id": "OMCLASS",
+      "url": "https://github.com/open-metadata/OpenMetadata/blob/fc6a14d76d6ea58c4a13d49991e44e9423dc805a/ingestion/src/metadata/workflow/classification.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/openmetadata/ingestion/src/metadata/workflow/classification.py",
+      "sha256": "bcfa08436fc22422ed1175127901a0064453557f2044bb2c3c7b292b79cf672d",
+      "status": "saved",
+      "title": "openmetadata: ingestion/src/metadata/workflow/classification.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "fc6a14d76d6ea58c4a13d49991e44e9423dc805a",
+      "line_start": 34,
+      "line_end": 81
+    },
+    {
+      "id": "OMHEUR",
+      "url": "https://github.com/open-metadata/OpenMetadata/blob/fc6a14d76d6ea58c4a13d49991e44e9423dc805a/ingestion/src/metadata/pii/algorithms/classifiers.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/openmetadata/ingestion/src/metadata/pii/algorithms/classifiers.py",
+      "sha256": "f2e5cba5c5bbf714837dce54aebd370191035745629eeb8005ab775c6afa3955",
+      "status": "saved",
+      "title": "openmetadata: ingestion/src/metadata/pii/algorithms/classifiers.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "fc6a14d76d6ea58c4a13d49991e44e9423dc805a",
+      "line_start": 86,
+      "line_end": 158
+    },
+    {
+      "id": "OMDB",
+      "url": "https://github.com/open-metadata/OpenMetadata/blob/fc6a14d76d6ea58c4a13d49991e44e9423dc805a/openmetadata-spec/src/main/resources/json/schema/metadataIngestion/databaseServiceAutoClassificationPipeline.json",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/openmetadata/openmetadata-spec/src/main/resources/json/schema/metadataIngestion/databaseServiceAutoClassificationPipeline.json",
+      "sha256": "23bec8a4651068c686468486666cd10727d98e99d5cc00f36e50f73771386f5b",
+      "status": "saved",
+      "title": "openmetadata: openmetadata-spec/src/main/resources/json/schema/metadataIngestion/databaseServiceAutoClassificationPipeline.json",
+      "retrieved_at": "2026-10-09",
+      "commit": "fc6a14d76d6ea58c4a13d49991e44e9423dc805a",
+      "line_start": 45,
+      "line_end": 85
+    },
+    {
+      "id": "OMSTORE",
+      "url": "https://github.com/open-metadata/OpenMetadata/blob/fc6a14d76d6ea58c4a13d49991e44e9423dc805a/openmetadata-spec/src/main/resources/json/schema/metadataIngestion/storageServiceAutoClassificationPipeline.json",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/openmetadata/openmetadata-spec/src/main/resources/json/schema/metadataIngestion/storageServiceAutoClassificationPipeline.json",
+      "sha256": "528e70fc390eb00fa66647e6a12590c36c691e3a31a90ab31992108a0c906dcf",
+      "status": "saved",
+      "title": "openmetadata: openmetadata-spec/src/main/resources/json/schema/metadataIngestion/storageServiceAutoClassificationPipeline.json",
+      "retrieved_at": "2026-10-09",
+      "commit": "fc6a14d76d6ea58c4a13d49991e44e9423dc805a",
+      "line_start": 36,
+      "line_end": 73
+    },
+    {
+      "id": "OMLICENSE",
+      "url": "https://github.com/open-metadata/OpenMetadata/blob/fc6a14d76d6ea58c4a13d49991e44e9423dc805a/ingestion/LICENSE",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/openmetadata/ingestion/LICENSE",
+      "sha256": "4377d72568e7f20e53a42efa6e92b40b58a2c8d7d85b3cc087dd90c1b9befb85",
+      "status": "saved",
+      "title": "openmetadata: ingestion/LICENSE",
+      "retrieved_at": "2026-10-09",
+      "commit": "fc6a14d76d6ea58c4a13d49991e44e9423dc805a",
+      "line_start": 15,
+      "line_end": 34
+    },
+    {
+      "id": "IGCACHE",
+      "url": "https://github.com/disa-lab/IssueGuard/blob/70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4/api/service.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/issueguard/api/service.py",
+      "sha256": "0afce6ecb5fc48ca146c35c6e761e9659c432e868fb9e21a370c9cf0965e77db",
+      "status": "saved",
+      "title": "issueguard: api/service.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4",
+      "line_start": 50,
+      "line_end": 123
+    },
+    {
+      "id": "IGLOG",
+      "url": "https://github.com/disa-lab/IssueGuard/blob/70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4/api/service.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/issueguard/api/service.py",
+      "sha256": "0afce6ecb5fc48ca146c35c6e761e9659c432e868fb9e21a370c9cf0965e77db",
+      "status": "saved",
+      "title": "issueguard: api/service.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4",
+      "line_start": 166,
+      "line_end": 192
+    },
+    {
+      "id": "IGRETURN",
+      "url": "https://github.com/disa-lab/IssueGuard/blob/70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4/api/service.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/issueguard/api/service.py",
+      "sha256": "0afce6ecb5fc48ca146c35c6e761e9659c432e868fb9e21a370c9cf0965e77db",
+      "status": "saved",
+      "title": "issueguard: api/service.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4",
+      "line_start": 215,
+      "line_end": 252
+    },
+    {
+      "id": "IGSEND",
+      "url": "https://github.com/disa-lab/IssueGuard/blob/70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4/IssueGuardExtension/content.js",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/issueguard/IssueGuardExtension/content.js",
+      "sha256": "f2cbccd0a4d3d33679161fb94c56932e457bbedd3810a86eb69bf7ba0bc03803",
+      "status": "saved",
+      "title": "issueguard: IssueGuardExtension/content.js",
+      "retrieved_at": "2026-10-09",
+      "commit": "70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4",
+      "line_start": 1198,
+      "line_end": 1227
+    },
+    {
+      "id": "IGCONFIG",
+      "url": "https://github.com/disa-lab/IssueGuard/blob/70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4/api/config.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/issueguard/api/config.py",
+      "sha256": "61c71e45217703d9623938b0f171096480f2ae4ed95bdbca8c8006e7a8b651af",
+      "status": "saved",
+      "title": "issueguard: api/config.py",
+      "retrieved_at": "2026-10-09",
+      "commit": "70ed19b9ecc959dc71c27bb7fcc5be67e5a545e4",
+      "line_start": 18,
+      "line_end": 43
+    },
+    {
+      "id": "DHSTABLE",
+      "url": "https://github.com/datahub-project/datahub/blob/e99431ec510d7a2001f815c6bf70913c493af76e/metadata-ingestion/src/datahub/ingestion/glossary/classifier_registry.py",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/datahub_v1.7.0.1_classifier_registry.py",
+      "sha256": "55ff9853cf22a7d4c1fce90dbbaa6d7fe68251a9df7b3a5ac11164e0e7f151fe",
+      "status": "saved",
+      "title": "DataHub v1.7.0.1 classifier registry",
+      "retrieved_at": "2026-10-09",
+      "commit": "e99431ec510d7a2001f815c6bf70913c493af76e"
+    },
+    {
+      "id": "gg_selfhost",
+      "url": "https://docs.gitguardian.com/self-hosting/home",
+      "title": "home | GitGuardian documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/gg_selfhost.html",
+      "sha256": "3f3fecff82d0f4431f2e4151131813f93273a7f74e1de531796f9ff899ecb0ff"
+    },
+    {
+      "id": "gg_incident",
+      "url": "https://docs.gitguardian.com/platform/getting-started/first-incident",
+      "title": "Investigate and remediate your first open incident | GitGuardian documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/gg_incident.html",
+      "sha256": "0585aeb802f28fca6cc96c2b5d688b0c6540ac65b3fae86cbd7a25fcfb859fc2"
+    },
+    {
+      "id": "gg_investigate",
+      "url": "https://docs.gitguardian.com/internal-monitoring/remediate/investigate-incidents",
+      "title": "Investigate incidents | GitGuardian documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/gg_investigate.html",
+      "sha256": "daa3fcc0d31631d88a0d5f5f7c24364a19eaaa40b29bf5f6d9993722b18fa638"
+    },
+    {
+      "id": "gg_custom",
+      "url": "https://docs.gitguardian.com/internal-monitoring/integrate-sources/bring-your-own-sources",
+      "title": "Bring Your Own Sources | GitGuardian documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/gg_custom.html",
+      "sha256": "fba10dfa6a3ba090f445d434a3f232c60fe91ecd4ba5ec00de5d3dae3a8fc2e6"
+    },
+    {
+      "id": "gg_endpoint",
+      "url": "https://docs.gitguardian.com/endpoint-protection/core-concepts",
+      "title": "Core concepts | GitGuardian documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/gg_endpoint.html",
+      "sha256": "f1e9851326ae90f75df7bbdf21782ed9b3584c18cd57b20a6d845bb407285e2e"
+    },
+    {
+      "id": "th_sources",
+      "url": "https://trufflesecurity.com/docs/connect-sources",
+      "title": "Connect sources - TruffleHog Docs",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/th_sources.html",
+      "sha256": "baa1083b3baefaa54a478370cebb42060a53d330d54199f2a4e567322baff0b6"
+    },
+    {
+      "id": "th_data",
+      "url": "https://trufflesecurity.com/docs/how-we-handle-your-data",
+      "title": "How we handle your data - TruffleHog Docs",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/th_data.html",
+      "sha256": "22bbbd995da09280b354b14dd6af7ce5904ca27946fcba007af9465e205b7503"
+    },
+    {
+      "id": "th_export",
+      "url": "https://trufflesecurity.com/docs/exported-secrets-column-definitions",
+      "title": "Exported Secrets Column Definitions - TruffleHog Docs",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/th_export.html",
+      "sha256": "540c9a8d860128425ae561f511d692d9f96d74d268ca4613ffbe293ac18949df"
+    },
+    {
+      "id": "th_slack",
+      "url": "https://slack.com/marketplace/A09FCJ4LHAT-trufflehog-enterprise",
+      "title": "TruffleHog Enterprise & Slack Integration | Slack Marketplace",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/th_slack.html",
+      "sha256": "299ac76dde59f1e848caa8aa5f8fe43c7e628e064308fe4fcea1cacf50f41f66"
+    },
+    {
+      "id": "th_aug",
+      "url": "https://trufflesecurity.com/docs/2026-august",
+      "title": "2026 August - TruffleHog Docs",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/th_aug.html",
+      "sha256": "00c0c0b83656b1e227609fe7c23e7304107cc428657c47b4f34d4d68a624bcae"
+    },
+    {
+      "id": "om_pii",
+      "url": "https://docs.open-metadata.org/latest/how-to-guides/data-governance/classification",
+      "title": "om_pii",
+      "retrieved_at": "2026-10-09",
+      "status": "failed",
+      "error": "HTTP Error 308: Permanent Redirect"
+    },
+    {
+      "id": "dh_pii",
+      "url": "https://docs.datahub.com/docs/metadata-ingestion/docs/dev_guides/pii-detection",
+      "title": "dh_pii",
+      "retrieved_at": "2026-10-09",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "dojo_dedupe",
+      "url": "https://docs.defectdojo.com/en/working_with_findings/finding_deduplication/about_deduplication/",
+      "title": "https://docs.defectdojo.com/triage_findings/finding_deduplication/about_deduplication/",
+      "retrieved_at": "2026-10-09",
+      "status": "redirect_notice_only",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/dojo_dedupe.html",
+      "sha256": "1a65d673a6a73a903decd6cc453099d3f9b251c9789cc253116790c34a55fd24",
+      "body_support": "not adopted: 411-byte redirect notice only; fixed repository DODEDUPE used for substantive evidence",
+      "http_status": 200
+    },
+    {
+      "id": "dojo_reimport",
+      "url": "https://docs.defectdojo.com/en/connecting_your_tools/import_scan_files/reimport/",
+      "title": "dojo_reimport",
+      "retrieved_at": "2026-10-09",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "custodian",
+      "url": "https://cloudcustodian.io/docs/quickstart/index.html",
+      "title": "Getting Started — Cloud Custodian  documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/custodian.html",
+      "sha256": "9c602f43afba890c710422a0d85c03d97747cd29b60b4a9bc565b161a892aaba"
+    },
+    {
+      "id": "prowler",
+      "url": "https://docs.prowler.com/projects/prowler-open-source/en/latest/",
+      "title": "prowler",
+      "retrieved_at": "2026-10-09",
+      "status": "failed",
+      "error": "HTTP Error 308: Permanent Redirect"
+    },
+    {
+      "id": "release_trufflehog",
+      "url": "https://api.github.com/repos/trufflesecurity/trufflehog/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/trufflehog_latest_release.json",
+      "sha256": "a24e00ed893cb430ebea7d07222287eee49250e2ccb383576b0c4fc1436bcd10",
+      "status": "saved",
+      "title": "trufflehog latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "release_gitleaks",
+      "url": "https://api.github.com/repos/gitleaks/gitleaks/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/gitleaks_latest_release.json",
+      "sha256": "5449c3dbf1c215687b575188aaf56212fc1ce1fc3f8712daf97202a656d0a9c4",
+      "status": "saved",
+      "title": "gitleaks latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "release_detect-secrets",
+      "url": "https://api.github.com/repos/Yelp/detect-secrets/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/detect-secrets_latest_release.json",
+      "sha256": "adc2e3fc7fb55014463576f8584884365aeb070433836dd51f2078e8a9b4dc74",
+      "status": "saved",
+      "title": "detect-secrets latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "release_defectdojo",
+      "url": "https://api.github.com/repos/DefectDojo/django-DefectDojo/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/defectdojo_latest_release.json",
+      "sha256": "80e934dc90342ca013861831ad63d38d5e60524349530d616b76e713b89af429",
+      "status": "saved",
+      "title": "defectdojo latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "release_datahub",
+      "url": "https://api.github.com/repos/datahub-project/datahub/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/datahub_latest_release.json",
+      "sha256": "1c28dfa8abc777e9a4a4e426a4832769e21c135292c0ea0156cc5a19531dde0c",
+      "status": "saved",
+      "title": "datahub latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "release_openmetadata",
+      "url": "https://api.github.com/repos/open-metadata/OpenMetadata/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/openmetadata_latest_release.json",
+      "sha256": "9871a2ee188f126cec3d870b4a3a51e52d8d4cde7999031948818f66d6de33e7",
+      "status": "saved",
+      "title": "openmetadata latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "release_ggshield",
+      "url": "https://api.github.com/repos/GitGuardian/ggshield/releases/latest",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/ggshield_latest_release.json",
+      "sha256": "ffca6e3babf85fe48edfd8c150ae3b60af1135a1f9325f6f3a3995b7e975cb44",
+      "status": "saved",
+      "title": "ggshield latest published release API",
+      "retrieved_at": "2026-10-09"
+    },
+    {
+      "id": "paper_2602.08072_pdf",
+      "url": "https://arxiv.org/pdf/2602.08072",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2602.08072.pdf",
+      "sha256": "7063fd0b461bd6b1a17a60647d22b8db33b663d958a2d7569cefbfe887ff0221",
+      "status": "saved",
+      "title": "arXiv 2602.08072 original",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2602.08072_txt",
+      "url": "https://arxiv.org/pdf/2602.08072",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2602.08072.txt",
+      "sha256": "b70ea2f99a7c506430222b16092e27c3e7fd313d57fe03399e288f4c47aeb1dc",
+      "status": "extracted",
+      "title": "arXiv 2602.08072 pdftotext -layout",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2502.01020_pdf",
+      "url": "https://arxiv.org/pdf/2502.01020",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2502.01020.pdf",
+      "sha256": "6138a01ba18e2e248227e1e6132d0817d3bc6c6a6b376a0e97ed978fbca122dd",
+      "status": "saved",
+      "title": "arXiv 2502.01020 original",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2502.01020_txt",
+      "url": "https://arxiv.org/pdf/2502.01020",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2502.01020.txt",
+      "sha256": "8d8d82cec2b2f513148b07e0e0c044ed734cd29f3832e48ca2547d9f472b4066",
+      "status": "extracted",
+      "title": "arXiv 2502.01020 pdftotext -layout",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2403.19072_pdf",
+      "url": "https://arxiv.org/pdf/2403.19072",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2403.19072.pdf",
+      "sha256": "26eb3246645baa272f804ab6895f78ec5e5f196a6bf03c373ba662dd7337bffb",
+      "status": "saved",
+      "title": "arXiv 2403.19072 original",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2403.19072_txt",
+      "url": "https://arxiv.org/pdf/2403.19072",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2403.19072.txt",
+      "sha256": "368dafe3bd00e326491d822cc3fe1e4b3b669db0ea5f1cae8b3797e4de6c2207",
+      "status": "extracted",
+      "title": "arXiv 2403.19072 pdftotext -layout",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2303.06729_pdf",
+      "url": "https://arxiv.org/pdf/2303.06729",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2303.06729.pdf",
+      "sha256": "bfd2cd52cb384608cc722c28c6a38f878639ccf77d4ff935cbdb85d50c3c8edb",
+      "status": "saved",
+      "title": "arXiv 2303.06729 original",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2303.06729_txt",
+      "url": "https://arxiv.org/pdf/2303.06729",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2303.06729.txt",
+      "sha256": "0b1bddc55239b96630e521cfc7f32925e64e5d44f50cb29b7a814662d50268ef",
+      "status": "extracted",
+      "title": "arXiv 2303.06729 pdftotext -layout",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "full main text reviewed"
+    },
+    {
+      "id": "paper_2504.18784_pdf",
+      "url": "https://arxiv.org/pdf/2504.18784",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2504.18784.pdf",
+      "sha256": "832e9a2f40dc5a3a3310f8203fec4aff80c11951b3d8c02cc6580570aa63f81b",
+      "status": "saved",
+      "title": "arXiv 2504.18784 original",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "downloaded only; not relied on"
+    },
+    {
+      "id": "paper_2504.18784_txt",
+      "url": "https://arxiv.org/pdf/2504.18784",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2504.18784.txt",
+      "sha256": "84bdeb05176cab41883d6a17a68f7f871fe25de9e44c88f5f81cab03e7e5fdc2",
+      "status": "extracted",
+      "title": "arXiv 2504.18784 pdftotext -layout",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "downloaded only; not relied on"
+    },
+    {
+      "id": "paper_2608.04523_pdf",
+      "url": "https://arxiv.org/pdf/2608.04523",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2608.04523.pdf",
+      "sha256": "50c4d9c920338a47704d9b17eddff2e8da380011c2545278c80d928946782379",
+      "status": "saved",
+      "title": "arXiv 2608.04523 original",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "downloaded only; not relied on"
+    },
+    {
+      "id": "paper_2608.04523_txt",
+      "url": "https://arxiv.org/pdf/2608.04523",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/papers/2608.04523.txt",
+      "sha256": "3002b0fd29cdb825d00a0be198369f3372b02b5d15c8e2098d886f79da3fb055",
+      "status": "extracted",
+      "title": "arXiv 2608.04523 pdftotext -layout",
+      "retrieved_at": "2026-10-09",
+      "analysis_status": "downloaded only; not relied on"
+    },
+    {
+      "id": "OPENDLP",
+      "url": "https://github.com/ezarko/opendlp/blob/b02568fdac225bd8c8c237b1120b4657d71556ec/README",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/opendlp/README",
+      "sha256": "2446775736b517d162f9b7d47f64cc19a47be550095271995a4f77cf84396e20",
+      "status": "saved",
+      "title": "opendlp: README",
+      "retrieved_at": "2026-10-09",
+      "commit": "b02568fdac225bd8c8c237b1120b4657d71556ec",
+      "line_start": 1,
+      "line_end": 80
+    },
+    {
+      "id": "MYDLP",
+      "url": "https://github.com/mydlp/mydlp/blob/14d3fa1da2a212746f24fa2316d62e2b5f1f5ea1/README",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/mydlp/README",
+      "sha256": "f6c55a874da4ed5156a00eb38abe0c2ab998808b265e93955f376ee6b803055e",
+      "status": "saved",
+      "title": "mydlp: README",
+      "retrieved_at": "2026-10-09",
+      "commit": "14d3fa1da2a212746f24fa2316d62e2b5f1f5ea1",
+      "line_start": 1,
+      "line_end": 22
+    },
+    {
+      "id": "custodian_filters",
+      "url": "https://www.cloudcustodian.io/docs/filters.html",
+      "title": "Generic Filters — Cloud Custodian  documentation",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/custodian_filters.html",
+      "sha256": "4f3d085ee4282eb37e75419f49fd438139f6a74559251c8e197b0e848cb066f3"
+    },
+    {
+      "id": "prowler_readme",
+      "url": "https://raw.githubusercontent.com/prowler-cloud/prowler/master/README.md",
+      "title": "Prowler official README (moving branch; supplemental)",
+      "retrieved_at": "2026-10-09",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/oss/docs/prowler_readme.md",
+      "sha256": "7f0fbdb7e980596994bbc6da14202f6f5726f2016fb53f635d872a0aa117c735"
+    }
+  ],
+  "verification": "Repository HEAD is distinct from latest release. Four paper main texts reviewed; two additional PDFs downloaded only. No model/provider API or live credential verification executed.",
+  "verification_results": {
+    "date": "2026-10-09",
+    "saved_source_hashes": "passed",
+    "fixed_code_line_bounds": "passed",
+    "markdown_fixed_references": "passed",
+    "independent_review": "passed: O-R1/O-R2/O-R3 addressed and independently reconfirmed by enterprise reviewer on 2026-10-09",
+    "runtime_tests": "not executed"
+  }
+}
