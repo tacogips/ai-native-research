@@ -2,7 +2,7 @@
   "title": "海外企業AIの技術調査の出典台帳",
   "verified_date": "2026-10-06",
   "systems_count": 11,
-  "sources_count": 30,
+  "sources_count": 32,
   "new_pdf_downloads": 0,
   "limitations": [
     "顧客の本番環境へのアクセスなし",
@@ -283,6 +283,27 @@
       "verification": "固定版のREADME・該当ソースを静的確認",
       "scope_note": "公開ソースの固定版をローカル読取り。実行・動作試験なし。",
       "commit": "9cfde5e8a687afb47ed0c7dcd832801d049e067b"
+    },
+    {
+      "id": "TS31",
+      "url": "https://chromewebstore.google.com/detail/harper-sku-overlay-for-bi/mngnicinekhabngmkkeaddjglpcgcaim",
+      "verified_date": "2026-10-13",
+      "source_date": "2026-10-13",
+      "date_kind": "拡張機能ページの更新日。確認時の版は1.1.0。",
+      "verification": "ログイン不要の公開ページ本文を取得して確認",
+      "scope_note": "Harper Insurance従業員向けとの明記、Big Brotherの企業別画面・承認待ち一覧、保険会社への振り分け候補を表示する拡張機能。参照専用という説明は拡張機能に限る。提供者の自己申告であり、導入・動作検証なし。"
+    },
+    {
+      "id": "TS32",
+      "url": "https://www.usetranscribe.io/yt/5tjNU_hsERk/harper-ai-insurance",
+      "original_source_url": "https://www.youtube.com/watch?v=5tjNU_hsERk&t=619s",
+      "verified_date": "2026-10-13",
+      "source_date": null,
+      "date_kind": "原動画の公表日は未確認。ページの2026年8月は文字起こし時期の表示。",
+      "verification": "ログイン不要の第三者による公開文字起こし本文を確認。原動画の音声・画面との照合なし。",
+      "scope_note": "10分19秒付近に電話番号から会社名・住所などを取得しBig Brotherの情報で申込書を事前入力する説明。12分37秒付近に案件調査のためBig Brotherを開く指示。内部構成や完全自律運用を立証する資料ではない。"
     }
-  ]
+  ],
+  "updated_date": "2026-10-13",
+  "update_scope": "HarperのBig Brotherに関する公開出典2件を追加。他の出典の確認日は変更しない。"
 }

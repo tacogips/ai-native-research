@@ -83,7 +83,7 @@ Master Report は日付付きの調査版ではなく、新しい一次資料や
 |---|---|
 | [Harperから広げた企業比較](research/benchmarks/ai_native_company_cases_expanded_20261006.md) | 35の企業・サービス群。保険、法律、会計、医療事務、物流、顧客対応、人材、営業、日本の管理業務。提供形態・人の判断・料金・改善の記録を比較 |
 | [法務・経理・人事の20事例](research/benchmarks/enterprise_legal_finance_hr_cases_20261006.md) | 法務7件、経理7件、人事6件。国内6件・海外14件。対象工程、成果の分母、目標と実績、人の承認、認可・監査に必要な情報を整理 |
-| [海外事例の課題と技術構成](research/benchmarks/overseas_ai_problem_technology_deep_dive_20261006.md) | 11構成。検索前と表示後の認可、外部操作、契約版の統合、会計の状態、人事の書戻し、作業領域、監査と評価。Brexの公開コードも固定版で確認 |
+| [海外事例の課題と技術構成](research/benchmarks/overseas_ai_problem_technology_deep_dive_20261006.md) | 11構成。検索前と表示後の認可、外部操作、契約版の統合、会計の状態、人事の書戻し、作業領域、監査と評価。Brexの公開コードも固定版で確認。10月13日にHarperのBig Brotherの用途と公開出典を追記 |
 
 企業比較と部門事例には重複があるため、35と20を合計した社数とは扱わない。一次資料の本文を確認し、企業事例と技術の深掘りで計6回・18問の追加調査を[問いの記録](research/ai_native_recursive_research_log_20261005.md)へ追記した。
 
