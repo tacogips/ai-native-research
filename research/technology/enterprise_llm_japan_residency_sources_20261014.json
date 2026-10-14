@@ -1,0 +1,134 @@
+{
+  "research_date": "2026-10-14",
+  "scope": "TIMEWELL記事を企業の機密情報管理へ整理。公開記事と一次資料。",
+  "sources": [
+    {
+      "id": "timewell_article",
+      "url": "https://timewell.jp/columns/llm-japan-region-availability-guide-2026",
+      "retrieved_at": "2026-10-14T07:38:39.606966+00:00",
+      "resolved_url": "https://timewell.jp/columns/llm-japan-region-availability-guide-2026",
+      "content_type": "text/html; charset=utf-8",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/timewell_article.html",
+      "sha256": "16bfb81f4e27bb8d726d41ae40084ffbaab10f8e23e822ea84459dbc44e0c075",
+      "bytes": 357529,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/timewell_article.txt",
+      "text_sha256": "d0d3e08a41056d9329a13c2fd02e146530bc6f309b4c08e8c66a281a97becc46"
+    },
+    {
+      "id": "aws_regions",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html",
+      "retrieved_at": "2026-10-14T07:38:39.607426+00:00",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html",
+      "content_type": "text/html",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/aws_regions.html",
+      "sha256": "7af843f86d7acd2412ede19e536e2d68e9f927ac6e3e26fef6d958e14b62f211",
+      "bytes": 1483113,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/aws_regions.txt",
+      "text_sha256": "efe83a47f4bd966c83336cdbe83a3a5c3e7df5d1f0d8481c677928e526208d39"
+    },
+    {
+      "id": "azure_models",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models",
+      "retrieved_at": "2026-10-14T07:38:39.607605+00:00",
+      "resolved_url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+      "content_type": "text/html",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/azure_models.html",
+      "sha256": "fca9a4aad83cbd5080c91f6f319d3fcae2d41ff48e84582d50ae545bdbb8790f",
+      "bytes": 182829,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/azure_models.txt",
+      "text_sha256": "b5941af32c08663d15dd4aa4445da9be6f664fa22297d6ae991e7ace91f83d34"
+    },
+    {
+      "id": "azure_privacy",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy",
+      "retrieved_at": "2026-10-14T07:38:39.607762+00:00",
+      "resolved_url": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+      "content_type": "text/html",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/azure_privacy.html",
+      "sha256": "a2dfd7d296994bcb82784cbf92ed97e6b0c98b1a4ce1b60a1b14f886efd55e4f",
+      "bytes": 72126,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/azure_privacy.txt",
+      "text_sha256": "25f6ff4673003ba275ba5cc45339f0f5bf04b53db9c23854d9bd6ec67f8bfaeb"
+    },
+    {
+      "id": "google_locations",
+      "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/locations",
+      "retrieved_at": "2026-10-14T07:38:39.607930+00:00",
+      "resolved_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations",
+      "content_type": "text/html; charset=utf-8",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/google_locations.html",
+      "sha256": "120fa94ab29be8a3d975a635cd37dfa277ad7f968b56aeb07af6ee679a49083c",
+      "bytes": 505754,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/google_locations.txt",
+      "text_sha256": "1f15c712649902213f55522e3c0664ac320456a930e5106dd2959ab848c06fd0"
+    },
+    {
+      "id": "google_residency",
+      "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/data-residency",
+      "retrieved_at": "2026-10-14T07:38:39.608079+00:00",
+      "resolved_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/data-residency",
+      "content_type": "text/html; charset=utf-8",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/google_residency.html",
+      "sha256": "a9a878215efc48a1d127edb577a5646a288a26bb0308119378d9c4faef44fbc2",
+      "bytes": 209939,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/google_residency.txt",
+      "text_sha256": "5da96263bca321995a5004343437f79a1b3aafb5860ecea6017a644851e66a36"
+    },
+    {
+      "id": "fireworks_pricing",
+      "url": "https://fireworks.ai/pricing",
+      "retrieved_at": "2026-10-14T07:38:39.608242+00:00",
+      "resolved_url": "https://fireworks.ai/pricing",
+      "content_type": "text/html; charset=utf-8",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/fireworks_pricing.html",
+      "sha256": "f700d1147ff876290a93e6470379004d7730c0b5e6f1fd3833763a60e0afd3f5",
+      "bytes": 238222,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/fireworks_pricing.txt",
+      "text_sha256": "fbdf7b336bb143a1b492d1888c284660fbcc7d06a10bebe4c7a2393f8343cc17"
+    },
+    {
+      "id": "ppc_q753",
+      "url": "https://www.ppc.go.jp/all_faq_index/faq1-q7-53/",
+      "retrieved_at": "2026-10-14T07:38:40.530686+00:00",
+      "resolved_url": "https://www.ppc.go.jp/all_faq_index/faq1-q7-53/",
+      "content_type": "text/html;charset=UTF-8",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/ppc_q753.html",
+      "sha256": "459f5eb59cb7581c3f07b77344e26747742077945106771bafbc2ed718b8f708",
+      "bytes": 45323,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/ppc_q753.txt",
+      "text_sha256": "3e47f63349e0cf146ecbc4a30a94011b6cc042086da003a681f2c59290c21339"
+    },
+    {
+      "id": "ppc_q754",
+      "url": "https://www.ppc.go.jp/all_faq_index/faq1-q7-54/",
+      "retrieved_at": "2026-10-14T07:38:40.946469+00:00",
+      "resolved_url": "https://www.ppc.go.jp/all_faq_index/faq1-q7-54/",
+      "content_type": "text/html;charset=UTF-8",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/enterprise_llm_residency_20261014/ppc_q754.html",
+      "sha256": "310321f35339de111ed5a81f004b7bc9b962ad566e77628a745b93e70ac19854",
+      "bytes": 42155,
+      "text_file": "research/disclosures/raw/enterprise_llm_residency_20261014/ppc_q754.txt",
+      "text_sha256": "f5562307528829f548961d9766c2956918e2d0750d6c17dd5f4ed64624f60e66"
+    }
+  ],
+  "article": {
+    "title": "国内リージョンでLLMは動かせるのか｜各社の可用性と、規制が本当に求めていること",
+    "publisher": "株式会社TIMEWELL",
+    "author": "濱本隆太",
+    "publication_date_displayed": "2026-09-05",
+    "article_snapshot_note": "本文基準日9月5日、AWS脚注取得日9月6日。現在の可用性表として無条件に転載しない。"
+  },
+  "verification": {
+    "recorded_hashes": "一致",
+    "limitations": "公式仕様の公開本文確認。全モデルの提供条件や契約環境の実通信試験ではない。"
+  }
+}

@@ -2,6 +2,14 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## 企業LLMの国内保存と処理地域（2026年10月14日）
+
+[TIMEWELL記事と公式仕様から整理する国内保存・処理地域](research/technology/enterprise_llm_japan_residency_20261014.md)。AWS・Azure・Google・Fireworksの地域指定、推論と追加学習、保存と計算、価格条件を分け、企業の機密情報管理で記録する確認項目を整理した。クラウド向けの個人情報保護法Q&AをLLMへそのまま適用しない条件も補足。[記事・一次資料の取得台帳](research/technology/enterprise_llm_japan_residency_sources_20261014.json)。
+
+## 保護情報管理と鍵付きファイルの運用（2026年10月14日）
+
+[鍵付きファイルと鍵の定期変更](research/technology/protected_information_file_and_key_management_20261014.md)。Bitwarden・1Password・Keeper・KeePass、秘密管理、暗号鍵管理、公開鍵暗号、PurviewとGoogleのDrive DLP・CSE・Secret Manager・Cloud KMSを比較。ファイルと鍵の版の対応、旧鍵の保持、変更後の開封確認、AIへ鍵や原文を渡す境界を整理した。Microsoft Purviewの統合ブランド発表は2022年4月19日、前身Azure Purviewの公開試験版発表は2020年12月3日。[公式資料の取得台帳](research/technology/protected_information_key_management_sources_20261014.json)。
+
 ## 保存された機密データの監視・警告管理（2026年10月9日）
 
 [ストレージ等を監視し、Sentryのように警告するシステムの比較](research/technology/telescreen_related_systems_20261009.md)。S3等のオブジェクト保存、ファイル共有、データベース、業務クラウドを含めて調査。50行の製品・機構・部品・参考を整理し、内容分類とアクセス方針、問題集約、担当、修正後再検査、再発、原文の処理・保持を比較した。独立企業50社や実測精度順位を意味しない。[比較CSV](research/technology/telescreen_related_systems_comparison_20261009.csv)、[JSON](research/technology/telescreen_related_systems_comparison_20261009.json)、[レビュー記録](research/technology/telescreen_related_review_summary_20261009.md)。
