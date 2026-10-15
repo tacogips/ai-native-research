@@ -10,6 +10,10 @@
 
 [鍵付きファイルと鍵の定期変更](research/technology/protected_information_file_and_key_management_20261014.md)。Bitwarden・1Password・Keeper・KeePass、秘密管理、暗号鍵管理、公開鍵暗号、PurviewとGoogleのDrive DLP・CSE・Secret Manager・Cloud KMSを比較。ファイルと鍵の版の対応、旧鍵の保持、変更後の開封確認、AIへ鍵や原文を渡す境界を整理した。Microsoft Purviewの統合ブランド発表は2022年4月19日、前身Azure Purviewの公開試験版発表は2020年12月3日。[公式資料の取得台帳](research/technology/protected_information_key_management_sources_20261014.json)。
 
+## 個人データ保護の目的と匿名化の判断（2026年10月14日）
+
+[高木浩光氏の動画シリーズと原資料から学ぶ個人データ保護](research/disclosures/takagi_personal_data_protection_ai_native_20261014.md)。『ずんだもんの個人情報保護法務日誌』第1〜3回の公開説明欄と元資料を確認し、省略された第3回の4出典URLを復元した。氏名削除・仮名加工・匿名加工・統計情報、容易照合性と提供元基準、情報の結合と本人の評価、学習済みモデルと集計結果の公開条件を整理。日本の公式解釈、高木氏の制度分析、欧州の判決・監督機関の見解、AI基盤への設計案を区別し、2026年改正の成立・公布と施行を分けた。[出典確認台帳](research/disclosures/takagi_privacy_sources_20261014.json)。動画の字幕本文は取得できておらず、発話の逐語検証は含まない。
+
 ## 保存された機密データの監視・警告管理（2026年10月9日）
 
 [ストレージ等を監視し、Sentryのように警告するシステムの比較](research/technology/telescreen_related_systems_20261009.md)。S3等のオブジェクト保存、ファイル共有、データベース、業務クラウドを含めて調査。50行の製品・機構・部品・参考を整理し、内容分類とアクセス方針、問題集約、担当、修正後再検査、再発、原文の処理・保持を比較した。独立企業50社や実測精度順位を意味しない。[比較CSV](research/technology/telescreen_related_systems_comparison_20261009.csv)、[JSON](research/technology/telescreen_related_systems_comparison_20261009.json)、[レビュー記録](research/technology/telescreen_related_review_summary_20261009.md)。
