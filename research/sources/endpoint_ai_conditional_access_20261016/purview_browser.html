@@ -1,0 +1,1670 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Learn about Data Loss Prevention for Cloud Apps in Edge for Business | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Inline DLP protection helps you monitor and control sharing activities directly in Microsoft Edge for Business." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/purview/dlp-browser-dlp-learn" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Learn about Data Loss Prevention for Cloud Apps in Edge for Business" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/purview/dlp-browser-dlp-learn" />
+			<meta property="og:description" content="Inline DLP protection helps you monitor and control sharing activities directly in Microsoft Edge for Business." />
+			<meta name="platform_id" content="25e1260d-c836-14c2-88e2-d60ec073dd98" /> <meta name="scope" content="Azure,Azure Purview,Microsoft Purview" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-Purview" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/purview/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="f1.keywords" content="CSH" />
+	
+		<meta name="ms.author" content="kreagle" />
+	
+		<meta name="author" content="k-reagle" />
+	
+		<meta name="manager" content="laurawi" />
+	
+		<meta name="ms.date" content="2025-07-15T00:00:00Z" />
+	
+		<meta name="audience" content="ITPro" />
+	
+		<meta name="ms.topic" content="article" />
+	
+		<meta name="ms.service" content="purview" />
+	
+		<meta name="ms.subservice" content="purview-data-loss-prevention" />
+	
+		<meta name="ms.collection" content="purview-compliance" />
+	
+		<meta name="ms.collection" content="m365solution-mip" />
+	
+		<meta name="ms.collection" content="m365initiative-compliance" />
+	
+		<meta name="search.appverid" content="MET150" />
+	
+		<meta name="ai-usage" content="ai-assisted" />
+	
+		<meta name="document_id" content="3ee61531-6f6c-6726-6078-edbda147be98" />
+	
+		<meta name="document_version_independent_id" content="3ee61531-6f6c-6726-6078-edbda147be98" />
+	
+		<meta name="updated_at" content="2026-10-06T22:34:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/Purview-pr/blob/live/Purview/dlp-browser-dlp-learn.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/Purview-pr/blob/1a451d98ff774ab1820c33883f8a06fa5d0571f8/Purview/dlp-browser-dlp-learn.md" />
+	
+		<meta name="git_commit_id" content="1a451d98ff774ab1820c33883f8a06fa5d0571f8" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.Purview" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="toc.json" />
+	
+		<meta name="feedback_product_url" content="" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="2153" />
+	
+		<meta name="asset_id" content="dlp-browser-dlp-learn" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="Purview/dlp-browser-dlp-learn.md" />
+	
+		<meta name="previous_tlsh_hash" content="06C5B552428E8532EFB55613BD67F1406AF0D189BAF0F6C115764442DC8C1D632B5104BFCB32EB8AA323625361C7AE1446A2BB3EB25B76E24B309C35812C17B32D4A3AF795" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/Purview-pr/blob/live/Purview/dlp-browser-dlp-learn.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/purview/dlp-browser-dlp-learn?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/5287f575-02f0-405f-92b7-800456526b0c" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/57eae111-0f3b-497e-be07-450fd1409dea" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/06e86142-34c2-4b94-ab9c-9477c21f7152" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/ac8bf8ab-8134-4c9a-9f2e-58b31575b492" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03574.8308-9505b1c8/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03574.8308-9505b1c8/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		<script >bazadebezolkohpepadr="1282262667"</script><script type="text/javascript" src="https://learn.microsoft.com/akam/13/4c6dc662"  defer></script></head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			hidden
+			href=""
+			data-original_content_git_url="https://github.com/MicrosoftDocs/Purview-pr/blob/live/Purview/dlp-browser-dlp-learn.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/Purview/dlp-browser-dlp-learn.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="learn-about-data-loss-prevention-for-cloud-apps-in-edge-for-business">Learn about Data Loss Prevention for Cloud Apps in Edge for Business</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><p>Microsoft Purview Data Loss Prevention (DLP) monitoring and protection are built right into the <a href="https://www.microsoft.com/en-us/edge/business/download?msockid=1d62cf230de86f161a9bdcf60cc56e14&amp;form=MA13FJ" data-linktype="external">Microsoft Edge for Business</a> browser. You don't need to onboard the device into Microsoft Purview. This integration helps you stop users from sharing sensitive information to and from cloud apps by using Edge for Business.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>If you're new to Microsoft Purview collection policies, Microsoft Purview pay-as-you-go billing models, or Microsoft Purview DLP, familiarize yourself with the information in these articles:</p>
+<ul>
+<li><a href="collection-policies-policy-reference" data-linktype="relative-path">Collection policies</a></li>
+<li><a href="dlp-learn-about-dlp" data-linktype="relative-path">Learn about data loss prevention</a></li>
+<li><a href="purview-billing-models" data-linktype="relative-path">Learn about Microsoft Purview billing models</a></li>
+<li><a href="data-classification-activity-explorer" data-linktype="relative-path">Get started with activity explorer</a></li>
+</ul>
+<h2 id="licensing">Licensing</h2>
+<p>For information on licensing, see</p>
+<ul>
+<li><a href="https://aka.ms/M365EnterprisePlans" data-linktype="external">Microsoft 365 Enterprise Plans</a></li>
+<li><a href="/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance" data-linktype="absolute-path">Microsoft 365 Service Descriptions</a></li>
+</ul>
+<p>Protecting data shared from a managed device to an unmanaged app in Edge for Business is a pay-as-you-go feature. For more information, see <a href="/en-us/purview/purview-billing-models#requests" data-linktype="absolute-path">Learn more about pay-as-you-go-capabilities and request definitions.</a> For information on setting up the pay-as-you-go billing model, see <a href="purview-payg-subscription-based-enablement#enable-microsoft-purview-pay-as-you-go-features-for-new-customers" data-linktype="relative-path">Enable Microsoft Purview pay-as-you-go features for new customers</a>.</p>
+<p>Scenarios where data in Microsoft Entra-registered (managed) apps is protected while using Edge for Business are included in a Microsoft 365 E5 or equivalent license.&nbsp;</p>
+<h2 id="permissions">Permissions</h2>
+<p>Permissions to <a href="dlp-create-deploy-policy#permissions" data-linktype="relative-path">create and deploy Microsoft Purview DLP policies are found here</a>.</p>
+<p>You also need permissions for prerequisites and configurations outside of Microsoft Purview. For more information on required permissions, see <a href="#supported-cloud-apps" data-linktype="self-bookmark">Supported cloud apps</a>.</p>
+<h2 id="managed-devices">Managed devices</h2>
+<p>You can protect Windows 10 and Windows 11 devices that are <a href="/en-us/intune/intune-service/fundamentals/manage-devices" data-linktype="absolute-path">managed by Microsoft Intune</a>. Users must sign in to the device using their work or school account.</p>
+<p>On these devices, Edge for Business connects directly with Microsoft Purview and Microsoft Edge services to get policy updates and apply protections. <a href="/en-us/deployedge/microsoft-edge-dlp-purview-configuration" data-linktype="absolute-path">Microsoft Edge configuration policies</a> block users from using protected unmanaged cloud apps in unprotected browsers. If users try to access an unmanaged app in an unprotected browser, they're blocked and must use Edge for Business.</p>
+<p>Microsoft Purview DLP policies can <a href="dlp-create-policy-block-to-ai-via-edge#help-prevent-sharing-via-microsoft-edge-for-business-to-unmanaged-ai-apps-from-managed-devices" data-linktype="relative-path">help prevent sharing via Edge for Business from managed devices to unmanaged AI apps</a>, and <a href="/en-us/purview/collection-policies-policy-reference" data-linktype="absolute-path">Microsoft Purview collection policies</a> can be applied to interactions with unmanaged AI apps from managed devices. Policies targeting unmanaged apps on managed devices apply across all Edge browser profiles (work profile, personal profile and InPrivate).</p>
+<h2 id="unmanaged-devices">Unmanaged devices</h2>
+<p>Unmanaged devices aren’t connected to Intune or joined to your organization using Microsoft Entra. Users don’t sign into the device with their work or school account. Instead, they sign into their Edge for Business work profile to access organization managed apps from their unmanaged device.</p>
+<p>Edge for Business applies DLP policies for unmanaged devices to the work profile identity. These policies don't apply when users choose a personal or InPrivate profile, except when the <a href="https://support.microsoft.com/edge/browse-inprivate-in-microsoft-edge" data-linktype="external">work profile used to open the InPrivate window</a> has a policy applied. When you target policies to managed apps on unmanaged devices, you must enforce the work profile in Edge for Business. Protections for unmanaged devices <a href="dlp-create-policy-prevent-cloud-sharing-from-edge-biz" data-linktype="relative-path">help prevent users from sharing sensitive information with cloud apps in Edge for Business</a>.</p>
+<h2 id="supported-cloud-apps">Supported cloud apps</h2>
+<h3 id="microsoft-entra-connected-managed-apps">Microsoft Entra connected (managed) apps</h3>
+<p>Microsoft Entra connected (managed) apps are <a href="/en-us/entra/identity/enterprise-apps/add-application-portal-setup-sso" data-linktype="absolute-path">business apps set up for Microsoft Entra single sign-on (SSO)</a>. Policies apply when users access them in Edge for Business by using work or school account credentials. Policies for managed apps in Edge for Business are supported on unmanaged devices and managed devices and policies apply only in Edge work profile.</p>
+<p>To activate policies that apply to managed apps, you need additional permissions for <a href="/en-us/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator" data-linktype="absolute-path">Conditional Access administration</a> and <a href="/en-us/defender-office-365/mdo-portal-permissions#microsoft-entra-roles-in-the-microsoft-defender-portal" data-linktype="absolute-path">Microsoft Defender for Edge In-Browser protection</a>.</p>
+<h3 id="unmanaged-cloud-apps">Unmanaged cloud apps</h3>
+<p>Your organization doesn't manage these apps. Users access them without signing in by using their Microsoft work or school account. You can use policies for unmanaged cloud apps in Edge for Business on Intune-managed devices and the policies apply across all Edge browser profiles (work profile, personal profile and InPrivate).</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Microsoft Purview browser and network data security policies don't apply to B2B guest users.</p>
+</div>
+<p>To fully activate DLP policies for unmanaged apps, additional groups and policies are required outside of Purview. This behavior is automated and triggered by the admin action in Purview. After you save your first Purview collection or DLP policy targeting unmanaged apps in Edge for Business, the <a href="/en-us/deployedge/microsoft-edge-management-service" data-linktype="absolute-path">Microsoft Edge management service</a> automatically creates and manages the required configurations and policies outside of Purview. To learn more, see <a href="/en-us/deployedge/microsoft-edge-dlp-purview-configuration" data-linktype="absolute-path">Automatic activation of your Microsoft Purview DLP policy in Microsoft Edge</a>.</p>
+<p>To fully activate your Purview policies in Edge for Business, the admin needs these permissions:</p>
+<ul>
+<li><p><a href="/en-us/entra/identity/role-based-access-control/permissions-reference#directory-readers" data-linktype="absolute-path">Directory Reader</a></p>
+</li>
+<li><p><a href="/en-us/entra/identity/role-based-access-control/permissions-reference#edge" data-linktype="absolute-path">Microsoft Edge administration</a></p>
+</li>
+<li><p><a href="/en-us/entra/identity/role-based-access-control/permissions-reference#intune-administrator" data-linktype="absolute-path">Microsoft Intune administration</a></p>
+</li>
+</ul>
+<p>Browser policies in Edge for Business support these unmanaged apps:</p>
+<ul>
+<li>Adobe Firefly</li>
+<li>CapCut</li>
+<li>ChatGPT (consumer)</li>
+<li>Cohere</li>
+<li>DeepAI</li>
+<li>DeepSeek</li>
+<li>Google Gemini</li>
+<li>Grok (xAI)</li>
+<li>Meta AI</li>
+<li>Microsoft Copilot 365 Chat</li>
+<li>Notion AI</li>
+<li>Otter.ai</li>
+<li>Perplexity AI</li>
+<li>QwenAI</li>
+<li>Qwen Chat</li>
+<li>Runway</li>
+<li>Textcortex</li>
+<li>Textcortex Zenochat</li>
+<li>You (You.com)</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>The unmanaged cloud app features apply to the consumer versions of Microsoft 365 Copilot and ChatGPT. For more information on the enterprise versions of these apps and available Purview features see, <a href="/en-us/copilot/microsoft-365/enterprise-data-protection" data-linktype="absolute-path">Learn more about Microsoft 365 Copilot Enterprise protections</a> and <a href="/en-us/purview/ai-chatgpt-enterprise" data-linktype="absolute-path">Use Microsoft Purview to manage data security &amp; compliance for ChatGPT Enterprise</a>.</p>
+</div>
+<h2 id="supported-browsers">Supported browsers</h2>
+<p>DLP policies for cloud apps in the browser work directly in Edge for Business.</p>
+<h3 id="edge-for-business">Edge for Business</h3>
+<p>These features are available in the two latest stable versions of Edge for Business, starting with version 144. For more information on Edge for Business versions, see <a href="/en-us/deployedge/microsoft-edge-release-schedule#microsoft-edge-releases" data-linktype="absolute-path">Microsoft Edge Releases</a>.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Microsoft Purview browser data security policies don't apply to B2B guest users.</p>
+</div>
+<div class="TIP">
+<p>Tip</p>
+<p>Get started with Microsoft Security Copilot to explore new ways to work smarter and faster using the power of AI. Learn more about <a href="copilot-in-purview-overview" data-linktype="relative-path">Microsoft Security Copilot in Microsoft Purview</a>.</p>
+</div>
+<h2 id="activities-you-can-monitor-and-take-action-on">Activities you can monitor and take action on</h2>
+<p>You can audit and manage these activities on sensitive items in the browser:</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Device Type</th>
+<th>App Type</th>
+<th>Supported Policy Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Upload text</td>
+<td>Managed</td>
+<td>Unmanaged</td>
+<td>allow, block, both actions audited</td>
+</tr>
+<tr>
+<td>Upload file</td>
+<td>Managed, Unmanaged</td>
+<td>Managed, Unmanaged</td>
+<td>allow, block, both actions audited</td>
+</tr>
+<tr>
+<td>Download file</td>
+<td>Managed, Unmanaged</td>
+<td>Managed</td>
+<td>allow, block, both actions audited</td>
+</tr>
+<tr>
+<td>Cut/copy data</td>
+<td>Managed, Unmanaged</td>
+<td>Managed</td>
+<td>allow, block, both actions audited</td>
+</tr>
+<tr>
+<td>Paste data</td>
+<td>Managed, Unmanaged</td>
+<td>Managed</td>
+<td>allow, block, both actions audited</td>
+</tr>
+<tr>
+<td>Print data</td>
+<td>Managed, Unmanaged</td>
+<td>Managed</td>
+<td>allow, block, both actions audited</td>
+</tr>
+<tr>
+<td>Protected clipboard (Preview)</td>
+<td>Managed, Unmanaged</td>
+<td>Managed</td>
+<td><a href="/en-us/deployedge/microsoft-edge-management-protected-clipboard" data-linktype="absolute-path">See Microsoft Edge Protected Clipboard (preview)</a></td>
+</tr>
+<tr>
+<td>Screen capture (Preview)</td>
+<td>Managed, Unmanaged</td>
+<td>Managed</td>
+<td><a href="/en-us/deployedge/microsoft-edge-management-protected-clipboard" data-linktype="absolute-path">See Microsoft Edge Protected Clipboard (preview)</a></td>
+</tr>
+</tbody>
+</table>
+<p>Some activities have limitations:</p>
+<ul>
+<li>Cut/copy data, paste data, and print data activities can only be used with the managed or unmanaged devices condition.</li>
+<li>Download file activity isn't supported for apps that don't follow Microsoft Edge for Business's download pipeline.</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>Policy sync status displays N/A for DLP policies that use the built-in protections in Edge for Business. These policies use a different activation and delivery path than other DLP locations and don’t report through the same policy sync status field. Activation or configuration failures are surfaced in the Microsoft Purview portal.</p>
+</div>
+<h2 id="policies-for-managed-app-interactions">Policies for managed app interactions</h2>
+<p>DLP policies that target managed apps in the browser apply to Edge for Business in Windows 10/11 and macOS desktop devices when the user signs in to their Edge for Business work profile.</p>
+<p>Edge for Business automatically disables developer tools and blocks the apps from opening in native clients when policies apply to managed apps (in both audit and block modes).</p>
+<p>To activate protections in the Edge for Business work profile for managed apps:</p>
+<ul>
+<li><p>Onboard apps to <a href="/en-us/defender-cloud-apps/proxy-deployment-featured-idp" data-linktype="absolute-path">Conditional Access app control</a>.</p>
+</li>
+<li><p><a href="/en-us/defender-cloud-apps/user-groups" data-linktype="absolute-path">Import user groups from connected apps</a>. This step allows you to target Groups in your Entra Conditional Access policy and your Purview policies for managed apps in Edge for Business.</p>
+</li>
+<li><p>Set up a <a href="/en-us/entra/identity/conditional-access/concept-conditional-access-session" data-linktype="absolute-path">Microsoft Entra Conditional Access</a> policy with custom session controls.</p>
+</li>
+<li><p>Configure <a href="/en-us/defender-cloud-apps/in-browser-protection" data-linktype="absolute-path">Edge for Business in-browser protection</a>.</p>
+</li>
+<li><p>Create a <a href="dlp-create-policy-prevent-cloud-sharing-from-edge-biz" data-linktype="relative-path">Microsoft Purview DLP policy that targets managed app interactions</a>.</p>
+</li>
+<li><p>(Optional) <a href="/en-us/deployedge/microsoft-edge-management-protected-clipboard#gettingstarted" data-linktype="absolute-path">Activate protected clipboard and screen capture prevention capabilities in the Microsoft Admin Portal settings for Microsoft Edge</a>.</p>
+</li>
+</ul>
+<p>For full implementation details, see <a href="dlp-create-policy-prevent-cloud-sharing-from-edge-biz" data-linktype="relative-path">Help Prevent Users from Sharing Sensitive Info with Cloud Apps in Edge for Business</a>.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Protections might not apply in Edge for Business to managed apps included in a Microsoft Purview browser policy if the user is in scope for both a Microsoft Purview managed cloud app DLP policy <em>and</em> a Microsoft Defender session policy <em>or</em> Microsoft Purview endpoint DLP policy. You must remove or exclude the users from the Microsoft Defender and the endpoint DLP policies for the managed cloud apps in Edge for Business policy to apply.</p>
+</div>
+<p>When you add users to policies for the first time, the policy might not be applied right away if they're already signed in to the app. The policy applies after their token expires and they sign in again. You can <a href="/en-us/entra/identity/conditional-access/howto-conditional-access-session-lifetime" data-linktype="absolute-path">change the sign-in frequency</a> by using conditional access session controls to shorten the wait time.</p>
+<p>Some known limitations in Conditional Access app control can impact Microsoft Purview policies that target managed apps in the browser. For more information, see <a href="/en-us/defender-cloud-apps/caac-known-issues" data-linktype="absolute-path">known limitations in Conditional Access app control</a>.</p>
+<h3 id="accessing-data-from-managed-app-interactions">Accessing data from managed app interactions</h3>
+<p>You can view policy data and alerts in <a href="/en-us/defender-xdr/pilot-deploy-investigate-respond" data-linktype="absolute-path">Defender XDR investigations</a>.</p>
+<h2 id="policies-for-unmanaged-app-interactions">Policies for unmanaged app interactions</h2>
+<p>DLP policies that target unmanaged apps in the browser apply to Microsoft Edge for Business on Windows 10 and Windows 11 desktop devices <a href="/en-us/intune/intune-service/fundamentals/manage-devices" data-linktype="absolute-path">managed by Microsoft Intune</a>. For setup details, see <a href="dlp-create-policy-block-to-ai-via-edge#help-prevent-sharing-via-microsoft-edge-for-business-to-unmanaged-ai-apps-from-managed-devices" data-linktype="relative-path">Help prevent sharing via Edge for Business to unmanaged AI apps from managed devices</a>.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Microsoft Purview inline protection in Microsoft Edge for Business for unmanaged apps doesn't support tenants that use multi-admin approval in Microsoft Intune. For more information, see <a href="/en-us/intune/fundamentals/role-based-access-control/multi-admin-approval" data-linktype="absolute-path">Multi-admin approval</a>.</p>
+</div>
+<p>When you activate a Microsoft Purview DLP policy for unmanaged cloud apps, Purview automatically creates the required Microsoft Edge configuration policies and Microsoft Intune policies (outside of Purview) and assigns the included users.</p>
+<p>If you configure the DLP policy to block, users in scope can't use unprotected browsers where the policy doesn't apply. This restriction doesn't affect their experience in Microsoft Edge for Business.</p>
+<p>For more information, see <a href="/en-us/deployedge/microsoft-edge-dlp-purview-configuration" data-linktype="absolute-path">Activate your Microsoft Purview policy in Microsoft Edge</a>.</p>
+<p>Activating protections in Microsoft Edge for Business follows these phases:</p>
+<ul>
+<li>Create a <a href="dlp-create-policy-block-to-ai-via-edge#help-prevent-sharing-via-microsoft-edge-for-business-to-unmanaged-ai-apps-from-managed-devices" data-linktype="relative-path">Microsoft Purview DLP policy targeting unmanaged app interactions</a>.</li>
+<li>Microsoft Edge management service automatically creates the configuration policies that activate DLP policies in Microsoft Edge for Business. The configuration policies use <a href="/en-us/deployedge/configure-edge-with-intune" data-linktype="absolute-path">Microsoft Intune policies</a> to <a href="/en-us/deployedge/microsoft-edge-dlp-purview-configuration" data-linktype="absolute-path">activate your Microsoft Purview policies in Microsoft Edge for Business</a>.</li>
+<li>Create a <a href="/en-us/purview/collection-policies-policy-reference" data-linktype="absolute-path">collection policy</a> targeting unmanaged apps in the browser to identify additional sensitive data sharing that might be happening across your organization.</li>
+</ul>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>If the <a href="/en-us/deployedge/microsoft-edge-dlp-purview-configuration" data-linktype="absolute-path">automatic behaviors</a> fail to sync, Microsoft Purview shows an error message. Purview doesn’t enforce DLP and collection policies for unmanaged apps in Edge for Business until you resolve the error. An admin with the <a href="/en-us/purview/dlp-browser-dlp-learn#unmanaged-cloud-apps" data-linktype="absolute-path">required permissions</a> must resync to resolve the error. For more information, see <a href="/en-us/deployedge/microsoft-edge-dlp-purview-configuration" data-linktype="absolute-path">activate your Microsoft Purview policy in Microsoft Edge</a>.</p>
+</div>
+<h3 id="accessing-data-from-unmanaged-app-interactions">Accessing data from unmanaged app interactions</h3>
+<p>You can view activities and audit log entries in <a href="data-classification-activity-explorer" data-linktype="relative-path">activity explorer</a>, audit logs, and <a href="/en-us/defender-xdr/pilot-deploy-investigate-respond" data-linktype="absolute-path">Defender XDR investigations</a>. In activity explorer, filter by enforcement plane set to browser. Data specific to AI apps is also visible in <a href="dspm-for-ai" data-linktype="relative-path">DSPM for AI</a>.</p>
+<h3 id="considerations-for-unmanaged-cloud-apps-policies">Considerations for unmanaged cloud apps policies</h3>
+<p>Review this information when you configure policies that include unmanaged cloud apps, or when you troubleshoot unexpected policy behavior:</p>
+<ul>
+<li><p>When multiple catalog entries exist for the same app with differences in the entry name (for example, QwenAI and Qwen Chat), include all entries for the app to avoid unintended coverage gaps.</p>
+</li>
+<li><p>Some unmanaged AI apps like ChatGPT, Runway and Meta AI might intermittently send content in encoded form or through dynamically generated endpoints, which can impact policy enforcement.</p>
+</li>
+<li><p>Policies that target unmanaged apps can capture interactions from both the consumer and enterprise versions of an app when the app's URL is shared across instances (for example, ChatGPT consumer and ChatGPT enterprise).</p>
+</li>
+<li><p>When you target an unmanaged cloud app in an Edge for Business browser policy, detection is based on the destination app's traffic, which isn't always exactly the same as the originating app.</p>
+</li>
+<li><p>Inline evaluation size limits: Microsoft Purview evaluates up to 4 MB of content for uploadText, and files up to 3 MB for uploadFile.</p>
+</li>
+</ul>
+<h3 id="default-policies-for-unmanaged-ai-apps-from-microsoft-data-security-posture-management-for-ai">Default policies for unmanaged AI apps from Microsoft Data Security Posture Management for AI</h3>
+<p><a href="dspm-for-ai" data-linktype="relative-path">Microsoft Purview Data Security Posture Management for AI (DSPM for AI)</a> offers recommended policies to monitor and block supported unmanaged generative AI apps. Use <a href="dspm-for-ai-considerations#one-click-policies-from-data-security-posture-management-for-ai" data-linktype="relative-path">one-click policies in DSPM for AI</a> to apply them.</p>
+<h2 id="working-with-microsoft-purview-endpoint-data-loss-prevention">Working with Microsoft Purview Endpoint data loss prevention</h2>
+<p>Endpoint DLP policies are prioritized over inline DLP policies for cloud apps in Edge for Business if the same user, context, and action are configured in both policies. For example, if you have an Endpoint DLP policy that blocks a file uploads, and you also have an inline policy for cloud apps in Edge for Business that monitors file uploads. the Endpoint DLP policy is prioritized and applied. For more information, see <a href="endpoint-dlp-learn-about" data-linktype="relative-path">Learn about Endpoint data loss prevention</a>.</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><p><a href="dlp-learn-about-dlp" data-linktype="relative-path">Learn about data loss prevention</a></p>
+</li>
+<li><p><a href="dlp-create-deploy-policy#create-and-deploy-data-loss-prevention-policies" data-linktype="relative-path">Create and deploy data loss prevention policies</a></p>
+</li>
+<li><p><a href="data-classification-activity-explorer" data-linktype="relative-path">Get started with Activity explorer</a></p>
+</li>
+</ul>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-09-15T07:34:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-09-15
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			<noscript><img src="https://learn.microsoft.com/akam/13/pixel_4c6dc662?a=dD0yYzQ0N2Y0M2RiNTM3YWViYWUyMTg4NjNlMmY3OWQ2MzA2MWVhNTBlJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+		</html>
