@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-15T07:20:08.428055+00:00",
+  "scope": "公開資料の保存ハッシュとレポート内部リンクの整合。製品の実操作や安全性の検証ではない。",
+  "source_groups": {
+    "document": {
+      "records": 25,
+      "status_counts": {
+        "saved": 24,
+        "failed": 1
+      }
+    },
+    "remote": {
+      "records": 33,
+      "status_counts": {
+        "redirect_stub_not_evidence": 2,
+        "saved": 27,
+        "failed": 4
+      }
+    },
+    "vault": {
+      "records": 49,
+      "status_counts": {
+        "saved_not_adopted": 5,
+        "saved_body_verified": 38,
+        "error_page_only": 1,
+        "http_failed": 1,
+        "navigation_only": 2,
+        "empty_body_only": 1,
+        "login_page_only": 1
+      }
+    },
+    "research": {
+      "records": 18,
+      "status_counts": {
+        "saved": 14,
+        "failed": 4
+      }
+    }
+  },
+  "source_records": 125,
+  "recorded_hash_checks": 232,
+  "local_link_checks": 42,
+  "errors": [],
+  "passed": true
+}
