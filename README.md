@@ -2,6 +2,10 @@
 
 機密情報を扱い、自律的に業務を実行・改善する企業AI基盤の設計に向けた調査集。説明は日本語とし、製品名・論文の原題・コードの識別子は原表記を保持する。[専門用語の日本語説明](research/glossary_ja.md)を参照。
 
+## 全社PCに常駐する機密データ監視（2026年10月16日）
+
+[端末での探索・漏えい防止・操作記録の比較](research/technology/endpoint_resident_sensitive_data_monitoring_20261016.md)。Purview、Cyberhaven、MIND、Fortra、Netwrix、Incydr、CrowdStrike、P-Pointer、SKYSEA、LANSCOPEの10系統を比較。保存データ検査と持ち出し遮断、常駐と予約検査、端末処理と外部への証拠送信を区別する。
+
 ## 個人情報を端末へ配布しない集中管理（2026年10月15日）
 
 [オンラインでの個人情報集中管理](research/technology/online_pii_centralized_management_20261015.md)。担当者の入力・閲覧・更新と、原文を見せない集計・AI処理を主用途に、個人情報保管庫、代理処理、遠隔画面、安全な分析環境、文書閲覧を比較。OTPによる認証と保存禁止、中央AIが原文を読む処理と集計結果だけを返す処理を分けた。[文書6系統](research/technology/online_pii_document_access_20261015.md)、[遠隔環境7群](research/technology/online_pii_remote_environments_20261015.md)、[保管庫・共同分析7系統](research/technology/online_pii_vaults_and_cleanrooms_20261015.md)、[2025〜2026年の論文と仕様](research/technology/online_pii_research_20261015.md)、[独立レビュー](research/technology/online_pii_reviews_20261015.md)。
