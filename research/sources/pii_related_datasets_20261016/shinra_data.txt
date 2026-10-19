@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <title>Index of /shinra/data</title>
+ </head>
+ <body>
+<h1>Index of /shinra/data</h1>
+<pre><img src="/icons/blank.gif" alt="Icon "> Name                    Last modified      Size  <hr><a href="/shinra/"><img src="/icons/back.gif" alt="[PARENTDIR]"></a> <a href="/shinra/">Parent Directory</a>                             -   
+<a href="SHINRA_Data/"><img src="/icons/folder.gif" alt="[DIR]"></a> <a href="SHINRA_Data/">SHINRA_Data/</a>            2024-03-11 11:41    -   
+<a href="Wikipedia_Data/"><img src="/icons/folder.gif" alt="[DIR]"></a> <a href="Wikipedia_Data/">Wikipedia_Data/</a>         2024-03-11 15:30    -   
+<hr></pre>
+<div>
+      
+<h1 id="森羅プロジェクト-公開データ">森羅プロジェクト 公開データ </h1>
+<p>このページでは、森羅プロジェクトで使用したデータを公開しています。<br>
+各データの概要は <a href="https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/C8-6.pdf">森羅プロジェクト</a> で説明されています。</p>
+<h2 id="森羅データ">森羅データ </h2>
+<h3 id="本プロジェクトで構築改変したデータ">本プロジェクトで構築・改変したデータ </h3>
+<ul>
+<li>拡張固有表現ver9.0定義書（JSON形式）
+<ul>
+<li><a href="SHINRA_Data/00_ENE_Definition/Shinra2022_ENE_Definition_v9.0.0-with-Attributes_20220714.jsonl">Shinra2022_ENE_Definition_v9.0.0-with-Attributes_20220714.jsonl</a></li>
+</ul>
+</li>
+<li>森羅2023 分類タスク 教師データ，開発データ，テストデータ
+<ul>
+<li>教師データ: <a href="SHINRA_Data/01_Categorization/shinra2022_Categorization_train_20220616.jsonl">shinra2022_Categorization_train_20220616.jsonl</a></li>
+<li>開発データ: <a href="SHINRA_Data/01_Categorization/DevData_20220714.tsv">DevData_20220714.tsv</a></li>
+<li>テストデータ: <a href="SHINRA_Data/01_Categorization/shinra2022_Categorization_leaderboard_20220530.jsonl">shinra2022_Categorization_leaderboard_20220530.jsonl</a></li>
+</ul>
+</li>
+<li>森羅2023 属性値抽出タスク 教師データ，テストデータ（分類タスク ベースラインシステムの出力）
+<ul>
+<li>教師データ: <a href="SHINRA_Data/02_AttributeExtraction/attribute_extraction-20221116.zip">attribute_extraction-20221116.zip</a></li>
+<li>テストデータ: <a href="SHINRA_Data/02_AttributeExtraction/shinra2022_AttributeExtraction_leaderboard_20220530.jsonl">shinra2022_AttributeExtraction_leaderboard_20220530.jsonl</a></li>
+</ul>
+</li>
+<li>森羅 2023 リンキングタスク 教師データ，テストデータ（属性値抽出タスク ベースラインシステムの出力）
+<ul>
+<li>教師データ: <a href="SHINRA_Data/03_EntityLinking/linking-20221116.zip">linking-20221116.zip</a></li>
+<li>テストデータ: <a href="SHINRA_Data/03_EntityLinking/attribute-extraction-prediction-leaderboard-20220629.jsonl">attribute-extraction-prediction-leaderboard-20220629.jsonl</a></li>
+</ul>
+</li>
+<li>SHINRA 2021-ML 教師データ，開発データ
+<ul>
+<li>教師データ
+<ul>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/ar_ENEW_LIST.json">ar_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/bg_ENEW_LIST.json">bg_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/ca_ENEW_LIST.json">ca_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/cs_ENEW_LIST.json">cs_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/da_ENEW_LIST.json">da_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/de_ENEW_LIST.json">de_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/el_ENEW_LIST.json">el_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/en_ENEW_LIST.json">en_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/es_ENEW_LIST.json">es_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/fa_ENEW_LIST.json">fa_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/fi_ENEW_LIST.json">fi_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/fr_ENEW_LIST.json">fr_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/he_ENEW_LIST.json">he_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/hi_ENEW_LIST.json">hi_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/hu_ENEW_LIST.json">hu_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/id_ENEW_LIST.json">id_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/it_ENEW_LIST.json">it_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/ko_ENEW_LIST.json">ko_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/nl_ENEW_LIST.json">nl_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/no_ENEW_LIST.json">no_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/pl_ENEW_LIST.json">pl_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/pt_ENEW_LIST.json">pt_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/ro_ENEW_LIST.json">ro_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/ru_ENEW_LIST.json">ru_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/sv_ENEW_LIST.json">sv_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/th_ENEW_LIST.json">th_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/tr_ENEW_LIST.json">tr_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/uk_ENEW_LIST.json">uk_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/vi_ENEW_LIST.json">vi_ENEW_LIST.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Train/zh_ENEW_LIST.json">zh_ENEW_LIST.json</a></li>
+</ul>
+</li>
+<li>開発データ
+<ul>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/ar.json">ar.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/bg.json">bg.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/ca.json">ca.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/cs.json">cs.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/da.json">da.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/de.json">de.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/el.json">el.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/en.json">en.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/es.json">es.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/fa.json">fa.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/fi.json">fi.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/fr.json">fr.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/he.json">he.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/hi.json">hi.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/hu.json">hu.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/id.json">id.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/it.json">it.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/ko.json">ko.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/nl.json">nl.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/no.json">no.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/pl.json">pl.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/pt.json">pt.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/ro.json">ro.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/ru.json">ru.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/sv.json">sv.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/th.json">th.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/tr.json">tr.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/uk.json">uk.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/vi.json">vi.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/Dev/zh.json">zh.json</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SHINRA 2020-ML Wikipedia 言語間リンク情報
+<ul>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/ar_langlinks-20190120.001.json.bz2">ar_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/bg_langlinks-20190120.001.json.bz2">bg_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/ca_langlinks-20190120.001.json.bz2">ca_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/cs_langlinks-20190120.001.json.bz2">cs_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/da_langlinks-20190120.001.json.bz2">da_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/de_langlinks-20190120.001.json.bz2">de_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/el_langlinks-20190120.001.json.bz2">el_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/en_langlinks-20190120.001.json.bz2">en_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/es_langlinks-20190120.001.json.bz2">es_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/fa_langlinks-20190120.001.json.bz2">fa_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/fi_langlinks-20190120.001.json.bz2">fi_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/fr_langlinks-20190120.001.json.bz2">fr_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/he_langlinks-20190120.001.json.bz2">he_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/hi_langlinks-20190120.001.json.bz2">hi_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/hu_langlinks-20190120.001.json.bz2">hu_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/id_langlinks-20190120.001.json.bz2">id_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/it_langlinks-20190120.001.json.bz2">it_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/ja_langlinks-20190120.001.json.bz2">ja_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/ko_langlinks-20190120.001.json.bz2">ko_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/nl_langlinks-20190120.001.json.bz2">nl_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/no_langlinks-20190120.001.json.bz2">no_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/pl_langlinks-20190120.001.json.bz2">pl_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/pt_langlinks-20190120.001.json.bz2">pt_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/ro_langlinks-20190120.001.json.bz2">ro_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/ru_langlinks-20190120.001.json.bz2">ru_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/sv_langlinks-20190120.001.json.bz2">sv_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/th_langlinks-20190120.001.json.bz2">th_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/tr_langlinks-20190120.001.json.bz2">tr_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/uk_langlinks-20190120.001.json.bz2">uk_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/vi_langlinks-20190120.001.json.bz2">vi_langlinks-20190120.001.json.bz2</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/LangLinks/zh_langlinks-20190120.001.json.bz2">zh_langlinks-20190120.001.json.bz2</a></li>
+</ul>
+</li>
+<li>SHINRA 2020-ML 各システムの出力
+<ul>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/ar.json">ar.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/bg.json">bg.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/ca.json">ca.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/cs.json">cs.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/da.json">da.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/de.json">de.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/el.json">el.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/en.json">en.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/es.json">es.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/fa.json">fa.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/fi.json">fi.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/fr.json">fr.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/he.json">he.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/hi.json">hi.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/hu.json">hu.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/id.json">id.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/it.json">it.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/ko.json">ko.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/nl.json">nl.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/no.json">no.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/pl.json">pl.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/pt.json">pt.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/ro.json">ro.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/ru.json">ru.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/sv.json">sv.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/th.json">th.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/tr.json">tr.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/uk.json">uk.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/vi.json">vi.json</a></li>
+<li><a href="SHINRA_Data/04_MultiLanguage/SystemOutputs/zh.json">zh.json</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="本プロジェクトで再配布するwikipediaデータ">本プロジェクトで再配布するWikipediaデータ </h3>
+<ul>
+<li>20190120 版日本語・30 言語Wikipedia ダンプデータ（XML 形式：WikiDump）
+<ul>
+<li><a href="Wikipedia_Data/20190120_WikiDump/arwiki-20190120-pages-articles.xml.bz2">arwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/bgwiki-20190120-pages-articles.xml.bz2">bgwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/cawiki-20190120-pages-articles.xml.bz2">cawiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/cswiki-20190120-pages-articles.xml.bz2">cswiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/dawiki-20190120-pages-articles.xml.bz2">dawiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/dewiki-20190120-pages-articles.xml.bz2">dewiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/elwiki-20190120-pages-articles.xml.bz2">elwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/enwiki-20190120-pages-articles.xml.bz2">enwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/eswiki-20190120-pages-articles.xml.bz2">eswiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/fawiki-20190120-pages-articles.xml.bz2">fawiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/fiwiki-20190120-pages-articles.xml.bz2">fiwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/frwiki-20190120-pages-articles.xml.bz2">frwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/hewiki-20190120-pages-articles.xml.bz2">hewiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/hiwiki-20190120-pages-articles.xml.bz2">hiwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/huwiki-20190120-pages-articles.xml.bz2">huwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/idwiki-20190120-pages-articles.xml.bz2">idwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/itwiki-20190120-pages-articles.xml.bz2">itwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/jawiki-20190120-pages-articles.xml.bz2">jawiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/kowiki-20190120-pages-articles.xml.bz2">kowiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/nlwiki-20190120-pages-articles.xml.bz2">nlwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/nowiki-20190120-pages-articles.xml.bz2">nowiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/plwiki-20190120-pages-articles.xml.bz2">plwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/ptwiki-20190120-pages-articles.xml.bz2">ptwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/rowiki-20190120-pages-articles.xml.bz2">rowiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/ruwiki-20190120-pages-articles.xml.bz2">ruwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/svwiki-20190120-pages-articles.xml.bz2">svwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/thwiki-20190120-pages-articles.xml.bz2">thwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/trwiki-20190120-pages-articles.xml.bz2">trwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/ukwiki-20190120-pages-articles.xml.bz2">ukwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/viwiki-20190120-pages-articles.xml.bz2">viwiki-20190120-pages-articles.xml.bz2</a></li>
+<li><a href="Wikipedia_Data/20190120_WikiDump/zhwiki-20190120-pages-articles.xml.bz2">zhwiki-20190120-pages-articles.xml.bz2</a></li>
+</ul>
+</li>
+<li>20190121版 日本語・30言語Wikipediaダンプデータ（JSON形式：CirrusSearchDump）
+<ul>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/arwiki-20190121-cirrussearch-content.json.gz">arwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/bgwiki-20190121-cirrussearch-content.json.gz">bgwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/cawiki-20190121-cirrussearch-content.json.gz">cawiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/cswiki-20190121-cirrussearch-content.json.gz">cswiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/dawiki-20190121-cirrussearch-content.json.gz">dawiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/dewiki-20190121-cirrussearch-content.json.gz">dewiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/elwiki-20190121-cirrussearch-content.json.gz">elwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/enwiki-20190121-cirrussearch-content.json.gz">enwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/eswiki-20190121-cirrussearch-content.json.gz">eswiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/fawiki-20190121-cirrussearch-content.json.gz">fawiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/fiwiki-20190121-cirrussearch-content.json.gz">fiwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/frwiki-20190121-cirrussearch-content.json.gz">frwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/hewiki-20190121-cirrussearch-content.json.gz">hewiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/hiwiki-20190121-cirrussearch-content.json.gz">hiwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/huwiki-20190121-cirrussearch-content.json.gz">huwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/idwiki-20190121-cirrussearch-content.json.gz">idwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/itwiki-20190121-cirrussearch-content.json.gz">itwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/jawiki-20190121-cirrussearch-content.json.gz">jawiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/kowiki-20190121-cirrussearch-content.json.gz">kowiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/nlwiki-20190121-cirrussearch-content.json.gz">nlwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/nowiki-20190121-cirrussearch-content.json.gz">nowiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/plwiki-20190121-cirrussearch-content.json.gz">plwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/ptwiki-20190121-cirrussearch-content.json.gz">ptwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/rowiki-20190121-cirrussearch-content.json.gz">rowiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/ruwiki-20190121-cirrussearch-content.json.gz">ruwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/svwiki-20190121-cirrussearch-content.json.gz">svwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/thwiki-20190121-cirrussearch-content.json.gz">thwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/trwiki-20190121-cirrussearch-content.json.gz">trwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/ukwiki-20190121-cirrussearch-content.json.gz">ukwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/viwiki-20190121-cirrussearch-content.json.gz">viwiki-20190121-cirrussearch-content.json.gz</a></li>
+<li><a href="Wikipedia_Data/20190121_CirrusDump/zhwiki-20190121-cirrussearch-content.json.gz">zhwiki-20190121-cirrussearch-content.json.gz</a></li>
+</ul>
+</li>
+<li>20190120版 日本語Wikipeida（HTML形式，プレーンテキスト形式）
+<ul>
+<li>HTML形式: <a href="Wikipedia_Data/20190120_Exported/wikipedia-ja-20190120-html.zip">wikipedia-ja-20190120-html.zip</a></li>
+<li>プレーンテキスト形式: <a href="Wikipedia_Data/20190120_Exported/wikipedia-ja-20190120-plain.zip">wikipedia-ja-20190120-plain.zip</a></li>
+</ul>
+</li>
+<li>20210820版 日本語Wikipedia ダンプデータ（XML 形式：WikiDump，HTML 形式，プレーンテキスト形式）
+<ul>
+<li>XML形式（WikiDump）: <a href="Wikipedia_Data/20210820_WikiDump/wikipedia-ja-20210820-xml.bz2">wikipedia-ja-20210820-xml.bz2</a></li>
+<li>HTML形式: <a href="Wikipedia_Data/20210820_Exported/wikipedia-ja-20210820-html-v2.zip">wikipedia-ja-20210820-html-v2.zip</a></li>
+<li>プレーンテキスト形式: <a href="Wikipedia_Data/20210820_Exported/wikipedia-ja-20210820-plain.zip">wikipedia-ja-20210820-plain.zip</a></li>
+</ul>
+</li>
+<li>20210823版 日本語Wikipediaダンプデータ（JSON形式：CirrusSearchDump）
+<ul>
+<li><a href="Wikipedia_Data/20210823_CirrusDump/wikipedia-ja-20210823-json.gz">wikipedia-ja-20210823-json.gz</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="ライセンス">ライセンス </h3>
+<p>上記の各データは、Wikipediaダンプデータより作成され、<a href="https://creativecommons.org/licenses/by/3.0/legalcode">クリエイティブ・コモンズ・表示・継承ライセンス3.0（CC-BY-SA 3.0）</a>の条件のもとに、利用・再配布が許諾されます。</p>
+<h2 id="森羅ベースラインシステム">森羅ベースラインシステム </h2>
+<ul>
+<li>カテゴリー分類システム
+<ul>
+<li><a href="https://github.com/akivajp/shinra2022-classifier">https://github.com/akivajp/shinra2022-classifier</a></li>
+</ul>
+</li>
+<li>属性値抽出システム
+<ul>
+<li><a href="https://github.com/akivajp/shinra-attribute-extractor">https://github.com/akivajp/shinra-attribute-extractor</a></li>
+<li><a href="https://github.com/akivajp/shinra-attribution-extraction">https://github.com/akivajp/shinra-attribution-extraction</a></li>
+</ul>
+</li>
+<li>エンティティリンキングシステム
+<ul>
+<li><a href="https://github.com/akivajp/shinra2021-linkjp-atid">https://github.com/akivajp/shinra2021-linkjp-atid</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="森羅データアクセスapi">森羅データアクセスAPI </h2>
+<ul>
+<li>森羅パブリックAPI (0.2.0)<br>
+<a href="https://api.shinra-project.info/">https://api.shinra-project.info/</a></li>
+</ul>
+<h2 id="その他">その他 </h2>
+<ul>
+<li>拡張固有表現ホームページ（アノテーションマニュアル）<br>
+<a href="http://ene-project.info/">http://ene-project.info/</a></li>
+<li>アノテーションツール<br>
+<a href="https://github.com/usamillc/taggable">https://github.com/usamillc/taggable</a></li>
+</ul>
+
+</div>
+</body></html>

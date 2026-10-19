@@ -1,0 +1,731 @@
+                                        Mind the Gap: Robustness Risks in PII Detection
+                                                          Systems
+
+                                                               Adeel Zafar and Sławomir Nowaczyk
+
+                                            Center for Applied Intelligent Systems Research, Halmstad University, Sweden
+                                                             {adeel.zafar, slawomir.nowaczyk}@hh.se
+
+
+
+
+arXiv:2609.03464v1 [cs.LG] 3 Sep 2026
+                                               Abstract. Personally Identifiable Information (PII) detection is a foun-
+                                               dational component of data protection infrastructure where missed en-
+                                               tities constitute direct privacy and security risks. Although modern PII
+                                               systems report strong performance on standard benchmarks, we show
+                                               that these evaluations mask substantial robustness failures under realis-
+                                               tic distribution shifts encountered in deployment. Rather than comparing
+                                               state-of-the-art accuracy, we study how different PII detection paradigms
+                                               fail under noisy, unstructured, and informal inputs. We construct a stress
+                                               test benchmark spanning seven categories of natural distribution shift
+                                               and evaluate representative systems from three widely deployed architec-
+                                               tural families: encoder-based NER (SpaCy), rule-based hybrid detection
+                                               (Presidio), and generative LLM extraction (Qwen2.5-3B).
+                                               All three exhibit significant degradation on out-of-distribution inputs,
+                                               but with distinct and complementary failure modes. Encoder models
+                                               primarily fail on unseen surface forms and boundary detection, rule-
+                                               based systems fail on non-standard formats, and LLMs exhibit entity-
+                                               type confusion and generation instability. These results show that aggre-
+                                               gate benchmark scores obscure deployment-critical weaknesses and that
+                                               no single architecture is uniformly reliable across PII categories. Moti-
+                                               vated by these findings, we propose a hybrid detection pipeline with a
+                                               QA-driven feedback loop for iterative risk mitigation, and release our
+                                               benchmark to support OOD-aware evaluation of PII systems.
+
+                                               Keywords: PII Detection · Data Protection · Out-of-Distribution Ro-
+                                               bustness · Named Entity Recognition · Privacy Risk Assessment
+
+
+
+                                        1    Introduction
+
+                                        PII detection is a safety critical task in modern NLP pipelines and a founda-
+                                        tional component of data protection infrastructure. Organizations rely on these
+                                        systems to identify and redact sensitive entities before data is stored, shared,
+                                        or processed. A missed entity is not merely an accuracy shortfall but a data
+                                        protection failure with consequences under regulations such as GDPR [13]. As
+                                        organizations increasingly automate PII redaction in pipelines handling customer
+                                        data, medical records, and financial documents, the reliability of these systems
+2        A. Zafar et al.
+
+becomes a direct security concern. Current PII detection systems, whether en-
+coder based [4], rule-based Presidio1 , or LLM based [3], report F1 scores exceed-
+ing 90% on standard benchmarks [12,15]. However, this confidence is misleading
+because these benchmarks consist of well edited, formally structured text drawn
+from news articles and encyclopedic sources, while real world inputs are messy,
+unstructured, and highly variable across domains.
+    The distribution shift problem is compounded when PII detection systems
+are deployed across different verticals. A model trained on general purpose cor-
+pora encounters fundamentally different language patterns in healthcare records,
+financial documents, customer support transcripts, or social media. The entity
+types may be the same but the surrounding context, formatting conventions,
+and vocabulary differ substantially. These cross domain shifts interact with the
+textual messiness we study in this paper, creating compounding challenges that
+current benchmarks do not capture.
+    Our goal is not to identify a single state-of-the-art PII detector, but to study
+how fundamentally different detection paradigms fail under realistic distribution
+shifts. We therefore evaluate representative systems from three widely deployed
+architectural families: encoder-based NER, rule-based hybrid detection, and gen-
+erative LLM extraction. By comparing qualitatively different detection mecha-
+nisms rather than optimizing leaderboard performance, we aim to characterize
+complementary robustness failures that aggregate benchmark scores obscure.
+    In our evaluation, we find that all three architectural families exhibit signif-
+icant and systematic performance degradation on unstructured inputs. Flexible
+format entities such as Location and Address suffer the most, with Location
+recall dropping from 0.725 to 0.457 across all models, while rigid format entities
+like SSN and IP addresses remain largely unaffected. Crucially, each architecture
+fails in different ways on the same input. Consider the following example:
+
+     “name William Stevenson address 588 Erickson Hills Suite 055 South
+     Brandytown, PA ssn 486-34-9478 dob 08/21/1981”
+
+The encoder model detects the person name but misses the location. The rule
+based hybrid detects the person, SSN, and date of birth but also misses the
+location. The LLM detects most entities but absorbs the city into a single AD-
+DRESS span rather than extracting it separately. Each architecture fails for a
+different internal reason yet PII remains exposed in the output.
+    A natural question is why evaluate encoder and rule based models when
+LLMs increasingly dominate NLP tasks. Our results provide a clear answer: no
+single architecture is universally superior for PII detection. The LLM achieves
+the best overall F1 but shows lower PERSON recall than SpaCy (0.777 vs 0.951),
+worse CREDIT_CARD detection than Presidio (0.543 vs 0.700), produces un-
+parseable outputs on 2.5% of OOD inputs, and is orders of magnitude slower
+and more expensive to run at scale. Meanwhile, Presidio’s regex patterns achieve
+perfect SSN and IP detection that the LLM cannot match, and SpaCy provides
+1
+    Presidio: Data Protection and De-identification. Available at: https://microsoft.
+    github.io/presidio/. Accessed: July 2026.
+                  Mind the Gap: Robustness Risks in PII Detection Systems         3
+
+reliable, fast person name detection. Understanding these tradeoffs is essential
+for building production PII systems that balance accuracy, latency, cost, and
+reliability.
+    In this paper, we make three contributions: (1) we characterize architecture-
+specific failure modes in PII detection under realistic distribution shifts, showing
+that encoder, rule-based, and LLM systems fail in distinct and complementary
+ways; (2) we construct a stress test benchmark2 spanning seven categories of
+natural distribution shift; and (3) we argue for OOD-aware evaluation and hybrid
+detection pipelines that combine complementary architectural strengths.
+
+
+
+2     Related Work
+
+2.1    Named Entity Recognition and PII Detection
+
+Named Entity Recognition (NER) has evolved through several architectural
+paradigms. Early statistical approaches using CRFs and HMMs [11] were fol-
+lowed by neural architectures combining BiLSTMs with CRF layers. The in-
+troduction of pretrained transformer models marked a significant shift, with
+BERT [4] and its variants such as DeBERTa [6] achieving strong results through
+token level BIO classification on standard benchmarks like CoNLL-2003 [12] and
+OntoNotes 5.0 [15].
+    PII detection builds on NER but extends it to a broader set of entity types
+including structured identifiers such as phone numbers, email addresses, social
+security numbers, and credit card numbers that are not covered by traditional
+NER models. Microsoft Presidio addresses this by combining rule based pattern
+matching for structured PII with ML based recognizers for named entities, rep-
+resenting a hybrid architectural approach. Presidio has seen significant adoption
+in industry, being integrated into Microsoft’s Azure AI services and used across
+healthcare, finance, and government sectors for data de-identification workflows.
+More recently, generative LLMs have been explored for information extraction
+tasks, with GPT-NER [14] demonstrating that large language models can per-
+form NER through prompting without task specific fine tuning. Smaller open
+source models such as Qwen [2] have made LLM based extraction accessible for
+production deployment where latency and cost constraints limit the use of larger
+models.
+    A key challenge across all these approaches is that PII entity types span a
+wide spectrum of format rigidity. Some types such as SSN and IP addresses follow
+strict patterns that can be reliably captured by regular expressions, while others
+such as person names and locations are flexible format entities whose recognition
+depends on contextual understanding. This spectrum has implications for OOD
+robustness that, to our knowledge, have not been systematically studied.
+
+2
+    Source Code: https://github.com/Adeelzafar/Mind-the-Gap-PII
+4       A. Zafar et al.
+
+2.2   Distribution Shift and Robustness in NLP
+The brittleness of NLP models under distribution shift has been documented
+across multiple tasks and domains. The WILDS benchmark [7] demonstrated
+systematic OOD performance gaps across both vision and language tasks, es-
+tablishing that distribution shift is a pervasive challenge rather than a task
+specific anomaly. Robustness Gym [5] provided a unified framework for evaluat-
+ing NLP model robustness along multiple axes including subpopulation analysis
+and transformation testing.
+    For NER specifically, prior work has studied robustness through controlled
+perturbations. Agarwal et al. [1] introduced entity switched datasets to audit in
+domain robustness by replacing entities with alternatives from the same type,
+revealing that models often rely on memorized entity forms rather than con-
+textual patterns. Lin et al. [8] proposed RockNER, generating adversarial ex-
+amples through entity replacement from Wikidata to evaluate NER robustness.
+However, both approaches use artificially constructed perturbations that target
+individual failure modes in isolation. Real world inputs exhibit multiple simul-
+taneous deviations (missing punctuation, informal tone, ambiguous boundaries,
+mixed entity contexts) that interact in complex ways not captured by single axis
+perturbations.
+    Cross domain evaluation of NER models [9] has shown significant perfor-
+mance drops when models trained on one domain (e.g., news) are applied to
+another (e.g., science or politics), even when the entity types remain the same.
+This finding is directly relevant to PII detection, where systems trained on gen-
+eral purpose corpora are deployed across healthcare, finance, legal, and customer
+support verticals with substantially different linguistic characteristics. However,
+cross domain NER evaluation has focused on domain vocabulary and topic shifts
+rather than the textual messiness and formatting irregularities that characterize
+real world user generated PII inputs.
+
+2.3   Continual Learning for NER
+A related challenge arises when NER models are iteratively improved on new
+data. Monaikul et al. [10] studied continual learning for NER and showed that
+models trained on new entity types risk catastrophic forgetting of previously
+learned types. Xia et al. [16] proposed reviewing synthetic samples during re-
+training to mitigate this forgetting effect. This line of work is directly relevant to
+our proposed QA driven improvement cycle (Section 5), where production fail-
+ure cases are used to iteratively retrain models. The risk that fixing one failure
+category degrades performance on another makes systematic regression testing
+essential.
+
+2.4   Gaps in Existing Work
+Despite the extensive work on NER robustness, distribution shift, and contin-
+ual learning, we identify a gap at their intersection specific to PII detection. No
+                 Mind the Gap: Robustness Risks in PII Detection Systems           5
+
+        Table 1. Distribution shift categories with representative examples.
+
+Category       Example                                                 Challenge
+Run-on text    “my name is john smith i live at 45 oak st boston ma” No boundary cues
+Conversational “hey my buddy mike lives in nyc his email is mikej...” Informal register
+Overlapping “I work at Amazon in Seattle and my manager is Alexa” Semantic ambiguity
+Abbreviations “nm: John addr: 123 Main NY ph: 212-555-0123”           Non-standard format
+Mixed context “my ip is 192.168.1.1 ssn 123-45-6789 addr 42 elm st” Multiple PII types
+Typos          “my name is jonh smth i live in san franciso”          Surface form noise
+Code switched “my nombre is Carlos I live en New York”                Cross-lingual mixing
+
+
+
+existing benchmark systematically evaluates PII detection under the natural dis-
+tribution shifts characteristic of production deployment, such as unpunctuated
+run on text, conversational language, abbreviations, or code switching. Existing
+robustness evaluations use artificial perturbations that do not reflect how real
+users actually type. Furthermore, no prior work compares encoder based, rule
+based, and LLM based PII detection architectures on the same OOD bench-
+mark to characterize their complementary failure modes. Our work addresses
+both gaps.
+
+
+3     Benchmark Design
+
+We construct a stress test benchmark comprising two evaluation sets designed
+to measure the gap between in distribution and out of distribution performance.
+
+
+3.1   Set A: Clean Baseline
+
+Set A contains 100 well formatted examples with proper punctuation, capitaliza-
+tion, and clear entity boundaries. We generate these using 10 manually authored
+templates populated with synthetic PII values from the Python Faker library,
+yielding 350 entity annotations (3.5 per example) across 9 types: Person, Lo-
+cation, Address, Phone, Email, IP Address, SSN, Date of Birth, and
+Credit Card. These examples mirror the formatting conventions of standard
+benchmarks such as CoNLL.
+
+
+3.2   Set B: OOD Stress Test
+
+For each of the seven distribution shift categories (Table 1), we author 8 tem-
+plates capturing the characteristic shift. Each template is instantiated 10 times
+with different random entities, yielding 80 examples per category and 560 total
+with 2,330 entity annotations (4.2 per example). Gold standard span annotations
+are obtained automatically through the generation process since we control ex-
+actly which PII values are inserted into each template. Table 2 summarizes the
+dataset statistics.
+6      A. Zafar et al.
+
+Table 2. Benchmark statistics by category. Mixed context PII has the highest entity
+density while overlapping entities has the lowest.
+
+             Category                  Examples Entities Avg./Ex.
+             Mixed context PII                 80      450        5.6
+             Run-on unstructured               80      390        4.9
+             Abbreviations/shorthand           80      360        4.5
+             Code switched text                80      320        4.0
+             Typos/misspellings                80      290        3.6
+             Conversational tone               80      270        3.4
+             Overlapping entities              80      250        3.1
+             Total (Set B)                    560    2,330        4.2
+
+
+
+4     Experiments
+
+4.1   Models
+
+We evaluate three architectural families representing distinct approaches to PII
+detection (entity coverage in Table 3): SpaCy en_core_web_lg3 , an encoder
+based general purpose NER model supporting multiple entity types (e.g., PER-
+SON, ORG, GPE); Microsoft Presidio, a hybrid framework combining rule based
+(e.g., regex) recognizers for structured PII with NLP models for named enti-
+ties; and Qwen2.5-3B-Instruct4 , an instruction tuned LLM used with zero shot
+prompting for flexible extraction across entity types.
+    These three models were selected to cover a range of detection mechanisms
+rather than to represent peak performance within each paradigm. SpaCy repre-
+sents the encoder paradigm where each token is classified independently based
+on bidirectional context learned from labeled training data. Presidio represents
+the hybrid paradigm where structured PII types are detected through determin-
+istic pattern matching while named entities are handled by an underlying NER
+model (SpaCy in Presidio’s default configuration). Qwen represents the decoder
+paradigm where entity extraction is framed as a text generation task, with the
+model producing structured JSON output in response to a natural language
+prompt describing the desired entity types. We deliberately chose widely avail-
+able, open source tools over research prototypes because our goal is to character-
+ize how practical, deployable systems behave under distribution shift. SpaCy and
+Presidio are well established open source frameworks with active communities
+and extensive documentation, making them common choices for organizations
+building PII detection pipelines. Qwen represents the class of small, locally de-
+ployable LLMs that are increasingly used where cost, latency, or data privacy
+3
+  spaCy: Industrial-strength Natural Language Processing in Python. Available at:
+  https://spacy.io/. Accessed: July 2026.
+4
+  Implementation available on the Hugging Face Model Hub: https://huggingface.
+  co/Qwen/Qwen2.5-3B-Instruct. Accessed: July 2026.
+                  Mind the Gap: Robustness Risks in PII Detection Systems        7
+
+Table 3. Entity type coverage and detection mechanism. L = learned representations,
+R = regex/pattern matching, P = prompt based, (✓) = partial support.
+
+          Entity Type          SpaCy (L) Presidio (R+L) Qwen (P)
+          PERSON                    ✓              ✓             ✓
+          LOCATION                  ✓              ✓             ✓
+          EMAIL                    (✓)             ✓             ✓
+          PHONE                     ×              ✓             ✓
+          CREDIT_CARD               ×              ✓             ✓
+          SSN                       ×              ✓             ✓
+          IP_ADDRESS                ×              ✓             ✓
+          DATE_OF_BIRTH            (✓)             ✓             ✓
+          ADDRESS                  (✓)             ✓             ✓
+
+
+
+constraints prevent the use of larger commercial APIs. If these readily accessi-
+ble systems exhibit significant OOD degradation, the problem has immediate
+practical consequences for any organization relying on them.
+
+4.2   Evaluation Protocol
+We use relaxed span matching for evaluation: a predicted entity is considered
+correct if its predicted span overlaps with a gold span and the entity types
+match. We adopt relaxed matching rather than exact span matching because
+entity boundaries are often ambiguous (e.g., whether “South Brandytown, PA”
+should include the state abbreviation or not) and strict boundary requirements
+would penalize predictions that are functionally correct for detection purposes.
+We note that for downstream redaction, exact span coverage matters more, and
+our relaxed evaluation therefore provides an optimistic upper bound on actual
+redaction performance. Each model is evaluated only on entity types it fully
+supports (Table 3). We report precision, recall, and F1 at the entity level, and
+define the robustness gap as ∆ = F 1Set A − F 1Set B , where a larger gap indicates
+greater sensitivity to distribution shift.
+
+4.3   Overall Results
+Table 4 presents the overall performance and per entity type recall across both
+evaluation sets. All models degrade on OOD data, with the LLM achieving the
+highest F1 on both sets (0.921 / 0.848) but also the largest robustness gap
+(∆ = 0.073). Presidio shows the smallest gap (∆ = 0.057), benefiting from
+its regex components that are inherently robust to surrounding textual noise.
+SpaCy falls in between (∆ = 0.064), limited by its narrow entity type coverage
+but stable on the two types it does detect.
+    While the LLM’s overall F1 is highest, overall scores obscure critical per
+type weaknesses that make it unsuitable as a standalone PII solution. The LLM
+misses 22.3% of person names on OOD data (recall 0.777), misclassifies nearly
+8       A. Zafar et al.
+
+Table 4. Overall performance and per entity type recall on Set A / Set B. Each model
+is evaluated on entity types it fully supports (Table 3). Location collapses across all
+models while rigid format entities remain robust.
+
+                               Set A (Clean)                   Set B (OOD)            ∆
+      Overall                  P          R       F1          P       R       F1
+      SpaCy-lg               0.678       0.853   0.755       0.676   0.706   0.691   0.064
+      Presidio               0.755       0.893   0.818       0.744   0.780   0.762   0.057
+      Qwen2.5-3B             0.925       0.917   0.921       0.920   0.787   0.848   0.073
+      Recall Per Type           SpaCy              Presidio               Qwen
+      PERSON                 0.967       0.951   0.967       0.951   0.733   0.777
+      LOCATION               0.725       0.457   0.725       0.457   0.938   0.471
+      EMAIL                          –           1.000       0.952   1.000   0.938
+      PHONE                          –           0.800       0.763   1.000   1.000
+      SSN                            –           1.000       1.000   1.000   0.922
+      IP_ADDRESS                     –           1.000       1.000   1.000   0.863
+      CREDIT_CARD                    –           0.900       0.700   1.000   0.543
+      DATE_OF_BIRTH                  –           1.000       1.000   1.000   0.989
+      ADDRESS                        –                   –           1.000   0.981
+
+
+
+half of all credit card numbers as SSN (recall 0.543), and produces completely
+unparseable output on 2.5% of inputs. In a safety critical context where every
+missed entity is a privacy violation, these are not acceptable failure rates. By
+contrast, Presidio achieves perfect SSN and IP detection (recall 1.000 on both
+sets) with zero false negatives, and SpaCy detects 95.1% of person names on
+OOD data. The practical question is therefore not which single model performs
+best overall, but how to combine their complementary strengths to minimize the
+total number of missed entities across all types. A related observation is how
+precision and recall behave differently under distribution shift: for SpaCy and
+Presidio, precision remains nearly unchanged (0.678 to 0.676 and 0.755 to 0.744,
+respectively) while recall drops more substantially, indicating that these models
+become conservative on OOD inputs, missing entities rather than hallucinating
+them. The LLM shows a similar pattern but with an even sharper recall drop
+(0.917 to 0.787) while maintaining high precision (0.925 to 0.920).
+
+4.4   Encoder vs Decoder Architectures
+The contrast between SpaCy (encoder) and Qwen (decoder) reveals fundamental
+differences in how these architectures handle PII detection under distribution
+shift.
+    Encoder models like SpaCy perform token level classification where each
+token receives a label independently based on bidirectional context. This makes
+them strong at recognizing entities whose surface forms were well represented
+in training data. PERSON recall remains high even on OOD data (0.967 to
+                 Mind the Gap: Robustness Risks in PII Detection Systems        9
+
+0.951), likely because person names have distinctive capitalization patterns and
+common name tokens that generalize across distributions. However, LOCATION
+recall drops sharply (0.725 to 0.457) because location names, especially synthetic
+or uncommon city names like “Salaston” and “Kellieborough”, do not appear in
+the training vocabulary and lack the surface form regularities that person names
+exhibit.
+    Decoder models like Qwen generate entity annotations as a sequence, which
+allows them to leverage broader world knowledge acquired during pretraining
+on diverse internet text. This gives them an advantage on inputs with typos
+and misspellings (F1 0.869 vs 0.522 for SpaCy), as the model has likely encoun-
+tered misspelled words during pretraining. However, the generative approach
+introduces failure modes that are absent in encoder models. First, the LLM
+frequently confuses entity types for ambiguous inputs: credit card numbers are
+labeled as SSN (recall dropping from 1.000 to 0.543), suggesting that the model
+struggles to distinguish between long digit sequences without explicit format
+cues. Second, the LLM shows lower PERSON recall than SpaCy even on clean
+data (0.733 vs 0.967), indicating that the zero shot prompting setup does not
+fully leverage the model’s knowledge for this entity type. Third, the LLM pro-
+duced 14 unparseable JSON outputs on Set B, representing complete detection
+failures where no entities are extracted at all.
+    In summary, encoder models fail primarily by not recognizing entities (false
+negatives due to unseen surface forms), while decoder models fail by misclassi-
+fying entities (type confusion) or skipping them entirely (empty or malformed
+outputs). Neither failure mode is strictly preferable in a safety critical PII de-
+tection context where any missed entity is a potential privacy violation.
+
+
+4.5   Per Entity Type Analysis
+
+The per entity type results in Table 4 reveal a clear relationship between entity
+format rigidity and OOD robustness.
+    Rigid format entities such as SSN (XXX-XX-XXXX) and IP addresses (dot-
+ted decimal notation) maintain perfect or near perfect recall across both clean
+and OOD data for Presidio (1.000 on both sets). Their detection relies on deter-
+ministic regex patterns that match the entity format regardless of surrounding
+textual context. Even the LLM maintains high recall on these types (SSN: 0.922,
+IP: 0.863), though somewhat lower than Presidio due to occasional generation
+errors.
+    Semi-rigid format entities such as EMAIL and PHONE show moderate degra-
+dation. Email recall drops from 1.000 to 0.952 for Presidio, with failures con-
+centrated on spelled out formats (“john at gmail dot com”) that fall outside the
+expected @ and dot pattern. The LLM handles these slightly worse (0.938) but
+for different reasons, occasionally failing to extract them in informal contexts.
+Phone recall for Presidio drops from 0.800 to 0.763, with failures on numbers con-
+taining extensions (“+1-766-693-8011x84895”) that fall outside standard phone
+regex patterns. Notably, the LLM achieves perfect phone recall (1.000) on both
+10      A. Zafar et al.
+
+sets, demonstrating that the generative approach handles format variation better
+for this entity type.
+    Flexible format entities suffer the most severe degradation. LOCATION recall
+collapses to approximately 0.46 across all three architectures on OOD data,
+making it the single weakest entity type in our evaluation. This is particularly
+notable for the LLM (0.938 to 0.471), which shows the largest absolute drop
+of any entity type for any model. The LLM’s failure mode is distinct: rather
+than missing locations entirely, it absorbs city names into broader ADDRESS
+spans (e.g., extracting “588 Erickson Hills Suite 055 South Brandytown, PA”
+as one ADDRESS rather than separately identifying “South Brandytown, PA”
+as a LOCATION). This represents an entity granularity problem rather than a
+detection failure.
+    CREDIT_CARD shows an unexpected degradation pattern for the LLM,
+with recall dropping from 1.000 to 0.543. Analysis of failure cases reveals that
+the model frequently labels credit card numbers as SSN when the surrounding
+context is ambiguous, confusing long digit sequences that lack explicit format
+cues. Presidio also shows credit card degradation (0.900 to 0.700) but for different
+reasons: non-standard spacing and missing delimiters in messy text cause digit
+sequences to fall outside expected credit card patterns.
+
+4.6   Category Analysis
+Figure 1 shows per category F1 on Set B. The LLM outperforms on every cat-
+egory, with the largest advantage on typos (0.869 vs 0.522 for SpaCy, 0.659 for
+Presidio) and the smallest on overlapping entities (0.791 vs 0.721 for Presidio)
+where semantic ambiguity challenges all architectures regardless of their under-
+lying mechanism.
+    Typos and misspellings represent the most challenging category for encoder
+and rule based models because both approaches rely heavily on correct surface
+forms. SpaCy’s learned token representations break when entity text is mis-
+spelled, and Presidio’s regex patterns require exact format matches. The LLM’s
+resilience to typos (F1 0.869) likely stems from its pretraining on diverse inter-
+net text that includes misspellings, giving it a built in tolerance for surface form
+noise.
+    Run on and unstructured text (F1: SpaCy 0.683, Presidio 0.786, Qwen 0.873)
+poses challenges for entity boundary detection. Without punctuation and for-
+matting cues, models struggle to determine where one entity ends and another
+begins. Presidio performs better than SpaCy here because its regex patterns for
+structured PII types can match entities regardless of sentence boundaries.
+    Code switched text (F1: SpaCy 0.660, Presidio 0.731, Qwen 0.817) introduces
+vocabulary and syntactic patterns absent from monolingual training data. Even
+the LLM, which was pretrained on multilingual data, shows notable degradation
+on this category.
+    Conversational and informal text yields nearly identical scores for SpaCy
+and Presidio (0.770 vs 0.769), suggesting that informal register alone is equally
+challenging for both encoder and rule based approaches. The LLM handles it
+                                                 Mind the Gap: Robustness Risks in PII Detection Systems                                                                     11
+
+                          1.0
+                                     SpaCy-lg (encoder)
+                                     Presidio (hybrid)
+                          0.9        Qwen2.5-3B
+                                          0.87    (LLM)                               0.87                 0.88
+                                                                                                                                                                      0.85
+
+
+
+
+F1 score on Set B (OOD)
+                                                                                                                                                 0.83          0.83
+                                                                 0.82
+                          0.8                                                  0.79                 0.77
+                                                                                                                              0.79
+                                                                                                                                     0.77 0.77
+                                                          0.73                                                                                          0.74
+                                                                                             0.71                 0.72 0.72
+                          0.7             0.66     0.66
+                                                                        0.68
+
+
+                          0.6
+                                   0.52
+                          0.5
+
+                          0.4
+                                     Typos           Code-               Run-on               Abbrev.             Overlapping         Convers.            Mixed
+                                                    switched                                                                                             context
+
+Fig. 1. Per category F1 on Set B (OOD). The LLM outperforms across all categories.
+Typos show the largest gap between architectures while overlapping entities shows the
+smallest.
+
+
+better (0.833) but still shows meaningful degradation, particularly on inputs
+where the informal framing causes it to miss person names entirely.
+
+4.7                             Failure Mode Analysis
+Examining individual failure cases reveals architecture specific patterns that
+have practical implications for system design.
+
+Shared failures across all models: Location entities are systematically missed
+when embedded in unstructured address strings. Synthetic city names gener-
+ated by Faker (“Salaston,” “Kellieborough,” “Figueroahaven”) are almost never
+detected because they do not appear in any training data or knowledge base.
+Locations containing person name like tokens such as “East David” and “South
+Melissaside” are frequently misclassified as Person by SpaCy and Presidio, while
+the LLM absorbs them into ADDRESS spans. This shared failure on location
+detection, despite fundamentally different architectures, suggests a structural
+limitation in how current NER systems handle geographic entities in unstruc-
+tured contexts.
+
+Encoder specific failures (SpaCy): Entity boundary absorption is a recurring
+problem in unpunctuated text. For example, “Kimberly Snyder DVM dob” is
+tagged as a single Person span, absorbing the professional title and the short-
+hand label into the name. Similarly, “Raymond Shannon dob 09/20/1987” merges
+the name with the date. Without punctuation cues, the encoder model cannot
+determine where one entity ends and the next begins. This boundary confusion
+is a direct consequence of the token level classification approach, where each
+token’s label depends on its local context window.
+12      A. Zafar et al.
+
+Rule based specific failures (Presidio): Three distinct failure patterns emerge.
+First, spelled out emails such as “eugenewalker at example dot com” are com-
+pletely invisible to regex patterns that expect the @ symbol and dot notation.
+Second, phone numbers with extensions such as “+1-766-693-8011x84895” fall
+outside standard phone number formats. Third, the date recognizer produces
+excessive false positives by aggressively matching any date like numeric pat-
+tern regardless of semantic context, tagging standalone numbers like “6574” and
+“79327” as dates. This causes DATE_OF_BIRTH precision to drop to 0.492 on
+Set B despite maintaining perfect recall, representing a fundamentally different
+failure mode (over detection rather than under detection).
+
+LLM specific failures (Qwen): The LLM exhibits three distinct failure modes.
+First, it absorbs city names into ADDRESS spans: for input “i live at 6766 Feli-
+cia Shore Apt. 512 Ricebury,” it extracts the entire string as a single ADDRESS
+rather than separately identifying “Ricebury” as a LOCATION. This is archi-
+tecturally interesting because the LLM recognizes the text as PII relevant but
+assigns it to the wrong granularity level. Second, credit card numbers are fre-
+quently misclassified as SSN when context is ambiguous (“4788861015819951”
+labeled as SSN instead of CREDIT_CARD). Third, the LLM occasionally pro-
+duces completely empty outputs on conversational text, returning an empty
+JSON array for inputs like “lmao yeah so Daniel Singh was like just email me at
+xhill@example.org” where it apparently fails to recognize any PII in the highly
+informal context. It also produced 14 complete parse errors on Set B where the
+output was not valid JSON, representing total detection failures.
+
+
+5     Discussion and Conclusion
+5.1   Risk Assessment
+Our results show that the OOD robustness gap in PII detection is significant and
+pervasive across architectural families. While it may seem intuitive that models
+trained on clean data would struggle with messy inputs, the scale and nature
+of the degradation are far from obvious. Location recall dropping below 50%
+across all architectures, including an LLM pretrained on diverse internet text,
+suggests a deeper structural problem than simple domain mismatch. Further-
+more, the finding that different architectures fail in complementary ways on the
+same inputs has direct engineering implications that cannot be predicted from
+first principles alone.
+    Clean benchmark scores create a false sense of production readiness: a system
+reporting 0.818 F1 on clean data still misses more than half of all Location
+entities in unstructured text. Moreover, our benchmark only captures textual
+style shifts within a general domain. In practice, PII systems are deployed across
+healthcare, finance, legal, and customer support verticals where domain specific
+vocabulary and formatting conventions compound the distribution shift further.
+The robustness gaps we observe are therefore likely a lower bound on what
+production systems encounter.
+                  Mind the Gap: Robustness Risks in PII Detection Systems       13
+
+    From a risk perspective, the findings can be quantified in terms of data ex-
+posure probability. On our OOD benchmark, even the best performing model
+(Qwen, F1 0.848) fails to detect 21.3% of PII entities. For an organization pro-
+cessing thousands of documents daily, this translates to hundreds or thousands
+of unredacted PII instances per day, each representing a potential regulatory vi-
+olation or data breach vector. The risk is not uniformly distributed: Location
+entities have a 54% miss rate, Credit Card numbers have a 30 to 46% miss
+rate depending on architecture, and the LLM produces zero output (complete
+detection failure) on 2.5% of inputs. Organizations that rely on benchmark F1
+scores to certify their PII systems are therefore systematically underestimating
+their data exposure risk. This over-reliance on clean benchmark performance for
+deployment decisions represents a broader trust and automation risk: organiza-
+tions may believe their data protection pipeline is compliant when it is in fact
+routinely leaking PII in real world operating conditions.
+
+5.2   Risk Mitigation through Hybrid Architecture
+Different architectures fail on different inputs, which motivates hybrid approaches
+(Figure 2). Encoder models fail on unseen entity forms and boundary detection.
+Rule based systems fail on non-standard formats and produce false positives.
+LLMs achieve the best overall performance but confuse entity types and occa-
+sionally produce unparseable output. Since these failure modes are largely com-
+plementary, production systems should combine fast encoder models for well
+formed text, regex layers for rigid format PII, and LLM based fallback for am-
+biguous inputs. An entity merger layer would consolidate outputs from all three,
+resolving conflicts and deduplicating overlapping detections.
+    This hybrid approach directly mitigates the risks identified above. Regex
+patterns eliminate the risk of missing rigid format entities like SSN and IP
+addresses entirely, regardless of input messiness. The encoder model provides a
+fast, reliable baseline for person name detection where it outperforms the LLM.
+The LLM, as a generative AI component used in a defensive capacity, handles
+the long tail of ambiguous, informal, and noisy inputs where deterministic and
+encoder based approaches fail. By running all three in parallel, the system’s
+overall miss rate becomes bounded by the intersection of their failure sets rather
+than the union, substantially reducing data exposure probability.
+
+5.3   Risk Mitigation through Iterative QA
+Beyond model architecture, we argue that a human in the loop approach grounded
+in software engineering practice is equally important for mitigating PII detection
+risk in production. Dedicated QA teams that systematically collect and catego-
+rize failure cases from production traffic play a critical role in continual risk
+assessment and reduction. Each failure case can be traced to a distribution shift
+category, and the appropriate mitigation strategy depends on the architecture.
+For encoder models, collected failure cases serve as additional training data for
+fine tuning, with targeted examples addressing specific weak categories such as
+14      A. Zafar et al.
+
+
+
+
+Fig. 2. Proposed hybrid PII detection pipeline. Three architectural families run in
+parallel, their outputs are merged, and a QA feedback loop iteratively improves each
+component based on categorized production failures.
+
+
+typos or unseen location names. For rule based systems, QA findings translate
+directly into new regex patterns (for example, adding phone extension formats
+like “x1234” or spelled out email patterns). For LLMs, failures can inform prompt
+refinement, few shot example selection, or targeted fine tuning on the specific
+entity types that show the largest degradation.
+    These improvements are then verified through regression testing against the
+previously failing cases. Critically, regression testing must also cover previously
+passing cases, as fine tuning on new failure categories risks catastrophic forget-
+ting [10,16] where the model improves on newly targeted inputs but degrades
+on inputs it previously handled correctly. Maintaining a growing regression suite
+organized by our taxonomy categories helps detect such regressions early and
+prevents the introduction of new risks while mitigating old ones. This creates
+a continuous risk reduction loop where each component of the hybrid pipeline
+improves incrementally with each deployment cycle, and the taxonomy we pro-
+pose provides a structured framework for prioritizing which risks to address first
+based on their frequency and severity in a given domain.
+
+Limitations: Our benchmark is synthetic and operates within a single general
+domain. Evaluation is limited to English, and the LLM uses zero shot prompting
+where fine tuning could yield different results. We evaluate one representative
+model per architectural family; future work should include stronger encoder mod-
+                   Mind the Gap: Robustness Risks in PII Detection Systems            15
+
+els (e.g., DeBERTa, GLiNER), larger LLMs (e.g., GPT-4, Llama 70B), and fine
+tuned variants to determine whether OOD degradation persists at higher capa-
+bility levels. Future work should also incorporate naturally occurring messy text
+from multiple domains, expand to multilingual settings, and evaluate domain
+adaptive strategies for reducing the robustness gap.
+
+References
+ 1. Agarwal, O., Yang, Y., Wallace, B.C., Nenkova, A.: Entity-switched datasets: An
+    approach to auditing the in-domain robustness of named entity recognition models.
+    arXiv preprint arXiv:2004.04123 (2020)
+ 2. Bai, J., Bai, S., Chu, Y., Cui, Z., Dang, K., Deng, X., Fan, Y., Ge, W., Han, Y.,
+    Huang, F., et al.: Qwen technical report. arXiv preprint arXiv:2309.16609 (2023)
+ 3. Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J.D., Dhariwal, P., Nee-
+    lakantan, A., Shyam, P., Sastry, G., Askell, A., et al.: Language models are few-shot
+    learners. Advances in neural information processing systems 33, 1877–1901 (2020)
+ 4. Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: Bert: Pre-training of deep bidi-
+    rectional transformers for language understanding. In: Proceedings of the 2019
+    conference of the North American chapter of the association for computational
+    linguistics: human language technologies, volume 1 (long and short papers). pp.
+    4171–4186 (2019)
+ 5. Goel, K., Rajani, N.F., Vig, J., Taschdjian, Z., Bansal, M., Ré, C.: Robustness gym:
+    Unifying the nlp evaluation landscape. In: Proceedings of the 2021 Conference of
+    the North American Chapter of the Association for Computational Linguistics:
+    Human Language Technologies: Demonstrations. pp. 42–55 (2021)
+ 6. He, P., Liu, X., Gao, J., Chen, W.: Deberta: Decoding-enhanced bert with disen-
+    tangled attention. arXiv preprint arXiv:2006.03654 (2020)
+ 7. Koh, P.W., Sagawa, S., Marklund, H., Xie, S.M., Zhang, M., Balsubramani, A.,
+    Hu, W., Yasunaga, M., Phillips, R.L., Gao, I., et al.: Wilds: A benchmark of in-
+    the-wild distribution shifts. In: International conference on machine learning. pp.
+    5637–5664. PMLR (2021)
+ 8. Lin, B.Y., Gao, W., Yan, J., Moreno, R., Ren, X.: Rockner: A simple method to
+    create adversarial examples for evaluating the robustness of named entity recog-
+    nition models. In: Proceedings of the 2021 Conference on Empirical Methods in
+    Natural Language Processing. pp. 3728–3737 (2021)
+ 9. Liu, Z., Xu, Y., Yu, T., Dai, W., Ji, Z., Cahyawijaya, S., Madotto, A., Fung, P.:
+    Crossner: Evaluating cross-domain named entity recognition. In: Proceedings of
+    the AAAI conference on artificial intelligence. vol. 35, pp. 13452–13460 (2021)
+10. Monaikul, N., Castellucci, G., Filice, S., Rokhlenko, O.: Continual learning for
+    named entity recognition. In: Proceedings of the AAAI Conference on Artificial
+    Intelligence. vol. 35, pp. 13570–13577 (2021)
+11. Rustad, S., Shidik, G.F., Noersasongko, E., Setiadi, D.R.I.M., et al.: Systematic
+    literature review on named entity recognition: approach, method, and application.
+    Statistics, Optimization & Information Computing 12(4), 907–942 (2024)
+12. Sang, E.T.K.: Introduction to the conll-2002 shared task: Language-independent
+    named entity recognition. In: COLING-02: The 6th conference on natural language
+    learning 2002 (CoNLL-2002) (2002)
+13. Voigt, P., Von dem Bussche, A.: The eu general data protection regulation (gdpr).
+    A practical guide, 1st ed., Cham: Springer International Publishing 10(3152676),
+    10–5555 (2017)
+16      A. Zafar et al.
+
+14. Wang, S., Sun, X., Li, X., Ouyang, R., Wu, F., Zhang, T., Li, J., Wang, G., Guo,
+    C.: Gpt-ner: Named entity recognition via large language models. In: Findings of
+    the association for computational linguistics: NAACL 2025. pp. 4257–4275 (2025)
+15. Weischedel, R., Palmer, M., Marcus, M., Hovy, E., Pradhan, S., Ramshaw, L., Xue,
+    N., Taylor, A., et al.: Ontonotes release 5.0 ldc2013t19 (2013)
+16. Xia, Y., Wang, Q., Lyu, Y., Zhu, Y., Wu, W., Li, S., Dai, D.: Learn and review:
+    Enhancing continual named entity recognition via reviewing synthetic samples. In:
+    Findings of the association for computational linguistics: ACL 2022. pp. 2291–2300
+    (2022)
+

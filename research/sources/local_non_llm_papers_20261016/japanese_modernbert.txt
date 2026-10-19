@@ -1,0 +1,495 @@
+                                             llm-jp-modernbert: A ModernBERT Model Trained on a Large-Scale
+                                                        Japanese Corpus with Long Context Length
+
+                                                                                   ♣,♢                           ♢                 ♢
+                                                              Issa Sugiura , Kouta Nakayama , Yusuke Oda
+                                                                       ♣                  ♢
+                                                                         Kyoto University, NII LLMC
+                                                      sugiura.issa.q29@kyoto-u.jp, {nakayama, odashi}@nii.ac.jp
+
+
+
+                                                               Abstract                                 BERT models (Tohoku NLP, 2023; NLP-Waseda,
+                                                                                                        2022; Ueda, 2024). Recent efforts have led to the
+                                             Encoder-only transformer models like BERT                  development of modernbert-ja-130m (Tsukagoshi
+                                             are widely adopted as a pre-trained backbone for
+
+
+
+
+arXiv:2504.15544v1 [cs.CL] 22 Apr 2025
+                                                                                                        et al., 2025), a ModernBERT (Warner et al., 2024)
+                                             tasks like sentence classification and retrieval.
+                                             However, pretraining of encoder models with                model trained on in-house Japanese and English
+                                             large-scale corpora and long contexts has been             corpora with a context length of 8192 tokens.
+                                             relatively underexplored compared to decoder-                 On the other hand, research on pretraining
+                                             only transformers. In this work, we present llm-           encoder-only transformer models with large-scale
+                                             jp-modernbert, a ModernBERT model trained                  corpora and long contexts has been less active com-
+                                             on a publicly available, massive Japanese cor-             pared to that of decoder-only transformer models.
+                                             pus with a context length of 8192 tokens. While
+                                                                                                        This limits our understanding of model behavior
+                                             our model does not surpass existing baselines
+                                             on downstream tasks, it achieves good results              during training in such settings. In addition, few
+                                             on fill-mask test evaluations. We also analyze             existing models publicly release all components
+                                             the effect of context length expansion through             such as training code, evaluation code, and training
+                                             pseudo-perplexity experiments. Furthermore,                data, which makes detailed analysis challenging.
+                                             we investigate sentence embeddings in detail,                 In this paper, we introduce llm-jp-modernbert, a
+                                             analyzing their transitions during training and            ModernBERT model trained on a publicly available,
+                                             comparing them with those from other existing
+                                                                                                        massive Japanese corpus with a context length
+                                             models, confirming similar trends with mod-
+                                             els sharing the same architecture. To support
+                                                                                                        of 8192. To deepen our understanding of model
+                                             reproducibility and foster the development of              behavior, we analyze training checkpoints with a
+                                             long-context BERT, we release our model1,                  focus on three aspects: performance on downstream
+                                             along with the training and evaluation code2.              tasks, the effects of context length expansion, and
+                                                                                                        the evolution of sentence embeddings obtained via
+                                         1   Introduction                                               mean pooling. By releasing our training code,
+                                                                                                        evaluation code, and model, we aim to foster future
+                                         Encoder-only transformer models, such as
+                                                                                                        research in this area.
+                                         BERT (Devlin et al., 2019), are pre-trained on
+                                         a large corpus using a masked language modeling                2     Training
+                                         (MLM) objective. They are commonly used as
+                                         pre-trained backbones for a variety of downstream              2.1    Model Architecture
+                                         tasks, including sentence classification (Penedo               The architecture of llm-jp-modernbert is based on
+                                         et al., 2024) and sentence retrieval (Lewis et al.,            ModernBERT-base (Warner et al., 2024), a model
+                                         2020). Since the release of BERT (Devlin et al.,               that integrates several recent advancements com-
+                                         2019), there have been numerous advancements in                monly used in large language models (LLMs), such
+                                         model architecture, training methods, and context              as Rotary Positional Embedding (RoPE) (Su et al.,
+                                         length (Liu et al., 2019; He et al., 2021; Warner              2023), Local-Global Alternating Attention (Gemma
+                                         et al., 2024; Breton et al., 2025). In parallel, consid-       Team, 2024), and FlashAttention (Dao et al., 2022).
+                                         erable efforts have been made to develop Japanese                 For tokenization, we use a modified version of the
+                                            1https://huggingface.co/llm-jp/                             llm-jp-tokenizer v33, customized for the encoder
+                                         llm-jp-modernbert-base                                         model. This tokenizer is trained on data from
+                                            2https://github.com/llm-jp/
+                                         llm-jp-modernbert                                                  3https://github.com/llm-jp/llm-jp-tokenizer
+
+
+                                                                                                    1
+the domains of Japanese, English, Code, Chinese,                   Hyperparameters             Stage 1     Stage 2
+and Korean, and has a vocabulary size of 99,574.                   Max sequence length          1024        8192
+Consequently, the embedding layer has a larger                     Training steps             500,000 200,000
+number of parameters than typical models, resulting                Total batch size             3328         384
+in a total of 187M parameters for the model.                       Peak learning rate         5 × 10
+                                                                                                     −4
+                                                                                                          5 × 10
+                                                                                                                 −5
+
+                                                                   Warmup steps                      24,000
+2.2    Training Data
+                                                                   LR schedule                    Linear decay
+For the training dataset, we use the Japanese sub-                 Optimizer                        AdamW
+set of the llm-jp-corpus v44, which contains ap-                   Adam β1                             0.9
+proximately 0.69T tokens, tokenized using llm-jp-                  Adam β2                            0.98
+tokenizer v3. The llm-jp-corpus v4 was devel-                      Adam ϵ                           1 × 10
+                                                                                                           −6
+oped by LLM-jp (2024) and includes data crawled                    MLM probability                    0.30
+from sources such as Common Crawl5, WARP6,                         Gradient clip                       1.0
+Wikipedia, KAKEN7, patents, legal documents,                       Weight decay                     1 × 10
+                                                                                                           −5
+and National Diet proceedings, and more.                           Global RoPE theta                 10,000
+                                                                   Line by line                       True
+2.3    Training Settings
+                                                                   Training time               8 days      3 days
+We employ a two-stage pretraining approach: In
+the first stage, the model is pretrained with a maxi-           Table 1: Training settings. Line by line indicates whether
+mum context length of 1024 tokens. In the second                to discard the part exceeding maximum sequence length.
+stage, the context length is extended to 8192 to-               We used 16 NVIDIA H100 80GB GPUs for each stage.
+kens. Table 1 summarizes the hyperparameters
+for each stage, which were selected based on and
+                                                                3.1   Baseline Models
+RoBERTa (Liu et al., 2019). Following Warner
+et al. (2024), we set the mask rate to 30% for the              In this evaluation, we use the following baseline
+Masked Language Modeling (MLM) objective and                    models:
+omit the Next-Sentence Prediction objective.
+   The model consumes up to 1.7T tokens during                     • tohoku-nlp/bert-base-japanese-v3 (Tohoku
+Stage 1, including padding tokens (500k steps ×                      NLP, 2023): A Japanese BERT model trained
+3328 × 1024). The same applies to Stage 2, con-                      on the Japanese portion of the CC-100 (Con-
+suming 0.6T tokens.                                                  neau et al., 2020) dataset and the Japanese
+                                                                     version of Wikipedia, with a maximum con-
+2.4    Training Script                                               text length of 512.
+We prepared a training script based on Hugging                     • sbintuitions/modernbert-ja-{130m,
+Face’s example code8, modifying it to support                        310m} (Tsukagoshi et al., 2025): Japanese
+checkpoint resumption with IterableDataset9,                         ModernBERT models trained on an in-house
+which we use to handle terabyte-scale datasets.                      large-scale corpus of both Japanese and
+                                                                     English text, with a maximum context length
+3     Evaluation
+                                                                     of 8192.
+We evaluate our model from various aspects, in-
+cluding downstream tasks, the impact of context                    • cl-nagoya/ruri-large-v2 (Tsukagoshi and
+length expansion, and the evolution of sentence                      Sasano, 2024): A supervised fine-tuned
+embeddings obtained through mean pooling.                            Japanese sentence embedding model. This
+                                                                     model is used in our experiments related to
+   4The llm-jp-corpus v4 will be publicly available soon.            sentence embeddings.
+   5https://commoncrawl.org
+   6https://warp.ndl.go.jp
+   7https://kaken.nii.ac.jp                                     3.2   Training Curve
+   8https://github.com/huggingface/
+transformers/blob/main/examples/pytorch/                        During training, we track multiple validation met-
+language-modeling/run_mlm_no_trainer.py                         rics, including masked language modeling (MLM)
+   9https://huggingface.co/docs/datasets/main/
+en/package_reference/main_classes#datasets.                     loss and accuracy on a validation dataset, as well
+IterableDataset                                                 as recall and Mean Reciprocal Rank (MRR) for a
+
+                                                            2
+                 Loss on validation data                                           Accuracy on validation data
+
+
+
+
+                 Recall@10 on MIRACL                                                 MRR@10 on MIRACL
+
+
+                                                  Figure 1: Training curves.
+
+
+zero-shot sentence retrieval task10.                                  different stages. In Stage 1, validation loss and
+   For MLM loss and accuracy, we use the Japanese                     accuracy steadily improve as training progresses.
+validation subset of the llm-jp-corpus-v3, which                      In Stage 2, both metrics show minor improvements,
+includes a portion of Wikipedia as the validation                     though the increased maximum token length in
+dataset. For the zero-shot sentence retrieval task,                   Stage 2 makes direct loss comparisons with Stage 1
+we use the MIRACL dataset (Zhang et al., 2023), a                     less straightforward. For the sentence retrieval task,
+benchmark for multilingual sentence retrieval11. To                   performance sharply improves up to 15k steps in
+obtain sentence embeddings during training, we ap-                    Stage 1, after which it gradually declines.
+ply mean pooling, which averages the embeddings
+of all tokens in the sentence to produce a single                     3.3   Downstream Evaluation
+vector representation for the entire sentence12. If                   BERT models are typically pre-trained and then fine-
+the input sentence exceeds the maximum sequence                       tuned for downstream tasks (Devlin et al., 2019).
+length, it is truncated accordingly.                                  To evaluate the downstream performance of our
+   Figure 1 illustrates the training dynamics across                  pre-trained model, we fine-tune and evaluate it on
+                                                                      the following tasks from JGLUE (Kurihara et al.,
+   10Note that the performance of a supervised fine-tuned
+model for sentence embedding tasks does not necessarily               2022).
+correlate with that of the pretrained model (Reimers and
+Gurevych, 2019a; Gao et al., 2021; Fuster Baggetto and Fresno,        Sentence Classification Task For the sentence
+2022).                                                                classification task, we use JCoLA. JCoLA (Japanese
+   11Details on the construction and validation of the task are
+provided in Appendix B.                                               Corpus of Linguistic Acceptability) is a binary
+   12We use SentenceBERT (Reimers and Gurevych, 2019b).               classification task that determines whether a given
+
+                                                                  3
+                                Model                              # Params      JSTS   JNLI     JCoLA    Avg.
+
+       tohoku-nlp/bert-base-japanese-v3 (Tohoku NLP, 2023)          111M         92.0   91.2      88.0     90.4
+       sbintuitions/modernbert-ja-130m (Tsukagoshi et al., 2025)    132M         91.6   92.7      86.8     90.4
+       sbintuitions/modernbert-ja-310m (Tsukagoshi et al., 2025)    315M         93.2   93.3      88.3     91.6
+                                  Stage          Steps
+                                                   4k                            77.7   68.4      83.9     76.7
+                                                  15k                            90.5   89.0      84.3     87.9
+                                                  50k                            92.1   92.0      86.2     90.1
+                                                 100k                            92.1   91.8      86.1     90.0
+       llm-jp-modernbert-base       1            200k               187M         92.0   92.7      85.0     89.9
+                                                 300k                            92.0   91.9      85.2     89.7
+                                                 400k                            92.1   92.0      85.5     89.9
+                                                 500k                            92.1   92.0      84.5     89.5
+                                    2            200k                            91.8   91.3      84.4     89.2
+
+                Table 2: Downstream performance on subtasks of JGLUE (Kurihara et al., 2022).
+
+    Question                                                       bert-base-      modernbert-      llm-jp-
+                                                                   japanese-v3     ja-130m          modernbert-
+                                                                                                    base
+   { } は、 地球上で最も高い山として知られ、 世界中の登 現在 (Present) 富 士 山                                            (Mt. エ ベ レ ス
+   山家たちの憧れの地となっています。 ({ } is known as                                              Fuji)            ト(Mt. Everest)
+   the highest mountain on earth and is the dream destination for
+   mountaineers from all over the world.)
+   { }は、歴史上の重要な出来事であり、多くの人々の生活 これ (This)                                           明 治 維 新 COVID-19
+   や社会のあり方に大きな影響を与えました。 ({ } was an                                                (Meĳi Restora-
+   important historical event that had a profound impact on the lives              tion)
+   of many people and on the state of society.)
+   最も長い川は{ }です。その流域には多くの都市や村が広 川 (River)                                           利 根 川 (Tone 長 江 (Yangtze
+   がり、豊かな自然や文化が育まれています。 (The longest                                               River)         River)
+   river is the { }. Many cities and villages are spread out along its
+   basin, nurturing a rich natural environment and culture.)
+   1年は{ }ヶ月です。(One year is { } months.)                                3           6              12
+   英 語 で 「あ り が と う」 は{ }と 言 い ま す。 (In English, あ り が と う サ ン キ ュ ー サ ン キ ュ ー
+   「thank you」 is said as { }.)                                        (Thank you) (Thank you)    (Thank you)
+   1年はおよそ{ }日です。(One year is approximately { } days.) 100                          7              365
+
+Table 3: Fill-mask test. {} represents the masked token. We filled the mask with the model’s top 1 prediction. For
+llm-jp-modernbert-base, we used the checkpoint after Stage 2 training.
+
+
+sentence is linguistically acceptable.                         tuning, and the validation split for evaluation. We
+                                                               report the best scores across all combinations of
+Sentence Pair Classification Tasks For the sen-                learning rates {5 × 10 , 1 × 10 , 2 × 10 , 3 ×
+                                                                                      −6         −5         −5
+tence pair classification task, we use JSTS and                10 , 5 × 10 , 1 × 10 } and epochs {1, 2, 3, 4,
+                                                                  −5        −5         −4
+JNLI. JSTS (Japanese Semantic Textual Similar-                 5, 10}.
+ity) predicts the semantic similarity between two
+sentences, while JNLI (Japanese Natural Language
+Inference) predicts the inference relationship be-               As shown in Table 2, JSTS performed well of
+tween a premise and a hypothesis sentence. The                 similar sizes, whereas JCoLA had lower perfor-
+possible relationships are entailment, contradiction,          mance. In Stage 1, JGLUE performance showed
+or neutral.                                                    no improvement beyond step 50k.
+   We use a modified version of Hugging Face’s
+GLUE (Wang et al., 2019) evaluation code13 to
+support JGLUE. The train split is used for fine-                  During training, validation loss and accuracy
+                                                               consistently improved, but JGLUE performance
+  13https://github.com/huggingface/
+transformers/blob/main/examples/pytorch/                       plateaued after 50k steps. Investigating the cause
+text-classification/run_glue_no_trainer.py                     of this discrepancy remains a future challenge.
+
+                                                           4
+       500k steps in Stage 1                    200k steps in Stage 2                 sbintuitions/modernbert-ja-130m
+
+                                Figure 2: Pseudo-Perplexity vs. Sequence Length.
+
+
+3.4   Fill-Mask Test                                            the pseudo-perplexity for long sequences decreases
+The fill-mask test is a task where words in a sentence          from Stage 1 to Stage 2, indicating improved perfor-
+are masked, and the model is required to predict the            mance on extended contexts as a result of the context
+masked words. This task is tokenizer-dependent,                 length expansion introduced in Stage 2. However,
+but It is useful for directly measuring the model’s             our model at 200k steps in Stage 2 shows a slight
+performance on the MLM task. In this experiment,                increase in pseudo-perplexity as sequence length
+we evaluate BERT models using fill-mask tests on                grows, whereas the modernbert-ja-130m maintains
+various sentences. Table 3 shows the result. Our                consistently low values. These observations sug-
+model appears to predict the correct words in many              gest a potential undertraining of our model on long
+examples. Since llm-jp-modernbert is trained on                 sequences. One possible contributing factor might
+llm-jp-corpus v4, which contains the latest corpus,             be that Stage 2 training did not explicitly account for
+it is capable of recognizing recent events such as              the distribution of sentence lengths in the dataset.
+COVID-19.
+                                                                3.6   Alignment and Uniformity
+3.5   Effect of Context Length Expansion                        BERT models are often extended into sentence
+JGLUE mainly consists of short sentences, making                embedding models through supervised fine-tuning,
+it unsuitable for evaluating long-context perfor-               and alignment and uniformity are commonly used
+mance. Therefore, we conduct a pseudo-perplexity                to evaluate how well the model represents sen-
+experiment following the methodology introduced                 tences (Gao et al., 2021). While alignment and
+in NeoBERT (Breton et al., 2025). We sample 2,000               uniformity do not correlate between pretrained and
+sequences of varying lengths from the Japanese                  supervised fine-tuned models, observing sentence
+subset of Wikipedia14, stratified into four length-             embedding behavior during training provides a
+based bins: [0, 1024], (1024, 2048], (2048, 4096],              good way to assess representation quality. There-
+and (4096, 8192) tokens, with 500 sequences se-                 fore, in this experiment, we measure alignment and
+lected per bin15. For each sequence, we compute                 uniformity during training.
+pseudo-perplexity by randomly sampling 100 token
+positions with replacement, computing the masked                Alignment Alignment is a metric that quantifies
+language modeling (MLM) loss at each position,                  how well semantically related positive pairs are
+and averaging the results. The pseudo-perplexity                positioned close to each other in the embedding
+                              n
+is defined as P = exp ( n1 ∑i=1 li ), where li is the           space. It is defined as:
+cross-entropy loss at position i and n is the number                                                                2
+                                                                                                    ∥f (x) − f (x )∥ ,
+                                                                                                                +
+of tokens.                                                             ℓalign ≜       E                                  (1)
+                                                                                  (x,x+ )∼p   pos
+   Figure 2 presents the results for each model.
+Consistent with the findings of Breton et al. (2025),           where ppos is the distribution of positive pairs, and
+   14We used the train split of the 20231101.ja subset          f is a function that embeds text into a normalized
+from https://huggingface.co/datasets/wikimedia/                 vector space. A smaller value of ℓalign indicates that
+wikipedia.
+   15The distribution of sequence lengths for the sampled       positive pairs are embedded closer together in the
+sequences is provided in Appendix A.                            embedding space.
+
+                                                            5
+                                                                        directions. As training progresses through 4k, 15k,
+                                                                        and 100k steps, uniformity increases while align-
+                                                                        ment decreases, suggesting that the embeddings be-
+                                                                        come more biased or anisotropic (Ethayarajh, 2019;
+                                                                        Jun et al., 2019; Gao et al., 2021). Beyond 100k
+                                                                        steps, the values fluctuate between those observed
+                                                                        at 15k and 100k, reflecting the inherent trade-off be-
+                                                                        tween alignment and uniformity. We also observe
+                                                                        that the scores of our model, llm-jp-modernbert,
+                                                                        at the final checkpoint in stage 2 (200k steps) are
+                                                                        close to those of modernbert-ja-130m, a model that
+                                                                        also adopts the ModernBERT architecture.
+
+                                                                        3.7    Distribution of Sentence Similarity
+Figure 3: Alignment and uniformity. s1 and s2 represent
+Stage 1 and Stage 2, respectively.                                      As further analysis, we examine the distribution of
+                                                                        cosine similarities for positive and random sentence
+                                                                        pairs for each model, using the same dataset as in
+Uniformity Uniformity is a metric that measures                         the alignment and uniformity experiments.
+how evenly sentence embedding vectors are dis-                             The results are shown in Figure 4. Up to 100k
+tributed across the embedding space. It is defined                      steps, the alignment scores the majority of pairs de-
+as:                                                                     crease. After that, the distribution of random pairs
+                                                      2
+                                        −2∥f (x)−f (y)∥                 shifts slightly to the right. Ruri-large-v2 demon-
+   ℓuniform ≜ log        E          e                     ,   (2)       strates a clear separation between the distributions
+                         i.i.d.
+                    (x,y) ∼ pdata
+                                                                        of positive pairs and random pairs. Similarly, bert-
+where pdata is the data distribution. A smaller value                   base-japanese-v3 also shows a distinct separation in
+indicates that the embeddings are more evenly dis-                      its distributions. In contrast, modernbert-ja-130m
+tributed across the space, reducing bias and pre-                       exhibits nearly overlapping distributions for posi-
+venting excessive concentration in specific regions.                    tive and random pairs, similar to the distribution of
+   Alignment and uniformity exhibit a trade-off re-                     our model at 200k steps in Stage 2.
+lationship. In an extreme case where all sentences
+are mapped to the same point, alignment reaches                         4     Conclusion
+its minimum value of zero, while uniformity attains                     In this paper, we introduced llm-jp-modernbert, a
+its maximum value of zero. Conversely, if embed-                        Japanese ModernBERT model trained on a large-
+dings are randomly scattered in different directions,                   scale corpus with a context length of 8192 to-
+uniformity decreases while alignment increases.                         kens. While the model does not outperform exist-
+   To compute ℓalign and ℓuniform , we construct pos-                   ing baselines on downstream tasks, it shows good
+itive pairs and randomly sample sentence pairs                          performance on fill-mask test evaluations. We
+(hereafter referred to as random pairs). Specifically,                  also conducted an in-depth analysis using train-
+we extract 1746 positive pairs from the MIRACL                          ing checkpoints, exploring the impact of context
+dataset and sample 2000 random pairs from the                           length expansion through pseudo-perplexity and
+Japanese subset of Wikipedia16. The positive pairs                      investigating sentence embedding dynamics during
+are used to compute ℓalign , while the random pairs                     training. Our comparisons with existing models
+are used to compute ℓuniform .                                          show consistent behavior among those with similar
+   Figure 3 illustrates the progression of alignment                    architectures.
+and uniformity at each checkpoint during training.
+At 0k steps (model initialization), uniformity is low,                  Acknowledgments
+while alignment is high. This is likely due to the
+random initialization of parameters, which causes                       We thank Hayato Tsukagoshi, Hiroshi Matsuda, Jiro
+sentence embeddings to be distributed in arbitrary                      Nishitoba, and the members of the LLM-jp for their
+                                                                        valuable feedback and advice. In this research work,
+   16We used the train split of the 20231101.ja subset
+from https://huggingface.co/datasets/wikimedia/                         part of the results were obtained using the “mdx:
+wikipedia                                                               a platform for building data-empowered society”
+
+                                                                    6
+         0k steps in Stage 1                     4k steps in Stage 1                      15k steps in Stage 1
+
+
+
+
+       100k steps in Stage 1                   400k steps in Stage 1                     200k steps in Stage 2
+
+
+
+
+      cl-nagoya/ruri-large-v2            sbintuitions/modernbert-ja-130m           tohoku-nlp/bert-base-japanese-v3
+
+
+                                  Figure 4: Distribution of sentence similarities.
+
+
+and SAKURA internet Inc.’s “High Firepower PHY                    In Advances in Neural Information Processing Sys-
+Service”.                                                         tems.
+                                                                Jacob Devlin, Ming-Wei Chang, Kenton Lee, and
+                                                                   Kristina Toutanova. 2019. BERT: Pre-training of
+References                                                         deep bidirectional transformers for language under-
+                                                                   standing. In Proceedings of the 2019 Conference of
+Lola Le Breton, Quentin Fournier, Mariam El Mezouar,               the North American Chapter of the Association for
+  and Sarath Chandar. 2025. NeoBERT: A next-                      Computational Linguistics: Human Language Tech-
+  generation bert. Preprint, arXiv:2502.19587.                     nologies, Volume 1 (Long and Short Papers), pages
+                                                                  4171–4186.
+Alexis Conneau, Kartikay Khandelwal, Naman Goyal,
+                                                                Kawin Ethayarajh. 2019. How contextual are contextu-
+  Vishrav Chaudhary, Guillaume Wenzek, Francisco
+                                                                  alized word representations? Comparing the geom-
+  Guzmán, Edouard Grave, Myle Ott, Luke Zettle-
+                                                                  etry of BERT, ELMo, and GPT-2 embeddings. In
+  moyer, and Veselin Stoyanov. 2020. Unsupervised
+                                                                  Proceedings of the 2019 Conference on Empirical
+  cross-lingual representation learning at scale. In Pro-
+                                                                  Methods in Natural Language Processing and the 9th
+  ceedings of the 58th Annual Meeting of the Associa-
+                                                                  International Joint Conference on Natural Language
+  tion for Computational Linguistics, pages 8440–8451.
+                                                                  Processing (EMNLP-ĲCNLP), pages 55–65.
+Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra,               Alejandro Fuster Baggetto and Victor Fresno. 2022. Is
+   and Christopher Ré. 2022. FlashAttention: Fast and             anisotropy really the cause of BERT embeddings
+   memory-efficient exact attention with IO-awareness.            not being semantic? In Findings of the Association
+
+
+                                                            7
+  for Computational Linguistics: EMNLP 2022, pages             Nils Reimers and Iryna Gurevych. 2019b. Sentence-
+  4271–4281.                                                     BERT: Sentence embeddings using siamese bert-
+                                                                 networks. In Proceedings of the 2019 Conference on
+Tianyu Gao, Xingcheng Yao, and Danqi Chen. 2021.                 Empirical Methods in Natural Language Processing.
+  SimCSE: Simple contrastive learning of sentence em-
+  beddings. In Proceedings of the 2021 Conference on           Jianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha,
+  Empirical Methods in Natural Language Processing,               Bo Wen, and Yunfeng Liu. 2023. RoFormer: En-
+  pages 6894–6910.                                                hanced transformer with rotary position embedding.
+                                                                  Preprint, arXiv:2104.09864.
+Gemma Team. 2024. Gemma 2: Improving open lan-
+  guage models at a practical size. arXiv preprint             Tohoku NLP. 2023. tohoku-nlp/bert-base-japanese-
+  arXiv:2408.00118.                                              v3.   https://huggingface.co/tohoku-nlp/
+                                                                 bert-base-japanese-v3. Accessed: 2025-03-
+Pengcheng He, Xiaodong Liu, Jianfeng Gao, and Weizhu             29.
+  Chen. 2021. DeBERTa: Decoding-enhanced bert
+  with disentangled attention. In International Confer-        Hayato Tsukagoshi,  Shengzhe Li,   Akihiko
+  ence on Learning Representations.                              Fukuchi,  and Tomohide Shibata. 2025.
+                                                                 ModernBERT-Ja.      https://huggingface.
+Gao Jun, He Di, Tan Xu, Qin Tao, Wang Liwei, and Liu             co/collections/sbintuitions/
+  Tieyan. 2019. Representation degeneration problem              modernbert-ja-67b68fe891132877cf67aa0a.
+  in training natural language generation models. In In-
+  ternational Conference on Learning Representations.          Hayato Tsukagoshi and Ryohei Sasano. 2024. Ruri:
+                                                                 Japanese General Text Embeddings. Preprint,
+Kentaro Kurihara, Daisuke Kawahara, and Tomohide                 arXiv:2409.07737.
+  Shibata. 2022. JGLUE: Japanese general language
+  understanding evaluation. In Proceedings of the              Nobuhiro Ueda. 2024.   ku-nlp/deberta-v3-base-
+  Thirteenth Language Resources and Evaluation Con-              japanese. https://huggingface.co/ku-nlp/
+  ference, pages 2957–2966.                                      deberta-v3-base-japanese. Accessed: 2025-
+                                                                 03-29.
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio
+  Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich           Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill,
+  Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel,             Omer Levy, and Samuel R. Bowman. 2019. GLUE:
+  and 1 others. 2020. Retrieval-augmented generation             A multi-task benchmark and analysis platform for
+  for knowledge-intensive nlp tasks. Advances in neural          natural language understanding. In International
+  information processing systems, 33:9459–9474.                  Conference on Learning Representations.
+
+Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Man-            Benjamin Warner, Antoine Chaffin, Benjamin Clavié,
+  dar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke             Orion Weller, Oskar Hallström, Said Taghadouini,
+  Zettlemoyer, and Veselin Stoyanov. 2019. RoBERTa:              Alexis Gallagher, Raja Biswas, Faisal Ladhak, Tom
+  A robustly optimized bert pretraining approach.                Aarsen, Nathan Cooper, Griffin Adams, Jeremy
+  Preprint, arXiv:1907.11692.                                    Howard, and Iacopo Poli. 2024. Smarter, better,
+                                                                 faster, longer: A modern bidirectional encoder for
+LLM-jp. 2024. LLM-jp: A cross-organizational project             fast, memory efficient, and long context finetuning
+  for the research and development of fully open                 and inference. Preprint, arXiv:2412.13663.
+  japanese llms. Preprint, arXiv:2407.03963.
+                                                               Xinyu Zhang, Nandan Thakur, Odunayo Ogundepo,
+NLP-Waseda. 2022. nlp-waseda/roberta-base-japanese.              Ehsan Kamalloo, David Alfonso-Hermelo, Xi-
+  https://huggingface.co/nlp-waseda/                             aoguang Li, Qun Liu, Mehdi Rezagholizadeh, and
+  roberta-base-japanese.        Accessed: 2025-                  Jimmy Lin. 2023. MIRACL: A Multilingual Retrieval
+  03-29.                                                         Dataset Covering 18 Diverse Languages. Transac-
+                                                                 tions of the Association for Computational Linguistics,
+Guilherme Penedo, Hynek Kydlíček, Loubna Ben allal,              11:1114–1131.
+  Anton Lozhkov, Margaret Mitchell, Colin Raffel,
+  Leandro Von Werra, and Thomas Wolf. 2024. The
+  FineWeb Datasets: Decanting the web for the finest
+  text data at scale. In The Thirty-eight Conference on
+  Neural Information Processing Systems Datasets and
+  Benchmarks Track.
+
+Nils Reimers and Iryna Gurevych. 2019a. Sentence-
+  BERT: Sentence embeddings using Siamese BERT-
+  networks. In Proceedings of the 2019 Conference on
+  Empirical Methods in Natural Language Processing
+  and the 9th International Joint Conference on Natural
+  Language Processing (EMNLP-ĲCNLP), pages 3982–
+  3992.
+
+
+                                                           8
+Figure 5: The sequence length distribution of sentences with various sequence lengths ranging from 0 to 8192,
+prepared for the pseudo-perplexity experiment. The sequence length in this figure refers to the token count obtained
+using the llm-jp-tokenizer v3.
+
+                             Table 4: Performance of sentence retrieval on MIRACL.
+
+         Model                                                                Recall@10      MRR@10
+         cl-nagoya/ruri-large-v2 (Tsukagoshi and Sasano, 2024)                  0.987         0.872
+         tohoku-nlp/bert-base-japanese-v3 (Tohoku NLP, 2023)                    0.740         0.529
+         sbintuitions/modernbert-ja-130m (Tsukagoshi et al., 2025)              0.506         0.334
+         Edit distance                                                          0.289         0.198
+         Jaccard distance                                                       0.031         0.021
+
+
+A    Distribution of Sequence Lengths
+Figure 5 shows the distribution of sequence lengths in the dataset used in Section 3.5.
+
+B    Details of Sentence Retrieval Task using MIRACL
+We used the Japanese subset of the MIRACL dataset (Zhang et al., 2023). MIRACL is a dataset for
+multilingual sentence retrieval task. Each instance contains a query, a set of passages related to the query
+(positive passages), and a set of passages unrelated to the query (negative passages). The Japanese subset
+consists of 3,477 instances. To perform the retrieval task with MIRACL, we prepared the query and corpus
+using the following method. When multiple sentences were present in positive passages, one sentence was
+added to the query set and another to the corpus set. We then calculated the sentence similarity between
+all query-corpus pairs and ranked the matching sentences to compute recall and MRR.
+   To validate the constructed task for assessing sentence retrieval performance, we evaluate the performance
+of various approaches, including the supervised fine-tuned sentence embedding model, pre-trained BERT
+models, and heuristic methods such as edit distance. Table 4 shows the result. The recall of the
+cl-nagoya/ruri-large-v2 model approaches a value close to 1.0, while naive methods such as edit distance
+yield lower values. This indicates that the constructed task is valid for measuring sentence retrieval
+performance.
+
+
+
+                                                         9
+

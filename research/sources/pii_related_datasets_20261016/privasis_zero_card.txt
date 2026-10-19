@@ -1,0 +1,218 @@
+---
+license: other
+license_name: nvidia-license
+pretty_name: Privasis-Zero
+language:
+  - en
+task_categories:
+  - text-generation
+tags:
+  - synthetic
+  - privacy
+  - pii
+  - text-sanitization
+  - social data
+  - document
+  - legal
+  - finance
+  - medical
+  - email
+  - admin
+size_categories:
+  - 1M-10M
+configs:
+  - config_name: corpus
+    data_files:
+      - split: train
+        path: corpus.parquet
+  - config_name: vanilla
+    data_files:
+      - split: test
+        path: vanilla_test.parquet
+      - split: validation
+        path: vanilla_valid.parquet
+  - config_name: hard
+    data_files:
+      - split: test
+        path: hard_test.parquet
+      - split: validation
+        path: hard_valid.parquet
+---
+
+# Privasis-Zero
+
+## Dataset Description:
+Privasis-Zero is a large-scale synthetic dataset consisting of diverse text records—such as medical and financial records, legal documents, emails, and messages—containing rich, privacy-sensitive information. Each record includes synthetic profile details, surrounding social context, and annotations of privacy-related content. All data are fully generated using LLMs, supplemented with first names sourced from the U.S. Social Security Administration’s public database.
+
+The dataset is designed to support the training and evaluation of models or agents that operate on privacy-sensitive data. For example, it includes annotated text-sanitization instructions along with their corresponding sanitized outputs. The current release focuses on English-language content. 
+
+This dataset is for non-commercial/research and development purposes only.
+
+## Dataset Owner(s):
+NVIDIA Corporation
+
+## Dataset Creation Date: 
+December 3rd, 2025
+
+## License/Terms of Use:
+NVIDIA License
+
+## Additional Details
+
+This dataset contains synthetic data generated using multiple large language models.  
+Each model contributes to one or more dataset subsets: **General Corpus**, **Train Set**, and **Test Set**.
+
+The table below summarizes the inclusion of each model’s generations:
+
+| **Model**               | **General Corpus** | **Test Set** |
+| ----------------------- | ------------------ | ------------ |
+| Gemini-2.5-pro          | ✔️                 | ✔️           |
+| GPT-5                   | ✔️                 | ✔️           |
+| Llama 4 Maverick        | ✔️                 | ✔️           |
+| Qwen3 235B Instruct     | ✔️                 | ✔️           |
+| GPT-OSS-120B            | ✔️                 | ❌            |
+| Qwen3 Next 80B Instruct | ✔️                 | ❌            |
+| GPT-4.1                 | ✔️                 | ❌            |
+| GPT-4.1-mini            | ✔️                 | ❌            |
+
+**General Corpus** includes all models and represents the broadest portion of the dataset.
+
+**Train Set** contains generations only from:
+
+* GPT-OSS-120B  
+* Qwen3 Next 80B Instruct
+
+**Test Set** contains generations only from:
+
+* Gemini-2.5-pro  
+* GPT-5  
+* Llama 4 Maverick  
+* Qwen3 235B Instruct
+
+### Corpus Columns
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | `str` | SHA-256 hash identifier for the record. |
+| `record_tags` | `list[str]` | Category tags for the record. |
+| `record` | `str` | The generated text containing PII and sensitive attributes. |
+| `profile` | `str` | JSON string of the synthetic person profile. |
+| `background_context` | `str` | Narrative context for the record. |
+| `record_type` | `str` | Description of the document type. |
+| `record_format` | `str` | Style/tone specification. |
+| `attributes` | `str` | JSON string of annotated attributes. |
+| `grouped_attributes` | `str` | JSON string of grouped attribute clusters. |
+| `generator_model` | `str` | Model used to generate the record. |
+
+### Eval Columns
+
+All four eval JSONL files share the same 17-column schema.
+
+#### Record Metadata
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | `str` | SHA-256 hash identifier for the record. |
+| `profile` | `dict` | Synthetic person profile containing demographic info (`first_name`, `last_name`, `sex`, `age`, `citizenship`, etc.) and an `event_list` describing the scenario. |
+| `record_type` | `str` | Description of the document type (e.g., "SMS reminder from MyMedClinic.ro", "Handwritten note inside daily planner"). |
+| `background_context` | `str` | Narrative context explaining the circumstances under which the record was created. |
+| `format` | `str` | Style/tone specification for the record (e.g., "Sticky Note Style", "Brief Status Alert"). |
+| `generator_model` | `str` | Model used to generate the record (e.g., `qwen3-235b`, `qwen3-80b`, `llama4-maverick`, `gemini-2.5-pro`). |
+| `record_tags` | `list[str]` | Category tags for the record. Possible values: `admin`, `comms`, `creative`, `educational`, `finance`, `hr`, `legal`, `marketing`, `medical`, `notes`, `other`, `project`, `research`, `sales`, `tech`. |
+
+#### Original and Sanitized Records
+
+| Column | Type | Description |
+|---|---|---|
+| `original_record` | `str` | The original generated text containing PII and sensitive attributes. |
+| `sanitized_record` | `str` | The sanitized version of the record with attributes abstracted, dropped, or kept per the instructions. **Empty string (`""`) in `hard_test.jsonl` and `hard_valid.jsonl`** — the hard split is intended for evaluation where models must produce sanitized outputs; our own sanitization pipeline failed on these records, so no reference sanitization is provided. |
+
+#### Attribute Annotations
+
+| Column | Type | Description |
+|---|---|---|
+| `annotated_attributes` | `dict` | Flat annotation of all identified attributes, split into `profile` (identity-related) and `event` (scenario-related) sub-dicts. Each key is an attribute name, each value is the attribute's text. |
+| `grouped_annotated_attributes` | `dict` | Same attributes as `annotated_attributes`, but grouped into semantically meaningful clusters (e.g., "Personal Identifiers", "Clinic Location and Provider Information"). Keys are group names, values are dicts of attributes. |
+
+#### Sanitization Instructions
+
+| Column | Type | Description |
+|---|---|---|
+| `attributes_to_abstract` | `dict` | Attributes to generalize/anonymize. Contains `selected` (individual attrs or grouped attrs with `group_name`) and `group` (bool indicating whether a group-level abstraction was applied). |
+| `attributes_to_drop` | `dict` | Attributes to remove entirely. Contains `selected` (dict of attr name to value, or `null`) and `group` (bool). |
+| `attributes_to_keep` | `dict` | Attributes to retain as-is. Each key is an attribute name with a sub-dict containing `value`, `sanitization` (always `"keep"`), `group_name`, and `inference_from_original_record`. |
+| `base_instruction` | `str` | Bullet-point sanitization instructions specifying how each attribute should be abstracted, dropped, or kept. |
+| `smoothed_instruction` | `str` | Prose-form rewrite of `base_instruction` as a single coherent directive. |
+
+#### Sanitization Trace
+
+| Column                       | Type   | Description                                                                             |
+| ---------------------------- | ------ | --------------------------------------------------------------------------------------- |
+| `other_sanitization_details` | `dict` | Full provenance of the sanitization process. Contains three sub-fields described below. |
+
+##### `other_sanitization_details` sub-fields
+
+**`decomposed_record`** — `list[dict]`
+
+The original record split into text segments.
+
+| Field | Type | Description |
+|---|---|---|
+| `seq` | `str` | Text content of the segment. |
+| `terminator` | `str` | Delimiter following this segment (e.g., `"\n\n"`). |
+| `idx` | `int` | Sequence index. |
+
+**`sanitized_sequences_by_attribute`** — `dict[str, list[dict]]`
+
+Keyed by attribute value (e.g., a person's name, a date). Each entry is a list of sequence objects showing the sanitized text and all identified spans for that attribute.
+
+Each sequence object contains:
+- `text` — sanitized text for this sequence
+- `terminator` — segment delimiter
+- `idx` — sequence index
+- `spans` — dict keyed by attribute value, where each value is a list of span objects:
+  - `attr` — attribute value (str or list)
+  - `span` — matched text in the original
+  - `location` — `[start, end]` character offsets
+  - `confidence` — float (typically `1.0`)
+  - `attr_type` — attribute type (e.g., `"event_date"`, `"event_organizer"`)
+  - `sanitization_option` — `"abstract"`, `"drop"`, or `"keep"`
+  - `group_name` — semantic group this attribute belongs to
+  - `merged_from` — (optional) list of sub-spans that were merged into this span
+
+**`sequence_sanitization_mapping`** — `dict[str, dict]`
+
+Keyed by sequence index (as string). Each entry maps an original sequence to its final sanitized form.
+
+| Field                | Type         | Description                                                                                                                                                |
+| -------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `original_sequence`  | `str`        | Original text of the sequence.                                                                                                                             |
+| `sanitized_sequence` | `str`        | Final sanitized text.                                                                                                                                      |
+| `target_attributes`  | `list[str]`  | Attribute values targeted for sanitization in this sequence.                                                                                               |
+| `strategies_used`    | `list[str]`  | Sanitization strategies applied (e.g., `["abstract"]`).                                                                                                    |
+| `spans`              | `list[dict]` | List of span objects, each with `attribute`, `span_text`, `location` (`[start, end]`), `confidence`, `attr_type`, `sanitization_option`, and `group_name`. |
+
+## Intended Usage:
+Researchers who would like to conduct privacy-related or social data-related projects. Individuals who would like to sanitize their private information from texts.
+
+## Dataset Characterization
+* Data Collection Method   
+	* [Synthetic]
+* Labeling Method
+	* [Synthetic]
+
+## Dataset Format
+Text Records
+
+## Dataset Quantification
+- 1.3M text records  
+- 54M annotated records  
+- Measurement of Total Data Storage: 15GB
+
+## Reference(s):
+[Privasis: Synthesizing the Largest “Public” Private Dataset from Scratch](https://arxiv.org/abs/2602.03183)
+
+## Ethical Considerations:
+NVIDIA believes Trustworthy AI is a shared responsibility and we have established policies and practices to enable development for a wide array of AI applications.  When downloaded or used in accordance with our terms of service, developers should work with their internal developer teams to ensure this dataset meets requirements for the relevant industry and use case and addresses unforeseen product misuse.   
+
+Please report quality, risk, security vulnerabilities or NVIDIA AI Concerns [here](https://www.nvidia.com/en-us/support/submit-security-vulnerability/).

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>License</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- CSS -->
+<link rel="stylesheet" href="/FUNSD/css/owl.carousel.css" />
+<link rel="stylesheet" href="/FUNSD/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/FUNSD/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/FUNSD/css/airspace.css" />
+<link rel="stylesheet" href="/FUNSD/css/style.css" />
+<link rel="stylesheet" href="/FUNSD/css/ionicons.min.css" />
+<link rel="stylesheet" href="/FUNSD/css/animate.css" />
+<link rel="stylesheet" href="/FUNSD/css/responsive.css" />
+<link rel="stylesheet" href="/FUNSD/css/syntax.css" />
+
+<!-- Js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="/FUNSD/js/bootstrap.min.js"></script>
+<script src="/FUNSD/js/owl.carousel.min.js"></script>
+<script src="/FUNSD/js/plugins.js"></script>
+<script src="/FUNSD/js/min/waypoints.min.js"></script>
+<script src="/FUNSD/js/jquery.counterup.js"></script>
+
+
+<script src="/FUNSD/js/main.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141412571-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141412571-1');
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+<!--
+/*
+ * Airspace
+ * Ported to Jekyll by Andrew Lee
+ * https://github.com/ndrewtl/airspace-jekyll
+ * Designed and Developed by ThemeFisher
+ * https://themefisher.com/
+ *
+ */
+-->
+
+
+  </head>
+  <body>
+
+
+    <!-- Header Start -->
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- header Nav Start -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+              <img src="/FUNSD/img/funsd_logo.png" alt="Logo">
+            </a>
+          </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/FUNSD/">Home</a></li>
+                <li><a href="/FUNSD/description">Description</a></li>
+                <li><a href="/FUNSD/download">Download</a></li>
+                <li><a href="/FUNSD/work">License</a></li>
+                <li><a href="/FUNSD/contact">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><!-- header close -->
+
+
+
+        <!-- Slider Start -->
+<section id="global-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1>License and Terms of Use</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="license">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <h3>PART 1 - General Terms</h3>
+      <p> BY DOWNLOADING, COPYING, ACCESSING, YOU, AS “LICENSEE”, AGREE TO THESE TERMS OF USE AND CONFIRM THAT YOU,
+        AS LICENSEE, ARE EIGHTEEN (18) YEARS OR OLDER*. IF YOU ARE ACCEPTING THESE TERMS ON BEHALF OF LICENSEE,
+        YOU REPRESENT AND WARRANT THAT YOU HAVE FULL AUTHORITY TO BIND LICENSEE TO THESE TERMS OF USE.
+        IF YOU DO NOT AGREE TO THESE TERMS, DO NOT DOWNLOAD, INSTALL, COPY, ACCESS OR USE THE WEBSITE. </p>
+      <p> * ACCESS TO THE FUNSD DATASET IS NOT AVAILABLE TO ANYONE UNDER THE AGE OF EIGHTEEN (18). </p>
+
+      <h3>PART 2 </h3>
+
+      <h4>1. Definitions </h4>
+
+      <p>"EPFL" means Ecole Polytechnique Federale de Lausanne, a university located in Switzerland.</p>
+      <p>"LTS5" means Laboratoire de Traitement des Signaux, a laboratory at EPFL.</p>
+      <p>“FUNSD Dataset” means the EPFL-LTS5 Form Understanding in Noisy Scanned Documents (“FUNSD”) dataset
+            to be used for non-commercial, research purposes only and in accordance with these Terms of Use.</p>
+      <p>“Website” means the website hosted on GitHub, at this URL: https://guillaumejaume.github.io/FUNSD/, website where Licensee can download the FUNSD Dataset.</p>
+      <h4>2. Purpose</h4>
+
+      <p>Use of the FUNSD Dataset is solely for non-commercial, research and educational purposes.</p>
+
+      <p>The FUNSD Dataset include annotations and images of real scanned forms.</p>
+
+      <p>Licensee’s use of the images is governed by a copyright. Licensee is solely responsible for determining what
+        additional licenses, clearances, consents and releases, if any, must be obtained for its use of the images. Original
+      images are part of the dataset RVL-CDIP.</p>
+
+      <h4>3. Charges</h4>
+
+      <p>The parties will be responsible for their own costs and expenses related to these Terms of Use.</p>
+
+      <h4>4. No Warranties</h4>
+
+      </p>THE FUNSD DATASET AND THIS WEBSITE ARE PROVIDED ON AN “AS IS” BASIS, WITHOUT WARRANTIES OF ANY
+      KIND AND HAVE NOT BEEN EVALUATED FOR OPERATIONAL RELIABILITY OR ACCURACY OF DATA. WE MAKE NO REPRESENTATION
+      ON THE AVAILABILITY OF THE FUNSD WEBSITE AND THE FUNSD DATASET.</p>
+
+      <h4>5. Limitation of Liability</h4>
+
+      <p> EPFL-LTS5 is not liable for any claim arising from Licensee’s use of the FUNSD Website and/or the FUNSD Dataset.
+            Licensee assumes all risks associated with the use of the FUNSD Dataset. The risks include,
+            but are not limited to, the risks of errors; intellectual property rights related to publicly available images;
+            and unavailability or interruption of access to the FUNSD Website. EPFL-LTS5 is not responsible
+            for the accuracy, completeness, timeliness, reliability, content or availability of the FUNSD Website and/or the FUNSD Dataset.</p>
+
+      <h4>6. General</h4>
+
+      <p>a) If any provision of these Terms of Use is held to be invalid or unenforceable, the remaining provisions of
+        these Terms of Use remain in full force and effect.</p>
+      <p>b) Unless otherwise required by applicable law without the possibility of contractual waiver or
+        limitation: 1) neither party will bring a legal action, regardless of form, for any claim arising out
+        of or related to these Terms of Use more than one year after the cause of action arose; and 2)
+        upon the expiration of such time limit, any such claim and all respective rights related to the claim lapse.</p>
+      <p>c) Neither Licensee nor EPFL-LTS5 are responsible for failure to fulfil any obligations due to causes beyond its control.</p>
+      <p>d) No right or cause of action for any third party is created by these Terms of Use, nor is EPFL-LTS5 responsible for any
+        third party claims against Licensee.</p>
+      <p>f) Any terms of these Terms of Use that by their nature extend beyond termination of these Terms of Use
+        remain in effect until fulfilled, and apply to both parties' respective successors and assignees.</p>
+      <p>g) Both parties agree that all information exchanged is non-confidential.
+      <p>h) Each party represents and warrants that it has, or will have, in place appropriate agreements with its
+        employees or others whose services the party may require to enable it to comply with all the provisions of these Terms of Use.</p>
+
+      <h4>7. Modifications to the FUNSD Dataset and to these Terms of Use</h4>
+
+      <p> EPFL-LTS5 may make an update or modify the FUNSD Dataset
+            at any time without notice. The FUNSD Dataset may never be made generally available.
+            EPFL-LTS5 may modify or discontinue any of the terms and conditions under which the FUNSD Dataset is offered,
+            at any time without notice.</p>
+
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer Start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-manu">
+          <ul>
+            <li><a href="/FUNSD/contact">Contact us</a></li>
+          </ul>
+        </div>
+        <p>Copyright &copy; Design &amp; Developed by <a href="http://www.themefisher.com">Themefisher</a>. Modified by Guillaume Jaume. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </body>
+</html>

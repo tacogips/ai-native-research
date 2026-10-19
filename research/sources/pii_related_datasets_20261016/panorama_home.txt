@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANORAMA Dataset</title>
+    <style>
+        :root {
+            --primary: #1A237E;
+            --accent: #3949AB;
+            --background: #ffffff;
+            --text: #22223B;
+            --muted: #3949AB;
+            --secondary: #3949AB;
+        }
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            letter-spacing: 0.01em;
+            line-height: 1.5;
+            background: var(--background);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 6.2rem 1.5rem 2.5rem 1.5rem;
+        }
+        header {
+            background: none;
+            color: var(--primary);
+            text-align: left;
+            margin-bottom: 2.5rem;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        h1 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+        .subtitle {
+            font-size: 1.18rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+        .authors {
+            font-size: 1.08rem;
+            color: var(--muted);
+            margin-bottom: 1.2rem;
+        }
+        .resource-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--background);
+            color: var(--primary);
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(26, 35, 126, 0.07);
+            border: 1px solid var(--primary);
+            padding: 0.5rem 1.1rem 0.5rem 0.8rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            font-size: 1.05rem;
+        }
+        .resource-link:hover {
+            background: var(--secondary);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0, 184, 169, 0.13);
+        }
+        section {
+            margin-bottom: 3.2rem;
+            padding: 0;
+        }
+        section:not(:last-child) {
+            border-bottom: 1px solid var(--background);
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            border-bottom: none;
+            padding-bottom: 0.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+        h3 {
+            color: var(--accent);
+            font-size: 1.08rem;
+            margin-top: 1.5rem;
+        }
+        p, li {
+            font-size: 1.08rem;
+            color: var(--text);
+        }
+        .image-container {
+            text-align: center;
+            margin: 2rem 0 1.2rem 0;
+        }
+        .image-container img {
+            max-width: 96%;
+            height: auto;
+        }
+        .caption {
+            font-style: italic;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            font-size: 0.98rem;
+        }
+        iframe {
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(45, 30, 107, 0.07);
+            margin-bottom: 1.2rem;
+        }
+        pre code {
+            display: block;
+            background: #e8ebf3;
+            color: #1A237E;
+            border-radius: 10px;
+            padding: 1.1rem 1rem;
+            font-size: 1.02rem;
+            font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+            border: 1px solid var(--background);
+            overflow-x: auto;
+        }
+        @media (max-width: 1000px) {
+            .container {
+                padding: 0.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+        }
+        .tab-nav {
+            position: fixed !important;
+            top: 22px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            z-index: 2000;
+            pointer-events: none;
+        }
+        .tab-nav-inner {
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 6px 32px rgba(26, 35, 126, 0.13);
+            border-radius: 2.2rem;
+            padding: 0.25rem 2.2rem;
+            display: flex;
+            align-items: center;
+            pointer-events: auto;
+        }
+        .tab-nav ul {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .tab-link {
+            display: inline-block;
+            padding: 0.7rem 0.2rem 0.3rem 0.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.08rem;
+            background: none;
+            border: none;
+            outline: none;
+            transition: border-bottom 0.18s;
+            border-bottom: 2px solid transparent;
+        }
+        .panorama-tab {
+            font-weight: bold;
+        }
+        .tab-link:hover {
+            border-bottom: 2px solid var(--secondary);
+            text-decoration: none;
+        }
+        .tab-link:focus {
+            outline: none;
+        }
+        .tab-nav ul li {
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .tab-nav-inner {
+                padding: 0.15rem 0.7rem;
+            }
+            .tab-nav ul {
+                gap: 0.5rem;
+            }
+            .tab-link {
+                font-size: 0.98rem;
+                padding: 0.6rem 0.1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .tab-nav-inner {
+                padding: 0.1rem 0.2rem;
+            }
+            .tab-link {
+                font-size: 0.92rem;
+                padding: 0.5rem 0.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="tab-nav">
+      <div class="tab-nav-inner">
+        <ul id="tab-nav-list">
+          <li><a href="#abstract" class="tab-link" data-section="abstract">Abstract</a></li>
+          <li><a href="#compare-datasets" class="tab-link" data-section="compare-datasets">Datasets</a></li>
+          <li><a href="#dataset-generation" class="tab-link" data-section="dataset-generation">Dataset Generation</a></li>
+          <li><a href="#content-targeting" class="tab-link" data-section="content-targeting">Content Types</a></li>
+          <li><a href="#citation" class="tab-link" data-section="citation">Citation</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>PANORAMA: A synthetic PII-laced dataset for studying sensitive data memorization in LLMs</h1>
+            <div class="subtitle">A large-scale synthetic corpus for privacy risk assessment and LLM auditing</div>
+            <div class="authors">Sriram Selvam, Anneswa Ghosh</div>
+            <div class="resource-links">
+                <a class="resource-link" href="https://arxiv.org/abs/2505.12238v1" target="_blank" title="Paper">
+                    <img src="assets/images/arxiv-logomark-small.svg" alt="arXiv logo" style="width:1.2em;height:1.2em;vertical-align:middle;" />
+                    Paper
+                </a>
+                <a class="resource-link" href="https://github.com/selvamsriram/PANORAMA-DataGen" target="_blank" title="Code">
+                    <img src="assets/images/github-mark.svg" alt="GitHub logo" style="width:1.2em;height:1.2em;vertical-align:middle;" />
+                    Code
+                </a>
+                <a class="resource-link" href="https://huggingface.co/datasets/srirxml/PANORAMA" target="_blank" title="PANORAMA Dataset">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1.2em;height:1.2em;vertical-align:middle;" />
+                    PANORAMA
+                </a>
+                <a class="resource-link" href="https://huggingface.co/datasets/srirxml/PANORAMA-Plus" target="_blank" title="PANORAMA-Plus Dataset">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1.2em;height:1.2em;vertical-align:middle;" />
+                    PANORAMA-Plus
+                </a>
+            </div>
+        </header>
+        <section id="abstract">
+            <div class="image-container">
+                <img src="assets/images/singleprofileexample.png" alt="Example User Profile">
+                <p class="caption">An example of a user profile from the PANORAMA dataset, highlighting various content types with sensitive information.</p>
+            </div>
+            <h2>Abstract</h2>
+            <p>The memorization of sensitive and personally identifiable information (PII) by large language models (LLMs) poses growing privacy risks as models scale and are increasingly deployed in real-world applications. Existing efforts to study sensitive and PII data memorization and develop mitigation strategies are hampered by the absence of comprehensive, realistic, and ethically sourced datasets reflecting the diversity of sensitive information found on the web. We introduce <b>PANORAMA: Profile-based Assemblage for Naturalistic Online Representation and Attribute Memorization Analysis</b>, a large-scale synthetic corpus of <b>384,789 samples derived from 9674 synthetic profiles</b> designed to closely emulate the distribution, variety, and context of PII and sensitive data as it naturally occurs in online environments.</p>
+            <p>Our data generation pipeline begins with the construction of internally consistent, multi-attribute human profiles using constrained selection to <b>reflect real-world demographics</b> such as education, health attributes, financial status, etc. Using a combination of zero-shot prompting and OpenAI o3-mini, we generate diverse content types—including wiki-style articles, social media posts, forum discussions, online reviews, comments, and marketplace listings—each embedding realistic, contextually appropriate PII and other sensitive information.</p>
+            <p>We validate the utility of PANORAMA by fine-tuning Mistral-7B model on 1x, 5x, 10x and 25x data replication rates with a subset of data and measure PII memorization rates - revealing not only consistent increases with repetition but also variation across content types, highlighting PANORAMA’s ability to model how <b>memorization risks differ by context</b>. Our dataset and code are publicly available, providing a much-needed resource for privacy risk assessment, model auditing, and the development of privacy-preserving LLMs.</p>
+        </section>
+        <section id="compare-datasets">
+            <h2>Datasets</h2>
+            <p><strong>PANORAMA:</strong> Each row in PANORAMA dataset contains the synthetic profile id based on which the content is generated, content type, and the content itself.</p>
+            <p><strong>PANORAMA-Plus:</strong> Contains the complete synthetic profile and full generation pipeline data. This can be helpful for cross referencing the details of a particular profile using the profile id from PANORAMA dataset.</p>
+            <div class="resource-links" aria-label="Dataset links">
+                <a class="resource-link" href="https://huggingface.co/datasets/srirxml/PANORAMA" target="_blank" title="Open PANORAMA on Hugging Face">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1.2em;height:1.2em;vertical-align:middle;" />
+                    PANORAMA Dataset
+                </a>
+                <a class="resource-link" href="https://huggingface.co/datasets/srirxml/PANORAMA-Plus" target="_blank" title="Open PANORAMA-Plus on Hugging Face">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:1.2em;height:1.2em;vertical-align:middle;" />
+                    PANORAMA-Plus Dataset
+                </a>
+            </div>
+        </section>
+        <section id="dataset-generation">
+            <h2>Dataset Generation Pipeline</h2>
+            <div class="image-container">
+                <img src="assets/images/datageneration_pipeline_overview.png" alt="Dataset Generation Pipeline">
+                <p class="caption">Overview of the PANORAMA dataset generation pipeline.</p>
+            </div>
+            <p>Our data generation pipeline consists of three main steps. First, we generate synthetic profiles that include all required target attributes. Next, these profiles are used to construct detailed biographical narratives, which serve as the basis for content generation. Finally, we leverage these biographies to produce diverse content types in which sensitive attributes are contextually embedded.</p>
+        </section>
+        <section id="content-targeting">
+            <h2>Available Content Types</h2>
+            <div class="image-container">
+                <img src="assets/images/ContentTarget.png" alt="Content Targeting">
+                <p class="caption">Illustration of the content types that are available in the dataset and the nuances that can be inferred from it.</p>
+            </div>
+            <p>Here is a sample output generated by our pipeline for a synthetic profile named Karen Smith. The content reveals sensitive information such as home location, email address, social media handles, profession, spouse’s name, parental status, food preferences, research interests, and timestamps.
+            </p>
+            <div class="image-container">
+                <img src="assets/images/Example_Profile2.png" alt="Synthetic Profile Attributes being embedded in content">
+                <p class="caption">Sample profile showing from attributes generated and embedded.</p>
+            </div>
+        </section>
+        <section id="citation">
+            <h2>Citation</h2>
+            <pre><code>@article{selvam2025panorama,
+  title={PANORAMA: A synthetic PII-laced dataset for studying sensitive data memorization in LLMs},
+  author={Selvam, Sriram and Ghosh, Anneswa},
+  journal={arXiv preprint arXiv:2505.12238},
+  year={2025}
+}</code></pre>
+        </section>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navList = document.getElementById('tab-nav-list');
+        const sections = [
+          'home',
+          'abstract',
+          'compare-datasets',
+          'dataset-generation',
+          'content-targeting',
+          'citation'
+        ];
+        let links = Array.from(navList.querySelectorAll('.tab-link'));
+        const panoramaLi = document.createElement('li');
+        const panoramaA = document.createElement('a');
+        panoramaA.href = '#';
+        panoramaA.className = 'tab-link panorama-tab';
+        panoramaA.textContent = 'PANORAMA';
+        panoramaA.setAttribute('data-section', 'home');
+        panoramaLi.appendChild(panoramaA);
+        function updateLinks() {
+          links = Array.from(navList.querySelectorAll('.tab-link'));
+        }
+        function onScroll() {
+          let scrollPos = window.scrollY || window.pageYOffset;
+          if (scrollPos > 80) {
+            if (!navList.contains(panoramaLi)) {
+              navList.insertBefore(panoramaLi, navList.firstChild);
+              updateLinks();
+            }
+          } else {
+            if (navList.contains(panoramaLi)) {
+              navList.removeChild(panoramaLi);
+              updateLinks();
+            }
+          }
+        }
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+        navList.addEventListener('click', function(e) {
+          const link = e.target.closest('.tab-link');
+          if (!link) return;
+          e.preventDefault();
+          const section = link.getAttribute('data-section');
+          if (section === 'home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            const sec = document.getElementById(section);
+            if (sec) {
+              window.scrollTo({ top: sec.offsetTop - 70, behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    </script>
+</body>
+</html>

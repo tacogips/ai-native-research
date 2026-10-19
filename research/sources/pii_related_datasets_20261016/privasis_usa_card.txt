@@ -1,0 +1,171 @@
+---
+license: other
+license_name: nvidia
+license_link: LICENSE
+pretty_name: Privasis-USA
+language:
+  - en
+task_categories:
+  - text-generation
+tags:
+  - synthetic
+  - privacy
+  - pii
+  - text-sanitization
+  - social data
+  - document
+  - legal
+  - finance
+  - medical
+  - email
+  - admin
+size_categories:
+  - 1M<n<10M
+configs:
+  - config_name: corpus
+    data_files:
+      - split: train
+        path: corpus.parquet
+  - config_name: sanitization
+    data_files:
+      - split: train
+        path: sanitization/train-*.parquet
+---
+
+## Dataset Description:
+
+Privasis is a large-scale synthetic dataset consisting of diverse text records—such as medical and financial records, legal documents, emails, and messages—containing rich, privacy-sensitive information. Each record includes synthetic profile details, surrounding social context, and annotations of privacy-related content. All data are fully generated using GPT-OSS-120B, supplemented with the personas from the public Nemotron-Personas-USA dataset ([https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA](https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA)) 
+
+The dataset is designed to support the training and evaluation of models or agents that operate on privacy-sensitive data. For example, it includes annotated text-sanitization instructions along with their corresponding sanitized outputs. The current release focuses on English-language content. 
+
+This dataset is ready for commercial/non-commercial use.
+
+## Dataset Owner(s):
+
+NVIDIA Corporation
+
+## Dataset Creation Date:
+
+March 5th, 2026
+
+## License/Terms of Use: 
+
+This dataset is licensed under the NVIDIA Dataset License Agreement.
+
+## Additional Details
+
+This dataset contains synthetic data generated using GPT-OSS-120B 
+
+## Intended Usage:
+
+Researchers who would like to conduct privacy-related or social data-related projects. Individuals who would like to sanitize their private information from texts.
+
+
+## Dataset Characterization
+
+* Data Collection Method
+	* [Synthetic] 
+* Labeling Method
+	* [Synthetic]
+
+## Dataset Format
+
+Text Records
+
+## Main Corpus 
+
+### Columns
+
+The dataset has a single `corpus` configuration with the following columns:
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | `str` | SHA-256 hash identifier for the record. |
+| `record_tags` | `list[str]` | Category tags for the record. |
+| `record` | `str` | The generated text containing PII and sensitive attributes. |
+| `profile` | `str` | JSON string of the synthetic person profile. |
+| `background_context` | `str` | Narrative context for the record. |
+| `record_type` | `str` | Description of the document type. |
+| `record_format` | `str` | Style/tone specification. |
+| `attributes` | `str` | JSON string of annotated attributes. |
+| `grouped_attributes` | `str` | JSON string of grouped attribute clusters. |
+| `nemotron_personas_usa_uuid` | `str` | UUID of the source persona in the [Nemotron-Personas-USA](https://huggingface.co/datasets/nvidia/Nemotron-Personas-USA) dataset that this record was generated from. |
+
+## Privasis-Sanitization
+
+A dataset of documents paired with their sanitized (PII-redacted / abstracted) versions,
+along with the instructions and structured metadata describing how each sanitization was
+produced.
+
+- **Records:** 106,898
+- **Format:** Parquet (`sanitization/train-*.parquet`), available as the `sanitization` config
+- **Sources:** `privasis-zero` (60,173), `privasis-usa` (46,725)
+
+### Columns
+
+| Column | Type | Description |
+| --- | --- | --- |
+| `base_instruction` | string | Machine-generated, bullet-point sanitization instructions listing the exact edits to apply (mask a value, drop a section, abstract an attribute, etc.). |
+| `smoothed_instruction` | string | A fluent, natural-language paraphrase of `base_instruction` rewritten as a single prose instruction. |
+| `original_text` | string | The raw, unmodified source document. Contains the original sensitive data / PII. This is the **input**. |
+| `sanitized_text` | string | The sanitized version of `original_text` after applying the instructions: PII is masked/redacted and sensitive details are abstracted or dropped. This is the **target output**. |
+| `sanitization_info` | dict | Structured sanitization plan for the record (see below). |
+| `sanitized_sequences_by_attribute` | dict | The affected text sequences grouped by target attribute / group name, with per-span details. |
+| `sequence_sanitization_mapping` | dict | Per-sequence mapping from the original chunk to its sanitized chunk (see below). |
+| `source` | string | Provenance label of the record: `privasis-zero` or `privasis-usa`. |
+| `id` | string | Unique record identifier (SHA-256 hex digest of the source document). |
+
+### Nested field details
+
+#### `sanitization_info`
+
+Describes the plan used to transform `original_text` into `sanitized_text`.
+
+| Key | Description |
+| --- | --- |
+| `attrs_for_abstract` | Attributes selected to be abstracted/masked. Contains `selected` (attribute → original value) and `group` (whether they were handled as a group). |
+| `attrs_for_drop` | Attributes/sections selected to be removed, in the same `selected` / `group` shape. |
+| `attrs_for_keep` | Attributes explicitly retained (not modified). |
+| `abstract_targets` | Concrete target values marked for abstraction. |
+| `drop_targets` | Concrete target values marked for removal. |
+| `keep_targets` | Concrete target values marked to keep. |
+| `attrs_to_keep` | The attribute set to preserve. |
+| `individual_target_attributes` | Flattened list of individual attributes targeted. |
+| `strategies` | The sanitization strategies applied (e.g. mask, abstract, drop). |
+
+#### `sequence_sanitization_mapping`
+
+A dict keyed by sequence index (`"0"`, `"1"`, ...). Each entry describes how one chunk of
+the document was transformed:
+
+| Key | Description |
+| --- | --- |
+| `original_sequence` | The original text chunk before sanitization. |
+| `sanitized_sequence` | The corresponding chunk after sanitization. |
+| `target_attributes` | Attributes targeted within this chunk. |
+| `strategies_used` | Strategies applied to this chunk. |
+| `spans` | Character-span level details of each edit (location, matched span, confidence, attribute type). |
+
+#### `sanitized_sequences_by_attribute`
+
+A dict keyed by attribute / group name. Each value is a list of the sequences affected by
+that attribute, where every entry includes the sanitized `text`, its `idx`, the sequence
+`terminator`, and a `spans` map with per-attribute character locations, `confidence`,
+`group_name`, and `attr_type`.
+
+## Dataset Quantification
+
+- 1M text records
+- ~40M annotated attributes (averaging ~40 per record)
+- Measurement of Total Data Storage: 12GB ([tar.gz](http://tar.gz) file size)
+
+## Reference(s):
+
+[Privasis: Synthesizing the Largest “Public” Private Dataset from Scratch](https://arxiv.org/abs/2602.03183)
+
+  
+## Ethical Considerations:
+
+NVIDIA believes Trustworthy AI is a shared responsibility and we have established policies and practices to enable development for a wide array of AI applications.  When downloaded or used in accordance with our terms of service, developers should work with their internal developer teams to ensure this dataset meets requirements for the relevant industry and use case and addresses unforeseen product misuse.   
+
+Please report quality, risk, security vulnerabilities or NVIDIA AI Concerns [here](https://www.nvidia.com/en-us/support/submit-security-vulnerability/).

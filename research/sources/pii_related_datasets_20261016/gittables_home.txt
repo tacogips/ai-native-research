@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | GitTables</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Madelon Hulsebos" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://gittables.github.io/" />
+<meta property="og:url" content="https://gittables.github.io/" />
+<meta property="og:site_name" content="GitTables" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Madelon Hulsebos"},"headline":"Home","name":"GitTables","url":"https://gittables.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://gittables.github.io/feed.xml" title="GitTables" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0GRRKV16G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F0GRRKV16G');
+</script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">GitTables</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/usage.html">Usage</a><a class="page-link" href="/news.html">News</a><a class="page-link" href="/documentation.html">Documentation</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="gittables-a-large-scale-corpus-of-relational-tables">GitTables: a large-scale corpus of relational tables.</h1>
+
+<p align="center">
+    <img src="images/GitTables_pipeline.png" />
+    <figcaption style="text-align:center">Figure 1: high-level overview of how GitTables is constructed.</figcaption>
+</p>
+
+<h2 id="quick-links"><strong>Quick Links</strong></h2>
+
+<p><!-- prettier-ignore -->
+<a href="https://zenodo.org/record/6517052" target="_blank">dataset download</a> | <a href="https://arxiv.org/pdf/2106.07258" target="_blank">paper</a> | <a href="https://github.com/madelonhulsebos/gittables" target="_blank">github repository</a> | <a href="https://www.youtube.com/watch?v=jEBKcmdIFzw" target="_blank">video presentation</a></p>
+
+<h2 id="quick-facts"><strong>Quick Facts</strong></h2>
+
+<p>GitTables is a large-scale corpus of relational tables extracted from CSV files in GitHub, that facilitates learning table representation models and applications in e.g. data management, data analysis, etc. We keep expanding GitTables to at least 10M tables (ETA: early 2023).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Statistic</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td># tables</td>
+      <td>1M</td>
+    </tr>
+    <tr>
+      <td>average # columns</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>average # rows</td>
+      <td>142</td>
+    </tr>
+    <tr>
+      <td># annotated tables (at least 1 column annotation)</td>
+      <td>723K+ (DBpedia), 738K+ (Schema.org)</td>
+    </tr>
+    <tr>
+      <td># unique semantic types</td>
+      <td>835 (DBpedia), 677 (Schema.org)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="about-gittables"><strong>About GitTables</strong></h2>
+
+<p>GitTables is a large-scale corpus of 1M relational tables extracted from CSV files in GitHub. We aim at growing GitTables to at least 10M tables. Each table is distributed in its original form (e.g. with the original header), and comes with metadata like semantic type annotations of table columns. For these annotations, we used &gt;2K different semantic types from <a href="https://schema.org/" target="_blank">Schema.org</a> and <a href="https://www.dbpedia.org/resources/ontology/" target="_blank">DBpedia</a>.</p>
+
+<p>Figure 1 illustrates our approach to creating GitTables, on a high level.</p>
+
+<h3 id="why-gittables">Why GitTables</h3>
+
+<p>Existing large-scale table corpora (like <a href="http://webdatacommons.org/webtables/" target="_blank">WebTables</a>) contain tables extracted from HTML pages, limiting the capability to represent offline tables. These table corpora also lack semantic annotations, like semantic column types.</p>
+
+<p>To train and evaluate table representation models for applications beyond the Web, e.g. data management, additional resources are needed with tables that resemble relational database tables. We built GitTables to facilitate that need.</p>
+
+<p>Example use-cases that GitTables can facilitate that may use table representation models:</p>
+
+<ul>
+  <li>Data search, integration, and validation.</li>
+  <li>Data visualization and analysis recommendation.</li>
+  <li>Schema completion for e.g. database or knowledge base design.</li>
+</ul>
+
+<h3 id="the-dataset">The dataset</h3>
+
+<p>On average the tables have 25 columns and 209 rows, more detailed statistics can be found in the table on top of this page. Each table is stored in a parquet file and comes with metadata, in the form of the original URL, license, and table dimensions. Figure 2 shows an example table.</p>
+
+<p align="center">
+    <img src="images/organism_table.png" />
+    <figcaption style="text-align:center">Figure 2: example of a table retrieved based on the ``organism'' query.</figcaption>
+</p>
+
+<p>We also annotated table columns with real-world concepts, semantic types, that the columns refer to. These labels were extracted from the DBpedia and Schema.org ontologies.</p>
+
+<p>We used two different annotation methods:</p>
+<ul>
+  <li>Syntactic: string-based matching between column names and the semantic types,</li>
+  <li>Semantic: embedding semantic types and column names using a pretrained FastText model trained on the Common Crawl dataset. The annotation corresponds to the most similar semantic type.</li>
+</ul>
+
+<p>Figure 3 presents the distribution of semantic types of the tables per annotation method and ontology.</p>
+
+<p align="center">
+    <img src="images/column_types_distributions_total.png" />
+    <figcaption style="text-align:center">Figure 3: distribution of top 25 semantic types resulting from different annotation methods and ontologies.</figcaption>
+</p>
+
+<h2 id="downloads"><strong>Downloads</strong></h2>
+
+<p>GitTables is hosted on Zenodo which ensures long-term persistence. To facilitate extension and replication of GitTables we publish the code for extraction, curation, and annotation, as well as the ontologies used for annotation.</p>
+
+<h3 id="dataset-downloads">Dataset downloads</h3>
+
+<p>The <a href="https://docs.github.com/en/search-github/searching-on-github/searching-code" target="_blank">GitHub Search API</a> requires queries to include a keyword, which we refer to as a topic (e.g. <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">object</code>, etc.). We kept this structure in place so each zip file download contains the tables retrieved for a topic.</p>
+
+<ul>
+  <li><a href="https://zenodo.org/record/6517052" target="_blank"><strong>GitTables 1M (16.3 GB)</strong></a>: the primary corpus of 1M tables used for the analysis in the associated paper.</li>
+  <li><a href="https://zenodo.org/record/6515973" target="_blank">GitTables 1M - CSV files (6.8 GB)</a>: the CSV files of which the tables were extracted.</li>
+  <li><a href="https://zenodo.org/record/5706316" target="_blank">GitTables benchmark - column type detection (3.6 MB)</a>: a smaller subset of 1101 tables and associated labels used for benchmarking semantic column type detection.</li>
+  <li>GitTables (TBC): the entire dataset of 10M tables with metadata.</li>
+</ul>
+
+<h3 id="ontology-downloads">Ontology downloads</h3>
+<p>The tables have been annotated with snapshots of DBpedia and Schema.org. These ontologies are provided in the form of a pickle file. Each pickle contains a pickled Pandas DataFrame with the semantic types per ontology.</p>
+
+<ul>
+  <li><a href="/assets/dbpedia_20210528.pkl" target="_blank">DBpedia ontology (509 KB)</a>.</li>
+  <li><a href="/assets/schema_20210528.pkl" target="_blank">Schema.org ontology (619 KB)</a>.</li>
+</ul>
+
+<h2 id="using-gittables"><strong>Using GitTables</strong></h2>
+
+<p>For more detailed instructions for using GitTables, please check the <a href="/usage.html">Usage</a> page.</p>
+
+<h3 id="license">License</h3>
+<p>GitTables is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attributions 4.0 International license</a> (CC BY 4.0). The table data might however be licensed under different licenses as inherited from the GitHub repositories that the CSVs were retrieved from. All tables in the Zenodo dataset with version 0.0.6 have a license that allows distribution of the data. The specific license of each table is attached to the metadata in the parquet file.</p>
+
+<h3 id="citation">Citation</h3>
+<p><a href="https://arxiv.org/pdf/2106.07258.pdf" target="_blank">Our paper</a> describes the construction, analysis and use-cases of GitTables in more detail.
+If you use GitTables, please cite our paper:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{hulsebos2023gittables,
+  title={Gittables: A large-scale corpus of relational tables},
+  author={Hulsebos, Madelon and Demiralp, {\c{C}}agatay and Groth, Paul},
+  journal={Proceedings of the ACM on Management of Data},
+  volume={1},
+  number={1},
+  pages={1--17},
+  year={2023},
+  publisher={ACM New York, NY, USA}
+}
+</code></pre></div></div>
+
+<h2 id="contact"><strong>Contact</strong></h2>
+
+<p>GitTables is developed by:</p>
+<ul>
+  <li><a href="https://madelonhulsebos.github.io" target="_blank">Madelon Hulsebos</a>, University of Amsterdam,</li>
+  <li><a href="https://hci.stanford.edu/~cagatay/" target="_blank">Çağatay Demiralp</a>, Sigma Computing,</li>
+  <li><a href="http://pgroth.com" target="_blank">Paul Groth</a>, University of Amsterdam.</li>
+</ul>
+
+<p>Please consider reporting cases of personal or otherwise undesired tables in GitTables using the form below.
+Feedback, suggestions and results from projects with GitTables are also very welcome!</p>
+
+<form action="https://formspree.io/f/xzbygjng" method="POST">
+  <label>
+    Your email:
+    <br />
+    <input type="email" name="_replyto" />
+  </label>
+  <br />
+  <label>
+    Your message:
+    <br />
+    <textarea name="message"></textarea>
+  </label>
+  <br />
+  <button type="submit">Send</button>
+</form>
+
+<p><br />
+Alternatively, you can send an email to m.hulsebos (at) uva.nl.</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">GitTables</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Madelon Hulsebos</li><li><a class="u-email" href="mailto:m.hulsebos (at) uva.nl">m.hulsebos (at) uva.nl</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

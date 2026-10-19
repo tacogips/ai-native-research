@@ -1,0 +1,32 @@
+---
+language:
+- ja
+license:
+- cc-by-sa-3.0
+size_categories:
+- 1K<n<10K
+task_categories:
+- token-classification
+---
+
+# Dataset Card for llm-book/ner-wikipedia-dataset
+
+書籍『大規模言語モデル入門』で使用する、ストックマーク株式会社により作成された「Wikipediaを用いた日本語の固有表現抽出データセット」(Version 2.0)です。 
+Githubリポジトリ[stockmarkteam/ner-wikipedia-dataset](https://github.com/stockmarkteam/ner-wikipedia-dataset)で公開されているデータセットを利用しています。
+
+### Citation
+
+```bibtex
+@inproceedings{omi-2021-wikipedia,
+    title = "Wikipediaを用いた日本語の固有表現抽出のデータセットの構築",
+    author = "近江 崇宏",
+    booktitle = "言語処理学会第27回年次大会",
+    year = "2021",
+    url = "https://anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P2-7.pdf",
+}
+```
+
+### Licence
+
+Wikipedia日本語版と同じCC-BY-SA 3.0のライセンスに従います。
+

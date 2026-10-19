@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      td,th {
+      background:#f0f0f0;
+      }
+      #labels {
+      width: 100%;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      height: 1.5em; 
+      z-index:5;
+      }
+      .label {
+      float: left;
+      width:12.5%;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      }
+      .twoline {
+      line-height:1em;
+      margin-top:-0.75em;
+      padding-bottom:0.5em;
+      }
+    </style>
+    <link href="../css/projectPage.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <title>RVL-CDIP Dataset</title></head>
+  <body>
+    <div id="container">
+      <div id="page">
+	<div id="pageContent">
+	  <h1>The RVL-CDIP Dataset</h1>
+	  <p><a href="http://adamharley.com/">Adam W. Harley</a>, Alex Ufkes, and <a href="https://csprofkgd.github.io/">Konstantinos G. Derpanis</a></p>
+	  <p>The RVL-CDIP (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels.</p>
+	  <p>Here are the classes in the dataset, and an example from each:</p>
+	  <div id="labels">
+	    <div class="label">letter</div>
+	    <div class="label">memo</div>
+	    <div class="label">email</div>
+	    <div class="label">filefolder</div>
+	    <div class="label">form</div>
+	    <div class="label">handwritten</div>
+	    <div class="label">invoice</div>
+	    <div class="label">advertisement</div>
+	  </div>
+	  <img src="images/sample1.png" style="width:100%; height:auto; max-width:3540px; padding-bottom:20px;">
+	  <div id="labels" style="padding-top:1em;">
+	    <div class="label">budget</div>
+	    <div class="label">news article</div>
+	    <div class="label">presentation</div>
+	    <div class="label twoline">scientific <br/> publication</div>
+	    <div class="label">questionnaire</div>
+	    <div class="label">resume</div>
+	    <div class="label twoline">scientific <br/>report</div>
+	    <div class="label">specification</div>
+	  </div>
+	  <img src="images/sample2.png" style="width:100%; height:auto; max-width:3540px;">
+	  <p>This dataset is a subset of the IIT-CDIP Test Collection 1.0 [1], which is publicly available <a href="https://ir.nist.gov/cdip/">here</a>. The file structure of this dataset is the same as in the IIT collection, so it is possible to refer to that dataset for OCR and additional metadata. The IIT-CDIP dataset is itself a subset of the Legacy Tobacco Document Library [2]. </p>
+	  <h2>Download</h2>
+	  <table width="100%">
+	    <p><strong>Update (April 2022):</strong> The RVL-CDIP Dataset is now on the <a href="https://huggingface.co/datasets/rvl_cdip">HuggingFace Datasets Library</a>! The data should be very convenient to access from there. As backup, we maintain the google drive links and information below.</a>
+	    <tr>
+	      <th>File</th>
+	      <th>Size</th>
+	      <th>md5sum</th>						
+	    </tr>
+	    <tr>
+	      <td><a href="https://docs.google.com/uc?id=0Bz1dfcnrpXM-MUt4cHNzUEFXcmc&export=download">rvl-cdip.tar.gz</a></td>
+	      <td>38762320458B (37GB)</td>
+	      <td>d641dd4866145316a1ed628b420d8b6c</td>
+	    </tr>
+	    <tr>
+	      <td><a href="https://docs.google.com/uc?authuser=0&id=0B0NKIRwUL9KYcXo3bV9LU0t3SGs&export=download">labels_only.tar.gz</a></td>
+	      <td>6359157B (6.1MB)</td>
+	      <td>9d22cb1eea526a806de8f492baaa2a57</td>
+	    </tr>
+	  </table>
+	  <h2>Details</h2>
+	  <p>The label files list the images and their categories in the following format:</p>
+	  <code class="inlinecode">path/to/the/image.tif category</code>
+	  <p>where the categories are numbered 0 to 15, in the following order:</p>
+	  <ol start="0">
+	    <li>letter</li>
+	    <li>form</li>
+	    <li>email</li>
+	    <li>handwritten</li>
+	    <li>advertisement</li>
+	    <li>scientific report</li>
+	    <li>scientific publication</li>
+	    <li>specification</li>
+	    <li>file folder</li>
+	    <li>news article</li>
+	    <li>budget</li>
+	    <li>invoice</li>
+	    <li>presentation</li>
+	    <li>questionnaire</li>
+	    <li>resume</li>
+	    <li>memo</li>
+	  </ol>
+	  <h2>Citation</h2>
+	  <p>If you use this dataset, please cite our <a href="../icdar15">paper</a>:	
+	    <div class="cite">A. W. Harley, A. Ufkes, K. G. Derpanis, "Evaluation of Deep Convolutional Nets for Document Image Classification and Retrieval," in ICDAR, 2015</div>
+	  <p>Bibtex format:</p>
+	  <div class="cite">
+	    <code>
+	      @inproceedings{harley2015icdar,<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;title = {Evaluation of Deep Convolutional Nets for Document Image Classification and Retrieval},<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;author = {Adam W Harley and Alex Ufkes and Konstantinos G Derpanis},<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;booktitle = {International Conference on Document Analysis and Recognition ({ICDAR})}},<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;year = {2015}<br/>
+	      }
+	    </code>
+	  </div>
+	  <h2>License</h2>
+	  <p>RVL-CDIP is a subset of IIT-CDIP, which came from the <a href="https://www.industrydocuments.ucsf.edu/tobacco/">Legacy Tobacco Document Library</a>, for which license information can be found <a href="https://www.industrydocuments.ucsf.edu/help/copyright/">here</a>.</p>
+	  <h2 style="margin-bottom:-0.5em">References:</h2>
+	  <ol>
+	    <li> D. Lewis, G. Agam, S. Argamon, O. Frieder, D. Grossman, and J. Heard, "Building a test collection for complex document information processing," in Proc. 29th Annual Int. ACM SIGIR Conference (SIGIR 2006), pp. 665-666, 2006</li>
+	    <li>The Legacy Tobacco Document Library (LTDL), University of California, San Francisco, 2007. http://legacy.library.ucsf.edu/.</li>
+	  </ol> 
+	</div>
+      </div>
+    </div>
+  </body>
+  <!-- Adam's tracking code -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61302010-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- RVL's tracking code -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63839034-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</html>

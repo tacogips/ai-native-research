@@ -4,6 +4,14 @@
 
 ## 全社PCに常駐する機密データ監視（2026年10月16日）
 
+[LLMを使わない端末内の機密分類](research/technology/local_non_llm_sensitive_data_classification_20261016.md)。TF-IDFと線形分類器を初期候補とし、個人情報の箇所抽出、形式規則、保存場所・送信先の判断を組み合わせる。判定用の原文を外へ送らない構成と、精度・常駐監視の検証条件を整理。
+
+[BERT系の最新関連論文と到達点](research/technology/local_non_llm_sensitive_data_papers_20261016.md)。日本語の要配慮情報、DeBERTa、機密文書分類、頑健性、GLiNER2、端末向け日本語モデルを比較。独立確認で評価条件と数値不整合を確認し、公式PDFと取得台帳を保存した。
+
+[PII検出の公開テストデータ・開発用サンプル](research/technology/pii_test_and_development_data_20261016.md)。日本語Sumi、OpenPII、Gretel、Nemotron、Stripe・PAY.JP等のカード・銀行口座の公式試験値、Go/.NETの生成器を比較。利用条件、検査数字、正解箇所、紛らわしい陰性例を確認。モデル容量の確認に使った公開API情報も保存。
+
+[関連データセットの拡張調査](research/technology/pii_related_datasets_expansion_20261016.md)。PrivacyBench、Privasis、TAB、REDACT、認証情報の試験資料、日本語NER、WebPII、画像・PDF・表・合成取引まで追加。PII専用の正解と一般文書のラベル、元資料と派生版、提供条件を分けた。
+
 [端末での探索・漏えい防止・操作記録の比較](research/technology/endpoint_resident_sensitive_data_monitoring_20261016.md)。Purview、Cyberhaven、MIND、Fortra、Netwrix、Incydr、CrowdStrike、P-Pointer、SKYSEA、LANSCOPEの10系統を比較。保存データ検査と持ち出し遮断、常駐と予約検査、端末処理と外部への証拠送信を区別する。
 
 [外部AIへ原文を条件付きで送るための追加確認](research/technology/endpoint_ai_conditional_access_20261016.md)。会社・個人利用の識別、手入力・添付、本人解除と管理者事前承認、送信前制御と送信後監査を比較。Netskopeを含む6系統と、API接続窓口の統一を検討した。
