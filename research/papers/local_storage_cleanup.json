@@ -1,0 +1,1487 @@
+{
+  "removed_at": "2026-10-19T04:49:53.164810+00:00",
+  "reason": "利用者の指示により、全頁OCR完了・頁数一致・原本とOCR成果物のSHA-256一致を確認した原本PDFだけを削除。OCR版PDF・認識本文・取得情報は保持。",
+  "removed": [
+    {
+      "id": "1503.02531",
+      "removed_source_pdf": "research/papers/arxiv/1503.02531/paper.pdf",
+      "source_sha256": "74e6689115c539db499f9d6153edecb364059926fd45402454f8210442444c5a",
+      "retained_ocr_pdf": "research/papers/arxiv/1503.02531/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/1503.02531/paper_ocr.txt",
+      "allocated_bytes": 110592
+    },
+    {
+      "id": "2004.10964",
+      "removed_source_pdf": "research/papers/arxiv/2004.10964/paper.pdf",
+      "source_sha256": "a1dfe1375e615814f6b78c0d431c27e85a1559640c755c6f513eb2dd7b87db41",
+      "retained_ocr_pdf": "research/papers/arxiv/2004.10964/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2004.10964/paper_ocr.txt",
+      "allocated_bytes": 1761280
+    },
+    {
+      "id": "2102.12892",
+      "removed_source_pdf": "research/papers/arxiv/2102.12892/paper.pdf",
+      "source_sha256": "438cfafe475d749a47917100dc699bd3aa523b47ceba9e4ba32fbe649b6ea5bb",
+      "retained_ocr_pdf": "research/papers/arxiv/2102.12892/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2102.12892/paper_ocr.txt",
+      "allocated_bytes": 196608
+    },
+    {
+      "id": "2106.09685",
+      "removed_source_pdf": "research/papers/arxiv/2106.09685/paper.pdf",
+      "source_sha256": "e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a",
+      "retained_ocr_pdf": "research/papers/arxiv/2106.09685/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2106.09685/paper_ocr.txt",
+      "allocated_bytes": 1609728
+    },
+    {
+      "id": "2212.04356",
+      "removed_source_pdf": "research/papers/arxiv/2212.04356/paper.pdf",
+      "source_sha256": "6337bde031b2f237547a977b022f831169a7e05b4d9047f29501166d83594566",
+      "retained_ocr_pdf": "research/papers/arxiv/2212.04356/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2212.04356/paper_ocr.txt",
+      "allocated_bytes": 1011712
+    },
+    {
+      "id": "2304.02711",
+      "removed_source_pdf": "research/papers/arxiv/2304.02711/paper.pdf",
+      "source_sha256": "2de0afde5b966174ca52909332681422507d9c6559bc25f9186e26d5940bd685",
+      "retained_ocr_pdf": "research/papers/arxiv/2304.02711/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2304.02711/paper_ocr.txt",
+      "allocated_bytes": 2744320
+    },
+    {
+      "id": "2304.11771",
+      "removed_source_pdf": "research/papers/arxiv/2304.11771/paper.pdf",
+      "source_sha256": "146dcc7459824f0f1fe4a1f9ac7e8be06ee098b8b34e686a75131b77e42ce951",
+      "retained_ocr_pdf": "research/papers/arxiv/2304.11771/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2304.11771/paper_ocr.txt",
+      "allocated_bytes": 3375104
+    },
+    {
+      "id": "2305.04388",
+      "removed_source_pdf": "research/papers/arxiv/2305.04388/paper.pdf",
+      "source_sha256": "f68cfafe59e7acef0f03ec0bdcfe34fb64154db8c354e17b0ee11e0c2c4bb708",
+      "retained_ocr_pdf": "research/papers/arxiv/2305.04388/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2305.04388/paper_ocr.txt",
+      "allocated_bytes": 839680
+    },
+    {
+      "id": "2306.05685",
+      "removed_source_pdf": "research/papers/arxiv/2306.05685/paper.pdf",
+      "source_sha256": "1574982845157569b85c1214bfa9987000384d7a5e3b5fbdcc5a29afec59cb81",
+      "retained_ocr_pdf": "research/papers/arxiv/2306.05685/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2306.05685/paper_ocr.txt",
+      "allocated_bytes": 1581056
+    },
+    {
+      "id": "2307.07697",
+      "removed_source_pdf": "research/papers/arxiv/2307.07697/paper.pdf",
+      "source_sha256": "a6a5cfcd3725d74f46a5e65b0f7f3dbca76724b06022ec6dec6275773a73873a",
+      "retained_ocr_pdf": "research/papers/arxiv/2307.07697/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2307.07697/paper_ocr.txt",
+      "allocated_bytes": 3768320
+    },
+    {
+      "id": "2307.16648",
+      "removed_source_pdf": "research/papers/arxiv/2307.16648/paper.pdf",
+      "source_sha256": "586ea4a177d57a8e2893afafdec6b4004f7dd0b5047f07c534dd174b2fd623a7",
+      "retained_ocr_pdf": "research/papers/arxiv/2307.16648/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2307.16648/paper_ocr.txt",
+      "allocated_bytes": 598016
+    },
+    {
+      "id": "2307.16699",
+      "removed_source_pdf": "research/papers/arxiv/2307.16699/paper.pdf",
+      "source_sha256": "c531bd1fed4c8b23a18ee29c7cf1acb5fea6e84a3bb166ed0bfbd23d6168ca97",
+      "retained_ocr_pdf": "research/papers/arxiv/2307.16699/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2307.16699/paper_ocr.txt",
+      "allocated_bytes": 516096
+    },
+    {
+      "id": "2309.15817",
+      "removed_source_pdf": "research/papers/arxiv/2309.15817/paper.pdf",
+      "source_sha256": "2d746c512086bd47084e616a0848c6dd25052dfe8b6da64e42e4c5e2f0050722",
+      "retained_ocr_pdf": "research/papers/arxiv/2309.15817/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2309.15817/paper_ocr.txt",
+      "allocated_bytes": 2715648
+    },
+    {
+      "id": "2310.01798",
+      "removed_source_pdf": "research/papers/arxiv/2310.01798/paper.pdf",
+      "source_sha256": "15e1731e255ec6b217792a1e077926807da77e8e46b69e6c57dda30d67794761",
+      "retained_ocr_pdf": "research/papers/arxiv/2310.01798/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2310.01798/paper_ocr.txt",
+      "allocated_bytes": 389120
+    },
+    {
+      "id": "2310.06816",
+      "removed_source_pdf": "research/papers/arxiv/2310.06816/paper.pdf",
+      "source_sha256": "e624561474ea2782e40eb10ddf7e8c515a398343e5f6dac6acb21d795ab45264",
+      "retained_ocr_pdf": "research/papers/arxiv/2310.06816/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2310.06816/paper_ocr.txt",
+      "allocated_bytes": 978944
+    },
+    {
+      "id": "2310.08560",
+      "removed_source_pdf": "research/papers/arxiv/2310.08560/paper.pdf",
+      "source_sha256": "9f674bcff69c86f11c813dcfad613d8841f5f8ed17979e3c4df06a91df7762e0",
+      "retained_ocr_pdf": "research/papers/arxiv/2310.08560/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2310.08560/paper_ocr.txt",
+      "allocated_bytes": 667648
+    },
+    {
+      "id": "2311.07509",
+      "removed_source_pdf": "research/papers/arxiv/2311.07509/paper.pdf",
+      "source_sha256": "1a0cb23795bea7f11c64b7f700d9088d2d08b004f7117951030733c8b0ee45c6",
+      "retained_ocr_pdf": "research/papers/arxiv/2311.07509/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2311.07509/paper_ocr.txt",
+      "allocated_bytes": 1626112
+    },
+    {
+      "id": "2311.15999",
+      "removed_source_pdf": "research/papers/arxiv/2311.15999/paper.pdf",
+      "source_sha256": "9559571512c4842dda5463c23f40651707169d435d9bbfdec8613ab13fc470a6",
+      "retained_ocr_pdf": "research/papers/arxiv/2311.15999/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2311.15999/paper_ocr.txt",
+      "allocated_bytes": 811008
+    },
+    {
+      "id": "2402.07456",
+      "removed_source_pdf": "research/papers/arxiv/2402.07456/paper.pdf",
+      "source_sha256": "05cf9834874c837604161eba30ef1ee472836e9f8045d9432aaf65821178d98b",
+      "retained_ocr_pdf": "research/papers/arxiv/2402.07456/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2402.07456/paper_ocr.txt",
+      "allocated_bytes": 2637824
+    },
+    {
+      "id": "2402.11163",
+      "removed_source_pdf": "research/papers/arxiv/2402.11163/paper.pdf",
+      "source_sha256": "4a9e56b0f62e77fd9cbb6bd2860661fbf07594a96f3da3eae039dc48282ccf12",
+      "retained_ocr_pdf": "research/papers/arxiv/2402.11163/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2402.11163/paper_ocr.txt",
+      "allocated_bytes": 774144
+    },
+    {
+      "id": "2403.02691",
+      "removed_source_pdf": "research/papers/arxiv/2403.02691/paper.pdf",
+      "source_sha256": "49e6e6a4a00c797a772ef905a154c0839426655027d5fa0ce6b632e6c1db2bfb",
+      "retained_ocr_pdf": "research/papers/arxiv/2403.02691/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2403.02691/paper_ocr.txt",
+      "allocated_bytes": 3186688
+    },
+    {
+      "id": "2403.04960",
+      "removed_source_pdf": "research/papers/arxiv/2403.04960/paper.pdf",
+      "source_sha256": "1b5c4daa16650b006332780d9b450e5ee46bb5047585c03e50f7e7e24d12fc52",
+      "retained_ocr_pdf": "research/papers/arxiv/2403.04960/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2403.04960/paper_ocr.txt",
+      "allocated_bytes": 2617344
+    },
+    {
+      "id": "2403.16971",
+      "removed_source_pdf": "research/papers/arxiv/2403.16971/paper.pdf",
+      "source_sha256": "6ac427d318869e82ea5dc2f1e4b1db91a482c640d527cc3f3812eb2d3f835b12",
+      "retained_ocr_pdf": "research/papers/arxiv/2403.16971/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2403.16971/paper_ocr.txt",
+      "allocated_bytes": 1347584
+    },
+    {
+      "id": "2404.16130",
+      "removed_source_pdf": "research/papers/arxiv/2404.16130/paper.pdf",
+      "source_sha256": "730f1a9f38d16689900969a3eeeb1b31e45eda1dcc1f37a043afa90aff76c867",
+      "retained_ocr_pdf": "research/papers/arxiv/2404.16130/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2404.16130/paper_ocr.txt",
+      "allocated_bytes": 6897664
+    },
+    {
+      "id": "2405.11706",
+      "removed_source_pdf": "research/papers/arxiv/2405.11706/paper.pdf",
+      "source_sha256": "429d6a0914f74f4d5aa3b407a31675cdc67527173053a5e85acbe4693dbe8f22",
+      "retained_ocr_pdf": "research/papers/arxiv/2405.11706/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2405.11706/paper_ocr.txt",
+      "allocated_bytes": 774144
+    },
+    {
+      "id": "2405.14831",
+      "removed_source_pdf": "research/papers/arxiv/2405.14831/paper.pdf",
+      "source_sha256": "14671c78fc7de99d83bb9e52e2d5b335d4756066925e67df1a25c0e272133aad",
+      "retained_ocr_pdf": "research/papers/arxiv/2405.14831/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2405.14831/paper_ocr.txt",
+      "allocated_bytes": 3407872
+    },
+    {
+      "id": "2405.20362",
+      "removed_source_pdf": "research/papers/arxiv/2405.20362/paper.pdf",
+      "source_sha256": "8fd2abfeabd7bc122152146f4ef25102a818816a0149163fbc20d955c017c956",
+      "retained_ocr_pdf": "research/papers/arxiv/2405.20362/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2405.20362/paper_ocr.txt",
+      "allocated_bytes": 1122304
+    },
+    {
+      "id": "2406.12045",
+      "removed_source_pdf": "research/papers/arxiv/2406.12045/paper.pdf",
+      "source_sha256": "0ce66a1763d698c61bb311c3c874bf593d1e9a5bfff11bb35f6f72b981f6da56",
+      "retained_ocr_pdf": "research/papers/arxiv/2406.12045/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2406.12045/paper_ocr.txt",
+      "allocated_bytes": 663552
+    },
+    {
+      "id": "2406.13352",
+      "removed_source_pdf": "research/papers/arxiv/2406.13352/paper.pdf",
+      "source_sha256": "349884fffbf43282591c5accffd57bb651632f38e412fe303114941bdd111b05",
+      "retained_ocr_pdf": "research/papers/arxiv/2406.13352/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2406.13352/paper_ocr.txt",
+      "allocated_bytes": 1044480
+    },
+    {
+      "id": "2406.13356",
+      "removed_source_pdf": "research/papers/arxiv/2406.13356/paper.pdf",
+      "source_sha256": "16f69b34ed2543b8c91bb5cf90943893016775dcae0856c6c55f5e48f4f202bd",
+      "retained_ocr_pdf": "research/papers/arxiv/2406.13356/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2406.13356/paper_ocr.txt",
+      "allocated_bytes": 1130496
+    },
+    {
+      "id": "2407.10805",
+      "removed_source_pdf": "research/papers/arxiv/2407.10805/paper.pdf",
+      "source_sha256": "4436219a91566cbc92a5049d1439e781fabe6924e9e6092051481207da02895d",
+      "retained_ocr_pdf": "research/papers/arxiv/2407.10805/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2407.10805/paper_ocr.txt",
+      "allocated_bytes": 2301952
+    },
+    {
+      "id": "2407.12784",
+      "removed_source_pdf": "research/papers/arxiv/2407.12784/paper.pdf",
+      "source_sha256": "008c4b0f70150ae2e26cead8ca6bad773cb4e2cd370154a10db320a456ea5ee1",
+      "retained_ocr_pdf": "research/papers/arxiv/2407.12784/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2407.12784/paper_ocr.txt",
+      "allocated_bytes": 5287936
+    },
+    {
+      "id": "2408.15256",
+      "removed_source_pdf": "research/papers/arxiv/2408.15256/paper.pdf",
+      "source_sha256": "faf5fe6f85374ea0eafa3f09182a4b3c67f603bc45bd0df7ca8b354d4fcb35b8",
+      "retained_ocr_pdf": "research/papers/arxiv/2408.15256/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2408.15256/paper_ocr.txt",
+      "allocated_bytes": 1605632
+    },
+    {
+      "id": "2409.07489",
+      "removed_source_pdf": "research/papers/arxiv/2409.07489/paper.pdf",
+      "source_sha256": "cde784f4534004db747840d78193e5a018d8379765bc7f7f3dddfeb5ccfc5ca9",
+      "retained_ocr_pdf": "research/papers/arxiv/2409.07489/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2409.07489/paper_ocr.txt",
+      "allocated_bytes": 1105920
+    },
+    {
+      "id": "2409.12917",
+      "removed_source_pdf": "research/papers/arxiv/2409.12917/paper.pdf",
+      "source_sha256": "b384619e6083baa17bd0bdb7dd7ac8deb4faf7ddb0639c9bfb44723e0deeb90d",
+      "retained_ocr_pdf": "research/papers/arxiv/2409.12917/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2409.12917/paper_ocr.txt",
+      "allocated_bytes": 872448
+    },
+    {
+      "id": "2409.19091",
+      "removed_source_pdf": "research/papers/arxiv/2409.19091/paper.pdf",
+      "source_sha256": "d67c3a6280a917369b80c41528ee6bbcf3776ff696cd4c2ff0b40ec2b00d0c4f",
+      "retained_ocr_pdf": "research/papers/arxiv/2409.19091/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2409.19091/paper_ocr.txt",
+      "allocated_bytes": 1277952
+    },
+    {
+      "id": "2410.05779",
+      "removed_source_pdf": "research/papers/arxiv/2410.05779/paper.pdf",
+      "source_sha256": "bd72eebf611df1366b251c16ce4eac7aac699e519783c586feb2c5c43899347a",
+      "retained_ocr_pdf": "research/papers/arxiv/2410.05779/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2410.05779/paper_ocr.txt",
+      "allocated_bytes": 1126400
+    },
+    {
+      "id": "2410.11843",
+      "removed_source_pdf": "research/papers/arxiv/2410.11843/paper.pdf",
+      "source_sha256": "7d624b8c010c02ad97ad44997691d9d19a9ea18c83d4c49a007a80dc6da2436e",
+      "retained_ocr_pdf": "research/papers/arxiv/2410.11843/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2410.11843/paper_ocr.txt",
+      "allocated_bytes": 8818688
+    },
+    {
+      "id": "2411.07763",
+      "removed_source_pdf": "research/papers/arxiv/2411.07763/paper.pdf",
+      "source_sha256": "b27bcee967778e864809adf241acd4c250a52d59f4ff301a34b4f4f3e6be7908",
+      "retained_ocr_pdf": "research/papers/arxiv/2411.07763/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2411.07763/paper_ocr.txt",
+      "allocated_bytes": 4816896
+    },
+    {
+      "id": "2411.07781",
+      "removed_source_pdf": "research/papers/arxiv/2411.07781/paper.pdf",
+      "source_sha256": "66c304641580b58bc6cdfdd56a0fb48ddeee7f7516c50f4982d66901c654f9a7",
+      "retained_ocr_pdf": "research/papers/arxiv/2411.07781/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2411.07781/paper_ocr.txt",
+      "allocated_bytes": 5644288
+    },
+    {
+      "id": "2411.09601",
+      "removed_source_pdf": "research/papers/arxiv/2411.09601/paper.pdf",
+      "source_sha256": "cdf8b92771b1f06e46c3b9711cec2387418d05f607461ee82b9806556fa6ba22",
+      "retained_ocr_pdf": "research/papers/arxiv/2411.09601/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2411.09601/paper_ocr.txt",
+      "allocated_bytes": 151552
+    },
+    {
+      "id": "2412.14161",
+      "removed_source_pdf": "research/papers/arxiv/2412.14161/paper.pdf",
+      "source_sha256": "9574c7c5d4f1592dd1a0c9615cb3c2f8bd130f18b2c2cde4d0bbace4e80ef620",
+      "retained_ocr_pdf": "research/papers/arxiv/2412.14161/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2412.14161/paper_ocr.txt",
+      "allocated_bytes": 2170880
+    },
+    {
+      "id": "2412.15235",
+      "removed_source_pdf": "research/papers/arxiv/2412.15235/paper.pdf",
+      "source_sha256": "2d468b9505eed20a5c8e4dfa3d2fdd749c98da42bc7cd9418ea2f330d21d626b",
+      "retained_ocr_pdf": "research/papers/arxiv/2412.15235/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2412.15235/paper_ocr.txt",
+      "allocated_bytes": 933888
+    },
+    {
+      "id": "2501.13956",
+      "removed_source_pdf": "research/papers/arxiv/2501.13956/paper.pdf",
+      "source_sha256": "d26f7eb599540e8b14d75e7efda58a07661abbb1b864e58323b5768475a15d42",
+      "retained_ocr_pdf": "research/papers/arxiv/2501.13956/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2501.13956/paper_ocr.txt",
+      "allocated_bytes": 151552
+    },
+    {
+      "id": "2502.11371",
+      "removed_source_pdf": "research/papers/arxiv/2502.11371/paper.pdf",
+      "source_sha256": "61db034d4bff754013f2012f318a5ce100c82eeaff78b056e809966d30139e9b",
+      "retained_ocr_pdf": "research/papers/arxiv/2502.11371/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2502.11371/paper_ocr.txt",
+      "allocated_bytes": 851968
+    },
+    {
+      "id": "2503.03704",
+      "removed_source_pdf": "research/papers/arxiv/2503.03704/paper.pdf",
+      "source_sha256": "1f56154cb0a68c839c52bb76ac10a56d39ed605fa4a9fb77a7b7536475fd4b3b",
+      "retained_ocr_pdf": "research/papers/arxiv/2503.03704/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2503.03704/paper_ocr.txt",
+      "allocated_bytes": 8056832
+    },
+    {
+      "id": "2503.11444",
+      "removed_source_pdf": "research/papers/arxiv/2503.11444/paper.pdf",
+      "source_sha256": "0ba60e9536aacacc001fcbd18f8748e0e794b743ee73a1d9ad3760e0ee1fb75f",
+      "retained_ocr_pdf": "research/papers/arxiv/2503.11444/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2503.11444/paper_ocr.txt",
+      "allocated_bytes": 2248704
+    },
+    {
+      "id": "2503.13657",
+      "removed_source_pdf": "research/papers/arxiv/2503.13657/paper.pdf",
+      "source_sha256": "1b9e317a2a421e60ca2b2eda4a30844557a01e63286a790890c0ecef32d25460",
+      "retained_ocr_pdf": "research/papers/arxiv/2503.13657/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2503.13657/paper_ocr.txt",
+      "allocated_bytes": 1191936
+    },
+    {
+      "id": "2503.18666",
+      "removed_source_pdf": "research/papers/arxiv/2503.18666/paper.pdf",
+      "source_sha256": "a8ef39247392eb49e275768c19aca11a111c997e432225dcbcf74dfbf31abae7",
+      "retained_ocr_pdf": "research/papers/arxiv/2503.18666/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2503.18666/paper_ocr.txt",
+      "allocated_bytes": 753664
+    },
+    {
+      "id": "2503.18813",
+      "removed_source_pdf": "research/papers/arxiv/2503.18813/paper.pdf",
+      "source_sha256": "c3719f6ce73eecf45e3764debef8a3d8ff8c9233b37d128c558b694ec3790cc7",
+      "retained_ocr_pdf": "research/papers/arxiv/2503.18813/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2503.18813/paper_ocr.txt",
+      "allocated_bytes": 5533696
+    },
+    {
+      "id": "2504.00018",
+      "removed_source_pdf": "research/papers/arxiv/2504.00018/paper.pdf",
+      "source_sha256": "6c4057cb30f41f6a311428c6ef56875a8d733630524deb6e979e182713bc763e",
+      "retained_ocr_pdf": "research/papers/arxiv/2504.00018/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2504.00018/paper_ocr.txt",
+      "allocated_bytes": 196608
+    },
+    {
+      "id": "2504.11703",
+      "removed_source_pdf": "research/papers/arxiv/2504.11703/paper.pdf",
+      "source_sha256": "6b96e0a25ddd5df8afc368e8f8f3798bf911caf40db23945617cc5d1f2f36f26",
+      "retained_ocr_pdf": "research/papers/arxiv/2504.11703/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2504.11703/paper_ocr.txt",
+      "allocated_bytes": 978944
+    },
+    {
+      "id": "2504.18575",
+      "removed_source_pdf": "research/papers/arxiv/2504.18575/paper.pdf",
+      "source_sha256": "460fd2adff8d31a62f7743fc7f30e63f83ac3ed1c0eca2bd957fd2d5ba0b4290",
+      "retained_ocr_pdf": "research/papers/arxiv/2504.18575/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2504.18575/paper_ocr.txt",
+      "allocated_bytes": 1196032
+    },
+    {
+      "id": "2505.01538",
+      "removed_source_pdf": "research/papers/arxiv/2505.01538/paper.pdf",
+      "source_sha256": "fb7fbdc02249db29ac4fb21b4885b4a74225b204a4fa79792dd179e3ccdab212",
+      "retained_ocr_pdf": "research/papers/arxiv/2505.01538/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2505.01538/paper_ocr.txt",
+      "allocated_bytes": 1363968
+    },
+    {
+      "id": "2505.05410",
+      "removed_source_pdf": "research/papers/arxiv/2505.05410/paper.pdf",
+      "source_sha256": "546afa672e0c50d50b7c86b7dbacb6f51d200be74f33577012d98cb18eee7600",
+      "retained_ocr_pdf": "research/papers/arxiv/2505.05410/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2505.05410/paper_ocr.txt",
+      "allocated_bytes": 6180864
+    },
+    {
+      "id": "2505.21936",
+      "removed_source_pdf": "research/papers/arxiv/2505.21936/paper.pdf",
+      "source_sha256": "f0622cc48b654aeeb2f2872162d7df21b3a32ee8475156b254544260e696b3b2",
+      "retained_ocr_pdf": "research/papers/arxiv/2505.21936/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2505.21936/paper_ocr.txt",
+      "allocated_bytes": 5918720
+    },
+    {
+      "id": "2505.22101",
+      "removed_source_pdf": "research/papers/arxiv/2505.22101/paper.pdf",
+      "source_sha256": "39fcd2d6cbd3d75c2d0b7373c56ad8228906306accb6af2a20e74947d50c859e",
+      "retained_ocr_pdf": "research/papers/arxiv/2505.22101/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2505.22101/paper_ocr.txt",
+      "allocated_bytes": 1568768
+    },
+    {
+      "id": "2505.22954",
+      "removed_source_pdf": "research/papers/arxiv/2505.22954/paper.pdf",
+      "source_sha256": "13ff4abe0c7ad4a7dd3b4876d19a8bf940e39e70dabbf06065aa774a6c3457de",
+      "retained_ocr_pdf": "research/papers/arxiv/2505.22954/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2505.22954/paper_ocr.txt",
+      "allocated_bytes": 3825664
+    },
+    {
+      "id": "2505.23643",
+      "removed_source_pdf": "research/papers/arxiv/2505.23643/paper.pdf",
+      "source_sha256": "5fa1de1932aad07d3bae5c1401782b84c431f3b2c49cb3dfef06654b862b8813",
+      "retained_ocr_pdf": "research/papers/arxiv/2505.23643/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2505.23643/paper_ocr.txt",
+      "allocated_bytes": 634880
+    },
+    {
+      "id": "2506.08837",
+      "removed_source_pdf": "research/papers/arxiv/2506.08837/paper.pdf",
+      "source_sha256": "c202a240f8f03c93cfafd157f218ec790c9e503beeaf80e229fb5e1645ab7f9c",
+      "retained_ocr_pdf": "research/papers/arxiv/2506.08837/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2506.08837/paper_ocr.txt",
+      "allocated_bytes": 1359872
+    },
+    {
+      "id": "2506.12618",
+      "removed_source_pdf": "research/papers/arxiv/2506.12618/paper.pdf",
+      "source_sha256": "bab57b96756ff746227c1a29f5d4d62b97c0491e7b39c878ff12b9072f0ee160",
+      "retained_ocr_pdf": "research/papers/arxiv/2506.12618/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2506.12618/paper_ocr.txt",
+      "allocated_bytes": 1314816
+    },
+    {
+      "id": "2506.14866",
+      "removed_source_pdf": "research/papers/arxiv/2506.14866/paper.pdf",
+      "source_sha256": "5a1133e729d882a7bc0a19fe3a08889072ecfa3789e7c5c2773aa3c6e18bdb6a",
+      "retained_ocr_pdf": "research/papers/arxiv/2506.14866/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2506.14866/paper_ocr.txt",
+      "allocated_bytes": 1290240
+    },
+    {
+      "id": "2507.02735",
+      "removed_source_pdf": "research/papers/arxiv/2507.02735/paper.pdf",
+      "source_sha256": "57e798e0f6418e8086c826a6bbb4291e42bfe809e9adb6d0437bddfa3ca2f61e",
+      "retained_ocr_pdf": "research/papers/arxiv/2507.02735/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2507.02735/paper_ocr.txt",
+      "allocated_bytes": 376832
+    },
+    {
+      "id": "2507.03724",
+      "removed_source_pdf": "research/papers/arxiv/2507.03724/paper.pdf",
+      "source_sha256": "9b9b71b61487ce9f01d2de014b80201d9a30c4fd43effa33e84ef7d2db824977",
+      "retained_ocr_pdf": "research/papers/arxiv/2507.03724/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2507.03724/paper_ocr.txt",
+      "allocated_bytes": 4755456
+    },
+    {
+      "id": "2507.08432",
+      "removed_source_pdf": "research/papers/arxiv/2507.08432/paper.pdf",
+      "source_sha256": "84f81d15e13629c6dd8b9236d938fb9f59f5e7263efb0a80c7de75ab7d14d7c0",
+      "retained_ocr_pdf": "research/papers/arxiv/2507.08432/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2507.08432/paper_ocr.txt",
+      "allocated_bytes": 888832
+    },
+    {
+      "id": "2507.09089",
+      "removed_source_pdf": "research/papers/arxiv/2507.09089/paper.pdf",
+      "source_sha256": "3e18d9e097a3163dbae662e8b7c68ace0510be433891994b136ae7730beab25c",
+      "retained_ocr_pdf": "research/papers/arxiv/2507.09089/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2507.09089/paper_ocr.txt",
+      "allocated_bytes": 5668864
+    },
+    {
+      "id": "2509.10540",
+      "removed_source_pdf": "research/papers/arxiv/2509.10540/paper.pdf",
+      "source_sha256": "4f0939532c477922ab9d501adbfc3f25433d1df72da7d33e4e7834a2b064969c",
+      "retained_ocr_pdf": "research/papers/arxiv/2509.10540/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2509.10540/paper_ocr.txt",
+      "allocated_bytes": 811008
+    },
+    {
+      "id": "2509.25926",
+      "removed_source_pdf": "research/papers/arxiv/2509.25926/paper.pdf",
+      "source_sha256": "963a67e0b5252e511f8d1ec739733d3472b39b33304ada01e4790db66e528a2e",
+      "retained_ocr_pdf": "research/papers/arxiv/2509.25926/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2509.25926/paper_ocr.txt",
+      "allocated_bytes": 806912
+    },
+    {
+      "id": "2509.26354",
+      "removed_source_pdf": "research/papers/arxiv/2509.26354/paper.pdf",
+      "source_sha256": "a16cab4cc97f1ab360ed19e548ab12c155575b78652b79d602c583327fa8d3bb",
+      "retained_ocr_pdf": "research/papers/arxiv/2509.26354/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2509.26354/paper_ocr.txt",
+      "allocated_bytes": 7225344
+    },
+    {
+      "id": "2510.09023",
+      "removed_source_pdf": "research/papers/arxiv/2510.09023/paper.pdf",
+      "source_sha256": "5067f88c7c14a007c205a452e8cdc5bcbf2e87f0958efcc620aa23c81465a9c3",
+      "retained_ocr_pdf": "research/papers/arxiv/2510.09023/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2510.09023/paper_ocr.txt",
+      "allocated_bytes": 2138112
+    },
+    {
+      "id": "2510.12469",
+      "removed_source_pdf": "research/papers/arxiv/2510.12469/paper.pdf",
+      "source_sha256": "c8a69d57b6611a73cc162bc84986d5b9e2ef2bc95d79ad1cc70c9cf1d72fe1b7",
+      "retained_ocr_pdf": "research/papers/arxiv/2510.12469/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2510.12469/paper_ocr.txt",
+      "allocated_bytes": 1290240
+    },
+    {
+      "id": "2510.15001",
+      "removed_source_pdf": "research/papers/arxiv/2510.15001/paper.pdf",
+      "source_sha256": "dff92e9b2e3c5527cd0fd4bcd01f21d26547783f82e7dd5808fc9151f0d62049",
+      "retained_ocr_pdf": "research/papers/arxiv/2510.15001/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2510.15001/paper_ocr.txt",
+      "allocated_bytes": 389120
+    },
+    {
+      "id": "2510.23474",
+      "removed_source_pdf": "research/papers/arxiv/2510.23474/paper.pdf",
+      "source_sha256": "3030e80733724d877311d9e74b653fcb81ecdc6ee434325fe85daac122ea1ec7",
+      "retained_ocr_pdf": "research/papers/arxiv/2510.23474/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2510.23474/paper_ocr.txt",
+      "allocated_bytes": 245760
+    },
+    {
+      "id": "2511.15203",
+      "removed_source_pdf": "research/papers/arxiv/2511.15203/paper.pdf",
+      "source_sha256": "ada6210f63d42ce6c29a8e8a2bda57c804883b266d8be79de80d9f8e947d00b3",
+      "retained_ocr_pdf": "research/papers/arxiv/2511.15203/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2511.15203/paper_ocr.txt",
+      "allocated_bytes": 905216
+    },
+    {
+      "id": "2511.17959",
+      "removed_source_pdf": "research/papers/arxiv/2511.17959/paper.pdf",
+      "source_sha256": "c474204c4c62de67999f0b288b3712912c9212221007692eaa81e17d7845f602",
+      "retained_ocr_pdf": "research/papers/arxiv/2511.17959/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2511.17959/paper_ocr.txt",
+      "allocated_bytes": 581632
+    },
+    {
+      "id": "2511.20284",
+      "removed_source_pdf": "research/papers/arxiv/2511.20284/paper.pdf",
+      "source_sha256": "3b588b6687ae045deeeeac9af61b79fc95b32c41667e001d3604d68e34ec15ca",
+      "retained_ocr_pdf": "research/papers/arxiv/2511.20284/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2511.20284/paper_ocr.txt",
+      "allocated_bytes": 1015808
+    },
+    {
+      "id": "2512.01295",
+      "removed_source_pdf": "research/papers/arxiv/2512.01295/paper.pdf",
+      "source_sha256": "a6afdd4020ac8007ea062fe5c7e6aab1e5200d969a416999282c7a6a63d9d4df",
+      "retained_ocr_pdf": "research/papers/arxiv/2512.01295/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2512.01295/paper_ocr.txt",
+      "allocated_bytes": 2486272
+    },
+    {
+      "id": "2512.11147",
+      "removed_source_pdf": "research/papers/arxiv/2512.11147/paper.pdf",
+      "source_sha256": "081d6074ae88302799a47ac2b36e1535dd11f0dce1ea541df0f07d1673f2651d",
+      "retained_ocr_pdf": "research/papers/arxiv/2512.11147/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2512.11147/paper_ocr.txt",
+      "allocated_bytes": 2531328
+    },
+    {
+      "id": "2512.12594",
+      "removed_source_pdf": "research/papers/arxiv/2512.12594/paper.pdf",
+      "source_sha256": "3bcee9a85cbcca525351e9b1b184fb86a7ac1641cd15e623fac4c3345fa34491",
+      "retained_ocr_pdf": "research/papers/arxiv/2512.12594/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2512.12594/paper_ocr.txt",
+      "allocated_bytes": 778240
+    },
+    {
+      "id": "2512.12806",
+      "removed_source_pdf": "research/papers/arxiv/2512.12806/paper.pdf",
+      "source_sha256": "90898c44fbb760d35d3fa76c8375f08c859a890e04f292febdab300b94a0c503",
+      "retained_ocr_pdf": "research/papers/arxiv/2512.12806/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2512.12806/paper_ocr.txt",
+      "allocated_bytes": 188416
+    },
+    {
+      "id": "2512.20275",
+      "removed_source_pdf": "research/papers/arxiv/2512.20275/paper.pdf",
+      "source_sha256": "9e30e7b776e7c418e15bfdf54163b8eb248737ef1b32933bcab23f257b00b478",
+      "retained_ocr_pdf": "research/papers/arxiv/2512.20275/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2512.20275/paper_ocr.txt",
+      "allocated_bytes": 688128
+    },
+    {
+      "id": "2601.05504",
+      "removed_source_pdf": "research/papers/arxiv/2601.05504/paper.pdf",
+      "source_sha256": "edd9f7d4356a2c656a3550b2012bd1444871774e1cdfe755f08a4130fe4a9566",
+      "retained_ocr_pdf": "research/papers/arxiv/2601.05504/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2601.05504/paper_ocr.txt",
+      "allocated_bytes": 606208
+    },
+    {
+      "id": "2601.11893",
+      "removed_source_pdf": "research/papers/arxiv/2601.11893/paper.pdf",
+      "source_sha256": "5e6b02bcfb5546c4f6625010bdf0c0fbb4373cebeae146e7e991053ac1688801",
+      "retained_ocr_pdf": "research/papers/arxiv/2601.11893/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2601.11893/paper_ocr.txt",
+      "allocated_bytes": 1507328
+    },
+    {
+      "id": "2601.14242",
+      "removed_source_pdf": "research/papers/arxiv/2601.14242/paper.pdf",
+      "source_sha256": "4f253c14f71cb9a1d17c9204e5b0812f42280f867d1f189f817286029e63594a",
+      "retained_ocr_pdf": "research/papers/arxiv/2601.14242/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2601.14242/paper_ocr.txt",
+      "allocated_bytes": 1646592
+    },
+    {
+      "id": "2601.18511",
+      "removed_source_pdf": "research/papers/arxiv/2601.18511/paper.pdf",
+      "source_sha256": "11fa21050f82f75b8909d6198ab1641baeae11644acde8db280f2d0ff4bd6add",
+      "retained_ocr_pdf": "research/papers/arxiv/2601.18511/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2601.18511/paper_ocr.txt",
+      "allocated_bytes": 2351104
+    },
+    {
+      "id": "2602.03117",
+      "removed_source_pdf": "research/papers/arxiv/2602.03117/paper.pdf",
+      "source_sha256": "93f790cf9a1e5a24f88521ec08cb9476db92cf9c53833d143ec1285d30e74706",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.03117/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.03117/paper_ocr.txt",
+      "allocated_bytes": 811008
+    },
+    {
+      "id": "2602.08235",
+      "removed_source_pdf": "research/papers/arxiv/2602.08235/paper.pdf",
+      "source_sha256": "b4178cf1b74dcb71ed3777cb0cd6ea3b4bbd76f3b054a0ecb7a876ac80db60b2",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.08235/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.08235/paper_ocr.txt",
+      "allocated_bytes": 2531328
+    },
+    {
+      "id": "2602.08668",
+      "removed_source_pdf": "research/papers/arxiv/2602.08668/paper.pdf",
+      "source_sha256": "045fc3999eebe95a76d8a3a09f0d8da87538ce7de9722dd5793e2b41f4c6646f",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.08668/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.08668/paper_ocr.txt",
+      "allocated_bytes": 1019904
+    },
+    {
+      "id": "2602.10133",
+      "removed_source_pdf": "research/papers/arxiv/2602.10133/paper.pdf",
+      "source_sha256": "ac15fc5be0bfcf073df687ef6a951ff5cebc89591b54c59f78c451e4bbc51583",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.10133/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.10133/paper_ocr.txt",
+      "allocated_bytes": 204800
+    },
+    {
+      "id": "2602.14211",
+      "removed_source_pdf": "research/papers/arxiv/2602.14211/paper.pdf",
+      "source_sha256": "794fa7db051962731925c85c09dc1e0e650f35b3793850e0a7bfd0362c29c2fa",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.14211/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.14211/paper_ocr.txt",
+      "allocated_bytes": 1126400
+    },
+    {
+      "id": "2602.20021",
+      "removed_source_pdf": "research/papers/arxiv/2602.20021/paper.pdf",
+      "source_sha256": "80dbb0539b8d1d3f656c224729d1efe8e2994b42c4397d6e853db5c4043e7c76",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.20021/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.20021/paper_ocr.txt",
+      "allocated_bytes": 6520832
+    },
+    {
+      "id": "2603.02277",
+      "removed_source_pdf": "research/papers/arxiv/2603.02277/paper.pdf",
+      "source_sha256": "621821bcae4a198efa089f0d67b742d8ca22f907ac7d80be98e21bb32b31883f",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.02277/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.02277/paper_ocr.txt",
+      "allocated_bytes": 2379776
+    },
+    {
+      "id": "2603.08938",
+      "removed_source_pdf": "research/papers/arxiv/2603.08938/paper.pdf",
+      "source_sha256": "0c3f7d589aaaa8e00638ae08c69d7073c6963d5a473b8599b41af60b9ee2b56b",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.08938/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.08938/paper_ocr.txt",
+      "allocated_bytes": 1294336
+    },
+    {
+      "id": "2603.13424",
+      "removed_source_pdf": "research/papers/arxiv/2603.13424/paper.pdf",
+      "source_sha256": "263ef11677e553fae34a029b5d0c67cf9032508b01aad6179ea292923da7c410",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.13424/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.13424/paper_ocr.txt",
+      "allocated_bytes": 196608
+    },
+    {
+      "id": "2603.14341",
+      "removed_source_pdf": "research/papers/arxiv/2603.14341/paper.pdf",
+      "source_sha256": "a644c846c6fe6f27d3f9201d74845b4c2c404c77dd7735aee9ea2c2d9c357b9c",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.14341/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.14341/paper_ocr.txt",
+      "allocated_bytes": 401408
+    },
+    {
+      "id": "2603.15714",
+      "removed_source_pdf": "research/papers/arxiv/2603.15714/paper.pdf",
+      "source_sha256": "98a028477662b0410c6740f47ce940be6c6045ba8a879b659e91967cbf56f44d",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.15714/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.15714/paper_ocr.txt",
+      "allocated_bytes": 4247552
+    },
+    {
+      "id": "2603.24775",
+      "removed_source_pdf": "research/papers/arxiv/2603.24775/paper.pdf",
+      "source_sha256": "d9b9b6105a33c05326bab85bf408527e2725f4b47affceff2711cfbb7f4800ba",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.24775/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.24775/paper_ocr.txt",
+      "allocated_bytes": 315392
+    },
+    {
+      "id": "2603.27517",
+      "removed_source_pdf": "research/papers/arxiv/2603.27517/paper.pdf",
+      "source_sha256": "0260d88e74d3914aae167ec707ee83067e7530ec24051a2ac292457edcf5258d",
+      "retained_ocr_pdf": "research/papers/arxiv/2603.27517/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2603.27517/paper_ocr.txt",
+      "allocated_bytes": 983040
+    },
+    {
+      "id": "2604.00169",
+      "removed_source_pdf": "research/papers/arxiv/2604.00169/paper.pdf",
+      "source_sha256": "5519d140e1e2ce45f768cc1de4684a84fed71a39a56ce8869b4a838b883d776f",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.00169/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.00169/paper_ocr.txt",
+      "allocated_bytes": 626688
+    },
+    {
+      "id": "2604.01344",
+      "removed_source_pdf": "research/papers/arxiv/2604.01344/paper.pdf",
+      "source_sha256": "993c146f9236898a04dc93ab9773d9a24843b0374a2c533649316863611731b5",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.01344/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.01344/paper_ocr.txt",
+      "allocated_bytes": 1142784
+    },
+    {
+      "id": "2604.03081",
+      "removed_source_pdf": "research/papers/arxiv/2604.03081/paper.pdf",
+      "source_sha256": "a65fe077f3d28a8a8273804428d109aeae51cc2a571e84636293c0ddcaee69bf",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.03081/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.03081/paper_ocr.txt",
+      "allocated_bytes": 937984
+    },
+    {
+      "id": "2604.08304",
+      "removed_source_pdf": "research/papers/arxiv/2604.08304/paper.pdf",
+      "source_sha256": "f2577f7ba47ad2a190aa7561cb31bd4767a7a11fe36bb4a757649d08abfd7483",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.08304/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.08304/paper_ocr.txt",
+      "allocated_bytes": 778240
+    },
+    {
+      "id": "2604.08552",
+      "removed_source_pdf": "research/papers/arxiv/2604.08552/paper.pdf",
+      "source_sha256": "ccc6f7759063ff4517afedb54a6ac11f506af2a863b3b1ba4d2fc4d72d439f4f",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.08552/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.08552/paper_ocr.txt",
+      "allocated_bytes": 602112
+    },
+    {
+      "id": "2604.18231",
+      "removed_source_pdf": "research/papers/arxiv/2604.18231/paper.pdf",
+      "source_sha256": "2c75012dda6ffd07bd005c838681857f2e8fa0ef53fa0adc25b105ad6c84fa31",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.18231/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.18231/paper_ocr.txt",
+      "allocated_bytes": 647168
+    },
+    {
+      "id": "2604.23178",
+      "removed_source_pdf": "research/papers/arxiv/2604.23178/paper.pdf",
+      "source_sha256": "5625b462b33aff2e5449c2095ee02845f087ef6cd3a89f90a7d2ca7ad9654701",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.23178/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.23178/paper_ocr.txt",
+      "allocated_bytes": 1044480
+    },
+    {
+      "id": "2604.23280",
+      "removed_source_pdf": "research/papers/arxiv/2604.23280/paper.pdf",
+      "source_sha256": "fc7e57732addc2c9f2aca9db8b5fd1255b1e8215ba4c32f11d69979b7e31c6ad",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.23280/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.23280/paper_ocr.txt",
+      "allocated_bytes": 270336
+    },
+    {
+      "id": "2604.25149",
+      "removed_source_pdf": "research/papers/arxiv/2604.25149/paper.pdf",
+      "source_sha256": "d45f3731583760cda45ec9193cf99b88a1e4db935df60d677a4884dee3ee1250",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.25149/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.25149/paper_ocr.txt",
+      "allocated_bytes": 454656
+    },
+    {
+      "id": "2604.26851",
+      "removed_source_pdf": "research/papers/arxiv/2604.26851/paper.pdf",
+      "source_sha256": "8009026f5e9f5570ba8760888b7bfee9bdf0fed9fc89c23e95b6c1b5bec05cfa",
+      "retained_ocr_pdf": "research/papers/arxiv/2604.26851/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2604.26851/paper_ocr.txt",
+      "allocated_bytes": 671744
+    },
+    {
+      "id": "2605.03213",
+      "removed_source_pdf": "research/papers/arxiv/2605.03213/paper.pdf",
+      "source_sha256": "981217bdf8f81e0fade145752ce48d658758e2f56b3f601b67c04a21992b768f",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.03213/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.03213/paper_ocr.txt",
+      "allocated_bytes": 1896448
+    },
+    {
+      "id": "2605.08442",
+      "removed_source_pdf": "research/papers/arxiv/2605.08442/paper.pdf",
+      "source_sha256": "05b659019cf0c2e43c20c45d402400ba07e458b8526a6e235a654284acb9beab",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.08442/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.08442/paper_ocr.txt",
+      "allocated_bytes": 278528
+    },
+    {
+      "id": "2605.09045",
+      "removed_source_pdf": "research/papers/arxiv/2605.09045/paper.pdf",
+      "source_sha256": "06e699209e2bd6ba5fe5d34160261c4e96c6bb1e61979818d6e19de95c0cb396",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.09045/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.09045/paper_ocr.txt",
+      "allocated_bytes": 356352
+    },
+    {
+      "id": "2605.11418",
+      "removed_source_pdf": "research/papers/arxiv/2605.11418/paper.pdf",
+      "source_sha256": "92f1ef46b10ecdaa08060ec2a66530fcd3a859b2984a2d8c10accca934bb00eb",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.11418/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.11418/paper_ocr.txt",
+      "allocated_bytes": 2355200
+    },
+    {
+      "id": "2605.13471",
+      "removed_source_pdf": "research/papers/arxiv/2605.13471/paper.pdf",
+      "source_sha256": "c2ddd8158d47f8e7ac62b8e624170a1736d76f4c3e0b949702e8502c238b1db5",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.13471/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.13471/paper_ocr.txt",
+      "allocated_bytes": 339968
+    },
+    {
+      "id": "2605.14932",
+      "removed_source_pdf": "research/papers/arxiv/2605.14932/paper.pdf",
+      "source_sha256": "b884928875a1da0ecd6d7da4d64a491e97994b1b683a1b3a1273cce0488fc159",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.14932/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.14932/paper_ocr.txt",
+      "allocated_bytes": 319488
+    },
+    {
+      "id": "2605.15338",
+      "removed_source_pdf": "research/papers/arxiv/2605.15338/paper.pdf",
+      "source_sha256": "7d816dd4e468bf1fe688a592f4aa097826d504bf8acec3077fd5b7a679ce011c",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.15338/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.15338/paper_ocr.txt",
+      "allocated_bytes": 8716288
+    },
+    {
+      "id": "2605.17634",
+      "removed_source_pdf": "research/papers/arxiv/2605.17634/paper.pdf",
+      "source_sha256": "2524e213a3d38c43fc70b5ff944fa8903608a68d210fa4c10a203af411094f28",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.17634/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.17634/paper_ocr.txt",
+      "allocated_bytes": 1265664
+    },
+    {
+      "id": "2605.18930",
+      "removed_source_pdf": "research/papers/arxiv/2605.18930/paper.pdf",
+      "source_sha256": "03271fee40e7cff67e502e8b50c6748c38a9954ce6bf17b36ea7958b6839bcd3",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.18930/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.18930/paper_ocr.txt",
+      "allocated_bytes": 1548288
+    },
+    {
+      "id": "2605.22781",
+      "removed_source_pdf": "research/papers/arxiv/2605.22781/paper.pdf",
+      "source_sha256": "74c96242a33cb0aa72a614520e886fcb8c4bec58bed381841936cd742762ef41",
+      "retained_ocr_pdf": "research/papers/arxiv/2605.22781/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2605.22781/paper_ocr.txt",
+      "allocated_bytes": 1056768
+    },
+    {
+      "id": "2606.01508",
+      "removed_source_pdf": "research/papers/arxiv/2606.01508/paper.pdf",
+      "source_sha256": "391f9f2a359f10303e957e219a04715989f20cf14b782019c51b7fd52de1508d",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.01508/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.01508/paper_ocr.txt",
+      "allocated_bytes": 401408
+    },
+    {
+      "id": "2606.02668",
+      "removed_source_pdf": "research/papers/arxiv/2606.02668/paper.pdf",
+      "source_sha256": "f3eac37c97efb996d1e66f99691782b72ebd96ed4afd9df38269330da8ca0efa",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.02668/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.02668/paper_ocr.txt",
+      "allocated_bytes": 221184
+    },
+    {
+      "id": "2606.04141",
+      "removed_source_pdf": "research/papers/arxiv/2606.04141/paper.pdf",
+      "source_sha256": "2d95945b31e7888661b82938384e994e91a1fe978cc6808d5d9c1b4c61dcf23a",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.04141/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.04141/paper_ocr.txt",
+      "allocated_bytes": 630784
+    },
+    {
+      "id": "2606.04329",
+      "removed_source_pdf": "research/papers/arxiv/2606.04329/paper.pdf",
+      "source_sha256": "36999ed0cb2d15b93897fa1f8be9ff2291516b633889e16e377f19db4288f482",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.04329/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.04329/paper_ocr.txt",
+      "allocated_bytes": 4984832
+    },
+    {
+      "id": "2606.04425",
+      "removed_source_pdf": "research/papers/arxiv/2606.04425/paper.pdf",
+      "source_sha256": "0252ad96426214977c6a6f6d552c2eb8fb4cfd0f5cdcc51e8b140fb7c9a7b9eb",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.04425/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.04425/paper_ocr.txt",
+      "allocated_bytes": 380928
+    },
+    {
+      "id": "2606.05233",
+      "removed_source_pdf": "research/papers/arxiv/2606.05233/paper.pdf",
+      "source_sha256": "28b4f0b6912a35f891bf363ff57af88d2a439bea9b17e514546e0798bde8becf",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.05233/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.05233/paper_ocr.txt",
+      "allocated_bytes": 520192
+    },
+    {
+      "id": "2606.05634",
+      "removed_source_pdf": "research/papers/arxiv/2606.05634/paper.pdf",
+      "source_sha256": "af3a672b511a2bf0fa1a42b18bb19266b8d82ca01e9a6302193da17eebd3710b",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.05634/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.05634/paper_ocr.txt",
+      "allocated_bytes": 16363520
+    },
+    {
+      "id": "2606.08433",
+      "removed_source_pdf": "research/papers/arxiv/2606.08433/paper.pdf",
+      "source_sha256": "8930cdde1411e70340b3b1d76f1bb1d6aa28534f7e6c96f7c70a6f6a3b79b9d9",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.08433/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.08433/paper_ocr.txt",
+      "allocated_bytes": 864256
+    },
+    {
+      "id": "2606.23075",
+      "removed_source_pdf": "research/papers/arxiv/2606.23075/paper.pdf",
+      "source_sha256": "58066b748368b8c7afa0e0352c39d9a853c3058568c005e8feefa18852ba19a5",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.23075/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.23075/paper_ocr.txt",
+      "allocated_bytes": 1273856
+    },
+    {
+      "id": "2606.27379",
+      "removed_source_pdf": "research/papers/arxiv/2606.27379/paper.pdf",
+      "source_sha256": "4dccec29930634cfaba0440489b27dd4a34992a2ef278b4af1649fe4a22d3f3f",
+      "retained_ocr_pdf": "research/papers/arxiv/2606.27379/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2606.27379/paper_ocr.txt",
+      "allocated_bytes": 372736
+    },
+    {
+      "id": "2607.05518",
+      "removed_source_pdf": "research/papers/arxiv/2607.05518/paper.pdf",
+      "source_sha256": "172d027ecd92d9c21cc12d781f7552049060a0af34dd505abf61566932cda64a",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.05518/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.05518/paper_ocr.txt",
+      "allocated_bytes": 655360
+    },
+    {
+      "id": "2607.13718",
+      "removed_source_pdf": "research/papers/arxiv/2607.13718/paper.pdf",
+      "source_sha256": "0004b537084eb86b219bc7df770c04a746a43f1ab4e1b5a1e9f86c9eaad7ddae",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.13718/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.13718/paper_ocr.txt",
+      "allocated_bytes": 307200
+    },
+    {
+      "id": "2607.22571",
+      "removed_source_pdf": "research/papers/arxiv/2607.22571/paper.pdf",
+      "source_sha256": "fa83d63a274e370e5a924544d954002e75e3c8b8256c077683633f0e6fc8ae04",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.22571/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.22571/paper_ocr.txt",
+      "allocated_bytes": 1314816
+    },
+    {
+      "id": "2607.23933",
+      "removed_source_pdf": "research/papers/arxiv/2607.23933/paper.pdf",
+      "source_sha256": "48fec6709abcd7bbb4c28dde2ebbefae8c372ee1c361c982a569fe9d1fcf8056",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.23933/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.23933/paper_ocr.txt",
+      "allocated_bytes": 3657728
+    },
+    {
+      "id": "2607.24300",
+      "removed_source_pdf": "research/papers/arxiv/2607.24300/paper.pdf",
+      "source_sha256": "0a1434ea1c9b533855c856bf49ff5271d1bcc70aa1cb3ac8f040250b5f46f372",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.24300/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.24300/paper_ocr.txt",
+      "allocated_bytes": 2088960
+    },
+    {
+      "id": "2607.24625",
+      "removed_source_pdf": "research/papers/arxiv/2607.24625/paper.pdf",
+      "source_sha256": "5919cb22556c90687d30e91a15580eb9a3bae5f70ef06c875fba6750efd80342",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.24625/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.24625/paper_ocr.txt",
+      "allocated_bytes": 663552
+    },
+    {
+      "id": "2607.25076",
+      "removed_source_pdf": "research/papers/arxiv/2607.25076/paper.pdf",
+      "source_sha256": "1e28ff86bfb848af7cf4f78f4d23b0bc3bfcb66ad31c65fdf79328f7127a25f2",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.25076/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.25076/paper_ocr.txt",
+      "allocated_bytes": 2461696
+    },
+    {
+      "id": "2608.01759",
+      "removed_source_pdf": "research/papers/arxiv/2608.01759/paper.pdf",
+      "source_sha256": "f26f1c3fbd08b8b3d24bdb788985e0cafd72aa5b25f209f385fa8285e7224e58",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.01759/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.01759/paper_ocr.txt",
+      "allocated_bytes": 4063232
+    },
+    {
+      "id": "2608.06477",
+      "removed_source_pdf": "research/papers/arxiv/2608.06477/paper.pdf",
+      "source_sha256": "be4ef5b5f665a39c799fffb25c606e0a94d30bf3933ae8fb15b75c4f3ed69bfb",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.06477/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.06477/paper_ocr.txt",
+      "allocated_bytes": 3624960
+    },
+    {
+      "id": "2608.06984",
+      "removed_source_pdf": "research/papers/arxiv/2608.06984/paper.pdf",
+      "source_sha256": "1775a629f500f92731fdaf4023c2450d536a9afcb2014e733c733ec5912c0205",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.06984/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.06984/paper_ocr.txt",
+      "allocated_bytes": 1376256
+    },
+    {
+      "id": "2608.07530",
+      "removed_source_pdf": "research/papers/arxiv/2608.07530/paper.pdf",
+      "source_sha256": "99d7144a7cb4a57f6b4299ef0370d0184d9199beac8bc176e6cefb230b1f05aa",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.07530/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.07530/paper_ocr.txt",
+      "allocated_bytes": 1630208
+    },
+    {
+      "id": "2608.09028",
+      "removed_source_pdf": "research/papers/arxiv/2608.09028/paper.pdf",
+      "source_sha256": "0ab43cb251b10f2d4b5169392bf47e315333547aef29cc99bcc1edbd412c1683",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.09028/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.09028/paper_ocr.txt",
+      "allocated_bytes": 630784
+    },
+    {
+      "id": "2608.09732",
+      "removed_source_pdf": "research/papers/arxiv/2608.09732/paper.pdf",
+      "source_sha256": "cb202d96f0f411bb2cfc5ea0b2e7f53b688d58c4ed2c6d6240dbc274a4b39d24",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.09732/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.09732/paper_ocr.txt",
+      "allocated_bytes": 1175552
+    },
+    {
+      "id": "2608.11274",
+      "removed_source_pdf": "research/papers/arxiv/2608.11274/paper.pdf",
+      "source_sha256": "e68b802929857fb1a288150b78794f466180a7c3b8224fb697b162d5c7815aa1",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.11274/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.11274/paper_ocr.txt",
+      "allocated_bytes": 315392
+    },
+    {
+      "id": "2608.11323",
+      "removed_source_pdf": "research/papers/arxiv/2608.11323/paper.pdf",
+      "source_sha256": "af601300703e06468836e6d977f9634686dd18b07e71dc0df5ae54f344a9b9f7",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.11323/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.11323/paper_ocr.txt",
+      "allocated_bytes": 393216
+    },
+    {
+      "id": "2608.12851",
+      "removed_source_pdf": "research/papers/arxiv/2608.12851/paper.pdf",
+      "source_sha256": "d865eda92a60851720d57dd41b20159cfbd416e5b5b5aabb9d7adff905f39d92",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.12851/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.12851/paper_ocr.txt",
+      "allocated_bytes": 1347584
+    },
+    {
+      "id": "2608.26108",
+      "removed_source_pdf": "research/papers/arxiv/2608.26108/paper.pdf",
+      "source_sha256": "3c12cd66b28a623f5d04d8f60cca036af6a3d1e417ad24e84e14f0734c728db4",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.26108/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.26108/paper_ocr.txt",
+      "allocated_bytes": 446464
+    },
+    {
+      "id": "2608.26157",
+      "removed_source_pdf": "research/papers/arxiv/2608.26157/paper.pdf",
+      "source_sha256": "063b1b3d0dfa17e28c68f74ff06fded24d85c5c67a7da17166afcbe8594c6650",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.26157/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.26157/paper_ocr.txt",
+      "allocated_bytes": 405504
+    },
+    {
+      "id": "2608.26575",
+      "removed_source_pdf": "research/papers/arxiv/2608.26575/paper.pdf",
+      "source_sha256": "6507d0d86503e17d94b1c4e71f3f386c451744716426ed2c79d7a6882a91719d",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.26575/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.26575/paper_ocr.txt",
+      "allocated_bytes": 442368
+    },
+    {
+      "id": "2608.27443",
+      "removed_source_pdf": "research/papers/arxiv/2608.27443/paper.pdf",
+      "source_sha256": "e75ae1de2f037a052c7a34d5e0ad7a6da31f998eb500026d2993ac749a7873c3",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.27443/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.27443/paper_ocr.txt",
+      "allocated_bytes": 1191936
+    },
+    {
+      "id": "2608.27800",
+      "removed_source_pdf": "research/papers/arxiv/2608.27800/paper.pdf",
+      "source_sha256": "5ece4f5591c38133b94e28dcb24f8c58e9920873cadf6a7bf811722078c2755e",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.27800/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.27800/paper_ocr.txt",
+      "allocated_bytes": 1097728
+    },
+    {
+      "id": "2609.00069",
+      "removed_source_pdf": "research/papers/arxiv/2609.00069/paper.pdf",
+      "source_sha256": "21625f4ce1c6c9019325e5965db30febd0d14a1d208b09d3516a728943d7fabc",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.00069/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.00069/paper_ocr.txt",
+      "allocated_bytes": 425984
+    },
+    {
+      "id": "2609.00267",
+      "removed_source_pdf": "research/papers/arxiv/2609.00267/paper.pdf",
+      "source_sha256": "3e70ed2b15f1311cb45f8bf358e0a573f4daa7a6a34d424c175a08bce574bec8",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.00267/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.00267/paper_ocr.txt",
+      "allocated_bytes": 344064
+    },
+    {
+      "id": "2609.11294",
+      "removed_source_pdf": "research/papers/arxiv/2609.11294/paper.pdf",
+      "source_sha256": "9c2ec7b1c0277bae74687a615e6d0068a5fa486b3791d7599ecaa67709c84245",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.11294/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.11294/paper_ocr.txt",
+      "allocated_bytes": 1196032
+    },
+    {
+      "id": "2609.17817",
+      "removed_source_pdf": "research/papers/arxiv/2609.17817/paper.pdf",
+      "source_sha256": "1bfbcd46be7f6f10a37ac794d1704a2cb35846b207096cc0125c9af2f05f04d9",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.17817/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.17817/paper_ocr.txt",
+      "allocated_bytes": 466944
+    },
+    {
+      "id": "2609.23700",
+      "removed_source_pdf": "research/papers/arxiv/2609.23700/paper.pdf",
+      "source_sha256": "995a407d4d3d19b66096d966946a37bbf28fc1c2bf62777e9312ce690ad7ce34",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.23700/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.23700/paper_ocr.txt",
+      "allocated_bytes": 294912
+    },
+    {
+      "id": "2609.26457",
+      "removed_source_pdf": "research/papers/arxiv/2609.26457/paper.pdf",
+      "source_sha256": "8ba79e0ad1028e43b0a47ee06162c9b3996ec90f7990b7ec35993444e505409b",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.26457/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.26457/paper_ocr.txt",
+      "allocated_bytes": 741376
+    },
+    {
+      "id": "2609.29647",
+      "removed_source_pdf": "research/papers/arxiv/2609.29647/paper.pdf",
+      "source_sha256": "6f445930d60f41bb0a4b8b4067c06222f5880f131df7e24c7adc838bab3ec42c",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.29647/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.29647/paper_ocr.txt",
+      "allocated_bytes": 741376
+    },
+    {
+      "id": "2609.31039",
+      "removed_source_pdf": "research/papers/arxiv/2609.31039/paper.pdf",
+      "source_sha256": "ec588228d1834ca8ab2651d977d4e92ef0a882ace6e2f4ce6685b7962c07bde7",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.31039/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.31039/paper_ocr.txt",
+      "allocated_bytes": 544768
+    },
+    {
+      "id": "2609.31318",
+      "removed_source_pdf": "research/papers/arxiv/2609.31318/paper.pdf",
+      "source_sha256": "12c3480ae3d919517e5e2c5e9eb4eb779bd716d3bf66b34bfe58ab6286d58e09",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.31318/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.31318/paper_ocr.txt",
+      "allocated_bytes": 573440
+    },
+    {
+      "id": "2609.32390",
+      "removed_source_pdf": "research/papers/arxiv/2609.32390/paper.pdf",
+      "source_sha256": "29a50cb08024ac2da9f8e356836ee53edddae7a559320ce9cc2f5900750d2d27",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.32390/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.32390/paper_ocr.txt",
+      "allocated_bytes": 274432
+    },
+    {
+      "id": "2609.35596",
+      "removed_source_pdf": "research/papers/arxiv/2609.35596/paper.pdf",
+      "source_sha256": "cae7a3acee644dc9134cdd73bd195cf940fb67434563dfc30638744f830bd69e",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.35596/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.35596/paper_ocr.txt",
+      "allocated_bytes": 1323008
+    },
+    {
+      "id": "2609.38983",
+      "removed_source_pdf": "research/papers/arxiv/2609.38983/paper.pdf",
+      "source_sha256": "a1c13d650d185b9b5fa1e02c5f1f733ca8117b2b24015b86c667c9f7ef5d61cc",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.38983/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.38983/paper_ocr.txt",
+      "allocated_bytes": 413696
+    },
+    {
+      "id": "2610.00037",
+      "removed_source_pdf": "research/papers/arxiv/2610.00037/paper.pdf",
+      "source_sha256": "abe4a20b7f3c60e62e65699963195872cc96935389fa840bcfebe6f52b4ea2ee",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.00037/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.00037/paper_ocr.txt",
+      "allocated_bytes": 266240
+    },
+    {
+      "id": "2610.01073",
+      "removed_source_pdf": "research/papers/arxiv/2610.01073/paper.pdf",
+      "source_sha256": "3aed8fb9ddee5d5be2cc7e406bfdcdc2eb67006360b2e60685dd63fdfee88548",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.01073/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.01073/paper_ocr.txt",
+      "allocated_bytes": 2568192
+    },
+    {
+      "id": "2610.02456",
+      "removed_source_pdf": "research/papers/arxiv/2610.02456/paper.pdf",
+      "source_sha256": "299e4e1e94ff9aba57302a1e312c978256234b390db2cbfa1aa441b1bd57c81c",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.02456/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.02456/paper_ocr.txt",
+      "allocated_bytes": 532480
+    },
+    {
+      "id": "2610.04083",
+      "removed_source_pdf": "research/papers/arxiv/2610.04083/paper.pdf",
+      "source_sha256": "b122e5879109a3dc85682ac7a0c28c89a0dcb8237cd4408666f3bf5335bd85cd",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.04083/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.04083/paper_ocr.txt",
+      "allocated_bytes": 1064960
+    },
+    {
+      "id": "2610.06001",
+      "removed_source_pdf": "research/papers/arxiv/2610.06001/paper.pdf",
+      "source_sha256": "292332742df7bac8d900548185b54eb895a82cea50b95ac34b24ad75589ec8c8",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.06001/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.06001/paper_ocr.txt",
+      "allocated_bytes": 675840
+    },
+    {
+      "id": "2610.06274",
+      "removed_source_pdf": "research/papers/arxiv/2610.06274/paper.pdf",
+      "source_sha256": "497b567e6c7ec890f967dae6048d5d7e34288227f307b3e8168f67846d24ea5e",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.06274/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.06274/paper_ocr.txt",
+      "allocated_bytes": 327680
+    },
+    {
+      "id": "2401.18059",
+      "removed_source_pdf": "research/papers/arxiv/2401.18059/paper.pdf",
+      "source_sha256": "01319e2e6e6ecfd504ee1bbda41d023f9e060bd3505ab3c161baa1d6d696cf75",
+      "retained_ocr_pdf": "research/papers/arxiv/2401.18059/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2401.18059/paper_ocr.txt",
+      "allocated_bytes": 2547712
+    },
+    {
+      "id": "2407.01449",
+      "removed_source_pdf": "research/papers/arxiv/2407.01449/paper.pdf",
+      "source_sha256": "852ec724f3d48316265611579f4c556a14fea24f29360b5929d02e4604662631",
+      "retained_ocr_pdf": "research/papers/arxiv/2407.01449/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2407.01449/paper_ocr.txt",
+      "allocated_bytes": 8261632
+    },
+    {
+      "id": "2408.14717",
+      "removed_source_pdf": "research/papers/arxiv/2408.14717/paper.pdf",
+      "source_sha256": "a0bbe3e61ea7e43a0695324fa37d5e3c99059467c4a178d0e9d0d90dd00331e7",
+      "retained_ocr_pdf": "research/papers/arxiv/2408.14717/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2408.14717/paper_ocr.txt",
+      "allocated_bytes": 806912
+    },
+    {
+      "id": "2409.04701",
+      "removed_source_pdf": "research/papers/arxiv/2409.04701/paper.pdf",
+      "source_sha256": "3415e83ae4d180859481349fd5d0c6fdf22bbe3d864c4d276f499491a8eed109",
+      "retained_ocr_pdf": "research/papers/arxiv/2409.04701/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2409.04701/paper_ocr.txt",
+      "allocated_bytes": 471040
+    },
+    {
+      "id": "2502.14802",
+      "removed_source_pdf": "research/papers/arxiv/2502.14802/paper.pdf",
+      "source_sha256": "90fa6af3ee8298a6c3abef6df0a9b0f092496cb7d6b1c3e8b55c5c8f5b552eb3",
+      "retained_ocr_pdf": "research/papers/arxiv/2502.14802/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2502.14802/paper_ocr.txt",
+      "allocated_bytes": 2502656
+    },
+    {
+      "id": "2506.03989",
+      "removed_source_pdf": "research/papers/arxiv/2506.03989/paper.pdf",
+      "source_sha256": "24e5672f670ca8c35ce46e490f012fa558ff98ae8230dd2f7d98d3d1b17263f7",
+      "retained_ocr_pdf": "research/papers/arxiv/2506.03989/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2506.03989/paper_ocr.txt",
+      "allocated_bytes": 356352
+    },
+    {
+      "id": "2510.10114",
+      "removed_source_pdf": "research/papers/arxiv/2510.10114/paper.pdf",
+      "source_sha256": "1df0bd67b590f331d7928c65bbdc0a086ce6c41195428a8f3670683dcd3de533",
+      "retained_ocr_pdf": "research/papers/arxiv/2510.10114/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2510.10114/paper_ocr.txt",
+      "allocated_bytes": 1527808
+    },
+    {
+      "id": "2602.03442",
+      "removed_source_pdf": "research/papers/arxiv/2602.03442/paper.pdf",
+      "source_sha256": "b167650db7b6ba73f8f4462ce4147f7b826dfb700cca00ef8bfa226f8d02de60",
+      "retained_ocr_pdf": "research/papers/arxiv/2602.03442/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2602.03442/paper_ocr.txt",
+      "allocated_bytes": 4874240
+    },
+    {
+      "id": "2607.05803",
+      "removed_source_pdf": "research/papers/arxiv/2607.05803/paper.pdf",
+      "source_sha256": "be53e3dd87b83c9f89163fb7c72ee035ac5539cae9b436a7790f0a13777d51ab",
+      "retained_ocr_pdf": "research/papers/arxiv/2607.05803/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2607.05803/paper_ocr.txt",
+      "allocated_bytes": 462848
+    },
+    {
+      "id": "2608.00824",
+      "removed_source_pdf": "research/papers/arxiv/2608.00824/paper.pdf",
+      "source_sha256": "25ad7caf1b936f8dbcdb97f58f72560854b50bd690ec908dc0e9e53c27b96b06",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.00824/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.00824/paper_ocr.txt",
+      "allocated_bytes": 311296
+    },
+    {
+      "id": "2608.16628",
+      "removed_source_pdf": "research/papers/arxiv/2608.16628/paper.pdf",
+      "source_sha256": "7a8fc645c7e8ddb3b3e0a8951fd03820dc5d4fdc265f99f8ec577e12c4070eb5",
+      "retained_ocr_pdf": "research/papers/arxiv/2608.16628/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2608.16628/paper_ocr.txt",
+      "allocated_bytes": 954368
+    },
+    {
+      "id": "2609.19622",
+      "removed_source_pdf": "research/papers/arxiv/2609.19622/paper.pdf",
+      "source_sha256": "84456dca81dee6263a2fcfd269b46a22ea0ffe84156db7d111d270d241fac0fb",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.19622/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.19622/paper_ocr.txt",
+      "allocated_bytes": 4112384
+    },
+    {
+      "id": "2609.32327",
+      "removed_source_pdf": "research/papers/arxiv/2609.32327/paper.pdf",
+      "source_sha256": "b15f7d3a4ae99121443363e92e0e13aec13b11aac7a8cb4ccc8837a6c053e180",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.32327/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.32327/paper_ocr.txt",
+      "allocated_bytes": 921600
+    },
+    {
+      "id": "2609.34776",
+      "removed_source_pdf": "research/papers/arxiv/2609.34776/paper.pdf",
+      "source_sha256": "a829c371b6191a6c42e21e0f3080ab06fb895596cb9c3b92c3ff0bd68e758db7",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.34776/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.34776/paper_ocr.txt",
+      "allocated_bytes": 262144
+    },
+    {
+      "id": "2609.35193",
+      "removed_source_pdf": "research/papers/arxiv/2609.35193/paper.pdf",
+      "source_sha256": "0389d5623f193898527057341bdac62017889e8a7957b8b2089503c2e7dcfc1c",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.35193/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.35193/paper_ocr.txt",
+      "allocated_bytes": 1269760
+    },
+    {
+      "id": "2609.37661",
+      "removed_source_pdf": "research/papers/arxiv/2609.37661/paper.pdf",
+      "source_sha256": "85e2565b8d7336f4e5142692ea8bc07d71754cfad08c54b35f4b088da22559ed",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.37661/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.37661/paper_ocr.txt",
+      "allocated_bytes": 1249280
+    },
+    {
+      "id": "2609.38353",
+      "removed_source_pdf": "research/papers/arxiv/2609.38353/paper.pdf",
+      "source_sha256": "677f2e609b052b18505948e44da7d2632b4270a4a85b5a2f99433f4a269bfcdf",
+      "retained_ocr_pdf": "research/papers/arxiv/2609.38353/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2609.38353/paper_ocr.txt",
+      "allocated_bytes": 208896
+    },
+    {
+      "id": "2610.08452",
+      "removed_source_pdf": "research/papers/arxiv/2610.08452/paper.pdf",
+      "source_sha256": "c20667fa92cd393880e238e526fb14107aeedbdcc5b0a6f675fac77d4442abd8",
+      "retained_ocr_pdf": "research/papers/arxiv/2610.08452/paper_ocr.pdf",
+      "retained_ocr_text": "research/papers/arxiv/2610.08452/paper_ocr.txt",
+      "allocated_bytes": 471040
+    }
+  ],
+  "skipped_ids": []
+}
