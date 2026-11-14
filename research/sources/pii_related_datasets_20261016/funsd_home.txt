@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>FUNSD</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- CSS -->
+<link rel="stylesheet" href="/FUNSD/css/owl.carousel.css" />
+<link rel="stylesheet" href="/FUNSD/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/FUNSD/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/FUNSD/css/airspace.css" />
+<link rel="stylesheet" href="/FUNSD/css/style.css" />
+<link rel="stylesheet" href="/FUNSD/css/ionicons.min.css" />
+<link rel="stylesheet" href="/FUNSD/css/animate.css" />
+<link rel="stylesheet" href="/FUNSD/css/responsive.css" />
+<link rel="stylesheet" href="/FUNSD/css/syntax.css" />
+
+<!-- Js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="/FUNSD/js/bootstrap.min.js"></script>
+<script src="/FUNSD/js/owl.carousel.min.js"></script>
+<script src="/FUNSD/js/plugins.js"></script>
+<script src="/FUNSD/js/min/waypoints.min.js"></script>
+<script src="/FUNSD/js/jquery.counterup.js"></script>
+
+
+<script src="/FUNSD/js/main.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141412571-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141412571-1');
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+<!--
+/*
+ * Airspace
+ * Ported to Jekyll by Andrew Lee
+ * https://github.com/ndrewtl/airspace-jekyll
+ * Designed and Developed by ThemeFisher
+ * https://themefisher.com/
+ *
+ */
+-->
+
+
+  </head>
+  <body>
+
+
+    <!-- Header Start -->
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- header Nav Start -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+              <img src="/FUNSD/img/funsd_logo.png" alt="Logo">
+            </a>
+          </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/FUNSD/">Home</a></li>
+                <li><a href="/FUNSD/description">Description</a></li>
+                <li><a href="/FUNSD/download">Download</a></li>
+                <li><a href="/FUNSD/work">License</a></li>
+                <li><a href="/FUNSD/contact">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><!-- header close -->
+
+
+
+    <!-- Slider Start -->
+<section id="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="block">
+          <h1 class="animated fadeInUp">FUNSD: Form Understanding in  <br> Noisy Scanned Documents</h1>
+          <p class="animated fadeInUp">A dataset for Text Detection, Optical Character Recognition, Spatial Layout Analysis and Form Understanding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Dataset Overview</h2>
+            <p>A dataset for the document understanding community. </p>
+           <ul>
+              <li><h3>  <font color="red" size="8"> 199 </font> fully annotated forms</h3></li>
+              <li><h3>  <font color="green" size="8"> 31485 </font> words</h3></li>
+              <li><h3>  <font color="blue" size="8"> 9707 </font> semantic entities</h3></li>
+              <li><h3>  <font color="orange" size="8"> 5304 </font> relations </h3></li>
+           </ul>
+        </div>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="img/form_example.png" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<section id="examples">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+       <div class="block">
+          <div class="section-title">
+    <h2>Citation</h2>
+	  <p>If you use this dataset for your research, please cite our <a href="https://arxiv.org/pdf/1905.13538.pdf">paper</a>:
+	    <div class="cite">G. Jaume, H. K. Ekenel, J. Thiran "FUNSD: A Dataset for Form Understanding in Noisy Scanned Documents," 2019</div>
+	  <p>Bibtex format:</p>
+	  <div class="cite">
+	    <code>
+	      @inproceedings{jaume2019,<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;title = {FUNSD: A Dataset for Form Understanding in Noisy Scanned Documents},<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;author = {Guillaume Jaume, Hazim Kemal Ekenel, Jean-Philippe Thiran},<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Accepted to ICDAR-OST},<br/>
+	      &nbsp;&nbsp;&nbsp;&nbsp;year = {2019}<br/>
+	      }
+	    </code>
+	  </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="examples">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Examples</h2>
+            <p>Word grouping and semantic entity labeling. </p>
+        </div>
+        </div>
+      </div><!-- .col-md-7 close -->
+    </div>
+  </div>
+</section>
+
+<!-- Wrapper Start -->
+<section id="example">
+  <div class="container">
+    <div class="row">
+      <div class="center">
+        <div class="block">
+          <img src="img/two_forms.png" alt="Img" width="100%" height="100%">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer Start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-manu">
+          <ul>
+            <li><a href="/FUNSD/contact">Contact us</a></li>
+          </ul>
+        </div>
+        <p>Copyright &copy; Design &amp; Developed by <a href="http://www.themefisher.com">Themefisher</a>. Modified by Guillaume Jaume. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </body>
+</html>

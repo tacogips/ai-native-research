@@ -1,0 +1,361 @@
+{
+  "調査日": "2026-11-11",
+  "注記": "公開一次資料のみ。全文は保管せず取得本文のハッシュとAPI公開定義の対象項目を記録。組織への認証・ログ取得・ルール変更・CLI実行はしていない。",
+  "cli_commit": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+  "cli_static_analysis": {
+    "reports_aliases": [
+      "admin-reports",
+      "reports"
+    ],
+    "reports_api": "admin/reports_v1",
+    "cloudidentity_registered": false,
+    "alertcenter_registered": false,
+    "service_version_parse_calls_resolve_service": true
+  },
+  "sources": [
+    {
+      "id": "C1",
+      "url": "https://github.com/googleworkspace/cli/blob/cd3697e07eb520056dcf142d0c7439bbb9ba32e9/crates/google-workspace/src/services.rs",
+      "retrieved_at": "2026-11-11T07:08:29.162006+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://raw.githubusercontent.com/googleworkspace/cli/cd3697e07eb520056dcf142d0c7439bbb9ba32e9/crates/google-workspace/src/services.rs",
+      "sha256": "846c204a4ed20841891bb26f84032cf1166f8c9c003175c84437c98758223dba",
+      "bytes": 5496
+    },
+    {
+      "id": "C2",
+      "url": "https://github.com/googleworkspace/cli/blob/cd3697e07eb520056dcf142d0c7439bbb9ba32e9/crates/google-workspace-cli/src/main.rs#L321",
+      "retrieved_at": "2026-11-11T07:08:29.162894+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://raw.githubusercontent.com/googleworkspace/cli/cd3697e07eb520056dcf142d0c7439bbb9ba32e9/crates/google-workspace-cli/src/main.rs",
+      "sha256": "d8d4dddc4e8d7b61cbeefc29d42fd9ae3cb96b95c030503fa59a83b33c1a0578",
+      "bytes": 26297
+    },
+    {
+      "id": "C3",
+      "url": "https://github.com/googleworkspace/cli/blob/cd3697e07eb520056dcf142d0c7439bbb9ba32e9/README.md",
+      "retrieved_at": "2026-11-11T07:08:29.163319+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://raw.githubusercontent.com/googleworkspace/cli/cd3697e07eb520056dcf142d0c7439bbb9ba32e9/README.md",
+      "sha256": "499ff9600cc36f6c547e16ef5b56e7baee05afa35240c010b8873441928a39aa",
+      "bytes": 20289
+    },
+    {
+      "id": "P1",
+      "url": "https://docs.cloud.google.com/identity/docs/concepts/overview-policies",
+      "retrieved_at": "2026-11-11T07:08:29.163755+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/concepts/overview-policies",
+      "sha256": "9a020e1cb774fa617c4de4e5b6a0e717f882b599a81fbadfa6d75c15682769f9",
+      "bytes": 140819
+    },
+    {
+      "id": "P2",
+      "url": "https://docs.cloud.google.com/identity/docs/reference/rest/v1/policies",
+      "retrieved_at": "2026-11-11T07:08:29.164134+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/reference/rest/v1/policies",
+      "sha256": "fe51e7dc609b116029fcef85e8b584f63224c14585c071429b9195f0545d9a2a",
+      "bytes": 191334
+    },
+    {
+      "id": "P3",
+      "url": "https://docs.cloud.google.com/identity/docs/concepts/supported-policy-api-settings",
+      "retrieved_at": "2026-11-11T07:08:29.164435+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/concepts/supported-policy-api-settings",
+      "sha256": "898e9f84f6e4f2aa5f064252ea9c2e611bc8f6f329eb222f7a97048a92f10e3c",
+      "bytes": 359087
+    },
+    {
+      "id": "P4",
+      "url": "https://docs.cloud.google.com/identity/docs/reference/rest/v1/policies/list",
+      "retrieved_at": "2026-11-11T07:08:29.744911+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/reference/rest/v1/policies/list",
+      "sha256": "3189913d0aadf0bd22af178f9933da8d451623f63f7bd9062adaa1a56f794c8a",
+      "bytes": 185225
+    },
+    {
+      "id": "P5",
+      "url": "https://docs.cloud.google.com/identity/docs/how-to/setup-policies",
+      "retrieved_at": "2026-11-11T07:08:29.751192+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/how-to/setup-policies",
+      "sha256": "3e8a8084ab76c9ae6a51436a0f7f0c40412087246bb811d1f614193127c3e2fa",
+      "bytes": 161797
+    },
+    {
+      "id": "P6",
+      "url": "https://docs.cloud.google.com/identity/docs/how-to/list-get-policies",
+      "retrieved_at": "2026-11-11T07:08:29.799283+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/how-to/list-get-policies",
+      "sha256": "db8de8fb1238e81e44250241d59a7a33214a040b60b29a4a1a9e52d555a431d7",
+      "bytes": 175915
+    },
+    {
+      "id": "P7",
+      "url": "https://workspaceupdates.googleblog.com/2026/06/introducing-workspace-policy-api-mutate-endpoints-for-DLP.html",
+      "retrieved_at": "2026-11-11T07:08:30.497331+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://workspaceupdates.googleblog.com/2026/06/introducing-workspace-policy-api-mutate-endpoints-for-DLP.html",
+      "sha256": "835f8741284888dd8ac9d885a91a92d3fc99747f20f72ffa6361189176bf654c",
+      "bytes": 206769
+    },
+    {
+      "id": "P8",
+      "url": "https://docs.cloud.google.com/identity/docs/how-to/create-patch-delete-policies",
+      "retrieved_at": "2026-11-11T07:08:30.704461+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://docs.cloud.google.com/identity/docs/how-to/create-patch-delete-policies",
+      "sha256": "7fa1f6a0ee28f83feecdfcb90c5c51ab5bfcd34a7b7dbe34b33b428500b2e079",
+      "bytes": 195774
+    },
+    {
+      "id": "R1",
+      "url": "https://developers.google.com/workspace/admin/reports/reference/rest/v1/activities/list",
+      "retrieved_at": "2026-11-11T07:08:30.728207+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/admin/reports/reference/rest/v1/activities/list",
+      "sha256": "7ff5dcbf448429a23da200f4fa144979a8f0a084b9b49a3e000ea8368f3290bc",
+      "bytes": 400361
+    },
+    {
+      "id": "R2",
+      "url": "https://developers.google.com/workspace/admin/reports/v1/appendix/activity/rules",
+      "retrieved_at": "2026-11-11T07:08:30.885959+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/admin/reports/v1/appendix/activity/rules",
+      "sha256": "f6e4fbf00d5e178c1ae6c4fc1d7bd275e202667e138422be6342f2596498aac4",
+      "bytes": 379014
+    },
+    {
+      "id": "R3",
+      "url": "https://developers.google.com/workspace/admin/reports/v1/overview",
+      "retrieved_at": "2026-11-11T07:08:30.892687+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/admin/reports/v1/overview",
+      "sha256": "0456aa7ba575e04782a33e81db1f8e0d831d65cd09a1455dfae624b47a73edfc",
+      "bytes": 180917
+    },
+    {
+      "id": "R4",
+      "url": "https://developers.google.com/workspace/admin/reports/v1/limits",
+      "retrieved_at": "2026-11-11T07:08:31.153119+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/admin/reports/v1/limits",
+      "sha256": "9d2aef0065e6d12ff4575972755a89d5ba468072a05add91cd48dfa0ba81864c",
+      "bytes": 265840
+    },
+    {
+      "id": "S1",
+      "url": "https://knowledge.workspace.google.com/admin/security/view-content-that-triggers-dlp-rules",
+      "retrieved_at": "2026-11-11T07:08:32.119570+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://knowledge.workspace.google.com/admin/security/view-content-that-triggers-dlp-rules",
+      "sha256": "7e5597debc380a7c19f7657c8d395be69b4634da8637980c7379179645f3a514",
+      "bytes": 181494
+    },
+    {
+      "id": "A1",
+      "url": "https://developers.google.com/workspace/admin/alertcenter/reference/rest/v1beta1/alerts/list",
+      "retrieved_at": "2026-11-11T07:08:32.299537+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/admin/alertcenter/reference/rest/v1beta1/alerts/list",
+      "sha256": "e471279bac0f14ac285e96e3445468e151951568c4b7df45735a3574d48c4680",
+      "bytes": 267970
+    },
+    {
+      "id": "A2",
+      "url": "https://developers.google.com/workspace/admin/alertcenter/reference/rest/v1beta1/DlpRuleViolation",
+      "retrieved_at": "2026-11-11T07:08:32.469441+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/admin/alertcenter/reference/rest/v1beta1/DlpRuleViolation",
+      "sha256": "f9651d7d0f9916b122d62677b5317e71c064260fb461f8f17965303a3793b4df",
+      "bytes": 286726
+    },
+    {
+      "id": "D1",
+      "url": "https://knowledge.workspace.google.com/admin/security/dlp-for-drive-faq",
+      "retrieved_at": "2026-11-11T07:08:32.689341+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://knowledge.workspace.google.com/admin/security/dlp-for-drive-faq",
+      "sha256": "de40738024a02b12bb7eae65255b22cd9fb773d8726520e754dab332e570b4c2",
+      "bytes": 174848
+    },
+    {
+      "id": "D2",
+      "url": "https://knowledge.workspace.google.com/admin/security/view-dlp-content-and-rule-size-limits",
+      "retrieved_at": "2026-11-11T07:08:32.697377+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://knowledge.workspace.google.com/admin/security/view-dlp-content-and-rule-size-limits",
+      "sha256": "2bf501267a783dddfb9c42a45ef01827358ae16caac7cd4130e88401cce47170",
+      "bytes": 176768
+    },
+    {
+      "id": "D3",
+      "url": "https://knowledge.workspace.google.com/admin/security/view-dlp-for-drive-dashboard-incidents-alerts-and-audit-events",
+      "retrieved_at": "2026-11-11T07:08:32.745634+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://knowledge.workspace.google.com/admin/security/view-dlp-for-drive-dashboard-incidents-alerts-and-audit-events",
+      "sha256": "9efbff48ad93caee829e7038ad297b22491fd12cc2d57d90d0ec21e4d4ba590b",
+      "bytes": 171749
+    },
+    {
+      "id": "D4",
+      "url": "https://knowledge.workspace.google.com/admin/security/create-dlp-for-drive-rules-and-custom-content-detectors",
+      "retrieved_at": "2026-11-11T07:08:33.279762+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://knowledge.workspace.google.com/admin/security/create-dlp-for-drive-rules-and-custom-content-detectors",
+      "sha256": "5740b44744e6c0756a9653d82880a3f797d2b0aba4dcdbb295312f3fa02da8b1",
+      "bytes": 214411
+    },
+    {
+      "id": "F1",
+      "url": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files",
+      "retrieved_at": "2026-11-11T07:08:33.809548+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files",
+      "sha256": "c0882cf5d5f36e21ef91c8796618b0b4ff25c65de6bbe52d90c996e829a05083",
+      "bytes": 410969
+    },
+    {
+      "id": "F2",
+      "url": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get",
+      "retrieved_at": "2026-11-11T07:08:33.880689+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get",
+      "sha256": "de168424cdced8ff56c09cf25cd70a129a121d8f59645fbb0aa97f901d61b597",
+      "bytes": 298509
+    },
+    {
+      "id": "J1",
+      "url": "https://admin.googleapis.com/$discovery/rest?version=reports_v1",
+      "retrieved_at": "2026-11-11T07:08:34.007039+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://admin.googleapis.com/$discovery/rest?version=reports_v1",
+      "sha256": "60dd5200d7103ebebbee010b01e76f393ac48730d8775cace5f18fa6240ddf98",
+      "bytes": 95154,
+      "discovery": {
+        "revision": "20261109",
+        "method": "reports.activities.list",
+        "httpMethod": "GET",
+        "path": "admin/reports/v1/activity/users/{userKey}/applications/{applicationName}",
+        "scopes": [
+          "https://www.googleapis.com/auth/admin.reports.audit.readonly"
+        ],
+        "includeSensitiveData": {
+          "location": "query",
+          "type": "boolean",
+          "description": "Optional. When set to `true`, this field allows sensitive user-generated content to be included in the returned audit logs. This parameter is supported only for Rules (DLP), Chat and Workspace Studio applications; using it with any other application will result in a permission error."
+        },
+        "applicationNames": [
+          "access_transparency",
+          "admin",
+          "calendar",
+          "chat",
+          "drive",
+          "gcp",
+          "gmail",
+          "gplus",
+          "groups",
+          "groups_enterprise",
+          "jamboard",
+          "login",
+          "meet",
+          "mobile",
+          "rules",
+          "saml",
+          "token",
+          "user_accounts",
+          "context_aware_access",
+          "chrome",
+          "data_studio",
+          "keep",
+          "vault",
+          "gemini_in_workspace_apps",
+          "classroom",
+          "assignments",
+          "cloud_search",
+          "tasks",
+          "data_migration",
+          "meet_hardware",
+          "directory_sync",
+          "ldap",
+          "profile",
+          "access_evaluation",
+          "admin_data_action",
+          "contacts",
+          "takeout",
+          "graduation",
+          "voice",
+          "chrome_sync",
+          "workspace_studio",
+          "gemini_notebook"
+        ]
+      }
+    },
+    {
+      "id": "J2",
+      "url": "https://cloudidentity.googleapis.com/$discovery/rest?version=v1",
+      "retrieved_at": "2026-11-11T07:08:34.049172+00:00",
+      "http_status": 200,
+      "retrieved_url": "https://cloudidentity.googleapis.com/$discovery/rest?version=v1",
+      "sha256": "aa10dfedf055b53b0831f22d7e2f066365380e8de1a75c8494dee7cf8657c5d1",
+      "bytes": 236867,
+      "discovery": {
+        "revision": "20261108",
+        "methods": {
+          "get": {
+            "id": "cloudidentity.policies.get",
+            "httpMethod": "GET",
+            "path": "v1/{+name}",
+            "scopes": [
+              "https://www.googleapis.com/auth/cloud-identity.policies",
+              "https://www.googleapis.com/auth/cloud-identity.policies.readonly"
+            ]
+          },
+          "create": {
+            "id": "cloudidentity.policies.create",
+            "httpMethod": "POST",
+            "path": "v1/policies",
+            "scopes": [
+              "https://www.googleapis.com/auth/cloud-identity.policies"
+            ]
+          },
+          "delete": {
+            "id": "cloudidentity.policies.delete",
+            "httpMethod": "DELETE",
+            "path": "v1/{+name}",
+            "scopes": [
+              "https://www.googleapis.com/auth/cloud-identity.policies"
+            ]
+          },
+          "patch": {
+            "id": "cloudidentity.policies.patch",
+            "httpMethod": "PATCH",
+            "path": "v1/{+name}",
+            "scopes": [
+              "https://www.googleapis.com/auth/cloud-identity.policies"
+            ]
+          },
+          "list": {
+            "id": "cloudidentity.policies.list",
+            "httpMethod": "GET",
+            "path": "v1/policies",
+            "scopes": [
+              "https://www.googleapis.com/auth/cloud-identity.policies",
+              "https://www.googleapis.com/auth/cloud-identity.policies.readonly"
+            ]
+          }
+        },
+        "listParameters": [
+          "filter",
+          "pageToken",
+          "pageSize"
+        ]
+      }
+    }
+  ]
+}

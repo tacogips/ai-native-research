@@ -1,0 +1,116 @@
+---
+license: mit
+language:
+- en
+pretty_name: 'DocPII: Contextual Redaction Benchmark Dataset'
+task_categories:
+- text-generation
+- fill-mask
+size_categories:
+- 1K<n<10K
+---
+
+# DocPII: Contextual Redaction Benchmark Dataset
+
+## Dataset Description
+
+**DocPII** contains 1101 high-quality document samples enriched with embedded personally identifiable information (PII). Designed to evaluate context-aware redaction systems, it provides *realistic, full-document contexts*—a notable advancement over sentence-level datasets.
+
+All documents have been **manually reviewed for accuracy, coherence, and redaction alignment**, ensuring data quality for benchmarking and development.
+
+## Dataset Details
+
+### Summary
+
+DocPII extends the [Gretel PII Masking dataset](https://huggingface.co/datasets/gretelai/gretel-pii-masking-en-v1) by embedding its PII entities into longer, domain-specific documents. These were generated using **GPT-4.1-nano** with prompt engineering to simulate authentic formats across healthcare, finance, and other sectors.
+
+This extension effort enables more rigorous evaluation of document-level redaction, information extraction, and privacy protection systems.
+
+### Supported Tasks
+
+- Document redaction evaluation  
+- PII detection benchmarking  
+- Instruction-tuned generation
+- **Fill-mask** (context-aware prediction/redaction)
+- NER
+
+
+### Languages
+
+- English
+
+## Dataset Structure
+
+### Data Fields
+
+- `uid` *(string)*: Unique identifier  
+- `text` *(string)*: Full synthetic document with embedded PII  
+- `entities` *(list)*:
+  - `entity` *(string)*: Sensitive entity value  
+  - `types` *(array of strings)*: PII categories (e.g., `NAME`, `PHONE_NUMBER`)  
+- `redaction_query` *(string)*: Natural language instruction  
+- `domain` *(string)*: General domain (e.g., `healthcare`)  
+- `document_type` *(string)*: Specific document type (e.g., `tax form`)  
+- `document_description` *(string)*: Summary of document's function and format  
+- `entity_count` *(integer)*: Total number of embedded PII entities
+
+## Dataset Creation
+
+### Curation Rationale
+
+Most public redaction datasets lack full-document context. **DocPII** addresses this by offering realistic workflows and instructions embedded in industry-style documents, better reflecting actual use cases in regulated sectors.
+
+### Source Data
+
+- **PII entities** were sourced from the Gretel PII Masking dataset.  
+- **Document context** was generated using **GPT-4.1-nano** with domain-specific prompting strategies.
+
+### Human Oversight
+
+All entries were **manually reviewed** to validate coherence, instruction alignment, and redaction relevance.
+
+## Personal and Sensitive Information
+
+DocPII includes a wide variety of **synthetic** PII types, such as:
+
+- Names  
+- Addresses  
+- Contact information  
+- Healthcare identifiers  
+- Financial data  
+- Government-issued IDs  
+
+> **No real-world or user data is included.**
+
+## Considerations
+
+### Social Impact
+
+DocPII supports the development of safer, privacy-respecting AI by enabling rigorous evaluation of redaction and PII detection systems used in sensitive domains.
+
+### Biases
+
+Potential sources of bias include:
+
+- Entity distribution in the source dataset  
+- Generation patterns from GPT-4.1-nano  
+- Prompting constraints tied to specific domains
+
+### Limitations
+
+- English-only content  
+- Documents are synthetic (though highly realistic)  
+- Professional domains are representative but not exhaustive  
+
+## Citation
+
+If you use this dataset in academic or commercial work, please cite it as:
+
+```bibtex
+@dataset{nutrientio_2024_docpii,
+  title       = {DocPII: Contextual Redaction Benchmark Dataset},
+  author      = {Nutrient.io},
+  year        = {2025},
+  howpublished = {\url{https://huggingface.co/datasets/nutrientdocs/synthetic_labeled_redaction_instruction_en_v1}},
+  note        = {Synthetic dataset for document-contextual PII redaction evaluation, based on gretelai/gretel-pii-masking-en-v1}
+}

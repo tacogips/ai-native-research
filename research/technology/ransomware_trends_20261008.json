@@ -1,0 +1,157 @@
+{
+  "research_date": "2026-10-08",
+  "case_period_start": "2021-10-08",
+  "case_period_end": "2026-10-08",
+  "chatgpt_launch": "2022-11-30",
+  "note": "定義・母集団・観測期間が異なるため系列間を合算しない。AIの因果効果ではない。",
+  "japan_and_fbi_annual": [
+    {
+      "year": 2021,
+      "period_type": "年間",
+      "japan_ransomware_reports": 146,
+      "japan_non_encrypting_extortion_reports": null,
+      "japan_cost_responses": 97,
+      "japan_cost_at_least_10m_yen": 42,
+      "japan_cost_at_least_10m_yen_percent": 43.3,
+      "fbi_ic3_ransomware_complaints": null,
+      "note": "2021年は対象期間開始前を含む背景値。2022年は公開後約1か月も含む。"
+    },
+    {
+      "year": 2022,
+      "period_type": "年間",
+      "japan_ransomware_reports": 230,
+      "japan_non_encrypting_extortion_reports": null,
+      "japan_cost_responses": 121,
+      "japan_cost_at_least_10m_yen": 56,
+      "japan_cost_at_least_10m_yen_percent": 46.28,
+      "fbi_ic3_ransomware_complaints": 2385,
+      "note": "2021年は対象期間開始前を含む背景値。2022年は公開後約1か月も含む。"
+    },
+    {
+      "year": 2023,
+      "period_type": "年間",
+      "japan_ransomware_reports": 197,
+      "japan_non_encrypting_extortion_reports": 30,
+      "japan_cost_responses": 118,
+      "japan_cost_at_least_10m_yen": 44,
+      "japan_cost_at_least_10m_yen_percent": 37.29,
+      "fbi_ic3_ransomware_complaints": 2825,
+      "note": "2021年は対象期間開始前を含む背景値。2022年は公開後約1か月も含む。"
+    },
+    {
+      "year": 2024,
+      "period_type": "年間",
+      "japan_ransomware_reports": 222,
+      "japan_non_encrypting_extortion_reports": 22,
+      "japan_cost_responses": 102,
+      "japan_cost_at_least_10m_yen": 51,
+      "japan_cost_at_least_10m_yen_percent": 50.0,
+      "fbi_ic3_ransomware_complaints": 3156,
+      "note": "2021年は対象期間開始前を含む背景値。2022年は公開後約1か月も含む。"
+    },
+    {
+      "year": 2025,
+      "period_type": "年間",
+      "japan_ransomware_reports": 226,
+      "japan_non_encrypting_extortion_reports": 17,
+      "japan_cost_responses": 89,
+      "japan_cost_at_least_10m_yen": 46,
+      "japan_cost_at_least_10m_yen_percent": 51.69,
+      "fbi_ic3_ransomware_complaints": 3611,
+      "note": "2021年は対象期間開始前を含む背景値。2022年は公開後約1か月も含む。"
+    }
+  ],
+  "japan_2026_h1": {
+    "year": 2026,
+    "period_type": "上半期",
+    "japan_ransomware_reports": 123,
+    "japan_previous_h1_reports": 116,
+    "japan_cost_responses": 35,
+    "japan_cost_at_least_10m_yen": 21,
+    "japan_cost_at_least_10m_yen_percent": 60.0,
+    "note": "年間値に換算しない。2026年全体の統計は未公表。"
+  },
+  "dbir": [
+    {
+      "edition_year": 2022,
+      "observation_start": "2020-11-01",
+      "observation_end": "2021-10-31",
+      "traditional_encrypting_percent": 25,
+      "including_non_encrypting_extortion_percent": null
+    },
+    {
+      "edition_year": 2023,
+      "observation_start": "2021-11-01",
+      "observation_end": "2022-10-31",
+      "traditional_encrypting_percent": 24,
+      "including_non_encrypting_extortion_percent": null
+    },
+    {
+      "edition_year": 2024,
+      "observation_start": "2022-11-01",
+      "observation_end": "2023-10-31",
+      "traditional_encrypting_percent": 23,
+      "including_non_encrypting_extortion_percent": 32
+    },
+    {
+      "edition_year": 2025,
+      "observation_start": "2023-11-01",
+      "observation_end": "2024-10-31",
+      "traditional_encrypting_percent": null,
+      "including_non_encrypting_extortion_percent": 44
+    },
+    {
+      "edition_year": 2026,
+      "observation_start": "2024-11-01",
+      "observation_end": "2025-10-31",
+      "traditional_encrypting_percent": null,
+      "including_non_encrypting_extortion_percent": 48
+    }
+  ],
+  "dbir_definition_change": "2025年版は2024年版でExtortionとした非暗号化恐喝をRansomwareへ統合。2023年版24％と2026年版48％の単純比較は不可。",
+  "sophos_recovery_cost_usd_by_survey_edition": [
+    {
+      "edition_year": 2022,
+      "mean_usd": 1400000
+    },
+    {
+      "edition_year": 2023,
+      "mean_usd": 1820000
+    },
+    {
+      "edition_year": 2024,
+      "mean_usd": 2730000
+    },
+    {
+      "edition_year": 2025,
+      "mean_usd": 1530000
+    },
+    {
+      "edition_year": 2026,
+      "mean_usd": 1700000
+    }
+  ],
+  "sophos_note": "2022〜2025は身代金除外。2026値は公式解説の平均復旧費用。除外範囲は全文からの再確認が必要。2025年PDF12頁の図は2024値を283万と表示するが本文・2024公表は273万。2026は被害者標本。",
+  "chainalysis_2026_vintage": {
+    "observation_year_2024_revised_usd": 892000000,
+    "observation_year_2025_lower_bound_usd": 820000000,
+    "claimed_victims_yoy_percent": 50,
+    "note": "支払推計は後年改訂される。掲載主張は重複のない確認事件数ではない。"
+  },
+  "source_manifest": "ransomware_sources_20261008.json",
+  "principal_source_ids": [
+    "npa_2025",
+    "npa_2026h1",
+    "ic3_2022",
+    "ic3_2023",
+    "ic3_2024",
+    "ic3_2025",
+    "dbir_2022",
+    "dbir_2023",
+    "dbir_2024",
+    "dbir_2025",
+    "dbir_2026",
+    "sophos_2025_pdf",
+    "chainalysis_2026"
+  ]
+}

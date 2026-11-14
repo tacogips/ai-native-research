@@ -1,0 +1,302 @@
+{
+  "確認日": "2026-11-11",
+  "範囲": "未認証でアクセスできる公開資料のみ。データセット本体の全件取得・品質評価・再配布なし。",
+  "説明": "ハッシュは調査時に取得した説明・利用条件・公開API応答の値。URLのmainは更新されうる。説明本文は本台帳に再配布しない。",
+  "出典": [
+    {
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-PII-Japan/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 41068,
+      "sha256": "ab3a0eba3de21c71c39c1db16dc7456ab5380cf53d42c3e08f8ee2805e1e7250"
+    },
+    {
+      "url": "https://huggingface.co/datasets/NagaYu/sumi-ja-pii-corpus/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 7781,
+      "sha256": "2d0cc0171b66c28da9edcb9711c2ff3d5756bf439fb7beb78e87bc5347732490"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ai4privacy/pii-masking-openpii-1.5m/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 9208,
+      "sha256": "09718505013ce52cbdcfdb8e61eba5705314b3931e43fdfba1aaeafae9c0ca38"
+    },
+    {
+      "url": "https://huggingface.co/datasets/Meddies/meddies-pii/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 21110,
+      "sha256": "e5323b683756ea86917aa708b25dfda726dadb8ab22515776df5a97a41a05b73"
+    },
+    {
+      "url": "https://huggingface.co/datasets/akiFQC/japanese-confidential-information-extraction-sft/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 3973,
+      "sha256": "fd23893913c8dc424df7e622b47b7d8337916605668ca9ebf1f785b1df09c68c"
+    },
+    {
+      "url": "https://huggingface.co/datasets/gretelai/synthetic_pii_finance_multilingual/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 14735,
+      "sha256": "1818d7f7cd27101ee9f8c932baf5183482e49e54e4b108a1ba9138db60a3e8c8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/gretelai/gretel-pii-masking-en-v1/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 8266,
+      "sha256": "3dbe0511851d81bf8e73a3c72502a8b7ff9295d51d6b38e3b5690ab989a3d8bc"
+    },
+    {
+      "url": "https://huggingface.co/datasets/nvidia/Nemotron-PII/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 4969,
+      "sha256": "18c6215fb72c66e5c9fc833130f589e407cae906760f8977409deba0f1f5af4e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/TonicAI/Privacy-Bench/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 43751,
+      "sha256": "54da5930676db5e0f05aea5bca69dc457864ac47d432eb84ae2ae4825809e84a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ai4privacy/pii-masking-400k/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開データセット説明",
+      "bytes": 16885,
+      "sha256": "4bfec726d2adfe4aa0c2517ec841f82153224cee051cacab08afc46123e607f0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sumeshi/privacy-filter-jp-datasets/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "配布対象と再生成対象の区別",
+      "bytes": 4693,
+      "sha256": "66bc17adaa67d909a2028d72b454176102c2be399e4600d78960450911b71392"
+    },
+    {
+      "url": "https://api.github.com/repos/sumeshi/privacy-filter-jp-datasets/git/trees/main?recursive=1",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "Gitで公開されている合成JSONLは3ファイル",
+      "bytes": 5516,
+      "sha256": "721aea90496f61fd7805682d5cabd8e3944d7eb6bd8e72a8b7b94bed945b1437"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sumeshi/privacy-filter-jp-datasets/main/LICENSE",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "MIT",
+      "bytes": 1065,
+      "sha256": "238fbe255458b7476f25519e27f9e4e776796da5f9a098193d238f3095cd937f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/guneeshvats/REDACT-PII-Benchmark/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開規模と固定評価集合",
+      "bytes": 12304,
+      "sha256": "b4fc6f84d3bec56aa4aaecd9f5bd8404ddd93751d120d2978b36f04f9fd39e1f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/guneeshvats/REDACT-PII-Benchmark/main/DATASET_TERMS.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "防御目的の試験許可と再配布条件",
+      "bytes": 3591,
+      "sha256": "f362916fc663abf829c2a7a28bdf86dd1ef071ea8365aad4f68b2cd30b9375cd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/stockmarkteam/ner-wikipedia-dataset/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "5,343文とCC BY-SA 3.0",
+      "bytes": 3347,
+      "sha256": "3ae5d56fe302a90a81057645521f2685778808ec62cd1aad4cb2e73403ff3daa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ku-nlp/KWDLC/master/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "研究用の公開条件と約5,000文書",
+      "bytes": 9494,
+      "sha256": "4826071d5558031a0b1bf42ef05d9f08ce27997aee94fc7168097b8e70d9e941"
+    },
+    {
+      "url": "https://huggingface.co/datasets/unimelb-nlp/wikiann/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "日本語40,000例と利用条件unknown",
+      "bytes": 157610,
+      "sha256": "75477d9d1890dd2845b1a83b37eaf7a345688229841314069a4b3ae6766a7929"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gghatano/opf-text-masking-demo/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "評価データはGit管理外",
+      "bytes": 2368,
+      "sha256": "d0763ed4baa7e0db2052bb239d7be388513c69a5a3fcf024ba78f8c703ce20c9"
+    },
+    {
+      "url": "https://api.github.com/repos/gghatano/opf-text-masking-demo/git/trees/main?recursive=1",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開ファイル一覧",
+      "bytes": 13958,
+      "sha256": "4a1ab0d2643492a7e7c5cfcf92226ebcb389935284697846b164ac7b598c00fe"
+    },
+    {
+      "url": "https://huggingface.co/datasets/nutrientdocs/DocPII-redaction-benchmark/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "1,101件とGretel由来",
+      "bytes": 3957,
+      "sha256": "db90b44de9e6c4d91468ef4fe418499704e012fce6fc7de76de2e4eb02b1e2de"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ai4privacy/pii-masking-400k/raw/main/LICENSE",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "学術・非商用限定と別途許諾",
+      "bytes": 2550,
+      "sha256": "c857a764846957053d4cc588e1b046d7dc798f9de2c5cf3815fe7fe064ba3157"
+    },
+    {
+      "url": "https://huggingface.co/datasets/UniDataPro/synthetic-printed-japanese-passports/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "旅券画像の配布説明とCC BY-NC-ND 4.0",
+      "bytes": 2672,
+      "sha256": "740b84b5c61ee28856c14f7b57fdc617799f6c49fcab03ae8c5292895e25587c"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/size?dataset=nvidia/Nemotron-PII",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開配布行数の照合",
+      "bytes": 866,
+      "sha256": "6346249caad0a45045b2850cdc3eb6b70c95507f950db96014de8ff7fc336b65",
+      "分割別行数": [
+        {
+          "config": "default",
+          "split": "train",
+          "num_rows": 100000
+        },
+        {
+          "config": "default",
+          "split": "test",
+          "num_rows": 100000
+        }
+      ]
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/size?dataset=gretelai/synthetic_pii_finance_multilingual",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開配布行数の照合",
+      "bytes": 952,
+      "sha256": "f9260bd3a304cc0054ab47d9b08202711505463e4dc1b8f200f3f6b44256cfbe",
+      "分割別行数": [
+        {
+          "config": "default",
+          "split": "train",
+          "num_rows": 50346
+        },
+        {
+          "config": "default",
+          "split": "test",
+          "num_rows": 5594
+        }
+      ]
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/size?dataset=nvidia/Nemotron-PII-Japan",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開配布行数の照合",
+      "bytes": 686,
+      "sha256": "1afa42c67cd08a06dbf40efc1178e93d39e2f7eb49e3960b7e583d0ef49d2c4f",
+      "分割別行数": [
+        {
+          "config": "default",
+          "split": "train",
+          "num_rows": 100000
+        }
+      ]
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/size?dataset=ai4privacy/pii-masking-openpii-1.5m",
+      "確認日": "2026-11-11",
+      "取得": "成功",
+      "資料種別": "公開配布行数の照合",
+      "bytes": 938,
+      "sha256": "6e8c31179b3c5fbf97051b1de37e80a70f88aeb89f738bfec6d79f61e38b978a",
+      "分割別行数": [
+        {
+          "config": "default",
+          "split": "train",
+          "num_rows": 1309912
+        },
+        {
+          "config": "default",
+          "split": "validation",
+          "num_rows": 326463
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/guneeshv/REDACT-PII-Benchmark/raw/main/README.md",
+      "確認日": "2026-11-11",
+      "取得": "HTTP 401",
+      "代替": "公開GitHubの説明とDATASET_TERMS.mdを確認"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/filter?dataset=ai4privacy/pii-masking-openpii-1.5m&config=default&split=train&where=%22language%22%3D%27ja%27&offset=0&length=1",
+      "確認日": "2026-11-11",
+      "取得": "HTTP 500",
+      "扱い": "原版の日本語件数は未確定"
+    },
+    {
+      "url": "https://huggingface.co/blog/nvidia/nemotron-pii-japan",
+      "確認日": "2026-11-11",
+      "取得": "公開本文をウェブで確認",
+      "確認事項": "2026年11月9日公開、業務分野と注釈の限界"
+    },
+    {
+      "url": "https://shinra-project.info/shinra/data/",
+      "確認日": "2026-11-11",
+      "取得": "検索サービスの公開本文を確認。直接取得は転送の繰り返しで失敗",
+      "確認事項": "属性抽出・分類資料、CC BY-SA 3.0"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.12114v1",
+      "確認日": "2026-11-11",
+      "取得": "公開本文をウェブで確認",
+      "確認事項": "日本語の要配慮情報分類研究。本体の配布条件が揃った直接候補から除外"
+    },
+    {
+      "url": "https://huggingface.co/datasets/UniDataPro/synthetic-printed-japanese-passports",
+      "確認日": "2026-11-11",
+      "取得": "公開本文をウェブで確認",
+      "確認事項": "公開画面96行と説明上の全体5,000枚以上を区別"
+    }
+  ]
+}

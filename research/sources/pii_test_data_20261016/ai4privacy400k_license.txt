@@ -1,0 +1,27 @@
+Copyright Ai4Privacy 2024. All rights reserved.
+
+# **AI4Privacy Dataset and Derivative Products License**:
+
+## **Academic Use**
+
+Access to this dataset is granted exclusively for academic research and non-commercial purposes, under the stipulation that AI4Privacy is acknowledged in any scholarly output that leverages this dataset. 
+
+To utilize this dataset beyond these conditions, including any form of redistribution, uploading to databases, sharing through any medium, or the creation and dissemination of derivative works, an explicit written license must be obtained from AI4Privacy.
+
+Individuals or entities interested in obtaining a license for research or inquiring about the process for creating derivative works are required to submit a formal request to the AI for Privacy team. This request should be sent to licensing@ai4privacy.com and must include a detailed description of the intended use. 
+
+The issuance of a research license is contingent upon review and approval by AI4Privacy, ensuring that all uses adhere to our ethical guidelines and usage policies.
+
+By establishing a formal licensing process, AI for Privacy aims to foster responsible use of the dataset while safeguarding the privacy and integrity of the data subjects. This approach also facilitates collaboration and innovation within the academic community, ensuring that the dataset's potential is maximized in a manner that is ethical and responsable.
+
+## **Commercial Use**
+
+Strictly no licensing is available directly for companies without prior discussion. For commercial use, please contact us at partnerships@ai4privacy.com. Our team will guide you through our licensing process, tailored to meet your needs and provide access to additional data.
+
+## **Disclaimer of Liability**
+
+THE DATASET IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS, COPYRIGHT HOLDERS, OR AI FOR PRIVACY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE DATASET OR THE USE OR OTHER DEALINGS IN THE DATASET.
+
+## **Enforcement and Compliance**
+
+This dataset is watermarked to ensure compliance with these terms. Unauthorized use is traceable, and Ai4Privacy reserves the right to enforce the license terms appropriate legal action. For commercial licensing inquiries or to report issues, please contact us directly.

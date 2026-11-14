@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-12",
+  "scope": "AWS公式の公開資料。実データ・認証情報・認証付き動作試験を含まない。照合値はHTTP応答本文のSHA-256。",
+  "sources": [
+    {
+      "id": "A1",
+      "url": "https://docs.aws.amazon.com/macie/latest/user/mdis-reference-quick.html",
+      "resolved_url": "https://docs.aws.amazon.com/macie/latest/user/mdis-reference-quick.html",
+      "http_status": 200,
+      "sha256": "bc1ad3006989750d0f53ee838765385b0172f7b9f8968b43e5a541cd1d5af363",
+      "retrieved_at": "2026-11-12T04:05:58.746194+00:00",
+      "title": "Quick reference: Managed data identifiers by type - Amazon Macie",
+      "support": "国別・種類別の標準項目と条件"
+    },
+    {
+      "id": "A2",
+      "url": "https://docs.aws.amazon.com/macie/latest/user/custom-data-identifiers.html",
+      "resolved_url": "https://docs.aws.amazon.com/macie/latest/user/custom-data-identifiers.html",
+      "http_status": 200,
+      "sha256": "173bf164f9a2a8e644ddd1e99e7ce2a0d27d09d3e4a4b563c05f94fa285564b0",
+      "retrieved_at": "2026-11-12T04:05:58.646303+00:00",
+      "title": "Building custom data identifiers - Amazon Macie",
+      "support": "独自の形式規則"
+    },
+    {
+      "id": "A3",
+      "url": "https://docs.aws.amazon.com/macie/latest/user/discovery-supported-storage.html",
+      "resolved_url": "https://docs.aws.amazon.com/macie/latest/user/discovery-supported-storage.html",
+      "http_status": 200,
+      "sha256": "b6e860877409e173cc929b0b9fb4c07544862736f1b76efbbacdbfc9f1e704fd",
+      "retrieved_at": "2026-11-12T04:05:58.641311+00:00",
+      "title": "Supported storage classes and formats - Amazon Macie",
+      "support": "対応形式、画像の対象外、容量・抽出制約"
+    },
+    {
+      "id": "A4",
+      "url": "https://docs.aws.amazon.com/macie/latest/user/discovery-automated.html",
+      "resolved_url": "https://docs.aws.amazon.com/macie/latest/user/",
+      "http_status": 200,
+      "sha256": "baf1bca56eb45c203f773b0c4b440c4a2f7f2e561591f2fb57aed253538f2c86",
+      "retrieved_at": "2026-11-12T04:05:58.888278+00:00",
+      "title": "Amazon Macie",
+      "support": "自動探索における標本検査"
+    },
+    {
+      "id": "A5",
+      "url": "https://docs.aws.amazon.com/macie/latest/APIReference/findings.html",
+      "resolved_url": "https://docs.aws.amazon.com/macie/latest/APIReference/findings.html",
+      "http_status": 200,
+      "sha256": "8ffae2a6820ae625e9081584fe29e03be524b668b355dcb2e667bbc181e020c8",
+      "retrieved_at": "2026-11-12T04:11:37.617587+00:00",
+      "title": "A5",
+      "support": "識別子一覧と詳細取得の区別"
+    },
+    {
+      "id": "B1",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-sensitive-filters.html",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-sensitive-filters.html",
+      "http_status": 200,
+      "sha256": "96454c7d3dd35a8e3055a1e1654d09cec14d78fa8a578f1782dc407091dee942",
+      "retrieved_at": "2026-11-12T04:05:58.182326+00:00",
+      "title": "Remove PII from conversations by using sensitive information filters - Amazon Bedrock",
+      "support": "標準のPII、独自規則、NONE、適用対象外、原文値を含む応答"
+    },
+    {
+      "id": "B2",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-supported-languages.html",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-supported-languages.html",
+      "http_status": 200,
+      "sha256": "70d04ec5f6d6f5e26f3404fed6263efa2ae4da11945afe0c38f48c47e4e9188e",
+      "retrieved_at": "2026-11-12T04:05:58.222040+00:00",
+      "title": "Languages supported by Amazon Bedrock Guardrails - Amazon Bedrock",
+      "support": "機能別の言語。日本語と種類別の区別"
+    },
+    {
+      "id": "B3",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-use-independent-api.html",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-use-independent-api.html",
+      "http_status": 200,
+      "sha256": "b5fba9d78ec8322e2f9ff4555f58ad67d525b76eedcb75f516e38b9536f4004b",
+      "retrieved_at": "2026-11-12T04:05:58.180567+00:00",
+      "title": "Use the ApplyGuardrail API in your application - Amazon Bedrock",
+      "support": "生成モデルから独立した本文検査"
+    },
+    {
+      "id": "B4",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ApplyGuardrail.html",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ApplyGuardrail.html",
+      "http_status": 200,
+      "sha256": "4fb4a61a404c09619352194958342afedd8ebac5140f2fa27081ead0da373f00",
+      "retrieved_at": "2026-11-12T04:05:58.156182+00:00",
+      "title": "ApplyGuardrail - Amazon Bedrock",
+      "support": "応答定義、detected、match、位置情報との違い"
+    },
+    {
+      "id": "B5",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GuardrailPiiEntityConfig.html",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GuardrailPiiEntityConfig.html",
+      "http_status": 200,
+      "sha256": "1564f268679c65020ee2a8c4f7060db3b2e62ce2b0c4af972af333051b52bc3c",
+      "retrieved_at": "2026-11-12T04:05:58.161129+00:00",
+      "title": "GuardrailPiiEntityConfig - Amazon Bedrock",
+      "support": "標準種類とBLOCK、ANONYMIZE、NONE"
+    },
+    {
+      "id": "B6",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-denied-topics.html",
+      "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-denied-topics.html",
+      "http_status": 200,
+      "sha256": "774724ffc708b60709a0fe86699ad956eb52e152d4f1550823a514cab995042f",
+      "retrieved_at": "2026-11-12T04:11:37.738906+00:00",
+      "title": "B6",
+      "support": "拒否する話題の定義と判定"
+    },
+    {
+      "id": "C1",
+      "url": "https://docs.aws.amazon.com/comprehend/latest/dg/how-pii.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend/latest/dg/how-pii.html",
+      "http_status": 200,
+      "sha256": "6ed623108ec7f4d4280d7d80fb437941a1210a90d72c83359dafae8ebb53b787",
+      "retrieved_at": "2026-11-12T04:05:58.149209+00:00",
+      "title": "Detecting PII entities - Amazon Comprehend",
+      "support": "専用PIIの対象項目と対象言語"
+    },
+    {
+      "id": "C2",
+      "url": "https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectPiiEntities.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectPiiEntities.html",
+      "http_status": 200,
+      "sha256": "b6d2350842e3aa587e36917d916656ad8106548307d4e5b366879aa382b22d01",
+      "retrieved_at": "2026-11-12T04:05:58.163445+00:00",
+      "title": "DetectPiiEntities - Amazon Comprehend",
+      "support": "LanguageCodeの説明と列挙値の違い、位置、100 KB上限"
+    },
+    {
+      "id": "C3",
+      "url": "https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html",
+      "http_status": 200,
+      "sha256": "8a6fb9f2ef0e2ffa9494ff88471c1cab11501bbf62bf14623ce2ed162635b135",
+      "retrieved_at": "2026-11-12T04:05:58.184689+00:00",
+      "title": "Languages supported in Amazon Comprehend - Amazon Comprehend",
+      "support": "一般抽出、PII、独自学習の機能別言語"
+    },
+    {
+      "id": "C4",
+      "url": "https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-availability-change.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-availability-change.html",
+      "http_status": 200,
+      "sha256": "d82bd8c0290e9c933cb6be742788f67c2f68cc58638cadf2794eaff756497ed2",
+      "retrieved_at": "2026-11-12T04:05:58.147238+00:00",
+      "title": "Amazon Comprehend feature availability change - Amazon Comprehend",
+      "support": "一部機能の新規利用制限。PII全体の終了ではない"
+    },
+    {
+      "id": "C5",
+      "url": "https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html",
+      "http_status": 200,
+      "sha256": "f90f6e33ddf04d65fa11c61e39622f3b64d19ddeb44937a01e76258fa33c5ea1",
+      "retrieved_at": "2026-11-12T04:11:37.707331+00:00",
+      "title": "C5",
+      "support": "独自の文書分類"
+    },
+    {
+      "id": "C6",
+      "url": "https://docs.aws.amazon.com/comprehend/latest/dg/custom-entity-recognition.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend/latest/dg/custom-entity-recognition.html",
+      "http_status": 200,
+      "sha256": "f9a4bdd7ccb22b5f8fcd84d0da78070d2b8edf8219be26a1057f446fc3ab3bc1",
+      "retrieved_at": "2026-11-12T04:11:37.712909+00:00",
+      "title": "C6",
+      "support": "独自の箇所抽出"
+    },
+    {
+      "id": "G1",
+      "url": "https://docs.aws.amazon.com/glue/latest/dg/sensitive-data-managed-data-types.html",
+      "resolved_url": "https://docs.aws.amazon.com/glue/latest/dg/sensitive-data-managed-data-types.html",
+      "http_status": 200,
+      "sha256": "e3c0394f8df1f2ee3268d60db41ba8b7bd6f1ee83710a49d77caa9b895b3e984",
+      "retrieved_at": "2026-11-12T04:05:58.759564+00:00",
+      "title": "Managed Sensitive Data Types - AWS Glue",
+      "support": "日本の4種類、電話の国制約、氏名・メール・IP等"
+    },
+    {
+      "id": "G2",
+      "url": "https://docs.aws.amazon.com/glue/latest/dg/detect-PII.html",
+      "resolved_url": "https://docs.aws.amazon.com/glue/latest/dg/detect-PII.html",
+      "http_status": 200,
+      "sha256": "e27ddc9eb48bc7e745ab492aa4fe3b32a62c8c79df56eb7877d24774fafc076e",
+      "retrieved_at": "2026-11-12T04:05:58.644400+00:00",
+      "title": "Detect and process sensitive data - AWS Glue",
+      "support": "行・列の検査、標本と全件、記録と伏字化"
+    },
+    {
+      "id": "G3",
+      "url": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-sensitive-data-example.html",
+      "resolved_url": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-sensitive-data-example.html",
+      "http_status": 200,
+      "sha256": "82d887be7bde651661d37a33b1b8bdd03580395f165e2340e31298b4fcfc3802",
+      "retrieved_at": "2026-11-12T04:05:58.612706+00:00",
+      "title": "Using Sensitive Data Detection outside AWS Glue Studio - AWS Glue",
+      "support": "detectとclassifyColumns、標本率、独自規則"
+    },
+    {
+      "id": "G4",
+      "url": "https://docs.aws.amazon.com/glue/latest/webapi/API_CreateCustomEntityType.html",
+      "resolved_url": "https://docs.aws.amazon.com/glue/latest/webapi/API_CreateCustomEntityType.html",
+      "http_status": 200,
+      "sha256": "ad04bf452da5cdd5f578f21db2aa6bf0764cff0115db61a68615bdd440a1f1c9",
+      "retrieved_at": "2026-11-12T04:11:37.522887+00:00",
+      "title": "G4",
+      "support": "独自の形式規則と周辺語句"
+    },
+    {
+      "id": "G5",
+      "url": "https://docs.aws.amazon.com/glue/latest/webapi/API_StartJobRun.html",
+      "resolved_url": "https://docs.aws.amazon.com/glue/latest/webapi/API_StartJobRun.html",
+      "http_status": 200,
+      "sha256": "34b2807d25fb8cc9ac87e81521704bd270d525b63d45ad72abfacc020b019906",
+      "retrieved_at": "2026-11-12T04:11:37.718083+00:00",
+      "title": "G5",
+      "support": "実行開始と引数"
+    },
+    {
+      "id": "M1",
+      "url": "https://docs.aws.amazon.com/comprehend-medical/latest/api/API_DetectPHI.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend-medical/latest/api/API_DetectPHI.html",
+      "http_status": 200,
+      "sha256": "91b997157b4e376342a48ad97e65338085b2295407cc8a746336291aed7f2396",
+      "retrieved_at": "2026-11-12T04:05:58.175619+00:00",
+      "title": "DetectPHI - Amazon Comprehend Medical",
+      "support": "DetectPHIは英語、識別情報の抽出"
+    },
+    {
+      "id": "M2",
+      "url": "https://docs.aws.amazon.com/comprehend-medical/latest/api/API_DetectEntitiesV2.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend-medical/latest/api/API_DetectEntitiesV2.html",
+      "http_status": 200,
+      "sha256": "03261e41a18e31dbf1324a78a59f528c17c77354b4fb9c92c48aeb4a2b3e4d3e",
+      "retrieved_at": "2026-11-12T04:05:58.573843+00:00",
+      "title": "DetectEntitiesV2 - Amazon Comprehend Medical",
+      "support": "DetectEntitiesV2は英語、位置・属性・モデル版"
+    },
+    {
+      "id": "M3",
+      "url": "https://docs.aws.amazon.com/comprehend-medical/latest/dev/textanalysis-phi.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend-medical/latest/dev/textanalysis-phi.html",
+      "http_status": 200,
+      "sha256": "8d8d95a6ab23952f6f8408ac7f070ed64843d40989ce79891ee701d463091758",
+      "retrieved_at": "2026-11-12T04:05:58.642825+00:00",
+      "title": "Detect PHI - Amazon Comprehend Medical",
+      "support": "PHIの種類。IDと各国専用番号検知の違い"
+    },
+    {
+      "id": "M4",
+      "url": "https://docs.aws.amazon.com/comprehend-medical/latest/dev/textanalysis-entitiesv2.html",
+      "resolved_url": "https://docs.aws.amazon.com/comprehend-medical/latest/dev/textanalysis-entitiesv2.html",
+      "http_status": 200,
+      "sha256": "0b216b1b202a594ca33057fd46fe5b02bde8778e3e41348fe2a83ceb7811b6d5",
+      "retrieved_at": "2026-11-12T04:05:58.759387+00:00",
+      "title": "Detect entities (Version 2) - Amazon Comprehend Medical",
+      "support": "病名・薬剤・医療属性、否定と家族歴"
+    },
+    {
+      "id": "T1",
+      "url": "https://docs.aws.amazon.com/textract/latest/dg/supported-languages.html",
+      "resolved_url": "https://docs.aws.amazon.com/textract/latest/dg/supported-languages.html",
+      "http_status": 200,
+      "sha256": "25dea7afa4d9e49477893d29b3b8fc19ff8d5ed7c59dda6ae9fb2d2864771a30",
+      "retrieved_at": "2026-11-12T04:05:59.072163+00:00",
+      "title": "Supported languages - Amazon Textract",
+      "support": "Textractの操作別言語。日本語はCategory 3"
+    },
+    {
+      "id": "T2",
+      "url": "https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html",
+      "resolved_url": "https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html",
+      "http_status": 200,
+      "sha256": "2d95339c6b99463f625c29f4d06b2fadcf60b734c62177e74a3cf472da5408d0",
+      "retrieved_at": "2026-11-12T04:05:59.141772+00:00",
+      "title": "Supported languages and language-specific features - Amazon Transcribe",
+      "support": "日本語の文字起こしと伏字化の対応差"
+    },
+    {
+      "id": "T3",
+      "url": "https://docs.aws.amazon.com/transcribe/latest/dg/pii-redaction.html",
+      "resolved_url": "https://docs.aws.amazon.com/transcribe/latest/dg/pii-redaction.html",
+      "http_status": 200,
+      "sha256": "c08f5eab3442d701b97cbf67b736e5576e38d890eacbd7620df1c163eed5f538",
+      "retrieved_at": "2026-11-12T04:05:59.014641+00:00",
+      "title": "Redacting or identifying personally identifiable information - Amazon Transcribe",
+      "support": "音声の識別情報の除去とその限界"
+    }
+  ]
+}

@@ -1,0 +1,2697 @@
+{
+  "date": "2026-11-12",
+  "scope": "公開仕様上の検知能力と拡張案。実測精度ではない。記号の定義は同名の比較表を参照",
+  "items": [
+    {
+      "id": "D001",
+      "category": "個人の識別情報と連絡先",
+      "item": "氏名一般",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標",
+        "AM": "標限定",
+        "PR": "標",
+        "GL": "—"
+      },
+      "limitation": "人名という文字列の検出。本人確認ではない。Macieはラテン文字に限定",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "標",
+        "AM": "標限定",
+        "CP": "標英西",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D002",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本語の漢字・かな氏名",
+      "assessment": {
+        "GW": "未",
+        "GC": "未",
+        "MS": "標",
+        "NF": "未",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "Purviewは日本を明示。他製品の汎用人名検知を日本語保証へ広げない",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "未",
+        "AM": "規",
+        "CP": "非日",
+        "CM": "非日"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D003",
+      "category": "個人の識別情報と連絡先",
+      "item": "住所一般",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標限定",
+        "AM": "標限定",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "PresidioのLOCATIONは地名であり、郵便住所全体とは異なる",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "規",
+        "AM": "標限定",
+        "CP": "標英西",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D004",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本語住所",
+      "assessment": {
+        "GW": "規",
+        "GC": "未",
+        "MS": "標",
+        "NF": "未",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "PurviewのJapan physical addresses。郵便番号だけの検出は別",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "未",
+        "AM": "規",
+        "CP": "非日",
+        "CM": "非日"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D005",
+      "category": "個人の識別情報と連絡先",
+      "item": "電話番号一般",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "標限定",
+        "PR": "標",
+        "GL": "—"
+      },
+      "limitation": "Macieは対象国を列挙。Purviewは今回専用の標準項目を未確認",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "標限定",
+        "AM": "標限定",
+        "CP": "標英西",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D006",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の電話番号",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "規",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "国番号・国内形式・全角・区切りなしは別試験。Presidioは地域設定を確認",
+      "aws_assessment": {
+        "BG": "標限定",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D007",
+      "category": "個人の識別情報と連絡先",
+      "item": "メールアドレス",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "規",
+        "PR": "標",
+        "GL": "—"
+      },
+      "limitation": "国際化されたアドレスや伏字は別試験",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "標",
+        "AM": "規",
+        "CP": "標英西",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D008",
+      "category": "個人の識別情報と連絡先",
+      "item": "生年月日",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "標",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "単なる日付と本人の誕生日の区別が必要。PresidioのDATE_TIMEは汎用日付",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "標",
+        "CP": "標限定英西",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D009",
+      "category": "個人の識別情報と連絡先",
+      "item": "年齢",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "年齢の検出と未成年の本人確認を区別",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "規",
+        "AM": "規",
+        "CP": "標英西",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D010",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本のマイナンバー",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "日本専用の標準番号検知を4製品で確認",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "標",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D011",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の運転免許証番号",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "証明書画像の分類と番号の箇所検知を分ける",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "標",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D012",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の旅券番号",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "Macieの標準旅券一覧に日本は含まれない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "標",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D013",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の在留カード番号",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "標",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "PurviewはJapanese Residence Card Numberを列挙",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D014",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の住民票コード等",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "標限定",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "PurviewのJapan resident registration numberは11桁と周辺語句。日本語の制度上の対応を導入時に確認",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D015",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の健康保険の記号番号",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "未",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "米国やカナダの医療番号の標準対応を日本へ流用しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D016",
+      "category": "個人の識別情報と連絡先",
+      "item": "日本の基礎年金番号等",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "未",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "PurviewのJapan social insurance numberとの制度上の対応は個別定義で確認",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D017",
+      "category": "個人の識別情報と連絡先",
+      "item": "海外の国民識別・納税番号",
+      "assessment": {
+        "GW": "標限定",
+        "GC": "標限定",
+        "MS": "標限定",
+        "NF": "標限定",
+        "AM": "標限定",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "SSN、Aadhaar等。全世界すべての番号に対応するという意味ではない",
+      "aws_assessment": {
+        "BG": "標限定",
+        "AG": "標限定",
+        "AM": "標限定",
+        "CP": "標限定英西",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D018",
+      "category": "個人の識別情報と連絡先",
+      "item": "法人番号",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "標",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "個人番号と区別。番号の存在だけでは企業秘密にならない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D019",
+      "category": "個人の識別情報と連絡先",
+      "item": "社員・顧客・会員・学生番号",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "書式・辞書・登録済み台帳との照合を設計。数字だけで種類を確定しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D020",
+      "category": "個人の識別情報と連絡先",
+      "item": "利用者名・画面名・アカウントID",
+      "assessment": {
+        "GW": "規",
+        "GC": "標限定",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "GCのGENERIC_IDは広い候補であり、誰のアカウントかの確定ではない",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "規",
+        "AM": "規",
+        "CP": "標英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D021",
+      "category": "端末識別と位置や行動",
+      "item": "IPアドレス",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標",
+        "AM": "規",
+        "PR": "標",
+        "GL": "—"
+      },
+      "limitation": "個人との結び付きは別の台帳が必要",
+      "aws_assessment": {
+        "BG": "標限定",
+        "AG": "標",
+        "AM": "規",
+        "CP": "標限定英西",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D022",
+      "category": "端末識別と位置や行動",
+      "item": "MACアドレス",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "規",
+        "PR": "標",
+        "GL": "—"
+      },
+      "limitation": "端末の通信識別子。所有者の特定とは異なる",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "標",
+        "AM": "規",
+        "CP": "標英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D023",
+      "category": "端末識別と位置や行動",
+      "item": "端末IMEI・広告識別子",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標限定",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "NightfallはIMEIを確認。広告識別子まで同一視しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D024",
+      "category": "端末識別と位置や行動",
+      "item": "Cookie・セッション情報",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "標",
+        "PR": "規",
+        "GL": "標限定"
+      },
+      "limitation": "Gitleaksは一部サービス固有のcookie。すべてのcookieが認証情報とは限らない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "標",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D025",
+      "category": "端末識別と位置や行動",
+      "item": "緯度経度",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標",
+        "AM": "標限定",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "Macieは英語の周辺語句が条件。実際の居場所であることは別確認",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "標限定",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D026",
+      "category": "端末識別と位置や行動",
+      "item": "訪問先・移動履歴",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "座標や住所の検出だけで時系列の本人行動は復元できない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D027",
+      "category": "端末識別と位置や行動",
+      "item": "閲覧・検索・購入履歴",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "履歴の書式や見出しは候補。誰の履歴か、私生活かは文脈が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D028",
+      "category": "端末識別と位置や行動",
+      "item": "車台番号VIN",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標限定",
+        "AM": "標",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "車両識別番号であり、所有者の本人特定は別",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "規",
+        "AM": "標",
+        "CP": "標英西",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D029",
+      "category": "金融と支払い",
+      "item": "クレジットカード番号",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標",
+        "AM": "標",
+        "PR": "標",
+        "GL": "—"
+      },
+      "limitation": "検査数字の適合はカードの実在・有効性を保証しない",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "標",
+        "AM": "標",
+        "CP": "標英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D030",
+      "category": "金融と支払い",
+      "item": "カード有効期限・確認コード",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "規",
+        "NF": "規",
+        "AM": "標",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "短い数値だけでは誤検知しやすく、周辺語句と番号との関係が必要",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "規",
+        "AM": "標",
+        "CP": "標英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D031",
+      "category": "金融と支払い",
+      "item": "カード磁気帯情報",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "規",
+        "AM": "標",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "通常のカード番号だけの検出とは別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "標",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D032",
+      "category": "金融と支払い",
+      "item": "日本の銀行口座番号",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "支店・口座種別・名義人の対応や実在性は別の確認",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "標",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D033",
+      "category": "金融と支払い",
+      "item": "海外口座IBAN・SWIFT等",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標",
+        "AM": "標限定",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "PresidioはIBAN、Macieは国別口座。SWIFTは金融機関の識別であり個人口座ではない",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "標限定",
+        "AM": "標限定",
+        "CP": "標英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D034",
+      "category": "金融と支払い",
+      "item": "暗号資産の公開アドレス",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "PresidioはBitcoin。公開アドレスと秘密鍵を区別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D035",
+      "category": "金融と支払い",
+      "item": "給与・賞与・報酬明細",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "文書の種類を分類。金額・本人との対応の全箇所抽出は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D036",
+      "category": "金融と支払い",
+      "item": "資産・残高・所得・債務",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "個人金融文書としての分類と各金額の意味付けを区別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D037",
+      "category": "金融と支払い",
+      "item": "税務申告・納税書類",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分",
+        "NF": "分試",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "Nightfallの個人向け税務文書はEarly Preview。日本の様式は別評価",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D038",
+      "category": "金融と支払い",
+      "item": "与信評価・信用履歴",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "点数だけでは与信情報と判定できず、書式や本文の意味が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D039",
+      "category": "金融と支払い",
+      "item": "取引履歴・送金先",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "金融文書の候補分類。全取引の属性抽出とは別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D040",
+      "category": "医療と健康",
+      "item": "病名・医療用語",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標限定",
+        "AM": "規",
+        "PR": "追",
+        "GL": "—"
+      },
+      "limitation": "用語の存在と、特定人の病歴という事実を分ける",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D041",
+      "category": "医療と健康",
+      "item": "疾病・処置の符号ICD等",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "規",
+        "AM": "標限定",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "MacieはHCPCS等を列挙。ICDまで標準対応と拡張しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "標限定",
+        "AM": "標限定",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D042",
+      "category": "医療と健康",
+      "item": "処方薬・薬剤名",
+      "assessment": {
+        "GW": "標限定",
+        "GC": "標限定",
+        "MS": "標",
+        "NF": "標限定",
+        "AM": "標限定",
+        "PR": "追",
+        "GL": "—"
+      },
+      "limitation": "米国FDAの名称・符号と日本の薬剤一般を区別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "標限定",
+        "AM": "標限定",
+        "CP": "未",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D043",
+      "category": "医療と健康",
+      "item": "医療記録・診療録という文書",
+      "assessment": {
+        "GW": "規",
+        "GC": "分",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCはDOCUMENT_TYPE/MEDICAL/RECORD。診断が正しいという保証ではない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D044",
+      "category": "医療と健康",
+      "item": "患者の診察券・診療録番号",
+      "assessment": {
+        "GW": "規",
+        "GC": "標限定",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "GCのMEDICAL_RECORD_NUMBER。医療機関独自の書式は追加設定",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D045",
+      "category": "医療と健康",
+      "item": "海外の医療保険・医療識別番号",
+      "assessment": {
+        "GW": "標限定",
+        "GC": "標限定",
+        "MS": "標限定",
+        "NF": "標限定",
+        "AM": "標限定",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "NHS、Medicare等。対応国・制度ごとに異なる",
+      "aws_assessment": {
+        "BG": "標限定",
+        "AG": "標限定",
+        "AM": "標限定",
+        "CP": "標限定英西",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D046",
+      "category": "医療と健康",
+      "item": "血液型",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "追限定",
+        "GL": "—"
+      },
+      "limitation": "GCはBLOOD_TYPE。Presidioは生体測定の広い種類で候補、専用保証ではない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D047",
+      "category": "医療と健康",
+      "item": "健診結果・検査値",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "標限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "追",
+        "GL": "—"
+      },
+      "limitation": "Purviewの検査用語は検査結果全体の意味判断と異なる",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D048",
+      "category": "医療と健康",
+      "item": "障害・精神疾患・依存症の記述",
+      "assessment": {
+        "GW": "規",
+        "GC": "標限定",
+        "MS": "標限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "追限定",
+        "GL": "—"
+      },
+      "limitation": "病名・障害用語の候補。本人の事実、否定、既往、家族歴を区別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D049",
+      "category": "医療と健康",
+      "item": "妊娠・出産・不妊治療の記述",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "追限定",
+        "GL": "—"
+      },
+      "limitation": "医療文書や用語を使った候補。文脈別に試験が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D050",
+      "category": "医療と健康",
+      "item": "遺伝子検査結果の説明文",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "疾患説明と生の配列・変異の意味解釈は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D051",
+      "category": "医療と健康",
+      "item": "DNA配列・生体試料の個人対応",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "配列らしい形式は候補。専門解析と対応台帳なしに本人・疾患を確定できない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D052",
+      "category": "思想信条など配慮を要する内容",
+      "item": "民族・人種を表す語",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "文中の語の検出。外見や姓から本人の属性を推定する用途に読み替えない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D053",
+      "category": "思想信条など配慮を要する内容",
+      "item": "宗教・信条を表す語",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "GCのRELIGIOUS_TERM、PresidioのNRP。本人の信仰の確定ではない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D054",
+      "category": "思想信条など配慮を要する内容",
+      "item": "政治的所属・政治思想を表す語",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "GCのPOLITICAL_TERM。政党への言及と本人の支持は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D055",
+      "category": "思想信条など配慮を要する内容",
+      "item": "労働組合の所属を表す語",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "規",
+        "GL": "—"
+      },
+      "limitation": "GCのTRADE_UNION。所属事実や労働法上の判断は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D056",
+      "category": "思想信条など配慮を要する内容",
+      "item": "性別・性自認の記述",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "氏名や顔からの推測ではなく、明示された内容の検知",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "標限定英"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D057",
+      "category": "思想信条など配慮を要する内容",
+      "item": "性的指向の記述",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCのSEXUAL_ORIENTATION。性的な内容一般の分類とは異なる",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D058",
+      "category": "思想信条など配慮を要する内容",
+      "item": "性的生活・私的関係の記述",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCの性的話題の分類は、特定人の性的生活の事実認定ではない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D059",
+      "category": "思想信条など配慮を要する内容",
+      "item": "婚姻・離婚・家族関係",
+      "assessment": {
+        "GW": "規",
+        "GC": "標限定",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCのMARITAL_STATUSは婚姻状態。家族全体の関係抽出を保証しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D060",
+      "category": "思想信条など配慮を要する内容",
+      "item": "社会的身分・出自",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "地名・姓などから推測せず、明示記述の候補として扱う",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D061",
+      "category": "思想信条など配慮を要する内容",
+      "item": "犯罪歴・身元調査の文書",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "文",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCの法的文書分類は近接種別。NightfallはFILE_BACKGROUND_OR_CRIMINAL",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D062",
+      "category": "思想信条など配慮を要する内容",
+      "item": "犯罪被害・刑事手続・少年事件",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "書類分類だけでは、被害者・被疑者・証人や確定判決を区別できない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D063",
+      "category": "思想信条など配慮を要する内容",
+      "item": "内部通報・相談・懲戒記録",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "人事・法務文書を候補にできるが、通報者の特定と保護判断は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D064",
+      "category": "認証情報と技術上の秘密",
+      "item": "平文パスワード",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標",
+        "AM": "規",
+        "PR": "規",
+        "GL": "標限定"
+      },
+      "limitation": "Gitleaksは資格情報の代入等に一致する範囲。任意の短い語をパスワードとは識別できない",
+      "aws_assessment": {
+        "BG": "標",
+        "AG": "規",
+        "AM": "規",
+        "CP": "標英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D065",
+      "category": "認証情報と技術上の秘密",
+      "item": "秘密鍵・暗号鍵",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標限定",
+        "NF": "標",
+        "AM": "標",
+        "PR": "規",
+        "GL": "標"
+      },
+      "limitation": "公開鍵や公開証明書まで一律に秘密と判定しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "標",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D066",
+      "category": "認証情報と技術上の秘密",
+      "item": "AWS・Google Cloud・Azure等の鍵",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標",
+        "NF": "標限定",
+        "AM": "標限定",
+        "PR": "規",
+        "GL": "標"
+      },
+      "limitation": "提供者ごとの種類・形式に差。MacieはAWS・GCP等の列挙範囲",
+      "aws_assessment": {
+        "BG": "標限定",
+        "AG": "規",
+        "AM": "標限定",
+        "CP": "標限定英西",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D067",
+      "category": "認証情報と技術上の秘密",
+      "item": "生成AIサービスのAPI鍵",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "規",
+        "NF": "標限定",
+        "AM": "規",
+        "PR": "規",
+        "GL": "標"
+      },
+      "limitation": "GCはOPENAI_API_KEY、ANTHROPIC_API_KEY等。Nightfallは汎用API_KEY",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D068",
+      "category": "認証情報と技術上の秘密",
+      "item": "OAuth・Bearer・JWT",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "標限定",
+        "NF": "標限定",
+        "AM": "標限定",
+        "PR": "規",
+        "GL": "標限定"
+      },
+      "limitation": "サービス固有形式の対応と、任意の認証文字列への対応を分ける",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "標限定",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D069",
+      "category": "認証情報と技術上の秘密",
+      "item": "データベース接続文字列",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "標限定",
+        "NF": "標",
+        "AM": "規",
+        "PR": "規",
+        "GL": "標限定"
+      },
+      "limitation": "NightfallはDATABASE_CONNECTION_STRING。秘密を含まない接続文字列もあり得る",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D070",
+      "category": "認証情報と技術上の秘密",
+      "item": "署名付きURL・共有用秘密URL",
+      "assessment": {
+        "GW": "標限定",
+        "GC": "標限定",
+        "MS": "標限定",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "標限定"
+      },
+      "limitation": "Google Storageの署名URLやAzure SAS等、既知形式の範囲",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D071",
+      "category": "認証情報と技術上の秘密",
+      "item": "弱いパスワードハッシュ",
+      "assessment": {
+        "GW": "標",
+        "GC": "標",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "規"
+      },
+      "limitation": "対象形式の検出。実際に解読できるかの検証ではない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D072",
+      "category": "認証情報と技術上の秘密",
+      "item": "復旧コード・ワンタイム番号",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "規"
+      },
+      "limitation": "短い数字は汎用。見出し・期限・発行元などの情報が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D073",
+      "category": "認証情報と技術上の秘密",
+      "item": "鍵の有効性・失効状態",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "形が正しいことでは確定できず、発行元の状態や認可された検証が必要",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D074",
+      "category": "企業秘密と業務文書",
+      "item": "機密や社外秘の明示表示",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "規",
+        "NF": "分",
+        "AM": "規",
+        "PR": "規",
+        "GL": "規"
+      },
+      "limitation": "NightfallのFILE_CONFIDENTIALは明確に機密表示された内容。表示のない秘密は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D075",
+      "category": "企業秘密と業務文書",
+      "item": "顧客名簿・顧客管理の出力",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "NightfallはFILE_CUSTOMER_LIST。個人情報の箇所検知とも組み合わせる",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D076",
+      "category": "企業秘密と業務文書",
+      "item": "履歴書・職務経歴書",
+      "assessment": {
+        "GW": "規",
+        "GC": "分",
+        "MS": "分",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCはDOCUMENT_TYPE/HR/RESUME。Nightfallは人事分類の範囲",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D077",
+      "category": "企業秘密と業務文書",
+      "item": "人事評価・採用・解雇資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "人事という文書分類と、各評価の内容・対象者の抽出を区別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D078",
+      "category": "企業秘密と業務文書",
+      "item": "契約書・秘密保持契約",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCは法務の話題や書類分類で候補。秘密保持契約専用とは扱わない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D079",
+      "category": "企業秘密と業務文書",
+      "item": "訴訟・弁護士との相談文書",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "分限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "法務分類は可能でも、法的秘匿特権や秘密保持義務の成立は確定しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D080",
+      "category": "企業秘密と業務文書",
+      "item": "請求書・見積・価格資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "分",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCとNightfallは請求書を確認。見積・価格全般へ無条件に広げない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D081",
+      "category": "企業秘密と業務文書",
+      "item": "決算・予算・財務予測",
+      "assessment": {
+        "GW": "規",
+        "GC": "分限定",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCは金融文書の種類。未公表かどうかは外部の公表状況が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D082",
+      "category": "企業秘密と業務文書",
+      "item": "買収・合併の交渉資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "NightfallはFILE_M_AND_A、PurviewはMerger and acquisition files",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D083",
+      "category": "企業秘密と業務文書",
+      "item": "経営戦略・取締役会資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "NightfallはFILE_EXECUTIVE_COMMS。Purviewは独自の事業計画分類を作る案[M4]",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D084",
+      "category": "企業秘密と業務文書",
+      "item": "製品計画・研究開発資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分限定",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "文書種別は候補。未発表製品かどうかは公表状態と照合",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D085",
+      "category": "企業秘密と業務文書",
+      "item": "特許・発明資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "分",
+        "MS": "分限定",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCは特許・出願文書。Nightfallは内部向けと公開向けの分類を用意するが公表状態の真実性は別確認",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D086",
+      "category": "企業秘密と業務文書",
+      "item": "ソースコード",
+      "assessment": {
+        "GW": "規",
+        "GC": "分",
+        "MS": "分",
+        "NF": "分",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "ソースコードの存在と、所有権・公開許諾・企業秘密であることを区別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D087",
+      "category": "企業秘密と業務文書",
+      "item": "製造手順・配合・設計の説明文",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "Purviewは製造記録・手順、Nightfallは研究開発文書等。独自配合は定義が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D088",
+      "category": "企業秘密と業務文書",
+      "item": "ネットワーク・セキュリティ設計",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "IPや鍵の検出だけでは設計全体の機密性は確定できない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D089",
+      "category": "企業秘密と業務文書",
+      "item": "データベース出力・システムログ",
+      "assessment": {
+        "GW": "規",
+        "GC": "分",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCはDATABASE_BACKUPとSYSTEM_LOG。含まれる個人情報や秘密は別検知",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D090",
+      "category": "企業秘密と業務文書",
+      "item": "社内固有の案件名・機密語句",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "規",
+        "NF": "規",
+        "AM": "規",
+        "PR": "規",
+        "GL": "規"
+      },
+      "limitation": "辞書登録済みの語は候補。未知の案件の秘密性は推定できない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D091",
+      "category": "企業秘密と業務文書",
+      "item": "第三者から預かった秘密資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "表示・内容は候補。契約・受領経緯・利用許諾を外部情報で照合",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D092",
+      "category": "画像や生体情報",
+      "item": "顔や人物の画像",
+      "assessment": {
+        "GW": "未",
+        "GC": "画",
+        "MS": "未",
+        "NF": "画限定",
+        "AM": "非",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCは顔や人物の存在。NightfallのSELFIE_IMAGEは正面の単独人物等に限定",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "非",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D093",
+      "category": "画像や生体情報",
+      "item": "旅券・免許証・身分証の画像",
+      "assessment": {
+        "GW": "未",
+        "GC": "画",
+        "MS": "未",
+        "NF": "画",
+        "AM": "非",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "写っている種類の分類であり、証明書の真正性検証ではない",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "非",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D094",
+      "category": "画像や生体情報",
+      "item": "カードの画像",
+      "assessment": {
+        "GW": "未",
+        "GC": "未",
+        "MS": "未",
+        "NF": "画",
+        "AM": "非",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "文字読取りによる番号検知とカード物体の分類を区別",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "非",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D095",
+      "category": "画像や生体情報",
+      "item": "手書き署名の画像",
+      "assessment": {
+        "GW": "未",
+        "GC": "画",
+        "MS": "未",
+        "NF": "未",
+        "AM": "非",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCは署名の存在。署名者の本人認証ではない",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "非",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D096",
+      "category": "画像や生体情報",
+      "item": "車のナンバープレート画像",
+      "assessment": {
+        "GW": "未",
+        "GC": "画",
+        "MS": "未",
+        "NF": "未",
+        "AM": "非",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCは画像中の物体。日本の番号の全文字読取りを保証しない",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "非",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D097",
+      "category": "画像や生体情報",
+      "item": "指紋・虹彩・声紋の本人照合",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "非",
+        "PR": "外",
+        "GL": "—"
+      },
+      "limitation": "専用の生体照合と登録情報が必要。画像・音声の存在検出とは別",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "非",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D098",
+      "category": "画像や生体情報",
+      "item": "CAD図面・回路図の技術的秘密",
+      "assessment": {
+        "GW": "未",
+        "GC": "未",
+        "MS": "未",
+        "NF": "未",
+        "AM": "未",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "文字部分の検出と形状・回路・製法の意味理解を区別。汎用保証は確認できない",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "未",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D099",
+      "category": "画像や生体情報",
+      "item": "音声・動画内の会話内容",
+      "assessment": {
+        "GW": "非",
+        "GC": "拡",
+        "MS": "未",
+        "NF": "非",
+        "AM": "非",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "外部の文字起こしや動画解析を組み合わせる案。本文検査の機能だけでは足りない",
+      "aws_assessment": {
+        "BG": "非",
+        "AG": "拡",
+        "AM": "非",
+        "CP": "非",
+        "CM": "非"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D100",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "公開済みか未公表か",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "公開台帳・発表履歴・対象版との照合が必要",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D101",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "法的な営業秘密に当たるか",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "管理状況や公知性など、本文以外の事実が必要",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D102",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "本人の同意・利用目的の適合",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "同意記録・目的・提供先・処理経緯を照合",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D103",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "保存や外部共有が業務上許可か",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "所属・権限・共有状態・契約・例外許可が必要",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D104",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "合成値・架空人物か実在者か",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "形式や文脈だけで真実性を保証しない",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D105",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "伏字・断片からの同一人物の確定",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "他の対応情報なしに確定しない。似た文字列を本人と同一視しない",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D106",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "複数資料を結合した再識別の可否",
+      "assessment": {
+        "GW": "外",
+        "GC": "外",
+        "MS": "外",
+        "NF": "外",
+        "AM": "外",
+        "PR": "外",
+        "GL": "外"
+      },
+      "limitation": "利用できる補助情報と結合条件を含む別評価が必要",
+      "aws_assessment": {
+        "BG": "外",
+        "AG": "外",
+        "AM": "外",
+        "CP": "外",
+        "CM": "外"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D107",
+      "category": "内容検査だけでは確定できない判断",
+      "item": "暗号化され鍵を取得できない本文",
+      "assessment": {
+        "GW": "不可",
+        "GC": "不可",
+        "MS": "条件",
+        "NF": "不可",
+        "AM": "不可",
+        "PR": "不可",
+        "GL": "不可"
+      },
+      "limitation": "復号権限と鍵がなければ本文を検査できない。Purviewは保護方式・権限による例外を個別確認",
+      "aws_assessment": {
+        "BG": "不可",
+        "AG": "不可",
+        "AM": "不可",
+        "CP": "不可",
+        "CM": "不可"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D108",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "国籍・出生国の明示記述",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "規",
+        "NF": "文",
+        "AM": "規",
+        "PR": "標限定",
+        "GL": "—"
+      },
+      "limitation": "GCのCOUNTRY_DEMOGRAPHIC、PRのNRP。地名の存在だけで国籍を確定しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D109",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "在留資格・移民状態",
+      "assessment": {
+        "GW": "規",
+        "GC": "標",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "GCのIMMIGRATION_STATUS。カード番号の検出とは別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D110",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "学歴・成績・試験結果",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "様式と対象者との関係が必要。点数だけでは成績と確定しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D111",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "生活保護・福祉給付の記録",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "制度名・本人との関係・支給記録を分けて判断",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D112",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "家庭相談・虐待・DVの記録",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "相談者・被害者・加害者・一般説明を区別。語句一致だけで事実認定しない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D113",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "勤怠・休職・労務の記録",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "人事文書という広い分類の候補。病気による休職との関係は別",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D114",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "仕入先・受発注・取引条件",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "分限定",
+        "NF": "分限定",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "調達・請求書等の近接分類。交渉条件が秘密かは契約・公表状態も必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D115",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "AIへの指示文・学習資料",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "指示の改ざん検知とは別。独自の指示文が秘密かは組織の定義が必要",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D116",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "学習済みモデルの重み・数値配列",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "未",
+        "NF": "未",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "対応形式と属性で候補化。数値だけで所有権や学習元の個人情報を確定できない",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    },
+    {
+      "id": "D117",
+      "category": "国籍と教育と追加の業務情報",
+      "item": "入退室・警備・施設配置の情報",
+      "assessment": {
+        "GW": "規",
+        "GC": "規",
+        "MS": "文",
+        "NF": "文",
+        "AM": "規",
+        "PR": "拡",
+        "GL": "—"
+      },
+      "limitation": "施設の名称・配置図・警備運用の意味判断と、現在の許可状態を分ける",
+      "aws_assessment": {
+        "BG": "規",
+        "AG": "規",
+        "AM": "規",
+        "CP": "未",
+        "CM": "未"
+      },
+      "aws_assessment_report": "aws_sensitive_data_services_matrix_20261112.md"
+    }
+  ]
+}

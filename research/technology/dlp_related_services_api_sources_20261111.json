@@ -1,0 +1,643 @@
+{
+  "調査日": "2026-11-11",
+  "注記": "公開一次資料とAPI定義のみ。本文全体は収録せず取得ハッシュを保存。サービスへの認証・実行・変更はしていない。HTTP取得の成功だけで本文の仕様確認を代替しない。",
+  "sources": [
+    {
+      "id": "B1",
+      "url": "https://developer.box.com/guides/events/event-triggers/shield-alert-events/",
+      "retrieved_at": "2026-11-11T07:14:54.318251+00:00",
+      "curl_returncode": 0,
+      "sha256": "de4efa3a527325a37f1cc6d2b46114c757109734dcc32a790ae2f3e955d51fd0",
+      "bytes": 514806,
+      "documentation_url": "https://developer.box.com/guides/events/event-triggers/shield-alert-events/"
+    },
+    {
+      "id": "B2",
+      "url": "https://developer.box.com/guides/metadata/classifications/",
+      "retrieved_at": "2026-11-11T07:14:54.548887+00:00",
+      "curl_returncode": 0,
+      "sha256": "9a88fefbeacb8cefca77a300ec9ea107828f1abd304ca7c3801e7c20efa20c02",
+      "bytes": 264159,
+      "documentation_url": "https://developer.box.com/guides/metadata/classifications/"
+    },
+    {
+      "id": "B3",
+      "url": "https://developer.box.com/reference/get-events/",
+      "retrieved_at": "2026-11-11T07:16:02.562970+00:00",
+      "curl_returncode": 0,
+      "sha256": "3f85568af157d3577ff0064adefa095a30743adaa90e9d4b7101d7bda49d6303",
+      "bytes": 592893,
+      "documentation_url": "https://developer.box.com/reference/get-events/"
+    },
+    {
+      "id": "B4",
+      "url": "https://developer.box.com/guides/events/event-triggers/shield-smart-access-events/",
+      "retrieved_at": "2026-11-11T07:18:18.397839+00:00",
+      "curl_returncode": 0,
+      "sha256": "27330327bfe54af8a13d5fc7b39f979ed07b661cde4dde54edd16ab65952613c",
+      "bytes": 515909,
+      "documentation_url": "https://developer.box.com/guides/events/event-triggers/shield-smart-access-events/"
+    },
+    {
+      "id": "NF1",
+      "url": "https://help.nightfall.ai/developer-api/nightfall_apis/saas.md",
+      "retrieved_at": "2026-11-11T07:14:34.347647+00:00",
+      "curl_returncode": 0,
+      "sha256": "5affecc37ed82aa2b79ce8ff41db1affbc97b5fd34d33523787083975c6243e1",
+      "bytes": 106966,
+      "documentation_url": "https://help.nightfall.ai/developer-api/nightfall_apis/saas"
+    },
+    {
+      "id": "NF2",
+      "url": "https://help.nightfall.ai/developer-api/nightfall_apis/scope_update.md",
+      "retrieved_at": "2026-11-11T07:14:35.019196+00:00",
+      "curl_returncode": 0,
+      "sha256": "5dc035393bc480e1ad85a39d71e422d334f179e6514b5e67bb6822459d7562e0",
+      "bytes": 16718,
+      "documentation_url": "https://help.nightfall.ai/developer-api/nightfall_apis/scope_update"
+    },
+    {
+      "id": "NF3",
+      "url": "https://help.nightfall.ai/developer-api/nightfall_apis/saas/rate-limits-for-native-saas-app-apis.md",
+      "retrieved_at": "2026-11-11T07:14:35.554689+00:00",
+      "curl_returncode": 0,
+      "sha256": "02fdda2a8a6dbb0a7de0db2e4d8cdc994617b2f77d6f769bf9149ac195d724b1",
+      "bytes": 4679,
+      "documentation_url": "https://help.nightfall.ai/developer-api/nightfall_apis/saas/rate-limits-for-native-saas-app-apis"
+    },
+    {
+      "id": "NF4",
+      "url": "https://help.nightfall.ai/developer-api/nightfall_apis/dlp.md",
+      "retrieved_at": "2026-11-11T07:18:18.001117+00:00",
+      "curl_returncode": 0,
+      "sha256": "6508cc2bf2bca269aff96aacaeb7b5327678ea6b13c2437332afbc568316d8dd",
+      "bytes": 49512,
+      "documentation_url": "https://help.nightfall.ai/developer-api/nightfall_apis/dlp"
+    },
+    {
+      "id": "M1",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/security-alert?view=graph-rest-1.0",
+      "retrieved_at": "2026-11-11T07:15:32.060729+00:00",
+      "curl_returncode": 0,
+      "sha256": "e8defffb35e416a1f52d7b51e1301375b26fb57be22be1cf5963e757012e013f",
+      "bytes": 73335,
+      "documentation_url": "https://learn.microsoft.com/en-us/graph/api/resources/security-alert?view=graph-rest-1.0"
+    },
+    {
+      "id": "M2",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0",
+      "retrieved_at": "2026-11-11T07:15:31.743670+00:00",
+      "curl_returncode": 0,
+      "sha256": "a3124e60587c705f99665795188bc45e8aad37b97c39438db04bd41c5c98b0c0",
+      "bytes": 79001,
+      "documentation_url": "https://learn.microsoft.com/en-us/graph/api/security-list-alerts_v2?view=graph-rest-1.0"
+    },
+    {
+      "id": "M3",
+      "url": "https://learn.microsoft.com/en-us/graph/api/security-alert-update?view=graph-rest-1.0",
+      "retrieved_at": "2026-11-11T07:15:32.039234+00:00",
+      "curl_returncode": 0,
+      "sha256": "aaa5b83403cb1592e54a7b839df9deedd233a273d911ad49f40acd00c3b19615",
+      "bytes": 66533,
+      "documentation_url": "https://learn.microsoft.com/en-us/graph/api/security-alert-update?view=graph-rest-1.0"
+    },
+    {
+      "id": "M4",
+      "url": "https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema",
+      "retrieved_at": "2026-11-11T07:15:32.470635+00:00",
+      "curl_returncode": 0,
+      "sha256": "76460c4cbb41af9fe483320cd225d59f4bb523c50ecf52584524287dfe403784",
+      "bytes": 421428,
+      "documentation_url": "https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema"
+    },
+    {
+      "id": "M5",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps",
+      "retrieved_at": "2026-11-11T07:15:31.948489+00:00",
+      "curl_returncode": 0,
+      "sha256": "ab834d186df3f89bf4a0bf956183cfd263e5240dd4e63001440d93f1fd8471f5",
+      "bytes": 54823,
+      "documentation_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancerule?view=exchange-ps"
+    },
+    {
+      "id": "M7",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-dlpcompliancepolicy?view=exchange-ps",
+      "retrieved_at": "2026-11-11T07:15:49.750899+00:00",
+      "curl_returncode": 0,
+      "sha256": "4fd264a908c4422ad9a67cd0995be676bc664cae18f42455ec00eed59fc17687",
+      "bytes": 185540,
+      "documentation_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-dlpcompliancepolicy?view=exchange-ps"
+    },
+    {
+      "id": "M8",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/export-activityexplorerdata?view=exchange-ps",
+      "retrieved_at": "2026-11-11T07:15:49.791862+00:00",
+      "curl_returncode": 0,
+      "sha256": "bfa8d6a83d02dd1248aa51009baaca60019fe330ac68778e16984653e26e9abb",
+      "bytes": 80043,
+      "documentation_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/export-activityexplorerdata?view=exchange-ps"
+    },
+    {
+      "id": "M9",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/security-api-overview?view=graph-rest-1.0",
+      "retrieved_at": "2026-11-11T07:16:01.209982+00:00",
+      "curl_returncode": 0,
+      "sha256": "5c3b78e685b41be100de50a6f0f5a8e3847705d893cffa20867a46f1451b8338",
+      "bytes": 89756,
+      "documentation_url": "https://learn.microsoft.com/en-us/graph/api/resources/security-api-overview?view=graph-rest-1.0"
+    },
+    {
+      "id": "M10",
+      "url": "https://learn.microsoft.com/en-us/graph/api/resources/enums-security?view=graph-rest-1.0",
+      "retrieved_at": "2026-11-11T07:16:33.172963+00:00",
+      "curl_returncode": 0,
+      "sha256": "ace0676af08d3756c090dc916e02f66bed82837032788362e0a41be4cc07e336",
+      "bytes": 91537,
+      "documentation_url": "https://learn.microsoft.com/en-us/graph/api/resources/enums-security?view=graph-rest-1.0"
+    },
+    {
+      "id": "M11",
+      "url": "https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-reference",
+      "retrieved_at": "2026-11-11T07:17:48.799098+00:00",
+      "curl_returncode": 0,
+      "sha256": "74c8a6fb67d875abae752fc1239657b31a64a3b6963249dacc9795564fca10be",
+      "bytes": 82203,
+      "documentation_url": "https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-reference"
+    },
+    {
+      "id": "M12",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps",
+      "retrieved_at": "2026-11-11T07:22:44.535854+00:00",
+      "curl_returncode": 0,
+      "sha256": "b0f3dd0383081a12497ca0d0a5a0e282564c84de8ddf663046628e2d173a98d0",
+      "bytes": 63491,
+      "documentation_url": "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-dlpcompliancepolicy?view=exchange-ps"
+    },
+    {
+      "id": "D1",
+      "url": "https://learn.microsoft.com/en-us/defender-cloud-apps/api-alerts",
+      "retrieved_at": "2026-11-11T07:17:48.531446+00:00",
+      "curl_returncode": 0,
+      "sha256": "abfa0dab7fb1abe5e4aba22fc120f4ecaaea5a7dddbc17a4ff2a9314657a995d",
+      "bytes": 54294,
+      "documentation_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/api-alerts"
+    },
+    {
+      "id": "D2",
+      "url": "https://learn.microsoft.com/en-us/defender-cloud-apps/data-protection-policies",
+      "retrieved_at": "2026-11-11T07:17:48.405176+00:00",
+      "curl_returncode": 0,
+      "sha256": "de350e30bca463aacbd4071526fe05b81061bc4379152a812d3a93a96d3c7d9c",
+      "bytes": 79190,
+      "documentation_url": "https://learn.microsoft.com/en-us/defender-cloud-apps/data-protection-policies"
+    },
+    {
+      "id": "N1",
+      "url": "https://docs.netskope.com/en/netskope-tenant-plugin",
+      "retrieved_at": "2026-11-11T07:16:02.097204+00:00",
+      "curl_returncode": 0,
+      "sha256": "8e03ab4e218ae7e4a85c894433af9661eb72757f452a5497aa8a2d4b80853b89",
+      "bytes": 446465,
+      "documentation_url": "https://docs.netskope.com/en/netskope-tenant-plugin"
+    },
+    {
+      "id": "N2",
+      "url": "https://docs.netskope.com/en/api-tokens-2",
+      "retrieved_at": "2026-11-11T07:17:48.372998+00:00",
+      "curl_returncode": 0,
+      "sha256": "f36b3453ff2d77adf580d2d115646446c7424b71085ca18ad811c13267112de1",
+      "bytes": 265027,
+      "documentation_url": "https://docs.netskope.com/en/api-tokens-2"
+    },
+    {
+      "id": "N3",
+      "url": "https://raw.githubusercontent.com/netskopeoss/AI_Integrations_Reference_MarkDownFiles/main/DLP-Incident-Management.md",
+      "retrieved_at": "2026-11-11T07:17:48.223512+00:00",
+      "curl_returncode": 0,
+      "sha256": "61156cd54c057217e0458a03b2271f80196e3cf41b18187169ba0ed83981b795",
+      "bytes": 8081,
+      "documentation_url": "https://github.com/netskopeoss/AI_Integrations_Reference_MarkDownFiles/blob/main/DLP-Incident-Management.md"
+    },
+    {
+      "id": "S1",
+      "url": "https://docs.strac.io/",
+      "retrieved_at": "2026-11-11T07:14:55.581688+00:00",
+      "curl_returncode": 0,
+      "sha256": "5fef65845a7945782cf3fa82baf97b1a9312689d25caa043805fe1f17a5ae347",
+      "bytes": 894440,
+      "documentation_url": "https://docs.strac.io/"
+    },
+    {
+      "id": "T1",
+      "url": "https://docs.teleskope.ai/the-platform/api-service.md",
+      "retrieved_at": "2026-11-11T07:14:54.165118+00:00",
+      "curl_returncode": 0,
+      "sha256": "fd502c2ab5273fc8c2ff54ff0ecc2c33d4a73ea07988e92105b60935b6e99f3a",
+      "bytes": 2981,
+      "documentation_url": "https://docs.teleskope.ai/the-platform/api-service"
+    },
+    {
+      "id": "T2",
+      "url": "https://docs.teleskope.ai/the-platform/api-service/scanning-api/v1-classify-file.md",
+      "retrieved_at": "2026-11-11T07:14:53.870158+00:00",
+      "curl_returncode": 0,
+      "sha256": "eb76955f81a21748a7077028c287569a69c8b38c4693a1901e597b7e1631c89c",
+      "bytes": 3506,
+      "documentation_url": "https://docs.teleskope.ai/the-platform/api-service/scanning-api/v1-classify-file"
+    },
+    {
+      "id": "T3",
+      "url": "https://docs.teleskope.ai/the-platform/api-service/scanning-api/v1-scan.md",
+      "retrieved_at": "2026-11-11T07:14:54.286864+00:00",
+      "curl_returncode": 0,
+      "sha256": "49ce679902d2a4b5979c21e105997e9a69c4a799f43948e5d0d15a4aecaf1e48",
+      "bytes": 4973,
+      "documentation_url": "https://docs.teleskope.ai/the-platform/api-service/scanning-api/v1-scan"
+    },
+    {
+      "id": "T4",
+      "url": "https://docs.teleskope.ai/the-platform/api-service/policy-maker-api/v1-policy-maker-policies-add-email.md",
+      "retrieved_at": "2026-11-11T07:14:54.106389+00:00",
+      "curl_returncode": 0,
+      "sha256": "d3081148b406ef9767e458b3b603b4ea27581114b92b678782eee99213569593",
+      "bytes": 1196,
+      "documentation_url": "https://docs.teleskope.ai/the-platform/api-service/policy-maker-api/v1-policy-maker-policies-add-email"
+    },
+    {
+      "id": "T5",
+      "url": "https://docs.teleskope.ai/the-platform/api-service/metadata/aws/s3/aws-s3-api.md",
+      "retrieved_at": "2026-11-11T07:14:54.051229+00:00",
+      "curl_returncode": 0,
+      "sha256": "f8cc13ffdcebb8f46c41fda1f11d4a3a6455b677ef429a296e267054eafb5a14",
+      "bytes": 6291,
+      "documentation_url": "https://docs.teleskope.ai/the-platform/api-service/metadata/aws/s3/aws-s3-api"
+    },
+    {
+      "id": "T6",
+      "url": "https://docs.teleskope.ai/the-platform/api-service/scanning-api/v1-classify.md",
+      "retrieved_at": "2026-11-11T07:18:17.969050+00:00",
+      "curl_returncode": 0,
+      "sha256": "9e960cbe7ba078818014a5833ecf3f6cfb31e88692e7d2bc48d20e01c22f2cfd",
+      "bytes": 5083,
+      "documentation_url": "https://docs.teleskope.ai/the-platform/api-service/scanning-api/v1-classify"
+    },
+    {
+      "id": "A1",
+      "url": "https://docs.aws.amazon.com/macie/latest/APIReference/findings-describe.html",
+      "retrieved_at": "2026-11-11T07:15:49.618148+00:00",
+      "curl_returncode": 0,
+      "sha256": "d26f397d554e3aa5d3bf94e3c782f010b9295a912f527c12e26939605c5ee03e",
+      "bytes": 160925,
+      "documentation_url": "https://docs.aws.amazon.com/macie/latest/APIReference/findings-describe.html"
+    },
+    {
+      "id": "A2",
+      "url": "https://docs.aws.amazon.com/macie/latest/APIReference/findingsfilters.html",
+      "retrieved_at": "2026-11-11T07:15:49.543210+00:00",
+      "curl_returncode": 0,
+      "sha256": "1ba148523ecd5ffc21dbe7c4b77d2d015c87c478057dd88ec81ce33b30af6f2f",
+      "bytes": 51413,
+      "documentation_url": "https://docs.aws.amazon.com/macie/latest/APIReference/findingsfilters.html"
+    },
+    {
+      "id": "A3",
+      "url": "https://docs.aws.amazon.com/macie/latest/user/findings-retrieve-sd-proc.html",
+      "retrieved_at": "2026-11-11T07:15:49.511292+00:00",
+      "curl_returncode": 0,
+      "sha256": "13f84c2be647b66638c863e82875ea4586b6dd4e836d2af1fe4204e6dd910ff2",
+      "bytes": 42085,
+      "documentation_url": "https://docs.aws.amazon.com/macie/latest/user/findings-retrieve-sd-proc.html"
+    },
+    {
+      "id": "A4",
+      "url": "https://docs.aws.amazon.com/macie/latest/APIReference/operations.html",
+      "retrieved_at": "2026-11-11T07:22:43.969909+00:00",
+      "curl_returncode": 0,
+      "sha256": "737c605cdf001f5d52fc8b3453794711c2b8bbde761c2898bc180a20914d086e",
+      "bytes": 29469,
+      "documentation_url": "https://docs.aws.amazon.com/macie/latest/APIReference/operations.html"
+    },
+    {
+      "id": "PA1",
+      "url": "https://pan.dev/dlp/api/",
+      "retrieved_at": "2026-11-11T07:16:54.792675+00:00",
+      "curl_returncode": 0,
+      "sha256": "aaf507abb4d2bce96f5cbd919eb6e060c6204528cef6b4ae78d1d20161fc8578",
+      "bytes": 24405,
+      "documentation_url": "https://pan.dev/dlp/api/"
+    },
+    {
+      "id": "PA2",
+      "url": "https://pan.dev/cdss/docs/release-notes/",
+      "retrieved_at": "2026-11-11T07:16:55.329808+00:00",
+      "curl_returncode": 0,
+      "sha256": "ae320cae46f4296a6f5bd55afe79b8b20179855c4f115c8c2f76c7e8aed7a310",
+      "bytes": 61257,
+      "documentation_url": "https://pan.dev/cdss/docs/release-notes/"
+    },
+    {
+      "id": "PA3",
+      "url": "https://pan.dev/dlp/api/get-v-2-api-incidents-incidentid/",
+      "retrieved_at": "2026-11-11T07:16:55.883643+00:00",
+      "curl_returncode": 0,
+      "sha256": "3711989d08ffdcab98c5832d6f8dba8d37b84018aca921f3dce5ba240a91dfed",
+      "bytes": 28403,
+      "documentation_url": "https://pan.dev/dlp/api/get-v-2-api-incidents-incidentid/"
+    },
+    {
+      "id": "G1",
+      "url": "https://docs.cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/projects.content/inspect",
+      "retrieved_at": "2026-11-11T07:15:50.713538+00:00",
+      "curl_returncode": 0,
+      "sha256": "fd230ed307a43fef80f431b1f2d6f7f7690c011b85cb34f5537140edee09869f",
+      "bytes": 190557,
+      "documentation_url": "https://docs.cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/projects.content/inspect"
+    },
+    {
+      "id": "G2",
+      "url": "https://docs.cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/InspectConfig",
+      "retrieved_at": "2026-11-11T07:15:50.617591+00:00",
+      "curl_returncode": 0,
+      "sha256": "048175264837983d2a98992ac86ba51dadf77cc992d24a04653ed96f27a9d3c7",
+      "bytes": 300986,
+      "documentation_url": "https://docs.cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/InspectConfig"
+    },
+    {
+      "id": "G3",
+      "url": "https://dlp.googleapis.com/$discovery/rest?version=v2",
+      "retrieved_at": "2026-11-11T07:17:48.819952+00:00",
+      "curl_returncode": 0,
+      "sha256": "bdb7bfadb0c847703fc045b84bd76bfa74647c32fa75a11f8fca3537e039a5dd",
+      "bytes": 737835,
+      "documentation_url": "https://dlp.googleapis.com/$discovery/rest?version=v2"
+    },
+    {
+      "id": "PR2",
+      "url": "https://presidio.dataprivacystack.org/getting_started/getting_started_text/",
+      "retrieved_at": "2026-11-11T07:18:18.491487+00:00",
+      "curl_returncode": 0,
+      "sha256": "f86eb726bd84dc1913b3950b60b463283d2d022a98cefcab19f6d2140f61f3b3",
+      "bytes": 94813,
+      "documentation_url": "https://presidio.dataprivacystack.org/getting_started/getting_started_text/"
+    },
+    {
+      "id": "PR3",
+      "url": "https://raw.githubusercontent.com/data-privacy-stack/presidio/1d7005932261a4b676e045d16fa2965dbc4b4ba2/docs/api-docs/api-docs.yml",
+      "retrieved_at": "2026-11-11T07:18:17.873560+00:00",
+      "curl_returncode": 0,
+      "sha256": "40a13acd7c399bef5467faea43d4d4d42bd5beb8bb3c942f5971f7484ce7e210",
+      "bytes": 26365,
+      "documentation_url": "https://github.com/data-privacy-stack/presidio/blob/1d7005932261a4b676e045d16fa2965dbc4b4ba2/docs/api-docs/api-docs.yml"
+    },
+    {
+      "id": "O1",
+      "url": "https://raw.githubusercontent.com/openai/privacy-filter/f7f00ca7fb869683eb732c010299d901457f19c3/README.md",
+      "retrieved_at": "2026-11-11T07:17:48.966018+00:00",
+      "curl_returncode": 0,
+      "sha256": "8b662b599192189e36102b11fc7c319b692b7454262e0c6efc8ef5a869f50eb2",
+      "bytes": 12612,
+      "documentation_url": "https://github.com/openai/privacy-filter/blob/f7f00ca7fb869683eb732c010299d901457f19c3/README.md"
+    },
+    {
+      "id": "O2",
+      "url": "https://developers.openai.com/api/docs/guides/agent-builder-safety",
+      "retrieved_at": "2026-11-11T07:23:04.464653+00:00",
+      "curl_returncode": 0,
+      "sha256": "c7a1af55a5a1351ef36be844a694b0b9cca2f2f2bef2bd5e7dd2f5a35d17019a",
+      "bytes": 406354,
+      "documentation_url": "https://developers.openai.com/api/docs/guides/agent-builder-safety#use-guardrails-for-user-inputs"
+    },
+    {
+      "id": "AN1",
+      "url": "https://platform.claude.com/docs/en/about-claude/use-case-guides/content-moderation",
+      "retrieved_at": "2026-11-11T07:17:49.361017+00:00",
+      "curl_returncode": 0,
+      "sha256": "a80a1d8a9a054fc1c96d2552c143895f2fc5130cb40b3b057a7d7a427cd21569",
+      "bytes": 1504272,
+      "documentation_url": "https://platform.claude.com/docs/en/about-claude/use-case-guides/content-moderation"
+    },
+    {
+      "id": "BI1",
+      "url": "https://developer.bigid.com/api/data-posture-api-tutorial/",
+      "retrieved_at": "2026-11-11T07:31:28.455995+00:00",
+      "curl_returncode": 0,
+      "sha256": "85f3673e66dc149591ef71171ab840822ad71fa93194b2626014cdd7311a7f35",
+      "bytes": 168506,
+      "documentation_url": "https://developer.bigid.com/api/data-posture-api-tutorial/"
+    },
+    {
+      "id": "BI2",
+      "url": "https://developer.bigid.com/api/scan-profiles-api-tutorial/",
+      "retrieved_at": "2026-11-11T07:31:28.170903+00:00",
+      "curl_returncode": 0,
+      "sha256": "fc8f4bb79c8e4be3a4e7a2dc6d838f50e64745ceab6410520843d52b0e7747e4",
+      "bytes": 115506,
+      "documentation_url": "https://developer.bigid.com/api/scan-profiles-api-tutorial/"
+    },
+    {
+      "id": "BI3",
+      "url": "https://developer.bigid.com/api/scan-insights-api-tutorial/",
+      "retrieved_at": "2026-11-11T07:31:28.236808+00:00",
+      "curl_returncode": 0,
+      "sha256": "5d8cdf941b1362fd07993c2bbf16547fa27d7513bdcccf0335ad9339ab0e5af6",
+      "bytes": 95944,
+      "documentation_url": "https://developer.bigid.com/api/scan-insights-api-tutorial/"
+    },
+    {
+      "id": "BI4",
+      "url": "https://developer.bigid.com/api/bigid-api-metadata-export-tutorial/",
+      "retrieved_at": "2026-11-11T07:32:25.001887+00:00",
+      "curl_returncode": 0,
+      "sha256": "0f27612d0f11e6c81e7844113f25a170a3ec9964aca14568dbf84dd272c10451",
+      "bytes": 101520,
+      "documentation_url": "https://developer.bigid.com/api/bigid-api-metadata-export-tutorial/"
+    },
+    {
+      "id": "BI5",
+      "url": "https://developer.bigid.com/api/bigid-api-token-authentication/",
+      "retrieved_at": "2026-11-11T07:32:25.110819+00:00",
+      "curl_returncode": 0,
+      "sha256": "3b988ba33ec1e04930f3e7732de89985014b78aaaf25115032480bb0e665e780",
+      "bytes": 48544,
+      "documentation_url": "https://developer.bigid.com/api/bigid-api-token-authentication/"
+    },
+    {
+      "id": "BI6",
+      "url": "https://developer.bigid.com/api/bigid-api-scan-data-in-motion-tutorial/",
+      "retrieved_at": "2026-11-11T07:32:25.059466+00:00",
+      "curl_returncode": 0,
+      "sha256": "fa3ed4945974eb38ee904189668ae7a21e398b7a97f06cb2d1faa2cfda80db9f",
+      "bytes": 138107,
+      "documentation_url": "https://developer.bigid.com/api/bigid-api-scan-data-in-motion-tutorial/"
+    },
+    {
+      "id": "BI7",
+      "url": "https://bigid.com/data-coverage/gdrive/",
+      "retrieved_at": "2026-11-11T07:32:26.260011+00:00",
+      "curl_returncode": 0,
+      "sha256": "584ee2bd0e302752b67eb9193daf7680d1fdd2a45684619b249891b58f543d6b",
+      "bytes": 130601,
+      "documentation_url": "https://bigid.com/data-coverage/gdrive/"
+    },
+    {
+      "id": "BI8",
+      "url": "https://developer.bigid.com/connectors/what-is-a-bigid-connector/",
+      "retrieved_at": "2026-11-11T07:32:25.247360+00:00",
+      "curl_returncode": 0,
+      "sha256": "d4737ddd56ae077edac463acadbf94f6e6578f2eba4102f8c27049ac7b512d50",
+      "bytes": 134919,
+      "documentation_url": "https://developer.bigid.com/connectors/what-is-a-bigid-connector/"
+    },
+    {
+      "id": "BI9",
+      "url": "https://raw.githubusercontent.com/bigexchange/bigid-plugin-official/eaa78ae83c085b7e781022bc880a4342ef64b6ed/README.md",
+      "retrieved_at": "2026-11-11T07:31:59.962372+00:00",
+      "curl_returncode": 0,
+      "sha256": "aa2ea853e7c1bffc98b1ea48fc2cd3412031739014d0ed627670d2abdd084b5a",
+      "bytes": 17769,
+      "documentation_url": "https://github.com/bigexchange/bigid-plugin-official/blob/eaa78ae83c085b7e781022bc880a4342ef64b6ed/README.md"
+    },
+    {
+      "id": "BI10",
+      "url": "https://raw.githubusercontent.com/bigexchange/bigid-plugin-official/eaa78ae83c085b7e781022bc880a4342ef64b6ed/skills/bigid-security-posture/SKILL.md",
+      "retrieved_at": "2026-11-11T07:32:00.495099+00:00",
+      "curl_returncode": 0,
+      "sha256": "0f152b2e54dfcee2a57475665e69984e7f74163355a7c97705e519640d505cdb",
+      "bytes": 28902,
+      "documentation_url": "https://github.com/bigexchange/bigid-plugin-official/blob/eaa78ae83c085b7e781022bc880a4342ef64b6ed/skills/bigid-security-posture/SKILL.md"
+    },
+    {
+      "id": "BI11",
+      "url": "https://bigid.com/blog/hardcoded-secret-detection-with-bigid/",
+      "retrieved_at": "2026-11-11T07:32:59.958608+00:00",
+      "curl_returncode": 0,
+      "sha256": "b6f99424c841aa949fb7ee85b7ff70ec86febbf585c855f697016264f15eaab2",
+      "bytes": 86281,
+      "documentation_url": "https://bigid.com/blog/hardcoded-secret-detection-with-bigid/"
+    },
+    {
+      "id": "BI12",
+      "url": "https://bigid.com/blog/bigid-scanning-guide/",
+      "retrieved_at": "2026-11-11T07:33:01.112197+00:00",
+      "curl_returncode": 0,
+      "sha256": "bc9d1a0d81cb08561845a057928980fdb2ef519e6a49a16b63d8dce60d3d6821",
+      "bytes": 97554,
+      "documentation_url": "https://bigid.com/blog/bigid-scanning-guide/"
+    },
+    {
+      "id": "BI13",
+      "url": "https://bigid.com/solutions/privacy-and-compliance/",
+      "retrieved_at": "2026-11-11T07:32:59.976771+00:00",
+      "curl_returncode": 0,
+      "sha256": "1710017200b3d4caa7a3d3106657ff7f580f13907f6617683aa3d3a3db6dba8b",
+      "bytes": 223417,
+      "documentation_url": "https://bigid.com/solutions/privacy-and-compliance/"
+    },
+    {
+      "id": "BI14",
+      "url": "https://bigid.com/embedded-bigid/",
+      "retrieved_at": "2026-11-11T07:33:01.141684+00:00",
+      "curl_returncode": 0,
+      "sha256": "8d8e24db4f088f5e4487bea311a0a45f8ea03f99fec5d4f636889c2fa536359e",
+      "bytes": 83565,
+      "documentation_url": "https://bigid.com/embedded-bigid/"
+    },
+    {
+      "id": "BI15",
+      "url": "https://bigid.com/solutions/discovery-classification/",
+      "retrieved_at": "2026-11-11T07:32:59.953100+00:00",
+      "curl_returncode": 0,
+      "sha256": "57678b9dcb4a11531b1e7212e2ace07f189a35ee315ba90e253e842932d2cd05",
+      "bytes": 184740,
+      "documentation_url": "https://bigid.com/solutions/discovery-classification/"
+    }
+  ],
+  "selected_api_definition_checks": {
+    "nightfall_native_api": [
+      {
+        "method": "get",
+        "path": "/violations",
+        "summary": "Fetch violations"
+      },
+      {
+        "method": "get",
+        "path": "/violations/{violationId}",
+        "summary": "Fetch violation"
+      },
+      {
+        "method": "get",
+        "path": "/violations/search",
+        "summary": "Search violations"
+      },
+      {
+        "method": "get",
+        "path": "/violations/{violationId}/findings",
+        "summary": "Fetch violation findings"
+      },
+      {
+        "method": "post",
+        "path": "/violations/actions",
+        "summary": "Take an action on Violations"
+      },
+      {
+        "method": "get",
+        "path": "/annotations/{annotationId}",
+        "summary": "Fetch annotation"
+      },
+      {
+        "method": "post",
+        "path": "/findings/{findingId}/annotate",
+        "summary": "Annotate finding"
+      },
+      {
+        "method": "post",
+        "path": "/findings/{findingId}/unannotate",
+        "summary": "Remove finding annotation"
+      },
+      {
+        "method": "get",
+        "path": "/violations/{violationId}/activity",
+        "summary": "Fetch violation activity feed"
+      }
+    ],
+    "nightfall_annotation_autoApply_default": true,
+    "google_cloud_dlp_revision": "20261106",
+    "google_cloud_InspectResult_fields": [
+      "findings",
+      "findingsTruncated"
+    ],
+    "presidio_api_commit": "1d7005932261a4b676e045d16fa2965dbc4b4ba2",
+    "privacy_filter_api_commit": "f7f00ca7fb869683eb732c010299d901457f19c3",
+    "bigid_public_documentation": {
+      "mcp_repository": "bigexchange/bigid-plugin-official",
+      "mcp_commit": "eaa78ae83c085b7e781022bc880a4342ef64b6ed",
+      "rest_paths_confirmed": [
+        "GET /api/v1/actionable-insights/all-cases",
+        "PATCH /api/v1/actionable-insights/case-status/{caseId}",
+        "GET /api/v1/data-catalog/objects/stream",
+        "GET /api/v1/data-catalog/object-details/attributes",
+        "POST /api/v1/scanProfiles",
+        "POST /api/v1/scans",
+        "GET /api/v1/scans/parent-scans",
+        "GET /api/v1/scans/{id}/status"
+      ],
+      "case_statuses_in_public_mcp_instructions": [
+        "open",
+        "closed",
+        "resolved",
+        "acknowledged",
+        "remediated",
+        "silenced"
+      ],
+      "catalog_stream_minimum_version": "v250",
+      "mcp_description_not_tenant_execution": true
+    }
+  },
+  "unavailable_reference_checks": [
+    {
+      "url": "https://api.bigid.com/doc/dspm/",
+      "checked_on": "2026-11-11",
+      "result": "公式ポータルからのリンク。web取得で404。完全なAPI参照の検証済み根拠には使わず、公開チュートリアルと固定版MCP説明を区別した。"
+    }
+  ]
+}

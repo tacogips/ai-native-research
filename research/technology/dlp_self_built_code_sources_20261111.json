@@ -1,0 +1,106 @@
+{
+  "調査日": "2026-11-11",
+  "注記": "公開リポジトリの取得時点の版と保守状態。コードは実行していない。",
+  "repositories": [
+    {
+      "repository": "truefinder/pii_in_google_drive",
+      "url": "https://github.com/truefinder/pii_in_google_drive",
+      "commit": "91eaf0712f269a9846081d9e5d469c2d1d8c20ee",
+      "default_branch": "main",
+      "archived": false,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:47:13.411141+00:00",
+      "commit_url": "https://github.com/truefinder/pii_in_google_drive/commit/91eaf0712f269a9846081d9e5d469c2d1d8c20ee"
+    },
+    {
+      "repository": "Yelp/detect-secrets",
+      "url": "https://github.com/Yelp/detect-secrets",
+      "commit": "5e141933554a0b74e7341841f318be21e895339c",
+      "default_branch": "master",
+      "archived": false,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:47:13.664943+00:00",
+      "commit_url": "https://github.com/Yelp/detect-secrets/commit/5e141933554a0b74e7341841f318be21e895339c"
+    },
+    {
+      "repository": "gitleaks/gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "commit": "5f6ec56cfa6f8c67648d863582c7ae2f206d5c1c",
+      "default_branch": "master",
+      "archived": false,
+      "license": "MIT",
+      "retrieved_at": "2026-11-11T06:47:13.667853+00:00",
+      "commit_url": "https://github.com/gitleaks/gitleaks/commit/5f6ec56cfa6f8c67648d863582c7ae2f206d5c1c"
+    },
+    {
+      "repository": "capitalone/DataProfiler",
+      "url": "https://github.com/capitalone/DataProfiler",
+      "commit": "5062fb344e2d348e9fa943cf8959a941c60e587e",
+      "default_branch": "main",
+      "archived": false,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:47:13.732508+00:00",
+      "commit_url": "https://github.com/capitalone/DataProfiler/commit/5062fb344e2d348e9fa943cf8959a941c60e587e"
+    },
+    {
+      "repository": "tokern/piicatcher",
+      "url": "https://github.com/tokern/piicatcher",
+      "commit": "e1eab89843886e4b3c7cd01183fca6240d164745",
+      "default_branch": "master",
+      "archived": true,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:47:15.105383+00:00",
+      "commit_url": "https://github.com/tokern/piicatcher/commit/e1eab89843886e4b3c7cd01183fca6240d164745"
+    },
+    {
+      "repository": "sserada/fuseji",
+      "url": "https://github.com/sserada/fuseji",
+      "commit": "86f63e7ab6e156ccfbfa182e1521be81974823bc",
+      "default_branch": "main",
+      "archived": false,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:47:15.703233+00:00",
+      "commit_url": "https://github.com/sserada/fuseji/commit/86f63e7ab6e156ccfbfa182e1521be81974823bc"
+    },
+    {
+      "repository": "TheMoMatthias/Anonymizer",
+      "url": "https://github.com/TheMoMatthias/Anonymizer",
+      "commit": "bf4ae651446faebb63e4d7170641b5578f63f642",
+      "default_branch": "master",
+      "archived": false,
+      "license": null,
+      "retrieved_at": "2026-11-11T06:47:15.609119+00:00",
+      "commit_url": "https://github.com/TheMoMatthias/Anonymizer/commit/bf4ae651446faebb63e4d7170641b5578f63f642"
+    },
+    {
+      "repository": "data-privacy-stack/presidio",
+      "url": "https://github.com/data-privacy-stack/presidio",
+      "commit": "1d7005932261a4b676e045d16fa2965dbc4b4ba2",
+      "default_branch": "main",
+      "archived": false,
+      "license": "MIT",
+      "retrieved_at": "2026-11-11T06:47:16.646158+00:00",
+      "commit_url": "https://github.com/data-privacy-stack/presidio/commit/1d7005932261a4b676e045d16fa2965dbc4b4ba2"
+    },
+    {
+      "repository": "openai/privacy-filter",
+      "url": "https://github.com/openai/privacy-filter",
+      "commit": "f7f00ca7fb869683eb732c010299d901457f19c3",
+      "default_branch": "main",
+      "archived": false,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:57:48.233481+00:00",
+      "commit_url": "https://github.com/openai/privacy-filter/commit/f7f00ca7fb869683eb732c010299d901457f19c3"
+    },
+    {
+      "repository": "teamchong/textsift",
+      "url": "https://github.com/teamchong/textsift",
+      "commit": "dfcbca69e964eebec905933c19e6a77688985a5e",
+      "default_branch": "main",
+      "archived": false,
+      "license": "Apache-2.0",
+      "retrieved_at": "2026-11-11T06:57:48.334209+00:00",
+      "commit_url": "https://github.com/teamchong/textsift/commit/dfcbca69e964eebec905933c19e6a77688985a5e"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "as_of": "2026-10-08",
+  "method": "公開開発版の固定コード解析。開発版と安定配布版は同一とは限らない。",
+  "snapshots": [
+    {
+      "repository": "NVIDIA-NeMo/Guardrails",
+      "commit": "9f793de53e432c4c9c765975f5dd54df175fcb6e",
+      "commit_date": "2026-10-07T12:58:02-05:00",
+      "local_directory": "research/disclosures/raw/harness_20261008/guardrails/nemo"
+    },
+    {
+      "repository": "meta-llama/PurpleLlama",
+      "commit": "172c1074069eb88ec834124272c1b1c4f8893445",
+      "commit_date": "2026-09-29T16:05:44-07:00",
+      "local_directory": "research/disclosures/raw/harness_20261008/guardrails/llamafirewall"
+    },
+    {
+      "repository": "protectai/llm-guard",
+      "commit": "168c1034ffdb33837e7ae6fd6a16b80567c1be03",
+      "commit_date": "2026-07-09T01:58:39+02:00",
+      "local_directory": "research/disclosures/raw/harness_20261008/guardrails/llmguard"
+    },
+    {
+      "repository": "guardrails-ai/guardrails",
+      "commit": "06d0ff2c5f9bcb493d976b76f885e37e41ce845d",
+      "commit_date": "2026-08-26T14:53:51-05:00",
+      "local_directory": "research/disclosures/raw/harness_20261008/guardrails/guardrailsai"
+    },
+    {
+      "repository": "microsoft/presidio",
+      "commit": "d8847904621733f4eaad4f9bd977b96a11325c90",
+      "commit_date": "2026-10-04T11:07:17Z",
+      "local_directory": "research/disclosures/raw/harness_20261008/guardrails/presidio"
+    }
+  ],
+  "documents": [
+    {
+      "repository": "NVIDIA-NeMo/Guardrails",
+      "commit": "9f793de53e432c4c9c765975f5dd54df175fcb6e",
+      "source_url": "https://github.com/NVIDIA-NeMo/Guardrails/blob/9f793de53e432c4c9c765975f5dd54df175fcb6e/nemoguardrails/library/sensitive_data_detection/actions.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/nemo/nemoguardrails/library/sensitive_data_detection/actions.py",
+      "sha256": "0bf0a64eeeea3d33d2751b218e59c0a518e77b295069e7ac438ceb6a586ca3d9",
+      "lines": 243,
+      "status": "取得済み"
+    },
+    {
+      "repository": "NVIDIA-NeMo/Guardrails",
+      "commit": "9f793de53e432c4c9c765975f5dd54df175fcb6e",
+      "source_url": "https://github.com/NVIDIA-NeMo/Guardrails/blob/9f793de53e432c4c9c765975f5dd54df175fcb6e/nemoguardrails/rails/llm/config.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/nemo/nemoguardrails/rails/llm/config.py",
+      "sha256": "2d14946759aa47b4a2f06a657d413bdd684899313707ccccfd6390870a837b96",
+      "lines": 1554,
+      "status": "取得済み"
+    },
+    {
+      "repository": "NVIDIA-NeMo/Guardrails",
+      "commit": "9f793de53e432c4c9c765975f5dd54df175fcb6e",
+      "source_url": "https://github.com/NVIDIA-NeMo/Guardrails/blob/9f793de53e432c4c9c765975f5dd54df175fcb6e/nemoguardrails/rails/llm/llmrails.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/nemo/nemoguardrails/rails/llm/llmrails.py",
+      "sha256": "c6a104c1e4e0ce1476fc12621dd428977b15869cabe8a9b174d3fa4dbe39aa6b",
+      "lines": 2200,
+      "status": "取得済み"
+    },
+    {
+      "repository": "meta-llama/PurpleLlama",
+      "commit": "172c1074069eb88ec834124272c1b1c4f8893445",
+      "source_url": "https://github.com/meta-llama/PurpleLlama/blob/172c1074069eb88ec834124272c1b1c4f8893445/LlamaFirewall/src/llamafirewall/llamafirewall.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/llamafirewall.py",
+      "sha256": "ff2552182c5d9d8e25d579340bd5456ab54658e83c735ee4cfa96b6b4de8a07a",
+      "lines": 309,
+      "status": "取得済み"
+    },
+    {
+      "repository": "meta-llama/PurpleLlama",
+      "commit": "172c1074069eb88ec834124272c1b1c4f8893445",
+      "source_url": "https://github.com/meta-llama/PurpleLlama/blob/172c1074069eb88ec834124272c1b1c4f8893445/LlamaFirewall/src/llamafirewall/scanners/custom_check_scanner.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/scanners/custom_check_scanner.py",
+      "sha256": "5ae7135cff31bd6367851929add74c21899d040b481937caf0c9e366316a210b",
+      "lines": 103,
+      "status": "取得済み"
+    },
+    {
+      "repository": "meta-llama/PurpleLlama",
+      "commit": "172c1074069eb88ec834124272c1b1c4f8893445",
+      "source_url": "https://github.com/meta-llama/PurpleLlama/blob/172c1074069eb88ec834124272c1b1c4f8893445/LlamaFirewall/src/llamafirewall/scanners/experimental/piicheck_scanner.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/scanners/experimental/piicheck_scanner.py",
+      "sha256": "386bf57c38d94f75799ddeaf32703283383b751affcac15f6fe216049101b1a1",
+      "lines": 168,
+      "status": "取得済み"
+    },
+    {
+      "repository": "meta-llama/PurpleLlama",
+      "commit": "172c1074069eb88ec834124272c1b1c4f8893445",
+      "source_url": "https://github.com/meta-llama/PurpleLlama/blob/172c1074069eb88ec834124272c1b1c4f8893445/LlamaFirewall/src/llamafirewall/utils/base_llm.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llamafirewall/LlamaFirewall/src/llamafirewall/utils/base_llm.py",
+      "sha256": "34b32a9b459dcfbfe6bd40e2747dbbbe6e0f1667e43ffca668e39844b1ea5232",
+      "lines": 104,
+      "status": "取得済み"
+    },
+    {
+      "repository": "protectai/llm-guard",
+      "commit": "168c1034ffdb33837e7ae6fd6a16b80567c1be03",
+      "source_url": "https://github.com/protectai/llm-guard/blob/168c1034ffdb33837e7ae6fd6a16b80567c1be03/llm_guard/evaluate.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llmguard/llm_guard/evaluate.py",
+      "sha256": "513f5f701052cfcf4e25086262d56dc36efd514dead4037efaffb2fc42bd425d",
+      "lines": 127,
+      "status": "取得済み"
+    },
+    {
+      "repository": "protectai/llm-guard",
+      "commit": "168c1034ffdb33837e7ae6fd6a16b80567c1be03",
+      "source_url": "https://github.com/protectai/llm-guard/blob/168c1034ffdb33837e7ae6fd6a16b80567c1be03/llm_guard/output_scanners/deanonymize.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llmguard/llm_guard/output_scanners/deanonymize.py",
+      "sha256": "d7c5b32eba440c3b4430c7aa8ed9affac8784849710352b1b7553ddc0143b4bd",
+      "lines": 152,
+      "status": "取得済み"
+    },
+    {
+      "repository": "protectai/llm-guard",
+      "commit": "168c1034ffdb33837e7ae6fd6a16b80567c1be03",
+      "source_url": "https://github.com/protectai/llm-guard/blob/168c1034ffdb33837e7ae6fd6a16b80567c1be03/llm_guard/vault.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/llmguard/llm_guard/vault.py",
+      "sha256": "f35f9ebf0f09b13363bdc2d861e7c44aa588a63429dd14789cefb58b60e5b0b7",
+      "lines": 35,
+      "status": "取得済み"
+    },
+    {
+      "repository": "guardrails-ai/guardrails",
+      "commit": "06d0ff2c5f9bcb493d976b76f885e37e41ce845d",
+      "source_url": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/validator_service/validator_service_base.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/guardrailsai/guardrails/validator_service/validator_service_base.py",
+      "sha256": "fc3cda7a3b4e11c0f752d39121b45c3e76bec4d9028f6c51badab2d872c321ca",
+      "lines": 198,
+      "status": "取得済み"
+    },
+    {
+      "repository": "microsoft/presidio",
+      "commit": "d8847904621733f4eaad4f9bd977b96a11325c90",
+      "source_url": "https://github.com/microsoft/presidio/blob/d8847904621733f4eaad4f9bd977b96a11325c90/README.md",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/presidio/README.md",
+      "sha256": "b553970feb389eaa4cb4a09362ee1a5825e4844a63ea2a2d729c6fca18a140e0",
+      "lines": 97,
+      "status": "取得済み"
+    },
+    {
+      "repository": "microsoft/presidio",
+      "commit": "d8847904621733f4eaad4f9bd977b96a11325c90",
+      "source_url": "https://github.com/microsoft/presidio/blob/d8847904621733f4eaad4f9bd977b96a11325c90/docs/supported_entities.md",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/presidio/docs/supported_entities.md",
+      "sha256": "f316d9dc6f2175d05474f3716ddf1a2997e56b4999d0b5e74fdc804bb09bd2e4",
+      "lines": 235,
+      "status": "取得済み"
+    },
+    {
+      "repository": "microsoft/presidio",
+      "commit": "d8847904621733f4eaad4f9bd977b96a11325c90",
+      "source_url": "https://github.com/microsoft/presidio/blob/d8847904621733f4eaad4f9bd977b96a11325c90/docs/tutorial/05_languages.md",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/presidio/docs/tutorial/05_languages.md",
+      "sha256": "a843d74a30c64623a4367384d7c9b2dc9a61e384240154de442f533cebad3c09",
+      "lines": 56,
+      "status": "取得済み"
+    },
+    {
+      "repository": "NVIDIA-NeMo/Guardrails",
+      "commit": "9f793de53e432c4c9c765975f5dd54df175fcb6e",
+      "source_url": "https://github.com/NVIDIA-NeMo/Guardrails/blob/9f793de53e432c4c9c765975f5dd54df175fcb6e/nemoguardrails/guardrails/iorails.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/nemo/nemoguardrails/guardrails/iorails.py",
+      "sha256": "c5985f85fbba4cbd5abf02e3cfbabdf490a8bde876386a5f5fcba03fc4853a64",
+      "lines": 2046,
+      "status": "取得済み"
+    },
+    {
+      "repository": "guardrails-ai/guardrails",
+      "commit": "06d0ff2c5f9bcb493d976b76f885e37e41ce845d",
+      "source_url": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/guard.py",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/guardrailsai/guardrails/guard.py",
+      "sha256": "69aa4e6c19d23bbcc49206a1a332c655fbd772dffd29126419b5c7c5a22a6dc4",
+      "lines": 1188,
+      "status": "取得済み"
+    },
+    {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc7519.txt",
+      "local_file": "research/disclosures/raw/harness_20261008/guardrails/rfc7519.txt",
+      "sha256": "fecd930e9ccf2276b95c0017c6c4ff5d09352e4bc3c7629946447894e0f97248",
+      "status": "取得済み",
+      "title": "RFC 7519: JSON Web Token (JWT)"
+    }
+  ],
+  "review_improvements": "独立レビューを反映し、追加根拠も固定原本と照合。"
+}

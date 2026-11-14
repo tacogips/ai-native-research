@@ -1,0 +1,280 @@
+{
+  "as_of": "2026-10-08",
+  "retrieved_at_utc": "2026-10-08T01:10:55.259060+00:00",
+  "repository": "https://github.com/openai/codex",
+  "ref": "rust-v0.161.0",
+  "commit": "979011409de0a60b52f179721948e65531d26144",
+  "commit_date": "2026-10-06T15:34:37-07:00",
+  "method": "公式文書取得と公開コードの静的確認。原本はGit管理外。OSの実機試験は未実施。",
+  "documents": [
+    {
+      "id": "codex:codex-rs/core/src/agent/child_config.rs",
+      "title": "codex-rs/core/src/agent/child_config.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/core/src/agent/child_config.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/core/src/agent/child_config.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "33d4dd6f70e6640af1059398272c48b88e16e0005105fbd1ef13e30456d39a39",
+      "lines": 365
+    },
+    {
+      "id": "codex:codex-rs/core/src/exec_policy.rs",
+      "title": "codex-rs/core/src/exec_policy.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/core/src/exec_policy.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/core/src/exec_policy.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "e31fa19073d5d9c2f89b12f743f24abd06966ed58e07e3a4f3d61ad275d91836",
+      "lines": 1175
+    },
+    {
+      "id": "codex:codex-rs/core/src/tools/handlers/mcp.rs",
+      "title": "codex-rs/core/src/tools/handlers/mcp.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/core/src/tools/handlers/mcp.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/core/src/tools/handlers/mcp.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "f52c5ea41ecdc41f0dad9a69494baf9ffbc23e90cd6bc6f8802b1c577775570d",
+      "lines": 904
+    },
+    {
+      "id": "codex:codex-rs/file-system/src/lib.rs",
+      "title": "codex-rs/file-system/src/lib.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/file-system/src/lib.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/file-system/src/lib.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "9b7fe888858c41554318ba039f468266aa067ceccc781131cd022ef87ca6b16c",
+      "lines": 714
+    },
+    {
+      "id": "codex:codex-rs/hooks/src/events/post_tool_use.rs",
+      "title": "codex-rs/hooks/src/events/post_tool_use.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/hooks/src/events/post_tool_use.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/hooks/src/events/post_tool_use.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "f8a40f77a3459113e5cbfd5466150833b2ff16ded33a2ec854d98f58b8e51906",
+      "lines": 637
+    },
+    {
+      "id": "codex:codex-rs/hooks/src/events/pre_tool_use.rs",
+      "title": "codex-rs/hooks/src/events/pre_tool_use.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/hooks/src/events/pre_tool_use.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/hooks/src/events/pre_tool_use.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "944ff4e27e569564d8e240100cf076df79f91730b8f4ea4983445b30259bf323",
+      "lines": 820
+    },
+    {
+      "id": "codex:codex-rs/linux-sandbox/src/linux_run_main.rs",
+      "title": "codex-rs/linux-sandbox/src/linux_run_main.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/linux-sandbox/src/linux_run_main.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/linux-sandbox/src/linux_run_main.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "0dd784f70ff95b16c97dd9e8420c30db2ff39002a57e357c6da686c353464270",
+      "lines": 1603
+    },
+    {
+      "id": "codex:codex-rs/login/src/auth/storage.rs",
+      "title": "codex-rs/login/src/auth/storage.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/login/src/auth/storage.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/login/src/auth/storage.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "7a975b9db5d6d92a3997285bccb3d357acea709d63a71c3a8b8169eb2539d77b",
+      "lines": 638
+    },
+    {
+      "id": "codex:codex-rs/network-proxy/src/config.rs",
+      "title": "codex-rs/network-proxy/src/config.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/network-proxy/src/config.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/network-proxy/src/config.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "0728a9d288d84bd499eed81f42ad795525c6b058c7f2a27bdc96b2246f407486",
+      "lines": 1233
+    },
+    {
+      "id": "codex:codex-rs/network-proxy/src/credential_broker.rs",
+      "title": "codex-rs/network-proxy/src/credential_broker.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/network-proxy/src/credential_broker.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/network-proxy/src/credential_broker.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "a78c91bf7b78c540d6b1ddfddd72181d55446cb46c8e84f8f0f621b86528635d",
+      "lines": 1639
+    },
+    {
+      "id": "codex:codex-rs/network-proxy/src/credential_broker/provider_config.rs",
+      "title": "codex-rs/network-proxy/src/credential_broker/provider_config.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/network-proxy/src/credential_broker/provider_config.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/network-proxy/src/credential_broker/provider_config.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "918b6331af7ec666d18ccf885259a92621f8046347ae30bfe3fb73f2ebec5a7b",
+      "lines": 40
+    },
+    {
+      "id": "codex:codex-rs/protocol/src/config_types.rs",
+      "title": "codex-rs/protocol/src/config_types.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/protocol/src/config_types.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/protocol/src/config_types.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "ce9b26223db7cc4b5cf474e571e4509e8cc52536e159510f153f94de0fcd37e8",
+      "lines": 980
+    },
+    {
+      "id": "codex:codex-rs/protocol/src/shell_environment.rs",
+      "title": "codex-rs/protocol/src/shell_environment.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/protocol/src/shell_environment.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/protocol/src/shell_environment.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "e16f61ea96db99307e3d8d2eb2fbb1b6fc703ce0ca7651fa97170dd6e0557da0",
+      "lines": 322
+    },
+    {
+      "id": "codex:codex-rs/rollout/src/policy.rs",
+      "title": "codex-rs/rollout/src/policy.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/rollout/src/policy.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/rollout/src/policy.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "9963db1dad94a26dbddcfd9792624ff975615c795bb212c12d0f9441db1ad395",
+      "lines": 206
+    },
+    {
+      "id": "codex:codex-rs/sandboxing/src/seatbelt.rs",
+      "title": "codex-rs/sandboxing/src/seatbelt.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/sandboxing/src/seatbelt.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/sandboxing/src/seatbelt.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "03beaaaac24b6b856d4860ba4c1a6e3818e8cd2432dac7f23eddaef77e745ab5",
+      "lines": 1125
+    },
+    {
+      "id": "codex:codex-rs/sandboxing/src/windows.rs",
+      "title": "codex-rs/sandboxing/src/windows.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/sandboxing/src/windows.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/sandboxing/src/windows.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "873e260824edb519213834fc52d0c82a84f8897979f195ebbaa3609b1885c625",
+      "lines": 401
+    },
+    {
+      "id": "codex:codex-rs/sandboxing/src/windows_mxc.rs",
+      "title": "codex-rs/sandboxing/src/windows_mxc.rs",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/sandboxing/src/windows_mxc.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/sandboxing/src/windows_mxc.rs",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "status": "取得済み",
+      "format": "source",
+      "sha256": "ead70b95933e176801ac9059bbbdefc8803106f453e284ebb81a1168ed3f9735",
+      "lines": 22
+    },
+    {
+      "id": "codex_doc:agent-approvals-security",
+      "title": "agent-approvals-security",
+      "source_url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/agent-approvals-security.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "93d863bc47517dfa06efd1f7e00cf73c55caf2ceb8385aeaab081429e5e06054"
+    },
+    {
+      "id": "codex_doc:sandboxing",
+      "title": "sandboxing",
+      "source_url": "https://learn.chatgpt.com/docs/sandboxing",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/sandboxing.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "5d0c6feeaffb563f20c7ff30d6e1717d2228018bff8e7072a8230acae517c16e"
+    },
+    {
+      "id": "codex_doc:permissions",
+      "title": "permissions",
+      "source_url": "https://learn.chatgpt.com/docs/permissions",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/permissions.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "79651d42293d576f80288e1d1438b8bd3108144ed7965de2aef693733956117c"
+    },
+    {
+      "id": "codex_doc:auto-review",
+      "title": "auto-review",
+      "source_url": "https://learn.chatgpt.com/docs/sandboxing/auto-review",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/auto-review.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "c1772ca4e75c677703416831fc13f599e8c15f53850f92b56209122da28413ee"
+    },
+    {
+      "id": "codex_doc:managed-configuration",
+      "title": "managed-configuration",
+      "source_url": "https://learn.chatgpt.com/docs/enterprise/managed-configuration",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/managed-configuration.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "12aa25017a1c87a2a78b43d3cf10572ed4071a609801a284b659c2462cd84f56"
+    },
+    {
+      "id": "codex_doc:config-advanced",
+      "title": "config-advanced",
+      "source_url": "https://learn.chatgpt.com/docs/config-file/config-advanced",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/config-advanced.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "03c193d3471e75ed9bf1f1559d588c693d07e5d4493db51a7558f6f4a42fc0a9"
+    },
+    {
+      "id": "codex_doc:auth",
+      "title": "auth",
+      "source_url": "https://learn.chatgpt.com/docs/auth",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/auth.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "c135f9c5ff003a6ab1be87fb557ca1dc090ce48a3012af3809b698535c4a7e32"
+    },
+    {
+      "id": "codex_doc:hooks",
+      "title": "hooks",
+      "source_url": "https://learn.chatgpt.com/docs/hooks",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/hooks.md",
+      "status": "取得済み",
+      "format": "markdown",
+      "sha256": "d12fbe1083f3d7baa7edded9c14d04e88dc5bc7c70110bad90d41989c852b774"
+    },
+    {
+      "repository": "openai/codex",
+      "commit": "979011409de0a60b52f179721948e65531d26144",
+      "source_url": "https://github.com/openai/codex/blob/979011409de0a60b52f179721948e65531d26144/codex-rs/hooks/src/engine/mod.rs",
+      "local_file": "research/disclosures/raw/harness_20261008/codex/source/codex-rs/hooks/src/engine/mod.rs",
+      "sha256": "15d6f819a0de303dd98bfd3ae8050779188ef47e2517081bd4debac913f7d10a",
+      "lines": 495,
+      "status": "取得済み"
+    }
+  ],
+  "review_improvements": "独立レビューを反映し、追加根拠も固定原本と照合。"
+}

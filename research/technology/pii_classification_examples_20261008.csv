@@ -1,0 +1,44 @@
+﻿id,区分,例,前提と照合可能性,日本_APPI,EU_GDPR,米国_NIST,米国_CCPA,補足,根拠資料ID,データ表現例
+PII-001,陽性,顧客氏名＋自宅住所,実在する生存顧客の記録。以下の人物名・値は説明用の架空表記。,該当,該当,該当,該当,例：架空顧客A／架空市の住所。氏名単独も個人情報になり得る。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,氏名=架空顧客A;住所=架空市サンプル町1番
+PII-002,陽性,個人が識別できる勤務先メール,taro.yamada@example.com が名簿の特定従業員に対応する。,該当,該当,該当,該当,業務用でも自然人を識別すれば対象。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,email=taro.yamada@example.com
+PII-003,陽性,個人携帯電話番号,電話番号を顧客名簿と通常業務で照合できる。,該当,該当,該当,該当,,ppc_general;gdpr_ja;nist_pii;ccpa_ag,mobile=<顧客名簿に登録された個人携帯番号>
+PII-004,陽性,マイナンバー,実在者に割り当てられた個人番号。表示例は <個人番号>。,該当,該当,該当,該当,日本では法定の個人識別符号。番号法の別の制限もある。米国欄は外国の本人識別番号としての評価。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,my_number=<実在者の個人番号>
+PII-005,陽性,旅券番号・運転免許証番号,実在者に発行された番号。,該当,該当,該当,該当,日本の法定の個人識別符号に該当する番号。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,passport_number=<実在者の旅券番号>
+PII-006,陽性,従業員ID E-0042,管理者が従業員名簿を持ち、即座に本人を照合できる。,該当,該当,該当,該当,社内番号は通常、法定の個人識別符号とは別。容易な照合により個人情報になる。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,employee_id=E-0042
+PII-007,陽性,顧客ID customer_7f3a,顧客台帳で実在顧客に結び付けられる。,該当,該当,該当,該当,氏名を出力しなくても、台帳を持つ管理者にとって該当。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,customer_id=customer_7f3a
+PII-008,陽性,識別可能な顔写真・防犯映像,実在者の顔等から本人を判別できる。,該当,該当,該当,該当,EUでは写真が常に第9条の特別な種類になるわけではない。本人識別のための生体処理かを別に判定。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,<本人を判別できる顔写真・防犯映像>
+PII-009,陽性,本人確認用の指紋・顔の特徴量,実在者を一意に識別するために処理した情報。,該当,該当,該当,該当,日本では所定の基準に適合する特徴量は個人識別符号。EUでは本人識別用の生体情報は第9条対象。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,face_template=<本人確認用の顔特徴量>
+PII-010,陽性,本人を識別できる通話録音,録音に氏名・顧客番号などが含まれる。,該当,該当,該当,該当,音声の形式でも対象。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,<顧客名と本人の声を含む通話録音>
+PII-011,陽性,患者ID＋診断名・検査結果,病院が患者台帳と照合できる。,該当,該当,該当,制度要件確認,日本では要配慮個人情報、EUでは健康情報。CCPAにはHIPAA等に関係する情報単位の例外がある。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,patient_id=P-001;diagnosis=糖尿病
+PII-012,陽性,社員ID＋給与・評価,給与額や人物評価を実在従業員に結び付けられる。,該当,該当,該当,該当,金融情報や評価情報も対象。高機密であることと法定の特別区分は別。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,employee_id=E-0042;salary=6000000;review=昇進候補
+PII-013,陽性,応募者の履歴書・採用評価,氏名または応募者台帳で本人を識別できる。,該当,該当,該当,該当,,ppc_general;gdpr_ja;nist_pii;ccpa_ag,applicant_id=A-001;career=<職歴>;review=採用候補
+PII-014,陽性,利用者アカウント＋閲覧・購買履歴,実在利用者のアカウントに結び付く。,該当,該当,該当,該当,行動や嗜好の推測も含めて扱う。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,account_id=U-001;history=<閲覧・購入記録>
+PII-015,陽性,位置履歴＋個人アカウント,特定利用者の日々の移動経路を記録。,該当,該当,該当,該当,CCPAでは精密位置情報に特別な区分がある。EUでは位置情報だけで第9条対象とは限らない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,account_id=U-001;location=<時刻付き移動履歴>
+PII-016,陽性,メールのTo・CC欄＋本文,宛先が実在者を識別し、本文にも顧客案件が含まれる。,該当,該当,該当,該当,本文以外に宛先・件名・添付・転送履歴も分類対象。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,To: taro.yamada@example.com; CC: hanako.sato@example.com; 本文=<顧客案件>
+PII-017,陽性,ローン残高だけを切り出した列,銀行が行の並び・口座台帳等で顧客を容易に照合できる。,該当,該当,該当,該当,受け手に氏名が見えないことは、保有者の個人情報判定を変えない。,ppc_loan_example;gdpr_ja;nist_pii;ccpa_ag,loan_balance=25000000
+PII-018,陽性,暗号化された顧客名簿,管理者は復号鍵を持ち、元の顧客を識別できる。,該当,該当,該当,該当,暗号化は保護措置。個人情報から自動的に除外されない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,encrypted_customer_list=<復号鍵を保有する暗号文>
+PII-019,陽性,メールアドレスのハッシュ値,管理者が元メールの照合表を持ち、同じ変換で本人を照合できる。,該当,該当,該当,該当,ハッシュ＝不可逆な変換値でも、対応表や候補の再計算で照合できれば匿名ではない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,email_hash=<元メールと照合可能な変換値>
+PII-020,陽性,仮の番号に置き換えた患者記録,管理者が元の本人との対応表を保持している。,該当,該当,該当,制度要件確認,日本の法定の仮名加工情報は加工・利用要件も必要。単なる伏字と同義ではない。,ppc_anonymization;gdpr_ja;nist_pii;ccpa_ag,pseudonym=P-001;diagnosis=糖尿病
+PII-021,陰性,法人名＋法人番号,法人そのものの情報だけで、個人事業主・役員・担当者の情報を含まない。,非該当,非該当,非該当,非該当,法人の情報と個人の情報を分ける。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,company_name=架空サンプル株式会社;corporate_number=<法人番号>
+PII-022,陰性,共有窓口 info@example.com,法人の共有窓口。特定の一人の名義・運用に結び付かない。,非該当,非該当,非該当,非該当,個人専用窓口や個人事業主の連絡先なら再評価。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,contact=info@example.com
+PII-023,陰性,製品型番 MODEL-X200,製品の種類を示すだけ。購入者・患者への割当てがない。,非該当,非該当,非該当,非該当,個別の製造番号が所有者に結び付く場合とは違う。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,product_model=MODEL-X200
+PII-024,陰性,地域の気温・降水量,公共観測所の測定値。個人の位置・行動を含まない。,非該当,非該当,非該当,非該当,,ppc_general;gdpr_ja;nist_pii;ccpa_ag,station=公共観測所A;temperature=22.5
+PII-025,陰性,十分な人数の月次売上集計,個人への対応を排除し、少人数群や差分から個人の売上を推定できない。,非該当,非該当,非該当,非該当,人数の閾値だけでは匿名性を保証できない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,month=2026-09;total_sales=100000000
+PII-026,陰性,個人情報を含まない法令解説,一般論だけの文章。担当者名や具体的な個人事例を含まない。,非該当,非該当,非該当,非該当,文書の執筆者・改訂履歴は別に判定する。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,本文=個人情報は利用目的を定めて管理する。
+PII-027,陰性,集計した設備のCPU使用率,利用者別・端末利用者別の情報やログの識別子を含まない。,非該当,非該当,非該当,非該当,CPUは計算処理装置。利用者別操作記録なら再評価。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,equipment_id=SERVER-A;aggregate_cpu_percent=32
+PII-028,陰性,実在者に対応しない完全な架空記録,生成経路を確認済み。実在者や元の個人データに対応せず、元データの再現もない。,非該当,非該当,非該当,非該当,見た目が氏名や番号でも、形式だけで実在者の個人情報とは断定できない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,name=架空人物A;age=37;provenance=実在者に対応しない完全な架空記録
+PII-029,陰性,個人に割り当てない機械用API鍵,サービス間の認証だけに使い、個人アカウント・行動に結び付かない。,非該当,非該当,非該当,非該当,APIはソフトウェアの接続口。非PIIでも認証秘密として厳重管理。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,machine_api_key=<機械間認証の秘密>
+PII-030,陰性,人に関係しない未公開の製品設計,人物・顧客・担当者・作者の情報を含まない。,非該当,非該当,非該当,非該当,非PIIでも企業秘密。外部提供を許可できるとは限らない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,design=<人物情報を含まない未公開設計>
+PII-031,陰性,意味も対応先もない乱数,個人・世帯・端末を追跡する識別子として一切使われていない。,非該当,非該当,非該当,非該当,同じ乱数を利用者IDとして使い始めれば再評価。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,random_value=7f3a;assignment=なし
+PII-032,文脈次第,氏名を含まないCookie ID＋閲覧履歴,日本の保有者は個人を容易に識別できない。EU等の照合可能性は未確認。,個人関連情報,要文脈,要文脈,該当になり得る,Cookieは閲覧を継続的に区別する識別子。日本でも顧客台帳と容易に照合できれば個人情報。世帯に合理的に結び付く場合はCCPA対象。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,cookie_id=c-001;history=<閲覧履歴>
+PII-033,文脈次第,IPアドレスのみ,サーバー設備のアドレスか、利用者の接続記録かが不明。,要文脈,要文脈,要文脈,要文脈,IPアドレスは通信先を表す番号。利用者・アカウント・時刻・契約者との照合を確認。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,ip=192.0.2.10;purpose=未確認
+PII-034,文脈次第,37歳・郵便番号・職業,属性の組合せが実在者を識別できるか未確認。,要文脈,要文脈,要文脈,要文脈,珍しい職業や狭い地域では少ない属性でも本人を絞り込める。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,age=37;postcode=<郵便番号>;occupation=<職業>
+PII-035,文脈次第,電話番号らしい文字列,個人用・法人共有・未割当て・架空値のどれか不明。,要文脈,要文脈,要文脈,要文脈,正規表現による形式一致と、実在個人に関する法律上の判定は違う。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,phone=<電話番号らしい値>;provenance=未確認
+PII-036,文脈次第,役員の公開氏名,実在者の氏名を適法な公的登記から取得し、非公開情報と混合していない。,該当,該当,該当,公開情報の除外を確認,日本・EUは公開だけで除外されない。CCPAは法定の公開情報除外があるが、漏洩サイトに掲載された情報などを同列に扱わない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,director_name=<公的登記の役員氏名>;source=適法な公開登記
+PII-037,文脈次第,対応表を持たない受領者の仮のID,受領者は対応表を持たない。送信者の協力、補助情報、再識別手段等は未確認。,要文脈,要文脈,要文脈,要文脈,主体ごとに評価。法定の仮名加工情報なら日本では個人情報に該当しない場合も独自の義務が残る。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,pseudonym=U-001;recipient_mapping=なし;other_means=未確認
+PII-038,文脈次第,法定の匿名加工情報／匿名化済みという記載,名前を消しただけか、復元・識別の要件と運用を満たすか未確認。,要件確認,要件確認,要件確認,要件確認,日本の匿名加工情報、EUの匿名化、CCPAの非識別化は同じ制度ではない。日本では独自の義務が残る。,ppc_anonymization;gdpr_preface_ja;nist_pii;ccpa_ag,label=匿名化済み;requirements_verified=未確認
+PII-039,文脈次第,2人の部署の平均給与,名簿や他の集計から一人の給与を逆算できる可能性がある。,要文脈,要文脈,要文脈,要文脈,集計表という形式だけで陰性にしない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,department_size=2;average_salary=7000000
+PII-040,文脈次第,個人事業主の屋号・事業住所,屋号や住所が事業主本人を識別するか未確認。,要文脈,要文脈,要文脈,要文脈,法人の企業情報とは異なる。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,trade_name=<個人事業の屋号>;office_address=<事業住所>
+PII-041,文脈次第,医療データから氏名だけ削除,受診日、患者番号、顔写真、住所、自由記述などは残っている。,要文脈,要文脈,要文脈,制度要件確認,非識別化を証明できない。HIPAAの定型手順では18区分の識別子と残余の識別可能性を確認。,ppc_general;gdpr_ja;hhs_deidentification;ccpa_ag,patient_name=削除;patient_id=P-001;visit_date=2026-09-01
+PII-042,文脈次第,カード番号下4桁,単独値か、顧客氏名・契約・取引記録と結び付くか未確認。,要文脈,要文脈,要文脈,要文脈,4桁だけで本人を識別しない場合も、名義人情報との組合せなら対象。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,card_last4=1234;linkage=未確認
+PII-043,文脈次第,個人データを基に生成した架空の顧客,実在者の記録を再現していないか、識別可能性の検証がない。,要文脈,要文脈,要文脈,要文脈,合成データという名称だけで陰性にしない。,ppc_general;gdpr_ja;nist_pii;ccpa_ag,synthetic_record=<実データを基に生成>;disclosure_test=未確認

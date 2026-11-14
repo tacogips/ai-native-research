@@ -1,0 +1,33 @@
+{
+  "確認日": "2026-10-08",
+  "確認方法": "一次資料台帳のSHA-256と原本、コード参照の保存対応と行範囲、調査稿の相対参照を検査。主張の意味のレビューと実機試験は別。",
+  "台帳数": 7,
+  "重複を除く原本数": 952,
+  "調査・レビュー稿数": 16,
+  "相対参照数": 55,
+  "コード行参照数": 177,
+  "台帳に記録した取得失敗": [
+    {
+      "manifest": "harness_claude_sources_20261008.json",
+      "url": "https://code.claude.com/docs/en/cloud-security.md",
+      "status": "failed"
+    },
+    {
+      "manifest": "harness_information_flow_and_evaluation_sources_20261008.json",
+      "url": "https://openfga.dev/docs/interacting/authorization-models",
+      "status": "failed"
+    },
+    {
+      "manifest": "harness_oss_sources_20261008.json",
+      "url": "https://raw.githubusercontent.com/anomalyco/opencode/a697115b203395c54a7496dc3d1863fe7b319c0c/packages/core/src/agent/agent.ts",
+      "status": "failed"
+    },
+    {
+      "manifest": "harness_oss_sources_20261008.json",
+      "url": "https://opencode.ai/v2/docs/permissions",
+      "status": "failed"
+    }
+  ],
+  "整合エラー": [],
+  "判定": "合格"
+}

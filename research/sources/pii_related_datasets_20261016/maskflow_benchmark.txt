@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Benchmark — MaskFlow</title>
+  <meta name="description" content="Four published, reproducible benchmarks: India identifiers (98.6% F1), 12 international PII types, maskflow scan's false-positive rate on synthetic logs, and 100% framework-integration parity. Open datasets, one-command reproduction — including every entity type where a competitor wins." />
+  <link rel="canonical" href="https://maskflow.in/benchmark.html" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16.png" />
+  <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MaskFlow" />
+  <meta property="og:title" content="Benchmark — MaskFlow" />
+  <meta property="og:description" content="Four published, reproducible benchmarks: India identifiers (98.6% F1), 12 international PII types, maskflow scan's false-positive rate on synthetic logs, and 100% framework-integration parity. Open datasets, one-command reproduction — including every entity type where a competitor wins." />
+  <meta property="og:image" content="https://maskflow.in/brand/og-benchmark.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://maskflow.in/benchmark.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Benchmark — MaskFlow" />
+  <meta name="twitter:description" content="Four published, reproducible benchmarks — India, international, scan, and integration parity. Open datasets, one-command reproduction, including where competitors win." />
+  <meta name="twitter:image" content="https://maskflow.in/brand/og-benchmark.png" />
+
+  <link rel="preload" href="/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="alternate" type="application/rss+xml" title="MaskFlow Blog" href="/rss.xml" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="banner" id="site-banner">
+    <div class="banner-inner">
+      <p><strong>New: Evidence Cloud</strong> &mdash; signed DPDP evidence for your AI features, ahead of the 13 May 2027 deadline. Free for 14 days. <a href="/evidence-cloud.html" class="banner-link" data-plausible-goal="banner_click">Start your trial &rarr;</a></p>
+      <button type="button" class="banner-dismiss" id="banner-dismiss" aria-label="Dismiss this banner">&times;</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand">
+        <img src="/brand/glyph.svg" alt="" class="brand-glyph" width="26" height="26" />
+        <span class="brand-word"><span class="brand-mask">mask</span><span class="brand-flow">flow</span></span>
+      </a>
+      <nav>
+        <div class="nav-links">
+          <a href="/#how">How it works</a>
+          <a href="/benchmark.html" class="is-active" data-plausible-goal="benchmark_click">Benchmark</a>
+          <a href="/evidence-cloud.html" data-plausible-goal="evidence_cloud_nav">Evidence Cloud</a>
+          <a href="/docs.html">Docs</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="nav-actions">
+          <a class="nav-github" href="https://github.com/maskflow/maskflow" target="_blank" rel="noopener" data-plausible-goal="github_click">
+            <span>GitHub</span>
+            <span class="nav-star-count" id="nav-star-count" hidden></span>
+          </a>
+          <a href="/#get-started" class="btn btn-primary btn-sm">Get started</a>
+          <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-sheet">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14"/></svg>
+          </button>
+        </div>
+      </nav>
+      <div class="nav-sheet" id="nav-sheet">
+        <a href="/#how">How it works</a>
+        <a href="/benchmark.html">Benchmark</a>
+        <a href="/evidence-cloud.html">Evidence Cloud</a>
+        <a href="/docs.html">Docs</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/maskflow/maskflow" target="_blank" rel="noopener">GitHub</a>
+        <a href="/#get-started" class="btn btn-primary" style="margin-top: 14px; justify-content: center;">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="main" style="padding-top: 56px; padding-bottom: 96px;">
+    <div class="docs-content" style="max-width: 820px;">
+      <span class="benchmark-date">5 corpora published &middot; last run 14 October 2026</span>
+      <h1>Benchmark</h1>
+      <p class="lede">The numbers behind every accuracy claim on this site &mdash; per entity, precision and recall, every tool run over the same fixed corpus, reproducible on your own machine with one command. Five corpora are published so far: India, India in tables, international, <code>maskflow scan</code>, and framework-integration parity. Every entity type where a competitor beats us is on the page, not just the ones we win.</p>
+
+      <nav class="bench-jump" aria-label="Jump to a benchmark">
+        <a href="#summary">India <span class="bench-jump-metric">98.6% F1</span></a>
+        <a href="#tabular">Tables <span class="bench-jump-metric">99.1% recall</span></a>
+        <a href="#international">International <span class="bench-jump-metric">12 types</span></a>
+        <a href="#scan">Scan <span class="bench-jump-metric">88.4% precision</span></a>
+        <a href="#integration-parity">Integration parity <span class="bench-jump-metric">100%</span></a>
+        <a href="#llm-quality">LLM quality <span class="bench-jump-metric">pending</span></a>
+        <a href="#my-data">Your data <span class="bench-jump-metric">shipped</span></a>
+      </nav>
+
+      <section class="docs-section" id="summary">
+        <h2><a class="heading-anchor" href="#summary" aria-label="Link to Summary">#</a>India &mdash; the short version</h2>
+        <span class="benchmark-date">indiapii-v1.0 &middot; run 10 October 2026 &middot; maskflow-pack-india 0.6.0</span>
+        <ul>
+          <li><strong>Indian identifiers: 98.6% F1.</strong> Across the fifteen structured Indian identifier types &mdash; Aadhaar, PAN, GSTIN, IFSC, UPI VPA, voter ID, driving licence, vehicle registration, passport, ABHA, bank account, PIN code and mobile number &mdash; MaskFlow scores a micro-averaged <strong>98.6% F1</strong> (99.3% precision, 98.0% recall).</li>
+          <li><strong>The competition scores zero on most of them.</strong> Stock Presidio detects none of these formats except the mobile number; <code>mask-privacy</code> detects only the mobile number and the bank account. Adding hand-written Aadhaar and PAN recognizers to Presidio lifts it to 96.6% and 100% on those two &mdash; and leaves the other thirteen at zero.</li>
+          <li><strong>Names and addresses are hard for everyone.</strong> On free-text person names MaskFlow leads at 52.4% F1 (next best 30.4%). On Indian addresses <code>mask-privacy</code> leads at 50.7% F1; MaskFlow trails at 43.3%. Both figures are low, and we are not hiding either.</li>
+          <li><strong>On structured identifiers MaskFlow errs toward silence, not guessing.</strong> Eleven of the fifteen &mdash; GSTIN, IFSC, UPI VPA, PAN, voter ID, driving licence, vehicle registration, passport, PIN code, ABHA address and the masked-Aadhaar form &mdash; score 100% precision and 100% recall. Aadhaar (96.8% precision, 28 checksum-passing look-alikes) and the Indian mobile number (98.0% precision, 36 false positives) are the only structured types that over-fire. ABHA number and bank account have no public checksum, so MaskFlow trades recall for precision there &mdash; 100% precision, ~87% recall.</li>
+          <li><strong>Speed is in the same class as Presidio.</strong> About 70&nbsp;ms per KB of text, ~20&nbsp;ms median per document &mdash; a rounding error next to the LLM round-trip it protects.</li>
+        </ul>
+        <p>Full per-entity tables, both matching modes, and the raw precision/recall/error counts are below. The dataset, the scoring harness and the exact command that produced these numbers are all public.</p>
+      </section>
+
+      <section class="docs-section" id="corpus">
+        <h2><a class="heading-anchor" href="#corpus" aria-label="Link to Corpus">#</a>What was measured</h2>
+        <p>The corpus is <strong>IndiaPII-Bench v1.0</strong> (<code>indiapii-v1.0</code>): 2,000 synthetic documents containing 13,468 labelled entity spans, generated from a fixed random seed so every run scores exactly the same text.</p>
+        <p>Documents are spread across seven realistic domains, roughly 285 each:</p>
+        <ul>
+          <li>bank chat transcripts</li>
+          <li>HR records</li>
+          <li>insurance claims</li>
+          <li>KYC forms</li>
+          <li>loan applications</li>
+          <li>medical notes</li>
+          <li>support tickets</li>
+        </ul>
+        <p><strong>Every identifier is synthetic and valid.</strong> Aadhaar numbers pass the Verhoeff checksum, GSTINs pass the GST check digit, and PAN, IFSC, UPI VPA and the rest are format-valid &mdash; each value is generated at random and then cross-checked against the pack's own validators before it goes into the corpus. None of these identifiers belong to a real person, business or account.</p>
+        <p><strong>The corpus fights back.</strong> Alongside the real spans it plants hard negatives &mdash; strings that look like an identifier but are not one: an order ID shaped like an Aadhaar number, an invoice number shaped like a PAN, a timestamp shaped like a long number, an e-mail address shaped like a UPI VPA. A detector that fires on one of these loses precision, exactly as it would in production.</p>
+      </section>
+
+      <section class="docs-section" id="scoring">
+        <h2><a class="heading-anchor" href="#scoring" aria-label="Link to Scoring">#</a>How results are scored</h2>
+        <p>Ground truth is labelled <strong>per entity span, not per document</strong>. A document with nine correct matches and one miss scores as nine out of ten, not as a failure.</p>
+        <p>For each entity type and each tool the harness counts true positives, false positives and false negatives, then reports:</p>
+        <ul>
+          <li><strong>Precision</strong> &mdash; of the spans the tool flagged, the share that were real.</li>
+          <li><strong>Recall</strong> &mdash; of the real spans, the share the tool found.</li>
+          <li><strong>F1</strong> &mdash; the harmonic mean of the two, which is the single number shown in the comparison tables.</li>
+        </ul>
+        <p>Two matching modes are computed from the same predictions:</p>
+        <ul>
+          <li><strong>Strict span</strong> &mdash; a prediction counts only if its start and end offsets match the gold span exactly.</li>
+          <li><strong>Partial overlap</strong> &mdash; a prediction counts if it overlaps the gold span of the same type at all.</li>
+        </ul>
+        <p>For single-token identifiers the two modes give identical results, because there is only one correct way to bound the match. They diverge only for multi-token spans &mdash; person names and addresses &mdash; where &ldquo;<em>21, MG Road, Indiranagar, Bengaluru 560038</em>&rdquo; and &ldquo;<em>MG Road, Indiranagar</em>&rdquo; are both arguably the address. The comparison table below reports partial-overlap F1; the strict figures are in <a href="#full-data">the full-data tables</a>.</p>
+        <p><strong>Label mapping is deliberate and documented.</strong> Each tool emits its own label names; the harness maps them to a shared taxonomy (Presidio's <code>PERSON</code> &rarr; <code>PERSON_NAME</code>, <code>PHONE_NUMBER</code> &rarr; <code>INDIAN_MOBILE</code>, <code>LOCATION</code> &rarr; <code>INDIAN_ADDRESS</code>, and so on). A prediction for a type outside this corpus's taxonomy is dropped before scoring rather than counted against the tool &mdash; no tool is penalised for detecting something the corpus does not label.</p>
+      </section>
+
+      <section class="docs-section" id="contenders">
+        <h2><a class="heading-anchor" href="#contenders" aria-label="Link to Contenders">#</a>What MaskFlow was compared against</h2>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Adapter</th><th>What it is</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>MaskFlow</td><td class="wrap"><code>maskflow-sdk</code> with the bundled intl and India packs.</td></tr>
+              <tr><td>Presidio (stock)</td><td class="wrap"><a href="https://github.com/microsoft/presidio" target="_blank" rel="noopener">Microsoft Presidio</a> with its default recognizer registry and the <code>en_core_web_sm</code> spaCy model.</td></tr>
+              <tr><td>Presidio + custom</td><td class="wrap">Stock Presidio plus two hand-written pattern recognizers for Aadhaar and PAN, using the same checksum and structural validation MaskFlow applies &mdash; the &ldquo;just add a regex&rdquo; approach, measured fairly.</td></tr>
+              <tr><td>mask-privacy</td><td class="wrap">The <code>mask-privacy</code> package. Its DLP registry ships no India-specific entity types; its NLP tier is Presidio underneath.</td></tr>
+              <tr><td>naive regex</td><td class="wrap">A deliberately simple regex-only baseline &mdash; the floor any real tool should clear.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The harness also includes an LLM-based detector adapter. It was not part of this pass; those numbers will be added in a later revision.</p>
+      </section>
+
+      <section class="docs-section" id="results">
+        <h2><a class="heading-anchor" href="#results" aria-label="Link to Results">#</a>Results by entity</h2>
+        <p>Partial-overlap F1, all seventeen entity types. <strong>Bold</strong> marks the leading tool in each row. &ldquo;&mdash;&rdquo; means the tool ships no recognizer that maps to this type; <code>0%</code> means it made predictions but none matched. One row is annotated where a competitor beats MaskFlow.</p>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>Gold spans</th><th>MaskFlow</th><th>Presidio (stock)</th><th>Presidio + custom</th><th>mask-privacy</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num">857</td><td class="num is-best">98.4%</td><td class="is-none">&mdash;</td><td class="num">96.6%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Aadhaar (masked display form)</td><td class="num">285</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>PAN</td><td class="num">857</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>GSTIN</td><td class="num">114</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>IFSC</td><td class="num">1,142</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>UPI VPA</td><td class="num">571</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Voter ID (EPIC)</td><td class="num">119</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Driving licence</td><td class="num">286</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Vehicle registration</td><td class="num">286</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Indian passport</td><td class="num">101</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>ABHA number</td><td class="num">286</td><td class="num is-best">93.3%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>ABHA address</td><td class="num">141</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Bank account (India)</td><td class="num">1,142</td><td class="num is-best">93.4%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num">38.7%</td></tr>
+              <tr><td>Indian mobile number</td><td class="num">1,790</td><td class="num is-best">99.0%</td><td class="num">94.9%</td><td class="num">94.9%</td><td class="num">42.2%</td></tr>
+              <tr><td>PIN code</td><td class="num">857</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Person name</td><td class="num">2,001</td><td class="num is-best">52.4%</td><td class="num">30.4%</td><td class="num">30.4%</td><td class="num">30.4%</td></tr>
+              <tr class="row-loss"><td>Indian address</td><td class="num">1,230</td><td class="num">43.3%</td><td class="num">48.2%</td><td class="num">48.2%</td><td class="num is-best">50.7%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The <code>Presidio + custom</code> column is stock Presidio plus an Aadhaar and a PAN recognizer only, which is why every other row in that column matches the stock column.</p>
+
+        <h3>Structured Indian identifiers</h3>
+        <p>This is the gap MaskFlow was built to close, and the table shows why the gap is real rather than rhetorical. General-purpose PII tools were built for US and EU data, where a nine-digit number is a Social Security Number and an Aadhaar is noise. They ship no recognizer for Aadhaar, PAN, GSTIN, IFSC, UPI, ABHA, voter ID, the Indian passport format, the RTO-coded driving licence and vehicle registration formats, or the Indian bank-account and PIN-code conventions &mdash; so they score zero on all of them.</p>
+        <p>The <code>Presidio + custom</code> result is the honest test of the &ldquo;you can just add a regex&rdquo; objection. Two carefully written recognizers get Aadhaar to 96.6% and PAN to 100% &mdash; genuinely useful &mdash; but the remaining thirteen types still need thirteen more recognizers, each with its own checksum, context rules, bundled reference list (RBI bank codes, NPCI handles, RTO codes) and hard-negative handling. That is the pack, not a snippet.</p>
+        <p>MaskFlow's one visible miss here is Aadhaar precision: 28 false positives against 857 true matches (96.8% precision, 100% recall). These are Aadhaar-shaped strings that pass the Verhoeff checksum by chance and appear without disambiguating context. ABHA number and bank account sit at ~93% F1 because neither format has a public checksum, so MaskFlow requires nearby context (&ldquo;ABHA&rdquo;, &ldquo;account&rdquo;, &ldquo;a/c&rdquo;) before it will mask &mdash; trading a little recall for near-zero false positives on ordinary long numbers.</p>
+
+        <h3 id="names-addresses">Person names and addresses</h3>
+        <p>These two types are detected by pattern, gazetteer and context matching, not by a checksum, so both false positives and false negatives are unavoidable &mdash; for every tool. The numbers are low across the board and should be read that way.</p>
+        <p>On <strong>person names</strong> MaskFlow leads (52.4% partial F1 vs. 30.4% for both <code>mask-privacy</code> and Presidio), helped by an Indian-name gazetteer, honorific and S/o&ndash;D/o patterns, and agreement scoring with the spaCy NER pass.</p>
+        <p>On <strong>Indian addresses</strong> <code>mask-privacy</code> leads at 50.7% and MaskFlow trails at 43.3%. Our address gazetteer covers 554 Indian cities and places but still misses smaller localities, and the structural patterns over-extend span boundaries. This is a known weak spot and an active area of work; it is on this page precisely because a benchmark you can only cite when you win is marketing.</p>
+        <p>One nuance the F1 number hides: under partial-overlap matching MaskFlow's <em>recall</em> on both names and addresses is 100% &mdash; it flags every gold span. The low F1 is entirely a precision problem: it also flags a lot of text that is not a name or an address. For a masking tool that failure mode (over-masking) is far safer than the opposite, but it still degrades the prompt, and closing it is the work.</p>
+      </section>
+
+      <section class="docs-section" id="precision-recall">
+        <h2><a class="heading-anchor" href="#precision-recall" aria-label="Link to Precision and recall">#</a>Precision and recall behind the F1</h2>
+        <p>Every entity type not listed here scored 100% precision and 100% recall for MaskFlow &mdash; a perfect run on GSTIN, IFSC, UPI VPA, voter ID, driving licence, vehicle registration, passport, PIN code, ABHA address, the masked Aadhaar display form, and PAN. The table below is every type where MaskFlow was not perfect (strict-span scoring, except the last two rows which are partial-overlap).</p>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>Precision</th><th>Recall</th><th>Missed (FN)</th><th>False positives (FP)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num">96.8%</td><td class="num">100%</td><td class="num">0</td><td class="num">28</td></tr>
+              <tr><td>Indian mobile number</td><td class="num">98.0%</td><td class="num">100%</td><td class="num">0</td><td class="num">36</td></tr>
+              <tr><td>ABHA number</td><td class="num">100%</td><td class="num">87.4%</td><td class="num">36</td><td class="num">0</td></tr>
+              <tr><td>Bank account (India)</td><td class="num">100%</td><td class="num">87.7%</td><td class="num">141</td><td class="num">0</td></tr>
+              <tr><td>Person name <span class="text-small">(partial)</span></td><td class="num">31.0%</td><td class="num">100%</td><td class="num">0</td><td class="num">4,451</td></tr>
+              <tr><td>Indian address <span class="text-small">(partial)</span></td><td class="num">27.6%</td><td class="num">100%</td><td class="num">0</td><td class="num">3,224</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The pattern is consistent: on structured identifiers MaskFlow errs toward silence (a recall gap, few false alarms &mdash; only Aadhaar and mobile numbers have any), and on probabilistic types it errs toward over-flagging (perfect recall, poor precision).</p>
+      </section>
+
+      <section class="docs-section" id="regex-floor">
+        <h2><a class="heading-anchor" href="#regex-floor" aria-label="Link to The regex floor">#</a>The regex floor</h2>
+        <p>The naive-regex baseline is a useful sanity check on how much the checksums and context rules actually buy. On the same corpus, a regex-only approach scores (strict-span F1):</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Entity</th><th>naive regex</th><th>MaskFlow</th><th>What the gap is</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num">54.4%</td><td class="num is-best">98.4%</td><td class="wrap">Verhoeff checksum + hard-negative rejection.</td></tr>
+              <tr><td>PAN</td><td class="num">94.1%</td><td class="num is-best">100%</td><td class="wrap">Holder-category structural check.</td></tr>
+              <tr><td>Indian mobile number</td><td class="num">65.1%</td><td class="num is-best">99.0%</td><td class="wrap">Prefix and context disambiguation.</td></tr>
+              <tr><td>PIN code</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="wrap">None &mdash; a well-scoped regex is enough here.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A plain Aadhaar regex flags roughly twice as many strings as it should, because any twelve digits in the right shape match. The checksum is what turns a 54% score into a 98% one.</p>
+      </section>
+
+      <section class="docs-section" id="speed">
+        <h2><a class="heading-anchor" href="#speed" aria-label="Link to Speed and memory">#</a>Speed and memory</h2>
+        <p>Measured over all 2,000 documents after a warm-up call, so one-time costs (model load, first-call regex compilation) do not distort the per-document figures.</p>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Adapter</th><th>ms / KB</th><th>Median ms / doc</th><th>p95 ms / doc</th><th>Peak memory</th><th>Doc errors</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>MaskFlow</td><td class="num">70.1</td><td class="num">20.2</td><td class="num">28.2</td><td class="num">1.6 MB</td><td class="num">0</td></tr>
+              <tr><td>Presidio (stock)</td><td class="num">54.3</td><td class="num">15.1</td><td class="num">24.7</td><td class="num">2.1 MB</td><td class="num">0</td></tr>
+              <tr><td>Presidio + custom</td><td class="num">56.3</td><td class="num">15.8</td><td class="num">24.7</td><td class="num">0.6 MB</td><td class="num">0</td></tr>
+              <tr><td>mask-privacy</td><td class="num">80.8</td><td class="num">21.7</td><td class="num">39.4</td><td class="num">0.7 MB</td><td class="num">20</td></tr>
+              <tr><td>naive regex</td><td class="num">0.14</td><td class="num">0.04</td><td class="num">0.07</td><td class="num">~0</td><td class="num">0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>MaskFlow is about 30% slower than stock Presidio per KB and slightly faster than <code>mask-privacy</code>, with the smallest peak-memory footprint of the three real tools. At ~20&nbsp;ms median per document it adds well under a percent to a typical LLM call. <code>mask-privacy</code> raised an exception on 20 of the 2,000 documents; those were scored as producing no output. Absolute timings depend on the machine and will differ on yours &mdash; the ratios between tools are the portable part.</p>
+      </section>
+
+      <section class="docs-section" id="caveats">
+        <h2><a class="heading-anchor" href="#caveats" aria-label="Link to What this does not tell you">#</a>What this does not tell you</h2>
+        <ul>
+          <li><strong>The data is synthetic.</strong> It is realistic and adversarial, but it is generated, not sampled from real documents. Real text is messier: OCR noise, inconsistent formatting, code-mixed Hinglish and transliteration. Name and address detection in particular is measurably harder on code-mixed text than these numbers suggest.</li>
+          <li><strong>It is a single run in one environment.</strong> Scores are deterministic for a given corpus version and tool version, but a CI regression gate &mdash; not a one-off &mdash; is what keeps them honest over time.</li>
+          <li><strong>The LLM-detector baseline is not in yet.</strong> The adapter exists; those columns will be filled in a later revision.</li>
+          <li><strong>The masking-versus-output-quality study is separate and still in progress.</strong> &ldquo;Does replacing PII with placeholders degrade the model's answer&rdquo; is a real question with its own measurement, including realistic surrogate values that preserve output quality better than bare tokens. It is not part of these detection numbers.</li>
+          <li><strong>Detection accuracy is not compliance.</strong> A high F1 reduces exposure and produces evidence. It does not, on its own, make any system compliant with the DPDP Act or any other regulation.</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="reproduce">
+        <h2><a class="heading-anchor" href="#reproduce" aria-label="Link to Reproduce it">#</a>Reproduce it</h2>
+        <p>From a clone of <a href="https://github.com/maskflow/maskflow" target="_blank" rel="noopener">the MaskFlow repository</a>:</p>
+        <div class="code-block">
+          <div class="code-block-bar">
+            <span class="code-block-title">shell</span>
+          </div>
+          <pre><code>uv sync --group bench
+uv run python -m bench.indiapii.harness run</code></pre>
+        </div>
+        <p>That regenerates <code>bench/reports/indiapii-v1.0/results.json</code> (the full structured data) and <code>results.md</code> (the generated tables). Adapters whose optional dependency or API key is missing are skipped and marked as such rather than scored as zero. The corpus, the generator, the scoring harness and the label maps are all in <a href="https://github.com/maskflow/maskflow/tree/main/bench" target="_blank" rel="noopener"><code>bench/</code></a>.</p>
+        <ul>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/indiapii-v1.0/results.md" target="_blank" rel="noopener">results.md</a> &mdash; the generated report, both matching modes.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/indiapii-v1.0/results.json" target="_blank" rel="noopener">results.json</a> &mdash; every precision, recall and error count.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/indiapii/data/indiapii-v1.0.README.md" target="_blank" rel="noopener">corpus README</a> &mdash; seed, per-domain and per-label span counts.</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="full-data">
+        <h2><a class="heading-anchor" href="#full-data" aria-label="Link to Full data">#</a>Full data</h2>
+        <p>Every F1 cell from the generated report, both matching modes, all five adapters that ran. &ldquo;&mdash;&rdquo; means no matching predictions or no gold spans for that type; <code>0%</code> means predictions were made but none matched.</p>
+
+        <h3>Strict-span F1</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>MaskFlow</th><th>Presidio (stock)</th><th>Presidio + custom</th><th>mask-privacy</th><th>naive regex</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num">98.4%</td><td class="is-none">&mdash;</td><td class="num">96.6%</td><td class="is-none">&mdash;</td><td class="num">54.4%</td></tr>
+              <tr><td>Aadhaar (masked display form)</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>ABHA address</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>ABHA number</td><td class="num">93.3%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Bank account (India)</td><td class="num">93.4%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num">38.7%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Driving licence</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>GSTIN</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>IFSC</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Indian address</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Indian mobile number</td><td class="num">99.0%</td><td class="num">94.9%</td><td class="num">94.9%</td><td class="num">42.2%</td><td class="num">65.1%</td></tr>
+              <tr><td>Indian passport</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>PAN</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="num">94.1%</td></tr>
+              <tr><td>Person name</td><td class="num">29.9%</td><td class="num">18.6%</td><td class="num">18.6%</td><td class="num">18.7%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>PIN code</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num">100%</td></tr>
+              <tr><td>UPI VPA</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Vehicle registration</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Voter ID (EPIC)</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Partial-overlap F1</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>MaskFlow</th><th>Presidio (stock)</th><th>Presidio + custom</th><th>mask-privacy</th><th>naive regex</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num">98.4%</td><td class="is-none">&mdash;</td><td class="num">96.6%</td><td class="is-none">&mdash;</td><td class="num">54.4%</td></tr>
+              <tr><td>Aadhaar (masked display form)</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>ABHA address</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>ABHA number</td><td class="num">93.3%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Bank account (India)</td><td class="num">93.4%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num">38.7%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Driving licence</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>GSTIN</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>IFSC</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Indian address</td><td class="num">43.3%</td><td class="num">48.2%</td><td class="num">48.2%</td><td class="num">50.7%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Indian mobile number</td><td class="num">99.0%</td><td class="num">94.9%</td><td class="num">94.9%</td><td class="num">42.2%</td><td class="num">83.7%</td></tr>
+              <tr><td>Indian passport</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>PAN</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="num">94.1%</td></tr>
+              <tr><td>Person name</td><td class="num">52.4%</td><td class="num">30.4%</td><td class="num">30.4%</td><td class="num">30.4%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>PIN code</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num">100%</td></tr>
+              <tr><td>UPI VPA</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Vehicle registration</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Voter ID (EPIC)</td><td class="num">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Generated by <code>bench.indiapii.harness</code> on 10 October 2026 against corpus <code>indiapii-v1.0</code>, with <code>maskflow-core</code> 0.8.2 and <code>maskflow-pack-india</code> 0.6.0. <code>mask-privacy</code> results vary slightly between identical runs (about 10 false positives either way); MaskFlow's and Presidio's are deterministic.</p>
+      </section>
+
+      <section class="docs-section" id="tabular">
+        <h2><a class="heading-anchor" href="#tabular" aria-label="Link to Tables">#</a>India in tables &mdash; the short version</h2>
+        <span class="benchmark-date">indiapii-tabular-v1.0 &middot; run 14 October 2026 &middot; maskflow-core 0.8.3, maskflow-pack-india 0.6.1</span>
+        <p>The prose corpus above doesn't measure the shape a coding agent or an analyst actually handles: query output and exports. This one does &mdash; 300 synthetic tables (50 each of CSV, TSV, <code>psql</code>, <code>mysql</code>, <code>sqlite3 -header</code> and markdown), 3 to 120 rows, 26,062 gold spans, CC-BY-4.0, one fixed seed. Mobiles, Aadhaar and account numbers are written bare, the way a database stores them, so the only thing saying what a value is sits in the column header, often far above it. Tables also carry look-alike <strong>decoy columns</strong> (<code>order_id</code>, <code>account_id</code>, <code>mobile_app_build</code>, <code>test_mobile</code>&hellip;) whose values are PII-shaped but aren't PII; anything masked there counts as a false positive.</p>
+        <ul>
+          <li><strong>Column-header context took recall from 60.9% to 99.1%.</strong> Before <code>maskflow-core</code> 0.8.3, a bare value with no checksum needed a keyword within 40 characters, and in a table that keyword was the header. Indian mobile recall went from 0.3% to 100%, PIN code from 0.4% to 100%, bank account from 0.4% to 92.5%.</li>
+          <li><strong>False positives went down, not up</strong> &mdash; 220 to 153 across all 26,062 spans. Despite decoy columns built to look exactly like them, there are only 3 false mobile numbers and 5 false bank accounts; most of the rest are person names (102).</li>
+          <li><strong>Prose is unchanged.</strong> IndiaPII-v1.0 scores are identical for every entity, strict and partial.</li>
+          <li><strong>Bank account is the gap, and we know why.</strong> A random 12&ndash;18 digit account number sometimes passes the Luhn or Verhoeff checksum, and a checksum-validated match always wins, so the cell is masked as a credit card or an Aadhaar number instead. It is still masked, but it counts as a bank-account miss &mdash; that is most of the 7.5-point recall gap and most of Aadhaar's 43 false positives.</li>
+        </ul>
+        <p>No competitor columns here: this corpus measures a MaskFlow capability before and after a change, not a head-to-head. Strict and partial-overlap scores are identical.</p>
+
+        <h3>Results by entity</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>Gold spans</th><th>Precision</th><th>Recall</th><th>F1</th><th>False positives</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num">3,327</td><td class="num">98.7%</td><td class="num">100%</td><td class="num">99.4%</td><td class="num">43</td></tr>
+              <tr><td>Bank account</td><td class="num">3,251</td><td class="num">99.8%</td><td class="num">92.5%</td><td class="num">96.0%</td><td class="num">5</td></tr>
+              <tr><td>IFSC</td><td class="num">3,205</td><td class="num">100%</td><td class="num">100%</td><td class="num">100%</td><td class="num">0</td></tr>
+              <tr><td>Indian mobile</td><td class="num">3,697</td><td class="num">99.9%</td><td class="num">100%</td><td class="num">100%</td><td class="num">3</td></tr>
+              <tr><td>PAN</td><td class="num">3,327</td><td class="num">100%</td><td class="num">100%</td><td class="num">100%</td><td class="num">0</td></tr>
+              <tr><td>Person name</td><td class="num">2,982</td><td class="num">96.7%</td><td class="num">100%</td><td class="num">98.3%</td><td class="num">102</td></tr>
+              <tr><td>PIN code</td><td class="num">3,272</td><td class="num">100%</td><td class="num">99.97%</td><td class="num">100%</td><td class="num">0</td></tr>
+              <tr><td>UPI VPA</td><td class="num">3,001</td><td class="num">100%</td><td class="num">100%</td><td class="num">100%</td><td class="num">0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Speed: ~70&nbsp;ms per KB, the same as prose. Tables are bigger documents, so per document that is 50&nbsp;ms median and 679&nbsp;ms p95.</p>
+
+        <h3>Reproduce it</h3>
+        <div class="code-block">
+          <div class="code-block-bar">
+            <span class="code-block-title">shell</span>
+          </div>
+          <pre><code>uv run python -m bench.tabular.generate   # regenerate the corpus (byte-identical)
+uv run python -m bench.tabular.score      # score it</code></pre>
+        </div>
+        <ul>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/indiapii-tabular-v1.0/results.md" target="_blank" rel="noopener">results.md</a> &mdash; per-entity F1, strict and partial.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/indiapii-tabular-v1.0/results.json" target="_blank" rel="noopener">results.json</a> &mdash; every precision, recall and error count.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/tabular/data/indiapii-tabular-v1.0.README.md" target="_blank" rel="noopener">corpus README</a> &mdash; formats, decoy columns, seed and per-label span counts.</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="international">
+        <h2><a class="heading-anchor" href="#international" aria-label="Link to International">#</a>International &mdash; the short version</h2>
+        <span class="benchmark-date">intl-pii-v1.0 &middot; run 10 September 2026</span>
+        <p>The international pack's twelve entity types, scored with the same harness and the same two matching modes as India above: 1,800 synthetic documents (CRM notes, incident reports, invoice e-mails, signup forms, support tickets &mdash; 360 each), 9,368 gold spans, CC-BY-4.0, one fixed seed. Scored against stock Presidio, <code>mask-privacy</code>, and a naive-regex baseline. The harness's LLM-detector adapter was not part of this pass either; as with India, those numbers will follow in a later revision.</p>
+        <ul>
+          <li><strong>Structured and secret types are effectively solved.</strong> EMAIL, IP address, SSN and AWS key score 100% F1; credit card 99.4%, IBAN 99.4%, phone 100%, and JWT and API key both 100% under partial-overlap matching.</li>
+          <li><strong>Address is the sharpest structural win.</strong> MaskFlow scores 99.8% F1 (100% precision, 99.6% recall &mdash; 1,076 of 1,080 gold spans). Stock Presidio scores 0.0% strict / 6.5% partial &mdash; its out-of-the-box recognizer barely fires on this address shape at all; <code>mask-privacy</code> reaches 56.4% strict / 81.1% partial.</li>
+          <li><strong>Person name and date of birth are MaskFlow's two clear losses here, and both are on this page.</strong> On person name, MaskFlow's recall is 100% (every gold name is flagged) but precision is only 58.7%, for 74.0% partial F1 &mdash; Presidio (84.1%) and <code>mask-privacy</code> (86.1%) both beat it. Date of birth runs the other way: 100% precision but only 46.7% recall (63.6% partial F1), because the bundled <code>en_core_web_sm</code> model misses numeric date formats and has no &ldquo;birth date&rdquo; context keyword yet; <code>mask-privacy</code> leads at 79.8% (100% precision, 66.4% recall &mdash; it also misses a third of them, just with fewer false alarms along the way).</li>
+          <li><strong>Two more rows go to a competitor by a fraction of a point.</strong> Presidio edges credit card 100% to MaskFlow's 99.4% (six false positives on Luhn-valid decoys), and <code>mask-privacy</code> edges IBAN 100% to 99.4% (six missed spans). Both are marked below &mdash; a 0.6-point gap is still a gap.</li>
+        </ul>
+
+        <h3>Results by entity (partial-overlap F1)</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>Gold spans</th><th>MaskFlow</th><th>Presidio (stock)</th><th>mask-privacy</th><th>naive regex</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Address</td><td class="num">1,080</td><td class="num is-best">99.8%</td><td class="num">6.5%</td><td class="num">81.1%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>API key</td><td class="num">360</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>AWS key</td><td class="num">360</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td></tr>
+              <tr class="row-loss"><td>Credit card</td><td class="num">512</td><td class="num">99.4%</td><td class="num is-best">100%</td><td class="num">78.2%</td><td class="num">60.1%</td></tr>
+              <tr class="row-loss"><td>Date of birth</td><td class="num">360</td><td class="num">63.6%</td><td class="num">29.5%</td><td class="num is-best">79.8%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Email</td><td class="num">2,160</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td></tr>
+              <tr class="row-loss"><td>IBAN</td><td class="num">493</td><td class="num">99.4%</td><td class="num">76.3%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>IP address</td><td class="num">360</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num">93.3%</td></tr>
+              <tr><td>JWT</td><td class="num">256</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td></tr>
+              <tr class="row-loss"><td>Person name</td><td class="num">2,160</td><td class="num">74.0%</td><td class="num">84.1%</td><td class="num is-best">86.1%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Phone</td><td class="num">1,080</td><td class="num is-best">100%</td><td class="num">86.7%</td><td class="num">64.1%</td><td class="num is-best">100%</td></tr>
+              <tr><td>SSN</td><td class="num">187</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The corpus also plants 971 hard negatives &mdash; strings shaped like a tracking number or an order ID that isn't one &mdash; the same discipline India's corpus uses.</p>
+
+        <h3>Speed</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Adapter</th><th>ms / KB</th><th>Median ms / doc</th><th>p95 ms / doc</th><th>Peak memory</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>MaskFlow</td><td class="num">69.3</td><td class="num">17.6</td><td class="num">39.7</td><td class="num">1.8 MB</td></tr>
+              <tr><td>Presidio (stock)</td><td class="num">45.7</td><td class="num">12.9</td><td class="num">18.7</td><td class="num">3.1 MB</td></tr>
+              <tr><td>mask-privacy</td><td class="num">34.5</td><td class="num">9.8</td><td class="num">13.7</td><td class="num">0.5 MB</td></tr>
+              <tr><td>naive regex</td><td class="num">0.25</td><td class="num">0.07</td><td class="num">0.12</td><td class="num">~0</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Reproduce it</h3>
+        <div class="code-block">
+          <div class="code-block-bar">
+            <span class="code-block-title">shell</span>
+          </div>
+          <pre><code>uv sync --group bench
+uv run python -m bench.intlpii.harness run</code></pre>
+        </div>
+        <ul>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/intl-pii-v1.0/results.md" target="_blank" rel="noopener">results.md</a> &mdash; both matching modes, strict and partial.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/intl-pii-v1.0/results.json" target="_blank" rel="noopener">results.json</a> &mdash; every precision, recall and error count.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/intlpii/data/intl-pii-v1.0.README.md" target="_blank" rel="noopener">corpus README</a> &mdash; seed, per-domain and per-label span counts.</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="scan">
+        <h2><a class="heading-anchor" href="#scan" aria-label="Link to Scan">#</a>Scan accuracy &mdash; the short version</h2>
+        <span class="benchmark-date">scan-log-v1.0 &middot; run 10 September 2026</span>
+        <p><code>maskflow scan</code> is a retrospective auditor, not a live masking gate, so its benchmark asks a different question: over 2,000 synthetic log-shaped records &mdash; nginx access lines, JSON app logs, stack traces, LLM request dumps, worker-task logs, 400 each &mdash; how many false positives does it surface per 1,000 records, next to realistic log-noise hard negatives (request IDs, UUIDs, git SHAs, epoch timestamps, internal IPs, base64 blobs, stack-trace frames)? 6,542 gold PII spans, 6,122 decoy spans, CC-BY-4.0, fixed seed. Two MaskFlow modes are scored &mdash; <code>--deep</code> (full NER pass) and the fast patterns-only pass &mdash; next to stock Presidio and naive regex.</p>
+        <ul>
+          <li><strong>Checksum-validated identifiers are close to perfect on log noise.</strong> Aadhaar, PAN, GSTIN, IFSC, UPI VPA and the Indian mobile number all score 100% F1 for both MaskFlow modes; a naive Aadhaar regex, with no checksum, flags 337 hard-negative order/reference IDs that happen to be twelve digits.</li>
+          <li><strong>Headline precision: 88.4% (<code>--deep</code>) / 91.6% (patterns-only)</strong> &mdash; 428 and 298 false positives per 1,000 records respectively, against Presidio's 544 and naive regex's 433. Patterns-only beats <code>--deep</code> on this metric because the NER pass is the main source of the extra noise.</li>
+          <li><strong>Almost all of it is two labels.</strong> Of <code>--deep</code>'s false positives, 438 are person names (the NER pass firing on log text &mdash; user agents, class names, stack-trace tokens) and 400 are internal IP addresses (<code>10.*</code>, <code>172.16.*</code>, <code>192.168.*</code>) that MaskFlow has no private-range suppression for yet, so every one of the 400 in the corpus is flagged. Patterns-only avoids the NER noise entirely: 178 person-name false positives instead of 438, about 2.5&times; fewer.</li>
+          <li><strong>The pipeline is verified lossless.</strong> A separate plumbing check runs the real <code>scan.pipeline.run_pipeline(--deep)</code> over all 2,000 records and asserts its aggregated counts equal <code>detect()</code>'s directly &mdash; <strong>PASS</strong>, 7,396 findings across 13 entity types, so the streaming field-extraction and aggregation layer between the CLI and the detection engine loses nothing.</li>
+        </ul>
+
+        <h3>Audit cost &mdash; false positives on log noise</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Adapter</th><th>FPs / 1,000 records</th><th>Total FPs</th><th>Overall precision</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>MaskFlow (patterns-only)</td><td class="num is-best">298.0</td><td class="num">596</td><td class="num is-best">91.6%</td></tr>
+              <tr><td>MaskFlow (<code>--deep</code>)</td><td class="num">428.0</td><td class="num">856</td><td class="num">88.4%</td></tr>
+              <tr><td>naive regex</td><td class="num">433.0</td><td class="num">866</td><td class="num">79.1%</td></tr>
+              <tr><td>Presidio (stock)</td><td class="num">544.0</td><td class="num">1,088</td><td class="num">72.7%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Results by entity (partial-overlap F1)</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Entity</th><th>MaskFlow (deep)</th><th>MaskFlow (patterns)</th><th>Presidio (stock)</th><th>naive regex</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aadhaar</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="num">67.4%</td></tr>
+              <tr><td>API key</td><td class="num is-best">99.7%</td><td class="num is-best">99.7%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>AWS key</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td></tr>
+              <tr><td>Credit card</td><td class="num">97.8%</td><td class="num">97.8%</td><td class="num is-best">100%</td><td class="num">86.2%</td></tr>
+              <tr><td>Email</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num">79.0%</td><td class="num is-best">100%</td></tr>
+              <tr><td>GSTIN</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>IFSC</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>Indian mobile</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num">85.0%</td><td class="num">95.0%</td></tr>
+              <tr><td>IP address</td><td class="num">66.7%</td><td class="num">66.7%</td><td class="num">66.7%</td><td class="num">59.6%</td></tr>
+              <tr><td>JWT</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td></tr>
+              <tr><td>PAN</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="num is-best">100%</td></tr>
+              <tr><td>Person name</td><td class="num">87.9%</td><td class="num is-best">94.7%</td><td class="num">57.6%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>UPI VPA</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td><td class="is-none">&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Person name is the clearest evidence that the NER pass is the noise source on log text: patterns-only (94.7%) beats <code>--deep</code> (87.9%) on this corpus even though both beat Presidio (57.6%). IP address is a three-way tie at 66.7% for a structural reason, not a detection gap: precision is capped at 50% because every one of the 400 internal-range IPs in the corpus (scored as a decoy, not personal data, for an exposure audit) is flagged by all three tools alongside the 400 real gold IPs &mdash; 100% recall, 50% precision, no exceptions. Private-IP suppression is an open item, not something this run hides.</p>
+
+        <h3>Speed</h3>
+        <div class="table-wrap">
+          <table class="data-table compact">
+            <thead>
+              <tr><th>Adapter</th><th>ms / KB</th><th>Median ms / doc</th><th>p95 ms / doc</th><th>Peak memory</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>MaskFlow (<code>--deep</code>)</td><td class="num">52.4</td><td class="num">13.2</td><td class="num">27.3</td><td class="num">6.8 MB</td></tr>
+              <tr><td>MaskFlow (patterns-only)</td><td class="num is-best">1.8</td><td class="num is-best">0.5</td><td class="num is-best">0.7</td><td class="num is-best">~0</td></tr>
+              <tr><td>Presidio (stock)</td><td class="num">45.9</td><td class="num">11.3</td><td class="num">20.2</td><td class="num">2.3 MB</td></tr>
+              <tr><td>naive regex</td><td class="num">0.22</td><td class="num">0.05</td><td class="num">0.09</td><td class="num">~0</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Reproduce it</h3>
+        <div class="code-block">
+          <div class="code-block-bar">
+            <span class="code-block-title">shell</span>
+          </div>
+          <pre><code>uv sync --group bench
+uv run python -m bench.scanbench.harness run</code></pre>
+        </div>
+        <ul>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/scan-log-v1.0/results.md" target="_blank" rel="noopener">results.md</a> &mdash; per-entity F1, audit cost, and the plumbing check.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/scan-log-v1.0/results.json" target="_blank" rel="noopener">results.json</a> &mdash; every precision, recall and error count.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/scanbench/data/scan-log-v1.0.README.md" target="_blank" rel="noopener">corpus README</a> &mdash; seed, per-shape and per-label span counts.</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="integration-parity">
+        <h2><a class="heading-anchor" href="#integration-parity" aria-label="Link to Integration parity">#</a>Integration parity &mdash; the short version</h2>
+        <span class="benchmark-date">integration-parity-v1 &middot; run 10 September 2026</span>
+        <p>The four framework integrations &mdash; <code>maskflow-litellm</code>, <code>maskflow-langchain</code>, <code>maskflow-llamaindex</code>, <code>maskflow-mcp</code> &mdash; aren't a second detection engine; each wraps the same core <code>maskflow.mask()</code> / <code>maskflow.unmask()</code>. This benchmark checks that wrapping doesn't lose anything. It routes 300 documents from <code>indiapii-v1.0</code> through each integration's masking layer and asserts, per document, that:</p>
+        <ul>
+          <li><strong>Detection parity</strong> &mdash; the <code>(entity_type, value)</code> set the wrapper masks equals what the core engine's <code>mask()</code> would produce on the same text.</li>
+          <li><strong>Round-trip</strong> &mdash; the wrapper's own <code>unmask()</code> restores the document byte-exact.</li>
+          <li><strong>Streaming</strong> &mdash; the masked text, fed back through the shared <code>StreamingUnmasker</code> split at 1-byte and random chunk boundaries, reassembles byte-exact.</li>
+        </ul>
+        <p>Every column should read 100% &mdash; a divergence anywhere is a wrapper bug, not a tolerance to manage. It did, across all four:</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Integration</th><th>Detection parity</th><th>Round-trip</th><th>Streaming</th><th>Divergences</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>maskflow-litellm</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>maskflow-langchain</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>maskflow-llamaindex</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td></tr>
+              <tr><td>maskflow-mcp</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="num is-best">100%</td><td class="is-none">&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>This is an equality gate, not a leaderboard &mdash; there's no baseline file to regress against, just a CI job (<code>integration-parity</code>) that runs on every pull request. A deliberately broken run is included in the test suite to prove the gate actually fails when parity breaks, rather than passing trivially.</p>
+        <p><strong>A fifth item, JS&harr;Python cross-language parity, was scoped and dropped.</strong> <code>@maskflow/detection</code>, the browser/Node TypeScript port, already shares its test fixtures with the Python suite and is a deliberately narrow client-side helper &mdash; not a second full engine. A separate published parity corpus for it wasn't judged worth the added Node CI surface right now; it can be reopened if that changes.</p>
+
+        <h3>Reproduce it</h3>
+        <div class="code-block">
+          <div class="code-block-bar">
+            <span class="code-block-title">shell</span>
+          </div>
+          <pre><code>uv sync --group bench
+uv run python -m bench.integrations run</code></pre>
+        </div>
+        <ul>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/integration-parity-v1/results.md" target="_blank" rel="noopener">results.md</a> &mdash; per-integration results.</li>
+          <li><a href="https://github.com/maskflow/maskflow/blob/main/bench/reports/integration-parity-v1/results.json" target="_blank" rel="noopener">results.json</a> &mdash; the full per-document check data.</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="llm-quality">
+        <h2><a class="heading-anchor" href="#llm-quality" aria-label="Link to LLM quality">#</a>LLM quality &mdash; instrumented, results pending</h2>
+        <p>&ldquo;Does replacing PII with placeholders degrade the model's answer&rdquo; is a real question with its own measurement, separate from detection F1. It's the one item on this page with no number yet &mdash; said plainly, rather than left as a silent gap.</p>
+        <p><strong>What's built:</strong> a 200-task LLM-utility benchmark that records its task-model and judge-model IDs directly in <code>results.json</code> / <code>results.md</code>, with <code>--task-model</code>, <code>--judge-model</code> and <code>--sample-per-type</code> flags, and <code>make quality-bench</code> / <code>make quality-bench-smoke</code> targets. The method is documented in the repo README.</p>
+        <p><strong>Status:</strong> results pending. The run uses the Anthropic API directly; a backend using the <code>claude</code> CLI was prototyped and rejected, because the CLI self-redacts PII on its own, so the task model emits <code>&lt;PERSON_NAME_1&gt;</code>-style tokens even in the <em>unmasked</em> condition, which corrupts the leak-rate metric the benchmark exists to measure.</p>
+        <p>Once it runs, the masked-condition leak rate is checked against 0 and <code>bench/reports/indiapii-quality-v1.0/results.md</code> is linked here. Tracked on <a href="https://github.com/maskflow/maskflow/issues/92" target="_blank" rel="noopener">the umbrella issue</a> and in the project CHANGELOG.</p>
+      </section>
+
+      <section class="docs-section" id="my-data">
+        <h2><a class="heading-anchor" href="#my-data" aria-label="Link to Score it on your own data">#</a>Score it on your own data</h2>
+        <p>Every number on this page is measured on a synthetic corpus &mdash; necessary for a reproducible, shareable benchmark, but still someone else's documents. <code>maskflow bench --my-data &lt;path&gt;</code> runs the same strict-span / partial-overlap scoring MaskFlow uses internally against <strong>your own</strong> labelled JSONL file and prints per-entity precision, recall and F1, so &ldquo;is it accurate on my documents?&rdquo; has a command, not just an argument. It scores MaskFlow only &mdash; not the multi-tool comparison above.</p>
+        <div class="code-block">
+          <div class="code-block-bar">
+            <span class="code-block-title">shell</span>
+          </div>
+          <pre><code>pip install "maskflow-cli[bench]"
+maskflow bench --my-data yourdata.jsonl --out results/</code></pre>
+        </div>
+        <p>One JSON object per line &mdash; <code>{"text": "...", "entities": [{"start": 22, "end": 32, "label": "PAN"}]}</code>. Label something that only looks like PII with <code>"value_class": "hard_negative"</code> so MaskFlow correctly ignoring it doesn't cost recall &mdash; only a false hit on it costs precision. Full schema and output format in <a href="https://github.com/maskflow/maskflow/blob/main/docs/bench.md" target="_blank" rel="noopener"><code>docs/bench.md</code></a>.</p>
+        <p>Shipped in <code>maskflow-cli</code> 0.8.0, backed by the new <a href="https://pypi.org/project/maskflow-bench/" target="_blank" rel="noopener"><code>maskflow-bench</code> 0.1.0</a> package. Both are opt-in &mdash; <code>bench</code> only installs with the <code>[bench]</code> extra, the same policy as <code>[s3]</code>/<code>[postgres]</code>/<code>[evidence]</code>, so a bare <code>maskflow-cli</code> install stays light.</p>
+      </section>
+
+      <section class="docs-section" id="contribute">
+        <h2><a class="heading-anchor" href="#contribute" aria-label="Link to Contribute">#</a>Contribute</h2>
+        <p>Reported misses become permanent corpus fixtures &mdash; if MaskFlow mishandled a real span (with the value changed), <a href="https://github.com/maskflow/maskflow/issues" target="_blank" rel="noopener">open an issue</a>. If you have labelled documents to contribute &mdash; Indian or international &mdash; or want to discuss the methodology for any of the four corpora above, <a href="#contact">get in touch</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-links">
+          <div class="footer-col">
+            <p class="footer-col-title">Product</p>
+            <ul>
+              <li><a href="/#how">How it works</a></li>
+              <li><a href="/benchmark.html">Benchmark</a></li>
+              <li><a href="/entities.html">Entities</a></li>
+              <li><a href="/gateway.html">Gateway</a></li>
+              <li><a href="/integrations.html">Integrations</a></li>
+              <li><a href="/scan.html">Scan</a></li>
+              <li><a href="/evidence-cloud.html">Evidence Cloud</a></li>
+              <li><a href="/sample-evidence-report.html">Sample evidence report</a></li>
+              <li><a href="/docs.html#roadmap">Roadmap</a></li>
+              <li><a href="https://github.com/maskflow/maskflow/issues" target="_blank" rel="noopener">Detailed roadmap</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">Resources</p>
+            <ul>
+              <li><a href="/docs.html">Docs</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="https://github.com/maskflow/maskflow" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://pypi.org/project/maskflow-sdk/" target="_blank" rel="noopener" data-plausible-goal="pypi_click">PyPI</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">Trust</p>
+            <ul>
+              <li><a href="/security.html">Security</a></li>
+              <li><a href="/#not-do">What we don't do</a></li>
+              <li><a href="/security.html#reporting">Report a vulnerability</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-contact" id="contact">
+          <p class="footer-col-title">Contact</p>
+          <p class="footer-contact-note">Benchmark dataset access, a missing entity type, an audit question. Sent directly &mdash; nothing is stored. Want Evidence Cloud? <a href="/evidence-cloud.html#request-access">Free for 14 days</a>.</p>
+          <form class="contact-form" id="contact-form">
+            <div class="field-row">
+              <div class="field">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" required></textarea>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFP_zlrJ-hZ1RDLT" data-size="flexible"></div>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="contact-status" id="contact-status" hidden></p>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-bottom-brand">
+          <img src="/brand/glyph.svg" alt="" width="16" height="16" />
+          &copy; MaskFlow &middot; MIT licensed &middot; Source on GitHub &middot; Made in India
+        </span>
+        <a href="https://github.com/maskflow/maskflow" target="_blank" rel="noopener">github.com/maskflow/maskflow</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer data-domain="maskflow.in" src="https://plausible.io/js/script.outbound-links.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="/demo.js" defer></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4b3362fee7e067d',t:'MTc5MjExMzMxOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"c37d8757a129461aad2155bcfa001699","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

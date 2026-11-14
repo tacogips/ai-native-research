@@ -1,0 +1,465 @@
+{
+  "確認日": "2026-11-13",
+  "範囲": "公開説明・公式文書・公開コードの確認。データ本体の一括取得、生成、モデル評価なし。",
+  "説明": "直接取得のハッシュは説明ページ等の応答であり、データ本体のハッシュではない。直接取得失敗でも検索・閲覧で確認した公開記述は本文の出典として保持。mainやstableは更新されうる。",
+  "出典": [
+    {
+      "id": "S01",
+      "確認日": "2026-11-13",
+      "説明": "Faker日本語。氏名・住所等の生成機能。",
+      "公開URL": [
+        "https://faker.readthedocs.io/en/stable/locales/ja_JP.html"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://faker.readthedocs.io/en/stable/locales/ja_JP.html",
+          "直接取得": "成功",
+          "最終URL": "https://faker.readthedocs.io/en/stable/locales/ja_JP.html",
+          "bytes": 603414,
+          "sha256": "b965ce126dc11df250f4168ec0ab81719731f8d8db7ac79f339f7c81c6e85fd3"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "確認日": "2026-11-13",
+      "説明": "Sumi。分類・分割・利用条件・不正検査数字。",
+      "公開URL": [
+        "https://huggingface.co/datasets/NagaYu/sumi-ja-pii-corpus"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://huggingface.co/datasets/NagaYu/sumi-ja-pii-corpus",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/datasets/NagaYu/sumi-ja-pii-corpus",
+          "bytes": 1039929,
+          "sha256": "72b2ff8ff1d6666358b3dbc03bbf213cef78729b315860d08bbd4c4972ec7650"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "確認日": "2026-11-13",
+      "説明": "Nemotron-PII-Japan、NVIDIAの作成方法の説明。日本語文書と値確定後の文章生成。",
+      "公開URL": [
+        "https://huggingface.co/datasets/nvidia/Nemotron-PII-Japan",
+        "https://huggingface.co/blog/nvidia/nemotron-pii-japan"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-PII-Japan",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/datasets/nvidia/Nemotron-PII-Japan",
+          "bytes": 975878,
+          "sha256": "2ffeb698b27b68631390d334393980562adde2396d333e3bfc29de62c95eb426"
+        },
+        {
+          "url": "https://huggingface.co/blog/nvidia/nemotron-pii-japan",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/blog/nvidia/nemotron-pii-japan",
+          "bytes": 188069,
+          "sha256": "aba2c26ce95ac2287fe3d1a2e213ee26bf41565cd898e63be85e1823c3a8b005"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "確認日": "2026-11-13",
+      "説明": "Nemotron-Personas-Japan。日本語の架空人物属性。",
+      "公開URL": [
+        "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Japan"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Japan",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Japan",
+          "bytes": 1188616,
+          "sha256": "aa118ef69bc4588e3325fc25be7e086b2206df347cd1aff962b6ba5009c6e755"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "確認日": "2026-11-13",
+      "説明": "Nemotron-Personas-Finance-Japan。所得区分・教育・家族等の列と利用条件。",
+      "公開URL": [
+        "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Finance-Japan"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Finance-Japan",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/datasets/nvidia/Nemotron-Personas-Finance-Japan",
+          "bytes": 1600853,
+          "sha256": "829e2cf0380e569066af657ff3c139be31044ecd56891adaf173422d3c7ae6b0"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "確認日": "2026-11-13",
+      "説明": "Japanese Driving License、jpDL。詳細は前稿。",
+      "公開URL": [
+        "https://universe.roboflow.com/thang-nguyen-qhngn/japanese-driving-license",
+        "https://universe.roboflow.com/gplx/jpdl"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://universe.roboflow.com/thang-nguyen-qhngn/japanese-driving-license",
+          "直接取得": "失敗",
+          "理由": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://universe.roboflow.com/gplx/jpdl",
+          "直接取得": "失敗",
+          "理由": "HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "確認日": "2026-11-13",
+      "説明": "UniDataProの合成日本旅券。公開標本と販売対象の区別。",
+      "公開URL": [
+        "https://huggingface.co/datasets/UniDataPro/synthetic-printed-japanese-passports"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://huggingface.co/datasets/UniDataPro/synthetic-printed-japanese-passports",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/datasets/UniDataPro/synthetic-printed-japanese-passports",
+          "bytes": 374056,
+          "sha256": "943f7c33fc760afd0c80e2d05f4ac9252f1a417802ac6d6d69f30d4b36a9cf35"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "確認日": "2026-11-13",
+      "説明": "DocXPand。画像生成方法とコード・資料の条件。",
+      "公開URL": [
+        "https://github.com/QuickSign/docxpand"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://github.com/QuickSign/docxpand",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/QuickSign/docxpand",
+          "bytes": 235370,
+          "sha256": "480a04a93dccda9a1bfa9db5b3341cef7b4ee85958bc7abc56a0ffc6f7350d6f"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "確認日": "2026-11-13",
+      "説明": "Stripeの試験資料。カード等の公式試験値。",
+      "公開URL": [
+        "https://docs.stripe.com/testing"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://docs.stripe.com/testing",
+          "直接取得": "成功",
+          "最終URL": "https://docs.stripe.com/testing",
+          "bytes": 2246872,
+          "sha256": "9505ded82bd307194a07f33dbc7f2311bb6a53779be5426ea08535cd646f2c93"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "確認日": "2026-11-13",
+      "説明": "SyntheticResumeData、作成方法。合成履歴書PDFと正解。",
+      "公開URL": [
+        "https://github.com/jijunhao/SyntheticResumeData",
+        "https://raw.githubusercontent.com/jijunhao/SyntheticResumeData/main/README.md"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://github.com/jijunhao/SyntheticResumeData",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/jijunhao/SyntheticResumeData",
+          "bytes": 204373,
+          "sha256": "201c482725e1937ac56775344e8f25edeac8d3a0cb298823fc86c92dfecadd83"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/jijunhao/SyntheticResumeData/main/README.md",
+          "直接取得": "成功",
+          "最終URL": "https://raw.githubusercontent.com/jijunhao/SyntheticResumeData/main/README.md",
+          "bytes": 1337,
+          "sha256": "25136662406401bd9b6ec5fb2cc188a8665c0e27b7d4c2980d0872ceea03e987"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "確認日": "2026-11-13",
+      "説明": "ACM RecSys Challenge 2015 / YOOCHOOSE。クリックと購入の記録。",
+      "公開URL": [
+        "https://recsys.acm.org/recsys15/challenge/"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://recsys.acm.org/recsys15/challenge/",
+          "直接取得": "成功",
+          "最終URL": "https://recsys.acm.org/recsys15/challenge/",
+          "bytes": 57798,
+          "sha256": "23d9a10f7e065481fb9273a95504c635929362cc66a382fd29f00c2ab6ae764c"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "確認日": "2026-11-13",
+      "説明": "SDVの例示資料、入力資料の説明。`fake_hotels`と通常の生成に必要な入力。",
+      "公開URL": [
+        "https://docs.sdv.dev/sdv/integration/utils/demo",
+        "https://docs.sdv.dev/sdv/integration/overview.md"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://docs.sdv.dev/sdv/integration/utils/demo",
+          "直接取得": "成功",
+          "最終URL": "https://docs.sdv.dev/sdv/integration/utils/demo",
+          "bytes": 630218,
+          "sha256": "0aabc6ec88cfcd567bbdbcaee558f091be40b0538c107d84bf7961090bdd1599"
+        },
+        {
+          "url": "https://docs.sdv.dev/sdv/integration/overview.md",
+          "直接取得": "成功",
+          "最終URL": "https://docs.sdv.dev/sdv/integration/overview.md",
+          "bytes": 5684,
+          "sha256": "3603ea249c90b8b266c61e95848a3548b6f956b2f1124162a630855abaebc362"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "確認日": "2026-11-13",
+      "説明": "RecSim。連続した利用者行動の模擬と保管状態。",
+      "公開URL": [
+        "https://github.com/google-research/recsim"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://github.com/google-research/recsim",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/google-research/recsim",
+          "bytes": 234323,
+          "sha256": "4a5e06c711ac4c81db5176ee70f313f9afb73752a5bbd652e8fae1f4b196e49e"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "確認日": "2026-11-13",
+      "説明": "MIND。閲覧・クリック履歴と研究用途の条件。",
+      "公開URL": [
+        "https://msnews.github.io/"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://msnews.github.io/",
+          "直接取得": "成功",
+          "最終URL": "https://msnews.github.io/",
+          "bytes": 532875,
+          "sha256": "f46c98439e8890056444f3a25133caef54edf7b652435270bacb07c1fe74b38a"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "確認日": "2026-11-13",
+      "説明": "Meddies PII。合成医療文書、分類・条件。",
+      "公開URL": [
+        "https://huggingface.co/datasets/Meddies/meddies-pii"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://huggingface.co/datasets/Meddies/meddies-pii",
+          "直接取得": "成功",
+          "最終URL": "https://huggingface.co/datasets/Meddies/meddies-pii",
+          "bytes": 805943,
+          "sha256": "4cd994a8e0b1a9043bd2b67684cd6d9788a00edf08dfac7d6296d430eaf6396c"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "確認日": "2026-11-13",
+      "説明": "Synthea、公式紹介。合成診療情報と出力形式。",
+      "公開URL": [
+        "https://github.com/synthetichealth/synthea",
+        "https://synthetichealth.github.io/synthea/"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://github.com/synthetichealth/synthea",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/synthetichealth/synthea",
+          "bytes": 279859,
+          "sha256": "4169b8efc1ccfbc27248edf4438cacd71d494b430096501909b0fd3645a6782e"
+        },
+        {
+          "url": "https://synthetichealth.github.io/synthea/",
+          "直接取得": "成功",
+          "最終URL": "https://synthetichealth.github.io/synthea/",
+          "bytes": 38000,
+          "sha256": "6c920ba6c6c8542641c996b1348dda58d34d7de1825e43a06d5ecd003dec65aa"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "確認日": "2026-11-13",
+      "説明": "個人情報保護委員会・通則編。個人情報・要配慮個人情報の定義。",
+      "公開URL": [
+        "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+          "直接取得": "成功",
+          "最終URL": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+          "bytes": 620228,
+          "sha256": "11a39fd40e49b85c8ab1f5f8cc37247223f2ebba8a9cb2f562ac762745095001"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "確認日": "2026-11-13",
+      "説明": "デジタル庁・マイナンバーの説明。12桁の体系。",
+      "公開URL": [
+        "https://www.digital.go.jp/policies/mynumber_faq_02"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://www.digital.go.jp/policies/mynumber_faq_02",
+          "直接取得": "成功",
+          "最終URL": "https://www.digital.go.jp/policies/mynumber_faq_02",
+          "bytes": 58194,
+          "sha256": "1d1543cc1285e13617cc29fd982b17c264173c5f69880414871ea61e40842992"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "確認日": "2026-11-13",
+      "説明": "IANAの例示用ドメイン、RFC 2606。例示・試験用の名前。",
+      "公開URL": [
+        "https://www.iana.org/help/example-domains",
+        "https://www.rfc-editor.org/rfc/rfc2606"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://www.iana.org/help/example-domains",
+          "直接取得": "成功",
+          "最終URL": "https://www.iana.org/help/example-domains",
+          "bytes": 6774,
+          "sha256": "3b8669627aee51b99102e51348e1d9c0b17fe949a481f3272b8f350b2a075c5f"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc2606",
+          "直接取得": "成功",
+          "最終URL": "https://www.rfc-editor.org/info/rfc2606/",
+          "bytes": 143437,
+          "sha256": "4c43811616d5a3ba866eee739ea3786a287c35f80fc2d773ec0108b1af187ae8"
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "確認日": "2026-11-13",
+      "説明": "TAB、注釈指針。機微属性等の注釈。",
+      "公開URL": [
+        "https://github.com/NorskRegnesentral/text-anonymization-benchmark",
+        "https://github.com/NorskRegnesentral/text-anonymization-benchmark/blob/master/guidelines.md"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://github.com/NorskRegnesentral/text-anonymization-benchmark",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/NorskRegnesentral/text-anonymization-benchmark",
+          "bytes": 225757,
+          "sha256": "ae9b47fc97423ddc9c10c74bb352ad4c77fa49a97609587baf703d0e1e7f56f7"
+        },
+        {
+          "url": "https://github.com/NorskRegnesentral/text-anonymization-benchmark/blob/master/guidelines.md",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/NorskRegnesentral/text-anonymization-benchmark/blob/master/guidelines.md",
+          "bytes": 289568,
+          "sha256": "05e041de38f41310c302133837db9def9625bf8b4bcbe1c57f22433931cd7d73"
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "確認日": "2026-11-13",
+      "説明": "NeMo DataDesigner。合成資料を生成するための構成・条件。",
+      "公開URL": [
+        "https://github.com/NVIDIA-NeMo/DataDesigner"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://github.com/NVIDIA-NeMo/DataDesigner",
+          "直接取得": "成功",
+          "最終URL": "https://github.com/NVIDIA-NeMo/DataDesigner",
+          "bytes": 368439,
+          "sha256": "e5e4ee295279a7f0679fd7ca81d300af37716c39671c68ee07fa3f42e4d600a4"
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "確認日": "2026-11-13",
+      "説明": "SDVの利用条件。BSL 1.1と追加利用条件。",
+      "公開URL": [
+        "https://raw.githubusercontent.com/sdv-dev/SDV/main/LICENSE"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://raw.githubusercontent.com/sdv-dev/SDV/main/LICENSE",
+          "直接取得": "成功",
+          "最終URL": "https://raw.githubusercontent.com/sdv-dev/SDV/main/LICENSE",
+          "bytes": 4818,
+          "sha256": "fcaa94d4732eb6af1a75ef2282e286786f3ca07e951b8e138b543fda19baf302"
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "確認日": "2026-11-13",
+      "説明": "厚生労働省の履歴書様式例の配布ページ。日本語履歴書のPDF・Excelと性別欄等の位置付け。",
+      "公開URL": [
+        "https://kouseisaiyou.mhlw.go.jp/jobseekers.html"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://kouseisaiyou.mhlw.go.jp/jobseekers.html",
+          "直接取得": "成功",
+          "最終URL": "https://kouseisaiyou.mhlw.go.jp/jobseekers.html",
+          "bytes": 17027,
+          "sha256": "bdc8d6d9e2b7062f8335a75c781022b5ff4f4c4eca3153c855892614ef146c11"
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "確認日": "2026-11-13",
+      "説明": "マイジョブ・カードの空欄様式。履歴書・職務経歴書・応募書類等。",
+      "公開URL": [
+        "https://www.job-card.mhlw.go.jp/guidance/download_blank"
+      ],
+      "直接取得記録": [
+        {
+          "url": "https://www.job-card.mhlw.go.jp/guidance/download_blank",
+          "直接取得": "失敗",
+          "理由": "HTTP Error 403: Forbidden"
+        }
+      ]
+    }
+  ]
+}

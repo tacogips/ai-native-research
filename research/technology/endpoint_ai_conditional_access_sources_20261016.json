@@ -1,0 +1,93 @@
+[
+  {
+    "id": "purview_browser",
+    "url": "https://learn.microsoft.com/en-us/purview/dlp-browser-dlp-learn",
+    "retrieved_at_utc": "2026-10-16T00:22:13.404619+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://learn.microsoft.com/en-us/purview/dlp-browser-dlp-learn",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/purview_browser.html",
+    "bytes": 70052,
+    "sha256": "5d1876f8c05a7b924f9e80cce7a7668112a7e549a84221bcd1bf42ac3b57bcf5"
+  },
+  {
+    "id": "purview_endpoint",
+    "url": "https://learn.microsoft.com/en-us/purview/endpoint-dlp-learn-about",
+    "retrieved_at_utc": "2026-10-16T00:22:13.405047+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://learn.microsoft.com/en-us/purview/endpoint-dlp-learn-about",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/purview_endpoint.html",
+    "bytes": 83845,
+    "sha256": "873c71a6986f70aa63125a4f03a74f2722970330a1d956a2684ce45ad305513d"
+  },
+  {
+    "id": "cyberhaven_ai",
+    "url": "https://www.cyberhaven.com/technologies/gen-ai",
+    "retrieved_at_utc": "2026-10-16T00:22:13.405232+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://www.cyberhaven.com/technologies/gen-ai",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/cyberhaven_ai.html",
+    "bytes": 184370,
+    "sha256": "fb051175882ddfd05a9608db08c8f5caadcfabd6885dc2b1781f296f583d3fe2"
+  },
+  {
+    "id": "mind_genai",
+    "url": "https://mind.io/solutions/data-source-genai",
+    "retrieved_at_utc": "2026-10-16T00:22:13.405413+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://mind.io/solutions/data-source-genai",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/mind_genai.html",
+    "bytes": 184044,
+    "sha256": "e9c7bc9ab53794fe2faebe2c9caea423acf90280a9381657166daf6ba6cce8a3"
+  },
+  {
+    "id": "mind_claude",
+    "url": "https://mind.io/newsroom/mind-brings-stress-free-dlp-to-claude-with-new-compliance-api-integration",
+    "retrieved_at_utc": "2026-10-16T00:22:13.405567+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://mind.io/newsroom/mind-brings-stress-free-dlp-to-claude-with-new-compliance-api-integration",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/mind_claude.html",
+    "bytes": 123560,
+    "sha256": "b2ab9bf407f0a3063fab885adac27a476e61a057ddc6fb6e277da46980377976"
+  },
+  {
+    "id": "netwrix_ai",
+    "url": "https://docs.netwrix.com/docs/endpointprotector/admin/cap_module/capai",
+    "retrieved_at_utc": "2026-10-16T00:22:13.590381+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://docs.netwrix.com/docs/endpointprotector/admin/cap_module/capai",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/netwrix_ai.html",
+    "bytes": 49737,
+    "sha256": "6099762a3021643805f62cf70d4b92ea762be7b0a9f2965d0149c673550cdccc"
+  },
+  {
+    "id": "netskope_genai",
+    "url": "https://www.netskope.com/products/securing-generative-ai",
+    "retrieved_at_utc": "2026-10-16T00:22:13.596621+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "netskope_gateway",
+    "url": "https://docs.netskope.com/en/ai-gateway",
+    "retrieved_at_utc": "2026-10-16T00:22:13.663937+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "status": 200,
+    "final_url": "https://docs.netskope.com/en/ai-gateway",
+    "path": "research/sources/endpoint_ai_conditional_access_20261016/netskope_gateway.html",
+    "bytes": 85541,
+    "sha256": "1621b27b7966a4e5b55db4ab4f68701cc6dc5c6a15545d90fc9a49f57b1c3bc7"
+  },
+  {
+    "id": "incydr_architecture",
+    "url": "https://mimecastsupport.zendesk.com/hc/en-us/articles/42666107367571-Incydr-architecture",
+    "retrieved_at_utc": "2026-10-16T00:22:13.786363+00:00",
+    "verification": "本文の内容確認は調査文書を参照。HTTP成功だけでは本文取得成功を意味しない。",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]
