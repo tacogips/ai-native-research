@@ -1,0 +1,180 @@
+{
+  "checked_date": "2026-10-08",
+  "scope": "日本の一般企業の個人情報取得・保存・消去・監査。英国ICO・EUの比較。全世界・全業種の網羅ではない",
+  "sources": [
+    {
+      "id": "ppc-general",
+      "url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+      "checked_at": "2026-10-08T12:11:34.833477+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-general.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-general.txt",
+      "sha256": "3e1d024042a6c4462edd6bff6a20e53c7fd154b68a492b57775c4000ed48380d",
+      "bytes": 620228,
+      "checked_sections": [
+        "3-1 利用目的",
+        "3-3 取得",
+        "3-4-1 不要時の消去",
+        "3-8-5 利用停止等",
+        "10-3 取扱状況と監査",
+        "10-5 削除・廃棄と記録"
+      ]
+    },
+    {
+      "id": "ppc-qa",
+      "url": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+      "checked_at": "2026-10-08T12:11:34.880954+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-qa.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-qa.txt",
+      "sha256": "6bab9f6bf654311ba8a6ca8a755a049d356a90483df75e2d3e7b038995161a13",
+      "bytes": 740820,
+      "checked_sections": [
+        "Q4-17 入力画面等の目的明示",
+        "Q5-2〜Q5-4 保存・消去",
+        "Q9-20 不採用者の履歴書"
+      ]
+    },
+    {
+      "id": "ppc-ai",
+      "url": "https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/",
+      "checked_at": "2026-10-08T12:11:34.882700+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-ai.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-ai.txt",
+      "sha256": "b16651bef23625804a2e07fb90e55eb0df5b57d260bc63b7cfc5d39569cc5096",
+      "bytes": 41026,
+      "checked_sections": [
+        "2023-06-02 注意喚起と既存調査の内容照合"
+      ]
+    },
+    {
+      "id": "ppc-number",
+      "url": "https://www.ppc.go.jp/legal/policy/my_number_guideline_jigyosha/",
+      "checked_at": "2026-10-08T12:11:34.893791+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.ppc.go.jp/legal/policy/my_number_guideline_jigyosha/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-number.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-number.txt",
+      "sha256": "4205fc39384404a999e5be3a2d52fb0995fda8e06f7295451f0f63be50761564",
+      "bytes": 283196,
+      "checked_sections": [
+        "収集・保管制限",
+        "別添1 削除・廃棄の記録と証明"
+      ]
+    },
+    {
+      "id": "ppc-id-copy",
+      "url": "https://www.ppc.go.jp/all_faq_index/faq5-q6-2/",
+      "checked_at": "2026-10-08T12:11:35.838186+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.ppc.go.jp/all_faq_index/faq5-q6-2/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-id-copy.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ppc-id-copy.txt",
+      "sha256": "cb971a429aa8ed2a494c6e83104a4ed5ec8366055eaa92c13fcfc898e4c719b3",
+      "bytes": 42479,
+      "checked_sections": [
+        "本人確認書類コピーの必要性と不要時廃棄"
+      ]
+    },
+    {
+      "id": "ico-retention",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/storage-limitation/",
+      "checked_at": "2026-10-08T12:11:35.962912+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/storage-limitation/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ico-retention.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ico-retention.txt",
+      "sha256": "c21ddc5ed27bf2ed05de7abcc633a86a45f1e5749acef683c9deac8d25f439bb",
+      "bytes": 58214,
+      "checked_sections": [
+        "必要期間の決定と定期見直し"
+      ]
+    },
+    {
+      "id": "ico-erasure",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/right-to-erasure/",
+      "checked_at": "2026-10-08T12:11:36.559361+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/right-to-erasure/",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/ico-erasure.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/ico-erasure.txt",
+      "sha256": "826faff23be792b90f396ac72b7185088c6794f355f4ed7a3ec8c32354fa445e",
+      "bytes": 62087,
+      "checked_sections": [
+        "消去権と復旧用複製"
+      ]
+    },
+    {
+      "id": "eu-principles",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr_en",
+      "checked_at": "2026-10-08T12:11:36.563904+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr_en",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/eu-principles.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/eu-principles.txt",
+      "sha256": "e2d5d63fe2f8f2a3fa35d70562e660b912523c667a6f69e7235a1cff5d99e757",
+      "bytes": 175139,
+      "checked_sections": [
+        "データ最小化と保存制限"
+      ]
+    },
+    {
+      "id": "nta-retention",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5930.htm",
+      "checked_at": "2026-10-08T12:11:36.625331+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5930.htm",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/nta-retention.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/nta-retention.txt",
+      "sha256": "c78301ebdc1434e0f799805e80a33d803977477dbb7beb04018b699bf4e49d37",
+      "bytes": 14657,
+      "checked_sections": [
+        "2026-04-01現在の7年・10年と起算"
+      ]
+    },
+    {
+      "id": "mhlw-retention",
+      "url": "https://www.startup-roudou.mhlw.go.jp/qa/zigyonushi/syuugyoukisoku/q6.html",
+      "checked_at": "2026-10-08T12:11:36.723338+09:00",
+      "format": "HTML",
+      "verification": "公式HTML本文をウェブ閲覧で確認。ローカル取得の成否はstatusで区別",
+      "resolved_url": "https://www.startup-roudou.mhlw.go.jp/qa/zigyonushi/syuugyoukisoku/q6.html",
+      "status": "downloaded",
+      "local_html": "research/disclosures/raw/privacy_lifecycle_20261008/mhlw-retention.html",
+      "local_text": "research/disclosures/raw/privacy_lifecycle_20261008/mhlw-retention.txt",
+      "sha256": "e81646a996f5f40d0030d5d48fd29807734a8152fbff056ee2031cfc62366e6c",
+      "bytes": 16312,
+      "checked_sections": [
+        "本則5年と当分の間3年"
+      ]
+    }
+  ],
+  "limits": [
+    "一般企業の基礎規則と比較資料。全業種・全法域の網羅ではない",
+    "2026年改正の未施行部分を現行要件にしない",
+    "原本は公式HTMLを取得。新規PDFの取得は行っていない",
+    "実企業の保存先・委託先に対する消去監査は行っていない"
+  ]
+}

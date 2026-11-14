@@ -1,0 +1,436 @@
+{
+  "checked_date": "2026-10-07",
+  "scope": "AIの実行管理、隔離、資格情報、認可、継続実行、復元、自己変更、外部監査",
+  "research_rounds": 4,
+  "followup_questions": 12,
+  "new_papers": 12,
+  "new_pages": 206,
+  "comparison_rows": 17,
+  "limitations": [
+    "網羅性や製品の安全性を保証する調査ではない",
+    "最新の論文は公開前論文として扱い採択を推測しない",
+    "公式文書の説明・著者評価・本調査の設計提案を区別",
+    "PDF原本・抽出本文・全頁OCR成果物はローカル保存。Git管理対象は台帳と日本語解説"
+  ],
+  "sources": [
+    {
+      "id": "paper-2610.06274",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2610.06274v1",
+      "published_date": "2026-10-05",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2610.06274/paper.pdf",
+      "limits": "自己設定の変更を保存前に制約。道具以外の変更経路は対象外"
+    },
+    {
+      "id": "paper-2610.06001",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2610.06001v1",
+      "published_date": "2026-10-05",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2610.06001/paper.pdf",
+      "limits": "OS観測・通信観測。準備・収集を除外しOS等を信頼"
+    },
+    {
+      "id": "paper-2610.04083",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2610.04083v1",
+      "published_date": "2026-10-02",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2610.04083/paper.pdf",
+      "limits": "不正目標を指示で誘導した実験。自然な発生率ではない"
+    },
+    {
+      "id": "paper-2610.02456",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2610.02456v1",
+      "published_date": "2026-10-01",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2610.02456/paper.pdf",
+      "limits": "研究試作の使いやすさ。安全性監査・侵入防止評価ではない"
+    },
+    {
+      "id": "paper-2609.31318",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2609.31318v1",
+      "published_date": "2026-09-25",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2609.31318/paper.pdf",
+      "limits": "制御された公開コード・実行環境での評価。攻撃未実行"
+    },
+    {
+      "id": "paper-2609.11294",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2609.11294v1",
+      "published_date": "2026-09-10",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2609.11294/paper.pdf",
+      "limits": "二種の作業と指定機種で所有記憶を測定。機密隔離の証明ではない"
+    },
+    {
+      "id": "paper-2609.00267",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2609.00267v1",
+      "published_date": "2026-08-31",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2609.00267/paper.pdf",
+      "limits": "参照実装と商用構成を区別。著者関係者の商用主張は独立検証ではない"
+    },
+    {
+      "id": "paper-2609.29647",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2609.29647v1",
+      "published_date": "2026-08-29",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2609.29647/paper.pdf",
+      "limits": "設計・安全性分析。実用性能と敵対的評価は今後の課題"
+    },
+    {
+      "id": "paper-2608.11274",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2608.11274v1",
+      "published_date": "2026-08-11",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2608.11274/paper.pdf",
+      "limits": "立場論文。事故事例の争いを確定しない"
+    },
+    {
+      "id": "paper-2607.23933",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2607.23933v2",
+      "published_date": "2026-07-27",
+      "version": "v2",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2607.23933/paper.pdf",
+      "limits": "v2は2026-08-05。遅延と記憶削減の比較相手が異なる"
+    },
+    {
+      "id": "paper-2102.12892",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2102.12892v1",
+      "published_date": "2021-02-04",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2102.12892/paper.pdf",
+      "limits": "基礎研究。現行全製品の採用を示さない"
+    },
+    {
+      "id": "paper-2311.15999",
+      "kind": "論文",
+      "url": "https://arxiv.org/abs/2311.15999v1",
+      "published_date": "2023-11-27",
+      "version": "v1",
+      "checked_date": "2026-10-07",
+      "verification": "配布ページの書誌と原本PDFの要旨・手法・結果・限界の関連箇所を確認。全頁OCR。全付録精読・再現実験は未実施",
+      "local_pdf": "research/papers/arxiv/2311.15999/paper.pdf",
+      "limits": "当時の機種・設定の評価。現行サービスへ一般化しない"
+    },
+    {
+      "id": "aios",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/agiresearch/AIOS",
+      "checked_date": "2026-10-07",
+      "claims": "実行管理の用途",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "本番採用・性能再現は確認していない"
+    },
+    {
+      "id": "aios-commit",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/agiresearch/AIOS/commit/292d98f78c835499df18cdb6de6325bba1895862",
+      "checked_date": "2026-10-07",
+      "claims": "公式APIで既定ブランチの最新変更、2026-07-20",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "更新日だけで開発の規模や本番成熟度を判断しない"
+    },
+    {
+      "id": "memos",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/MemTensor/MemOS/commit/a7367d07e55db61099f7b4e2c1108bc5831a24f3",
+      "checked_date": "2026-10-07",
+      "claims": "公式APIで既定ブランチの最新変更、2026-09-22",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "更新日と企業採用・性能を区別"
+    },
+    {
+      "id": "landlock",
+      "kind": "公式資料・公開実装",
+      "url": "https://www.kernel.org/doc/html/latest/userspace-api/landlock.html",
+      "checked_date": "2026-10-07",
+      "claims": "プロセスへの追加制約とABI依存",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "機能対応を実行環境で確認する必要"
+    },
+    {
+      "id": "seccomp",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.docker.com/engine/security/seccomp/",
+      "checked_date": "2026-10-07",
+      "claims": "OS呼出しの制限",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "通常コンテナの境界と業務認可を混同しない"
+    },
+    {
+      "id": "gvisor",
+      "kind": "公式資料・公開実装",
+      "url": "https://gvisor.dev/docs/architecture_guide/security/",
+      "checked_date": "2026-10-07",
+      "claims": "利用者空間のOS中核と安全性の対象範囲",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "共有CPU・許可先の操作には別の制約が必要"
+    },
+    {
+      "id": "firecracker",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/firecracker-microvm/firecracker/blob/main/docs/prod-host-setup.md",
+      "checked_date": "2026-10-07",
+      "claims": "KVM・ホスト更新・jailer等の配備条件",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "製品を動かした安全性評価は未実施"
+    },
+    {
+      "id": "firecracker-snapshots",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/firecracker-microvm/firecracker/blob/main/docs/snapshotting/snapshot-support.md",
+      "checked_date": "2026-10-07",
+      "claims": "記憶ファイル・実行状態・復元条件",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "資格情報の再認可は本調査の設計案"
+    },
+    {
+      "id": "kata",
+      "kind": "公式資料・公開実装",
+      "url": "https://katacontainers.io/use-cases/",
+      "checked_date": "2026-10-07",
+      "claims": "仮想機械によるコンテナ隔離の公式用途",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "企業事例の成果は独立検証していない"
+    },
+    {
+      "id": "wasmtime",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.wasmtime.dev/security.html",
+      "checked_date": "2026-10-07",
+      "claims": "記憶の境界・明示した外部機能・WASIの権限",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "外部関数と与えた権限も信頼対象"
+    },
+    {
+      "id": "docker-isolation",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.docker.com/ai/sandboxes/security/isolation/",
+      "checked_date": "2026-10-07",
+      "claims": "共有領域、複製モード、ホスト側MCP",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "読取り専用の共有も機密情報を読める"
+    },
+    {
+      "id": "docker-credentials",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.docker.com/ai/sandboxes/security/credentials/",
+      "checked_date": "2026-10-07",
+      "claims": "資格情報代理と初期のSSH署名代理",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "秘密値の保護と代理操作の権限を分ける"
+    },
+    {
+      "id": "sidekernel-readme",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/minoansecurity/sidekernel/blob/a12575abc156a5929e52233b203f305e17ad1bdf/README.md",
+      "checked_date": "2026-10-07",
+      "claims": "研究試作、資格情報代理、利用方法",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "固定版の公開説明。正式な安全性監査未実施"
+    },
+    {
+      "id": "sidekernel-mounts",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/minoansecurity/sidekernel/blob/a12575abc156a5929e52233b203f305e17ad1bdf/Host/MicroVM.swift",
+      "checked_date": "2026-10-07",
+      "claims": "公開コードを取得しreadOnly:falseの共有箇所を静的確認",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "実行検証なし。論文と取得版の違いを区別"
+    },
+    {
+      "id": "openshell-readme",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/NVIDIA/OpenShell/blob/9a6148fc988a5e7a20a43805a52fdfaad766f8ae/README.md",
+      "checked_date": "2026-10-07",
+      "claims": "0.1.x、OS制約、形式検証",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "過去のalpha説明と混同しない。全体の安全証明ではない"
+    },
+    {
+      "id": "openshell-security",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/NVIDIA/OpenShell/blob/9a6148fc988a5e7a20a43805a52fdfaad766f8ae/docs/security/best-practices.mdx",
+      "checked_date": "2026-10-07",
+      "claims": "auditとenforce、TLS例外、実行ファイルの指定",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "コード取得後の固定版文書を静的確認。配備未実施"
+    },
+    {
+      "id": "openshell-prover",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/NVIDIA/OpenShell/blob/9a6148fc988a5e7a20a43805a52fdfaad766f8ae/docs/how-it-works/policies/prover.mdx",
+      "checked_date": "2026-10-07",
+      "claims": "上限検査と追加案の危険検査、対象範囲、unsupported",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "検査実行は未実施。形式モデルの対象内だけの主張"
+    },
+    {
+      "id": "openshell-backend",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/NVIDIA/OpenShell/blob/9a6148fc988a5e7a20a43805a52fdfaad766f8ae/docs/extensibility/isolation-backends.mdx",
+      "checked_date": "2026-10-07",
+      "claims": "監督部・配置部・隔離方式の分離",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "固定版の構成説明。独立した安全性評価ではない"
+    },
+    {
+      "id": "nvidia-sentry",
+      "kind": "公式資料・公開実装",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Open-Agent-Safety-Platform-to-Secure-Agents-From-Testing-to-Deployment/default.aspx",
+      "checked_date": "2026-10-07",
+      "claims": "2026-09-28発表、BlueField-4での外部監視の参照設計",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "提供者の性能・提供範囲の主張。再現・採用実績未確認。gVisorのSentryとは別"
+    },
+    {
+      "id": "k8s-scope",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox/blob/58707de4f339615645724deae3898ef65360192a/README.md",
+      "checked_date": "2026-10-07",
+      "claims": "実行環境の管理であり隔離を実行方式へ委ねる",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "固定版の範囲を確認。任意Podの自動安全化とはしない"
+    },
+    {
+      "id": "k8s-threat",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox/blob/58707de4f339615645724deae3898ef65360192a/docs/security/threat_model.md",
+      "checked_date": "2026-10-07",
+      "claims": "RuntimeClass、管理用認証情報、経路部のAllowAll",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "設定・入口ごとに強制範囲が異なる。配備・攻撃は未実施"
+    },
+    {
+      "id": "k8s-snapshot",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox/blob/58707de4f339615645724deae3898ef65360192a/site/content/docs/sandbox/snapshots/_index.md",
+      "checked_date": "2026-10-07",
+      "claims": "GKE・gVisor・Pythonの復元例、共通雛型",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "全Kubernetes・全SDKで使える機能とはしない"
+    },
+    {
+      "id": "e2b",
+      "kind": "公式資料・公開実装",
+      "url": "https://e2b.dev/docs",
+      "checked_date": "2026-10-07",
+      "claims": "仮想機械、雛型、ファイルと記憶の保存",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "旧URLの取得失敗後に現在の案内を確認"
+    },
+    {
+      "id": "e2b-code",
+      "kind": "公式資料・公開実装",
+      "url": "https://github.com/e2b-dev/E2B/blob/c0f426ae479806538808c4fa407b7b0ad86c2576/packages/js-sdk/src/sandbox/sandboxApi.ts",
+      "checked_date": "2026-10-07",
+      "claims": "公式公開コードの外向き通信・公開URL認証の設定を静的確認",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "全サービスの初期の通信設定を推測しない"
+    },
+    {
+      "id": "modal",
+      "kind": "公式資料・公開実装",
+      "url": "https://modal.com/docs/guide/sandbox-networking",
+      "checked_date": "2026-10-07",
+      "claims": "gVisorと仮想機械、外向き制約と接続口の制約",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "提供者の説明。全APIに業務認可が実装済みとはしない"
+    },
+    {
+      "id": "anthropic-containment",
+      "kind": "公式資料・公開実装",
+      "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+      "checked_date": "2026-10-07",
+      "claims": "許可されたドメインへ別API鍵で送信した過去の事例",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "過去に報告された問題。現行製品で未修正と断定しない"
+    },
+    {
+      "id": "anthropic-managed",
+      "kind": "公式資料・公開実装",
+      "url": "https://www.anthropic.com/engineering/managed-agents",
+      "checked_date": "2026-10-07",
+      "claims": "2026-04-08、推論・実行部・継続記録と資格情報を分離",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "提供者の構成説明。自社データの認可は別に確認"
+    },
+    {
+      "id": "temporal-definition",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.temporal.io/workflow-definition",
+      "checked_date": "2026-10-07",
+      "claims": "履歴再生と決定性",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "AI呼出しを作業へ分離するのは設計上の解釈"
+    },
+    {
+      "id": "temporal-history",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.temporal.io/encyclopedia/event-history",
+      "checked_date": "2026-10-07",
+      "claims": "永続する実行履歴",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "履歴だけで外部書込みの一度限りを保証しない"
+    },
+    {
+      "id": "temporal-idempotency",
+      "kind": "公式資料・公開実装",
+      "url": "https://docs.temporal.io/nexus/operations",
+      "checked_date": "2026-10-07",
+      "claims": "再実行と操作の重複防止",
+      "verification": "公式本文または取得した公開コード・付属文書を確認。実行・配備は未実施",
+      "limits": "外部サービスでの重複防止・状態照合が必要"
+    }
+  ],
+  "failed_urls": [
+    {
+      "url": "https://github.com/firecracker-microvm/firecracker/blob/main/docs/security-policy.md",
+      "result": "404",
+      "fallback": "docs/prod-host-setup.mdとSECURITY.mdを確認"
+    },
+    {
+      "url": "https://e2b.dev/docs/sandbox/internet-access",
+      "result": "取得失敗",
+      "fallback": "現行の公式案内とSDK公開コードを確認"
+    },
+    {
+      "url": "https://katacontainers.io/docs/",
+      "result": "404",
+      "fallback": "公式use-casesを確認"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "research_date": "2026-10-08",
+  "period_start": "2021-10-08",
+  "period_end": "2026-10-08",
+  "selection": "公表資料でランサムウェアと確認された学習用14事例。発生率推定用の標本ではない。",
+  "source_manifest": "ransomware_sources_20261008.json",
+  "reused_source_manifest": "personal_data_incident_sources_20261008.json",
+  "cases": [
+    {
+      "id": "R01",
+      "event_date": "2021-10-31",
+      "region": "日本",
+      "title": "つるぎ町立半田病院",
+      "chatgpt_period": "公開前",
+      "business_impact": "電子カルテ等が利用不能。約2か月通常業務に支障、2022年1月復旧。",
+      "qualification": "流出なしと断定しない。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "handa_main",
+        "handa_technical"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "handa_main",
+          "url": "https://www.handa-hospital.jp/topics/2022/0616/report_01.pdf",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "handa_technical",
+          "url": "https://www.handa-hospital.jp/topics/2022/0616/report_02.pdf",
+          "download_status": "取得済み"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "event_date": "2021-12-11",
+      "region": "米国等",
+      "title": "UKG／Kronos Private Cloud",
+      "chatgpt_period": "公開前",
+      "business_impact": "全被影響顧客の基幹機能アクセスを2022年1月22日までに復旧。",
+      "qualification": "42日は全顧客の一律停止日数ではない。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "ukg_2021_esg_uk"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "ukg_2021_esg_uk",
+          "url": "https://www.ukg.co.uk/sites/default/files/2022-06/UKG_2021_ESG_Report_Final-6-24-22_2.pdf",
+          "download_status": "取得失敗"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "event_date": "2022-02-27",
+      "region": "米州",
+      "title": "ブリヂストン米州会社",
+      "chatgpt_period": "公開前",
+      "business_impact": "遮断・総点検。2022年3月18日公表時点で復旧。",
+      "qualification": "確定停止日数・総損害は会社資料にない。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "bridgestone_2022"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "bridgestone_2022",
+          "url": "https://www.bridgestone.co.jp/corporate/news/2022031801.html",
+          "download_status": "取得済み"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "event_date": "2022-10-31",
+      "region": "日本",
+      "title": "大阪急性期・総合医療センター",
+      "chatgpt_period": "公開前",
+      "business_impact": "基幹システム43日目、全体診療システム73日目に復旧。",
+      "qualification": "一部診療継続。全診療停止73日間ではない。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "osaka_report"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "osaka_report",
+          "url": "https://www.gh.opho.jp/pdf/report_v01.pdf",
+          "download_status": "取得済み"
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "event_date": "2023-03-31",
+      "region": "英国",
+      "title": "Capita",
+      "chatgpt_period": "公開後",
+      "business_impact": "3月22日侵入。31日暗号化等で利用阻害。重大警告から適切な隔離まで58時間。",
+      "qualification": "流出確認。制裁1400万ポンドと復旧損害を分ける。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [],
+      "reused_source_ids": [
+        "capita_ico",
+        "capita_penalty"
+      ],
+      "sources": [
+        {
+          "id": "capita_ico",
+          "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/10/capita-fined-14m-for-data-breach-affecting-over-6m-people/",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "capita_penalty",
+          "url": "https://ico.org.uk/media2/pv5nhks4/capita-plc-and-cpsl-monetary-penalty-notice.pdf",
+          "download_status": "取得済み"
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "event_date": "2023-07-04",
+      "region": "日本",
+      "title": "名古屋港",
+      "chatgpt_period": "公開後",
+      "business_impact": "7月6日18時15分までに全ターミナル作業再開。約59時間45分経過。",
+      "qualification": "7月26日報告時点で流出形跡未確認。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "nagoya_port"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "nagoya_port",
+          "url": "https://meikoukyo.com/wp-content/uploads/2023/07/0bb9d9907568e832da8f400e529efc99.pdf",
+          "download_status": "取得済み"
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "event_date": "2023-10-28",
+      "region": "英国",
+      "title": "British Library",
+      "chatgpt_period": "公開後",
+      "business_impact": "旧設備も含む停止と再構築。2024年報告時点で継続課題。",
+      "qualification": "2024年の復旧予定を2026年の完了とはしない。原本は2026-10-08の深掘りで取得・保存済み（18頁、SHA-256 2d8ed8ce0b0be4611bb0a60e2a36de8ac2bfe40f6dd4b881b9316fb66d1f035a）。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [],
+      "reused_source_ids": [
+        "library_report"
+      ],
+      "sources": [
+        {
+          "id": "library_report",
+          "url": "https://www.bl.uk/home/british-library-cyber-incident-review-8-march-2024.pdf/",
+          "download_status": "取得済み（2026-10-08深掘りで取得）",
+          "saved_path_20261008": "research/disclosures/raw/incidents/uk_europe/bl_review.pdf"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: 事後報告原本の取得失敗を解消（保存済み）。 詳細: research/incidents/uk_europe_incidents.md"
+    },
+    {
+      "id": "R08",
+      "event_date": "2024-02-21",
+      "region": "米国",
+      "title": "Change Healthcare",
+      "chatgpt_period": "公開後",
+      "business_impact": "医療請求・処方・支払いに広域影響、段階復旧。",
+      "qualification": "2024直接対応費22.23億ドル、事業中断影響8.67億ドル。2025別途7.99億ドル（決算資料の表記はFinal Cyberattack Costsだが、10-K FY2025の説明では医療機関向け貸付等の回収見込みに対する引当金の積み増しで、新たな対応支出ではない）。身代金2,200万ドルは上院記録S. Hrg. 118-785で確認。貸付と合算しない。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "uhg_2024_results",
+        "uhg_2025_results"
+      ],
+      "reused_source_ids": [
+        "change_testimony"
+      ],
+      "sources": [
+        {
+          "id": "uhg_2024_results",
+          "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/2025-16-01-uhg-reports-fourth-quarter-results.pdf",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "uhg_2025_results",
+          "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/unh-reports-2025-results-and-issues-2026-outlook.pdf",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "change_testimony",
+          "url": "https://d1dth6e84htgma.cloudfront.net/Witty_Testimony_OI_Hearing_05_01_24_5ff52a2d11.pdf",
+          "download_status": "取得済み"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: 7.99億ドルの性格（貸付等の引当金）を訂正し、身代金額を補足。 詳細: research/incidents/us_supply_chain_breaches.md"
+    },
+    {
+      "id": "R09",
+      "event_date": "2024-05-26",
+      "region": "日本",
+      "title": "イセトー",
+      "chatgpt_period": "公開後",
+      "business_impact": "処理拠点と営業拠点の端末・サーバー暗号化。",
+      "qualification": "流出・毀損確認。総損害の確定値未掲載。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [],
+      "reused_source_ids": [
+        "iseto_report",
+        "iseto_ppc"
+      ],
+      "sources": [
+        {
+          "id": "iseto_report",
+          "url": "https://www.iseto.co.jp/news/news_202410.html",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "iseto_ppc",
+          "url": "https://www.ppc.go.jp/files/pdf/250319_houdou.pdf",
+          "download_status": "取得済み"
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "event_date": "2024-06-03",
+      "region": "英国",
+      "title": "Synnovis／NHS",
+      "chatgpt_period": "公開後",
+      "business_impact": "検査能力低下。政府答弁で11000件超の予約等遅延。",
+      "qualification": "政府答弁で患者1人の死亡に寄与。唯一の死亡原因とはしない。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "synnovis_nhs",
+        "synnovis_parliament_2026"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "synnovis_nhs",
+          "url": "https://www.england.nhs.uk/synnovis-cyber-incident/questions-and-answers/",
+          "download_status": "取得済み（2026-10-08深掘りで取得）",
+          "saved_path_20261008": "research/disclosures/raw/incidents/uk_europe/nhs_synnovis_qa_wb.html（Wayback 2026-06-27保存版）"
+        },
+        {
+          "id": "synnovis_parliament_2026",
+          "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-26/13479",
+          "download_status": "取得済み（2026-10-08深掘りで取得）",
+          "saved_path_20261008": "research/disclosures/raw/incidents/uk_europe/synnovis_wq13479_full.json（議会公開API）"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: NHS England Q&AはWayback保存版、議会答弁は議会公開APIで取得・保存。内容は既存記述と一致。 詳細: research/incidents/uk_europe_incidents.md"
+    },
+    {
+      "id": "R11",
+      "event_date": "2024-06-08",
+      "region": "日本",
+      "title": "KADOKAWA／ドワンゴ",
+      "chatgpt_period": "公開後",
+      "business_impact": "ニコニコを中心としたサービス群とサーバー障害。主要サービスは2024年8月5日再開、会社は9月以降の全面的なサービス復旧を説明。",
+      "qualification": "流出254241人（2024年8月5日時点）、261956人（2024年11月1日時点）。2025年3月期の特別損失24億13百万円、会社推計の業績影響は売上高▲83億円・営業利益▲47億円（推計）。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [],
+      "reused_source_ids": [
+        "kadokawa_report"
+      ],
+      "sources": [
+        {
+          "id": "kadokawa_report",
+          "url": "https://group.kadokawa.co.jp/information/media-download/1356/d3f77b589c58d083/",
+          "download_status": "取得済み"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: 人数を261,956人へ更新し、確定特別損失と会社推計の業績影響、復旧時期を追記。 詳細: research/incidents/japan_major_ransomware.md"
+    },
+    {
+      "id": "R12",
+      "event_date": "2025-04-17",
+      "region": "英国",
+      "title": "Marks & Spencer",
+      "chatgpt_period": "公開後",
+      "business_impact": "なりすましで侵入。防御のため倉庫管理等停止、段階復旧。",
+      "qualification": "3億ポンドは保険等控除前の年間利益影響見積もり。2025中間決算に保険収入1億。2025/26年度の確定値は事案関連費用1億3,130万ポンド、保険収入1億ポンド。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [
+        "ms_parliament",
+        "ms_results_2025",
+        "ms_halfyear_2025"
+      ],
+      "reused_source_ids": [],
+      "sources": [
+        {
+          "id": "ms_parliament",
+          "url": "https://committees.parliament.uk/oralevidence/16268/html/",
+          "download_status": "取得済み（2026-10-08深掘りで取得）",
+          "saved_path_20261008": "research/disclosures/raw/incidents/uk_europe/ms_oral16268_doc.json（committees-api.parliament.uk）"
+        },
+        {
+          "id": "ms_results_2025",
+          "url": "https://corporate.marksandspencer.com/sites/marksandspencer/files/05-2025/fy25-rns.pdf",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "ms_halfyear_2025",
+          "url": "https://corporate.marksandspencer.com/newsroom/press-releases/half-year-results-26-weeks-ended-27-september-2025",
+          "download_status": "取得済み"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: 議会証言を議会委員会公開APIで取得・保存（内容は既存記述と一致）。2025/26年度の確定値を追記。 詳細: research/incidents/uk_europe_incidents.md"
+    },
+    {
+      "id": "R13",
+      "event_date": "2025-09-29",
+      "region": "日本",
+      "title": "アサヒグループ",
+      "chatgpt_period": "公開後",
+      "business_impact": "電子受発注12月2〜3日再開、物流全体2026年2月正常化。",
+      "qualification": "確認済み流出と可能性は別。全工場が4か月停止という意味ではない。2025年の一時費用約170億円（概算）、2026年は一時費用・情報セキュリティ費用約95億円の見込み。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [],
+      "reused_source_ids": [
+        "asahi_report",
+        "asahi_update"
+      ],
+      "sources": [
+        {
+          "id": "asahi_report",
+          "url": "https://www.asahigroup-holdings.com/en/newsroom/detail/20260218-0101.html",
+          "download_status": "取得済み"
+        },
+        {
+          "id": "asahi_update",
+          "url": "https://www.asahigroup-holdings.com/en/newsroom/detail/20260717-0201.html",
+          "download_status": "取得済み"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: 損失額（2025年一時費用約170億円、2026年見込み約95億円）を補足。 詳細: research/incidents/japan_major_ransomware.md"
+    },
+    {
+      "id": "R14",
+      "event_date": "2025-10-19",
+      "region": "日本",
+      "title": "アスクル",
+      "chatgpt_period": "公開後",
+      "business_impact": "受注・出荷停止、10月29日から限定試行、段階復旧。ASKUL Web受注2025年12月3日、LOHACO全面復旧2026年1月20〜21日、全物流センターの新WMS出荷2026年2月4日、主要EC機能の発生前水準復旧2026年2月13日。",
+      "qualification": "接続されたバックアップも暗号化・削除。10月29日は全復旧日ではない。2026年5月期に特別損失51億08百万円と休止固定資産減価償却費12億69百万円。",
+      "ai_use_in_this_incident": "今回の根拠で確認できない",
+      "source_ids": [],
+      "reused_source_ids": [
+        "askul_report"
+      ],
+      "sources": [
+        {
+          "id": "askul_report",
+          "url": "https://pdf.irpocket.com/C0032/PDLX/O3bg/N4O3.pdf",
+          "download_status": "取得済み"
+        }
+      ],
+      "correction_20261008": "2026-10-08の深掘りで訂正・補足: 完全復旧の節目と損失額を追記。 詳細: research/incidents/japan_major_ransomware.md"
+    }
+  ]
+}

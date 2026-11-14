@@ -1,0 +1,620 @@
+{
+  "checked_date": "2026-10-14",
+  "report": "takagi_personal_data_protection_ai_native_20261014.md",
+  "scope": "公開情報のみ。原本はリポジトリに保存しない。",
+  "hash_scope": "sha256は台帳作成時のHTTP応答本文。動的HTMLは取得ごとに変わり得る。ウェブ検索サービスの取得本文とは一致を保証しない。",
+  "video_transcript_check": {
+    "video_id": "M9UbaQe8ZvM",
+    "caption_metadata_present": true,
+    "caption_type": "日本語自動生成",
+    "attempted_format": "json3",
+    "response_bytes": 0,
+    "transcript_verified": false
+  },
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=3VsxPpMsdts",
+      "labels": [
+        "「個人情報」なら何でも個人情報保護法の対象？"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:28.274617+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開説明欄・題名・章時刻と著者日記の埋込識別子を確認。動画発話の逐語検証なし。",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/watch?v=3VsxPpMsdts",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1429031,
+      "sha256": "7bd4c828f386170171899fab31169dc09d05bc9ccf3c76cf32f2a1dc3f83be4a",
+      "body_retrieved": true,
+      "title": "ずんだもんの個人情報保護法務日誌① 「個人情報」なら何でも個人情報保護法の対象？",
+      "description_sha256": "929a005bc7737fa7d6965e29bc527cf9f0d8408f995507b04e58acf62546dbf2",
+      "description_source_urls": [
+        "https://takagi-hiromitsu.jp/diary/20260811.html"
+      ],
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20260920.html",
+      "labels": [
+        "2026年9月20日の日記"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:28.275104+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20260920.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 145286,
+      "sha256": "7a41122c7bb7d3ff52963b1ac323bb23a14792c5a4cac69449490fd56c8d5794",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20260811.html",
+      "labels": [
+        "2026年8月11日の日記"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:16.382777+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:28.275342+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20260811.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 208508,
+      "sha256": "a11411b024231ed8e26928e472973bf715f8faf05e6c2557e65770727173938b"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-rxLxiyxDgs",
+      "labels": [
+        "マイナンバーは、なぜ厳しく規制されるのか"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:28.275581+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開説明欄・題名・章時刻と著者日記の埋込識別子を確認。動画発話の逐語検証なし。",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/watch?v=-rxLxiyxDgs",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1418696,
+      "sha256": "97cf22d17786575e4550b32bd42fea3e2171c929a5ed09bcaf12fb3fc7ac0f7f",
+      "body_retrieved": true,
+      "title": "ずんだもんの個人情報保護法務日誌② マイナンバーは、なぜ厳しく規制されるのか",
+      "description_sha256": "7c637dd53e34e60ff48b2bf62ef1598993e792cf2811833a3d672cee960a1ce3",
+      "description_source_urls": [],
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20260921.html",
+      "labels": [
+        "2026年9月21日の日記"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:17.796343+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:28.275822+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20260921.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 102775,
+      "sha256": "8e0361862755be251b6d7b44081dc216a4a201f856774b06c1903a4e37d2a517"
+    },
+    {
+      "url": "https://www.iwanami.co.jp/book/b635127.html",
+      "labels": [
+        "出版社の目次"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:28.276048+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "出版社の公開目次。記事全文は未取得・未確認。",
+      "http_status": 200,
+      "final_url": "https://www.iwanami.co.jp/book/b635127.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 65936,
+      "sha256": "79d28f6a49ecedd65418beddcb7a79d79434ef062fddf638ddd9762d587947a5",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=M9UbaQe8ZvM",
+      "labels": [
+        "匿名加工情報と仮名加工情報、何のための制度？"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:28.823888+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開説明欄・題名・章時刻と著者日記の埋込識別子を確認。動画発話の逐語検証なし。",
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/watch?v=M9UbaQe8ZvM",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1524594,
+      "sha256": "74296e596688db44d7bb32ee3f989f0e8f2f921fd62c3f6e187d98587eae8557",
+      "body_retrieved": true,
+      "title": "ずんだもんの個人情報保護法務日誌③ 匿名加工情報と仮名加工情報、何のための制度？",
+      "description_sha256": "fc5d4aa26639d605a2a9ec6cc249f1bbbfabbef43a959141034fd57bad8a22a4",
+      "description_source_urls": [
+        "https://takagi-hiromitsu.jp/diary/20151206.html",
+        "https://takagi-hiromitsu.jp/diary/20170722.html",
+        "https://takagi-hiromitsu.jp/diary/20171022.html",
+        "https://takagi-hiromitsu.jp/diary/20260808.html"
+      ],
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20260927.html",
+      "labels": [
+        "2026年9月27日の日記"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:19.377547+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:28.839015+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20260927.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 57839,
+      "sha256": "87bd2edc61d3299c338db9855d2443c16ff901f91479105413a3007be36133ca"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20151206.html",
+      "labels": [
+        "2015年12月6日 匿名加工情報は何でないか・前編"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:21.323378+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:29.320113+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20151206.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 127217,
+      "sha256": "3120e90e6c0747e19ee4fd14463f0e382a009d793af399bb3991b53e34764f8e"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20170722.html",
+      "labels": [
+        "2017年7月22日 匿名加工情報は何でないか・後編の2"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:29.816192+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20170722.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 117017,
+      "sha256": "fa0ed828c92ca43c2accc378b537d50c7efac70b47b054519a3a4e59ccd84c71",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20171022.html",
+      "labels": [
+        "2017年10月22日 宇賀克也「個人情報保護法の逐条解説」第5版を読む・中編"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:23.052025+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:29.919660+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20171022.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 119794,
+      "sha256": "4021f75585bc0c4e986002457fb14437dbc71425364c8551353154eb30fe54a4"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20260808.html",
+      "labels": [
+        "2026年8月8日 令和2年改正で仮名加工情報の制度は内閣法制局でどう設計されていたか",
+        "2026年8月8日の日記",
+        "高木氏の2026年8月8日分析"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:29.961206+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20260808.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 296151,
+      "sha256": "fcd21029dbe1aa4a40b44551f41f81d5dc63eea5e5462fb89f442d7b8858578a",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.jstage.jst.go.jp/article/alis/11/0/11_89/_article/-char/ja",
+      "labels": [
+        "個人情報保護から個人データ保護へ 第5回",
+        "第5回論文"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:30.060150+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.jstage.jst.go.jp/article/alis/11/0/11_89/_article/-char/ja",
+      "content_type": "text/html;charset=utf-8",
+      "bytes": 66508,
+      "sha256": "a3b60883a7a25c6b56f6777b805470b0229ace60fa2f780541b65dd59251aab4",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20170604.html",
+      "labels": [
+        "2017年6月4日 匿名加工情報は何でないか・後編"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:24.944331+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:30.306464+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20170604.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 186150,
+      "sha256": "d66e112d9578fdcc35e54f5c04f75f4174a29f2486d070b11946d50589b6ee8f"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20221225.html",
+      "labels": [
+        "2022年12月25日 第5回論文の著者解説"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:26.306485+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:30.430773+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20221225.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 93622,
+      "sha256": "03ab626d76ebd677ea4adb205bdfcbc2419daf00851250c1fdfa0915256d5ade"
+    },
+    {
+      "url": "https://www.jstage.jst.go.jp/article/alis/12/0/12_049/_article/-char/ja",
+      "labels": [
+        "個人情報保護から個人データ保護へ 第6回",
+        "第6回論文"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:30.494288+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.jstage.jst.go.jp/article/alis/12/0/12_049/_article/-char/ja",
+      "content_type": "text/html;charset=utf-8",
+      "bytes": 66618,
+      "sha256": "d268e1d4b5af74e215367cb45d8eb635ef75bd147fe2fa88cc51e97fd0bf4a6d",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://takagi-hiromitsu.jp/diary/20250419.html",
+      "labels": [
+        "2025年4月19日 統計目的の二次利用と決定利用禁止"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:29:27.777956+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "公開本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:30.675304+00:00",
+          "http_status": null,
+          "bytes": null,
+          "error": "HTTP Error 503: Service Unavailable",
+          "body_retrieved": false
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://takagi-hiromitsu.jp/diary/20250419.html",
+      "content_type": "text/html; charset=EUC-JP",
+      "bytes": 162176,
+      "sha256": "d3c21702fa23e97fb5fb447e48f8ba783d8a4f3fa9d8792b99e79c2975a422be"
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+      "labels": [
+        "委員会の通則編"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:30.846109+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 620228,
+      "sha256": "4df3571b8be8fb8f191491db5df4dde58512f15b9bb87bb0b2699217f7fb1a36",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/",
+      "labels": [
+        "委員会の仮名加工情報・匿名加工情報編",
+        "同編3-1・3-2-2・3-2-3-1",
+        "委員会の加工情報編"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:30.989030+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 227669,
+      "sha256": "aca31f473b417d77820b7763e5fec29bf965801627833a8fcd5ab0f6efa83eae",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+      "labels": [
+        "Q&A Q15-1・Q15-2・Q15-6",
+        "委員会Q&A Q2-5",
+        "委員会Q&A Q7-38・Q7-39",
+        "委員会Q&A Q1-8",
+        "委員会Q&A Q15-1・Q15-2"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:31.222767+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/personalinfo/faq/APPI_QA/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 740820,
+      "sha256": "e2241843c91d2f905da5d07cc8f5aaf6aab2379bc477efe3abe956d314fe7fb9",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.ppc.go.jp/legal/policy/",
+      "labels": [
+        "委員会の特定個人情報のガイドライン"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:31.513972+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/legal/policy/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 51103,
+      "sha256": "96f75e9e48d2bf58e2c90cfc5a8e79de7780bc44c08224f18e7c8871ffb6e8a4",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/230602_alert_generative_AI_service.pdf",
+      "labels": [
+        "2023年6月2日の注意喚起"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:31.571987+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/files/pdf/230602_alert_generative_AI_service.pdf",
+      "content_type": "application/pdf",
+      "bytes": 291850,
+      "sha256": "49bbd6617dba0668e388861098e225ec6150376747860bd613a4d639909c7780",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+      "labels": [
+        "GDPR原文"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:31.746254+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "ウェブ閲覧でGDPR原文の関連条文・前文を確認。台帳作成時の直接取得は空応答。",
+      "http_status": 202,
+      "final_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "body_retrieved": false,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。",
+      "retrieval_attempts": [
+        {
+          "retrieved_at_utc": "2026-10-14T05:28:31.746254+00:00",
+          "http_status": 202,
+          "bytes": 0,
+          "error": null,
+          "body_retrieved": false
+        }
+      ]
+    },
+    {
+      "url": "https://curia.europa.eu/juris/document/document.jsf?docid=303863&doclang=EN",
+      "labels": [
+        "判決本文"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:32.307682+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://infocuria.curia.europa.eu/tabs/redirect/juris/document/document.jsf?docid=303863&doclang=EN",
+      "content_type": "text/html",
+      "bytes": 130226,
+      "sha256": "fa7727c06643afe1adc98cea7be2e5365b983715a9dbc0d55ac636c94fd75547",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2025-09/cp250107en.pdf",
+      "labels": [
+        "裁判所の報道資料"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:32.344014+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://curia.europa.eu/site/upload/docs/application/pdf/2025-09/cp250107en.pdf",
+      "content_type": "application/pdf",
+      "bytes": 122802,
+      "sha256": "08c5e44d789c7806562e4b6f2cf507abce42f75a3fdc683dbe0e0f1934473c1d",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.edpb.europa.eu/system/files/2024-12/edpb_opinion_202428_ai-models_en.pdf",
+      "labels": [
+        "原文43〜44段落"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:32.353597+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.edpb.europa.eu/system/files/documents/2024-12/edpb_opinion_202428_ai-models_en.pdf",
+      "content_type": "application/pdf",
+      "bytes": 728647,
+      "sha256": "addcafb4e28028fa87d13a15f91d593ac4b38c4d897be901e38556b5f816a50e",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting",
+      "labels": [
+        "USENIX Security 2021の論文公開ページ"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:32.372631+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 39890,
+      "sha256": "31fbb7d374478c78cdc673fc41aff34b990ee80befaee7b42679cecb10989fa9",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/188/final",
+      "labels": [
+        "NIST SP 800-188",
+        "NISTの公式説明"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:32.651759+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://csrc.nist.gov/pubs/sp/800/188/final",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 51567,
+      "sha256": "b194e147528427bb65a84e29269183898877cd2eb52d7e8e6e33b2b1fc0dd22f",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/226/final",
+      "labels": [
+        "NIST SP 800-226"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:32.996032+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://csrc.nist.gov/pubs/sp/800/226/final",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43505,
+      "sha256": "4033d90561091c309a27015cd0682cafc197c138d3623e43c808edc7b1b738eb",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/",
+      "labels": [
+        "委員会の改正法ページ"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:33.181703+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/",
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 49595,
+      "sha256": "24ae415bc46f99e9a0efdf7bbe0ab0b42e6380652b4933582f22e881b475b330",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    },
+    {
+      "url": "https://www.ppc.go.jp/files/pdf/260717_houritsu.pdf",
+      "labels": [
+        "掲載された改正条文の附則1条"
+      ],
+      "retrieved_at_utc": "2026-10-14T05:28:33.643158+00:00",
+      "access": "公開URLへのログインなしアクセス",
+      "review_scope": "本文の関連箇所を確認。全文の逐語検証を意味しない。",
+      "http_status": 200,
+      "final_url": "https://www.ppc.go.jp/files/pdf/260717_houritsu.pdf",
+      "content_type": "application/pdf",
+      "bytes": 423208,
+      "sha256": "8a819a46ee0ba0ed5aaf27c69164ab57d1f96b1136e65aa0c8f035b9a752e415",
+      "body_retrieved": true,
+      "content_review_basis": "ウェブ閲覧または公開本文の直接取得による関連箇所の確認。出版社ページは目次のみ、動画は説明欄のみ。"
+    }
+  ]
+}

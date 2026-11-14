@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>faker.providers.credit_card &#8212; Faker 40.43.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=080fe9f6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="faker.providers.currency" href="faker.providers.currency.html" />
+    <link rel="prev" title="faker.providers.company" href="faker.providers.company.html" /> 
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="faker" /><meta name="readthedocs-version-slug" content="master" /><meta name="readthedocs-resolver-filename" content="/providers/faker.providers.credit_card.html" /><meta name="readthedocs-http-status" content="200" /></head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="faker.providers.currency.html" title="faker.providers.currency"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="faker.providers.company.html" title="faker.providers.company"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Faker 40.43.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../providers.html" accesskey="U">Standard Providers</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="docutils literal notranslate"><span class="pre">faker.providers.credit_card</span></code></a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="faker-providers-credit-card">
+<h1><code class="docutils literal notranslate"><span class="pre">faker.providers.credit_card</span></code><a class="headerlink" href="#faker-providers-credit-card" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="faker.providers.credit_card.Provider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">faker.providers.credit_card.</span></span><span class="sig-name descname"><span class="pre">Provider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.15)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#faker.providers.credit_card.Provider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="baseprovider.html#faker.providers.BaseProvider" title="faker.providers.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<p>Implement default credit card provider for Faker.</p>
+<p>For all methods that take <code class="docutils literal notranslate"><span class="pre">card_type</span></code> as an argument, a random card type
+will be used if the supplied value is <code class="docutils literal notranslate"><span class="pre">None</span></code>. The list of valid card types
+includes <code class="docutils literal notranslate"><span class="pre">'amex'</span></code>, <code class="docutils literal notranslate"><span class="pre">'diners'</span></code>, <code class="docutils literal notranslate"><span class="pre">'discover'</span></code>, <code class="docutils literal notranslate"><span class="pre">'jcb'</span></code>, <code class="docutils literal notranslate"><span class="pre">'jcb15'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'jcb16'</span></code>, <code class="docutils literal notranslate"><span class="pre">'maestro'</span></code>, <code class="docutils literal notranslate"><span class="pre">'mastercard'</span></code>, <code class="docutils literal notranslate"><span class="pre">'visa'</span></code>, <code class="docutils literal notranslate"><span class="pre">'visa13'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'visa16'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'visa19'</span></code>.</p>
+<p>Sources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Payment_card_number#Issuer_identification_number_.28IIN.29">https://en.wikipedia.org/wiki/Payment_card_number#Issuer_identification_number_.28IIN.29</a></p></li>
+<li><p><a class="reference external" href="https://www.regular-expressions.info/creditcard.html">https://www.regular-expressions.info/creditcard.html</a></p></li>
+<li><p><a class="reference external" href="https://creditcardjs.com/credit-card-type-detection">https://creditcardjs.com/credit-card-type-detection</a></p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="faker.providers.credit_card.Provider.credit_card_expire">
+<span class="sig-name descname"><span class="pre">credit_card_expire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><span class="pre">date</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.15)"><span class="pre">datetime</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.15)"><span class="pre">timedelta</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'now'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.15)"><span class="pre">date</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.15)"><span class="pre">datetime</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.15)"><span class="pre">timedelta</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'+10y'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'%m/%y'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#faker.providers.credit_card.Provider.credit_card_expire" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a credit card expiry date.</p>
+<p>This method uses <a class="reference internal" href="faker.providers.date_time.html#faker.providers.date_time.Provider.date_time_between" title="faker.providers.date_time.Provider.date_time_between"><code class="xref py py-meth docutils literal notranslate"><span class="pre">date_time_between()</span></code></a> under the hood to generate the
+expiry date, so the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> arguments work in the same way
+here as it would in that method. For the actual formatting of the expiry
+date, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.strftime" title="(in Python v3.15)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">strftime()</span></code></a> is used and <code class="docutils literal notranslate"><span class="pre">date_format</span></code> is simply passed
+to that method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Examples<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Faker</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">fake</span><span class="o">.</span><span class="n">credit_card_expire</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="go">'03/35'</span>
+<span class="go">'05/34'</span>
+<span class="go">'12/30'</span>
+<span class="go">'05/29'</span>
+<span class="go">'11/31'</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="faker.providers.credit_card.Provider.credit_card_full">
+<span class="sig-name descname"><span class="pre">credit_card_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">card_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CardType</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#faker.providers.credit_card.Provider.credit_card_full" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a set of credit card details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Examples<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Faker</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">fake</span><span class="o">.</span><span class="n">credit_card_full</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="go">'Discover\nKatherine Fisher\n6587647593824218 12/32\nCVC: 489\n'</span>
+<span class="go">'VISA 16 digit\nKyle Blair\n4781565938778403 10/34\nCVC: 801\n'</span>
+<span class="go">'JCB 16 digit\nMary Page\n3597535139332876 09/27\nCVC: 587\n'</span>
+<span class="go">'Mastercard\nKevin Carter\n5485839894719651 07/32\nCVV: 423\n'</span>
+<span class="go">'VISA 16 digit\nAntonio Zavala\n4711220186848335 09/35\nCVC: 969\n'</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="faker.providers.credit_card.Provider.credit_card_number">
+<span class="sig-name descname"><span class="pre">credit_card_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">card_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CardType</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#faker.providers.credit_card.Provider.credit_card_number" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a valid credit card number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Examples<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Faker</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">fake</span><span class="o">.</span><span class="n">credit_card_number</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="go">'6504876475938248'</span>
+<span class="go">'4948924115781567'</span>
+<span class="go">'348778408016097'</span>
+<span class="go">'30535139332877'</span>
+<span class="go">'5358714841858395'</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="faker.providers.credit_card.Provider.credit_card_provider">
+<span class="sig-name descname"><span class="pre">credit_card_provider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">card_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CardType</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#faker.providers.credit_card.Provider.credit_card_provider" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a credit card provider name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Examples<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Faker</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">fake</span><span class="o">.</span><span class="n">credit_card_provider</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="go">'Discover'</span>
+<span class="go">'Discover'</span>
+<span class="go">'Maestro'</span>
+<span class="go">'VISA 19 digit'</span>
+<span class="go">'JCB 15 digit'</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="faker.providers.credit_card.Provider.credit_card_security_code">
+<span class="sig-name descname"><span class="pre">credit_card_security_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">card_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CardType</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#faker.providers.credit_card.Provider.credit_card_security_code" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a credit card security code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Examples<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Faker</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">fake</span><span class="o">.</span><span class="n">credit_card_security_code</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="go">'604'</span>
+<span class="go">'764'</span>
+<span class="go">'593'</span>
+<span class="go">'242'</span>
+<span class="go">'948'</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">faker.providers.credit_card</span></code></a><ul>
+<li><a class="reference internal" href="#faker.providers.credit_card.Provider"><code class="docutils literal notranslate"><span class="pre">Provider</span></code></a><ul>
+<li><a class="reference internal" href="#faker.providers.credit_card.Provider.credit_card_expire"><code class="docutils literal notranslate"><span class="pre">Provider.credit_card_expire()</span></code></a></li>
+<li><a class="reference internal" href="#faker.providers.credit_card.Provider.credit_card_full"><code class="docutils literal notranslate"><span class="pre">Provider.credit_card_full()</span></code></a></li>
+<li><a class="reference internal" href="#faker.providers.credit_card.Provider.credit_card_number"><code class="docutils literal notranslate"><span class="pre">Provider.credit_card_number()</span></code></a></li>
+<li><a class="reference internal" href="#faker.providers.credit_card.Provider.credit_card_provider"><code class="docutils literal notranslate"><span class="pre">Provider.credit_card_provider()</span></code></a></li>
+<li><a class="reference internal" href="#faker.providers.credit_card.Provider.credit_card_security_code"><code class="docutils literal notranslate"><span class="pre">Provider.credit_card_security_code()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="faker.providers.company.html"
+                          title="previous chapter"><code class="docutils literal notranslate"><span class="pre">faker.providers.company</span></code></a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="faker.providers.currency.html"
+                          title="next chapter"><code class="docutils literal notranslate"><span class="pre">faker.providers.currency</span></code></a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/providers/faker.providers.credit_card.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="faker.providers.currency.html" title="faker.providers.currency"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="faker.providers.company.html" title="faker.providers.company"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Faker 40.43.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../providers.html" >Standard Providers</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="docutils literal notranslate"><span class="pre">faker.providers.credit_card</span></code></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2014-2026, Daniele Faraglia.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

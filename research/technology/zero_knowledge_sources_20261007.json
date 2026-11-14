@@ -1,0 +1,579 @@
+{
+  "research_date": "2026-10-07",
+  "note": "原本・抽出本文はGit管理外。提供者発表、試用、研究、標準草案を区別する。",
+  "documents": [
+    {
+      "id": "nist_zkp",
+      "title": "NIST WPEC2024 Zero Knowledge Proofs 概説",
+      "source_url": "https://csrc.nist.gov/csrc/media/presentations/2024/wpec2024-3b1/images-media/wpec2024-3b1-slides-akira-tjerand--ZKP-Overview.pdf",
+      "retrieved_at_utc": "2026-10-07T07:04:07.710753+00:00",
+      "resolved_url": "https://csrc.nist.gov/csrc/media/presentations/2024/wpec2024-3b1/images-media/wpec2024-3b1-slides-akira-tjerand--ZKP-Overview.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/nist_zkp.pdf",
+      "bytes": 2792817,
+      "sha256": "76bb202a8bf113bc9910776cedfde305796de9846dd86b956ef9cb071bfaf350",
+      "format": "pdf",
+      "pages": 54,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/nist_zkp.txt",
+      "text_characters": 41783,
+      "status": "取得済み"
+    },
+    {
+      "id": "nist_pec",
+      "title": "NIST Privacy Enhancing Cryptography 技術の分類",
+      "source_url": "https://csrc.nist.gov/Projects/pec/pec-tools",
+      "retrieved_at_utc": "2026-10-07T07:04:07.711647+00:00",
+      "resolved_url": "https://csrc.nist.gov/Projects/pec/pec-tools",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/nist_pec.html",
+      "bytes": 51730,
+      "sha256": "b308b1eb3e640c492da79e514b525a43cbe724eca6c14f76bae0e5ee896fd082",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/nist_pec.txt",
+      "text_characters": 12333,
+      "status": "取得済み"
+    },
+    {
+      "id": "edps_wallet",
+      "title": "EDPS Digital Identity Wallets 2025-12-16",
+      "source_url": "https://www.edps.europa.eu/system/files/2025-12/25-12-16_techdispatch-digital-identity-wallet_en.pdf",
+      "retrieved_at_utc": "2026-10-07T07:04:07.711975+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "eu_age",
+      "title": "European Commission EU-wide Age Verification 2026",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/library/commission-sets-out-common-approach-eu-wide-age-verification-technologies",
+      "retrieved_at_utc": "2026-10-07T07:04:07.712272+00:00",
+      "resolved_url": "https://digital-strategy.ec.europa.eu/en/library/commission-sets-out-common-approach-eu-wide-age-verification-technologies",
+      "content_type": "text/html; charset=UTF-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/eu_age.html",
+      "bytes": 55712,
+      "sha256": "f385a3ade631390780c6030497c3968168d29ed5be8910954f65790e1ad1abe8",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/eu_age.txt",
+      "text_characters": 7923,
+      "status": "取得済み"
+    },
+    {
+      "id": "w3c_bbs",
+      "title": "W3C BBS Cryptosuites 2026-09-10 Candidate Recommendation Draft",
+      "source_url": "https://www.w3.org/TR/2026/CRD-vc-di-bbs-20260910/",
+      "retrieved_at_utc": "2026-10-07T07:04:07.712597+00:00",
+      "resolved_url": "https://www.w3.org/TR/2026/CRD-vc-di-bbs-20260910/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/w3c_bbs.html",
+      "bytes": 356565,
+      "sha256": "b61fcd72506d689095ddbf001d338c81e137724584373e00dae65a3a30a441f5",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/w3c_bbs.txt",
+      "text_characters": 214599,
+      "status": "取得済み"
+    },
+    {
+      "id": "ing_range",
+      "title": "ING Zero Knowledge Range Proof 2017発表",
+      "source_url": "https://ing.com/news/2020/07/blockchain-transactions-just-got-a-whole-lot-safer.html",
+      "retrieved_at_utc": "2026-10-07T07:04:07.713020+00:00",
+      "resolved_url": "https://ing.com/news/2020/07/blockchain-transactions-just-got-a-whole-lot-safer.html",
+      "content_type": "text/html;charset=UTF-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/ing_range.html",
+      "bytes": 338231,
+      "sha256": "4f98bc03e3940a94de8319892b8e8362959e4ac82455ddd2b0e6cf08585f3c4a",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/ing_range.txt",
+      "text_characters": 92010,
+      "status": "取得済み"
+    },
+    {
+      "id": "swiss_review",
+      "title": "Swiss Federal Chancellery e-voting system examination",
+      "source_url": "https://www.bk.admin.ch/en/examination-of-systems",
+      "retrieved_at_utc": "2026-10-07T07:04:08.048900+00:00",
+      "resolved_url": "https://www.bk.admin.ch/en/examination-of-systems",
+      "content_type": "text/html;charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_review.html",
+      "bytes": 389899,
+      "sha256": "7fd03c6ea25ba7e34fd615dce4e62d223730dcecc66d7794ef8aa46a5f01c441",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_review.txt",
+      "text_characters": 12582,
+      "status": "取得済み"
+    },
+    {
+      "id": "swiss_post",
+      "title": "Swiss Post Electronic vote casting for Switzerland",
+      "source_url": "https://www.post.ch/-/media/portal-opp/k/dokumente/positionspapiere/positionspapier-e-voting.pdf?hash=E60A68CB5D462C4025FF84DEBF5CC8B2&sc_lang=en&vs=6",
+      "retrieved_at_utc": "2026-10-07T07:04:08.978765+00:00",
+      "resolved_url": "https://www.post.ch/-/media/portal-opp/k/dokumente/positionspapiere/positionspapier-e-voting.pdf?hash=E60A68CB5D462C4025FF84DEBF5CC8B2&sc_lang=en&vs=6",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_post.pdf",
+      "bytes": 64291,
+      "sha256": "d60e2193cecc0ae87e3cbb29d8693eb4029953a8ded6a5058679015f1c287e0b",
+      "format": "pdf",
+      "pages": 2,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_post.txt",
+      "text_characters": 10656,
+      "status": "取得済み"
+    },
+    {
+      "id": "ezkl",
+      "title": "EZKL 推論の正しさを証明する公開実装",
+      "source_url": "https://github.com/zkonduit/ezkl",
+      "retrieved_at_utc": "2026-10-07T07:04:09.112030+00:00",
+      "resolved_url": "https://github.com/zkonduit/ezkl",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/ezkl.html",
+      "bytes": 344752,
+      "sha256": "633aff0fbbd11d50c20a0106f52894e29a1a8da5a5872f28530e0b66f0c6f71e",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/ezkl.txt",
+      "text_characters": 10688,
+      "status": "取得済み"
+    },
+    {
+      "id": "ezkl_docs",
+      "title": "EZKL 医療等の用途例 文書",
+      "source_url": "https://github.com/zkonduit/ezkl-docs/blob/main/default.md",
+      "retrieved_at_utc": "2026-10-07T07:04:09.154002+00:00",
+      "resolved_url": "https://github.com/zkonduit/ezkl-docs/blob/main/default.md",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/ezkl_docs.html",
+      "bytes": 285486,
+      "sha256": "d14841ee949f15f15b5eb233138b14e982627fe9d0eb3e4aecbc4edfbb3a10fb",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/ezkl_docs.txt",
+      "text_characters": 13194,
+      "status": "取得済み"
+    },
+    {
+      "id": "zkllm",
+      "title": "zkLLM Zero Knowledge Proofs for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2404.16109",
+      "retrieved_at_utc": "2026-10-07T07:04:09.645775+00:00",
+      "resolved_url": "https://arxiv.org/pdf/2404.16109",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/zkllm.pdf",
+      "bytes": 1116955,
+      "sha256": "39f2a2f29457072573574c21ca9da7e0bbca756bf7031dd877f3c366f1e2ad7d",
+      "format": "pdf",
+      "pages": 17,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/zkllm.txt",
+      "text_characters": 178657,
+      "status": "取得済み"
+    },
+    {
+      "id": "zktorch",
+      "title": "ZKTorch Compiling ML Inference to Zero Knowledge Proofs",
+      "source_url": "https://arxiv.org/pdf/2507.07031",
+      "retrieved_at_utc": "2026-10-07T07:04:09.797744+00:00",
+      "resolved_url": "https://arxiv.org/pdf/2507.07031",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/zktorch.pdf",
+      "bytes": 860413,
+      "sha256": "2fa9225c84c7905fe21d41a25971cc515aaf23c24623cf11fa179232303b35f7",
+      "format": "pdf",
+      "pages": 16,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/zktorch.txt",
+      "text_characters": 138796,
+      "status": "取得済み"
+    },
+    {
+      "id": "zkml_survey",
+      "title": "A Survey of Zero Knowledge Proof Based Verifiable Machine Learning",
+      "source_url": "https://arxiv.org/pdf/2502.18535",
+      "retrieved_at_utc": "2026-10-07T07:04:09.903096+00:00",
+      "resolved_url": "https://arxiv.org/pdf/2502.18535",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/zkml_survey.pdf",
+      "bytes": 795770,
+      "sha256": "72943223ec159c302272304573bf01abaa391599e416c607902048bed8548675",
+      "format": "pdf",
+      "pages": 24,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/zkml_survey.txt",
+      "text_characters": 170283,
+      "status": "取得済み"
+    },
+    {
+      "id": "zkfl_health",
+      "title": "zkFL-Health Blockchain Enabled Zero Knowledge Federated Learning for Medical AI Privacy",
+      "source_url": "https://arxiv.org/pdf/2512.21048",
+      "retrieved_at_utc": "2026-10-07T07:04:09.903404+00:00",
+      "resolved_url": "https://arxiv.org/pdf/2512.21048",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/zkfl_health.pdf",
+      "bytes": 318644,
+      "sha256": "ade3f27201b2c02ef81aae6c98d83159f415024e96c5e3fa940f6b557a7a2515",
+      "format": "pdf",
+      "pages": 7,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/zkfl_health.txt",
+      "text_characters": 51943,
+      "status": "取得済み"
+    },
+    {
+      "id": "medical_eligibility",
+      "title": "Privacy Preserving Health Insurance Eligibility Verification on Blockchain Using zk-SNARKs",
+      "source_url": "https://www.mdpi.com/2410-387X/10/5/66",
+      "retrieved_at_utc": "2026-10-07T07:04:10.064203+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "medical_eligibility_pdf",
+      "title": "Privacy Preserving Health Insurance Eligibility Verification PDF",
+      "source_url": "https://www.mdpi.com/2410-387X/10/5/66/pdf",
+      "retrieved_at_utc": "2026-10-07T07:04:10.133521+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "erc7992",
+      "title": "ERC7992 Verifiable ML Model Inference Draft",
+      "source_url": "https://eips.ethereum.org/EIPS/eip-7992",
+      "retrieved_at_utc": "2026-10-07T07:04:10.151454+00:00",
+      "resolved_url": "https://eips.ethereum.org/EIPS/eip-7992",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/erc7992.html",
+      "bytes": 38498,
+      "sha256": "af7c48a2321914f93383115f937729afbcc5f2c2f9a2ec95c169b4830249a3b5",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/erc7992.txt",
+      "text_characters": 14065,
+      "status": "取得済み"
+    },
+    {
+      "id": "ethereum_rollups",
+      "title": "Ethereum Zero knowledge rollups 説明",
+      "source_url": "https://ethereum.org/developers/docs/scaling/zk-rollups/",
+      "retrieved_at_utc": "2026-10-07T07:04:10.203718+00:00",
+      "resolved_url": "https://ethereum.org/developers/docs/scaling/zk-rollups/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/ethereum_rollups.html",
+      "bytes": 584882,
+      "sha256": "19c48e7f7d7b36994622485ad05e3d47e6b60a15ac863c36838493912964c8ef",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/ethereum_rollups.txt",
+      "text_characters": 34916,
+      "status": "取得済み"
+    },
+    {
+      "id": "ethereum_privacy",
+      "title": "Ethereum Privacy roadmap 2026",
+      "source_url": "https://ethereum.org/roadmap/privacy",
+      "retrieved_at_utc": "2026-10-07T07:04:10.217277+00:00",
+      "resolved_url": "https://ethereum.org/roadmap/privacy",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/ethereum_privacy.html",
+      "bytes": 439333,
+      "sha256": "3f7d07dc2d0f53087181cbe1862b5fb674e01cfd50b536280358fd495d24351e",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/ethereum_privacy.txt",
+      "text_characters": 22018,
+      "status": "取得済み"
+    },
+    {
+      "id": "swiss_current",
+      "title": "Swiss Federal Chancellery e-voting current trials",
+      "source_url": "https://www.bk.admin.ch/en/e-voting",
+      "retrieved_at_utc": "2026-10-07T07:05:58.093547+00:00",
+      "resolved_url": "https://www.bk.admin.ch/en/e-voting",
+      "content_type": "text/html;charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_current.html",
+      "bytes": 158807,
+      "sha256": "dc486f6f7b8a8e8c9f4718f4978f7831568b213238edbead358d322ce5f47000",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_current.txt",
+      "text_characters": 2501,
+      "status": "取得済み"
+    },
+    {
+      "id": "ezkl_system",
+      "title": "EZKL 推論・分析の証明と外部証明生成サービス",
+      "source_url": "https://docs.ezkl.xyz/",
+      "retrieved_at_utc": "2026-10-07T07:05:58.093998+00:00",
+      "resolved_url": "https://docs.ezkl.xyz/",
+      "content_type": "text/html; charset=UTF-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/ezkl_system.html",
+      "bytes": 34368,
+      "sha256": "51fa5aecea1ddec6a0fc1dd0bca0c5bd82d7c967b66a85a826f02ce8fb5aab75",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/ezkl_system.txt",
+      "text_characters": 12666,
+      "status": "取得済み"
+    },
+    {
+      "id": "swiss_protocol_review",
+      "title": "EPFL Swiss Post e-voting protocol analysis 2021",
+      "source_url": "https://www.epfl.ch/labs/dedis/wp-content/uploads/2022/02/report-2021-3-kummer-ella_swisspostevoting.pdf",
+      "retrieved_at_utc": "2026-10-07T07:05:58.094196+00:00",
+      "resolved_url": "https://www.epfl.ch/labs/dedis/wp-content/uploads/2022/02/report-2021-3-kummer-ella_swisspostevoting.pdf",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_protocol_review.pdf",
+      "bytes": 2697078,
+      "sha256": "c62161679aa56d439aa16a3e0e262ac2dfcbc7e87804e73ccded7c6a0d6c9409",
+      "format": "pdf",
+      "pages": 54,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_protocol_review.txt",
+      "text_characters": 109598,
+      "status": "取得済み"
+    },
+    {
+      "id": "medical_eligibility_code",
+      "title": "医療保険適格性証明の論文 公開実装",
+      "source_url": "https://github.com/wwarodom/zk_code",
+      "retrieved_at_utc": "2026-10-07T07:05:58.094374+00:00",
+      "resolved_url": "https://github.com/wwarodom/zk_code",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/medical_eligibility_code.html",
+      "bytes": 440313,
+      "sha256": "f5a260a4fae8df42dd9529d0d1de8a2280873ddd8bd981cfd7baa2a92b697e69",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/medical_eligibility_code.txt",
+      "text_characters": 29806,
+      "status": "取得済み"
+    },
+    {
+      "id": "google_age",
+      "title": "Google Sparkasse 年齢証明 公開実装2025",
+      "source_url": "https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/",
+      "retrieved_at_utc": "2026-10-07T07:07:35.465647+00:00",
+      "resolved_url": "https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/google_age.html",
+      "bytes": 365426,
+      "sha256": "4acacee4bee8d00c392dd5a555aab289ec3a9e7c05a54644ad3b36f18339a338",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/google_age.txt",
+      "text_characters": 25868,
+      "status": "取得済み"
+    },
+    {
+      "id": "eu_blueprint",
+      "title": "EU 年齢証明 技術設計2026",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+      "retrieved_at_utc": "2026-10-07T07:07:35.465779+00:00",
+      "resolved_url": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+      "content_type": "text/html; charset=UTF-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/eu_blueprint.html",
+      "bytes": 61026,
+      "sha256": "4bf241481a6b999fc891e861ecc8fc774880b7e1e1bb485c4687ab818d590880",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/eu_blueprint.txt",
+      "text_characters": 6375,
+      "status": "取得済み"
+    },
+    {
+      "id": "eu_age_specs",
+      "title": "EU Age Verification Technical Specification",
+      "source_url": "https://github.com/eu-digital-identity-wallet/av-doc-technical-specification",
+      "retrieved_at_utc": "2026-10-07T07:07:35.470311+00:00",
+      "resolved_url": "https://github.com/eu-digital-identity-wallet/av-doc-technical-specification",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/eu_age_specs.html",
+      "bytes": 289764,
+      "sha256": "4eb780b4ebe14ede6c855f4c9d24dfc384125c32a3f3d4877b8fcc86e2c455c1",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/eu_age_specs.txt",
+      "text_characters": 6882,
+      "status": "取得済み"
+    },
+    {
+      "id": "zkcnn",
+      "title": "zkCNN Zero Knowledge Proofs for CNN Predictions and Accuracy",
+      "source_url": "https://eprint.iacr.org/2021/673.pdf",
+      "retrieved_at_utc": "2026-10-07T07:07:35.473602+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "swiss_incident_2026",
+      "title": "スイス連邦官房 2026年電子投票復号不能と措置",
+      "source_url": "https://www.bk.admin.ch/de/newnsb/Py-Tle6KOgfLZ0xglFMEz",
+      "retrieved_at_utc": "2026-10-07T07:13:34.587175+00:00",
+      "resolved_url": "https://www.bk.admin.ch/de/newnsb/Py-Tle6KOgfLZ0xglFMEz",
+      "content_type": "text/html;charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_incident_2026.html",
+      "bytes": 224207,
+      "sha256": "4d9b1b7098fbdefcae011f992b7e602b5ed8ab75792e5b8ad0568b3a562e9db8",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/swiss_incident_2026.txt",
+      "text_characters": 3757,
+      "status": "取得済み"
+    },
+    {
+      "id": "longfellow_reviews",
+      "title": "Longfellow 公開暗号監査・学術評価",
+      "source_url": "https://google.github.io/longfellow-zk/docs/reviews/",
+      "retrieved_at_utc": "2026-10-07T07:13:36.109715+00:00",
+      "status": "取得失敗",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "eu_recommendation_pdf",
+      "title": "EU 2026/1035 年齢確認勧告 原文",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32026H1035",
+      "retrieved_at_utc": "2026-10-07T07:13:36.340908+00:00",
+      "resolved_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32026H1035",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "取得失敗",
+      "error": "応答本文が空"
+    },
+    {
+      "id": "deco",
+      "title": "DECO Liberating Web Data Using Decentralized Oracles for TLS",
+      "source_url": "https://arxiv.org/pdf/1909.00938",
+      "retrieved_at_utc": "2026-10-07T07:19:53.847931+00:00",
+      "resolved_url": "https://arxiv.org/pdf/1909.00938",
+      "content_type": "application/pdf",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/deco.pdf",
+      "bytes": 561767,
+      "sha256": "4817b09315b7f7c6e76c12bd1622865f6e7522f54391602dcbd98754b901cd8f",
+      "format": "pdf",
+      "pages": 21,
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/deco.txt",
+      "text_characters": 181546,
+      "status": "取得済み"
+    },
+    {
+      "id": "tlsnotary_faq",
+      "title": "TLSNotary 通信内容の出所証明・選択開示",
+      "source_url": "https://tlsnotary.org/docs/faq/",
+      "retrieved_at_utc": "2026-10-07T07:19:53.848615+00:00",
+      "resolved_url": "https://tlsnotary.org/docs/faq/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/tlsnotary_faq.html",
+      "bytes": 49355,
+      "sha256": "70488ae3cfb896f7f556c6f1a62002e96a638eb94d50571ba5f26785d306874a",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/tlsnotary_faq.txt",
+      "text_characters": 15998,
+      "status": "取得済み"
+    },
+    {
+      "id": "tlsnotary_quickstart",
+      "title": "TLSNotary 年齢条件等の公開例",
+      "source_url": "https://tlsnotary.org/docs/quick_start/",
+      "retrieved_at_utc": "2026-10-07T07:19:53.848923+00:00",
+      "resolved_url": "https://tlsnotary.org/docs/quick_start/",
+      "content_type": "text/html; charset=utf-8",
+      "local_file": "research/disclosures/raw/zero_knowledge_20261007/tlsnotary_quickstart.html",
+      "bytes": 20350,
+      "sha256": "a4d83bb29e09c991361cd880c0a04928abd223c8d5889f17e0305f6ee64bfd8e",
+      "format": "html",
+      "text_file": "research/disclosures/raw/zero_knowledge_20261007/tlsnotary_quickstart.txt",
+      "text_characters": 1692,
+      "status": "取得済み"
+    }
+  ],
+  "code_snapshots": [
+    {
+      "repository": "zkonduit/ezkl",
+      "commit": "e196b111c1bafaa61b92ae431cd3c3fe9371da05",
+      "retrieved_at_utc": "2026-10-07T07:06:43.349483+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/zkonduit_ezkl/README.md",
+          "sha256": "43d715593009916471189b734138b35be6ee8589befc69865c0cdec975b61fe6"
+        },
+        {
+          "path": "src/graph/input.rs",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/zkonduit_ezkl/src/graph/input.rs",
+          "sha256": "fa488e615dcb22ee05ff050703f11fc709e7432fbe6fa86cd8cae7663672ec77"
+        },
+        {
+          "path": "src/graph/mod.rs",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/zkonduit_ezkl/src/graph/mod.rs",
+          "sha256": "e02c8ceab0e78fae413c24e3bf5d6f62218022d868a001615737c6c482cb188c"
+        },
+        {
+          "path": "src/graph/vars.rs",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/zkonduit_ezkl/src/graph/vars.rs",
+          "sha256": "8dfae8a0763d8af24a7e963928cfedf4e1ebaec4b929ccaff02b21ac788f26c4"
+        }
+      ]
+    },
+    {
+      "repository": "eu-digital-identity-wallet/av-doc-technical-specification",
+      "commit": "8b9728752bd8d8eede6077ade4be8900949de2d9",
+      "retrieved_at_utc": "2026-10-07T07:06:45.051945+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/eu-digital-identity-wallet_av-doc-technical-specification/README.md",
+          "sha256": "bd79659f8bbc5667789b8561a87c23c272c6c17e4ddca9729e87977234a12c39"
+        },
+        {
+          "path": "docs/annexes/annex-A/annex-A-av-profile.md",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/eu-digital-identity-wallet_av-doc-technical-specification/docs/annexes/annex-A/annex-A-av-profile.md",
+          "sha256": "54808f94484cb75e7b495b508f0c17568e41b7ca7c3657799c7b432a770538a9"
+        },
+        {
+          "path": "docs/annexes/annex-B/annex-B-zkp.md",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/eu-digital-identity-wallet_av-doc-technical-specification/docs/annexes/annex-B/annex-B-zkp.md",
+          "sha256": "a436a5cb9e7051ff9bb43bea9b759d19095f6460f1098d10cbe8b1064d918b57"
+        }
+      ]
+    },
+    {
+      "repository": "wwarodom/zk_code",
+      "commit": "1a0ae9ea4f9d7fa0a9959096588a9325de4138b0",
+      "retrieved_at_utc": "2026-10-07T07:06:47.609250+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/README.md",
+          "sha256": "e062eda029ca08ed26605f1708cb9e7e61e4bf12b2f745ad5acf22b47e0e58c5"
+        },
+        {
+          "path": "artifact/circuits/can16_full.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/can16_full.circom",
+          "sha256": "a07fa26ff923dd7b45383080b3be37cbf02de5035091e90616de8f34764401fd"
+        },
+        {
+          "path": "artifact/circuits/can20_base.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/can20_base.circom",
+          "sha256": "d8db65ba89a669553ea86790e1d82f7057a857f4281b1b4562c45f7ae47418e8"
+        },
+        {
+          "path": "artifact/circuits/can20_ceiling.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/can20_ceiling.circom",
+          "sha256": "58820be91ca8b122a342264f6c4063084a0b93b3099a19504b16a79c28f003e2"
+        },
+        {
+          "path": "artifact/circuits/can20_full.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/can20_full.circom",
+          "sha256": "cddfe4ebf93c398455c3dcf6751d08c6895cfb44351cc376f7c4a62a61362c6a"
+        },
+        {
+          "path": "artifact/circuits/can20_full_ds.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/can20_full_ds.circom",
+          "sha256": "08db155c5e8fd93748dc3d1aac6574b2972da0c0c9c6a8b821dd038ec82d4b95"
+        },
+        {
+          "path": "artifact/circuits/can20_range.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/can20_range.circom",
+          "sha256": "c75a8c8fda1dceaf634d8fbafa2f50e566a94ee91d4f1d6225764e2f765917b6"
+        }
+      ]
+    },
+    {
+      "repository": "wwarodom/zk_code",
+      "commit": "1a0ae9ea4f9d7fa0a9959096588a9325de4138b0",
+      "retrieved_at_utc": "2026-10-07T07:13:34.048761+00:00",
+      "files": [
+        {
+          "path": "artifact/circuits/health_claim_core.circom",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/circuits/health_claim_core.circom",
+          "sha256": "2deed47cffe596a81427548cc37be837e3a9d50b05ee9185bd51796b4a18f231"
+        },
+        {
+          "path": "artifact/contracts/Registry.sol",
+          "file": "research/disclosures/raw/zero_knowledge_20261007/code/wwarodom_zk_code/artifact/contracts/Registry.sol",
+          "sha256": "27a25630afe789e71b613e11b8081472d0563a47cfe89062795f81a0a8a862bb"
+        }
+      ]
+    }
+  ]
+}

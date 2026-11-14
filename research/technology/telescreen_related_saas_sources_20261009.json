@@ -1,0 +1,2060 @@
+{
+  "research_date": "2026-10-09",
+  "language": "ja",
+  "sources": [
+    {
+      "id": "nightfall_at_rest",
+      "url": "https://www.nightfall.ai/dlp-for-data-at-rest",
+      "retrieved_at": "2026-10-09",
+      "title": "Nightfall for Data At Rest | Nightfall AI",
+      "resolved_url": "https://www.nightfall.ai/dlp-for-data-at-rest",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_at_rest.html",
+      "sha256": "e81606a5768838edc3edf4955d1a2958ccfb0e1258cc782be17afdf54fe1b606",
+      "bytes": 71803,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_at_rest.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "526a0b20ad51635b53bcdce956bf2a4b4007adc6305ffcf0c3b58cd8b236cf5b"
+    },
+    {
+      "id": "nightfall_events",
+      "url": "https://help.nightfall.ai/dashboard/sdp_events",
+      "retrieved_at": "2026-10-09",
+      "title": "Data Detection and Response Events | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/dashboard/sdp_events",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_events.html",
+      "sha256": "90c8b5541255fbe7242cb92fe8620b2753d36ae233a22a65ccf1067bb1b6bd78",
+      "bytes": 1679034,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_events.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "5fd7c3bdcaf30e43b76cc1f8ebce691e12f63e2b12276c6e6082cc0b63a572df"
+    },
+    {
+      "id": "nightfall_integrations",
+      "url": "https://help.nightfall.ai/nightfall_integrations",
+      "retrieved_at": "2026-10-09",
+      "title": "Nightfall Integrations | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/nightfall_integrations",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_integrations.html",
+      "sha256": "4b3fe624c9aa497afaa2b1264d94e9a905e9123daee4493b4e59ca957b4e94d3",
+      "bytes": 687427,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_integrations.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "a14308c762b3e97b86696ca8417ad860fe87c913b57ae87d5de12426b040b33f"
+    },
+    {
+      "id": "nightfall_drive",
+      "url": "https://www.nightfall.ai/integrations/google-drive-dlp",
+      "retrieved_at": "2026-10-09",
+      "title": "Google Drive  DLP | AI-Native Data Leak Prevention | Nightfall AI",
+      "resolved_url": "https://www.nightfall.ai/integrations/google-drive-dlp",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_drive.html",
+      "sha256": "efc24b2c261de3b1f5798eb4eb6d6fd7c0058c4b0ca424d86a2a80ce3861abb8",
+      "bytes": 72385,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_drive.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "1b4e6d6dc14383c128cab713cdb1764783bb36fa52e1e3e6bd74d3b1c2b29a1a"
+    },
+    {
+      "id": "nightfall_drive_policy",
+      "url": "https://help.nightfall.ai/google-drive/policies",
+      "retrieved_at": "2026-10-09",
+      "title": "Configure Policies for Google Drive | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/google-drive/policies",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_drive_policy.html",
+      "sha256": "607a0fec72b3b9fb0dac139347a603e7b8695ae5adcec75f3206c745a4b2bddd",
+      "bytes": 678774,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_drive_policy.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "4f9fef6ce7de222cda7649caafbbef07b567b3d1ed4d07483e072bc27ffa34bc"
+    },
+    {
+      "id": "nightfall_security",
+      "url": "https://www.nightfall.ai/security",
+      "retrieved_at": "2026-10-09",
+      "title": "Security | Nightfall AI",
+      "resolved_url": "https://www.nightfall.ai/security",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_security.html",
+      "sha256": "bb8817950d34074da844a4ed6ed62ad4fee6f6df7b0adc64f554d45356d386b1",
+      "bytes": 71438,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_security.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "76ed5e1ec70a1fc6c5d525aaa5203b2744535fe5f79deec71d5c8495acf6ea66"
+    },
+    {
+      "id": "nightfall_api_alerting",
+      "url": "https://help.nightfall.ai/developer-api/key-concepts/alerting",
+      "retrieved_at": "2026-10-09",
+      "title": "Alerting | Developer APIs | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/developer-api/key-concepts/alerting",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_api_alerting.html",
+      "sha256": "213bb09c733493db7d641d6a0126c0ec9ee7a422e0a74d45930d72cc1cdd2177",
+      "bytes": 547546,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_api_alerting.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "f600eb507923e68840d2abd3a772630cc0a9096d0383543c97b6c4202f5ce3b5"
+    },
+    {
+      "id": "metomic_home",
+      "url": "https://www.metomic.io/",
+      "retrieved_at": "2026-10-09",
+      "title": "The Security Control Point Between AI and Enterprise Data | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_home.html",
+      "sha256": "89225f4a1be562f3f6f97f1e8ad443f30fcd15f6288a856268e67bdb8beaacd7",
+      "bytes": 104915,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "1d1d2a9a8b4146ab6c45fe52770c5b417dca6d21356e06b1c5e1bfadaf932ddb"
+    },
+    {
+      "id": "metomic_security",
+      "url": "https://www.metomic.io/security-center/",
+      "retrieved_at": "2026-10-09",
+      "title": "Built with security at its core | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/security-center/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_security.html",
+      "sha256": "d5fb1ceca30113c47bacd6ee2f6305fd3d1819f8812510a43f144dfb7f805eab",
+      "bytes": 88051,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_security.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "6a4da68525657308b7b56d0c7e1e0f142b3af666ab2bffb5289656c01c54c8b7"
+    },
+    {
+      "id": "metomic_remediation",
+      "url": "https://www.metomic.io/solution/response-and-remediation/",
+      "retrieved_at": "2026-10-09",
+      "title": "Response & Remediation for Data Risk | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/solution/response-and-remediation/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_remediation.html",
+      "sha256": "902e08f9a678a9fe34e4d89c2d6dfcfd453158cad90e919f90184a98c98a5291",
+      "bytes": 141243,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_remediation.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "a3e01bb2219af19c6bf044a7e874f800aeecadff29a954eb08e19f28369cd8a8"
+    },
+    {
+      "id": "metomic_human",
+      "url": "https://www.metomic.io/solution/human-firewall",
+      "retrieved_at": "2026-10-09",
+      "title": "Human Firewall Software | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/solution/human-firewall/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_human.html",
+      "sha256": "795c4b33544ef2655c758246d21d9ed7bede1edd8e9c92099600083ae7c0c359",
+      "bytes": 148690,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_human.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "4c53a46124f9fd044645b3954f46b1d3498f7824bfc80869aa8052d2c1cc41d2"
+    },
+    {
+      "id": "metomic_box",
+      "url": "https://www.metomic.io/integration/metomic-for-box",
+      "retrieved_at": "2026-10-09",
+      "title": "Data Security Software for Box | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/integration/metomic-for-box/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_box.html",
+      "sha256": "47df2721a784948e1635501cdef684ff5d11e42921b833f814fb12ba55b2eb72",
+      "bytes": 287082,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_box.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "1bb67d20f907cdae746551b98edf71636223501518773e5076c4867752ac0b3f"
+    },
+    {
+      "id": "metomic_slack_release",
+      "url": "https://www.metomic.io/resource-centre/metomic-for-slack-up-levels-data-security-and-compliance-for-one-of-the-worlds-most-popular-collaborative-work-apps/",
+      "retrieved_at": "2026-10-09",
+      "title": "Metomic for Slack Up-Levels Data Security | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/resource-centre/metomic-for-slack-up-levels-data-security-and-compliance-for-one-of-the-worlds-most-popular-collaborative-work-apps/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_slack_release.html",
+      "sha256": "35498c49ea755f57cfea3de3a23fae045e0f51e4e0c3875f959e473afb7a6e65",
+      "bytes": 75540,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_slack_release.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "cd061bfc9f659a99fbc5d7a5c68bfa683b1f6bc42e179d0881c8e27c874d45ee"
+    },
+    {
+      "id": "strac_saas",
+      "url": "https://www.strac.io/saas-dlp",
+      "retrieved_at": "2026-10-09",
+      "title": "SaaS DLP: Secure Data Loss Prevention for Businesses",
+      "resolved_url": "https://www.strac.io/saas-dlp",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_saas.html",
+      "sha256": "139290f3544612e9fb08dcc1c9ef314effe132baaadff238ed607a2a180f0ae8",
+      "bytes": 224511,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_saas.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "525fb81827b2aefe45f7e1cb85a3990b6f3957ba178be5e626590d2d6cb32528"
+    },
+    {
+      "id": "strac_private",
+      "url": "https://www.strac.io/integrations/dlp-on-premise",
+      "retrieved_at": "2026-10-09",
+      "title": "DLP On Premise: The Best Security Solution Where Data Never Leaves Your Environment | Strac",
+      "resolved_url": "https://www.strac.io/integrations/dlp-on-premise",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_private.html",
+      "sha256": "33cad029ce068bb64cf46154e4eefea08bbef628f4c6e7955cc1b6028ee48882",
+      "bytes": 244369,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_private.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "5938e424d964adfd2a1a82a2f6aee0b4dea75802d3a4773d39dce32051aef781"
+    },
+    {
+      "id": "strac_home",
+      "url": "https://www.strac.io/",
+      "retrieved_at": "2026-10-09",
+      "title": "Strac | Data Loss Prevention, Data Discovery & DSPM for SaaS, Cloud, GenAI",
+      "resolved_url": "https://www.strac.io/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_home.html",
+      "sha256": "550ea52193a8570f65c067dd43232fb52eca7f170657a6e409b516a0cc670850",
+      "bytes": 231072,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "de715ce74000cc9d44f32f75cbebd438fc1f27201b0163a0fbeb48b2399877d8"
+    },
+    {
+      "id": "strac_security",
+      "url": "https://www.strac.io/security",
+      "retrieved_at": "2026-10-09",
+      "title": "strac_security",
+      "status": "failed",
+      "local_file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "id": "mind_product",
+      "url": "https://mind.io/product",
+      "retrieved_at": "2026-10-09",
+      "title": "Stress Free DLP: AI-Native Data Loss Prevention | MIND",
+      "resolved_url": "https://mind.io/product",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_product.html",
+      "sha256": "59fbd1b2470b9726cc8be2bcdc771c2319fabb387f0240a1bbc980110cc1be46",
+      "bytes": 212427,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_product.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "9777ea72b98a468efd7b88449270e15c5c8491aa0d19331575abaf66571dccb8"
+    },
+    {
+      "id": "mind_remediation",
+      "url": "https://mind.io/solutions/streamline-data-remediation",
+      "retrieved_at": "2026-10-09",
+      "title": "Streamline Data Remediation for DLP Efficiency | MIND",
+      "resolved_url": "https://mind.io/solutions/streamline-data-remediation",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_remediation.html",
+      "sha256": "663cf0fc934d81bf12d98f7420041b56063234b4b9842d7aca236b67fafd6463",
+      "bytes": 485344,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_remediation.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "793601a284e4f8918ac8a5343b60f63274d0e10c7a4b13034ed1e3419cb328c1"
+    },
+    {
+      "id": "mind_analyst",
+      "url": "https://mind.io/solutions/autonomous-dlp-analyst",
+      "retrieved_at": "2026-10-09",
+      "title": "The MIND Autonomous DLP Analyst",
+      "resolved_url": "https://mind.io/solutions/autonomous-dlp-analyst",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_analyst.html",
+      "sha256": "9b4efa0e84ae8e9e41d329fdda131af6f99f2f9a0c7560a43f44bc114e32722b",
+      "bytes": 122475,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_analyst.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "de70d2630e23dc318bae5915097b414d8a699f34a005fd00e48bcea6a61b86d0"
+    },
+    {
+      "id": "mind_home",
+      "url": "https://mind.io/",
+      "retrieved_at": "2026-10-09",
+      "title": "Data Loss Prevention Solutions | MIND",
+      "resolved_url": "https://mind.io/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_home.html",
+      "sha256": "d234739298a365d9564d3f6461cf9fea8843dac956da89a4642b54c6b10bdf52",
+      "bytes": 705272,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "5a6c14d9edaa7f018c13b6e3e26239d7152ff489ef6e3612fc5fe1c4387a6334"
+    },
+    {
+      "id": "teleskope_product",
+      "url": "https://www.teleskope.ai/solutions-use-cases/prevent-data-exposure",
+      "retrieved_at": "2026-10-09",
+      "title": "Prevent Data Exposure | Teleskope | Automated Data Security for the AI World",
+      "resolved_url": "https://www.teleskope.ai/solutions-use-cases/prevent-data-exposure",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_product.html",
+      "sha256": "f37c12de1eb8dbfc5b22562fadea7544d0ccfcc7b55bbd056c2df3be3849f95a",
+      "bytes": 103095,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_product.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "9a761c7921f25d0f899d383034491a4d74fff4bd9df47b744d0f54bb891a2fcf"
+    },
+    {
+      "id": "teleskope_policy",
+      "url": "https://docs.teleskope.ai/the-platform/policy-maker",
+      "retrieved_at": "2026-10-09",
+      "title": "Policy Maker | Teleskope",
+      "resolved_url": "https://docs.teleskope.ai/the-platform/policy-maker",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_policy.html",
+      "sha256": "8f632b7683893075d6da098d4bd0f19cb74d6cef8429c74a378bff21611fd883",
+      "bytes": 712209,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_policy.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "1e4a163956bb52121c1322e01bb503a214eda95972788743e5e548ee8dbbf2f5"
+    },
+    {
+      "id": "teleskope_docs",
+      "url": "https://docs.teleskope.ai/",
+      "retrieved_at": "2026-10-09",
+      "title": "Welcome to Teleskope.ai | Teleskope",
+      "resolved_url": "https://docs.teleskope.ai/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_docs.html",
+      "sha256": "aae5584f9a2758931ae0f62d48fff16345f68ee2f166cd1d27114d334be556b0",
+      "bytes": 513692,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_docs.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "9cd9818694f13305193432340896d08da6ee9d458f68070ba61ada5022b9f788"
+    },
+    {
+      "id": "teleskope_home",
+      "url": "https://www.teleskope.ai/",
+      "retrieved_at": "2026-10-09",
+      "title": "Teleskope | Automated Data Security for the AI World",
+      "resolved_url": "https://www.teleskope.ai/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_home.html",
+      "sha256": "00df2dacbfb367d60bea3e7fdcc849bd487c85b91a8bd0ee515dd2e8bc3af589",
+      "bytes": 118114,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "c7f89356e7b616e2774fb30add48c53eaa4a52f2090461a6e5ecf3a824161d5c"
+    },
+    {
+      "id": "elba_data",
+      "url": "https://www.elba.security/platform/data-protection",
+      "retrieved_at": "2026-10-09",
+      "title": "SaaS data protection and sharing remediation | Elba",
+      "resolved_url": "https://www.elba.security/platform/data-protection",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_data.html",
+      "sha256": "d424b2c0524445b8f8975e77043e84c26d3b58c6410f5e7d8aefd9eee57f7c55",
+      "bytes": 74724,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_data.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "8b00b1e2ad099417dd2c41288daa84014b2212da5c9812ce3a74d1241e13007a"
+    },
+    {
+      "id": "elba_slack",
+      "url": "https://www.elba.security/integrations/slack",
+      "retrieved_at": "2026-10-09",
+      "title": "Slack security and employee communication integration | elba",
+      "resolved_url": "https://www.elba.security/integrations/slack",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_slack.html",
+      "sha256": "40985086a4c5e58b3de67ea5d16fbed34d0cc1139be1c6fd6c24781da272e503",
+      "bytes": 80191,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_slack.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "4d4c4af8a32cf01146b7893cc56009c158bac60af603a2a3b203f32c8fd9f812"
+    },
+    {
+      "id": "elba_google",
+      "url": "https://www.elba.security/integrations/google-workspace",
+      "retrieved_at": "2026-10-09",
+      "title": "Google Workspace security: Drive sharing review | Elba",
+      "resolved_url": "https://www.elba.security/integrations/google-workspace",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_google.html",
+      "sha256": "f5cbd9576a4ed700885ae81d9eb978ce9c89d8447780dbb2c43b44872dffebf7",
+      "bytes": 106781,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_google.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "f06ce9ffb68bd6e895baef05cb442b880c7052b0dbfe8fbc61192a32bf4274f9"
+    },
+    {
+      "id": "elba_work",
+      "url": "https://www.elba.security/how-it-works",
+      "retrieved_at": "2026-10-09",
+      "title": "How Elba works: employee security with Sam | Elba",
+      "resolved_url": "https://www.elba.security/how-it-works",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_work.html",
+      "sha256": "b94686a49468aab6270d0bb829a2b176e1708a64cc56d277d050412aef2c93e6",
+      "bytes": 67240,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_work.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "781ca909ac1ffd6661dd7d4c66080195ad6b0106a37fc725f084b61957cd140d"
+    },
+    {
+      "id": "elba_docs",
+      "url": "https://documentation.elba.security/articles/data-protection",
+      "retrieved_at": "2026-10-09",
+      "title": "Data protection | Elba Knowledge Base",
+      "resolved_url": "https://documentation.elba.security/articles/data-protection",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_docs.html",
+      "sha256": "e145aa84a221cc7a9c46eaef782520d1efca9e767e47505bc2e73137b093e5ff",
+      "bytes": 176683,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_docs.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "2fd8d009d7d74322fe88a4b746ebcb4a9511229a658c8196e59e06cb3a66484c"
+    },
+    {
+      "id": "elba_privacy",
+      "url": "https://www.elba.security/privacy-policy",
+      "retrieved_at": "2026-10-09",
+      "title": "Privacy Policy | elba",
+      "resolved_url": "https://www.elba.security/privacy-policy",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_privacy.html",
+      "sha256": "b4307624457260033cacfdee569384d73277fcbbbe67f00450d8494306722a8b",
+      "bytes": 102369,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_privacy.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "f8e9dbbbd96ca7edfb0ebe25ecd0dc0b640af6549af35e59449df5b4f52f96fd"
+    },
+    {
+      "id": "polymer_home",
+      "url": "https://www.polymerhq.io/",
+      "retrieved_at": "2026-10-09",
+      "title": "Polymer Runtime Data Security | Secure AI Workflows",
+      "resolved_url": "https://www.polymerhq.io/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_home.html",
+      "sha256": "911bd90b29b65b5392956079157ce96241116c86867ba9f6195e4112c1346a6f",
+      "bytes": 265060,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "b10f87515daa3388f42402a03a89be1e73706150d9a43f845732df036cb4a7b0"
+    },
+    {
+      "id": "polymer_saas",
+      "url": "https://www.polymerhq.io/polymer-for-free/",
+      "retrieved_at": "2026-10-09",
+      "title": "DLP for Slack, Google Drive, Microsoft Teams & SaaS Apps - Polymer",
+      "resolved_url": "https://www.polymerhq.io/polymer-for-free/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_saas.html",
+      "sha256": "e580a1b98089ce01257ff431dfd3b605bae96a2bfef7b5124f6fd02e1592137e",
+      "bytes": 147822,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_saas.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "6cb410b05e41ed3445444c895ab8554c184e6c95e4ea415794a6dac0a34271ae"
+    },
+    {
+      "id": "harmonic_home",
+      "url": "https://www.harmonic.security/",
+      "retrieved_at": "2026-10-09",
+      "title": "Harmonic Security | AI Governance & Control Platform",
+      "resolved_url": "https://www.harmonic.security/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/harmonic_home.html",
+      "sha256": "b586bbdd80bb5ec9e17715d31ac8f51e3ecbc988812c55b14415d991b11468df",
+      "bytes": 148580,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/harmonic_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "e0fa73d5463efdbc85629a03f3d45eefe613e60392a1ac690bd380f257103893"
+    },
+    {
+      "id": "harmonic_eula",
+      "url": "https://www.harmonic.security/harmonic-end-user-license-agreement",
+      "retrieved_at": "2026-10-09",
+      "title": "Harmonic Security | End User License Agreement",
+      "resolved_url": "https://www.harmonic.security/harmonic-end-user-license-agreement",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/harmonic_eula.html",
+      "sha256": "919c71e7b055cab79aa3ca73efa58b8b3e487b132b84a5fbbd39e356c2f2c5f8",
+      "bytes": 81625,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/harmonic_eula.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "4a5d3bb429297fea6af334fb57448a204d0c85e165d55f37034b031c811b6295"
+    },
+    {
+      "id": "harmonic_subprocessors",
+      "url": "https://www.harmonic.security/subprocessors",
+      "retrieved_at": "2026-10-09",
+      "title": "Harmonic Security | Subprocessors",
+      "resolved_url": "https://www.harmonic.security/subprocessors",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/harmonic_subprocessors.html",
+      "sha256": "e28915796bf87cf5fa6c57ce4451b86366f2e654702d4150b3d6115fccc29e6a",
+      "bytes": 53249,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/harmonic_subprocessors.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "404b17e05ada0c7fff0590aef3bd274b1616cf235fa60480af9e921593688626"
+    },
+    {
+      "id": "candor_home",
+      "url": "https://candor.security/",
+      "retrieved_at": "2026-10-09",
+      "title": "Candor | AI-Native DLP & Insider Risk",
+      "resolved_url": "https://candor.security/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/candor_home.html",
+      "sha256": "29d78db50da305f40e14785b5a90ddef4df7dd52ed029180912298f138e04fa3",
+      "bytes": 70529,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/candor_home.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "557415f4a96cd5552ce0bb7769c8bbc1a3de372d6ee9e4dba297f54dc93c7f1c"
+    },
+    {
+      "id": "candor_privacy",
+      "url": "https://candor.security/privacy-policy",
+      "retrieved_at": "2026-10-09",
+      "title": "Privacy Policy | Candor",
+      "resolved_url": "https://candor.security/privacy-policy",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/candor_privacy.html",
+      "sha256": "651b036de414421a8a1113d752b8c6288e96f4d0cd86a69633a2632a94596ff4",
+      "bytes": 41912,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/candor_privacy.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "0ef9deb5f627852ea941868a7acb9b9c4997e623df0f79b5fc2ec304bba6851b"
+    },
+    {
+      "id": "candor_about",
+      "url": "https://candor.security/about",
+      "retrieved_at": "2026-10-09",
+      "title": "About Candor | AI DLP & Insider Risk Company",
+      "resolved_url": "https://candor.security/about",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/candor_about.html",
+      "sha256": "1c11c609fb78a700dbfff4dbdc867125801d8af3d02553d6a6414e05dbca452f",
+      "bytes": 21199,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/candor_about.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "4149235b30f6af3a5cf079b8462a19cf1d7391baeb4d961cf766180ef9643e4e"
+    },
+    {
+      "id": "nightfall_actions",
+      "url": "https://help.nightfall.ai/dashboard/sdp_events/event_actions",
+      "retrieved_at": "2026-10-09",
+      "title": "Applying Actions on Events | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/dashboard/sdp_events/event_actions",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_actions.html",
+      "sha256": "2435f900ca873314aa1a1cd41d7571e547911223a54719ed8498f089a1f4b07f",
+      "bytes": 852772,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_actions.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "cde51249d0d31269e75de09dcc7839aa356a2f6f2ddaea2c29b3514a2989014a"
+    },
+    {
+      "id": "nightfall_slack_alerts",
+      "url": "https://help.nightfall.ai/slack/integration_alerts",
+      "retrieved_at": "2026-10-09",
+      "title": "Configure Alerts for Slack | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/slack/integration_alerts",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_slack_alerts.html",
+      "sha256": "33ca98162f74fbede777cbdd341c6cd4fbc6d0eaaea57aabb5712bc434fbc625",
+      "bytes": 851487,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_slack_alerts.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "bd48867c05e53429c0f0ce0bc06e99ef5bc70a8f30fa42a626fd3daf69999e70"
+    },
+    {
+      "id": "nightfall_github_fix",
+      "url": "https://help.nightfall.ai/github/remediation",
+      "retrieved_at": "2026-10-09",
+      "title": "Remediation on Nightfall for Github | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/github/remediation",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_github_fix.html",
+      "sha256": "d614ce5aac2cac35eb5366b492a2a4e991264a5463bc011fde85d6100ad4bd2a",
+      "bytes": 904202,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_github_fix.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "e220aa32f101fcf7da151f881d2a6893558f8934eaa3bab7d28220f04818e158"
+    },
+    {
+      "id": "nightfall_s3",
+      "url": "https://www.nightfall.ai/blog/scanning-amazon-s3-buckets-with-nightfall-data-loss-prevention-dlp",
+      "retrieved_at": "2026-10-09",
+      "title": "nightfall_s3",
+      "status": "failed",
+      "local_file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "id": "nightfall_api_retention",
+      "url": "https://help.nightfall.ai/developer-api/faqs/unique_features",
+      "retrieved_at": "2026-10-09",
+      "title": "How does Nightfall's Firewall for AI differs from other solutions? | Developer APIs | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/developer-api/faqs/unique_features",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_api_retention.html",
+      "sha256": "0393001c73c9eb8d8cdc5f4f57c2a2a3703d80c5a85394d55b6328c0b5cc5370",
+      "bytes": 476922,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_api_retention.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "d19cb814e1c89a4aa2aa915b34f93d1cb86692844499c1c180920f4702318860"
+    },
+    {
+      "id": "metomic_dspm",
+      "url": "https://www.metomic.io/solution/data-security-posture-management/",
+      "retrieved_at": "2026-10-09",
+      "title": "From DSPM to AI Data Security for Your Agents | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/solution/data-security-posture-management/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_dspm.html",
+      "sha256": "d3bace9c3c9b33d4c799b450545c44ad5133b4f58a26d515ca1c708575d226ea",
+      "bytes": 244815,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_dspm.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "3b9bcde23adc849a50791d6036a3eca4ed3372085e39ebcacd64aefcb249b1e2"
+    },
+    {
+      "id": "metomic_drive",
+      "url": "https://www.metomic.io/integration/metomic-for-google-drive/",
+      "retrieved_at": "2026-10-09",
+      "title": "Metomic for Google Drive | Data Security | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/integration/metomic-for-google-drive/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_drive.html",
+      "sha256": "ad3fe44bfab368a445eb4860baabd7651edfc0ceb11d131d3bd1369b65cb349c",
+      "bytes": 285543,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_drive.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "20d118056c9344c97f737dc274647841969f74afd8d0fb6868f82bc608032169"
+    },
+    {
+      "id": "metomic_slack",
+      "url": "https://www.metomic.io/integration/metomic-for-slack/",
+      "retrieved_at": "2026-10-09",
+      "title": "Metomic for Slack | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/integration/metomic-for-slack/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_slack.html",
+      "sha256": "2c1da73c1ce7d7920c63c4ffc98dfc8fc14b83faff6a5b172c24760fa10c68fc",
+      "bytes": 317132,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_slack.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "89710e3f3900a663b07ab751531597429b930020f98c9788cff2a39bd4a9ef41"
+    },
+    {
+      "id": "metomic_all",
+      "url": "https://www.metomic.io/integration/all-integrations/",
+      "retrieved_at": "2026-10-09",
+      "title": "Data Security Integrations | Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/integration/all-integrations/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_all.html",
+      "sha256": "2ec5fd621944c13dce2a6cac7f6802da99bca864b6dcf2d5adf15003c405c8b8",
+      "bytes": 179145,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_all.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "f7a2b0bbd73899cbb565b15bb6a4eb098c8d820b22d572e342eef88c8f3d5241"
+    },
+    {
+      "id": "metomic_oyster",
+      "url": "https://www.metomic.io/resource-centre/oyster-case-study/",
+      "retrieved_at": "2026-10-09",
+      "title": "How Oyster Secured Global Growth with Metomicwrench-toolprivacy-policyblock",
+      "resolved_url": "https://www.metomic.io/resource-centre/oyster-case-study/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_oyster.html",
+      "sha256": "76f37ec1298c7061c359198d0e6417dca3cb67af459088cc4119497d289f2592",
+      "bytes": 76637,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/metomic_oyster.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "67f7b8e909238554fec22e7229926e1cfc8d209a63dd6130f18feeaf1f168cf5"
+    },
+    {
+      "id": "strac_drive",
+      "url": "https://www.strac.io/integration/google-drive-dlp",
+      "retrieved_at": "2026-10-09",
+      "title": "Google Drive DLP (Data Loss Prevention) & DSPM | Discover & Remediate Sensitive Data",
+      "resolved_url": "https://www.strac.io/integration/google-drive-dlp",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_drive.html",
+      "sha256": "d7d9f4917a8c63c77a5aede23dbb606052ffc96b966cb3ae60a94475b2e4aa35",
+      "bytes": 246236,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_drive.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "081598667ca18cc799312fd0f55dbbe43f49fbddd57b20e950afd0af698cfedf"
+    },
+    {
+      "id": "strac_slack",
+      "url": "https://www.strac.io/integration/slack-dlp",
+      "retrieved_at": "2026-10-09",
+      "title": "Slack DLP (Data Loss Prevention) | Discover & Remediate Sensitive Data",
+      "resolved_url": "https://www.strac.io/integration/slack-dlp",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_slack.html",
+      "sha256": "0a224b0e4c65b879988f238ff8fa80233e91905d835304a4052afab8445c5bd7",
+      "bytes": 245022,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_slack.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "979e297d92d66f74d3846c6c52dfcf33c5502f5f5a68cc4b57667439146c53fb"
+    },
+    {
+      "id": "strac_all",
+      "url": "https://www.strac.io/integrations",
+      "retrieved_at": "2026-10-09",
+      "title": "Strac Integrations | Data Loss Prevention (DLP), Data Discovery & DSPM for SaaS & Cloud",
+      "resolved_url": "https://www.strac.io/integrations",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_all.html",
+      "sha256": "8b60a92b28ecd4c255281fd5ede9cbfd684ec5ab9ad1b6c140356283d9f0b08f",
+      "bytes": 266884,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_all.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "701106f5c4f929b1e5c186d658ef8c91d7dbe7cff50bb6019678d8ccc11523b2"
+    },
+    {
+      "id": "strac_security_correct",
+      "url": "https://www.strac.io/security-best-practices",
+      "retrieved_at": "2026-10-09",
+      "title": "Security Best Practices for SaaS and Cloud apps",
+      "resolved_url": "https://www.strac.io/security-best-practices",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_security_correct.html",
+      "sha256": "4c1aaf828e8b985681cda8c903f202d1dfad7aa799ffc41eb765129ede5c7a2e",
+      "bytes": 182781,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_security_correct.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "bb475fdd935a2b209eadee36f60e5125e72b2e2e218284c806d2e627bee2062f"
+    },
+    {
+      "id": "strac_case_index",
+      "url": "https://www.strac.io/case-studies",
+      "retrieved_at": "2026-10-09",
+      "title": "Strac Case Studies | Data Discovery, DLP & DSPM Success Stories",
+      "resolved_url": "https://www.strac.io/case-studies",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_case_index.html",
+      "sha256": "706377448d992176eb63e8a723e6cc60cb20068794658f1cd7313d252c77c76e",
+      "bytes": 186877,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_case_index.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "fd1032909f6ca49f01143f83768ae8bc6754de0fc303bb7d5f2f1dd5460e08d4"
+    },
+    {
+      "id": "teleskope_index",
+      "url": "https://docs.teleskope.ai/llms.txt",
+      "retrieved_at": "2026-10-09",
+      "title": "# Teleskope",
+      "resolved_url": "https://docs.teleskope.ai/llms.txt",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_index.txt",
+      "sha256": "d0d06ec17c8dc7315626f46a02a1a1783b2d0d115f9f398884701c38bc4b7767",
+      "bytes": 15024,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_index.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "d0d06ec17c8dc7315626f46a02a1a1783b2d0d115f9f398884701c38bc4b7767"
+    },
+    {
+      "id": "teleskope_all",
+      "url": "https://www.teleskope.ai/product/integrations",
+      "retrieved_at": "2026-10-09",
+      "title": "Integrations | Teleskope Data Security Platform",
+      "resolved_url": "https://www.teleskope.ai/product/integrations",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_all.html",
+      "sha256": "29a30be04b91a5fcbd8db57b1537209defd1ed7027afa632ad996c6d62dbd571",
+      "bytes": 111849,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_all.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "0632302dd1042953c71505ccec46a0b2bfb930c27823a997ffcc42974d0e14b2"
+    },
+    {
+      "id": "teleskope_ramp",
+      "url": "https://www.teleskope.ai/case-studies/how-ramp-achieves-real-time-data-redaction-with-teleskope",
+      "retrieved_at": "2026-10-09",
+      "title": "How Ramp Achieves Real-Time Data Redaction | Customer Success Story | Teleskope",
+      "resolved_url": "https://www.teleskope.ai/case-studies/how-ramp-achieves-real-time-data-redaction-with-teleskope",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_ramp.html",
+      "sha256": "e7ece46a86b88274a136db85cabbc0083b97b2058947c10d5f24f0fafb2205ee",
+      "bytes": 82970,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_ramp.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "6588ce36371fbafc57d993f37c284e78966acdb24b53612f8b48764d757e36ee"
+    },
+    {
+      "id": "teleskope_aprio",
+      "url": "https://www.teleskope.ai/case-studies/how-aprio-operationalized-data-security-with-teleskope",
+      "retrieved_at": "2026-10-09",
+      "title": "How Aprio Operationalized Data Security with Teleskope | Customer Success Story | Teleskope",
+      "resolved_url": "https://www.teleskope.ai/case-studies/how-aprio-operationalized-data-security-with-teleskope",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_aprio.html",
+      "sha256": "38507595c82ec5f4073679e6d9e69a7ea9e297ad98338760fb3e89a83750e1bc",
+      "bytes": 82290,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_aprio.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "67d637c7649f197466b618ba321b7db936211a99e63d4f09df6e773f913a7d53"
+    },
+    {
+      "id": "teleskope_redaction",
+      "url": "https://docs.teleskope.ai/specifications/redaction-methodologies",
+      "retrieved_at": "2026-10-09",
+      "title": "Redaction Methodologies | Teleskope",
+      "resolved_url": "https://docs.teleskope.ai/specifications/redaction-methodologies",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_redaction.html",
+      "sha256": "af473edd58f85421b29e78efe7ab7aee7995d2aa07980f558a381667142007c6",
+      "bytes": 657319,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_redaction.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "29ef7cede91e3e5878c42389a2bd5042023f98d43f92c8f8bcc820b8a34b997b"
+    },
+    {
+      "id": "elba_security",
+      "url": "https://www.elba.security/security",
+      "retrieved_at": "2026-10-09",
+      "title": "Trust, assurance and data protection | Elba",
+      "resolved_url": "https://www.elba.security/security",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_security.html",
+      "sha256": "d23007acc2d48ad4dd819f9a1bc165b04ce62102ed64e16b80ab31c24f0c2cf5",
+      "bytes": 51954,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/elba_security.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "67d8d830732f9697b489f888ea5066973d047c37622693b0aaa53f338a50f422"
+    },
+    {
+      "id": "mind_thoughtspot",
+      "url": "https://mind.io/customers/thoughtspot",
+      "retrieved_at": "2026-10-09",
+      "title": "ThoughtSpot Customer Story: Securing Data with MIND DLP",
+      "resolved_url": "https://mind.io/customers/thoughtspot",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_thoughtspot.html",
+      "sha256": "11aef167b320b4e37336aabd9e40a00cc2745e6d25ee77ffc09c6e48a13e6e1a",
+      "bytes": 142050,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_thoughtspot.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "d858a69f004156c3a730bc307589e0a1eb0837cb9ec5ba66e3d68a877aaf0c19"
+    },
+    {
+      "id": "mind_gravity",
+      "url": "https://mind.io/customers/gravity-payments",
+      "retrieved_at": "2026-10-09",
+      "title": "Gravity Payments: Protecting PCI Data with MIND DLP",
+      "resolved_url": "https://mind.io/customers/gravity-payments",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_gravity.html",
+      "sha256": "f30ce90cd483aeda481749f83321bb4a44ac8488b69fc42f467ecead774c003f",
+      "bytes": 132649,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/mind_gravity.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "e90056f5fc4bbeb50b6e4f38ec7945c10a3c81d8664a7181e3afaf05db3a655b"
+    },
+    {
+      "id": "polymer_privacy",
+      "url": "https://www.polymerhq.io/privacy/",
+      "retrieved_at": "2026-10-09",
+      "title": "Privacy Policy - Polymer DLP",
+      "resolved_url": "https://www.polymerhq.io/privacy/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_privacy.html",
+      "sha256": "24526505ac9050f7ed515c195fd8eca7af8cbb1c424cfdd2fcaa55280acb4fa8",
+      "bytes": 177811,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_privacy.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "bbc1c07b8094eeffc96bcfbc1196b12fa61de1c32c7130ec9553378dba5e8a47"
+    },
+    {
+      "id": "gamma_acquisition",
+      "url": "https://www.paloaltonetworks.com/blog/2022/04/next-gen-casb-gamma-ai-data-protection/",
+      "retrieved_at": "2026-10-09",
+      "title": "Next-Gen CASB & Gamma.AI",
+      "resolved_url": "https://www.paloaltonetworks.com/blog/2022/04/next-gen-casb-gamma-ai-data-protection/",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/gamma_acquisition.html",
+      "sha256": "bfd75fea5faae9021ee67e72662cc5ea6defcfad9454f276517272a8d583207f",
+      "bytes": 890480,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/gamma_acquisition.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "0d6bec0757d4b4a5587c6545a6fbebaf2ab43fd65eb3086b3815724fcf3d76da"
+    },
+    {
+      "id": "teleskope_deployment",
+      "url": "https://docs.teleskope.ai/setup/deployment.md",
+      "retrieved_at": "2026-10-09",
+      "title": "Deployment",
+      "resolved_url": "https://docs.teleskope.ai/setup/deployment.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_deployment.md",
+      "sha256": "db2875db4d9bf54dee79de89ce6385acb23dc7baf305e423b75ae7e4ddfcc22b",
+      "bytes": 3240,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_deployment.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "db2875db4d9bf54dee79de89ce6385acb23dc7baf305e423b75ae7e4ddfcc22b"
+    },
+    {
+      "id": "teleskope_architecture",
+      "url": "https://docs.teleskope.ai/setup/deployment/architecture.md",
+      "retrieved_at": "2026-10-09",
+      "title": "Architecture and Data Flow",
+      "resolved_url": "https://docs.teleskope.ai/setup/deployment/architecture.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_architecture.md",
+      "sha256": "e592bf7c6139965dfdc8ff7d24e20ab7ffc77a3f28117d0acbb1fc46db879c88",
+      "bytes": 6515,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_architecture.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "e592bf7c6139965dfdc8ff7d24e20ab7ffc77a3f28117d0acbb1fc46db879c88"
+    },
+    {
+      "id": "teleskope_outpost",
+      "url": "https://docs.teleskope.ai/setup/deployment/outpost.md",
+      "retrieved_at": "2026-10-09",
+      "title": "Outpost",
+      "resolved_url": "https://docs.teleskope.ai/setup/deployment/outpost.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_outpost.md",
+      "sha256": "46510b26889aa7d9955a85bde0898c893ef67eae6a700fd1f4462295a88f0516",
+      "bytes": 17323,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_outpost.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "46510b26889aa7d9955a85bde0898c893ef67eae6a700fd1f4462295a88f0516"
+    },
+    {
+      "id": "teleskope_s3",
+      "url": "https://docs.teleskope.ai/connectors/clouds/aws/s3.md",
+      "retrieved_at": "2026-10-09",
+      "title": "S3",
+      "resolved_url": "https://docs.teleskope.ai/connectors/clouds/aws/s3.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_s3.md",
+      "sha256": "3c4f72ad8c39215dc40dfad53271ffef4c44bedebe6233693b4e63d3c666b7a8",
+      "bytes": 4551,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_s3.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "3c4f72ad8c39215dc40dfad53271ffef4c44bedebe6233693b4e63d3c666b7a8"
+    },
+    {
+      "id": "teleskope_google",
+      "url": "https://docs.teleskope.ai/connectors/saas/google-drive.md",
+      "retrieved_at": "2026-10-09",
+      "title": "Google Workspace - Drive",
+      "resolved_url": "https://docs.teleskope.ai/connectors/saas/filesharing/google-drive.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_google.md",
+      "sha256": "346859a4130e28eed13253e108ac0bd221d0fb8eb785b80e0738cb607ba053c2",
+      "bytes": 4931,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_google.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "346859a4130e28eed13253e108ac0bd221d0fb8eb785b80e0738cb607ba053c2"
+    },
+    {
+      "id": "teleskope_github",
+      "url": "https://docs.teleskope.ai/connectors/saas/github.md",
+      "retrieved_at": "2026-10-09",
+      "title": "Github",
+      "resolved_url": "https://docs.teleskope.ai/connectors/saas/business-tools/github.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_github.md",
+      "sha256": "070381a4ff69e9b53879f6f59dfd12eb65ea125f2cba2842fcfa2b0b018f9986",
+      "bytes": 4386,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_github.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "070381a4ff69e9b53879f6f59dfd12eb65ea125f2cba2842fcfa2b0b018f9986"
+    },
+    {
+      "id": "teleskope_slack",
+      "url": "https://docs.teleskope.ai/connectors/saas/slack.md",
+      "retrieved_at": "2026-10-09",
+      "title": "Enterprise+",
+      "resolved_url": "https://docs.teleskope.ai/connectors/saas/communication/slack/slack.md",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_slack.md",
+      "sha256": "4ef0fcefac5a69ea5f89a310199ae5b0a90bc2d17380d952a4492ac37b15be51",
+      "bytes": 7120,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/teleskope_slack.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "4ef0fcefac5a69ea5f89a310199ae5b0a90bc2d17380d952a4492ac37b15be51"
+    },
+    {
+      "id": "nightfall_dedup",
+      "url": "https://help.nightfall.ai/dashboard/sdp_events/deduplication",
+      "retrieved_at": "2026-10-09",
+      "title": "Deduplication and Automatic Resolution of Events | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/dashboard/sdp_events/deduplication",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_dedup.html",
+      "sha256": "eeedca84853c96e64d92282ee0d234e52f86fa2cbd638782bc8a7e0fe21b81fb",
+      "bytes": 1177408,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_dedup.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "890626f209d9ad0a7773a070383b7c34de516339fb336770723e5afe35f19b1c"
+    },
+    {
+      "id": "nightfall_status",
+      "url": "https://help.nightfall.ai/dashboard/sdp_events/status",
+      "retrieved_at": "2026-10-09",
+      "title": "Event Status | Nightfall Documentation",
+      "resolved_url": "https://help.nightfall.ai/dashboard/sdp_events/status",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_status.html",
+      "sha256": "09f2d71b3e2431dee943e69749eb7dc2a65b3ca06a72fa8c5a686c0c45caaba5",
+      "bytes": 843416,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_status.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "829163658bedabe6e01ace7acd6b59e35cbcf61fa2649348c1c13e8d52e72d27"
+    },
+    {
+      "id": "strac_s3",
+      "url": "https://www.strac.io/integrations/aws-dlp-s3",
+      "retrieved_at": "2026-10-09",
+      "title": "AWS DLP: S3 Data Discovery (Data Loss Prevention)",
+      "resolved_url": "https://www.strac.io/integrations/aws-dlp-s3",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_s3.html",
+      "sha256": "c4177c7b4efb8fb07f16144a696fe90cbcc197b4c55f590c0fd5833f3e9166bf",
+      "bytes": 281381,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_s3.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "28e62b5a838fcbc0b876cc1a69906639bdb7ec608bbc51dcbb62ca1205a3d34c"
+    },
+    {
+      "id": "strac_github",
+      "url": "https://www.strac.io/integrations/github-dlp",
+      "retrieved_at": "2026-10-09",
+      "title": "Github DLP (Data Loss Prevention)",
+      "resolved_url": "https://www.strac.io/integrations/github-dlp",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_github.html",
+      "sha256": "0c2a00ff822e5fc141369d9f077add4aa7d3aac194ade4dac9eb2518121f4bf3",
+      "bytes": 245629,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_github.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "cfce56075f81478af26f769194a7e03980464372ea6813f510176ac51985726a"
+    },
+    {
+      "id": "strac_storage_case",
+      "url": "https://www.strac.io/case-studies/sensitive-data-discovery-and-protection-in-cloud-storage",
+      "retrieved_at": "2026-10-09",
+      "title": "Sensitive Data Discovery And Protection In Cloud Storage",
+      "resolved_url": "https://www.strac.io/case-studies/sensitive-data-discovery-and-protection-in-cloud-storage",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_storage_case.html",
+      "sha256": "358889ddab7505969b0482265468e547f5312f8c4f4f6d9632a73fa1d1931f62",
+      "bytes": 189580,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_storage_case.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "b4e1a0c2d052fcd23ce068652c61ce644bfa7be59e7aeca1f712e70e9fe4e5cd"
+    },
+    {
+      "id": "strac_collab_case",
+      "url": "https://www.strac.io/case-studies/data-security-for-collaboration-tools",
+      "retrieved_at": "2026-10-09",
+      "title": "Data Security For Collaboration Tools",
+      "resolved_url": "https://www.strac.io/case-studies/data-security-for-collaboration-tools",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_collab_case.html",
+      "sha256": "412f6f2c86420c837d70245d19013d8a3fc3a17a7ebac8f077e312d45f1e888a",
+      "bytes": 189028,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/strac_collab_case.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "1e4ba80227a0e523daa311442169585ed5f3a3967e7357d6dfd7b8f59e1e0b00"
+    },
+    {
+      "id": "nightfall_s3_context",
+      "url": "https://www.nightfall.ai/blog/data-loss-prevention-jira-confluence-data-center-server",
+      "retrieved_at": "2026-10-09",
+      "title": "Data Loss Prevention (DLP) on Jira and Confluence Data Center & Server Editions  | Nightfall AI",
+      "resolved_url": "https://www.nightfall.ai/blog/data-loss-prevention-jira-confluence-data-center-server",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_s3_context.html",
+      "sha256": "3698a384216303c1684d6dc92840f6c4c7fdad0f13f574bf0d3ce2ad5add79dc",
+      "bytes": 73545,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_s3_context.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "c4203cb6cea5dfebe0d71bb0e3ee595c1719756ab52d50160161aa771abb30e3"
+    },
+    {
+      "id": "nightfall_scan_blog_index",
+      "url": "https://www.nightfall.ai/blog/?6b467f2b_page=6&8255571c_page=25",
+      "retrieved_at": "2026-10-09",
+      "title": "Blog and News | Nightfall AI",
+      "resolved_url": "https://www.nightfall.ai/blog?6b467f2b_page=6&8255571c_page=25",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_scan_blog_index.html",
+      "sha256": "90d241f97ce1053968440617afedfb85d0e91506f820ab51ef5226cee01bffb4",
+      "bytes": 1228800,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/nightfall_scan_blog_index.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "463d87d9255bb7be578a587af9ee030c1778d59208670b560aeab62e2ce1b4b1"
+    },
+    {
+      "id": "gamma_current_docs",
+      "url": "https://docs.paloaltonetworks.com/saas-security/saas-security-admin/saas-security-api/remediate-risks/remediate-incidents",
+      "retrieved_at": "2026-10-09",
+      "title": "gamma_current_docs",
+      "status": "failed",
+      "local_file": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "id": "polymer_routefusion",
+      "url": "https://www.polymerhq.io/wp-content/uploads/2021/09/Case-Study_-Polymer-DLP-for-Banking.pdf",
+      "retrieved_at": "2026-10-09",
+      "title": "People-Centric Data Loss Protection to track and remove at-risk",
+      "resolved_url": "https://www.polymerhq.io/wp-content/uploads/2021/09/Case-Study_-Polymer-DLP-for-Banking.pdf",
+      "status": "saved",
+      "local_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_routefusion.pdf",
+      "sha256": "c83b9d79d56006b0ab64ceb78ab83f970aabeba59a028b80de5924843d40dffd",
+      "bytes": 65640,
+      "text_file": "research/disclosures/raw/telescreen_related_20261009/saas/polymer_routefusion.txt",
+      "retrieved_date": "2026-10-09",
+      "timezone": "Asia/Tokyo",
+      "text_sha256": "a0cec78ec83f6ebb8585541fe97727a11a7cc2acedfaff0a8d69c15dcf782a11"
+    }
+  ],
+  "products": [
+    {
+      "id": "teleskope",
+      "name": "Teleskope",
+      "positioning": "storage_and_saas_findings_and_remediation",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_all",
+            "teleskope_s3",
+            "teleskope_slack",
+            "teleskope_google",
+            "teleskope_github",
+            "teleskope_outpost"
+          ],
+          "note_ja": "S3、クラウドDB、SaaS、SMB/私設ファイル。readとwrite権限を分離"
+        },
+        "classification": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_policy",
+            "teleskope_product"
+          ],
+          "note_ja": "PII/PHI/secretsと文書・業務文脈"
+        },
+        "issue_grouping_and_status": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_policy"
+          ],
+          "note_ja": "保存先/資源別Findings、Open/In Progress/Resolved/Ignored"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "資源単位集約はあるが解決後再発の同一性規則は未確認"
+        },
+        "notifications_and_owner": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_policy"
+          ],
+          "note_ja": "所有者Slack DM/メール、Jira、複数通知"
+        },
+        "deadlines": {
+          "status": "partial",
+          "evidence_ids": [
+            "teleskope_policy"
+          ],
+          "note_ja": "Delayノードあり。期限超過上申・課題のSLAは未確認"
+        },
+        "remediation": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_policy"
+          ],
+          "note_ja": "伏字、権限解除、隔離/解除、ラベル。connector依存"
+        },
+        "rescan_resolution": {
+          "status": "partial",
+          "evidence_ids": [
+            "teleskope_policy"
+          ],
+          "note_ja": "状態設定と方針変更時auto-archive。原本再検査を解決の必須条件とする保証は未確認"
+        },
+        "content_retention_and_egress": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_architecture",
+            "teleskope_outpost"
+          ],
+          "note_ja": "標準Outpost抽出平文送信。局所分類でもmetadata/findings送信、previewで文脈"
+        },
+        "deployment": {
+          "status": "documented",
+          "evidence_ids": [
+            "teleskope_deployment",
+            "teleskope_outpost"
+          ],
+          "note_ja": "SaaS/自社管理/air-gap/Outpost。局所GPUとLLMは個別調整"
+        },
+        "custom_detectors": {
+          "status": "partial",
+          "evidence_ids": [
+            "teleskope_index"
+          ],
+          "note_ja": "独自要素・分類API。任意第三者エンジン登録は未確認"
+        },
+        "customer_evidence": {
+          "status": "vendor_customer_report",
+          "evidence_ids": [
+            "teleskope_ramp",
+            "teleskope_aprio"
+          ],
+          "note_ja": "RampとAprio。顧客内結果を全環境へ一般化しない"
+        },
+        "roadmap": {
+          "status": "future",
+          "evidence_ids": [
+            "teleskope_home",
+            "teleskope_ramp"
+          ],
+          "note_ja": "Kosmo first look告知10/14は10/9現行機能へ含めない"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "nightfall",
+      "name": "Nightfall",
+      "positioning": "saas_events_with_documented_dedup_and_auto_resolution",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "documented",
+          "evidence_ids": [
+            "nightfall_integrations",
+            "nightfall_at_rest"
+          ],
+          "note_ja": "Slack/Drive/GitHub等。任意保存先はAPIと別"
+        },
+        "classification": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "nightfall_at_rest"
+          ],
+          "note_ja": "PII/PHI/PCI/secrets/keys"
+        },
+        "issue_grouping_and_status": {
+          "status": "documented",
+          "evidence_ids": [
+            "nightfall_events",
+            "nightfall_status"
+          ],
+          "note_ja": "資源の複数findingをEventにまとめ状態/履歴/操作"
+        },
+        "dedup_and_recurrence": {
+          "status": "partial",
+          "evidence_ids": [
+            "nightfall_dedup"
+          ],
+          "note_ja": "同資源の活動中イベント重複抑制。資源間と解決後再発の指紋統合は未確認"
+        },
+        "notifications_and_owner": {
+          "status": "documented",
+          "evidence_ids": [
+            "nightfall_slack_alerts",
+            "nightfall_actions"
+          ],
+          "note_ja": "通知/利用者の対応/Jira課題"
+        },
+        "deadlines": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "汎用課題の担当・期限・超過の仕様は未確認"
+        },
+        "remediation": {
+          "status": "documented",
+          "evidence_ids": [
+            "nightfall_actions",
+            "nightfall_github_fix"
+          ],
+          "note_ja": "接続別修正。Githubの検出と鍵失効・履歴修正を一律自動としない"
+        },
+        "rescan_resolution": {
+          "status": "documented_limited",
+          "evidence_ids": [
+            "nightfall_dedup"
+          ],
+          "note_ja": "Driveの内容除去/完全削除でauto-resolve、trashでは未解決、その他connector例外"
+        },
+        "content_retention_and_egress": {
+          "status": "documented_limited",
+          "evidence_ids": [
+            "nightfall_events",
+            "nightfall_api_retention",
+            "nightfall_api_alerting"
+          ],
+          "note_ja": "伏字前finding30日以内閲覧。APIupload24時間。対象ごとの説明"
+        },
+        "deployment": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "APIクライアントの局所起動は局所推論ではない。全面自社配置未確認"
+        },
+        "custom_detectors": {
+          "status": "partial",
+          "evidence_ids": [
+            "nightfall_integrations",
+            "nightfall_api_alerting"
+          ],
+          "note_ja": "API独自接続/通知。任意第三者内部分類器は未確認"
+        },
+        "object_storage": {
+          "status": "partial",
+          "evidence_ids": [
+            "nightfall_s3_context"
+          ],
+          "note_ja": "公式S3/保存バックアップ検査手順。現行native継続S3connectorは未確認"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "strac",
+      "name": "Strac",
+      "positioning": "broad_saas_and_storage_discovery_with_remediation",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "strac_all",
+            "strac_drive",
+            "strac_slack",
+            "strac_s3",
+            "strac_github"
+          ],
+          "note_ja": "Slack/Drive/Docs/Sheets/Github/S3/DynamoDB/Snowflake等"
+        },
+        "classification": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "strac_slack",
+            "strac_saas"
+          ],
+          "note_ja": "PII/PHI/決済/API秘密/ソースコード/独自条件"
+        },
+        "issue_grouping_and_status": {
+          "status": "partial",
+          "evidence_ids": [
+            "strac_slack"
+          ],
+          "note_ja": "incident tracking/監査の説明。詳細状態の操作仕様は未確認"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "同一性・再発規則未確認"
+        },
+        "notifications_and_owner": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "strac_drive",
+            "strac_slack"
+          ],
+          "note_ja": "通知、所有者承認、部門上申"
+        },
+        "deadlines": {
+          "status": "partial",
+          "evidence_ids": [
+            "strac_slack"
+          ],
+          "note_ja": "遅延伏字化は説明。担当期限や超過管理は未確認"
+        },
+        "remediation": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "strac_drive",
+            "strac_slack",
+            "strac_s3"
+          ],
+          "note_ja": "伏字/共有制限/権限解除/削除/隔離など"
+        },
+        "rescan_resolution": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "修正後再検査を解決の必須条件とする詳細未確認"
+        },
+        "content_retention_and_egress": {
+          "status": "partial",
+          "evidence_ids": [
+            "strac_private"
+          ],
+          "note_ja": "自社版は外部にデータ/属性/ログなしと表明。SaaS保持へ一般化不可"
+        },
+        "deployment": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "strac_private"
+          ],
+          "note_ja": "自社施設/顧客AWS/Azure"
+        },
+        "custom_detectors": {
+          "status": "partial",
+          "evidence_ids": [
+            "strac_slack"
+          ],
+          "note_ja": "独自検出条件/API。任意第三者検査器の登録は未確認"
+        },
+        "customer_evidence": {
+          "status": "anonymous_vendor_customer_report",
+          "evidence_ids": [
+            "strac_storage_case",
+            "strac_collab_case"
+          ],
+          "note_ja": "匿名顧客の保存/協働ツール事例"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "elba",
+      "name": "elba",
+      "positioning": "employee_issue_distribution_and_supported_source_remediation",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "documented",
+          "evidence_ids": [
+            "elba_data",
+            "elba_slack",
+            "elba_google",
+            "elba_docs"
+          ],
+          "note_ja": "Drive/M365/Dropbox/Confluence、Slack公開channelのみ。通知と検査は別"
+        },
+        "classification": {
+          "status": "product_claim_limited",
+          "evidence_ids": [
+            "elba_data"
+          ],
+          "note_ja": "内容検査が利用可能なsourceでcredentials/財務/法務/健康/個人情報"
+        },
+        "issue_grouping_and_status": {
+          "status": "documented",
+          "evidence_ids": [
+            "elba_docs",
+            "elba_data",
+            "elba_work"
+          ],
+          "note_ja": "Checklist/管理者画面で配布済み課題/未完了/例外/修正を追跡"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "秘密値の指紋による再発規則は未確認"
+        },
+        "notifications_and_owner": {
+          "status": "documented",
+          "evidence_ids": [
+            "elba_slack",
+            "elba_docs"
+          ],
+          "note_ja": "Slack DM、メールfallback、週次まとめ、従業員の修正"
+        },
+        "deadlines": {
+          "status": "partial",
+          "evidence_ids": [
+            "elba_work",
+            "elba_docs"
+          ],
+          "note_ja": "reminder設定と通知あり。汎用期限/超過保証は未確認"
+        },
+        "remediation": {
+          "status": "documented_limited",
+          "evidence_ids": [
+            "elba_data",
+            "elba_google",
+            "elba_slack"
+          ],
+          "note_ja": "source/assetが対応するpermission removal/deletion/message actionのみ"
+        },
+        "rescan_resolution": {
+          "status": "partial",
+          "evidence_ids": [
+            "elba_docs"
+          ],
+          "note_ja": "権限変更を修正へ反映。原文内容の再検査保証未確認"
+        },
+        "content_retention_and_egress": {
+          "status": "documented_limited",
+          "evidence_ids": [
+            "elba_privacy"
+          ],
+          "note_ja": "サービス提供中に顧客データを保持。終了時の削除要求があれば直ちに、なければ終了30日後に全顧客データ（Google含む）を削除。運用中の原文一致箇所・監査ログの保持期間は未確認。"
+        },
+        "deployment": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "自社配置未確認"
+        },
+        "custom_detectors": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "任意外部分類器追加未確認"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "metomic",
+      "name": "Metomic",
+      "positioning": "at_rest_saas_with_current_shift_to_ai_in_motion",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "metomic_drive",
+            "metomic_box",
+            "metomic_all",
+            "metomic_slack"
+          ],
+          "note_ja": "Drive/Box/Slack等、S3/任意保存先未確認"
+        },
+        "classification": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "metomic_drive",
+            "metomic_box"
+          ],
+          "note_ja": "既成と独自分類、PIIとcompanysecrets"
+        },
+        "issue_grouping_and_status": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "保存データissueの詳細状態仕様未確認"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "重複/再発規則未確認"
+        },
+        "notifications_and_owner": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "metomic_drive",
+            "metomic_slack_release",
+            "metomic_human"
+          ],
+          "note_ja": "保存データ通知、現行AI要求はowner承認。時代と対象を分離"
+        },
+        "deadlines": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "保存問題の汎用期限未確認"
+        },
+        "remediation": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "metomic_drive",
+            "metomic_slack_release"
+          ],
+          "note_ja": "保存データredaction/access control/quarantine/retention"
+        },
+        "rescan_resolution": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "原本再検査を解決の条件とする詳細未確認"
+        },
+        "content_retention_and_egress": {
+          "status": "partial",
+          "evidence_ids": [
+            "metomic_security",
+            "metomic_remediation"
+          ],
+          "note_ja": "hash/minimizationと移動中内容非保存を説明。全connector原文保持へ拡張不可"
+        },
+        "deployment": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "全面自社配置未確認"
+        },
+        "custom_detectors": {
+          "status": "partial",
+          "evidence_ids": [
+            "metomic_drive"
+          ],
+          "note_ja": "独自classifierはあり。外部任意エンジン登録未確認"
+        },
+        "customer_evidence": {
+          "status": "vendor_customer_report",
+          "evidence_ids": [
+            "metomic_oyster"
+          ],
+          "note_ja": "2026OysterSlack/Drive保存対策"
+        },
+        "current_positioning": {
+          "status": "documented",
+          "evidence_ids": [
+            "metomic_dspm",
+            "metomic_human",
+            "metomic_remediation"
+          ],
+          "note_ja": "MCP/AI移動中へ重心変更。保存機能の廃止と断定しない"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "mind",
+      "name": "MIND",
+      "positioning": "unified_at_rest_and_in_motion_dlp",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "mind_product",
+            "mind_thoughtspot"
+          ],
+          "note_ja": "Drive/OneDrive/Box/Slack/Teams/自社ファイル。個別S3/Github未確認"
+        },
+        "classification": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "mind_product",
+            "mind_analyst"
+          ],
+          "note_ja": "文脈分類/Custom Classifier"
+        },
+        "issue_grouping_and_status": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "mind_product",
+            "mind_analyst"
+          ],
+          "note_ja": "risk-scored incident/Issue Investigator/監査"
+        },
+        "remediation": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "mind_product",
+            "mind_remediation"
+          ],
+          "note_ja": "権限解除/削除/ラベル/owner notify共同修正"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "同一性・再発規則未確認"
+        },
+        "deadlines": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "期限管理未確認"
+        },
+        "rescan_resolution": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "再検査解決条件未確認"
+        },
+        "content_retention_and_egress": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "原文保持・モデル委任仕様未確認"
+        },
+        "deployment": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "自社ファイルの対応と全面自社配置は別"
+        },
+        "roadmap": {
+          "status": "future_limited",
+          "evidence_ids": [
+            "mind_analyst"
+          ],
+          "note_ja": "最初のskillsはCustom Classifier/Issue Investigator、追加技能は将来"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "polymer",
+      "name": "Polymer",
+      "positioning": "saas_dlp_with_human_and_automated_workflows",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "polymer_saas"
+          ],
+          "note_ja": "Slack/Enterprise/Drive/Teams"
+        },
+        "issue_grouping_and_status": {
+          "status": "partial",
+          "evidence_ids": [
+            "polymer_home"
+          ],
+          "note_ja": "risk report/audit log。詳細操作仕様未確認"
+        },
+        "remediation": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "polymer_home",
+            "polymer_saas"
+          ],
+          "note_ja": "redaction/access revoke/custom human workflows"
+        },
+        "content_retention_and_egress": {
+          "status": "partial",
+          "evidence_ids": [
+            "polymer_privacy"
+          ],
+          "note_ja": "limited period transactionlogsと米国処理。日数/全原値内訳未確認"
+        },
+        "deployment": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "polymer_home"
+          ],
+          "note_ja": "cloud/self-hosted singletenant"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        },
+        "deadlines": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        },
+        "rescan_resolution": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        },
+        "customer_evidence": {
+          "status": "historical_vendor_customer_report",
+          "evidence_ids": [
+            "polymer_routefusion"
+          ],
+          "note_ja": "古いRoutefusion例。現在性能に一般化不可"
+        },
+        "source_quality": {
+          "status": "caution",
+          "evidence_ids": [
+            "polymer_home"
+          ],
+          "note_ja": "公式HTMLに無関係な外部リンク混在。侵害とは断定せず証拠から除外"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "candor_security",
+      "name": "Candor Security",
+      "positioning": "insider_risk_and_behavior_context_adjacent",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "candor_home"
+          ],
+          "note_ja": "Google/Microsoft、identity、endpoint、ITSM、HR、SIEM"
+        },
+        "issue_grouping_and_status": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "candor_home",
+            "candor_privacy"
+          ],
+          "note_ja": "人物/ケース/調査要約/優先順位"
+        },
+        "content_retention_and_egress": {
+          "status": "product_claim_and_policy",
+          "evidence_ids": [
+            "candor_home",
+            "candor_privacy"
+          ],
+          "note_ja": "private isolated inference/no training、保持は顧客設定。活動情報も処理"
+        },
+        "deployment": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "candor_home"
+          ],
+          "note_ja": "on-prem/cloud"
+        },
+        "remediation": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "元資源の内容修正仕様未確認"
+        },
+        "rescan_resolution": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "保存全件再検査未確認"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        },
+        "deadlines": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "harmonic_security",
+      "name": "Harmonic Security",
+      "positioning": "ai_in_motion_and_agent_controls_adjacent",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "connectors": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "harmonic_home"
+          ],
+          "note_ja": "browser/endpoint/MCP、保存先全件巡回未確認"
+        },
+        "remediation": {
+          "status": "product_claim",
+          "evidence_ids": [
+            "harmonic_home"
+          ],
+          "note_ja": "AI送信/操作へのcoach/warn/block"
+        },
+        "content_retention_and_egress": {
+          "status": "partial",
+          "evidence_ids": [
+            "harmonic_eula",
+            "harmonic_subprocessors"
+          ],
+          "note_ja": "no trainingとthirdparty processors。推論/保持保証とは別"
+        },
+        "issue_grouping_and_status": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "保存問題management未確認"
+        },
+        "dedup_and_recurrence": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        },
+        "deadlines": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        },
+        "rescan_resolution": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "未確認"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    },
+    {
+      "id": "gamma_ai_/_palo_alto_networks",
+      "name": "Gamma.AI / Palo Alto Networks",
+      "positioning": "historical_acquired_product_family",
+      "scope": "公開構想との比較のみ。非公開実装の比較を含まない。",
+      "capabilities": {
+        "company_status": {
+          "status": "historical_official_announcement",
+          "evidence_ids": [
+            "gamma_acquisition"
+          ],
+          "note_ja": "2022/4統合完了記事。独立現行vendorと数えない"
+        },
+        "current_capabilities": {
+          "status": "unconfirmed",
+          "evidence_ids": [],
+          "note_ja": "現行SaaS Security修正docs推測URL取得失敗。旧Gammaから現行仕様へ推定しない"
+        }
+      },
+      "japanese_support": {
+        "status": "unconfirmed",
+        "evidence_ids": [],
+        "note_ja": "日本語データでの公式性能・全区分の網羅保証を今回未確認"
+      },
+      "accuracy": "会社の精度・速度の表明を横断比較の実測値としない"
+    }
+  ],
+  "method": "公式公開本文を再取得。非公開Telescreen実装は閲覧せず、利用者の構想・評価軸のみを比較。実製品の設定・精度・通信は実測していない。",
+  "status_legend": {
+    "documented": "公式操作/構成仕様",
+    "product_claim": "会社の提供表明、実測ではない",
+    "partial": "一部の機能/範囲だけ確認",
+    "unconfirmed": "今回の公開資料で未確認、不存在と断定しない",
+    "future": "将来告知、現行機能に計上しない"
+  },
+  "retrieval_summary": {
+    "attempts": 81,
+    "saved": 78,
+    "failed": 3
+  },
+  "limitations": [
+    "Japanese precision and exhaustive support unconfirmed for all products.",
+    "Original content, matched values, previews, summaries, diagnostic logs and fingerprints must be assessed separately.",
+    "2026 positioning changes (Metomic/Candor/Harmonic) were rechecked; historical pages do not prove current full features.",
+    "Gamma.AI acquired/integrated product family, not independent current startup.",
+    "Polymers fetched HTML mixed unrelated outbound links; no intrusion attribution."
+  ],
+  "verification": {
+    "hash_required_fields_and_cited_links_errors": [],
+    "private_repository_read": false,
+    "live_customer_connection_or_attack_experiment": false,
+    "independent_review": "requested_after_draft",
+    "report_sha256": "a35927c5b4134f53cd294f44fa8e57e5266b73f290d7132c47845bdc8d09a6cd"
+  }
+}

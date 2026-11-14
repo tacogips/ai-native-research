@@ -1,0 +1,379 @@
+                                             Benchmarking Classical and Transformer-Based
+                                             Models for Document Sensitivity Classification
+                                                     Aleesha Zainab1,2∗ , Muhammad Ahmed Khalid1 , Faheem Ullah Khan1 , Asifullah Khan1,2,3
+                                                                  1
+                                                                 Pattern Recognition Lab, DCIS, PIEAS, Nilore, Islamabad, 45650, Pakistan
+                                                           2
+                                                            PIEAS Artificial Intelligence Center (PAIC), PIEAS, Nilore, Islamabad, 45650, Pakistan
+                                                     3
+                                                       Deep Learning Lab, Center for Mathematical Sciences, PIEAS, Nilore, Islamabad, 45650, Pakistan
+                                                                             ∗
+                                                                               Corresponding author: aleeshazainab660@gmail.com
+
+
+                                           Abstract—Automatic sensitivity classification of organizational   often overlooked document sensitivity classification problem,
+                                        documents is a critical yet underserved problem, where the           where explicit sensitivity markers are found in the body text
+
+
+
+
+arXiv:2608.16928v1 [cs.LG] 5 Aug 2026
+                                        consequences of misclassification range from regulatory viola-       of training documents, such as by being embedded in inline
+                                        tions to security breaches. While AI-based approaches offer a
+                                        scalable alternative to manual review, their reliability depends     classification codes, classification phrases, and distribution
+                                        fundamentally on the integrity of training data. A pervasive         notices. The ground-truth label is directly stored in a machine-
+                                        but underreported problem in this domain is label leakage:           readable way on these artefacts. Such a trained classifier does
+                                        residual classification markers embedded within document bodies      not need to know what makes a document sensitive, it just
+                                        that allow models to exploit surface shortcuts rather than           needs to see when a classification marker is present. The model
+                                        learning genuine content-based sensitivity signals, producing
+                                        performance estimates that are inflated and unreliable. This         gets very high cross-validation scores but when the model is
+                                        paper addresses this problem by introducing Strategic 16K,           used on documents that have been correctly sanitised, there it
+                                        a carefully constructed, leakage-controlled corpus of 16,000         fails, which is the operational condition.
+                                        diplomatic cables sourced from the WikiLeaks Public Library
+                                        of US Diplomacy (PlusD), and presents a systematic benchmark            This problem is not merely theoretical. Prior studies using
+                                        evaluating six model architectures spanning classical machine        the WikiLeaks Public Library of US Diplomacy (PlusD) as a
+                                        learning and transformer-based approaches. We document an            training corpus for sensitivity classification generally do not
+                                        extended leakage removal protocol that identifies and eliminates     disclose explicit leakage removal procedures. Their reported
+                                        three categories of residual classification markers embedded
+                                        within document bodies. On the clean benchmark, BERT achieves
+                                                                                                             scores cannot be interpreted as evidence of genuine sensitivity
+                                        the strongest performance (Accuracy = 89.14%, F1 = 89.33%), fol-     understanding without knowing what artefacts were contained
+                                        lowed by ELECTRA (Accuracy = 88.57%, F1 = 88.90%). Among             within the training data; and cannot be fairly compared across
+                                        classical models, TF-IDF with Logistic Regression achieves the       studies or reproduced in controlled conditions.
+                                        strongest performance at significantly lower computational cost.
+                                        These results constitute the first fully reproducible sensitivity       This paper will directly address these limitations. We build
+                                        classification benchmark constructed under explicit leakage-         Strategic 16K, a 16K-document benchmark from WikiLeaks
+                                        controlled conditions from WikiLeaks PlusD.                          PlusD, using a well-documented leakage removal protocol,
+                                           Index Terms—document sensitivity classification, BERT,            and perform the first controlled cross-family evaluation under
+                                        ELECTRA, RoBERTa, TF-IDF, leakage removal, transformer
+                                        benchmarking, diplomatic cables, WikiLeaks PlusD                     identical experimental conditions on six model architectures.
+                                                                                                             The contributions of this work are:
+                                                               I. I NTRODUCTION
+                                                                                                               1) The first reproducible sensitivity classification bench-
+                                           A single misclassified document can lead to a data breach,             mark from WikiLeaks PlusD, with fully documented
+                                        a regulatory penalty, or a national security incident. In most            leakage removal and sensitive-focused sampling proto-
+                                        organizations, the classification of a document as sensitive              cols.
+                                        is still determined at the document level, manually. Before            2) An extended leakage removal protocol targeting three
+                                        it can be routed, stored, and transmitted, trained reviewers              categories of residual classification markers embedded
+                                        must read and label each document manually, which is time                 within document bodies that prior studies have not
+                                        consuming, inconsistent across reviewers and cannot scale                 addressed.
+                                        with the volume of documents today’s organizations produce.            3) A systematic cross-family benchmark comparing clas-
+                                        While automated sensitivity classification with NLP provides              sical TF-IDF classifiers and transformer-based models
+                                        a principled scalable solution, the utility of this approach is           under identical experimental conditions on a common
+                                        highly dependent on whether the trained models capture actual             cleaned corpus.
+                                        sensitivity signals or are simply capturing artefacts of how the       4) A quantified efficiency analysis identifying TF-IDF with
+                                        training data was prepared.                                               Logistic Regression as a strong practical baseline, at a
+                                           There is a significance in this difference that is greater             fraction of the computational cost of transformer fine-
+                                        than might be supposed. Label leakage is a well-known and                 tuning.
+                     II. R ELATED W ORK                             D. Summary of Research Gaps
+A. Traditional Machine Learning Approaches                             Representative previous studies on document and text clas-
+                                                                    sification are summarized in Table I. The studies come from
+   However, with the help of TF-IDF and bag-of-words repre-         various environments and data sets and are added to give
+sentations, classical machine learning methods have set solid       a context to the model families and evaluation methods
+baselines for text classification in various domains. Ahmad         for sensitivity classification. The present study is motivated
+et al. [1] tested SVM, Random Forest, k-Nearest Neighbours          by four gaps observed across all the reviewed work: (1)
+and Naive Bayes for document categorisation, and found              No leakage removal protocol is explicitly disclosed in prior
+SVM to be 97% accurate, proving that well-regularized linear        studies that used WikiLeaks PlusD; (2) previous benchmarks
+models work well with lexically rich text. Joachims [2] gave        are challenging to reproduce because they do not specify
+theoretical foundations for SVM-based text categorisation by        preprocessing pipelines and dataset splits; (3) No controlled
+showing that the maximum-margin formulation with sparse             cross-family comparison was conducted on a common cleaned
+TF-IDF representations has good generalisation bounds in            corpus; and (4) No work quantifies the efficiency tradeoff
+high-dimensional feature spaces. Although these methods are         between transformer and classical models in this domain.
+efficient, they can only compare words at the surface level and
+do not account for the bidirectional relationships that are often                                 TABLE I
+key in deciding whether a document is sensitive or not.                   R EPRESENTATIVE P RIOR W ORK ON T EXT AND S ENSITIVITY
+                                                                                              C LASSIFICATION
+
+B. Deep Learning Approaches
+                                                                     Study                  Method             Score        Leakage Ctrl
+   Alzhrani et al. [3] built a CNN-based system for sensitive        Ahmad et al. [1]       SVM, NB           Acc=0.97             No
+text detection on the dataset of the WikiLeaks diplomatic ca-        Joachims [2]           SVM               High Acc.            No
+bles with an F1 score of 0.91, segmenting the long documents         Alzhrani et al. [3]    CNN                F1=0.91             No
+into shorter paragraphs to redirect the focus toward locally         Hart et al. [4]        ML-based DLP   FNR¡3%, FDR¡1%          No
+sensitive passages. This represents the first application of deep    Petrolini et al. [6]   BERT               F1=0.95             No
+learning to WikiLeaks PlusD sensitivity classification. In a         This work              6 models          F1=0.893             Yes
+previous work, Hart et al. [4] have presented the possibility of
+using machine learning for Data Loss Prevention (DLP) activ-
+ities, arguing that automatic classifiers can be used to detect                    III. DATASET AND P REPROCESSING
+sensitive information in organisational documents. A critical       A. Source: WikiLeaks Public Library of US Diplomacy
+limitation shared by both studies is that they do not explicitly
+                                                                       The WikiLeaks Public Library of US Diplomacy (PlusD)
+describe any procedure for identifying or removing potential
+                                                                    is the largest publicly available collection of real government
+label leakage from the WikiLeaks corpus. Consequently, it
+                                                                    documents with official sensitivity labels, containing 251,287
+is difficult to determine whether the reported performance
+                                                                    diplomatic cables produced by US embassies worldwide. The
+reflects genuine semantic sensitivity understanding or, at least
+                                                                    seven official classification labels – UNCLASSIFIED, CONFI-
+in part, the exploitation of residual classification artefacts.
+                                                                    DENTIAL, LIMITED OFFICIAL USE, SECRET, UNCLAS-
+                                                                    SIFIED//FOR OFFICIAL USE ONLY (FOUO), CONFIDEN-
+C. Transformer-Based Models
+                                                                    TIAL//NOFORN, and SECRET//NOFORN – were affixed to
+   A bidirectional transformer pre-trained on the masked lan-       each cable by trained government officials at the time of its
+guage modelling task, BERT [5] changed the paradigm in              writing. These are real government classification decisions
+text classification. BERT represents tokens with context, using     using formal protocols and not crowd-sourced annotations,
+self-attention at all layers to model the left and right context    meaning that this dataset is uniquely reliable as a source of
+of a token simultaneously, which cannot be achieved with            real ground-truth sensitivity labels.
+TF-IDF or recurrent models. Petrolini et al. [6] fine-tuned            There was no pre-built version of this data available. Every
+BERT to detect sensitive data automatically, and obtained           document was collected from the WikiLeaks PlusD API via
+F1 = 0.95 on a privacy-sensitive classification task. Kowsari et    a custom automated extraction pipeline. The pipeline repeat-
+al. [7] conducted a survey of text classification algorithms and    edly processed each classification category, fetched HTML
+found that transformer models have shown consistently and           pages of cables, extracted the document content and original
+significantly better performance than classical and recurrent       classification labels, and stripped away any leftover HTML
+models.Saritha and Kumar [8] presented a review of AI-based         artefacts. The pipeline deduplicated more than 100,000 unique
+techniques for sensitive data protection, highlighting the use      documents, which were stored in structured CSV format.
+of transformer models, convolutional neural networks (CNNs),
+recurrent neural networks (RNNs), autoencoders, and meta-           B. Binary Label Mapping
+heuristic optimization methods for detecting and preventing           The seven original labels were reduced to a binary schema,
+data leakage. However, the reviewed studies did not address         which represents the basic access-restriction decision. UN-
+explicit leakage control during dataset construction.               CLASSIFIED and UNCLASSIFIED//FOUO were both clas-
+sified as Non-Sensitive since they do not have formal ac-          vocabulary; no classification-related tokens such as SECRET,
+cess restrictions. All the other labels (LIMITED OFFICIAL          CONFIDENTIAL, or NOFORN appear among the highest-
+USE, CONFIDENTIAL, CONFIDENTIAL//NOFORN, SE-                       weighted features of either class. This confirms that classifiers
+CRET, and SECRET//NOFORN) were assigned a formal                   trained on Strategic 16K must rely on content-based signals
+access restriction of Sensitive, since all apply some degree of    rather than surface classification artefacts.
+formal restriction. This mapping and the resulting distribution
+of the corpus are shown in Table III.
+C. Leakage Removal Protocol
+   One of the most important challenges during the preprocess-
+ing of WikiLeaks PlusD cables is the removal of remaining
+classification artefacts that are embedded in document bodies.
+Unless eliminated, these can enable classifiers to use surface
+shortcuts instead of learning real sensitivity signals. Three
+types of leakage were found and eliminated:
+   • Inline paragraph markers: Single-letter sensitivity
+      codes (C), (S), (U) and (SBU) inserted at the be-
+      ginning of each paragraph of a specific cable indicating
+      the paragraph classification.
+   • Repeated      classification phrases: Natural-language        Fig. 1. Top 15 TF-IDF features for Sensitive and Non-Sensitive classes on
+                                                                   Strategic 16K. Both feature sets consist entirely of generic English vocabulary
+      phrases like “this cable is classified SECRET” in the        with no classification-related tokens, providing empirical confirmation of
+      body of the document and not in the header or metadata       successful leakage removal.
+      fields.
+   • Distribution notices: Repetitive boilerplate strings such
+      as “Sensitive But Unclassified, Not for Internet Distribu-                              TABLE II
+                                                                    I MPACT OF LABEL LEAKAGE ON TF-IDF WITH L OGISTIC R EGRESSION
+      tion” repeated throughout document bodies.                                           PERFORMANCE .
+   All recognized patterns have been eliminated during the
+extended cleaning pass. Sensitive terms reflecting the classifi-                 Dataset                     Accuracy         F1
+cation were left within natural, semi-natural sentence contexts.                 Raw PlusD (Leaky)              99.0%       99.0%
+For example, a cable discussing nuclear confidentiality agree-                   Strategic 16K (Cleaned)       86.26%      86.83%
+ments was not modified. This is the most crucial difference
+between artefact removal and content preservation, which              The severity of this leakage problem was confirmed empir-
+underlie the construction of a benchmark that forces models        ically. As shown in Table II, TF-IDF with Logistic Regression
+to learn from real content.                                        achieves nearly perfect performance on the raw corpus, but
+   To illustrate the protocol, three representative                its performance decreases substantially after leakage removal.
+before-and-after examples are provided: (1) (C)                    This indicates that the inflated performance on the raw dataset
+The ambassador confirmed...                    becomes      The    is primarily attributable to residual classification artefacts
+ambassador confirmed...;                  (2)     This cable       rather than genuine semantic sensitivity understanding.
+is classified SECRET. The meeting...                                  To further validate the corpus construction, a length-only
+becomes The meeting...; and (3) Sensitive                          baseline was evaluated in which document length alone was
+But Unclassified, Not for Internet                                 used as the classification signal. This baseline achieved sub-
+Distribution. Officials agreed...                       becomes    stantially lower accuracy than all evaluated models, confirming
+Officials agreed....                                               that the length difference between Sensitive and Non-Sensitive
+   Following the cleaning pass, the corpus was additionally        documents in Strategic 16K cannot serve as a reliable proxy
+examined for letter-spaced classification banners, a pattern       for sensitivity. The corpus therefore forces models to learn
+documented in raw PlusD cables in which classification labels      from content rather than structural shortcuts, and the perfor-
+appear as spaced characters (e.g., S E C R E T as a standalone     mance reported in this benchmark reflects genuine sensitivity
+line). No such patterns were identified in the sampled subset.     discrimination.
+The three categories described above therefore represent the
+complete set of leakage artefacts present in Strategic 16K, and    D. Strategic 16K Benchmark
+the corpus is considered fully leakage-controlled with respect        Following leakage removal, Strategic 16K was assembled
+to the document sample it comprises.                               by applying a sensitive-focused sampling strategy that in-
+   To provide empirical confirmation of successful leakage         creases model exposure to the diversity of sensitive document
+removal, the top TF-IDF features were examined for both            patterns during training. As shown in Table III, a total of
+classes on the cleaned corpus. Fig. 1 shows the top 15 features    16,000 documents with a near-balanced class distribution
+per class. Both feature sets consist entirely of generic English   (Sensitive 52.4%, Non-Sensitive 47.6%) have been included
+in the corpus. The near-balanced distribution avoids having
+one class being structurally privileged when applied to cross-
+validation evaluation. The corpus was constructed via random
+sampling from the leakage-cleaned document pool, with class
+counts adjusted to achieve near-balance. The complete Strate-
+gic 16K dataset is publicly available to support reproducibil-
+ity and future benchmarking at: https://drive.google.com/file/d/
+11-a5QeBklbrefKHdlcwoKPAZQ6mo119w/view?usp=drive link
+   Deduplication was done at the document level before split-
+ting, so that there is no overlap in the documents contained
+in different folds. Stratified sampling was used for fold con-
+struction for each cable individually, but no constraints were
+applied to grouping at the cable level; each cable in PlusD is
+a separate document and a separate classification label is used                Fig. 3. Records per document length bucket. Sensitive documents dominate
+                                                                               longer buckets while Non-Sensitive documents concentrate in the 0–100 word
+for each one. All the fold assignment is fully reproducible by                 range.
+using a fixed random seed of 42.
+   The median of the Sensitive documents is 276 words, and
+the median of the Non-Sensitive documents is 64 words. Fig. 2                            IV. M ODELS AND E XPERIMENTAL S ETUP
+illustrates the word count distribution across both classes. Sim-              A. Evaluation Protocol
+ple length-thresholding is not a reliable classification strategy
+                                                                                  All six models were evaluated using 5-fold stratified cross-
+due to the variety of sensitive document lengths, from short
+                                                                               validation on Strategic 16K. Stratified splitting ensures that
+cables to documents longer than 1,400 words. Fig. 3 also
+                                                                               the 52.4%/47.6% class ratio is preserved identically across
+illustrates how sensitive documents dominate longer length
+                                                                               all folds. A fixed random seed of 42 was used throughout to
+buckets, further establishing the wide coverage of the corpus
+                                                                               ensure full reproducibility. Weighted F1-score and accuracy
+in terms of length.
+                                                                               are reported as the primary evaluation metrics for all models.
+                                                                               Weighted F1 is preferred as it accounts for the slight class
+                             TABLE III
+     B INARY L ABEL M APPING AND S TRATEGIC 16K C OMPOSITION                   imbalance and jointly captures precision and recall.
+                                                                                  In security-sensitive classification tasks, the cost of a false
+         Original Label                   Binary Class     Count               negative, that is, classifying a sensitive document as non-
+                                                                               sensitive, substantially exceeds the cost of a false positive. An
+         UNCLASSIFIED                     Non-Sensitive
+                                                            7,613              undetected sensitive document may be routed, stored, or trans-
+         UNCLASSIFIED//FOUO               Non-Sensitive
+         LIMITED OFFICIAL USE               Sensitive                          mitted without appropriate access controls, with potentially
+         CONFIDENTIAL                       Sensitive                          severe operational and regulatory consequences. Accordingly,
+         CONFIDENTIAL//NOFORN               Sensitive       8,387              sensitive class recall is treated as a secondary evaluation
+         SECRET                             Sensitive                          criterion alongside weighted F1, as it directly quantifies the
+         SECRET//NOFORN                     Sensitive                          model’s ability to avoid missed detections of sensitive content.
+         Total                              2 classes      16,000
+                                                                               B. Classical TF-IDF Models
+                                                                                  Three classical models were evaluated, each using TF-
+                                                                               IDF feature representations with sublinear term frequency
+                                                                               scaling. Logistic Regression applies L2 regularization to a
+                                                                               linear decision boundary. Hyperparameters were tuned via
+                                                                               RandomizedSearchCV with 25 candidates and 5-fold inner
+                                                                               cross-validation, selecting C = 25.13 with balanced class
+                                                                               weights. Linear SVM finds the maximum-margin separating
+                                                                               hyperplane in TF-IDF space [2]; best parameters selected
+                                                                               C = 14.53 with balanced class weights. A convergence warn-
+                                                                               ing from the liblinear solver indicates that the optimisation
+                                                                               did not fully converge, meaning reported results represent
+                                                                               a conservative lower bound. Multinomial Naive Bayes ap-
+                                                                               plies the conditional independence assumption with Laplace
+                                                                               smoothing [11]; best α = 0.021, fit prior = False.
+Fig. 2. Word count distribution by class. Sensitive documents (median 276      C. Transformer-Based Models
+words) have a significantly longer and wider distribution than Non-Sensitive
+documents (median 64 words).                                                     Three transformer architectures were fine-tuned end-to-
+                                                                               end under 5-fold stratified cross-validation with maximum
+token length 256. BERT (bert-base-uncased) [5] is pre-trained
+on masked language modelling (MLM), randomly masking
+15% of tokens and training the model to reconstruct them
+using bidirectional context; a linear classification head is
+attached to the [CLS] token. RoBERTa extends BERT
+with dynamic masking, removal of the next-sentence pre-
+diction objective, and training on substantially larger data,
+modifications intended to produce stronger general-purpose
+representations. ELECTRA [12] uses a replaced token de-
+tection (RTD) objective: a generator replaces some tokens
+with plausible alternatives, and the discriminator is trained
+to identify which tokens were replaced. RTD trains on every
+input token rather than only the masked 15% subset, yield-
+ing greater sample efficiency and representations grounded       Fig. 4. F1 scores for all six models on Strategic 16K. A clear performance
+in token plausibility rather than surface-form reconstruction.   gap separates the transformer tier (BERT, ELECTRA, RoBERTa) from the
+                                                                 classical tier (LR, SVM, Naı̈ve Bayes).
+Encoder based transformers have also inspired the creation
+of modern Large Language Models (LLMs), which are large-
+scale pretrained models based on the transformer architecture    Naive Bayes. Paired t-tests confirm that all transformer-vs-
+and have achieved outstanding performance in many natural        classical comparisons are statistically significant: BERT vs.
+language understanding and generation tasks [13].                SVM (t = 15.19, p < 0.001, 95% CI [3.55 pp, 5.14 pp]);
+                                                                 BERT vs. LR (t = 12.52, p < 0.001, 95% CI [3.48 pp,
+                V. R ESULTS AND D ISCUSSION
+                                                                 5.46 pp]); BERT vs. Naive Bayes (t = 13.80, p < 0.001, 95%
+A. Overall Performance                                           CI [5.09 pp, 7.66 pp]); and ELECTRA vs. SVM (t = 4.38,
+   Table IV presents the complete 5-fold cross-validation re-    p = 0.012, 95% CI [0.71 pp, 3.18 pp]). RoBERTa (86.51%
+sults for all six models on Strategic 16K. BERT achieves the     F1) sits between the transformer and classical tiers, performing
+strongest performance across both accuracy and F1. ELEC-         comparably to the best classical models despite being a full
+TRA trails BERT by 2.25 pp on accuracy and 2.39 pp on            transformer architecture.
+F1, while remaining clearly ahead of the classical tier. The        The transformer advantage comes from the fact that the fun-
+three classical TF-IDF models form a distinct lower perfor-      damental capacity of representation is different. Transformer’s
+mance tier, with SVM leading marginally on F1 and recall.        self-attention architecture can be used to consider the bidi-
+RoBERTa occupies an intermediate position, underperforming       rectional context between every word in the entire document,
+both BERT and ELECTRA. Fig. 4 visualises F1 and sensitive        allowing for semantic context sensitive discrimination that is
+recall across all six models, with a clear separation between    not sensitive to lexical frequency. The distinction between
+the transformer and classical tiers.                             a diplomatic cable in a normal administrative setting and
+                                                                 a diplomatic cable in a restricted operational setting is not
+                           TABLE IV                              captured reliably by a feature like TF-IDF, but can be captured
+             5-F OLD CV R ESULTS ON S TRATEGIC 16K               by transformer attention via adjacent tokens.
+
+ Model              Acc.        F1       S-Recall     S-Prec.    C. BERT vs. ELECTRA
+ BERT             89.14%      89.33%      86.66%      92.21%        BERT outperforms ELECTRA by 0.57 pp on accuracy and
+ ELECTRA          88.57%      88.90%      87.24%      90.70%     0.43 pp on F1. A paired t-test across five fold-level F1 scores
+ RoBERTa          85.85%      86.51%      86.57%      86.45%     confirms that BERT’s advantage is statistically significant (t =
+ LR + TF-IDF      86.26%      86.83%      86.41%      87.25%     8.20, p = 0.0012), with a mean F1 difference of 2.40 pp and
+ SVM              86.35%      86.95%      86.74%      87.16%     a 95% confidence interval of (1.58 pp, 3.21 pp).
+ Naı̈ve Bayes     83.91%      84.92%      86.40%      83.48%        The advantage is consistent with the nature of the task.
+                                                                 BERT’s masked language modelling produces representations
+ S-Recall = Sensitive Recall, S-Prec = Sensitive Precision.
+                                                                 sensitive to a broad range of semantic patterns in the diplo-
+                                                                 matic register. ELECTRA’s replaced token detection, which
+                                                                 is based on token plausibility, rather than on complete recon-
+B. Transformer vs. Classical Gap                                 struction of the context in which tokens appear, might not be
+  The results reveal a clear and consistent performance gap      better suited to PlusD cables’ specific vocabulary. Remarkably,
+between the two architectural families. BERT leads with          ELECTRA outperforms in terms of sensitive recall (87.24%
+89.33% F1 and 89.14% accuracy. The gap between BERT              vs. 86.66%), which is useful in recall-sensitive deployments
+and the best classical model (SVM, 86.95% F1) is 2.38 pp on      where minimizing false negatives is more critical than the
+F1 and 2.79 pp on accuracy, widening to 6.37 pp F1 against       overall F1.,
+D. Sensitive Class Recall Analysis                                  phrased. A single shared attention mechanism cannot isolate,
+   From a security standpoint, sensitive class recall is the most   prioritise, or explain these signals independently, and any
+operationally critical metric, as it measures the proportion of     policy change requires full model retraining.
+truly sensitive documents that are correctly identified. A no-         Future work will address these limitations through a Multi-
+table finding is that Naive Bayes achieves a sensitive recall of    Agent System (MAS) architecture in which specialised agents
+86.40%, which is comparable to Logistic Regression (86.41%)         handle distinct evidence categories: a semantic content agent
+and SVM (86.74%), despite trailing both models substantially        evaluates topical sensitivity; a named entity agent detects
+on F1 and accuracy. This indicates that Naive Bayes, while less     references to restricted personnel, facilities, and programmes;
+precise, is relatively conservative in classifying documents as     and a structural agent evaluates subject lines and routing
+non-sensitive. BERT achieves the strongest overall balance,         cues. A learned fusion mechanism combines agent confi-
+with 89.33% F1 and 86.66% sensitive recall, making it the           dence estimates to produce the final decision. This design
+most reliable model for deployment where both coverage and          provides built-in explainability, since the fusion output can
+precision are required.                                             be decomposed to show which agent drove each decision,
+                                                                    and supports targeted updatability when classification policies
+E. Efficiency Tradeoff: Classical vs. Transformer                   change. Explainable AI mechanisms including LIME and
+   When it comes to the classical models, SVM has the best          SHAP will additionally be integrated for per-document ratio-
+performance (F1 = 86.95%) and needs only standard CPU               nales, and the best-performing model will be fine-tuned on real
+resources without any fine-tuning of the GPU. Logistic Re-          organizational document collections for institutional domain
+gression is a close second (F1 = 86.83%) and slightly quicker       adaptation. The Strategic 16K benchmark documented here
+to tune (362.6 seconds as opposed to SVM’s 382.2 seconds).          provides the controlled evaluation foundation against which
+TF-IDF-based models are extremely practical to deploy for           this proposed architecture will be measured.
+organizations with limited computational resources, where the                                    R EFERENCES
+latency to inference is critical or when one wants to update
+                                                                     [1] F. B. Ahmad, A. A. Kiani, Y. Hafeez, H. Imran, M. Habib, A. Nawaz,
+the models quickly.                                                      M. R. R. Rana, and M. Azhar, “Securing Cloud Data: An Approach for
+                                                                         Cloud Computing Data Categorization Based on Machine Learning,”
+                      VI. C ONCLUSION                                    International Journal of Innovations in Science & Technology, vol. 7,
+   This paper presented a systematic benchmark evaluation                no. 1, pp. 235–258, Feb. 2025. doi: 10.33411/ijist/202571235258.
+                                                                     [2] T. Joachims, “Text Categorization with Support Vector Machines: Learn-
+of six document sensitivity classification models on Strate-             ing with Many Relevant Features,” in Proc. ECML-98, LNCS 1398,
+gic 16K, a 16,000-document leakage-controlled corpus con-                Springer, pp. 137–142, 1998.
+structed from WikiLeaks PlusD diplomatic cables. We doc-             [3] K. Alzhrani, F. S. Alrasheedi, F. A. Kateb, and T. E. Boult, “CNN with
+                                                                         Paragraph to Multi-Sequence Learning for Sensitive Text Detection,” in
+umented a three-category leakage removal protocol targeting              Proc. ICCAIS, pp. 1–6, 2019.
+inline paragraph markers, embedded classification phrases, and       [4] M. Hart, P. Manadhata, and R. Johnson, “Text Classification for Data
+distribution notices, artefacts present in raw WikiLeaks PlusD           Loss Prevention,” in Privacy Enhancing Technologies, LNCS 6794,
+                                                                         Springer, pp. 18–37, 2011.
+cables that prior studies have not explicitly addressed, and         [5] J. Devlin, M. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training
+demonstrated that removing them is essential for producing               of Deep Bidirectional Transformers for Language Understanding,”
+honest, content-grounded performance estimates.                          arXiv:1810.04805, 2019.
+                                                                     [6] M. Petrolini, S. Cagnoni, and M. Mordonini, “Automatic Detection of
+   Among the six evaluated architectures, BERT achieves the              Sensitive Data Using Transformer-Based Classifiers,” Future Internet,
+strongest and most stable performance (Accuracy = 89.14%,                vol. 14, no. 8, article 228, 2022.
+F1 = 89.33%, ±0.46% F1 std). ELECTRA performs com-                   [7] K. Kowsari, K. J. Meimandi, M. Heidarysafa, S. Mendu, L. Barnes,
+                                                                         and D. Brown, “Text Classification Algorithms: A Survey,” Information,
+petitively (F1 = 88.90%) and may be preferable in resource-              vol. 10, no. 4, article 150, 2019.
+constrained settings given its parameter efficiency. Among           [8] P. Saritha and R. Kumar, “Sensitive Data Protection Using AI: An
+classical models, SVM achieves the highest F1 (86.95%) and               Evaluation of Deep Learning and Metaheuristic-Based Leakage Preven-
+                                                                         tion Techniques,” in Proc. 2025 Int. Conf. Intelligent Communication
+sensitive recall (86.74%), while Logistic Regression offers a            Networks and Computational Techniques (ICICNCT), pp. 1–6, 2025,
+comparable and slightly faster alternative. RoBERTa achieves             doi: 10.1109/ICICNCT66124.2025.11232588.
+86.51% F1 but underperforms both transformer peers, warrant-         [9] C. Rudin, “Stop Explaining Black Box Machine Learning Models for
+                                                                         High Stakes Decisions,” Nature Machine Intelligence, vol. 1, no. 5,
+ing dedicated hyperparameter investigation. The sensitive class          pp. 206–215, 2019.
+recall analysis confirms that transformer models offer the best     [10] G. McDonald, “A Framework for Technology-Assisted Sensitivity Re-
+balance between coverage and precision for security-critical             view,” Ph.D. thesis, University of Glasgow, 2019.
+                                                                    [11] A. McCallum and K. Nigam, “A Comparison of Event Models for Naive
+deployment.                                                              Bayes Text Classification,” in AAAI-98 Workshop on Learning for Text
+                                                                         Categorization, pp. 41–48, 1998.
+Limitations and Future Directions                                   [12] K. Clark, M. Luong, Q. V. Le, and C. D. Manning, “ELECTRA: Pre-
+                                                                         training Text Encoders as Discriminators Rather Than Generators,” in
+   While BERT achieves the strongest benchmark perfor-                   Proc. ICLR, 2020.
+mance, a monolithic model has structural limitations in             [13] S. Minaee et al., “Large Language Models: A Survey,” arXiv preprint
+security-critical deployment. Sensitivity is not determined by           arXiv:2402.06196, 2025.
+a single signal type: a document may be sensitive because of
+who is mentioned, what topic it covers, or how information is
+

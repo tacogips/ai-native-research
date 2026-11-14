@@ -1,0 +1,94 @@
+{
+  "確認日": "2026-10-08",
+  "目的": "個人情報を扱うAIハーネス開発に必要な公開保護機構を並行調査し、独立レビュー後に改善する",
+  "状態": "調査・独立レビュー・改善・完成稿再確認・資料整合確認を完了",
+  "対象": {
+    "開発ハーネス": [
+      "Codex",
+      "Claude Code",
+      "pi.dev",
+      "OpenCode",
+      "Gemini CLI",
+      "OpenHands",
+      "Aider",
+      "Goose",
+      "Cline",
+      "Roo Code"
+    ],
+    "ガードレール": [
+      "NeMo Guardrails",
+      "LlamaFirewall",
+      "LLM Guard",
+      "Guardrails AI",
+      "Presidio"
+    ],
+    "開発用SDK": [
+      "OpenAI Agents Python SDK",
+      "LangChain",
+      "LangGraph",
+      "Deep Agents",
+      "OpenHands SDK"
+    ],
+    "情報フロー・評価": [
+      "CaMeL",
+      "Multi-CaMeL",
+      "LLMbda",
+      "AgentDojo",
+      "Agent Security Bench",
+      "AgentDyn",
+      "銀行個人情報流出研究",
+      "OWASP Top 10 for Agentic Applications 2026"
+    ],
+    "認可": [
+      "OpenFGA",
+      "Cedar",
+      "OPA"
+    ]
+  },
+  "分野数": 20,
+  "詳細調査稿数": 7,
+  "独立レビュー記録": [
+    "harness_review_claude_to_pi_20261008.md",
+    "harness_review_oss_to_claude_20261008.md",
+    "harness_review_oss_to_guardrails_20261008.md",
+    "harness_review_oss_to_master_20261008.md",
+    "harness_review_pi_to_codex_20261008.md",
+    "harness_review_root_to_information_flow_20261008.md",
+    "harness_review_root_to_oss_20261008.md",
+    "harness_review_root_to_sdk_20261008.md"
+  ],
+  "改善確認": [
+    "Codexの同期処理条件と引用位置",
+    "Claudeの置換形式・JWT・通信・保持・管理設定の境界",
+    "piの詳細情報・引数・例外・保存経路",
+    "OpenCodeのdeny先行とCline承認要求の原文保存",
+    "NeMoの原文metadata・並行生成・旧新逐次出力、空検査器・履歴設定",
+    "SDKの最新PII逐次出力と暗号化・道具・追跡・隔離の境界",
+    "CaMeL拒否理由への原値転記、論文の空の機密性規則・保証条件",
+    "統合稿の取消しと計算資源の受入条件"
+  ],
+  "確認結果参照": "harness_evidence_verification_20261008.json",
+  "局所意味確認": {
+    "結果": "2件成功",
+    "外部モデル呼出し": 0,
+    "資料": "harness_guardrail_probe_results_20261008.json"
+  },
+  "未実施・未確認": [
+    "全OS・配布実行ファイルの実機試験",
+    "日本語個人情報検出の精度測定",
+    "非公開クラウド・Sequrity遠隔実行器の内部監査",
+    "LLMbdaのLean証明・実行器原本の再検証",
+    "任意の外部道具・拡張の安全性検証"
+  ],
+  "原本保存": "research/disclosures/raw/harness_20261008/。Git管理外。台帳へURL・版・SHA-256を記録。ファイル保存は全行の精査を意味しない。",
+  "公開範囲の限界": "20分野は設計・レビューの観点を網羅する分類であり、世界中の全製品・非公開実装を調査済みという意味ではない。",
+  "完成稿再確認": "OSS担当がSDK・情報フロー追加後の統合稿を再確認。未解消の重要指摘なし。JWTの用語補足もRFC原本に照合して反映。",
+  "保存・参照確認": {
+    "台帳数": 7,
+    "重複を除く原本数": 952,
+    "コード行参照数": 177,
+    "相対参照数": 55,
+    "判定": "合格"
+  },
+  "体裁確認": "git diff --check 合格。確認用Python 2本の構文確認合格。"
+}

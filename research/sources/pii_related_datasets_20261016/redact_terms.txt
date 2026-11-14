@@ -1,0 +1,67 @@
+# REDACT Dataset Terms
+
+Version 1.0 - August 2026
+
+These terms apply to the REDACT dataset artifacts, annotations, corpus files, and the REDACT pattern catalog distributed through this repository or official mirrors, including Hugging Face.
+
+The software used to generate, validate, or evaluate the dataset is separately licensed under the MIT License in `LICENSE`.
+
+## 1. Purpose
+
+REDACT is released to support research, evaluation, auditing, education, and defensive privacy work involving personal-information detection.
+
+The corpus is synthetic and is not intended to contain real personal data. Some identifiers and surface forms are deliberately structurally realistic, including checksum-valid or locale-specific formats, because realistic structure is necessary for detector evaluation.
+
+## 2. Permitted uses
+
+Subject to these terms, you may use, copy, analyze, transform, and create derivatives of the dataset for purposes including:
+
+- scientific research
+- benchmarking and evaluation
+- privacy and compliance auditing
+- education
+- development and testing of defensive privacy, redaction, and PII-detection systems
+- reproducibility studies and responsible extensions of the benchmark
+
+## 3. Prohibited uses
+
+You may not use the dataset or pattern catalog to:
+
+- impersonate, defraud, harass, or otherwise harm a real person or organization
+- generate, validate, or operationalize real credentials, identity documents, payment credentials, account credentials, or identifiers for fraudulent or abusive use
+- evade, bypass, defeat, or materially assist the evasion of privacy, redaction, PII-detection, authentication, fraud-prevention, or security controls
+- re-identify, deanonymize, or link benchmark content to a real person
+- construct or enrich dossiers about real individuals from the synthetic examples
+- facilitate unlawful discrimination, surveillance, profiling, or other unlawful processing of personal data
+- use the resource in violation of applicable law or regulation
+
+## 4. Redistribution and derivatives
+
+You may redistribute the dataset or derivatives only if you:
+
+1. preserve these REDACT Dataset Terms or provide a clear link to them;
+2. identify the resource as REDACT or a derivative of REDACT;
+3. do not represent synthetic identifiers as belonging to real individuals; and
+4. do not remove notices that describe the resource as synthetic benchmark data.
+
+## 5. Attribution
+
+Academic and research use should cite:
+
+> Guneesh Vats, Anubha Agrawal, Shikha Singhal, Ajita Dash, Praison Selvaraj, Vidhan Jhawar, Ranga Prasad Chenna, and Bharadwaj Y M G. "REDACT: A Systematically Controlled Multilingual Benchmark for Personal Information Detection." EMNLP 2026 Industry Track.
+
+Preprint: https://arxiv.org/abs/2606.19881
+
+## 6. Sensitivity labels
+
+`HIGH`, `MEDIUM`, and `LOW` are operational benchmark labels for evaluation slices. They are not legal advice, model-confidence scores, or universal rankings of re-identification risk.
+
+## 7. No warranty
+
+The dataset is provided "AS IS", without warranty of any kind. The authors and contributors do not warrant that the dataset is error-free, complete for any particular jurisdiction, or suitable for a particular deployment.
+
+Users are responsible for evaluating legal, regulatory, security, and privacy requirements in their own use case.
+
+## 8. Contact and responsible use
+
+If you discover real personal data, a potentially harmful artifact, or a material annotation/reproducibility issue in an official REDACT release, please report it through the GitHub repository's issue tracker so it can be reviewed.

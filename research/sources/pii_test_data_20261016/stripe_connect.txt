@@ -1,0 +1,2049 @@
+# Stripe Connect のテスト
+
+本番環境に移行する前に、アカウント作成、本人確認、入金を対象に Connect の組み込みをテストします。
+
+*Connect* (Connect is Stripe's solution for multi-party businesses, such as marketplace or software platforms, to route payments between sellers, customers, and other recipients) の機能が各フローを正しく処理しているか、テストで確認します。[サンドボックス](https://docs.stripe.com/sandboxes.md)では、Stripe が提供する特別なトークンをテストで使用して、本番環境の動作をシミュレートできます。支払いや不審請求の申し立てなどのテストについては、[支払いテストガイド](https://docs.stripe.com/testing.md)をご確認ください。
+
+> #### ケイパビリティのテスト
+> 
+> サンドボックスでは、一部のケイパビリティが適用されない場合があります。場合によっては、関連するケイパビリティの `status` が `active` でなくても、アカウントでケイパビリティ依存のアクションを実行できることがあります。
+
+## テスト用アカウントを作成する
+
+[アカウントタイプ](https://docs.stripe.com/connect/accounts.md)または[コントローラープロパティ](https://docs.stripe.com/connect/migrate-to-controller-properties.md)が異なるをテストできます。
+
+[Accounts v2 API](https://docs.stripe.com/api/v2/core/accounts/create.md) または [Stripe ダッシュボード](https://docs.stripe.com/connect/dashboard/managing-individual-accounts.md#creating-accounts)を使用して、テストアカウントを作成できます。
+
+指示に従って、`000-000` をテストアカウントの SMS コードとして使用します。
+
+## OAuth フローをテストする
+
+テスト用の `client_id` を使用して、Stripe ダッシュボードを使用する連結アカウントと OAuth の連携をテストできます。
+
+テスト用の `client_id` は `ca_FkyHCg7X8mlvCUdMDao4mMxagUfhIwXb` です。これは、[Connect OAuth 設定](https://dashboard.stripe.com/settings/connect/onboarding-options/oauth)で確認できます。
+
+テスト用の `client_id` を使用して、以下の操作を実行できます。
+
+- `redirect_uri` を HTTPS ではない URL に設定する
+- `redirect_uri` を **localhost** に設定する
+- アカウント申請書をすべて記入する代わりに、アカウントフォームを強制的にスキップする (Stripe ダッシュボードアカウントのみ)
+- 連結アカウントのテスト用アクセストークンを取得する
+
+[OAuth](https://docs.stripe.com/connect/oauth-standard-accounts.md) フローをテストするには、OAuth リンクをクリックしてから新しいアカウントを作成します。また、メールアドレスとプラットフォームアカウントが異なっていれば、既存の Stripe アカウントの連結をテストすることもできます。
+
+## 本人確認
+
+アカウント登録では、本人確認が非常に重要な要素になります。専用の[本人確認テストのガイド](https://docs.stripe.com/connect/testing-verification.md)を使用してください。
+
+テスト用の連結アカウントを作成したら、トークンを使用してさまざまな本人確認ステータスをテストし、多様な要件やアカウントの状態に対応していることを確認します。テストアカウントで本人確認をテストするには、以下のトークンを使用できます。
+
+### 生年月日のテスト
+
+`Account` オブジェクトの [individual.dob](https://docs.stripe.com/api/accounts/create.md#create_account-individual-dob) 属性に以下の生年月日 (DOB) を使用して、特定の本人確認の条件をトリガーします。
+
+| 生年月日 | タイプ |
+| --- | --- |
+| `1901-01-01` | 生年月日の照合に成功しました。それ以外の DOB は一致しません。 |
+| `1902-01-01` | 生年月日の即時照合に成功しました。確認結果は、*Webhook* (A webhook is a real-time push notification sent to your application as a JSON payload through HTTPS requests) イベントの一部としてではなく、レスポンスで直接返されます。 |
+| `1900-01-01` | この DOB は、外国資産管理局 (OFAC) のアラートをトリガーします。 |
+
+### 住所のテスト
+
+特定の本人確認の条件をトリガーするには、`Account` オブジェクトの [individual.address.line1](https://docs.stripe.com/api/accounts/create.md#create_account-individual-address-line1) に以下の住所を使用します。`city`、`state`、`postal_code` の引数には、有効な値を渡す必要があります。
+
+| トークン | タイプ |
+| --- | --- |
+| `address_full_match`​ | 住所の照合に成功しました。 |
+| `address_no_match` | 住所の照合失敗により、`currently_due` の要件がトリガーされる可能性が高くなります。 |
+| `address_line1_no_match` | 住所の照合失敗により、`currently_due` の要件がトリガーされる可能性が高くなります |
+| `address_zip_no_match` | 住所の照合失敗により、`currently_due` の要件がトリガーされる可能性が高くなります。 |
+| `address_line1_zip_no_match` | 住所の照合失敗により、`currently_due` の要件がトリガーされる可能性が高くなります。 |
+
+### 身分証明書番号のテスト
+
+`Account` オブジェクトの [individual.id_number](https://docs.stripe.com/api/accounts/create.md#create_account-individual-id_number) 属性に以下の個人 ID 番号を使用して、特定の本人確認の条件をトリガーします。
+
+| 番号 | タイプ |
+| --- | --- |
+| `000000000` | 登録番号の照合に成功しました。SSN の末尾 4 桁の確認には、**0000** も使用できます。 |
+| `111111111` | 登録番号の照合失敗 (本人確認情報の不一致) により、`currently_due` の要件がトリガーされる可能性が高くなります。 |
+| `111111113` | ID 番号の照合が失敗し (ID 番号が無効)、`currently_due` で要件が発生する可能性があります。 |
+| `222222222` | 登録番号の即時照合に成功しました。確認結果は、*Webhook* (A webhook is a real-time push notification sent to your application as a JSON payload through HTTPS requests) イベントの一部としてではなく、レスポンスで直接返されます。 |
+
+### 政府発行の身分証明書をテストする
+
+テストには、自身の身分証明書をアップロードする代わりにテスト用の画像またはファイルトークンを使用します。詳細については、[ファイルのアップロード](https://docs.stripe.com/connect/handling-api-verification.md#upload-a-file)を参照してください。
+
+### 書類上の画像のテスト
+
+[確認済みの画像](https://d37ugbyn3rpeym.cloudfront.net/docs/identity/success.png)を使用すると、登録番号が正常に一致します。[未確認の画像](https://d37ugbyn3rpeym.cloudfront.net/docs/identity/failed.png)を使用すると、登録番号の不一致が発生し、`currently_due` 要件が発生する可能性があります。
+
+> テスト用の画像はテスト用の登録番号よりも優先されます。確認済みの画像をアップロードすると、失敗したテスト登録番号値を指定していても、登録番号の照合は成功します。同様に、未確認の画像は、他のテストアーティファクトの値に関係なく、自動的に登録番号の照合に失敗します。
+
+### ファイルトークンのテスト
+
+これらのファイルトークンを使用して、特定の本人確認の条件をトリガーします。ドキュメントトークンは本番環境でのレビュープロセスをシミュレートするため、結果が適用される前に、フィールドが `pending_verification` に表示されることがあります。
+
+| トークン | タイプ |
+| --- | --- |
+| `file_identity_document_success` | 確認済みの画像を使用して、その書類の要件が満たされていることをマークします。 |
+| `file_identity_document_failure` | 未確認の画像を使用して、その書類の要件が満たされていないことをマークします。 |
+
+### 関係書類のテストトークン
+
+これらのファイルトークンを使用して、特定の関係書類の検証条件をトリガーします。ドキュメントトークンは本番環境でのレビュープロセスをシミュレートするため、結果が適用される前に、フィールドが `pending_verification` に表示されることがあります。
+
+| トークン | タイプ |
+| --- | --- |
+| `file_relationship_document_success` | 確認済み書類を使用し、関係書類の要件が満たされたとマークします。 |
+| `file_relationship_document_invalid` | 無効な書類を使用し、関係書類の要件が満たされていないとマークします。 |
+| `file_relationship_document_mismatch` | 名前の不一致が原因で関係書類の要件が満たされていないとマークします。 |
+| `file_relationship_document_invalid_signer` | 署名者が無効なため、関係書類の要件が満たされていないとマークします。 |
+
+### リスクの高いアカウントでテストする
+
+高リスクアカウントにのみ適用されるテストシナリオでは、[company.name](https://docs.stripe.com/api/accounts/create.md#create_account-company-name) に `_high_risk` を追加して、ビジネスリスクの評価を強制的に「高」にします。
+
+## ビジネス情報の確認
+
+### ビジネスの住所の確認
+
+一部の国では、連結アカウントで支払い、*入金* (A payout is the transfer of funds to an external account, usually a bank account, in the form of a deposit)、またはその両方を有効にする前に、連結アカウントに関連付けられたビジネスの住所を確認する必要があります。
+
+### ビジネスの住所のテスト
+
+特定の検証条件をトリガーするには、[company.address.line1](https://docs.stripe.com/api/accounts/create.md#create_account-company-address-line1) に以下の住所を使用します。`city`、`state`、`postal_code` の引数には、有効な値を渡す必要があります。
+
+まず、テストを行う検証条件の許容レベルが最小である住所トークンから始めます。これは、以前に使用したトークンよりも制限の厳しい検証条件を持つ住所トークンを使用できないためです。たとえば、支払いと入金のいずれも有効になるように `address_full_match` を指定した場合、後でトークンを無効なトークンに変更して入金や支払いを無効化することはできません。この問題を解決するには、関連するトークンを使用して、新しいアカウントを作成します。
+
+| トークン | タイプ |
+| --- | --- |
+| `address_full_match`​ | このアカウントでは、支払いと入金のいずれも有効になっています。 |
+| `address_no_match`​ | このアカウントでは、支払いのみが有効になっています。確認が `line1` 属性で失敗したため、[requirements](https://docs.stripe.com/api/accounts/object.md#account_object-requirements) ハッシュに再び表示されています。 |
+| `address_line1_no_match` | アカウントで支払いも入金も有効になっていません。検証に失敗したため、住所属性は [requirements](https://docs.stripe.com/api/accounts/object.md#account_object-requirements) ハッシュに再びリストされます。 |
+| `address_zip_no_match` | アカウントでは決済のみが有効になっています。`postal_code` 属性の検証に失敗したため、[requirements](https://docs.stripe.com/api/accounts/object.md#account_object-requirements) ハッシュに再度追加されます。 |
+| `address_line1_zip_no_match` | アカウントでは決済と入金のどちらも有効になっていません。検証に失敗したため、住所属性が [requirements](https://docs.stripe.com/api/accounts/object.md#account_object-requirements) ハッシュに再度追加されます。 |
+
+### ビジネスの納税番号のテスト
+
+以下のビジネスの納税者番号を [company.tax_id](https://docs.stripe.com/api/accounts/create.md#create_account-company-tax_id) に使用して、特定の確認条件をトリガーします。テストの動作は、連結アカウントの国とそれらの国の規制に応じて異なる場合があります。国の規制に応じて、有効な税務書類があればこれらの国で納税者番号を確認済みとしてマークすることができます。
+
+| 番号 | タイプ |
+| --- | --- |
+| `000000000` | 事業登録番号の照合に成功しました。 |
+| `000000001` | 事業登録番号の照合に成功しました (非営利として)。 |
+| `000000004` | ビジネスの ID 番号の照合が失敗しました (ビジネスステータスが無効)。 |
+| `111111111` | 事業登録番号の照合に失敗しました (登録番号の不一致)。 |
+| `111111112` | 事業登録番号の照合に失敗しました (納税者番号が未発行)。 |
+| `222222222` | 事業登録番号の即時照合に成功しました。確認結果は、*Webhook* (A webhook is a real-time push notification sent to your application as a JSON payload through HTTPS requests) イベントの一部としてではなく、レスポンスで直接返されます。 |
+| `222221000` | 会社が登記簿に見つかりません。 |
+| `222221001` | 所有者が登記簿に見つかりません。 |
+| `222221002` | 取締役が登記簿に見つかりません。 |
+| `222221003` | オーナー確認の対象となる法人形態において、登記簿情報と比較して、アカウントに登録されているオーナー情報が不足しています。 |
+| `222221004` | 登記簿と比較して、アカウントの取締役が不足しています。 |
+| `222221005` | 登記簿からの応答待ちです。 |
+
+### 管理者確認をテストする
+
+Stripe は、`Account` オブジェクトの取締役のリストを、現地の登記簿から取得されたリストと比較することで、取締役の確認を実行します。国が要求する場合は、関連付けられた `Person` の [first_name](https://docs.stripe.com/api/persons/object.md#person_object-first_name) 属性にこれらのトークンを使用し、`Person` の[relationship.director](https://docs.stripe.com/api/persons/object.md#person_object-relationship-director) 属性を true に設定することで、`Account` オブジェクトの確認をトリガーできます。
+
+| トークン | タイプ |
+| --- | --- |
+| `mismatch_director` | 氏名不一致が原因で、照合に失敗しました。これにより、`verification_directors_mismatch` 確認エラーがトリガーされることがあります。 |
+| `missing_director` | アカウントの取締役不在が原因で、照合に失敗しました。これにより、`verification_missing_directors` 確認エラーがトリガーされることがあります。 |
+| `extraneous_director` | アカウントの取締役過多が原因で、照合に失敗しました。これにより、`verification_extraneous_directors` 確認エラーがトリガーされることがあります。 |
+
+確認エラーは、`Account` オブジェクトの複数の取締役がこれらのマジックトークンを使用するとトリガーされます。
+
+### 所有権確認のテスト
+
+Stripe は、`Account` オブジェクトの所有者のリストを、ローカルの登記簿から取得されたリストと比較することで、所有権の確認を実行します。国が要求する場合は、関連付けられた `Person` の [first_name](https://docs.stripe.com/api/persons/object.md#person_object-first_name) 属性にこれらのトークンを使用し、`Person` の [relationship.owner](https://docs.stripe.com/api/persons/object.md#person_object-relationship-owner) 属性を true に設定することで、`Account` オブジェクトの確認をトリガーできます。
+
+| トークン | タイプ |
+| --- | --- |
+| `mismatch_owner` | 名前の不一致により、照合に失敗しました。これにより、`verification_missing_owners` の確認エラーが発生する可能性があります。 |
+| `extraneous_owner` | アカウントの所有者が多すぎるため、照合に失敗しました。これにより、`verification_missing_owners` の確認エラーが発生する可能性があります。 |
+
+確認エラーは、`Account` オブジェクトの複数の所有者がこれらのマジックトークンを使用するとトリガーされます。
+
+### 会社名の確認をテストする
+
+`Account` オブジェクトの会社名確認をトリガーするには、このトークンを [company.name](https://docs.stripe.com/api/accounts/object.md#account_object-company-name) 属性で使用してください。
+
+| トークン | タイプ |
+| --- | --- |
+| `mismatch_business_name` | ビジネス名の照合が失敗しました (名前の不一致)。 |
+| `disallowed_name` | 汎用的なビジネス名またはよく知られているビジネス名が原因で、照合に失敗しました。 |
+| `match_name_relationships` | 法人名とその関係情報が正常に一致しました (入力されている場合)。 |
+| `match_name_only` | ビジネス名食い違いが原因で、照合に失敗しました。 |
+
+### 明細書表記の確認をテストする
+
+このトークンを [settings.payments.statement_descriptor](https://docs.stripe.com/api/accounts/object.md#account_object-settings-payments-statement_descriptor) 属性に使用することで、`Account` オブジェクトの明細書表記の確認をトリガーします。
+
+| トークン | タイプ |
+| --- | --- |
+| `mismatch` | `invalid_statement_descriptor_business_mismatch` 確認エラーをトリガーします。 |
+| `disallowed` | `invalid_statement_descriptor_denylisted` 確認エラーをトリガーします。 |
+
+[settings.card_payments.statement_descriptor_prefix](https://docs.stripe.com/api/accounts/object.md#account_object-settings-card_payments-statement_descriptor_prefix) 属性にこのトークンを使用して、`Account` オブジェクトの明細書表記のプレフィックスの検証をトリガーします。
+
+| トークン | タイプ |
+| --- | --- |
+| `mismatch` | `invalid_statement_descriptor_prefix_mismatch` 確認エラーをトリガーします。 |
+| `disallowed` | `invalid_statement_descriptor_prefix_denylisted` 確認エラーをトリガーします。 |
+
+### ビジネス URL の確認をテストする
+
+`Account` オブジェクトの URL 確認をトリガーするには、このトークンを [business_profile.url](https://docs.stripe.com/api/accounts/object.md#account_object-business_profile-url) 属性で使用してください。
+
+| トークン | タイプ |
+| --- | --- |
+| `https://disallowed.stripe.com` | `invalid_url_denylisted` 確認エラーをトリガーします。 |
+| `https://geoblocked.stripe.com` | 確認エラー `invalid_url_website_inaccessible_geoblocked` をトリガーします。 |
+| `https://problem.stripe.com` | `invalid_url_website_other` 確認エラーをトリガーします。 |
+| `https://missing.stripe.com` | `invalid_url_website_incomplete` 確認エラーをトリガーします。 |
+| `https://mismatch.stripe.com` | `invalid_url_website_business_information_mismatch` 確認エラーをトリガーします。 |
+| `https://passwordprotected.stripe.com` | 確認エラー `invalid_url_website_inaccessible_password_protected` をトリガーします。 |
+| `https://accessible.stripe.com` | URL の検証の成功をトリガーします。 |
+| `https://underconstruction.stripe.com` | 確認エラー `invalid_url_website_incomplete_under_construction` をトリガーします。 |
+| `https://inaccessible.stripe.com` | `invalid_url_website_inaccessible` 確認エラーをトリガーします。 |
+
+### Test ケイパビリティが無効になった理由
+
+`Account` オブジェクトのすべての非アクティブな `Capability` オブジェクトに特定の [requirements.disabled_reason](https://docs.stripe.com/api/capabilities/object.md#capability_object-requirements-disabled_reason)を割り当てるには、このトークンをアカウントの [business_profile.url](https://docs.stripe.com/api/accounts/object.md#account_object-business_profile-url) 属性で使用してください。
+
+| トークン | タイプ |
+| --- | --- |
+| `https://inactivity.stripe.com` | アカウントを非アクティブに設定し、そのアカウントに対するすべての確認を一時停止します。非アクティブなケイパビリティの無効の理由を `paused.inactivity` (`2024-06-20` より前の API バージョンの場合は `rejected.other`) に設定します。 |
+
+### 商号 (DBA) の確認をテストする
+
+`Account` オブジェクトの DBA (Doing Business As) 確認をトリガーするには、このトークンを [business_profile.name](https://docs.stripe.com/api/accounts/object.md#account_object-business_profile-name) 属性で使用してください。
+
+| トークン | タイプ |
+| --- | --- |
+| `disallowed_dba` | `invalid_business_profile_name_denylisted` 確認エラーをトリガーします。 |
+| `invalid_dba` | `invalid_business_profile_name` 確認エラーをトリガーします。 |
+
+### 商品の説明の確認をテストする
+
+このトークンを [business_profile.product_description](https://docs.stripe.com/api/accounts/object.md#account_object-business_profile-product_description) 属性で使用して、`Account` オブジェクトの商品説明の確認をトリガーします。
+
+| トークン | タイプ |
+| --- | --- |
+| `require_url` | `invalid_url_web_presence_detected` 確認エラーをトリガーします。 |
+
+### 電話番号認証をテストする
+
+`Account` オブジェクトの電話番号認証をクリアするには、次の属性にこのトークンを使用します。
+
+- [business_profile.support_phone](https://docs.stripe.com/api/accounts/object.md#account_object-business_profile-support_phone)
+- [company.phone](https://docs.stripe.com/api/accounts/object.md#account_object-company-phone)
+- [individual.phone](https://docs.stripe.com/api/accounts/object.md#account_object-individual-phone)
+
+[phone](https://docs.stripe.com/api/persons/object.md#person_object-phone) 属性にこのトークンを使用して、`Person` オブジェクトの電話番号の検証をクリアします。
+
+| トークン | タイプ |
+| --- | --- |
+| `0000000000` | 検証の成功 |
+
+## 確認をトリガーするか、先に進める
+
+### トリガーカード
+
+以下のカード番号を使用して、要件や階層別の確認のテストを行う際のさまざまな条件をトリガーします。トリガーアクションを有効にするには、[on_behalf_of](https://docs.stripe.com/connect/separate-charges-and-transfers.md#settlement-merchant) を設定して、これらのカードを Connect の決済で使用するか、[連結アカウントで直接決済を作成](https://docs.stripe.com/connect/direct-charges.md)する必要があります。連結アカウントには [eventually_due 要件](https://docs.stripe.com/connect/testing-verification.md#testing-thresholds)が必要です。
+
+| 番号 | トークン | タイプ |
+| --- | --- | --- |
+| 4000000000004202 | `tok_visa_triggerNextRequirements` | 最終的に期限が到来することになる次の一連の要件を、現在期日が到来している状態に変更します。 |
+| 4000000000004210 | `tok_visa_triggerChargeBlock` | 支払いブロックをトリガーします。 |
+| 4000000000004236 | `tok_visa_triggerPayoutBlock` | 入金ブロックをトリガーします。 |
+
+#### 後続の要件をトリガーする
+
+本番環境では、連結アカウントが一定の金額を処理すると、追加の確認情報が必要になる場合があります。このカードは、必要な追加の確認情報をすぐに設定します。追加情報が必要ない場合は、何も表示されません。
+
+#### 支払いブロックまたは入金ブロックをトリガーする
+
+期日までに必要な情報が提供されなかった場合、Stripe は連結アカウントの支払いや入金を無効にします。これらのカードによって連結アカウントが無効になり、現在期日を迎えている要件はすべて期限切れに移行されます。アカウントから支払いや入金を有効にするために必要な初期情報が提供されるまで、カードは機能しません。
+
+### 銀行口座の所有権の確認をトリガーする
+
+米国およびインド国内の連結アカウントは、[銀行口座の所有権の確認](https://support.stripe.com/questions/bank-account-ownership-verification)の対象になります。この確認は、Connect ダッシュボードを使用するか、API で [documents[bank_account_ownership_verification]](https://docs.stripe.com/api/accounts/update.md#update_account-documents-bank_account_ownership_verification-files) ハッシュを使用して、裏付けとなる書類をアップロードして実行します。
+
+テスト中に、アメリカの銀行口座の保有者確認プロセスをシミュレートできます。次のテスト用銀行口座番号を使用して、確認プロセスを開始します。番号の 1 つは確認の成功をシミュレートするものであり、もう 1 つの番号は確認プロセスの完了に必要なテスト画像またはファイルトークンのアップロード要求をシミュレートするものです。これらのテストアカウントは、アメリカのアカウントのみ使用できます。
+
+| ルーティング | アカウント | タイプ |
+| --- | --- | --- |
+| `110000000` | `000999999991` | 少しの遅延の後、銀行口座の所有権の確認プロセスを起動し、完了します |
+| `110000000` | `000999999992` | 少し遅れて銀行口座の所有権確認プロセスがトリガーされ、書類のアップロードを要求します。 |
+
+## Stripe 残高に資金を追加する
+
+ダッシュボードで銀行口座から Stripe 残高への[資金の追加](https://docs.stripe.com/connect/top-ups.md)をテストするには、[サンドボックスを作成](https://docs.stripe.com/sandboxes/dashboard/manage.md#create-a-sandbox)し、**残高に追加**ダイアログ内のドロップダウンメニューからテストしたい銀行口座を選択します。残高不足による成功または失敗をシミュレートできます。
+
+API で資金の追加をテストするには、テスト中に次のテスト用銀行トークンをソースとして使用します。各トークンは、特定の種類のイベントをシミュレートします。
+
+| トークン | タイプ |
+| --- | --- |
+| `btok_us_verified` | 成功 |
+| `btok_us_verified_noAccount` | `no_account` コードで失敗 |
+| `btok_us_verified_accountClosed` | `account_closed` コードで失敗 |
+| `btok_us_verified_insufficientFunds` | `insufficient_funds` コードで失敗 |
+| `btok_us_verified_debitNotAuthorized` | `debit_not_authorized` コードで失敗 |
+| `btok_us_verified_invalidCurrency` | `invalid_currency` コードで失敗 |
+
+## 入金
+
+[入金](https://docs.stripe.com/connect/payouts-connected-accounts.md)をテストする際に特定のイベントをトリガーするには、次のテスト用の銀行口座番号とデビットカード番号を使用します。これらの値は、テスト用の API キーを使用してテストしている間のみ使用できます。
+
+テスト入金は、本番環境での入金をシミュレートしますが、銀行では処理されません。Stripe ダッシュボードにアクセスできるテストアカウントでは、有効な外部銀行情報とその他の関連条件が満たされている限り、入金は常に有効となり、実際の本人確認も必要ありません。
+
+> 本番環境の連結アカウントの Stripe ダッシュボードでテスト用の銀行番号とデビットカード番号を使用することはできません。本番環境のアカウントに銀行口座情報を入力した場合でも、サンドボックスを使用することが可能です。テスト入金では実際の資金を扱わずに本番環境での入金をシミュレートできます。
+
+### 銀行口座番号
+
+以下のテスト用の銀行口座番号を使用して、入金をテストします。これらの銀行口座番号には、テスト API キーのみを使用できます。
+
+#### United Arab Emirates
+
+| IBAN | Type |
+| --- | --- |
+| `AE070331234567890123456` | Payout succeeds. |
+| `AE62370400440532013001` | Payout fails with a no_account code. |
+| `AE89370400440532013002` | Payout fails with a account_closed code. |
+| `AE89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AE89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AE89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Antigua & Barbuda
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAAGAGXYZ` | `000123456789` | Payout succeeds. |
+| `AAAAAGAGXYZ` | `001111111116` | Payout fails with a no_account code. |
+| `AAAAAGAGXYZ` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAAAGAGXYZ` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAAGAGXYZ` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAAGAGXYZ` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Albania
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAALTXXXX` | `AL35202111090000000001234567` | Payout succeeds. |
+| `AAAAALTXXXX` | `AL00000062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAALTXXXX` | `AL00000089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAALTXXXX` | `AL00000089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAALTXXXX` | `AL00000089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAALTXXXX` | `AL00000089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Armenia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAAMNNXXX` | `00001234567` | Payout succeeds. |
+| `AAAAAMNNXXX` | `11111111116` | Payout fails with a no_account code. |
+| `AAAAAMNNXXX` | `11111111113` | Payout fails with a account_closed code. |
+| `AAAAAMNNXXX` | `22222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAAMNNXXX` | `33333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAAMNNXXX` | `44444444440` | Payout fails with a invalid_currency code. |
+
+#### Angola
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAAOAOXXX` | `AO06004400006729503010102` | Payout succeeds. |
+| `AAAAAOAOXXX` | `AO00062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAAOAOXXX` | `AO00089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAAOAOXXX` | `AO00089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAAOAOXXX` | `AO00089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAAOAOXXX` | `AO00089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Argentina
+
+| Account | Type |
+| --- | --- |
+| `0110000600000000000000` | Payout succeeds. |
+| `0110000600000000000017` | Payout fails with a no_account code. |
+| `0110000600000000000024` | Payout fails with a account_closed code. |
+| `0110000600000000000031` | Payout fails with a insufficient_funds code. |
+| `0110000600000000000048` | Payout fails with a debit_not_authorized code. |
+| `0110000600000000000055` | Payout fails with a invalid_currency code. |
+
+#### Austria
+
+| IBAN | Type |
+| --- | --- |
+| `AT611904300234573201` | Payout succeeds. |
+| `AT861904300235473202` | Payout fails with a no_account code. |
+| `AT89370400440532013002` | Payout fails with a account_closed code. |
+| `AT981904300002222227` | Payout fails with a insufficient_funds code. |
+| `AT201904300000454545` | Payout fails with a debit_not_authorized code. |
+| `AT89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Australia
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `110000` | `000123456` | Payout succeeds. |
+| `110000` | `111111116` | Payout fails with a no_account code. |
+| `110000` | `111111113` | Payout fails with a account_closed code. |
+| `110000` | `222222227` | Payout fails with a insufficient_funds code. |
+| `110000` | `333333335` | Payout fails with a debit_not_authorized code. |
+| `110000` | `444444440` | Payout fails with a invalid_currency code. |
+| `110000` | `888888883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Azerbaijan
+
+| Routing | IBAN | Type |
+| --- | --- | --- |
+| `123456-123456` | `AZ77ADJE12345678901234567890` | Payout succeeds. |
+| `123456-123456` | `AZ00000062370400440532013001` | Payout fails with a no_account code. |
+| `123456-123456` | `AZ00000089370400440532013002` | Payout fails with a account_closed code. |
+| `123456-123456` | `AZ00000089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `123456-123456` | `AZ00000089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `123456-123456` | `AZ00000089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Bosnia & Herzegovina
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAABABAXXX` | `BA095520001234567812` | Payout succeeds. |
+| `AAAABABAXXX` | `BA370400440532013001` | Payout fails with a no_account code. |
+| `AAAABABAXXX` | `BA370400440532013002` | Payout fails with a account_closed code. |
+| `AAAABABAXXX` | `BA370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAABABAXXX` | `BA370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAABABAXXX` | `BA370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Bangladesh
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `110000000` | `0000123456789` | Payout succeeds. |
+| `110000000` | `0000000011116` | Payout fails with a no_account code. |
+| `110000000` | `0000000011113` | Payout fails with a account_closed code. |
+| `110000000` | `0000000022227` | Payout fails with a insufficient_funds code. |
+| `110000000` | `0000000033335` | Payout fails with a debit_not_authorized code. |
+| `110000000` | `0000000044440` | Payout fails with a invalid_currency code. |
+
+#### Belgium
+
+| IBAN | Type |
+| --- | --- |
+| `BE62510007547061` | Payout succeeds. |
+| `BE68539007547034` | Payout fails with a no_account code. |
+| `BE89370400440532013002` | Payout fails with a account_closed code. |
+| `BE90510002222227` | Payout fails with a insufficient_funds code. |
+| `BE12510000454545` | Payout fails with a debit_not_authorized code. |
+| `BE89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Bulgaria
+
+| IBAN | Type |
+| --- | --- |
+| `BG80BNBG96611020345678` | Payout succeeds. |
+| `BG62370400440532013001` | Payout fails with a no_account code. |
+| `BG89370400440532013002` | Payout fails with a account_closed code. |
+| `BG89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `BG89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `BG89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Bahrain
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAABHBMXYZ` | `BH29BMAG1299123456BH00` | Payout succeeds. |
+| `AAAABHBMXYZ` | `BH62370400440532013001` | Payout fails with a no_account code. |
+| `AAAABHBMXYZ` | `BH89370400440532013002` | Payout fails with a account_closed code. |
+| `AAAABHBMXYZ` | `BH89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAABHBMXYZ` | `BH89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAABHBMXYZ` | `BH89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Benin
+
+| IBAN | Type |
+| --- | --- |
+| `BJ66BJ0610100100144390000769` | Payout succeeds. |
+| `BJ62370400440532013001` | Payout fails with a no_account code. |
+| `BJ89370400440532013002` | Payout fails with a account_closed code. |
+| `BJ89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `BJ89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `BJ89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Brunei
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAABNBBXXX` | `0000123456789` | Payout succeeds. |
+| `AAAABNBBXXX` | `0000000011116` | Payout fails with a no_account code. |
+| `AAAABNBBXXX` | `0000000011113` | Payout fails with a account_closed code. |
+| `AAAABNBBXXX` | `0000000022227` | Payout fails with a insufficient_funds code. |
+| `AAAABNBBXXX` | `0000000033335` | Payout fails with a debit_not_authorized code. |
+| `AAAABNBBXXX` | `0000000044440` | Payout fails with a invalid_currency code. |
+
+#### Bolivia
+
+| Account | Type |
+| --- | --- |
+| `000123456789` | Payout succeeds. |
+| `001111111116` | Payout fails with a no_account code. |
+| `001111111113` | Payout fails with a account_closed code. |
+| `002222222227` | Payout fails with a insufficient_funds code. |
+| `003333333335` | Payout fails with a debit_not_authorized code. |
+| `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Brazil
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `110-0000` | `0001234` | Payout succeeds. |
+| `110-0000` | `1111116` | Payout fails with a no_account code. |
+| `110-0000` | `1111113` | Payout fails with a account_closed code. |
+| `110-0000` | `2222227` | Payout fails with a insufficient_funds code. |
+| `110-0000` | `3333335` | Payout fails with a debit_not_authorized code. |
+| `110-0000` | `4444440` | Payout fails with a invalid_currency code. |
+
+#### Bahamas
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAABSNSXXX` | `0001234` | Payout succeeds. |
+| `AAAABSNSXXX` | `1111116` | Payout fails with a no_account code. |
+| `AAAABSNSXXX` | `1111113` | Payout fails with a account_closed code. |
+| `AAAABSNSXXX` | `2222227` | Payout fails with a insufficient_funds code. |
+| `AAAABSNSXXX` | `3333335` | Payout fails with a debit_not_authorized code. |
+| `AAAABSNSXXX` | `4444440` | Payout fails with a invalid_currency code. |
+
+#### Bhutan
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAABTBTXXX` | `0000123456789` | Payout succeeds. |
+| `AAAABTBTXXX` | `0000000011116` | Payout fails with a no_account code. |
+| `AAAABTBTXXX` | `0000000011113` | Payout fails with a account_closed code. |
+| `AAAABTBTXXX` | `0000000022227` | Payout fails with a insufficient_funds code. |
+| `AAAABTBTXXX` | `0000000033335` | Payout fails with a debit_not_authorized code. |
+| `AAAABTBTXXX` | `0000000044440` | Payout fails with a invalid_currency code. |
+
+#### Botswana
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAABWBWXXX` | `000123456789` | Payout succeeds. |
+| `AAAABWBWXXX` | `001111111116` | Payout fails with a no_account code. |
+| `AAAABWBWXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAABWBWXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAABWBWXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAABWBWXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Canada
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `11000-000` | `000123456789` | Payout succeeds. |
+| `11000-000` | `000111111116` | Payout fails with a no_account code. |
+| `11000-000` | `000111111113` | Payout fails with a account_closed code. |
+| `11000-000` | `000222222227` | Payout fails with a insufficient_funds code. |
+| `11000-000` | `000333333335` | Payout fails with a debit_not_authorized code. |
+| `11000-000` | `000444444440` | Payout fails with a invalid_currency code. |
+| `11000-000` | `000888888883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Switzerland
+
+| IBAN | Type |
+| --- | --- |
+| `CH9300762011623852957` | Payout succeeds. |
+| `CH5362200119938136497` | Payout fails with a no_account code. |
+| `CH89370400440532013002` | Payout fails with a account_closed code. |
+| `CH1800762000002222227` | Payout fails with a insufficient_funds code. |
+| `CH3700762000000454545` | Payout fails with a debit_not_authorized code. |
+| `CH89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Côte d’Ivoire
+
+| IBAN | Type |
+| --- | --- |
+| `CI93CI0080111301134291200589` | Payout succeeds. |
+| `CI62370400440532013001` | Payout fails with a no_account code. |
+| `CI89370400440532013002` | Payout fails with a account_closed code. |
+| `CI89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `CI89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `CI89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Chile
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `999` | `000123456789` | Payout succeeds. |
+| `999` | `001111111116` | Payout fails with a no_account code. |
+| `999` | `001111111113` | Payout fails with a account_closed code. |
+| `999` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `999` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `999` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Colombia
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `999` | `000123456789` | Payout succeeds. |
+| `999` | `001111111116` | Payout fails with a no_account code. |
+| `999` | `001111111113` | Payout fails with a account_closed code. |
+| `999` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `999` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `999` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Costa Rica
+
+| IBAN | Type |
+| --- | --- |
+| `CR04010212367856709123` | Payout succeeds. |
+| `CR62370400440532013001` | Payout fails with a no_account code. |
+| `CR89370400440532013002` | Payout fails with a account_closed code. |
+| `CR89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `CR89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `CR89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Cyprus
+
+| IBAN | Type |
+| --- | --- |
+| `CY17002001280000001200527600` | Payout succeeds. |
+| `CY62370400440532013001` | Payout fails with a no_account code. |
+| `CY89370400440532013002` | Payout fails with a account_closed code. |
+| `CY89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `CY89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `CY89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Czechia
+
+| IBAN | Type |
+| --- | --- |
+| `CZ6508000000192000145399` | Payout succeeds. |
+| `CZ62370400440532013001` | Payout fails with a no_account code. |
+| `CZ89370400440532013002` | Payout fails with a account_closed code. |
+| `CZ89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `CZ89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `CZ89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Germany
+
+| IBAN | Type |
+| --- | --- |
+| `DE89370400440532013000` | Payout succeeds. |
+| `DE62370400440532013001` | Payout fails with a no_account code. |
+| `DE89370400440532013002` | Payout fails with a account_closed code. |
+| `DE65370400440002222227` | Payout fails with a insufficient_funds code. |
+| `DE84370400440000454545` | Payout fails with a debit_not_authorized code. |
+| `DE89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Denmark
+
+| IBAN | Type |
+| --- | --- |
+| `DK5000400440116243` | Payout succeeds. |
+| `DK8003450003179681` | Payout fails with a no_account code. |
+| `DK89370400440532013002` | Payout fails with a account_closed code. |
+| `DK89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `DK7600400000454545` | Payout fails with a debit_not_authorized code. |
+| `DK89370400440532013005` | Payout fails with a invalid_currency code. |
+| `DK5600400000888883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Dominican Republic
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `999` | `000123456789` | Payout succeeds. |
+| `999` | `001111111116` | Payout fails with a no_account code. |
+| `999` | `001111111113` | Payout fails with a account_closed code. |
+| `999` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `999` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `999` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Algeria
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAADZDZXXX` | `00001234567890123456` | Payout succeeds. |
+| `AAAADZDZXXX` | `00001001001111111116` | Payout fails with a no_account code. |
+| `AAAADZDZXXX` | `00001001001111111113` | Payout fails with a account_closed code. |
+| `AAAADZDZXXX` | `00001001002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAADZDZXXX` | `00001001003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAADZDZXXX` | `00001001004444444440` | Payout fails with a invalid_currency code. |
+
+#### Ecuador
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAECE1XXX` | `000123456789` | Payout succeeds. |
+| `AAAAECE1XXX` | `001111111116` | Payout fails with a no_account code. |
+| `AAAAECE1XXX` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAAECE1XXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAECE1XXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAECE1XXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Estonia
+
+| IBAN | Type |
+| --- | --- |
+| `EE382200221020145685` | Payout succeeds. |
+| `EE762200221020145680` | Payout fails with a no_account code. |
+| `EE89370400440532013002` | Payout fails with a account_closed code. |
+| `EE672200000002222227` | Payout fails with a insufficient_funds code. |
+| `EE862200000000454545` | Payout fails with a debit_not_authorized code. |
+| `EE89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Egypt
+
+| Routing | IBAN | Type |
+| --- | --- | --- |
+| `AAAAEGCCXXX` | `EG800002000156789012345180002` | Payout succeeds. |
+| `AAAAEGCCXXX` | `EG62370400440532013001` | Payout fails with a no_account code. |
+| `AAAAEGCCXXX` | `EG89370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAEGCCXXX` | `EG89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAEGCCXXX` | `EG89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAEGCCXXX` | `EG89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Spain
+
+| IBAN | Type |
+| --- | --- |
+| `ES0700120345030000067890` | Payout succeeds. |
+| `ES9121000418450200051332` | Payout fails with a no_account code. |
+| `ES89370400440532013002` | Payout fails with a account_closed code. |
+| `ES1700120345000002222227` | Payout fails with a insufficient_funds code. |
+| `ES3600120345000000454545` | Payout fails with a debit_not_authorized code. |
+| `ES89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Ethiopia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAETETXXX` | `0000000012345` | Payout succeeds. |
+| `AAAAETETXXX` | `0011111111112` | Payout fails with a no_account code. |
+| `AAAAETETXXX` | `0022222222223` | Payout fails with a account_closed code. |
+| `AAAAETETXXX` | `0033333333334` | Payout fails with a insufficient_funds code. |
+| `AAAAETETXXX` | `0044444444445` | Payout fails with a debit_not_authorized code. |
+| `AAAAETETXXX` | `0055555555556` | Payout fails with a invalid_currency code. |
+
+#### Finland
+
+| IBAN | Type |
+| --- | --- |
+| `FI2112345600000785` | Payout succeeds. |
+| `FI9112345600000786` | Payout fails with a no_account code. |
+| `FI89370400440532013002` | Payout fails with a account_closed code. |
+| `FI6712345602222227` | Payout fails with a insufficient_funds code. |
+| `FI8612345600454545` | Payout fails with a debit_not_authorized code. |
+| `FI89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### France
+
+| IBAN | Type |
+| --- | --- |
+| `FR1420041010050500013M02606` | Payout succeeds. |
+| `FR8420041010050500013M02607` | Payout fails with a no_account code. |
+| `FR89370400440532013002` | Payout fails with a account_closed code. |
+| `FR9720041010050000002222227` | Payout fails with a insufficient_funds code. |
+| `FR1920041010050000000454545` | Payout fails with a debit_not_authorized code. |
+| `FR89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Gabon
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAGAGAXXX` | `00001234567890123456789` | Payout succeeds. |
+| `AAAAGAGAXXX` | `00001001001111111111116` | Payout fails with a no_account code. |
+| `AAAAGAGAXXX` | `00001001001111111111113` | Payout fails with a account_closed code. |
+| `AAAAGAGAXXX` | `00001001002222222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAGAGAXXX` | `00001001003333333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAGAGAXXX` | `00001001004444444444440` | Payout fails with a invalid_currency code. |
+
+#### United Kingdom
+
+| Sort Code | Account | Type |
+| --- | --- | --- |
+| `108800` | `00012345` | Payout succeeds. |
+| `108800` | `11111116` | Payout fails with a no_account code. |
+| `108800` | `11111113` | Payout fails with a account_closed code. |
+| `108800` | `22222227` | Payout fails with a insufficient_funds code. |
+| `108800` | `33333335` | Payout fails with a debit_not_authorized code. |
+| `108800` | `44444440` | Payout fails with a invalid_currency code. |
+| `108800` | `66666668` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### United Kingdom
+
+| IBAN | Type |
+| --- | --- |
+| `GB82WEST12345698765432` | Payout succeeds. |
+| `GB55WEST12345698765433` | Payout fails with a no_account code. |
+| `GB89370400440532013002` | Payout fails with a account_closed code. |
+| `GB70WEST12345602222227` | Payout fails with a insufficient_funds code. |
+| `GB89WEST12345600454545` | Payout fails with a debit_not_authorized code. |
+| `GB89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Ghana
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `022112` | `000123456789` | Payout succeeds. |
+| `022112` | `001111111116` | Payout fails with a no_account code. |
+| `022112` | `001111111113` | Payout fails with a account_closed code. |
+| `022112` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `022112` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `022112` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Gibraltar
+
+| IBAN | Type |
+| --- | --- |
+| `GI75NWBK000000007099453` | Payout succeeds. |
+| `GI41SAFA461293238477751` | Payout fails with a no_account code. |
+| `GI89370400440532013002` | Payout fails with a account_closed code. |
+| `GI14NWBK000000002222227` | Payout fails with a insufficient_funds code. |
+| `GI33NWBK000000000454545` | Payout fails with a debit_not_authorized code. |
+| `GI89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Gambia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAGMGMXYZ` | `000123000456000789` | Payout succeeds. |
+| `AAAAGMGMXYZ` | `001000111000111116` | Payout fails with a no_account code. |
+| `AAAAGMGMXYZ` | `001000111000111113` | Payout fails with a account_closed code. |
+| `AAAAGMGMXYZ` | `002000222000222227` | Payout fails with a insufficient_funds code. |
+| `AAAAGMGMXYZ` | `003000333000333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAGMGMXYZ` | `004000444000444440` | Payout fails with a invalid_currency code. |
+
+#### Greece
+
+| IBAN | Type |
+| --- | --- |
+| `GR1601101250000000012300695` | Payout succeeds. |
+| `GR62370400440532013001` | Payout fails with a no_account code. |
+| `GR89370400440532013002` | Payout fails with a account_closed code. |
+| `GR89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `GR89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `GR89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Guatemala
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAGTGCXYZ` | `GT82TRAJ01020000001210029690` | Payout succeeds. |
+| `AAAAGTGCXYZ` | `GT62370400440532013001` | Payout fails with a no_account code. |
+| `AAAAGTGCXYZ` | `GT89370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAGTGCXYZ` | `GT89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAGTGCXYZ` | `GT89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAGTGCXYZ` | `GT89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Guyana
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAGYGGXYZ-00000000` | `000123456789` | Payout succeeds. |
+| `AAAAGYGGXYZ-00000000` | `001111111116` | Payout fails with a no_account code. |
+| `AAAAGYGGXYZ-00000000` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAAGYGGXYZ-00000000` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAGYGGXYZ-00000000` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAGYGGXYZ-00000000` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Hong Kong SAR China
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `110-000` | `000123-456` | Payout succeeds. |
+| `110-000` | `111111-116` | Payout fails with a no_account code. |
+| `110-000` | `111111-113` | Payout fails with a account_closed code. |
+| `110-000` | `222222-227` | Payout fails with a insufficient_funds code. |
+| `110-000` | `333333-335` | Payout fails with a debit_not_authorized code. |
+| `110-000` | `444444-440` | Payout fails with a invalid_currency code. |
+| `110-000` | `888888-883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Croatia
+
+| IBAN | Type |
+| --- | --- |
+| `HR7624020064583467589` | Payout succeeds. |
+| `HR2725000096983499248` | Payout fails with a no_account code. |
+| `HR89370400440532013002` | Payout fails with a account_closed code. |
+| `HR7424020060002222227` | Payout fails with a insufficient_funds code. |
+| `HR9324020060000454545` | Payout fails with a debit_not_authorized code. |
+| `HR89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Hungary
+
+| IBAN | Type |
+| --- | --- |
+| `HU42117730161111101800000000` | Payout succeeds. |
+| `HU62370400440532013001` | Payout fails with a no_account code. |
+| `HU89370400440532013002` | Payout fails with a account_closed code. |
+| `HU89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `HU89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `HU89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Indonesia
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `000` | `000123456789` | Payout succeeds. |
+| `000` | `001111111116` | Payout fails with a no_account code. |
+| `000` | `001111111113` | Payout fails with a account_closed code. |
+| `000` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `000` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `000` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Ireland
+
+| IBAN | Type |
+| --- | --- |
+| `IE29AIBK93115212345678` | Payout succeeds. |
+| `IE02AIBK93115212345679` | Payout fails with a no_account code. |
+| `IE89370400440532013002` | Payout fails with a account_closed code. |
+| `IE10AIBK93115202222227` | Payout fails with a insufficient_funds code. |
+| `IE29AIBK93115200454545` | Payout fails with a debit_not_authorized code. |
+| `IE89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Israel
+
+| IBAN | Type |
+| --- | --- |
+| `IL620108000000099999999` | Payout succeeds. |
+| `IL62370400440532013001` | Payout fails with a no_account code. |
+| `IL89370400440532013002` | Payout fails with a account_closed code. |
+| `IL89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `IL89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `IL89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### India
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `HDFC0000261` | `000123456789` | Payout succeeds. |
+| `HDFC0000261` | `001111111116` | Payout fails with a no_account code. |
+| `HDFC0000261` | `001111111113` | Payout fails with a account_closed code. |
+| `HDFC0000261` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `HDFC0000261` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `HDFC0000261` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Iceland
+
+| IBAN | Type |
+| --- | --- |
+| `IS140159260076545510730339` | Payout succeeds. |
+| `IS62370400440532013001` | Payout fails with a no_account code. |
+| `IS89370400440532013002` | Payout fails with a account_closed code. |
+| `IS89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `IS89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `IS89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Italy
+
+| IBAN | Type |
+| --- | --- |
+| `IT40S0542811101000000123456` | Payout succeeds. |
+| `IT60X0542811101000000123456` | Payout fails with a no_account code. |
+| `IT89370400440532013002` | Payout fails with a account_closed code. |
+| `IT89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `IT80X0542811101000000454545` | Payout fails with a debit_not_authorized code. |
+| `IT89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Jamaica
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `111-00000` | `000123456789` | Payout succeeds. |
+| `111-00000` | `001111111116` | Payout fails with a no_account code. |
+| `111-00000` | `001111111113` | Payout fails with a account_closed code. |
+| `111-00000` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `111-00000` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `111-00000` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Jordan
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAJOJOXXX` | `JO32ABCJ0010123456789012345678` | Payout succeeds. |
+| `AAAAJOJOXXX` | `JO0000000062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAJOJOXXX` | `JO0000000089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAJOJOXXX` | `JO0000000089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAJOJOXXX` | `JO0000000089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAJOJOXXX` | `JO0000000089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Japan
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `1100000` | `0001234` | Payout succeeds. |
+| `1100000` | `1111116` | Payout fails with a no_account code. |
+| `1100000` | `1111113` | Payout fails with a account_closed code. |
+| `1100000` | `2222227` | Payout fails with a insufficient_funds code. |
+| `1100000` | `3333335` | Payout fails with a debit_not_authorized code. |
+| `1100000` | `4444440` | Payout fails with a invalid_currency code. |
+
+#### Kenya
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `TESTKENAXXX` | `000123456789` | Payout succeeds. |
+| `TESTKENAXXX` | `001111111116` | Payout fails with a no_account code. |
+| `TESTKENAXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `TESTKENAXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `TESTKENAXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `TESTKENAXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Cambodia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAKHKHXXX` | `000123456789` | Payout succeeds. |
+| `AAAAKHKHXXX` | `001111111116` | Payout fails with a no_account code. |
+| `AAAAKHKHXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAAKHKHXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAKHKHXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAKHKHXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### South Korea
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `SGSEKRSLXXX` | `000123456789` | Payout succeeds. |
+| `SGSEKRSLXXX` | `001111111116` | Payout fails with a no_account code. |
+| `SGSEKRSLXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `SGSEKRSLXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `SGSEKRSLXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `SGSEKRSLXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Kuwait
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAKWKWXYZ` | `KW81CBKU0000000000001234560101` | Payout succeeds. |
+| `AAAAKWKWXYZ` | `KW62370400440532013001` | Payout fails with a no_account code. |
+| `AAAAKWKWXYZ` | `KW89370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAKWKWXYZ` | `KW89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAKWKWXYZ` | `KW89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAKWKWXYZ` | `KW89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Kazakhstan
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAKZKZXXX` | `KZ221251234567890123` | Payout succeeds. |
+| `AAAAKZKZXXX` | `KZ623704004405321001` | Payout fails with a no_account code. |
+| `AAAAKZKZXXX` | `KZ893704004405321002` | Payout fails with a account_closed code. |
+| `AAAAKZKZXXX` | `KZ893704004405321003` | Payout fails with a insufficient_funds code. |
+| `AAAAKZKZXXX` | `KZ893704004405321004` | Payout fails with a debit_not_authorized code. |
+| `AAAAKZKZXXX` | `KZ893704004405321005` | Payout fails with a invalid_currency code. |
+
+#### Laos
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAALALAXXX` | `000123456789` | Payout succeeds. |
+| `AAAALALAXXX` | `001111111116` | Payout fails with a no_account code. |
+| `AAAALALAXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAALALAXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAALALAXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAALALAXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### St. Lucia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAALCLCXYZ` | `000123456789` | Payout succeeds. |
+| `AAAALCLCXYZ` | `001111111116` | Payout fails with a no_account code. |
+| `AAAALCLCXYZ` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAALCLCXYZ` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAALCLCXYZ` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAALCLCXYZ` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Liechtenstein
+
+| IBAN | Type |
+| --- | --- |
+| `LI0508800636123378777` | Payout succeeds. |
+| `LI1208800143823175626` | Payout fails with a no_account code. |
+| `LI89370400440532013002` | Payout fails with a account_closed code. |
+| `LI2408800000002222227` | Payout fails with a insufficient_funds code. |
+| `LI4308800000000454545` | Payout fails with a debit_not_authorized code. |
+| `LI89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Sri Lanka
+
+| Account | Type |
+| --- | --- |
+| `0000012345` | Payout succeeds. |
+| `0011111112` | Payout fails with a no_account code. |
+| `0022222223` | Payout fails with a account_closed code. |
+| `0033333334` | Payout fails with a insufficient_funds code. |
+| `0044444445` | Payout fails with a debit_not_authorized code. |
+| `0055555556` | Payout fails with a invalid_currency code. |
+
+#### Lithuania
+
+| IBAN | Type |
+| --- | --- |
+| `LT121000011101001000` | Payout succeeds. |
+| `LT821000011101001001` | Payout fails with a no_account code. |
+| `LT89370400440532013002` | Payout fails with a account_closed code. |
+| `LT591000000002222227` | Payout fails with a insufficient_funds code. |
+| `LT781000000000454545` | Payout fails with a debit_not_authorized code. |
+| `LT89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Luxembourg
+
+| IBAN | Type |
+| --- | --- |
+| `LU280019400644750000` | Payout succeeds. |
+| `LU980019400644750001` | Payout fails with a no_account code. |
+| `LU89370400440532013002` | Payout fails with a account_closed code. |
+| `LU900010000002222227` | Payout fails with a insufficient_funds code. |
+| `LU120010000000454545` | Payout fails with a debit_not_authorized code. |
+| `LU89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Latvia
+
+| IBAN | Type |
+| --- | --- |
+| `LV80BANK0000435195001` | Payout succeeds. |
+| `LV62370400440532013001` | Payout fails with a no_account code. |
+| `LV89370400440532013002` | Payout fails with a account_closed code. |
+| `LV89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `LV89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `LV89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Morocco
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAMAMAXXX` | `MA64011519000001205000534921` | Payout succeeds. |
+| `AAAAMAMAXXX` | `MA62370400440532013001` | Payout fails with a no_account code. |
+| `AAAAMAMAXXX` | `MA89370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAMAMAXXX` | `MA89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAMAMAXXX` | `MA89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAMAMAXXX` | `MA89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Monaco
+
+| IBAN | Type |
+| --- | --- |
+| `MC5810096180790123456789085` | Payout succeeds. |
+| `MC62370400440532013001` | Payout fails with a no_account code. |
+| `MC89370400440532013002` | Payout fails with a account_closed code. |
+| `MC89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `MC89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `MC89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Moldova
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAMDMDXXX` | `MD07AG123456789012345678` | Payout succeeds. |
+| `AAAAMDMDXXX` | `MD0062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAMDMDXXX` | `MD0089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAMDMDXXX` | `MD0089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAMDMDXXX` | `MD0089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAMDMDXXX` | `MD0089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Madagascar
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAMGMGXXX` | `MG4800005000011234567890123` | Payout succeeds. |
+| `AAAAMGMGXXX` | `MG0000062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAMGMGXXX` | `MG0000062370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAMGMGXXX` | `MG0000062370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAMGMGXXX` | `MG0000062370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAMGMGXXX` | `MG0000062370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### North Macedonia
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAMK2XXXX` | `MK49250120000058907` | Payout succeeds. |
+| `AAAAMK2XXXX` | `MK70400440532013001` | Payout fails with a no_account code. |
+| `AAAAMK2XXXX` | `MK70400440532013002` | Payout fails with a account_closed code. |
+| `AAAAMK2XXXX` | `MK70400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAMK2XXXX` | `MK70400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAMK2XXXX` | `MK70400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Mongolia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAMNUBXXX` | `0002222001` | Payout succeeds. |
+| `AAAAMNUBXXX` | `0002222002` | Payout fails with a no_account code. |
+| `AAAAMNUBXXX` | `0002222003` | Payout fails with a account_closed code. |
+| `AAAAMNUBXXX` | `0002222004` | Payout fails with a insufficient_funds code. |
+| `AAAAMNUBXXX` | `0002222005` | Payout fails with a debit_not_authorized code. |
+| `AAAAMNUBXXX` | `0002222006` | Payout fails with a invalid_currency code. |
+
+#### Macao SAR China
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAMOMXXXX` | `0000000001234567897` | Payout succeeds. |
+| `AAAAMOMXXXX` | `0000000111111111117` | Payout fails with a no_account code. |
+| `AAAAMOMXXXX` | `0000000111111111133` | Payout fails with a account_closed code. |
+| `AAAAMOMXXXX` | `0000000222222222224` | Payout fails with a insufficient_funds code. |
+| `AAAAMOMXXXX` | `0000000333333333331` | Payout fails with a debit_not_authorized code. |
+| `AAAAMOMXXXX` | `0000000444444444448` | Payout fails with a invalid_currency code. |
+
+#### Malta
+
+| IBAN | Type |
+| --- | --- |
+| `MT84MALT011000012345MTLCAST001S` | Payout succeeds. |
+| `MT62370400440532013001` | Payout fails with a no_account code. |
+| `MT89370400440532013002` | Payout fails with a account_closed code. |
+| `MT89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `MT89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `MT89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Mauritius
+
+| IBAN | Type |
+| --- | --- |
+| `MU17BOMM0101101030300200000MUR` | Payout succeeds. |
+| `MU62370400440532013001` | Payout fails with a no_account code. |
+| `MU89370400440532013002` | Payout fails with a account_closed code. |
+| `MU89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `MU89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `MU89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Mexico
+
+| Account | Type |
+| --- | --- |
+| `000000001234567897` | Payout succeeds. |
+| `000000111111111117` | Payout fails with a no_account code. |
+| `000000111111111133` | Payout fails with a account_closed code. |
+| `000000222222222224` | Payout fails with a insufficient_funds code. |
+| `000000333333333331` | Payout fails with a debit_not_authorized code. |
+| `000000444444444448` | Payout fails with a invalid_currency code. |
+
+#### Malaysia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `TESTMYKLXXX` | `000123456000` | Payout succeeds. |
+| `TESTMYKLXXX` | `111111111116` | Payout fails with a no_account code. |
+| `TESTMYKLXXX` | `111111111113` | Payout fails with a account_closed code. |
+| `TESTMYKLXXX` | `222222222227` | Payout fails with a insufficient_funds code. |
+| `TESTMYKLXXX` | `333333333335` | Payout fails with a debit_not_authorized code. |
+| `TESTMYKLXXX` | `444444444440` | Payout fails with a invalid_currency code. |
+
+#### Mozambique
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAMZMXXXX` | `001234567890123456789` | Payout succeeds. |
+| `AAAAMZMXXXX` | `000000111111111111116` | Payout fails with a no_account code. |
+| `AAAAMZMXXXX` | `000000111111111111113` | Payout fails with a account_closed code. |
+| `AAAAMZMXXXX` | `000000222222222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAMZMXXXX` | `000000333333333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAMZMXXXX` | `000000444444444444440` | Payout fails with a invalid_currency code. |
+
+#### Namibia
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAANANXXYZ` | `000123456789` | Payout succeeds. |
+| `AAAANANXXYZ` | `001111111116` | Payout fails with a no_account code. |
+| `AAAANANXXYZ` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAANANXXYZ` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAANANXXYZ` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAANANXXYZ` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Niger
+
+| IBAN | Type |
+| --- | --- |
+| `NE58NE0380100100130305000268` | Payout succeeds. |
+| `NE62370400440532013001` | Payout fails with a no_account code. |
+| `NE89370400440532013002` | Payout fails with a account_closed code. |
+| `NE89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `NE89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `NE89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Nigeria
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAANGLAXXX` | `1111111112` | Payout succeeds. |
+| `AAAANGLAXXX` | `1111111116` | Payout fails with a no_account code. |
+| `AAAANGLAXXX` | `1111111113` | Payout fails with a account_closed code. |
+| `AAAANGLAXXX` | `2222222227` | Payout fails with a insufficient_funds code. |
+| `AAAANGLAXXX` | `3333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAANGLAXXX` | `4444444440` | Payout fails with a invalid_currency code. |
+
+#### Netherlands
+
+| IBAN | Type |
+| --- | --- |
+| `NL39RABO0300065264` | Payout succeeds. |
+| `NL91ABNA0417164300` | Payout fails with a no_account code. |
+| `NL89370400440532013002` | Payout fails with a account_closed code. |
+| `NL27RABO0002222227` | Payout fails with a insufficient_funds code. |
+| `NL46RABO0000454545` | Payout fails with a debit_not_authorized code. |
+| `NL89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Norway
+
+| IBAN | Type |
+| --- | --- |
+| `NO9386011117947` | Payout succeeds. |
+| `NO6686011117948` | Payout fails with a no_account code. |
+| `NO89370400440532013002` | Payout fails with a account_closed code. |
+| `NO0586012222227` | Payout fails with a insufficient_funds code. |
+| `NO2486010454545` | Payout fails with a debit_not_authorized code. |
+| `NO89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### New Zealand
+
+| Account | Type |
+| --- | --- |
+| `1100000000000010` | Payout succeeds. |
+| `1100001111111016` | Payout fails with a no_account code. |
+| `1100001111111013` | Payout fails with a account_closed code. |
+| `1100002222222027` | Payout fails with a insufficient_funds code. |
+| `1100003333333035` | Payout fails with a debit_not_authorized code. |
+| `1100004444444040` | Payout fails with a invalid_currency code. |
+
+#### Oman
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAOMOMXXX` | `000123456789` | Payout succeeds. |
+| `AAAAOMOMXXX` | `001111111116` | Payout fails with a no_account code. |
+| `AAAAOMOMXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAAOMOMXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAOMOMXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAOMOMXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Panama
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAAPAPAXXX` | `000123456789` | Payout succeeds. |
+| `AAAAPAPAXXX` | `001111111116` | Payout fails with a no_account code. |
+| `AAAAPAPAXXX` | `001111111113` | Payout fails with a account_closed code. |
+| `AAAAPAPAXXX` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `AAAAPAPAXXX` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAAPAPAXXX` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Peru
+
+| Account | Type |
+| --- | --- |
+| `99934500012345670024` | Payout succeeds. |
+| `99934500012345670122` | Payout fails with a no_account code. |
+| `99934500012345670220` | Payout fails with a account_closed code. |
+| `99934500012345670328` | Payout fails with a insufficient_funds code. |
+| `99934500012345670426` | Payout fails with a debit_not_authorized code. |
+| `99934500012345670523` | Payout fails with a invalid_currency code. |
+
+#### Philippines
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `BCDEFGHI123` | `01567890123456789` | Payout succeeds. |
+| `BCDEFGHI123` | `45111111111111116` | Payout fails with a no_account code. |
+| `BCDEFGHI123` | `45111111111111113` | Payout fails with a account_closed code. |
+| `BCDEFGHI123` | `45222222222222227` | Payout fails with a insufficient_funds code. |
+| `BCDEFGHI123` | `45333333333333335` | Payout fails with a debit_not_authorized code. |
+| `BCDEFGHI123` | `45444444444444440` | Payout fails with a invalid_currency code. |
+
+#### Pakistan
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAPKKAXXX` | `PK36SCBL0000001123456702` | Payout succeeds. |
+| `AAAAPKKAXXX` | `PK0062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAPKKAXXX` | `PK0089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAPKKAXXX` | `PK0089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAPKKAXXX` | `PK0089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAPKKAXXX` | `PK0089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Poland
+
+| IBAN | Type |
+| --- | --- |
+| `PL61109010140000071219812874` | Payout succeeds. |
+| `PL62370400440532013001` | Payout fails with a no_account code. |
+| `PL89370400440532013002` | Payout fails with a account_closed code. |
+| `PL89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `PL89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `PL89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Portugal
+
+| IBAN | Type |
+| --- | --- |
+| `PT50000201231234567890154` | Payout succeeds. |
+| `PT23000201231234567890155` | Payout fails with a no_account code. |
+| `PT89370400440532013002` | Payout fails with a account_closed code. |
+| `PT05000201230000002222227` | Payout fails with a insufficient_funds code. |
+| `PT24000201230000000454545` | Payout fails with a debit_not_authorized code. |
+| `PT89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Paraguay
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `0` | `0567890123456789` | Payout succeeds. |
+| `0` | `0111111111111116` | Payout fails with a no_account code. |
+| `0` | `0111111111111113` | Payout fails with a account_closed code. |
+| `0` | `0222222222222227` | Payout fails with a insufficient_funds code. |
+| `0` | `0333333333333335` | Payout fails with a debit_not_authorized code. |
+| `0` | `0444444444444440` | Payout fails with a invalid_currency code. |
+
+#### Qatar
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAAQAQAXXX` | `QA87CITI123456789012345678901` | Payout succeeds. |
+| `AAAAQAQAXXX` | `QA000000062370400440532013001` | Payout fails with a no_account code. |
+| `AAAAQAQAXXX` | `QA000000089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAAQAQAXXX` | `QA000000089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAAQAQAXXX` | `QA000000089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAAQAQAXXX` | `QA000000089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Romania
+
+| IBAN | Type |
+| --- | --- |
+| `RO49AAAA1B31007593840000` | Payout succeeds. |
+| `RO62370400440532013001` | Payout fails with a no_account code. |
+| `RO89370400440532013002` | Payout fails with a account_closed code. |
+| `RO89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `RO89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `RO89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Serbia
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `TESTSERBXXX` | `RS35105008123123123173` | Payout succeeds. |
+| `TESTSERBXXX` | `RS62370400440532013001` | Payout fails with a no_account code. |
+| `TESTSERBXXX` | `RS89370400440532013002` | Payout fails with a account_closed code. |
+| `TESTSERBXXX` | `RS89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `TESTSERBXXX` | `RS89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `TESTSERBXXX` | `RS89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Rwanda
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAARWRWXXX` | `000123456789` | Payout succeeds. |
+| `AAAARWRWXXX` | `111111111116` | Payout fails with a no_account code. |
+| `AAAARWRWXXX` | `111111111113` | Payout fails with a account_closed code. |
+| `AAAARWRWXXX` | `222222222227` | Payout fails with a insufficient_funds code. |
+| `AAAARWRWXXX` | `333333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAARWRWXXX` | `444444444440` | Payout fails with a invalid_currency code. |
+
+#### Saudi Arabia
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `RIBLSARIXXX` | `SA4420000001234567891234` | Payout succeeds. |
+| `RIBLSARIXXX` | `SA62370400440532013001` | Payout fails with a no_account code. |
+| `RIBLSARIXXX` | `SA89370400440532013002` | Payout fails with a account_closed code. |
+| `RIBLSARIXXX` | `SA89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `RIBLSARIXXX` | `SA89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `RIBLSARIXXX` | `SA89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Sweden
+
+| IBAN | Type |
+| --- | --- |
+| `SE3550000000054910000003` | Payout succeeds. |
+| `SE0850000000054910000004` | Payout fails with a no_account code. |
+| `SE89370400440532013002` | Payout fails with a account_closed code. |
+| `SE2850000000000002222227` | Payout fails with a insufficient_funds code. |
+| `SE4750000000000000454545` | Payout fails with a debit_not_authorized code. |
+| `SE89370400440532013005` | Payout fails with a invalid_currency code. |
+| `SE2750000000000000888883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Singapore
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `1100-000` | `000123456` | Payout succeeds. |
+| `1100-000` | `111111116` | Payout fails with a no_account code. |
+| `1100-000` | `111111113` | Payout fails with a account_closed code. |
+| `1100-000` | `222222227` | Payout fails with a insufficient_funds code. |
+| `1100-000` | `333333335` | Payout fails with a debit_not_authorized code. |
+| `1100-000` | `444444440` | Payout fails with a invalid_currency code. |
+| `1100-000` | `888888883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Slovenia
+
+| IBAN | Type |
+| --- | --- |
+| `SI56263300012039086` | Payout succeeds. |
+| `SI62370400440532013001` | Payout fails with a no_account code. |
+| `SI89370400440532013002` | Payout fails with a account_closed code. |
+| `SI89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `SI89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `SI89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Slovakia
+
+| IBAN | Type |
+| --- | --- |
+| `SK3112000000198742637541` | Payout succeeds. |
+| `SK62370400440532013001` | Payout fails with a no_account code. |
+| `SK89370400440532013002` | Payout fails with a account_closed code. |
+| `SK89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `SK89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `SK89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### San Marino
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAASMSMXXX` | `SM86U0322509800000000270100` | Payout succeeds. |
+| `AAAASMSMXXX` | `SM62370400440532013001` | Payout fails with a no_account code. |
+| `AAAASMSMXXX` | `SM89370400440532013002` | Payout fails with a account_closed code. |
+| `AAAASMSMXXX` | `SM89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAASMSMXXX` | `SM89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAASMSMXXX` | `SM89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Senegal
+
+| IBAN | Type |
+| --- | --- |
+| `SN08SN0100152000048500003035` | Payout succeeds. |
+| `SN62370400440532013001` | Payout fails with a no_account code. |
+| `SN89370400440532013002` | Payout fails with a account_closed code. |
+| `SN89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `SN89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `SN89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### El Salvador
+
+| SWIFT / BIC Code | IBAN | Type |
+| --- | --- | --- |
+| `AAAASVS1XXX` | `SV44BCIE12345678901234567890` | Payout succeeds. |
+| `AAAASVS1XXX` | `SV00000062370400440532013001` | Payout fails with a no_account code. |
+| `AAAASVS1XXX` | `SV00000089370400440532013002` | Payout fails with a account_closed code. |
+| `AAAASVS1XXX` | `SV00000089370400440532013003` | Payout fails with a insufficient_funds code. |
+| `AAAASVS1XXX` | `SV00000089370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `AAAASVS1XXX` | `SV00000089370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Thailand
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `999-0001` | `000123456789` | Payout succeeds. |
+| `999-0001` | `001111111116` | Payout fails with a no_account code. |
+| `999-0001` | `001111111113` | Payout fails with a account_closed code. |
+| `999-0001` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `999-0001` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `999-0001` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Tunisia
+
+| IBAN | Type |
+| --- | --- |
+| `TN5904018104004942712345` | Payout succeeds. |
+| `TN62370400440532013001` | Payout fails with a no_account code. |
+| `TN89370400440532013002` | Payout fails with a account_closed code. |
+| `TN89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `TN89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `TN89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Turkey
+
+| IBAN | Type |
+| --- | --- |
+| `TR320010009999901234567890` | Payout succeeds. |
+| `TR62370400440532013001` | Payout fails with a no_account code. |
+| `TR89370400440532013002` | Payout fails with a account_closed code. |
+| `TR89370400440532013003` | Payout fails with a insufficient_funds code. |
+| `TR89370400440532013004` | Payout fails with a debit_not_authorized code. |
+| `TR89370400440532013005` | Payout fails with a invalid_currency code. |
+
+#### Trinidad & Tobago
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `99900001` | `00567890123456789` | Payout succeeds. |
+| `99900001` | `00111111111111116` | Payout fails with a no_account code. |
+| `99900001` | `00111111111111113` | Payout fails with a account_closed code. |
+| `99900001` | `00222222222222227` | Payout fails with a insufficient_funds code. |
+| `99900001` | `00333333333333335` | Payout fails with a debit_not_authorized code. |
+| `99900001` | `00444444444444440` | Payout fails with a invalid_currency code. |
+
+#### Taiwan
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAATWTXXXX` | `0001234567` | Payout succeeds. |
+| `AAAATWTXXXX` | `1111111116` | Payout fails with a no_account code. |
+| `AAAATWTXXXX` | `1111111113` | Payout fails with a account_closed code. |
+| `AAAATWTXXXX` | `2222222227` | Payout fails with a insufficient_funds code. |
+| `AAAATWTXXXX` | `3333333335` | Payout fails with a debit_not_authorized code. |
+| `AAAATWTXXXX` | `4444444440` | Payout fails with a invalid_currency code. |
+
+#### Tanzania
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `AAAATZTXXXX` | `0000123456789` | Payout succeeds. |
+| `AAAATZTXXXX` | `1111111111166` | Payout fails with a no_account code. |
+| `AAAATZTXXXX` | `111111111133` | Payout fails with a account_closed code. |
+| `AAAATZTXXXX` | `2222222222278` | Payout fails with a insufficient_funds code. |
+| `AAAATZTXXXX` | `33333333333569` | Payout fails with a debit_not_authorized code. |
+| `AAAATZTXXXX` | `4444444444440` | Payout fails with a invalid_currency code. |
+
+#### United States
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `110000000` | `000123456789` | Payout succeeds. |
+| `110000000` | `000111111116` | Payout fails with a no_account code. |
+| `110000000` | `000111111113` | Payout fails with a account_closed code. |
+| `110000000` | `000222222227` | Payout fails with a insufficient_funds code. |
+| `110000000` | `000333333335` | Payout fails with a debit_not_authorized code. |
+| `110000000` | `000444444440` | Payout fails with a invalid_currency code. |
+| `110000000` | `000888888883` | Payout fails if method is instant. Bank account is not eligible for Instant Payouts. |
+
+#### Uruguay
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `999` | `000123456789` | Payout succeeds. |
+| `999` | `001111111116` | Payout fails with a no_account code. |
+| `999` | `001111111113` | Payout fails with a account_closed code. |
+| `999` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `999` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `999` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### Uzbekistan
+
+| Account | Type |
+| --- | --- |
+| `99934500012345670024` | Payout succeeds. |
+| `99934500012345670122` | Payout fails with a no_account code. |
+| `99934500012345670220` | Payout fails with a account_closed code. |
+| `99934500012345670328` | Payout fails with a insufficient_funds code. |
+| `99934500012345670426` | Payout fails with a debit_not_authorized code. |
+| `99934500012345670523` | Payout fails with a invalid_currency code. |
+
+#### Vietnam
+
+| Routing | Account | Type |
+| --- | --- | --- |
+| `01101100` | `000123456789` | Payout succeeds. |
+| `01101100` | `001111111116` | Payout fails with a no_account code. |
+| `01101100` | `001111111113` | Payout fails with a account_closed code. |
+| `01101100` | `002222222227` | Payout fails with a insufficient_funds code. |
+| `01101100` | `003333333335` | Payout fails with a debit_not_authorized code. |
+| `01101100` | `004444444440` | Payout fails with a invalid_currency code. |
+
+#### South Africa
+
+| SWIFT / BIC Code | Account | Type |
+| --- | --- | --- |
+| `ZAZAZAZAXXX` | `000001234` | Payout succeeds. |
+| `ZAZAZAZAXXX` | `000011116` | Payout fails with a no_account code. |
+| `ZAZAZAZAXXX` | `000011113` | Payout fails with a account_closed code. |
+| `ZAZAZAZAXXX` | `000022227` | Payout fails with a insufficient_funds code. |
+| `ZAZAZAZAXXX` | `000033335` | Payout fails with a debit_not_authorized code. |
+| `ZAZAZAZAXXX` | `000044440` | Payout fails with a invalid_currency code. |
+
+### デビットカード番号
+
+以下のテスト用のデビットカード番号を使用して、デビットカードへの入金をテストします。これらのカード番号は、テスト API キーとのみ併用できます。
+
+#### アメリカ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000056655665556 | `tok_visa_debit_us_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000056655665572 | `tok_visa_debit_us_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000056755665555 | `tok_visa_debit_us_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5200828282828210 | `tok_mastercard_debit_us_transferSuccess` | Mastercard デビット。入金は成功します。 |
+| 6011981111111113 | `tok_discover_debit_us_transferSuccess` | Discover デビット。入金は成功します。 |
+
+#### カナダ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000051240000005 | `tok_visa_debit_ca_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000051240000021 | `tok_visa_debit_ca_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000051240000039 | `tok_visa_debit_ca_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5510121240000006 | `tok_mastercard_debit_ca_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### シンガポール
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000057020000008 | `tok_visa_debit_sg_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000057020000016 | `tok_visa_debit_sg_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000057020000024 | `tok_visa_debit_sg_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 2227200000000009 | `tok_mastercard_debit_sg_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### オーストラリア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000050360000019 | `tok_visa_debit_au_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000050360000027 | `tok_visa_debit_au_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000050360000035 | `tok_visa_debit_au_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 4000000360000006 | `tok_visa_credit_au` | Visa クレジット。カードがサポートされていません (無効なカードタイプ)。 |
+| 5555050360000023 | `tok_mastercard_debit_au_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### アラブ首長国連邦
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000057840000006 | `tok_visa_debit_ae_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000057840000014 | `tok_visa_debit_ae_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000057840000022 | `tok_visa_debit_ae_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 4000007840000006 | `tok_visa_credit_ae` | Visa クレジット。カードがサポートされていません (無効なカードタイプ)。 |
+| 5555057840000002 | `tok_mastercard_debit_ae_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### イギリス
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000058260000203 | `tok_visa_debit_gb_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000058260000211 | `tok_visa_debit_gb_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000058260000229 | `tok_visa_debit_gb_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555058260000100 | `tok_mastercard_debit_gb_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### オーストリア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000050400000003 | `tok_visa_debit_at_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000050400000011 | `tok_visa_debit_at_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000050400000029 | `tok_visa_debit_at_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555050400000009 | `tok_mastercard_debit_at_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ベルギー
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000050560000009 | `tok_visa_debit_be_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000050560000017 | `tok_visa_debit_be_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000050560000025 | `tok_visa_debit_be_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555050560000005 | `tok_mastercard_debit_be_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### クロアチア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000051910000004 | `tok_visa_debit_hr_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000051910000012 | `tok_visa_debit_hr_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000051910000020 | `tok_visa_debit_hr_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555051910000000 | `tok_mastercard_debit_hr_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### キプロス
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000051960000003 | `tok_visa_debit_cy_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000051960000011 | `tok_visa_debit_cy_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000051960000029 | `tok_visa_debit_cy_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555051960000009 | `tok_mastercard_debit_cy_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### エストニア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000052330000004 | `tok_visa_debit_ee_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000052330000012 | `tok_visa_debit_ee_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000052330000020 | `tok_visa_debit_ee_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555052330000000 | `tok_mastercard_debit_ee_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### フィンランド
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000052460000006 | `tok_visa_debit_fi_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000052460000014 | `tok_visa_debit_fi_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000052460000022 | `tok_visa_debit_fi_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555052460000002 | `tok_mastercard_debit_fi_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### フランス
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000052500000008 | `tok_visa_debit_fr_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000052500000016 | `tok_visa_debit_fr_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000052500000024 | `tok_visa_debit_fr_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555052500000004 | `tok_mastercard_debit_fr_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ドイツ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000052760000037 | `tok_visa_debit_de_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000052760000011 | `tok_visa_debit_de_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000052760000029 | `tok_visa_debit_de_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555052760000009 | `tok_mastercard_debit_de_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ギリシャ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000053000000001 | `tok_visa_debit_gr_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000053000000019 | `tok_visa_debit_gr_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000053000000027 | `tok_visa_debit_gr_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555053000000007 | `tok_mastercard_debit_gr_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### アイルランド
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000053720000000 | `tok_visa_debit_ie_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000053720000018 | `tok_visa_debit_ie_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000053720000026 | `tok_visa_debit_ie_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555053720000006 | `tok_mastercard_debit_ie_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### イタリア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000053800000037 | `tok_visa_debit_it_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000053800000011 | `tok_visa_debit_it_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000053800000029 | `tok_visa_debit_it_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555053800000009 | `tok_mastercard_debit_it_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ラトビア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000054280000000 | `tok_visa_debit_lv_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000054280000018 | `tok_visa_debit_lv_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000054280000026 | `tok_visa_debit_lv_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555054280000006 | `tok_mastercard_debit_lv_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### リトアニア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000054400000005 | `tok_visa_debit_lt_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000054400000013 | `tok_visa_debit_lt_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000054400000021 | `tok_visa_debit_lt_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555054400000001 | `tok_mastercard_debit_lt_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ルクセンブルク
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000054420000001 | `tok_visa_debit_lu_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000054420000019 | `tok_visa_debit_lu_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000054420000027 | `tok_visa_debit_lu_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555054420000007 | `tok_mastercard_debit_lu_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### マルタ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000054700000002 | `tok_visa_debit_mt_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000054700000010 | `tok_visa_debit_mt_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000054700000028 | `tok_visa_debit_mt_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555054700000008 | `tok_mastercard_debit_mt_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### オランダ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000055280000007 | `tok_visa_debit_nl_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000055280000015 | `tok_visa_debit_nl_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000055280000023 | `tok_visa_debit_nl_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555055280000003 | `tok_mastercard_debit_nl_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ポルトガル
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000056200000002 | `tok_visa_debit_pt_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000056200000010 | `tok_visa_debit_pt_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000056200000028 | `tok_visa_debit_pt_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555056200000008 | `tok_mastercard_debit_pt_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### スロバキア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000057030000006 | `tok_visa_debit_sk_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000057030000014 | `tok_visa_debit_sk_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000057030000022 | `tok_visa_debit_sk_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555057030000002 | `tok_mastercard_debit_sk_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### スロベニア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000057050000001 | `tok_visa_debit_si_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000057050000019 | `tok_visa_debit_si_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000057050000027 | `tok_visa_debit_si_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555057050000007 | `tok_mastercard_debit_si_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### スペイン
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000057240000036 | `tok_visa_debit_es_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000057240000010 | `tok_visa_debit_es_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000057240000028 | `tok_visa_debit_es_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555057240000008 | `tok_mastercard_debit_es_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### デンマーク
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000052080000006 | `tok_visa_debit_dk_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000052080000014 | `tok_visa_debit_dk_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000052080000022 | `tok_visa_debit_dk_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555052080000002 | `tok_mastercard_debit_dk_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### マレーシア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000054580000031 | `tok_visa_debit_my_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000054580000015 | `tok_visa_debit_my_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000054580000023 | `tok_visa_debit_my_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555054580000003 | `tok_mastercard_debit_my_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ニュージーランド
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000055540000003 | `tok_visa_debit_nz_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000055540000011 | `tok_visa_debit_nz_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000055540000029 | `tok_visa_debit_nz_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555055540000165 | `tok_mastercard_debit_nz_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ノルウェー
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000055780000002 | `tok_visa_debit_no_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000055780000010 | `tok_visa_debit_no_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000055780000028 | `tok_visa_debit_no_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555055780000008 | `tok_mastercard_debit_no_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### スウェーデン
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000057520000003 | `tok_visa_debit_se_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000057520000011 | `tok_visa_debit_se_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000057520000029 | `tok_visa_debit_se_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555057520000009 | `tok_mastercard_debit_se_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### チェコ
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000052030000007 | `tok_visa_debit_cz_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000052030000015 | `tok_visa_debit_cz_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000052030000023 | `tok_visa_debit_cz_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555052030000003 | `tok_mastercard_debit_cz_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ハンガリー
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000053480000000 | `tok_visa_debit_hu_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000053480000018 | `tok_visa_debit_hu_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000053480000026 | `tok_visa_debit_hu_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555053480000006 | `tok_mastercard_debit_hu_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ポーランド
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000056160000000 | `tok_visa_debit_pl_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000056160000018 | `tok_visa_debit_pl_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000056160000026 | `tok_visa_debit_pl_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555056160000006 | `tok_mastercard_debit_pl_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+#### ルーマニア
+
+| 数字 | トークン | タイプ |
+| --- | --- | --- |
+| 4000056420000030 | `tok_visa_debit_ro_transferSuccess` | Visa デビット。入金は成功します。 |
+| 4000056420000014 | `tok_visa_debit_ro_transferFail` | Visa デビット。入金は `could_not_process` コードで失敗します。 |
+| 4000056420000022 | `tok_visa_debit_ro_instantPayoutUnsupported` | Visa デビット。このカードは Instant Payouts の利用対象ではありません。 |
+| 5555056420000002 | `tok_mastercard_debit_ro_transferSuccess` | Mastercard デビット。入金は成功します。 |
+
+## 地域別の事業者をシミュレーション
+
+事前定義された架空の企業情報および個人情報のセットを使用して、地域の要件に基づいたさまざまな本人確認結果をシミュレートします。以下を実行できます。
+
+- 会社名、住所、納税者番号の確認をシミュレーション
+- 取締役とオーナーの本人確認プロセスのテスト
+- さまざまな所有構造と関係タイプを試す
+
+### シンガポール
+
+サンプル事業を使用するには、サンドボックスで連結アカウントを作成または更新する際に、対応する [company.tax_id](https://docs.stripe.com/api/accounts/create.md#create_account-company-tax_id) として、以下に記載された UEN を指定します。Stripe は、本人確認プロセスのために、そのサンプルに関連付けられた事前定義された架空の情報を返します。
+
+#### Aspen PTE LTD – 2 人の株主を持つ非公開会社
+
+以下の関係者の詳細をテストするには、`180100002M` を使用します。
+
+| 氏名 | ID 番号 | 所有割合 | 役職 |
+| --- | --- | --- | --- |
+| MOHAMMAD ALI BIN MOHAMMAD RAFI 氏 | S0000001A | 30.0 | - 管理者
+- 取締役 |
+| TEO WEI MING 氏 | S0000002A | 70.0 |  |
+| RAJESH KUMAR 氏 | T0000003C |  | 取締役 |
+| LI GUO HAO 氏 | S0290695C |  | 取締役 |
+
+#### Birch PTE LTD – 主要株主がいない非公開会社
+
+以下の関係者の詳細をテストするには、`180100001C` を使用します。
+
+| 氏名 | ID 番号 | 所有割合 | 役職 |
+| --- | --- | --- | --- |
+| TAN MEI LING | S0000004D | 20.0 | - 管理者
+- 取締役 |
+| NUR AIN BINTI MUHAMMAD | S0000005E | 20.0 | - 管理者
+- 取締役 |
+| PRIYA RANI | S0000006F | 20.0 |  |
+| SITI AISYAH BINTI ISMAIL | S0000007G | 20.0 |  |
+| CHAN MIN QI | S0000008H | 20.0 |  |
+| AHMAD BIN SALLEH | S0000009I |  | 取締役 |
+
+#### Oak Innovations PTE LTD – 複雑な株主構成の非公開会社
+
+下の関係者の詳細をテストするには、`180100005E` を使用します。
+
+| 氏名 | ID 番号 | 所有割合 | 役職 |
+| --- | --- | --- | --- |
+| LLAMA ALPACA | G0000010X |  | 管理者 |
+| SHEEP GOAT | F0000020Z |  | 取締役 |
+| COW WHALE | F0000030I |  | 管理者 |
+| KOMODO | F0000040J |  | 取締役 |
+| CASUARINA EUROPE, LIMITED | R01UF0001D | 100.0 |  |
+
+#### Society for the Promotion of Llama Welfare – 登録慈善団体として分類される協会
+
+以下の関係者の詳細をテストするには、`R01SS0001A` を使用します。
+
+| 氏名 | ID 番号 | 所有割合 | 役職 |
+| --- | --- | --- | --- |
+| LLAMA ALPACA |  |  | 取締役 |
+| WEASEL BEAVER |  |  | 取締役 |
+
+#### Cypress PTE LTD – カスタム定款を持つ (標準定款ではない) 非公開会社
+
+以下の関係者の詳細をテストするには、`180100013R` を使用します。
+
+| 氏名 | ID 番号 | 所有割合 | 役職 |
+| --- | --- | --- | --- |
+| WONG KAI MING | S0000024R | 60.0 | - 管理者
+- 取締役 |
+| AISHA BINTE HASSAN | S0000025M | 40.0 |  |
