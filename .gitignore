@@ -1,2 +1,10 @@
 # 公開提出文書の原本と抽出本文はローカル保存する
 /research/disclosures/raw/
+
+# 再生成可能なPII検知用の架空画像・正解・測定結果
+/artifacts/pii-light-images/
+/artifacts/pii-light-images-ocr.json
+
+/artifacts/pii-light/
+
+/artifacts/pii-light-checks/
