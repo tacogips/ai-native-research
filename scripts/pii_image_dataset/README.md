@@ -53,10 +53,21 @@ npm ci --prefix scripts/pii_image_dataset
 .venv/bin/python scripts/pii_image_dataset/build.py \
   --output /任意の新しい保存先/pii-light \
   --font /日本語フォントの保存先/font.ttf \
+  --xlsx-engine xlsxwriter \
   --sheetjs-module scripts/pii_image_dataset/node_modules/xlsx
 ```
 
 出力先は新しいディレクトリを指定します。存在する保存先の上書きはしません。乱数の初期値は`--seed`で変更でき、既定値は`20261113`です。日本語を表示できるフォントを使用してください。
+
+通常のXLSXを作る処理は`--xlsx-engine`で指定します。公開された依存だけで作る場合は、上の例のように`xlsxwriter`を指定してください。`build.py`と、生成済み画像から続ける`generate_all.py`の両方で指定できます。
+
+| 指定値 | 動作 |
+|---|---|
+| `auto`（既定） | 利用可能ならArtifact Toolを使い、利用できなければXlsxWriterを使う従来の選択。環境によって作成器が変わる |
+| `xlsxwriter` | 常にXlsxWriterを使う。Artifact Toolがあっても呼び出さない |
+| `artifact` | Artifact Toolを使う。利用できなければ明示的に失敗し、XlsxWriterへ切り替えない |
+
+`generation.json`の`xlsx_engine.requested`と`xlsx_engine.actual`に要求値と実際の選択を保存します。作成器の版は`baseline_xlsx_author`へ記録します。この指定は通常XLSXに対するもので、特殊な保存条件の資料は従来どおり専用の生成処理を使います。
 
 ```text
 pii-light/
@@ -100,6 +111,8 @@ PII_XLSX_MODULE=scripts/pii_image_dataset/node_modules/xlsx \
 ## 再現性の範囲と保存する条件
 
 このLIGHT生成器は、[385資料のv3 TXT生成器](../workspace_dlp_benchmark/extended/README.md#同じデータセットを再生成する)とは別のデータセット。同じ生成器・乱数の初期値だけで、過去の全ファイルのバイト一致までは保証しない。日本語フォントの実ファイル、PythonとNode.jsの版、`requirements-all.txt`、`package-lock.json`、外部の`zip`、利用するOffice生成処理が影響する。フォント自体はリポジトリへ同梱しないため、同じフォントを別途確保する必要がある。
+
+通常XLSXの作成器も同じに固定します。`auto`は環境依存であり、`xlsxwriter`指定の生成物が過去のArtifact Toolによる生成物とバイト一致する保証はありません。作成器の明示と依存の固定は再生成条件を明らかにするもので、LIGHT全体の過去のバイト再現を完了したという意味ではありません。
 
 再生成では`--seed 20261113`、同一のフォント（SHA-256で確認）、依存の固定ファイル、`generation.json`の生成元・作成器の記録をそろえる。外部ツールの版と生成時のコマンドも、比較対象の保存物と一緒に残す。保存先の構造は上記の`drive_upload`・`ground_truth`・`automation`を維持し、空ディレクトリも保持する。
 

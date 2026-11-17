@@ -13,13 +13,15 @@ import generate
 import generate_all
 
 
-def main():
+def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--font',type=Path,required=True)
     parser.add_argument('--seed',type=int,default=20261113)
+    parser.add_argument('--xlsx-engine',choices=['auto','xlsxwriter','artifact'],default='auto',
+                        help='通常XLSXの作成器。autoは利用可能ならArtifact Toolを使います')
     parser.add_argument('--sheetjs-module',type=Path,help='インストール済みxlsxモジュールのパス')
-    args=parser.parse_args()
+    args=parser.parse_args(argv)
     if args.output.exists():parser.error('新しい出力先を指定してください')
     if not args.font.is_file():parser.error('日本語フォントが存在しません')
     if args.sheetjs_module:os.environ['PII_XLSX_MODULE']=str(args.sheetjs_module.resolve())
@@ -33,7 +35,8 @@ def main():
     with tempfile.TemporaryDirectory(prefix='pii-light-build-') as folder:
         images=Path(folder)/'images'
         generate.generate(images,args.font,args.seed)
-        generate_all.main(SimpleNamespace(images=images,output=args.output,font=args.font))
+        generate_all.main(SimpleNamespace(images=images,output=args.output,font=args.font,
+                                         xlsx_engine=args.xlsx_engine))
     print('生成完了。verify_all.py・verify_media.py・形式対応表の検証を続けてください。')
 
 

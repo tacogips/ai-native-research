@@ -76,3 +76,7 @@ Drive Labels APIの有効化、OAuthの許可範囲、管理者権限はそれ�
 ## 再検査の観測
 
 DLP内部で文書を2回検査する場合があることと、検証側で複数回観測することは別である。内部の1回目・2回目の詳細な判定処理や両者の同一性は、確認した[公式説明](https://knowledge.workspace.google.com/admin/security/about-dlp-for-drive)に記載されていない。異なる可能性は仮説にとどめる。監査上の2イベントを内部の2回の検査と断定しない。
+
+公開仕様の確認（2026年11月17日）：規則監査の `scan_type` は検査モードを表す。`DRIVE_ONLINE_SCAN` は変更された単一のDrive項目に対する評価、`DRIVE_OFFLINE_SCAN` は更新された規則をDrive項目全体へ評価するモードである。この区分から内部の検査回数、1回目・2回目の判定処理、全対象の完了は分からない。値がない記録は不明として残す。[規則監査イベントの公式仕様](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/rules)
+
+少数資料の観測では、`eventName=content_matched` と `filters=resource_id==<FILE_ID>` でファイル単位の取得を設計できる。ページを最後まで取得し、返却された全イベントの種類・ファイル識別子・顧客・時刻を照合する。不正な絞り込み条件は無視される場合があるため、記録がある既知の対照で絞り込みを確認する。空の結果だけでは条件の有効性や陰性を証明できない。これは公開仕様に基づく観測設計であり、既存の採点処理を変更するものではない。[activities.listの公式仕様](https://developers.google.com/workspace/admin/reports/reference/rest/v1/activities/list)

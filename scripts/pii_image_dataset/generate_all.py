@@ -34,6 +34,36 @@ from generate import digest, dump
 PASSWORD = 'DlpTest-2026'
 
 
+def select_xlsx_engine(rows, root, font, requested='auto'):
+    """通常XLSXの作成器を選ぶ。明示指定で別の作成器へ切り替えない。"""
+    if requested not in ('auto', 'xlsxwriter', 'artifact'):
+        raise ValueError('XLSX作成器はauto・xlsxwriter・artifactから指定してください')
+    authored = False
+    if requested != 'xlsxwriter':
+        from artifact_xlsx import author
+        authored = author(rows, root, font)
+    if authored:
+        return {'requested': requested, 'actual': 'artifact', 'author': authored}
+    if requested == 'artifact':
+        raise RuntimeError('Artifact Toolを利用できません。artifact指定では代替の作成器を使いません')
+    name = 'XlsxWriter (Artifact Tool unavailable)' if requested == 'auto' else 'XlsxWriter'
+    return {'requested': requested, 'actual': 'xlsxwriter',
+            'author': {'engine': name, 'version': xlsxwriter.__version__}}
+
+
+def generation_metadata(image_source, file_count, selected):
+    """作成器の要求値と実際の選択を、既存の生成記録へ追加する。"""
+    return {'schema':2, 'scope':'LIGHT全形式・条件の作成中', 'image_source':image_source,
+            'files':file_count,
+            'generator_sha256':{p.name:digest(p) for p in Path(__file__).parent.iterdir()
+                                if p.is_file() and (p.suffix in ['.py','.cjs','.mjs','.gs']
+                                or p.name.startswith(('requirements','package')) or p.name=='appsscript.json')},
+            'baseline_xlsx_author':selected['author'],
+            'xlsx_engine':{'requested':selected['requested'], 'actual':selected['actual']},
+            'format_sampling':'全資料群から2元文書ずつ・陽性陰性同数',
+            'capacity_target_bytes':600_000_000, 'capacity_allowed_bytes':660_000_000}
+
+
 def main(args):
     from pdf_fonts import configure
     configure(args.font)
@@ -75,8 +105,8 @@ def main(args):
         negatives += [r for r in source if not r['positive'] and r['source_id'] not in used][:len(positives)-len(negatives)]
         picked=positives+negatives
     coverage = []
-    from artifact_xlsx import author as author_xlsx
-    artifact_xlsx_used=author_xlsx(picked,root,args.font)
+    xlsx_selection=select_xlsx_engine(picked,root,args.font,getattr(args,'xlsx_engine','auto'))
+    artifact_xlsx_used=xlsx_selection['actual']=='artifact'
 
     def register(path, row, fmt, condition='本文', members=None):
         from canonical import normalize_package, normalize_zip
@@ -138,7 +168,7 @@ def main(args):
         p = dest('office', sid + '.docx'); d.save(p); register(p, row, 'DOCX')
         p = dest('office', sid + '.xlsx')
         if not artifact_xlsx_used:
-            # Artifact Toolのない再実行環境のみ、公開ライブラリへ切り替える。
+            # 通常XLSXの作成器にXlsxWriterが選ばれた場合は、ここで作成する。
             w = xlsxwriter.Workbook(p)
             w.set_properties({'author': '', 'created': __import__('datetime').datetime(2000,1,1)})
             ws = w.add_worksheet('内容'); ws.set_column(0, 0, 100)
@@ -252,7 +282,8 @@ def main(args):
         record['content_sha256']=content_digest(p.read_bytes(),p.name,record['format'])
     dump(truth/'files.json',records)
     dump(truth/'coverage.json',coverage)
-    dump(out/'generation.json', {'schema':2,'scope':'LIGHT全形式・条件の作成中','image_source':json.loads((args.images/'generation.json').read_text()),'files':len(records),'generator_sha256':{p.name:digest(p) for p in Path(__file__).parent.iterdir() if p.is_file() and (p.suffix in ['.py','.cjs','.mjs','.gs'] or p.name.startswith(('requirements','package')) or p.name=='appsscript.json')},'baseline_xlsx_author':artifact_xlsx_used or {'engine':'XlsxWriter (Artifact Tool unavailable)','version':xlsxwriter.__version__},'format_sampling':'全資料群から2元文書ずつ・陽性陰性同数','capacity_target_bytes':600_000_000,'capacity_allowed_bytes':660_000_000})
+    dump(out/'generation.json', generation_metadata(
+        json.loads((args.images/'generation.json').read_text()),len(records),xlsx_selection))
     from sheets_bundle import write as write_sheets_bundle
     write_sheets_bundle(out)
     from coverage import audit as audit_coverage
@@ -263,10 +294,16 @@ def main(args):
     print(json.dumps({'files':len(records),'bytes':total},ensure_ascii=False))
 
 
-if __name__=='__main__':
+def parse_args(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--images',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--font',type=Path,required=True)
     p.add_argument('--exhaustive-formats',action='store_true',help='全32分類を各形式へ展開する追加試験。LIGHTでは既定で無効')
-    main(p.parse_args())
+    p.add_argument('--xlsx-engine',choices=['auto','xlsxwriter','artifact'],default='auto',
+                   help='通常XLSXの作成器。artifact指定で利用できなければ停止')
+    return p.parse_args(argv)
+
+
+if __name__=='__main__':
+    main(parse_args())
