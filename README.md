@@ -54,6 +54,16 @@
 
 [Google Workspace DLPのCLI取得とAPI仕様](research/technology/google_workspace_dlp_cli_api_deep_dive_20261111.md)。gwsで取得する規則監査記録、Policy APIの設定取得・変更、Alert Center APIの警告を区別。固定版コードの対応範囲、原文抜粋の上限、公式FAQと現行API仕様の不整合、フォルダーと属性による許可判定の構成案を整理した。[出典確認記録](research/technology/google_workspace_dlp_cli_api_sources_20261111.json)。
 
+[Google Driveの分類ラベルとフィールド](research/technology/google_drive_classification_labels_20261116.md)。ラベル数・フィールド数の上限、DLP規則で条件・動作に使える型、規則が付けた値の上書き・競合・無効化時の扱い、`files.modifyLabels`によるフィールド単位の変更と検索構文、運用設計で決める事項を整理した。
+
+[要配慮個人情報・本人確認書類・認証情報・音声映像の検知用データセット拡張設計](research/technology/pii_dlp_sensitive_category_dataset_extension_20261116.md)。LIGHTの現状を項目別に集計し、要配慮11区分の値・文脈・境界例、保険情報・在留カード・資産・勤務先・パスワードと一方向変換値、合成顔・音声・映像の存在検知を設計。実在者の本人識別、生体特徴量の符号、実物同等の証明書画像等の難しい項目と代替策を分けた。
+
+[Workspace DLP拡張版データセット（v3）の検知能力とローカル検査](research/technology/workspace_dlp_v3_extended_detection_report_20261116.md)。31項目を標準検知器・独自正規表現・本文検査不可に分け、8グループの分類ラベル設計と、RE2による独自正規表現のローカル検査結果を報告。見出し依存の見逃し、空欄帳票の誤検知、日本語の語句一覧の一致方法の不確実性を示した。標準検知器は実環境で未測定。
+
+[Google Cloud SDPの検知種類と海外の識別番号の模擬データ作成の検討](research/technology/sdp_and_foreign_identifier_mock_data_feasibility_20261116.md)。指定項目のSDPでの対応、国別の社会保険・税・国民識別番号、検査数字の算式による模擬データの作成可否と、未発行の保証・日本語文書での動作という難点を整理した。
+
+[企業の機密データ検知・管理の取り組み事例](research/technology/enterprise_sensitive_data_detection_case_studies_20261116.md)。国内13件、海外の自社構築11件、ベンダー公開の顧客事例14件、事故・行政処分8件を整理。事故の多くは共有範囲の放置が原因であること、誤検知を文脈で補う手法、検知と確定の分離、少段階で安全側の既定ラベル、生成AI導入前の過剰共有是正、段階的導入を横断的な傾向として示し、Google Workspaceの設計への示唆をまとめた。
+
 [機密情報検知サービスのAPI対応比較](research/technology/dlp_related_services_api_matrix_20261111.md)。BigIDを含む16の製品・機能系統について、検知一覧・検出値・設定変更・人の判定・通知抑制・再検査を比較。Drive接続と外部向け管理API、判定の終了と将来抑制、受付成功と検査完了を区別した。[出典確認記録](research/technology/dlp_related_services_api_sources_20261111.json)。[BigIDの追加精査](research/technology/bigid_dlp_api_constraints_20261111.md)では、資産一覧の1万件打切り、問題の抑制と業務許可、検査停止と正常完了、日本語・形式別の未確認事項を整理した。
 
 [ストレージ等を監視し、Sentryのように警告するシステムの比較](research/technology/telescreen_related_systems_20261009.md)。S3等のオブジェクト保存、ファイル共有、データベース、業務クラウドを含めて調査。50行の製品・機構・部品・参考を整理し、内容分類とアクセス方針、問題集約、担当、修正後再検査、再発、原文の処理・保持を比較した。独立企業50社や実測精度順位を意味しない。[比較CSV](research/technology/telescreen_related_systems_comparison_20261009.csv)、[JSON](research/technology/telescreen_related_systems_comparison_20261009.json)、[レビュー記録](research/technology/telescreen_related_review_summary_20261009.md)。

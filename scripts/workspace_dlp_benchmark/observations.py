@@ -112,8 +112,12 @@ def convert(manifest, raw):
                   if p['setting']['type'] == 'settings/rule.dlp']
     if len(rule_names) != len(set(rule_names)):
         raise ValueError('規則名が重複しており旧監査形式と一意に結べません')
+    v3_standard, v3_standard_reference = None, None
+    if manifest.get('benchmark') == 'v3-extended':
+        from extended.audit import standard_mapping
+        v3_standard, v3_standard_reference = standard_mapping(manifest)
     profiles, rows = manifest['profiles'], []
-    if len({(p['kind'], p['threshold']) for p in profiles}) != len(profiles):
+    if len({(p['kind'], p['threshold'], p.get('configuration')) for p in profiles}) != len(profiles):
         raise ValueError('規則列が重複しています')
     files = manifest['files']
     if len({f['case_id'] for f in files}) != len(files) or len({f['file_id'] for f in files}) != len(files):
@@ -152,7 +156,13 @@ def convert(manifest, raw):
                 raise ValueError('肯定・否定・対照には異なる規則が必要です')
             rule_records = []
             from rules import expected_conditions
-            conditions = expected_conditions(profile)
+            if manifest.get('benchmark') == 'v3-extended':
+                from extended.audit import expected_conditions as v3_conditions
+                conditions = v3_conditions(profile, policy_index, v3_standard)
+            else:
+                if profile.get('configuration') is not None or profile.get('benchmark') is not None:
+                    raise ValueError('拡張構成にはv3の実行対応表が必要です')
+                conditions = expected_conditions(profile)
             for role_name, role in roles.items():
                 policy = policy_index.get(role['id'])
                 if not policy or object_digest(policy) != role['policy_sha256']:
@@ -178,20 +188,11 @@ def convert(manifest, raw):
                     or value.get('triggers') != ['google.workspace.drive.file.v1.share']):
                     raise ValueError('対象・否定・対照の定義が試験の意味と一致しません')
                 rule_records.append(policy)
-            if roles['head']['detector_id'] == roles['tail']['detector_id']:
-                raise ValueError('先頭と末尾には異なる対照検知器が必要です')
+            from controls import validate_wordlist_controls
+            control_words = validate_wordlist_controls(roles, policy_index, rule_records[0])
             for edge in ('head', 'tail'):
-                role = roles[edge]
-                detector = policy_index.get(role['detector_id'])
-                if (not detector or object_digest(detector) != role.get('detector_sha256')
-                    or detector['setting']['type'] != 'settings/detector.word_list'
-                    or detector['policyQuery'] != rule_records[0]['policyQuery']
-                    or detector.get('customer') != rule_records[0].get('customer')):
-                    raise ValueError('対照検知器の全文・範囲が一致しません')
-                words = detector['setting']['value'].get('wordList', {}).get('words', [])
                 marker = file.get('scan_control', {}).get(edge + '_token')
-                if (not marker or marker not in words or len(set(words)) != len(words)
-                    or len(words) > 950 or any(len(w) > 40 for w in words)):
+                if not isinstance(marker, str) or not marker or marker not in control_words[edge]:
                     raise ValueError('資料の一意な対照語と検知器定義が一致しません')
             queries = [p['policyQuery'] for p in rule_records]
             if any(q != queries[0] for q in queries):
@@ -249,10 +250,13 @@ def convert(manifest, raw):
                 'trigger': trigger, 'first_record_at': min(timings).isoformat() if timings else None,
                 'detection_delay_seconds': (first_positive-triggered_at).total_seconds() if first_positive else None,
                 'collection_fetched_at': collection['fetched_at'],
-                'scan_version_directly_observed': False})
+                'scan_version_directly_observed': False,
+                **({'configuration': profile['configuration']} if manifest.get('benchmark') == 'v3-extended' else {})})
     return {'schema_version': 2, 'profiles': profiles, 'rows': rows,
             'method': '対照・肯定/否定・前後設定/本文読戻しに依存する条件付き観測',
-            'raw_page_count': len(pages)}
+            'raw_page_count': len(pages),
+            **({'standard_detector_map': v3_standard_reference}
+               if manifest.get('benchmark') == 'v3-extended' else {})}
 
 
 def import_audit(dataset, raw, manifest_path, output, truth_profile=None):
@@ -261,7 +265,13 @@ def import_audit(dataset, raw, manifest_path, output, truth_profile=None):
     manifest = read_json(private_path(manifest_path))
     if truth_profile:
         private_path(truth_profile)
-    truth, truth_path = load_truth(dataset, read_json(truth_profile) if truth_profile else None)
+    if manifest.get('benchmark') == 'v3-extended':
+        if truth_profile:
+            raise ValueError('v3の正解行列を旧形式の対応表で変更しません')
+        from extended.evaluation import load_truth as load_v3_truth
+        truth, truth_path = load_v3_truth(dataset)
+    else:
+        truth, truth_path = load_truth(dataset, read_json(truth_profile) if truth_profile else None)
     files = {f['case_id']: f for f in manifest['files']}
     if set(files) != {r['case_id'] for r in truth}:
         raise ValueError('実行対応表が正解の全ファイルを含んでいません')

@@ -97,6 +97,21 @@ PII_XLSX_MODULE=scripts/pii_image_dataset/node_modules/xlsx \
 
 同じ設定で再生成し、通常の文字・画像・Office等はバイト単位で比較します。暗号化の乱数や書庫の内部時刻による差は、復号後の値・項目・保護条件を比較します。ファイルのバイト差と内容差を混同しません。
 
+## 再現性の範囲と保存する条件
+
+このLIGHT生成器は、[385資料のv3 TXT生成器](../workspace_dlp_benchmark/extended/README.md#同じデータセットを再生成する)とは別のデータセット。同じ生成器・乱数の初期値だけで、過去の全ファイルのバイト一致までは保証しない。日本語フォントの実ファイル、PythonとNode.jsの版、`requirements-all.txt`、`package-lock.json`、外部の`zip`、利用するOffice生成処理が影響する。フォント自体はリポジトリへ同梱しないため、同じフォントを別途確保する必要がある。
+
+再生成では`--seed 20261113`、同一のフォント（SHA-256で確認）、依存の固定ファイル、`generation.json`の生成元・作成器の記録をそろえる。外部ツールの版と生成時のコマンドも、比較対象の保存物と一緒に残す。保存先の構造は上記の`drive_upload`・`ground_truth`・`automation`を維持し、空ディレクトリも保持する。
+
+二組の生成物を比較する手順は次のとおり。暗号化の乱数等によるバイト差は、復号後の内容と構造の比較へ分けて報告する。
+
+```sh
+.venv/bin/python scripts/pii_image_dataset/verify_repro.py \
+  --first /一組目/pii-light --second /二組目/pii-light
+```
+
+この比較は`ground_truth/files.json`が列挙したファイルと、指定した正解・条件のJSONが対象で、余分な未列挙ファイルを含む全保存物の完全一致を証明するものではない。Google上の資料ID・共有状態・Google Sheetsへの変換結果はローカル生成とは別に確認する。今回の再現性整備ではLIGHT全体の再生成・描画・復号比較は実行していない。
+
 ## Google Drive・Google Sheets
 
 `google_drive.py`は既定では作成計画だけを表示します。APIで実作成する場合は、利用可能なGoogle認証と試験先が必要です。

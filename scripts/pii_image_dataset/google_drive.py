@@ -39,7 +39,8 @@ def outside_repository(path):
     return path
 
 
-def scope_configuration(path):
+def scope_configuration(path, *, allow_inactive_rules=False):
+    if type(allow_inactive_rules) is not bool:raise ValueError('未有効規則の許可は明示的な真偽値が必要です')
     if path is None:raise ValueError('作成前に --scope-evidence で所有者と規則範囲の確認証跡を指定してください')
     path=outside_repository(path);raw=path.read_bytes();config=json.loads(raw)
     if config.get('schema_version')!=1:raise ValueError('scope-evidenceのschema_versionは1が必要です')
@@ -63,16 +64,24 @@ def scope_configuration(path):
     target=config['creator_email'] if target_kind=='user' else config['shared_drive_id']
     checks=saved.get('rule_scope_checks',[])
     if not isinstance(checks,list):raise ValueError('規則ごとの範囲確認が必要です')
+    rule_states=[]
     for rule in rules:
         matches=[item for item in checks if item.get('rule_id')==rule]
         if len(matches)!=1:raise ValueError('規則ごとの適用証跡が一意ではありません')
         item=matches[0]
-        if item.get('active') is not True or item.get('service')!='drive' or item.get('matches') is not True:raise ValueError('有効なDrive規則の適用範囲一致を確認してください')
+        active=item.get('active')
+        if (type(active) is not bool or (not active and not allow_inactive_rules)
+                or item.get('service')!='drive' or item.get('matches') is not True):raise ValueError('有効なDrive規則の適用範囲一致を確認してください')
+        rule_states.append({'rule_id':rule,'active':active})
         actual_target=item.get('target_id')
         same_target=isinstance(actual_target,str) and (actual_target.casefold()==target.casefold() if target_kind=='user' else actual_target==target)
         if item.get('target_kind')!=target_kind or not same_target:raise ValueError('規則の適用主体が所有者または共有ドライブと違います')
         if item.get('scope_kind') not in {'organization','org_unit','group'} or not item.get('scope_id') or not item.get('basis'):raise ValueError('組織・組織部門・グループのどの読戻しを根拠にしたか必要です')
-    return config,{'path':str(path),'sha256':hashlib.sha256(raw).hexdigest(),'readback_path':str(evidence),'readback_sha256':hashlib.sha256(payload).hexdigest(),'verified_at':saved['verified_at'],'rule_ids':rules}
+    binding={'path':str(path),'sha256':hashlib.sha256(raw).hexdigest(),'readback_path':str(evidence),'readback_sha256':hashlib.sha256(payload).hexdigest(),'verified_at':saved['verified_at'],'rule_ids':rules}
+    if allow_inactive_rules:
+        binding.update(purpose='pre_activation_placement',rule_states=rule_states,
+                       all_rules_active=all(item['active'] for item in rule_states))
+    return config,binding
 
 
 def check_file_scope(metadata,config,identity):
@@ -96,8 +105,8 @@ def create_file_observed(drive,**parameters):
     return created,observation
 
 
-def preflight(drive,credentials,parent,scope_evidence):
-    config,binding=scope_configuration(scope_evidence)
+def preflight(drive,credentials,parent,scope_evidence, *, allow_inactive_rules=False):
+    config,binding=scope_configuration(scope_evidence,allow_inactive_rules=allow_inactive_rules)
     if str(parent)!=config['parent_id']:raise ValueError('実行する親IDが確認証跡と違います')
     identity=drive.about().get(fields='user(emailAddress)').execute().get('user',{}).get('emailAddress')
     if not identity or identity.casefold()!=config['creator_email'].casefold():raise ValueError('Drive実主体と指定した作成主体が一致しません')

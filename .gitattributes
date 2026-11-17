@@ -1,0 +1,7 @@
+# v3再現基準で検査する生成元と基準は、取得環境によらずLFにする。
+scripts/workspace_dlp_benchmark/dataset.py text eol=lf
+scripts/workspace_dlp_benchmark/extended/build.py text eol=lf
+scripts/workspace_dlp_benchmark/extended/catalog.py text eol=lf
+scripts/workspace_dlp_benchmark/extended/samples.py text eol=lf
+scripts/workspace_dlp_benchmark/extended/reproduce.py text eol=lf
+scripts/workspace_dlp_benchmark/extended/dataset-reference.json text eol=lf

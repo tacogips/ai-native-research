@@ -124,12 +124,21 @@ def load_observations(observations):
     # 決定済み状態は元証拠から再導出する。行の手書き書換えを信頼しない。
     from observations import convert
     rebuilt = convert(read_json(proof['manifest']['path']), proof['raw']['path'])
-    if bundle['profiles'] != rebuilt['profiles'] or bundle['rows'] != rebuilt['rows']:
+    if (bundle['profiles'] != rebuilt['profiles'] or bundle['rows'] != rebuilt['rows']
+            or bundle.get('standard_detector_map') != rebuilt.get('standard_detector_map')):
         raise ValueError('観測行が元記録からの導出結果と一致しません')
     return bundle
 
 
 def score(dataset, observations, report, axis='content', truth_profile=None):
+    v3_source = Path(dataset) / 'ground_truth.json'
+    if v3_source.is_file():
+        candidate = read_json(v3_source)
+        if isinstance(candidate, list) and candidate and 'expected_by_item' in candidate[0]:
+            if axis != 'content' or truth_profile is not None:
+                raise ValueError('v3は項目出現の正解行列を使います。旧形式の正解軸・対応表は併用しません')
+            from extended.audit import score as score_v3
+            return score_v3(dataset, observations, report)
     if axis not in AXES:
         raise ValueError('未知の正解軸です')
     truth, source = load_truth(dataset, read_json(truth_profile) if truth_profile else None)
