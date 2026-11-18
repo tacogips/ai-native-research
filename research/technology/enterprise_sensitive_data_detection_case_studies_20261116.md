@@ -34,9 +34,9 @@
 | 舞鶴市 | 2025 | Google Workspace | 三層分離（用途別にネットワークを分ける方式）で庁外業務ができない | 一般事務を Workspace へ、基幹系は残す。Chrome Enterprise Premium の DLP で監視 | 規則の詳細と効果は記載なし | [J4] |
 | メルカリ（CS 端末） | 2026 | Chromebook のブラウザ | 仮想デスクトップと端末の DLP を二重管理 | 承認ツール以外へのアップロード・貼り付けを制限。Gemini in Chrome は読み取り専用で段階導入 | 3年で50%超のコスト削減を「見込む」（予測値）【販】 | [J5] |
 | メルカリ（CS チャット） | 2025 | Spanner、添付画像 | チャットの機微情報を手作業で削除していた | Sensitive Data Protection の infoType、独自の正規表現、周辺語（「マイナンバー」が前後10文字以内） | 配送番号がカード番号・マイナンバーと誤検知。抜き取り確認で監視。「機微情報の定義と運用が技術より難しい」 | [J6] |
-| READYFOR | 2025 | BigQuery | 全社員が全データを閲覧できた。手作業のタグ付けは漏れる | 100種超の infoType で定期走査し、機密度「中」以上の列に Pub/Sub と Cloud Functions でポリシータグを自動付与 | プロジェクト名が人名、都道府県名が住所と誤検知 → 除外リスト。API の利用上限に再試行で対応 | [J7] |
-| ファインディ | 2024 | BigQuery | 全員公開は危険、絞りすぎは業務に支障 | 定期走査で中〜高リスクの列を一覧化し、Dataform でポリシータグ、列単位の動的マスキング。長文は DLP API で部分マスク | 全文マスクは分析に必要な情報を失う | [J8] |
-| TKC | 2025 | SharePoint、OneDrive（1.3億ファイル、201TB） | 人手では管理不能 | 全ファイルの既定ラベルを「社外秘」（印刷・転送不可）。カード番号・マイナンバー等で自動ラベル。7段階で展開 | 有効化率 5.7% → 23% → 52% → 全員。検討に約1年。警告を受けても対処が分からない利用者がいる【販】 | [J9] |
+| READYFOR | 2025 | BigQuery | 全社員が全データを閲覧できた。手作業のタグ付けは漏れる | Google Cloud Sensitive Data Protection（SDP）で定期検査。検知結果を Pub/Sub で受け取り、Cloud Functions から機密度「中」以上の列に閲覧権限用のポリシータグを自動付与 | プロジェクト名が人名、都道府県名が住所と誤検知 → 除外リスト。API の利用上限に再試行で対応 | [J7] |
+| ファインディ | 2024 | BigQuery | 全員公開は危険、絞りすぎは業務に支障 | Google Cloud SDP で中〜高リスクの列を一覧化し、Dataform でポリシータグを設定。権限に応じて列の値を伏せ、長文中の個人情報は検査APIを使って部分的に伏せる | 全文マスクは分析に必要な情報を失う | [J8] |
+| TKC | 2025 | SharePoint、OneDrive（1.3億ファイル、201TB） | 人手では管理不能 | Microsoft Purview DLP の日本向け標準規則で金融・個人情報を検知し、所有者や管理者に通知。秘密度ラベルの既定を「社外秘」に設定して段階的に展開 | 有効化率 5.7% → 23% → 52% → 全員。検討に約1年。警告を受けても対処が分からない利用者がいる【販】 | [J9] |
 | 北海道電力 | 2026 | Microsoft 365 | 端末単位の対策の限界、持ち出し特例の増加 | 既定を暗号化付き「社内」ラベル。1部門で試験 → PC 入替に合わせ全社展開。内部リスク管理は流出経路ごとの規則に変更 | 試験で警告が大量に出て全件確認は不可能。「利用」と「流出」の境界が曖昧【販】 | [J10] |
 | 野村総合研究所 | 2026 | Box（約350TB） | 手作業のラベルにばらつき・付け漏れ。営業秘密の要件 | 管理者がプロンプトで基準を定義し AI がラベルを提案、社員が確定。疑わしいときは安全側の仮ラベル。4区分 | 最終判断は人が持つ方針【販】 | [J11] |
 | Looop | 2026 | Web 通信（SaaS、生成 AI） | アプリ単位の一律禁止は業務を止める | Zscaler の Web DLP で「確認」動作（理由を入力すれば送信可） | マイナンバー辞書が12桁の AWS アカウント ID に反応。API 通信の誤検知でフォームデータと JSON を除外。既定の「ソースコード」辞書は実コードを検知しなかった | [J12] |
@@ -74,7 +74,7 @@
 | 米国の FinTech 企業 × DoControl | 金融 | Google Drive | 既存の Drive ラベルを条件に方針を適用。個人メール宛て共有は承認制で1.5年で失効、6か月未閲覧は共有を自動解除 | 外部共有17万件超、直近90日の自動処理30万件 | [V10] |
 | Zego × Metomic | 保険 | Google Workspace、Slack | 公開共有が数百〜数千件と判明。Slack では違反内容を自動で伏せ字 | 記載なし | [V11] |
 | 匿名の FinServ 企業 × Metomic | 金融 | Google Drive、Slack | 第1段階は担当者だけに警告、第2段階で本人にも通知 | 記載なし | [V12] |
-| Nova Credit × Nightfall | 金融 | Gmail、Drive、Slack | 前のメール DLP は誤検知が多く警告が無視されていた | 80%を自動是正 | [V13] |
+| Nova Credit × Nightfall | 金融 | Google Drive、Gmail、Slack、macOS端末 | 機微情報の検知結果をSlackに集約し、担当者が確認・対応 | 自動対応80%は導入全体の公表値。Drive単独の内訳は記載なし | [V13] |
 | Wake Forest University | 教育 | Google Workspace | DLP ルールで機密情報の共有を検知し、誤共有を取り消し | DLP 単独の数値なし | [V14] |
 
 ### 2.4 事故・行政処分
@@ -233,7 +233,7 @@ URL は2026年11月16日に確認した。【販】はベンダーまたは販�
 - [V10] DoControl（FinTech）https://www.docontrol.io/case-studies/data-security-fintech-case-study
 - [V11] Metomic（Zego）https://metomic.io/blog/how-zego-protects-their-google-docs-around-the-clock
 - [V12] Metomic（FinServ）https://metomic.io/resource-centre/from-immaturity-to-proactivity-a-finserv-companys-journey-to-data-security-awareness
-- [V13] Nightfall（Nova Credit）https://nightfall.ai/case-studies/nova-credit
+- [V13] Nightfall（Nova Credit）https://www.nightfall.ai/case-studies/nova-credit
 - [V14] Google Workspace（Wake Forest University）https://workspace.google.com/blog/customer-stories/wake-forest-university-redefines-cybersecurity-google-workspace-education-plus
 
 ### 事故・行政処分
