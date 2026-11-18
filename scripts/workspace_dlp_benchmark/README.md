@@ -194,6 +194,10 @@ python3 -m unittest discover -s scripts/workspace_dlp_benchmark -p 'test_*.py'
 
 ローカルの生成・証拠検証・採点は単体試験で確かめる。CLIの手順と試験結果は元の静的レビューと分けて[REVIEW.md](REVIEW.md)へ記録する。実環境の設定・共有操作・別アカウント読取・契機ごとの遅延測定は、必要な権限と専用範囲を用意したうえで行う別工程である。この公開コードと文書はGoogle実環境での測定済みを意味しない。
 
+## 事例調査の改善案の検証
+
+文脈で補う検知規則（v4-context）と、提案・確定を分けた是正フローのモデル計算は[improvement/](improvement/README.md)に置く。結果は[改善案の検証](../../research/technology/dlp_case_study_improvements_verification_20261118.md)を参照。標準の`unittest`探索は`test_improvement_suite.py`経由でこの試験も実行する。
+
 ## データセットの版と再現手順
 
 7分類・738資料の本生成器、[31項目・385資料のv3](extended/README.md#同じデータセットを再生成する)、[画像・Office等のLIGHT](../pii_image_dataset/README.md#再現性の範囲と保存する条件)は別々の生成物で、件数や正解形式を混ぜない。v3には全ファイルの相対パス・バイト数・SHA-256を保存した固定基準と、生成後に照合する`reproduce.py`を用意した。738資料版とLIGHTへ同じバイト一致の保証を拡張するものではない。

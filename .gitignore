@@ -10,3 +10,6 @@
 /artifacts/pii-light-checks/
 
 /artifacts/workspace-dlp-v3/
+
+# 改善案の検証の再生成可能な出力
+/artifacts/workspace-dlp-improvement/

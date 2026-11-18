@@ -1,0 +1,3870 @@
+[
+  {
+    "case_id": "individual-pos-1",
+    "item": "individual",
+    "kind": "positive",
+    "style": "heading",
+    "text": "個人番号：4829 1736 5502\n氏名：宮之原 透",
+    "present": [
+      "individual",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": "見出しと値が同じ行、空白区切り"
+  },
+  {
+    "case_id": "individual-pos-2",
+    "item": "individual",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "年末調整の書類に記載漏れがあったため、本人のマイナンバー 731948205617 を追記して再提出しました。",
+    "present": [
+      "individual"
+    ],
+    "ambiguous": [],
+    "note": "文中に連続12桁"
+  },
+  {
+    "case_id": "individual-pos-3",
+    "item": "individual",
+    "kind": "positive",
+    "style": "table",
+    "text": "社員番号\t氏名\t個人番号\nE-1042\t桐生 美咲\t503827196448\nE-1043\t大河内 修\t281605937214",
+    "present": [
+      "individual",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": "タブ区切り表"
+  },
+  {
+    "case_id": "individual-pos-4",
+    "item": "individual",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "給与支払報告書（個人別明細書）\n受給者番号\n00318\n個人番号\n841602739558",
+    "present": [
+      "individual"
+    ],
+    "ambiguous": [],
+    "note": "見出しと値が別行"
+  },
+  {
+    "case_id": "individual-pos-5",
+    "item": "individual",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "[10:12] 総務A: 新入社員の番号届いてます\n[10:13] 総務A: 小此木 遥さんのは 2650-1938-4471 です\n[10:14] 人事B: 了解、システムに入れます",
+    "present": [
+      "individual",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": "チャット、ハイフン区切り"
+  },
+  {
+    "case_id": "individual-pos-6",
+    "item": "individual",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "My Number (Individual Number): ３９０７−４４１８−２６０５",
+    "present": [
+      "individual"
+    ],
+    "ambiguous": [],
+    "note": "英語見出し＋全角数字＋全角マイナス"
+  },
+  {
+    "case_id": "individual-neg-1",
+    "item": "individual",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "ご注文番号：482917365502\nお届け予定日：11月21日\n商品：見本ブランド 加湿器 KS-200",
+    "present": [],
+    "ambiguous": [],
+    "note": "12桁の注文番号"
+  },
+  {
+    "case_id": "individual-neg-2",
+    "item": "individual",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "個人番号は住民票を有する全ての人に1人1つ指定される12桁の番号で、社会保障・税・災害対策の分野に限って利用されます。",
+    "present": [],
+    "ambiguous": [],
+    "note": "制度の一般説明"
+  },
+  {
+    "case_id": "individual-neg-3",
+    "item": "individual",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "個人番号：＿＿＿＿ ＿＿＿＿ ＿＿＿＿\n（番号確認書類の写しを添付してください）",
+    "present": [],
+    "ambiguous": [],
+    "note": "空欄の帳票"
+  },
+  {
+    "case_id": "individual-neg-4",
+    "item": "individual",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空ソリューションズ株式会社では、マイナンバー収集・保管業務の代行サービスを提供しています。料金は社員1名あたり月額50円からです。",
+    "present": [],
+    "ambiguous": [],
+    "note": "サービス案内"
+  },
+  {
+    "case_id": "individual-amb-1",
+    "item": "individual",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "個人番号：****-****-5517（下4桁のみ表示）",
+    "present": [],
+    "ambiguous": [
+      "individual"
+    ],
+    "note": "下4桁だけ残した部分伏字"
+  },
+  {
+    "case_id": "license-pos-1",
+    "item": "license",
+    "kind": "positive",
+    "style": "heading",
+    "text": "運転免許証番号：301845290617\n有効期限：2029年08月14日",
+    "present": [
+      "license"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-pos-2",
+    "item": "license",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "社用車の利用登録のため、免許証の番号 442103958174 を控えさせていただきました。",
+    "present": [
+      "license"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-pos-3",
+    "item": "license",
+    "kind": "positive",
+    "style": "table",
+    "text": "運転者\t免許証番号\t種類\n根津 亮平\t621907384452\t中型\n芦原 志保\t305518927640\t普通",
+    "present": [
+      "license",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-pos-4",
+    "item": "license",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "車両使用許可申請書\n運転者の免許証番号\n290614735822\n免許の条件等：眼鏡等",
+    "present": [
+      "license"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-pos-5",
+    "item": "license",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "・レンタカー予約確認\n・運転者：申込者本人\n・免許証No. 5317-0298-4461 を受付で提示済み",
+    "present": [
+      "license"
+    ],
+    "ambiguous": [],
+    "note": "箇条書き、4-4-4区切り"
+  },
+  {
+    "case_id": "license-pos-6",
+    "item": "license",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Driver's License No.: ４０１２３８７６５１９０",
+    "present": [
+      "license"
+    ],
+    "ambiguous": [],
+    "note": "英語見出し＋全角数字"
+  },
+  {
+    "case_id": "license-neg-1",
+    "item": "license",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "部品番号 718204953306 の在庫は残り12個です。",
+    "present": [],
+    "ambiguous": [],
+    "note": "12桁の部品番号"
+  },
+  {
+    "case_id": "license-neg-2",
+    "item": "license",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "運転免許証の番号は12桁で、交付した公安委員会や初回交付の年などを表す数字が含まれます。紛失した場合は警察署等で再交付を申請します。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-neg-3",
+    "item": "license",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "免許証番号：●●●●●●●●●●●●\n確認者印：＿＿",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-neg-4",
+    "item": "license",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本ドライビングスクールでは普通免許コースを随時受付中です。入校から卒業まで最短16日、料金は税込298,000円です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "license-amb-1",
+    "item": "license",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "運転免許証番号（末尾4桁）：4461\n本人確認済み",
+    "present": [],
+    "ambiguous": [
+      "license"
+    ],
+    "note": "末尾4桁のみ"
+  },
+  {
+    "case_id": "passport-pos-1",
+    "item": "passport",
+    "kind": "positive",
+    "style": "heading",
+    "text": "旅券番号：TK4829173",
+    "present": [
+      "passport"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "passport-pos-2",
+    "item": "passport",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "出張者の旅券番号は MZ5017382 で、有効期限は2031年3月です。",
+    "present": [
+      "passport"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "passport-pos-3",
+    "item": "passport",
+    "kind": "positive",
+    "style": "table",
+    "text": "Name\tPassport No.\tExpiry\nKIRYU MISAKI\tTR6093814\t2030-05-11",
+    "present": [
+      "passport",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": "英語の表、ローマ字氏名"
+  },
+  {
+    "case_id": "passport-pos-4",
+    "item": "passport",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "海外渡航届\n旅券番号\nRE7238016\n渡航先：見本共和国（架空）",
+    "present": [
+      "passport"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "passport-pos-5",
+    "item": "passport",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "件名：航空券手配の件\n\n航空券の手配にあたり、パスポート番号（TS3390175）のご確認をお願いします。\n架空トラベル 予約センター",
+    "present": [
+      "passport"
+    ],
+    "ambiguous": [],
+    "note": "メール本文"
+  },
+  {
+    "case_id": "passport-pos-6",
+    "item": "passport",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "パスポートＮｏ．：ＭＫ０４７１２９３",
+    "present": [
+      "passport"
+    ],
+    "ambiguous": [],
+    "note": "全角英数"
+  },
+  {
+    "case_id": "passport-neg-1",
+    "item": "passport",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "型番 TR5509127 の交換フィルターは現在在庫切れです。",
+    "present": [],
+    "ambiguous": [],
+    "note": "英字2＋数字7の型番"
+  },
+  {
+    "case_id": "passport-neg-2",
+    "item": "passport",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "日本の一般旅券には有効期間10年のものと5年のものがあり、申請は住民登録をしている都道府県の旅券窓口で行います。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "passport-neg-3",
+    "item": "passport",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "旅券番号：＿＿＿＿＿＿＿＿＿（渡航前に記入）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "passport-neg-4",
+    "item": "passport",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空トラベルの海外ツアーにご参加の際は、パスポートの残存有効期間が6か月以上必要です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "passport-amb-1",
+    "item": "passport",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "旅券番号：TK48*****（照合済み）",
+    "present": [],
+    "ambiguous": [
+      "passport"
+    ],
+    "note": "上位のみ残した部分伏字"
+  },
+  {
+    "case_id": "residence_card-pos-1",
+    "item": "residence_card",
+    "kind": "positive",
+    "style": "heading",
+    "text": "在留カード番号：UH38201746KQ",
+    "present": [
+      "residence_card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "residence_card-pos-2",
+    "item": "residence_card",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "採用予定者の在留カード（番号 EK59302817GT）を確認し、就労制限がないことを確認しました。",
+    "present": [
+      "residence_card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "residence_card-pos-3",
+    "item": "residence_card",
+    "kind": "positive",
+    "style": "table",
+    "text": "社員ID\t在留カード番号\t在留期限\nF-021\tRN70419352FX\t2027/06/30\nF-022\tTA28390461LB\t2026/12/15",
+    "present": [
+      "residence_card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "residence_card-pos-4",
+    "item": "residence_card",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "外国人雇用状況届出書\n在留カードの番号\nPQ61028374ZM\n在留資格：技術・人文知識・国際業務",
+    "present": [
+      "residence_card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "residence_card-pos-5",
+    "item": "residence_card",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "@人事 来週入社の方の在留カード番号 WB40193827ND を台帳に転記お願いします",
+    "present": [
+      "residence_card"
+    ],
+    "ambiguous": [],
+    "note": "チャット"
+  },
+  {
+    "case_id": "residence_card-pos-6",
+    "item": "residence_card",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Residence Card No. ＳＫ ４０１９３８２７ ＮＤ",
+    "present": [
+      "residence_card"
+    ],
+    "ambiguous": [],
+    "note": "全角＋空白区切り"
+  },
+  {
+    "case_id": "residence_card-neg-1",
+    "item": "residence_card",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "製造ロット：LT20481937QA　出荷日 2026/10/02",
+    "present": [],
+    "ambiguous": [],
+    "note": "同じ形のロット番号"
+  },
+  {
+    "case_id": "residence_card-neg-2",
+    "item": "residence_card",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "在留カードは中長期在留者に交付され、番号は英字2文字・数字8桁・英字2文字の計12文字で構成されます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "residence_card-neg-3",
+    "item": "residence_card",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "在留カード番号：XX00000000XX（記入例）\n※実際の番号を記入してください",
+    "present": [],
+    "ambiguous": [],
+    "note": "記入例のダミー値"
+  },
+  {
+    "case_id": "residence_card-neg-4",
+    "item": "residence_card",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本行政書士事務所では在留期間更新許可申請の代行を承ります。報酬は税込44,000円からです。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "residence_card-amb-1",
+    "item": "residence_card",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "在留カード番号の下4桁：17GT（本人確認時に照合）",
+    "present": [],
+    "ambiguous": [
+      "residence_card"
+    ],
+    "note": "下4桁のみ"
+  },
+  {
+    "case_id": "health_insurance-pos-1",
+    "item": "health_insurance",
+    "kind": "positive",
+    "style": "heading",
+    "text": "保険者番号：06138274\n記号：3021　番号：458",
+    "present": [
+      "health_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-pos-2",
+    "item": "health_insurance",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "高額療養費の申請書には、被保険者証の記号番号（記号 71 番号 2094）と保険者番号 01130427 を記入しました。",
+    "present": [
+      "health_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-pos-3",
+    "item": "health_insurance",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t保険者番号\t記号\t番号\n戸叶 智子\t32130518\t205\t1187",
+    "present": [
+      "health_insurance",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-pos-4",
+    "item": "health_insurance",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "被保険者資格取得届\n被保険者証の記号・番号\n8014-2271\n保険者番号\n06271935",
+    "present": [
+      "health_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-pos-5",
+    "item": "health_insurance",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "- 保険証の情報（コピーより）\n  - 保険者番号 39131046\n  - 記号 12 番号 337",
+    "present": [
+      "health_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-pos-6",
+    "item": "health_insurance",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Health Insurance: Insurer No. ０６１３０９７２ / Symbol ４５ / No. １０２８",
+    "present": [
+      "health_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-neg-1",
+    "item": "health_insurance",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "受付番号 06138274-0012 にて資料請求を承りました。",
+    "present": [],
+    "ambiguous": [],
+    "note": "8桁＋枝番の受付番号"
+  },
+  {
+    "case_id": "health_insurance-neg-2",
+    "item": "health_insurance",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "保険者番号は8桁で、法別番号・都道府県番号・保険者別番号・検証番号から構成されます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-neg-3",
+    "item": "health_insurance",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "記号：＿＿＿＿　番号：＿＿＿＿\n保険者番号：＿＿＿＿＿＿＿＿",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-neg-4",
+    "item": "health_insurance",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空健康保険組合のご案内：加入事業所数 320、被保険者数 約4万人。保健事業として人間ドックの費用補助を行っています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_insurance-amb-1",
+    "item": "health_insurance",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "保険者番号：06138274（架空健康保険組合）",
+    "present": [],
+    "ambiguous": [
+      "health_insurance"
+    ],
+    "note": "保険者番号だけでは個人を特定しない"
+  },
+  {
+    "case_id": "pension-pos-1",
+    "item": "pension",
+    "kind": "positive",
+    "style": "heading",
+    "text": "基礎年金番号：4102-738195",
+    "present": [
+      "pension"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-pos-2",
+    "item": "pension",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "年金事務所に照会したところ、本人の基礎年金番号は 1395-204718 で間違いないとの回答でした。",
+    "present": [
+      "pension"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-pos-3",
+    "item": "pension",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t基礎年金番号\t資格取得日\n赤羽 大地\t6027-183945\t2019/04/01",
+    "present": [
+      "pension",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-pos-4",
+    "item": "pension",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "国民年金被保険者関係届\n被保険者の基礎年金番号\n2281-509364",
+    "present": [
+      "pension"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-pos-5",
+    "item": "pension",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "社労士さんへのメール：\n先日の資格喪失の件、該当者の年金番号は 3940-226718 です。ご確認ください。",
+    "present": [
+      "pension"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-pos-6",
+    "item": "pension",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Basic Pension No. ７７２０ー４８１０３６",
+    "present": [
+      "pension"
+    ],
+    "ambiguous": [],
+    "note": "全角数字＋長音記号をハイフン代わり"
+  },
+  {
+    "case_id": "pension-neg-1",
+    "item": "pension",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "配送状況のお問い合わせ番号：5208-417390",
+    "present": [],
+    "ambiguous": [],
+    "note": "4-6桁の問合せ番号"
+  },
+  {
+    "case_id": "pension-neg-2",
+    "item": "pension",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "基礎年金番号は公的年金制度で共通して使用する番号で、現在はマイナンバーとの紐付けが進んでいます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-neg-3",
+    "item": "pension",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "基礎年金番号：＿＿＿＿－＿＿＿＿＿＿",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-neg-4",
+    "item": "pension",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本社会保険労務士法人：年金相談、各種年金の請求代行、就業規則の作成を承ります。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "pension-amb-1",
+    "item": "pension",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "基礎年金番号（下6桁）：738195",
+    "present": [],
+    "ambiguous": [
+      "pension"
+    ],
+    "note": "下6桁のみ"
+  },
+  {
+    "case_id": "employment_insurance-pos-1",
+    "item": "employment_insurance",
+    "kind": "positive",
+    "style": "heading",
+    "text": "雇用保険被保険者番号：5013-482917-3",
+    "present": [
+      "employment_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-pos-2",
+    "item": "employment_insurance",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "資格取得届には、本人から提出された被保険者番号 2208-731946-5 を記入して手続します。",
+    "present": [
+      "employment_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-pos-3",
+    "item": "employment_insurance",
+    "kind": "positive",
+    "style": "table",
+    "text": "社員番号\t被保険者番号\t取得年月日\nE-2201\t4419-302871-6\t2022/04/01\nE-2202\t6031-582094-1\t2022/04/01",
+    "present": [
+      "employment_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-pos-4",
+    "item": "employment_insurance",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "雇用保険被保険者資格取得届\n１．被保険者番号\n3307-195820-4\n２．取得区分：新規",
+    "present": [
+      "employment_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-pos-5",
+    "item": "employment_insurance",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "A: 中途の方、雇用保険の番号わかりました？\nB: はい、1742-608315-9 でした",
+    "present": [
+      "employment_insurance"
+    ],
+    "ambiguous": [],
+    "note": "チャット"
+  },
+  {
+    "case_id": "employment_insurance-pos-6",
+    "item": "employment_insurance",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Employment Insurance No: ５５１０－２０３９４７－８",
+    "present": [
+      "employment_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-neg-1",
+    "item": "employment_insurance",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "部品番号 7302-114958-6 の納期を確認しています。",
+    "present": [],
+    "ambiguous": [],
+    "note": "4-6-1形の部品番号"
+  },
+  {
+    "case_id": "employment_insurance-neg-2",
+    "item": "employment_insurance",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "雇用保険被保険者番号は11桁で、事業所が変わっても原則として同じ番号を使い続けます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-neg-3",
+    "item": "employment_insurance",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "被保険者番号：□□□□-□□□□□□-□",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employment_insurance-neg-4",
+    "item": "employment_insurance",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本職業紹介所の求人案内：雇用保険・社会保険完備、賞与年2回、交通費全額支給。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-pos-1",
+    "item": "card",
+    "kind": "positive",
+    "style": "heading",
+    "text": "カード番号：4539 3510 0365 7623\n有効期限：09/29",
+    "present": [
+      "card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-pos-2",
+    "item": "card",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "お客様より電話で決済のご依頼があり、カード番号 5412303805034518 にて処理済みです。",
+    "present": [
+      "card"
+    ],
+    "ambiguous": [],
+    "note": "16桁連続"
+  },
+  {
+    "case_id": "card-pos-3",
+    "item": "card",
+    "kind": "positive",
+    "style": "table",
+    "text": "会員ID\tカード番号\t有効期限\nM-3301\t3568-9836-2393-1768\t11/28",
+    "present": [
+      "card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-pos-4",
+    "item": "card",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "クレジットカード決済依頼書\nカード番号\n4916-3072-8492-6650\n名義人\nMIYANOHARA TORU",
+    "present": [
+      "card",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-pos-5",
+    "item": "card",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "#経理 出張費の立替、法人カード 5203 0145 9962 6459 で決済しました。明細は月末に回します。",
+    "present": [
+      "card"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-pos-6",
+    "item": "card",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Card No.：３５３０－１３９４－６７２８－２１９９",
+    "present": [
+      "card"
+    ],
+    "ambiguous": [],
+    "note": "全角数字とハイフン"
+  },
+  {
+    "case_id": "card-neg-1",
+    "item": "card",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "注文番号：3676804618305010\nお支払い方法：代金引換",
+    "present": [],
+    "ambiguous": [],
+    "note": "Luhn不一致の16桁注文番号"
+  },
+  {
+    "case_id": "card-neg-2",
+    "item": "card",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "クレジットカード番号は通常16桁で、最後の1桁は Luhn アルゴリズムによる検査数字です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-neg-3",
+    "item": "card",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "ご登録カード：**** **** **** 4821（有効期限 03/28）",
+    "present": [],
+    "ambiguous": [],
+    "note": "下4桁のみの伏字"
+  },
+  {
+    "case_id": "card-neg-4",
+    "item": "card",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本カードのご案内：年会費永年無料、ポイント還元率1.0%、旅行傷害保険付帯。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "card-amb-1",
+    "item": "card",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "カード番号：4980 74** **** 2088",
+    "present": [],
+    "ambiguous": [
+      "card"
+    ],
+    "note": "先頭6桁と末尾4桁のみ"
+  },
+  {
+    "case_id": "bank-pos-1",
+    "item": "bank",
+    "kind": "positive",
+    "style": "heading",
+    "text": "振込先：架空銀行 見本支店 普通 3048192",
+    "present": [
+      "bank"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-pos-2",
+    "item": "bank",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "給与の振込口座を試験信用金庫 本店営業部の当座 7102384 に変更したいとの申し出がありました。",
+    "present": [
+      "bank"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-pos-3",
+    "item": "bank",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t銀行\t支店\t種別\t口座番号\n瀬能 和也\t例示銀行\t駅前支店\t普通\t5520917",
+    "present": [
+      "bank",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-pos-4",
+    "item": "bank",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "口座振替依頼書\n金融機関名：架空銀行\n支店名：見本台支店\n預金種目\n普通\n口座番号\n6391027\n口座名義（カナ）\nセノウ カズヤ",
+    "present": [
+      "bank",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-pos-5",
+    "item": "bank",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "お世話になっております。報酬のお振込先は以下のとおりです。\n・見本ネット銀行 第一営業支店（101）\n・普通預金 4428105",
+    "present": [
+      "bank"
+    ],
+    "ambiguous": [],
+    "note": "メール本文"
+  },
+  {
+    "case_id": "bank-pos-6",
+    "item": "bank",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Bank: Kaku Bank (架空銀行), Branch: Mihon (No. 213)\nAccount Type: Savings / Account No.: ０８７３２１６",
+    "present": [
+      "bank"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-neg-1",
+    "item": "bank",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "支店コード 213 の ATM（機番 4428105）の保守作業を11月20日に実施します。",
+    "present": [],
+    "ambiguous": [],
+    "note": "7桁の機器番号"
+  },
+  {
+    "case_id": "bank-neg-2",
+    "item": "bank",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "銀行の口座番号は通常7桁で、金融機関コード・支店番号・預金種目と組み合わせて口座を特定します。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-neg-3",
+    "item": "bank",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "口座番号：＊＊＊＊＊＊＊（ご本人確認後に表示）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-neg-4",
+    "item": "bank",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空銀行は2026年4月に見本支店を駅前支店へ統合しました。店舗数は全国で48店です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "bank-amb-1",
+    "item": "bank",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "請求書\nお振込先：例示銀行 本店営業部 普通 1203948\n口座名義：架空商事株式会社",
+    "present": [],
+    "ambiguous": [
+      "bank"
+    ],
+    "note": "法人名義の口座"
+  },
+  {
+    "case_id": "assets-pos-1",
+    "item": "assets",
+    "kind": "positive",
+    "style": "heading",
+    "text": "預金残高：3,482,105円（2026年10月末時点）\n名義：宮之原 透",
+    "present": [
+      "assets",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-pos-2",
+    "item": "assets",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "面談では、本人が見本電機の株式を1,200株保有しており、評価額は約540万円とのことだった。",
+    "present": [
+      "assets"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-pos-3",
+    "item": "assets",
+    "kind": "positive",
+    "style": "table",
+    "text": "（申込者本人の資産）\n資産\t金額\n普通預金\t1,204,330円\n定期預金\t5,000,000円\n住宅ローン残高\t▲21,870,000円",
+    "present": [
+      "assets"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-pos-4",
+    "item": "assets",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "住宅ローン借換申込書\n現在の借入残高\n18,420,000円\n毎月返済額\n87,300円",
+    "present": [
+      "assets"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-pos-5",
+    "item": "assets",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "相続相談メモ（相談者名義の財産）\n- 預金 約800万円\n- 自宅土地（評価額 2,300万円）\n- 証券口座の投資信託 約350万円",
+    "present": [
+      "assets"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-pos-6",
+    "item": "assets",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Account balance (personal): JPY ３，９０２，４１８\nHoldings: 見本ホールディングス 普通株式 500株",
+    "present": [
+      "assets"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-neg-1",
+    "item": "assets",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "受注残高：3,482,105円（見本工業向け案件）",
+    "present": [],
+    "ambiguous": [],
+    "note": "法人の受注残"
+  },
+  {
+    "case_id": "assets-neg-2",
+    "item": "assets",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "（例示）家計調査の貯蓄現在高は平均値が中央値を大きく上回る傾向があり、一部の高額世帯が平均を押し上げています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-neg-3",
+    "item": "assets",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "預金残高：＊＊＊＊＊＊円（ログイン後に表示）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "assets-neg-4",
+    "item": "assets",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空商事株式会社 会社概要：資本金 1億円、総資産 85億円、従業員数 420名。",
+    "present": [],
+    "ambiguous": [],
+    "note": "法人の資産"
+  },
+  {
+    "case_id": "assets-amb-1",
+    "item": "assets",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "資産状況：「老後資金は十分ある」と本人談（金額不明）",
+    "present": [],
+    "ambiguous": [
+      "assets"
+    ],
+    "note": "金額のない漠然とした言及"
+  },
+  {
+    "case_id": "annual_income-pos-1",
+    "item": "annual_income",
+    "kind": "positive",
+    "style": "heading",
+    "text": "年収：6,240,000円",
+    "present": [
+      "annual_income"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-pos-2",
+    "item": "annual_income",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "昨年の源泉徴収票によれば、本人の給与収入は年間512万円だった。",
+    "present": [
+      "annual_income"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-pos-3",
+    "item": "annual_income",
+    "kind": "positive",
+    "style": "table",
+    "text": "社員番号\t氏名\t2025年給与総額\nE-1042\t桐生 美咲\t7,380,400",
+    "present": [
+      "annual_income",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-pos-4",
+    "item": "annual_income",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "所得証明書\n令和7年中の所得金額\n4,126,000円\n（給与収入 5,800,000円）",
+    "present": [
+      "annual_income"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-pos-5",
+    "item": "annual_income",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "面接メモ（候補者A）\n・現年収 720万（基本給＋賞与）\n・希望年収 800万",
+    "present": [
+      "annual_income"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-pos-6",
+    "item": "annual_income",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Annual income: ¥9.8M (FY2025)\n本人所得：９８０万円",
+    "present": [
+      "annual_income"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-neg-1",
+    "item": "annual_income",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "年商：6,240,000,000円（見本工業 2025年度）",
+    "present": [],
+    "ambiguous": [],
+    "note": "法人の売上"
+  },
+  {
+    "case_id": "annual_income-neg-2",
+    "item": "annual_income",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "所得税は所得が高くなるほど税率が上がる累進課税で、税率は5%から45%までの7段階です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-neg-3",
+    "item": "annual_income",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "年収：＿＿＿＿万円（任意記入）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-neg-4",
+    "item": "annual_income",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "【求人票】架空ロジスティクス株式会社 営業職\n想定年収 450万〜650万円（経験・能力による）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "annual_income-amb-1",
+    "item": "annual_income",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "年収帯：600〜800万円（匿名アンケートの回答）",
+    "present": [],
+    "ambiguous": [
+      "annual_income"
+    ],
+    "note": "匿名の幅のある回答"
+  },
+  {
+    "case_id": "private_insurance-pos-1",
+    "item": "private_insurance",
+    "kind": "positive",
+    "style": "heading",
+    "text": "保険証券番号：SN-2024-0815327\n保険種類：終身医療保険",
+    "present": [
+      "private_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-pos-2",
+    "item": "private_insurance",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は見本生命の定期保険（証券番号 7730192845）に加入しており、死亡保険金受取人は法定相続人と指定されている。",
+    "present": [
+      "private_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-pos-3",
+    "item": "private_insurance",
+    "kind": "positive",
+    "style": "table",
+    "text": "契約者\t保険会社\t証券番号\t保険金額\n大河内 修\t架空生命\tKL40291837\t3,000万円",
+    "present": [
+      "private_insurance",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-pos-4",
+    "item": "private_insurance",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "保険金請求書\n証券番号\nAX-882034761\n被保険者氏名\n芦原 志保",
+    "present": [
+      "private_insurance",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-pos-5",
+    "item": "private_insurance",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "保険の見直し相談\n- 架空損保 自動車保険 証券No. 0019-4720-38\n- 年間保険料 68,400円\n- 満期 2027/03/01",
+    "present": [
+      "private_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-pos-6",
+    "item": "private_insurance",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Policy No.: ＰＬ－５５０１９２８３\nInsured: 本人 / Beneficiary: 法定相続人",
+    "present": [
+      "private_insurance"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-neg-1",
+    "item": "private_insurance",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "見積番号 SN-2025-0193822 の内容でオフィス家具を発注します。",
+    "present": [],
+    "ambiguous": [],
+    "note": "同形の見積番号"
+  },
+  {
+    "case_id": "private_insurance-neg-2",
+    "item": "private_insurance",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "終身保険は保障が一生涯続く生命保険で、解約返戻金がある商品が一般的です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-neg-3",
+    "item": "private_insurance",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "証券番号：＿＿＿＿＿＿＿＿　受取人：＿＿＿＿",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-neg-4",
+    "item": "private_insurance",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空生命保険株式会社 新商品のご案内：がん保険『みほんケア』月額1,980円から。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "private_insurance-amb-1",
+    "item": "private_insurance",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "生命保険：加入あり（保険会社・内容は不明）",
+    "present": [],
+    "ambiguous": [
+      "private_insurance"
+    ],
+    "note": "加入の有無のみ"
+  },
+  {
+    "case_id": "job_history-pos-1",
+    "item": "job_history",
+    "kind": "positive",
+    "style": "heading",
+    "text": "職歴：2014年4月 架空商事株式会社 入社／2019年3月 同社 退社",
+    "present": [
+      "job_history"
+    ],
+    "ambiguous": [],
+    "note": "過去の勤務のみ（現勤務先なし）"
+  },
+  {
+    "case_id": "job_history-pos-2",
+    "item": "job_history",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は新卒で見本システム株式会社に入り、SEとして6年勤務した後、2023年に試験ネットワークス株式会社へ転職した。",
+    "present": [
+      "job_history",
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-pos-3",
+    "item": "job_history",
+    "kind": "positive",
+    "style": "table",
+    "text": "期間\t会社名\t職種\n2010/04-2016/09\t例示製作所株式会社\t生産技術\n2016/10-2021/03\t見本工業株式会社\t品質保証\n2021/04-現在\t架空化学株式会社\t品質管理課長",
+    "present": [
+      "job_history",
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-pos-4",
+    "item": "job_history",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "職務経歴書\n氏名\n根津 亮平\n経歴\n2012年 架空建設株式会社 入社（施工管理）\n2020年 一身上の都合により退職",
+    "present": [
+      "job_history",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-pos-5",
+    "item": "job_history",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "@採用 候補者の方、前職は試験銀行に8年、その前は見本証券に3年いたそうです",
+    "present": [
+      "job_history"
+    ],
+    "ambiguous": [],
+    "note": "過去の勤務のみ"
+  },
+  {
+    "case_id": "job_history-pos-6",
+    "item": "job_history",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Work Experience:\nApr 2015 – Mar 2022  Kaku Trading Co. (架空商事), Sales\nApr 2022 – Present  Mihon Foods (見本食品), Marketing",
+    "present": [
+      "job_history",
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-neg-1",
+    "item": "job_history",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "職務経歴書は、これまでの業務内容や実績を具体的に記載する書類です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-neg-2",
+    "item": "job_history",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "職歴：＿＿＿＿＿＿＿＿＿＿＿\n（新卒の方は記入不要）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-neg-3",
+    "item": "job_history",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空商事株式会社 沿革：1985年 創業／2001年 見本物産を吸収合併／2020年 株式上場",
+    "present": [],
+    "ambiguous": [],
+    "note": "会社の沿革"
+  },
+  {
+    "case_id": "job_history-neg-4",
+    "item": "job_history",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "【求人】見本テクノロジー株式会社 経験者採用\n応募資格：実務経験3年以上（転職回数不問）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "job_history-amb-1",
+    "item": "job_history",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "職歴：大手メーカーにて約10年勤務（社名非公開）",
+    "present": [],
+    "ambiguous": [
+      "job_history"
+    ],
+    "note": "社名・時期が曖昧"
+  },
+  {
+    "case_id": "education-pos-1",
+    "item": "education",
+    "kind": "positive",
+    "style": "heading",
+    "text": "学歴：2012年3月 見本大学 経済学部 卒業",
+    "present": [
+      "education"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-pos-2",
+    "item": "education",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は2018年に架空工業大学大学院の修士課程を修了している。",
+    "present": [
+      "education"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-pos-3",
+    "item": "education",
+    "kind": "positive",
+    "style": "table",
+    "text": "年月\t学歴\n2008年3月\t試験県立みほん高等学校 卒業\n2012年3月\t例示大学 文学部 卒業",
+    "present": [
+      "education"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-pos-4",
+    "item": "education",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "履歴書\n氏名\n戸叶 智子\n最終学歴\n見本女子大学 家政学部 卒業（2016年）",
+    "present": [
+      "education",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-pos-5",
+    "item": "education",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "面談メモ：候補者は架空高専の電気工学科を卒業後、見本大学工学部に編入して卒業している",
+    "present": [
+      "education"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-pos-6",
+    "item": "education",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Education: B.Sc. in Physics, Mihon University (見本大学), graduated March 2017",
+    "present": [
+      "education"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-neg-1",
+    "item": "education",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "学校教育法では、大学の修業年限は原則として4年とされています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-neg-2",
+    "item": "education",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "最終学歴：□中学 □高校 □短大・専門 □大学 □大学院（いずれかに✓）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-neg-3",
+    "item": "education",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本大学 学校案内：経済学部・工学部の2学部、在学生数 約5,200名、就職率 97.8%。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-neg-4",
+    "item": "education",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "【求人】応募資格：大卒以上（学部・学科不問）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "education-amb-1",
+    "item": "education",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "大学では経済を学んでいたとのこと（学校名・卒業の有無は不明）",
+    "present": [],
+    "ambiguous": [
+      "education"
+    ],
+    "note": ""
+  },
+  {
+    "case_id": "employer-pos-1",
+    "item": "employer",
+    "kind": "positive",
+    "style": "heading",
+    "text": "勤務先：架空商事株式会社 経理部",
+    "present": [
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-pos-2",
+    "item": "employer",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "申込者は見本電機株式会社の大阪工場に勤務している。",
+    "present": [
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-pos-3",
+    "item": "employer",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t勤務先\t役職\n瀬能 和也\t試験ネットワークス株式会社\t主任",
+    "present": [
+      "employer",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-pos-4",
+    "item": "employer",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "住宅ローン申込書\n勤務先名称\n例示物流株式会社\n所属部署\n配送管理課",
+    "present": [
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-pos-5",
+    "item": "employer",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "緊急連絡先メモ\n・平日日中は勤務先（見本化学株式会社 研究所）にいるとのこと",
+    "present": [
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-pos-6",
+    "item": "employer",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Employer: Kaku Logistics Inc. (架空ロジスティクス株式会社)\nPosition: Accountant",
+    "present": [
+      "employer"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-neg-1",
+    "item": "employer",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "勤務先の情報は、ローン審査で返済能力を判断する材料の一つとされます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-neg-2",
+    "item": "employer",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "勤務先：＿＿＿＿＿＿＿＿＿＿　電話：＿＿＿＿＿＿",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-neg-3",
+    "item": "employer",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "会社概要\n社名：架空商事株式会社\n設立：1985年\n従業員数：420名\n事業内容：食品卸売",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-neg-4",
+    "item": "employer",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "【求人】見本電機株式会社 大阪工場 製造スタッフ募集（時給1,400円）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "employer-amb-1",
+    "item": "employer",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "勤務先：都内のIT企業（社名は非公開）",
+    "present": [],
+    "ambiguous": [
+      "employer"
+    ],
+    "note": "社名なし"
+  },
+  {
+    "case_id": "family-pos-1",
+    "item": "family",
+    "kind": "positive",
+    "style": "heading",
+    "text": "家族構成：妻（41歳）、長男（12歳）、長女（8歳）",
+    "present": [
+      "family"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-pos-2",
+    "item": "family",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "申告者は母親（78歳）と二人暮らしで、母親を扶養に入れている。",
+    "present": [
+      "family"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-pos-3",
+    "item": "family",
+    "kind": "positive",
+    "style": "table",
+    "text": "続柄\t氏名\t年齢\t扶養\n妻\t宮之原 綾\t39\t有\n長男\t宮之原 蓮\t10\t有",
+    "present": [
+      "family",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-pos-4",
+    "item": "family",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "扶養控除等（異動）申告書\n控除対象扶養親族\n続柄\n長女\n年齢\n17歳",
+    "present": [
+      "family"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-pos-5",
+    "item": "family",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "1on1メモ\n- 子どもは小学生が2人\n- 配偶者は単身赴任中",
+    "present": [
+      "family"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-pos-6",
+    "item": "family",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Family: Spouse (age 36), 2 children (ages 6 and 3)\n扶養人数：３名",
+    "present": [
+      "family"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-neg-1",
+    "item": "family",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "国の統計では、単独世帯の割合が長期的に増加傾向にあります。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-neg-2",
+    "item": "family",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "家族構成：続柄＿＿　年齢＿＿　扶養 □有 □無",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-neg-3",
+    "item": "family",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本ホテル ファミリープラン：大人2名・小学生2名まで1室28,000円（朝食付き）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-neg-4",
+    "item": "family",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "所得税の扶養控除は、その年の12月31日現在で16歳以上の扶養親族がいる場合に適用されます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "family-amb-1",
+    "item": "family",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "婚姻状況：既婚",
+    "present": [],
+    "ambiguous": [
+      "family"
+    ],
+    "note": "婚姻状況のみ"
+  },
+  {
+    "case_id": "medical_history-pos-1",
+    "item": "medical_history",
+    "kind": "positive",
+    "style": "heading",
+    "text": "既往歴：2021年 2型糖尿病（内服治療中）",
+    "present": [
+      "medical_history"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-pos-2",
+    "item": "medical_history",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は昨年10月にうつ病と診断され、現在も月1回心療内科に通院している。",
+    "present": [
+      "medical_history"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-pos-3",
+    "item": "medical_history",
+    "kind": "positive",
+    "style": "table",
+    "text": "受診日\t医療機関\t診断名\n2026/03/04\t見本クリニック\t急性胃腸炎\n2026/08/19\t架空総合病院\t右手首骨折",
+    "present": [
+      "medical_history"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-pos-4",
+    "item": "medical_history",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "休職届\n傷病名\n腰椎椎間板ヘルニア\n療養期間\n2026年11月1日〜12月31日",
+    "present": [
+      "medical_history"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-pos-5",
+    "item": "medical_history",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "部長、すみません。娘がインフルエンザと診断されたので明日はお休みをいただきます。",
+    "present": [
+      "medical_history"
+    ],
+    "ambiguous": [
+      "family"
+    ],
+    "note": "家族の診断。娘の存在は家族構成として判断保留"
+  },
+  {
+    "case_id": "medical_history-pos-6",
+    "item": "medical_history",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Medical history: Hypertension (dx 2019), on amlodipine 5mg\n既往：高血圧症",
+    "present": [
+      "medical_history"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-neg-1",
+    "item": "medical_history",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "糖尿病は血糖値が慢性的に高くなる病気で、食事療法・運動療法・薬物療法を組み合わせて治療します。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-neg-2",
+    "item": "medical_history",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "既往歴：＿＿＿＿＿＿（該当があれば記入）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-neg-3",
+    "item": "medical_history",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空総合病院 診療科案内：内科・外科・整形外科・小児科。外来受付 8:30〜11:30。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "medical_history-neg-4",
+    "item": "medical_history",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "疾患コード E11 の当月請求件数：128件（全体集計）",
+    "present": [],
+    "ambiguous": [],
+    "note": "集計値"
+  },
+  {
+    "case_id": "medical_history-amb-1",
+    "item": "medical_history",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "既往歴：なし",
+    "present": [],
+    "ambiguous": [
+      "medical_history"
+    ],
+    "note": "否定"
+  },
+  {
+    "case_id": "health_checkup-pos-1",
+    "item": "health_checkup",
+    "kind": "positive",
+    "style": "heading",
+    "text": "健康診断結果：HbA1c 6.9%（判定 D 要精密検査）",
+    "present": [
+      "health_checkup"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-pos-2",
+    "item": "health_checkup",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "今年の定期健診で、本人の血圧は158/96で要再検査と判定された。",
+    "present": [
+      "health_checkup"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-pos-3",
+    "item": "health_checkup",
+    "kind": "positive",
+    "style": "table",
+    "text": "項目\t結果\t判定\nLDLコレステロール\t172 mg/dL\tC\nγ-GTP\t118 U/L\tD",
+    "present": [
+      "health_checkup"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-pos-4",
+    "item": "health_checkup",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "定期健康診断個人票\n氏名\n赤羽 大地\n総合判定\nC（要経過観察）\n腹囲\n92.5cm",
+    "present": [
+      "health_checkup",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-pos-5",
+    "item": "health_checkup",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "産業医面談メモ\n・健診で肝機能（ALT 76）が要再検\n・本人は飲酒量を減らすと回答",
+    "present": [
+      "health_checkup"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-pos-6",
+    "item": "health_checkup",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Health check (2026): BMI ２７．４, BP 142/90 → 判定：要指導",
+    "present": [
+      "health_checkup"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-neg-1",
+    "item": "health_checkup",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "LDLコレステロールの基準値は一般に140 mg/dL未満とされています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-neg-2",
+    "item": "health_checkup",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "総合判定：A・B・C・D・E（該当に○）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-neg-3",
+    "item": "health_checkup",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本健診センター 人間ドック基本コース 税込42,000円、オプションで胃カメラを追加できます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "health_checkup-neg-4",
+    "item": "health_checkup",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "当社の2026年度定期健康診断の受診率は98.2%でした（全社集計）。",
+    "present": [],
+    "ambiguous": [],
+    "note": "集計値"
+  },
+  {
+    "case_id": "health_checkup-amb-1",
+    "item": "health_checkup",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "健康診断：受診済み（結果は異常なし）",
+    "present": [],
+    "ambiguous": [
+      "health_checkup"
+    ],
+    "note": "異常なしのみ"
+  },
+  {
+    "case_id": "disability-pos-1",
+    "item": "disability",
+    "kind": "positive",
+    "style": "heading",
+    "text": "障害者手帳：身体障害者手帳 2級（下肢機能障害）",
+    "present": [
+      "disability"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-pos-2",
+    "item": "disability",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は聴覚に障害があり、会議では文字通訳を利用している。",
+    "present": [
+      "disability"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-pos-3",
+    "item": "disability",
+    "kind": "positive",
+    "style": "table",
+    "text": "社員番号\t手帳種別\t等級\nE-3307\t精神障害者保健福祉手帳\t3級\nE-3312\t療育手帳\tB2",
+    "present": [
+      "disability"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-pos-4",
+    "item": "disability",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "障害者雇用状況報告 個票\n障害の種類\n視覚障害\n手帳の等級\n1級",
+    "present": [
+      "disability"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-pos-5",
+    "item": "disability",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "来客対応メモ：明日の面接者は車いすを使用されているので、1階の会議室を確保してください。",
+    "present": [
+      "disability"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-pos-6",
+    "item": "disability",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Disability certificate: Class ３ (physical)\n障がい者手帳：所持",
+    "present": [
+      "disability"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-neg-1",
+    "item": "disability",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "障害者雇用促進法は、一定規模以上の事業主に法定雇用率以上の障害者の雇用を義務付けています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-neg-2",
+    "item": "disability",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "障害の有無：□有　□無（任意）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-neg-3",
+    "item": "disability",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空ユニバーサル株式会社は、バリアフリー対応の会議室予約システムを提供しています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "disability-neg-4",
+    "item": "disability",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "当社の障害者雇用率は2.8%です（2026年6月1日現在、全社）。",
+    "present": [],
+    "ambiguous": [],
+    "note": "集計値"
+  },
+  {
+    "case_id": "disability-amb-1",
+    "item": "disability",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "配慮事項：長時間の立ち作業は避けたい（本人申告）",
+    "present": [],
+    "ambiguous": [
+      "disability"
+    ],
+    "note": "障害を推知させるだけ"
+  },
+  {
+    "case_id": "race-pos-1",
+    "item": "race",
+    "kind": "positive",
+    "style": "heading",
+    "text": "民族：アイヌ（本人申告）",
+    "present": [
+      "race"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-pos-2",
+    "item": "race",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "調査票には、本人の父方が在日コリアンの家系であるとの記載があった。",
+    "present": [
+      "race"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-pos-3",
+    "item": "race",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t民族的出自\n見本 ジョアン\t日系ブラジル人",
+    "present": [
+      "race",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-pos-4",
+    "item": "race",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "面談記録\n本人の民族的背景\n琉球民族であると自認",
+    "present": [
+      "race"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-pos-5",
+    "item": "race",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "（不適切な採用メモの例）\n・候補者はクルド系とのこと",
+    "present": [
+      "race"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-pos-6",
+    "item": "race",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Ethnicity: Han Chinese\n人種・民族：漢民族",
+    "present": [
+      "race"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-neg-1",
+    "item": "race",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "人種差別撤廃条約は1965年に国連総会で採択されました。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-neg-2",
+    "item": "race",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "民族：＿＿＿（この欄は記入しないでください）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-neg-3",
+    "item": "race",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本エスニック食堂：タイ料理・ベトナム料理を提供。ランチ 1,100円から。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-neg-4",
+    "item": "race",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "アイヌ施策推進法は、アイヌの人々の誇りが尊重される社会の実現を目的としています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "race-amb-1",
+    "item": "race",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "国籍：ブラジル",
+    "present": [],
+    "ambiguous": [
+      "race"
+    ],
+    "note": "国籍のみ"
+  },
+  {
+    "case_id": "creed-pos-1",
+    "item": "creed",
+    "kind": "positive",
+    "style": "heading",
+    "text": "信仰：キリスト教（プロテスタント）",
+    "present": [
+      "creed"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-pos-2",
+    "item": "creed",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は見本党の党員で、地域支部の役員も務めている。",
+    "present": [
+      "creed"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-pos-3",
+    "item": "creed",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t所属宗教団体\n宮之原 透\t架空教会",
+    "present": [
+      "creed",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-pos-4",
+    "item": "creed",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "身上調査票（不適正項目）\n支持政党\n試験改革党",
+    "present": [
+      "creed"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-pos-5",
+    "item": "creed",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "懇親会の件、桐生 美咲さんはイスラム教徒なので、豚肉とお酒なしのメニューでお願いします。",
+    "present": [
+      "creed",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-pos-6",
+    "item": "creed",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Religion: Buddhist (Jodo Shinshu)\n宗派：浄土真宗",
+    "present": [
+      "creed"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-neg-1",
+    "item": "creed",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "日本国憲法第20条は信教の自由を保障しています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-neg-2",
+    "item": "creed",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "宗教：＿＿＿（任意・空欄可）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-neg-3",
+    "item": "creed",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空寺院 年間行事のご案内：除夜の鐘、春秋のお彼岸法要。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "creed-neg-4",
+    "item": "creed",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "（例示）世論調査では「支持政党なし」と答えた人の割合が最も高かった。",
+    "present": [],
+    "ambiguous": [],
+    "note": "集計"
+  },
+  {
+    "case_id": "creed-amb-1",
+    "item": "creed",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "出身校：見本学院高等学校（キリスト教系）を卒業",
+    "present": [
+      "education"
+    ],
+    "ambiguous": [
+      "creed"
+    ],
+    "note": "宗教系学校の卒業から信条を推知させるだけ"
+  },
+  {
+    "case_id": "social_status-pos-1",
+    "item": "social_status",
+    "kind": "positive",
+    "style": "heading",
+    "text": "身元調査報告：対象者の出身地は同和地区とされる",
+    "present": [
+      "social_status"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-pos-2",
+    "item": "social_status",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人が被差別部落の出身であることを理由に、交際に反対されたとの相談を受けた。",
+    "present": [
+      "social_status"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-pos-3",
+    "item": "social_status",
+    "kind": "positive",
+    "style": "table",
+    "text": "対象者\t調査事項\t結果\n瀬能 和也\t出自\t旧部落出身の記載あり",
+    "present": [
+      "social_status",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-pos-4",
+    "item": "social_status",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "身元調査票（違法な調査の例）\n本籍地の地区区分\n同和対象地区\n照会方法\n興信所経由",
+    "present": [
+      "social_status"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-pos-5",
+    "item": "social_status",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "相談窓口ログ：相談者は、自身が部落出身であることを職場で暴露されたと訴えている。",
+    "present": [
+      "social_status"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-pos-6",
+    "item": "social_status",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Social origin: Buraku descent (noted in background check)\n社会的身分：部落出身",
+    "present": [
+      "social_status"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-neg-1",
+    "item": "social_status",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "部落差別の解消の推進に関する法律は2016年に施行されました。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-neg-2",
+    "item": "social_status",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "本籍：＿＿＿（採用選考では記入を求めません）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-neg-3",
+    "item": "social_status",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本人権啓発センター 研修案内：同和問題の歴史と現状（2時間）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-neg-4",
+    "item": "social_status",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "社会的身分による差別は、日本国憲法第14条で禁止されています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "social_status-amb-1",
+    "item": "social_status",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "本籍地：見本県架空郡試験町大字例示",
+    "present": [],
+    "ambiguous": [
+      "social_status"
+    ],
+    "note": "本籍のみで推知させるだけ"
+  },
+  {
+    "case_id": "criminal_record-pos-1",
+    "item": "criminal_record",
+    "kind": "positive",
+    "style": "heading",
+    "text": "前科：2018年 道路交通法違反（罰金30万円）",
+    "present": [
+      "criminal_record"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-pos-2",
+    "item": "criminal_record",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "応募者は過去に窃盗罪で懲役1年・執行猶予3年の刑を受けたことがある。",
+    "present": [
+      "criminal_record"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-pos-3",
+    "item": "criminal_record",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t罪名\t刑\n根津 亮平\t詐欺\t懲役2年6月",
+    "present": [
+      "criminal_record",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-pos-4",
+    "item": "criminal_record",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "賞罰\n罰\n2020年 傷害罪により罰金刑",
+    "present": [
+      "criminal_record"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-pos-5",
+    "item": "criminal_record",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "内部通報メモ\n・取引先の担当者に横領の前科があるとの匿名情報",
+    "present": [
+      "criminal_record"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-pos-6",
+    "item": "criminal_record",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Criminal record: Convicted of fraud (2019), 2 years (suspended)\n前科：有",
+    "present": [
+      "criminal_record"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-neg-1",
+    "item": "criminal_record",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "刑法では、刑の執行を終わってから一定期間を経過すると刑の言渡しは効力を失うと定められています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-neg-2",
+    "item": "criminal_record",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "賞罰：あり・なし（ありの場合の内容：＿＿＿＿）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-neg-3",
+    "item": "criminal_record",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "（例示）再犯者率はここ数年おおむね5割前後で推移している。",
+    "present": [],
+    "ambiguous": [],
+    "note": "統計"
+  },
+  {
+    "case_id": "criminal_record-neg-4",
+    "item": "criminal_record",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本法律事務所 刑事弁護の費用：着手金33万円から。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_record-amb-1",
+    "item": "criminal_record",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "賞罰：なし",
+    "present": [],
+    "ambiguous": [
+      "criminal_record"
+    ],
+    "note": "否定"
+  },
+  {
+    "case_id": "criminal_procedure-pos-1",
+    "item": "criminal_procedure",
+    "kind": "positive",
+    "style": "heading",
+    "text": "処分状況：2026年9月12日 逮捕、9月30日 不起訴（嫌疑不十分）",
+    "present": [
+      "criminal_procedure"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-pos-2",
+    "item": "criminal_procedure",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "社員の大河内 修が、昨夜酒気帯び運転の疑いで現行犯逮捕されたと警察から連絡があった。",
+    "present": [
+      "criminal_procedure",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-pos-3",
+    "item": "criminal_procedure",
+    "kind": "positive",
+    "style": "table",
+    "text": "日付\t手続\n2026/05/02\t書類送検\n2026/06/18\t略式起訴",
+    "present": [
+      "criminal_procedure"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-pos-4",
+    "item": "criminal_procedure",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "少年事件記録（写）\n事件の種類\n窃盗\n手続の状況\n家庭裁判所に送致、審判期日 12月3日",
+    "present": [
+      "criminal_procedure"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-pos-5",
+    "item": "criminal_procedure",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "総務チャット：営業部の社員が傷害容疑で取り調べを受けているそうです。本人から明日休むと連絡がありました。",
+    "present": [
+      "criminal_procedure"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-pos-6",
+    "item": "criminal_procedure",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Status: Indicted (起訴) on 2026-10-01; trial pending\n被告人：本人",
+    "present": [
+      "criminal_procedure"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-neg-1",
+    "item": "criminal_procedure",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "刑事訴訟法では、司法警察員は逮捕から48時間以内に被疑者を検察官に送致しなければなりません。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-neg-2",
+    "item": "criminal_procedure",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "（例示）昨年の刑法犯の認知件数は前年を上回った。",
+    "present": [],
+    "ambiguous": [],
+    "note": "統計"
+  },
+  {
+    "case_id": "criminal_procedure-neg-3",
+    "item": "criminal_procedure",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本法律事務所：少年事件・刑事事件の初回相談無料（30分）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-neg-4",
+    "item": "criminal_procedure",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "身柄の状況：＿＿＿（該当なしの場合は空欄）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "criminal_procedure-amb-1",
+    "item": "criminal_procedure",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "長期欠勤の理由：「警察の関係」とだけ聞いている",
+    "present": [],
+    "ambiguous": [
+      "criminal_procedure"
+    ],
+    "note": "推知させるだけ"
+  },
+  {
+    "case_id": "crime_victim-pos-1",
+    "item": "crime_victim",
+    "kind": "positive",
+    "style": "heading",
+    "text": "被害状況：2026年8月 特殊詐欺被害（被害額 280万円）",
+    "present": [
+      "crime_victim"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-pos-2",
+    "item": "crime_victim",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は先月、帰宅途中にひったくりの被害に遭い、警察に被害届を提出した。",
+    "present": [
+      "crime_victim"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-pos-3",
+    "item": "crime_victim",
+    "kind": "positive",
+    "style": "table",
+    "text": "相談者\t被害内容\t届出\n芦原 志保\tストーカー被害\t済",
+    "present": [
+      "crime_victim",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-pos-4",
+    "item": "crime_victim",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "犯罪被害者等給付金 支給申請書\n被害の種類\n傷害\n被害日\n2026年4月7日",
+    "present": [
+      "crime_victim"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-pos-5",
+    "item": "crime_victim",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "人事より：来週から在宅勤務を許可します。DV被害で避難中とのことなので、住所は社内でも非開示にしてください。",
+    "present": [
+      "crime_victim"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-pos-6",
+    "item": "crime_victim",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Victim of: Burglary (2026-02)\n被害者：本人／被害届 受理済",
+    "present": [
+      "crime_victim"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-neg-1",
+    "item": "crime_victim",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "特殊詐欺の被害は高齢者に多く、各地で注意が呼びかけられています。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-neg-2",
+    "item": "crime_victim",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "犯罪被害者等基本法は2004年に成立しました。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-neg-3",
+    "item": "crime_victim",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本セキュリティ株式会社：ホームセキュリティ月額3,300円。空き巣対策に。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-neg-4",
+    "item": "crime_victim",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "被害の有無：□有　□無",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "crime_victim-amb-1",
+    "item": "crime_victim",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "相談内容：近隣住民とのトラブル（詳細は本人の希望により記載しない）",
+    "present": [],
+    "ambiguous": [
+      "crime_victim"
+    ],
+    "note": "犯罪被害か不明"
+  },
+  {
+    "case_id": "password_plain-pos-1",
+    "item": "password_plain",
+    "kind": "positive",
+    "style": "heading",
+    "text": "初期パスワード：Kx7#mP2qL9",
+    "present": [
+      "password_plain"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-pos-2",
+    "item": "password_plain",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "VPN のパスワードは Mihon!2026sec に変更しておきました。",
+    "present": [
+      "password_plain"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-pos-3",
+    "item": "password_plain",
+    "kind": "positive",
+    "style": "table",
+    "text": "user\tpassword\nuser01\tQw8$zR41uT\nuser02\tsakura0412!",
+    "present": [
+      "password_plain"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-pos-4",
+    "item": "password_plain",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "Wi-Fi 接続情報\nSSID\nKAKU-OFFICE-5G\nパスワード\nf3Gh9-kLm2-Pq7x",
+    "present": [
+      "password_plain"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-pos-5",
+    "item": "password_plain",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "#infra 本番DBの root パス、とりあえず `Tst_r00t#77` にしてあります（後で変えます）",
+    "present": [
+      "password_plain"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-pos-6",
+    "item": "password_plain",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "DB_HOST=db.kaku-shoji.example\nDB_PASSWORD=Ex4mple_Pw!93",
+    "present": [
+      "password_plain"
+    ],
+    "ambiguous": [],
+    "note": "設定ファイル形式"
+  },
+  {
+    "case_id": "password_plain-neg-1",
+    "item": "password_plain",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "パスワード：********",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-neg-2",
+    "item": "password_plain",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "パスワードは12文字以上で、英大文字・小文字・数字・記号を含めてください。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-neg-3",
+    "item": "password_plain",
+    "kind": "negative",
+    "style": "other",
+    "text": "PASSWORD_MIN_LENGTH=12\npassword_reset_token_expire=3600",
+    "present": [],
+    "ambiguous": [],
+    "note": "設定名だけで値はパスワードでない"
+  },
+  {
+    "case_id": "password_plain-neg-4",
+    "item": "password_plain",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本パスワードマネージャー：月額300円で家族5人まで利用できます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_plain-amb-1",
+    "item": "password_plain",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "パスワードのヒント：最初に飼った犬の名前",
+    "present": [],
+    "ambiguous": [
+      "password_plain"
+    ],
+    "note": "ヒントのみ"
+  },
+  {
+    "case_id": "password_hash-pos-1",
+    "item": "password_hash",
+    "kind": "positive",
+    "style": "heading",
+    "text": "password_hash: $2b$12$f9husw5sQZMIxS1dR7yStDrs0I18asUv0IGyWNQcn8Du4BDCpY11F",
+    "present": [
+      "password_hash"
+    ],
+    "ambiguous": [],
+    "note": "bcrypt"
+  },
+  {
+    "case_id": "password_hash-pos-2",
+    "item": "password_hash",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "移行対象ユーザーのハッシュ値は $argon2id$v=19$m=65536,t=3,p=4$jwjRkqf7NJdEJpi7vYflx7$80s1j4paBMufExLP9i0KFaNwEWJcpz9qF9vbrovltB9 で、再ハッシュは不要です。",
+    "present": [
+      "password_hash"
+    ],
+    "ambiguous": [],
+    "note": "argon2id"
+  },
+  {
+    "case_id": "password_hash-pos-3",
+    "item": "password_hash",
+    "kind": "positive",
+    "style": "table",
+    "text": "id\temail\tpassword_hash\n1042\tuser1042@kaku-shoji.example\t$6$UJN456xJKOlqSHzq$.EjzYLctlWT/I4ZbNPT7oLjib1hGfLc7aLoyrhbVUVwkrk0GvnPF2RP22DuwJt30dNwJTpJACs8cIwq3MYd2x9",
+    "present": [
+      "password_hash",
+      "email"
+    ],
+    "ambiguous": [],
+    "note": "sha512-crypt"
+  },
+  {
+    "case_id": "password_hash-pos-4",
+    "item": "password_hash",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "admin:\n  password:\n    pbkdf2_sha256$600000$LkQYUo7u6PGAbBlcxjmgYL$8bgSRxJUT5SbmUuqXvm9pto0m5g7G82n71UYb106dpZ=",
+    "present": [
+      "password_hash"
+    ],
+    "ambiguous": [],
+    "note": "pbkdf2、値が別行"
+  },
+  {
+    "case_id": "password_hash-pos-5",
+    "item": "password_hash",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "ログ抜粋：shadow ファイルの1行\nbackup:$6$rounds=656000$7PAhcGIxe/TkmNa/$L1Co0kCILY6FIxcgq7FllThauAJ98PNltQGzw/QdFL3Wc/DNy29Mh0.X7cRD2l1Y0NertgNLwamLU/nn/PsSgI:19700:0:99999:7:::",
+    "present": [
+      "password_hash"
+    ],
+    "ambiguous": [],
+    "note": "rounds付き sha512-crypt"
+  },
+  {
+    "case_id": "password_hash-pos-6",
+    "item": "password_hash",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "PASSWORD_HASH=\"$2y$10$.9KCuLwXOOoPPvWnYwpQWjvEj6/WEjacvgkUaex2ibs3LkWsBqTS5\"",
+    "present": [
+      "password_hash"
+    ],
+    "ambiguous": [],
+    "note": "$2y$ 形式"
+  },
+  {
+    "case_id": "password_hash-neg-1",
+    "item": "password_hash",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "SHA-256 (setup-2.4.1.zip) = 5b4180714b42e5500989838986d45cafb6cca53dc474a20bf89deda76e21f945",
+    "present": [],
+    "ambiguous": [],
+    "note": "ファイルのチェックサム"
+  },
+  {
+    "case_id": "password_hash-neg-2",
+    "item": "password_hash",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "コミット d90372b0834b425acd8a11b5ec6fab73c760d8a2 で設定ファイルの誤字を修正しました。",
+    "present": [],
+    "ambiguous": [],
+    "note": "コミットハッシュ"
+  },
+  {
+    "case_id": "password_hash-neg-3",
+    "item": "password_hash",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "bcrypt の値はソルトとコスト係数を含む形式で、$2b$ などの接頭辞で始まります。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_hash-neg-4",
+    "item": "password_hash",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "password_hash: [REDACTED]",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "password_hash-amb-1",
+    "item": "password_hash",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "token_digest: 7f30eaba89fb368f9440a08a3a2e00f455aed08f3f6087d1e4b132ee943dd3f2",
+    "present": [],
+    "ambiguous": [
+      "password_hash"
+    ],
+    "note": "パスワード由来か不明なダイジェスト"
+  },
+  {
+    "case_id": "email-pos-1",
+    "item": "email",
+    "kind": "positive",
+    "style": "heading",
+    "text": "メール：tm.1042@kaku-shoji.example",
+    "present": [
+      "email"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "email-pos-2",
+    "item": "email",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "請求書のPDFは s.kaneda1988@mail.example 宛てに送ってください。",
+    "present": [
+      "email"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "email-pos-3",
+    "item": "email",
+    "kind": "positive",
+    "style": "table",
+    "text": "No\tE-mail\n1\tabc.mihon@ex-mail.example\n2\tz-77k@post.example",
+    "present": [
+      "email"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "email-pos-4",
+    "item": "email",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "連絡先\nメールアドレス\nmorning.coffee.42@example.test",
+    "present": [
+      "email"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "email-pos-5",
+    "item": "email",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "From: 架空商事 総務部 <soumu@kaku-shoji.example>\nTo: you@shiken.example\n件名：健康診断日程のご案内",
+    "present": [
+      "email"
+    ],
+    "ambiguous": [],
+    "note": "メールヘッダー"
+  },
+  {
+    "case_id": "email-pos-6",
+    "item": "email",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "E-mail：user0815＠mihon-net.example",
+    "present": [
+      "email"
+    ],
+    "ambiguous": [],
+    "note": "全角＠"
+  },
+  {
+    "case_id": "email-neg-1",
+    "item": "email",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "パッケージ @mihon/ui@3.2.1 をインストールしてください。",
+    "present": [],
+    "ambiguous": [],
+    "note": "パッケージ指定"
+  },
+  {
+    "case_id": "email-neg-2",
+    "item": "email",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "メールアドレスは「ローカル部＠ドメイン」の形式で表されます。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "email-neg-3",
+    "item": "email",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "メールアドレス：t***@***.example（伏字）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "email-neg-4",
+    "item": "email",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "公式SNSアカウント：@mihon_official",
+    "present": [],
+    "ambiguous": [],
+    "note": "SNSのハンドル"
+  },
+  {
+    "case_id": "email-amb-1",
+    "item": "email",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "連絡先：yamada [at] shiken.example",
+    "present": [],
+    "ambiguous": [
+      "email"
+    ],
+    "note": "難読化表記"
+  },
+  {
+    "case_id": "phone-pos-1",
+    "item": "phone",
+    "kind": "positive",
+    "style": "heading",
+    "text": "電話番号：090-4821-7365",
+    "present": [
+      "phone"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-pos-2",
+    "item": "phone",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "折り返しは携帯の 080 3392 1047 までお願いしますとのこと。",
+    "present": [
+      "phone"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-pos-3",
+    "item": "phone",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t内線\t携帯\n桐生 美咲\t2041\t070-5518-2093",
+    "present": [
+      "phone",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-pos-4",
+    "item": "phone",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "緊急連絡先\n電話\n06-6948-2173",
+    "present": [
+      "phone"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-pos-5",
+    "item": "phone",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "伝言メモ：取引先の担当者から電話あり。03-5839-2047 に折り返し希望。",
+    "present": [
+      "phone"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-pos-6",
+    "item": "phone",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "TEL：０９０（２２１８）４４７０\nMobile: +81 90-2218-4470",
+    "present": [
+      "phone"
+    ],
+    "ambiguous": [],
+    "note": "全角括弧と国番号表記"
+  },
+  {
+    "case_id": "phone-neg-1",
+    "item": "phone",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "部品番号 080-3392-104A は廃番になりました。",
+    "present": [],
+    "ambiguous": [],
+    "note": "電話に似た部品番号"
+  },
+  {
+    "case_id": "phone-neg-2",
+    "item": "phone",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "注文日時 2026-03-04 10:47　伝票番号 0312-4458-90",
+    "present": [],
+    "ambiguous": [],
+    "note": "伝票番号"
+  },
+  {
+    "case_id": "phone-neg-3",
+    "item": "phone",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "電話番号：090-****-****",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-neg-4",
+    "item": "phone",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "携帯電話の番号は070・080・090などで始まる11桁です。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "phone-amb-1",
+    "item": "phone",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "代表電話：03-6823-1940（架空商事株式会社 本社）",
+    "present": [],
+    "ambiguous": [
+      "phone"
+    ],
+    "note": "法人の代表番号"
+  },
+  {
+    "case_id": "address-pos-1",
+    "item": "address",
+    "kind": "positive",
+    "style": "heading",
+    "text": "住所：東京都練馬区みほん台3丁目14番7号",
+    "present": [
+      "address"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-pos-2",
+    "item": "address",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本人は大阪府堺市北区例示町2-8-15のアパートに住んでいる。",
+    "present": [
+      "address"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-pos-3",
+    "item": "address",
+    "kind": "positive",
+    "style": "table",
+    "text": "氏名\t住所\n根津 亮平\t神奈川県川崎市中原区試験町1-22-3 見本ハイツ203",
+    "present": [
+      "address",
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-pos-4",
+    "item": "address",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "現住所\n〒064-0821\n北海道札幌市中央区架空通西18丁目2番5号",
+    "present": [
+      "address"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-pos-5",
+    "item": "address",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "配達先メモ：福岡県福岡市早良区見本ケ丘4丁目6-11、不在時は宅配ボックスへ",
+    "present": [
+      "address"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-pos-6",
+    "item": "address",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Address: 2-9-4 Mihondai, Aoba-ku, Sendai-shi, Miyagi\n宮城県仙台市青葉区見本台２－９－４",
+    "present": [
+      "address"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-neg-1",
+    "item": "address",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "住居表示制度では、街区符号と住居番号を組み合わせて住所を表します。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-neg-2",
+    "item": "address",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "住所：東京都練馬区＊＊＊＊＊＊",
+    "present": [],
+    "ambiguous": [],
+    "note": "市区町村以降が伏字"
+  },
+  {
+    "case_id": "address-neg-3",
+    "item": "address",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "架空商事株式会社 東京支店は2026年12月に移転します（移転先は追ってお知らせします）。",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "address-neg-4",
+    "item": "address",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "郵便番号 064-0821 の地域は札幌市中央区にあります。",
+    "present": [],
+    "ambiguous": [],
+    "note": "番地なし"
+  },
+  {
+    "case_id": "address-amb-1",
+    "item": "address",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "本社所在地：東京都千代田区見本町1-2-3（架空商事株式会社）",
+    "present": [],
+    "ambiguous": [
+      "address"
+    ],
+    "note": "法人の所在地"
+  },
+  {
+    "case_id": "name-pos-1",
+    "item": "name",
+    "kind": "positive",
+    "style": "heading",
+    "text": "氏名：宮之原 透",
+    "present": [
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-pos-2",
+    "item": "name",
+    "kind": "positive",
+    "style": "sentence",
+    "text": "本日の打合せには、先方から桐生 美咲様がご出席されました。",
+    "present": [
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-pos-3",
+    "item": "name",
+    "kind": "positive",
+    "style": "table",
+    "text": "No\t氏名\tフリガナ\n1\t大河内 修\tオオコウチ オサム\n2\t戸叶 智子\tトガノウ トモコ",
+    "present": [
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-pos-4",
+    "item": "name",
+    "kind": "positive",
+    "style": "form_multiline",
+    "text": "申請者\n氏名（自署）\n芦原 志保",
+    "present": [
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-pos-5",
+    "item": "name",
+    "kind": "positive",
+    "style": "chat_or_list",
+    "text": "議事録\n出席者：瀬能 和也、赤羽 大地、根津 亮平\n議題：年末調整スケジュール",
+    "present": [
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-pos-6",
+    "item": "name",
+    "kind": "positive",
+    "style": "variant_notation",
+    "text": "Name: MIYANOHARA Toru\n氏名：ミヤノハラ　トオル",
+    "present": [
+      "name"
+    ],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-neg-1",
+    "item": "name",
+    "kind": "negative",
+    "style": "business_doc",
+    "text": "見本電機株式会社 製品名：みほんクリーナー Z",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-neg-2",
+    "item": "name",
+    "kind": "negative",
+    "style": "empty_or_masked",
+    "text": "氏名：＿＿＿＿＿＿＿（楷書で記入）",
+    "present": [],
+    "ambiguous": [],
+    "note": ""
+  },
+  {
+    "case_id": "name-neg-3",
+    "item": "name",
+    "kind": "negative",
+    "style": "general_text",
+    "text": "日本で多い姓には佐藤、鈴木、高橋などがあります。",
+    "present": [],
+    "ambiguous": [],
+    "note": "姓の一般論"
+  },
+  {
+    "case_id": "name-neg-4",
+    "item": "name",
+    "kind": "negative",
+    "style": "similar_number",
+    "text": "会議室名：桜・楓・椿（予約はポータルから）",
+    "present": [],
+    "ambiguous": [],
+    "note": "人名に似た語"
+  },
+  {
+    "case_id": "name-amb-1",
+    "item": "name",
+    "kind": "ambiguous",
+    "style": "other",
+    "text": "記入例：山田 太郎",
+    "present": [],
+    "ambiguous": [
+      "name"
+    ],
+    "note": "記入例の見本氏名"
+  }
+]

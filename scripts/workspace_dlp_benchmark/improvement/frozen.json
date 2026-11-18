@@ -1,0 +1,8 @@
+{
+  "rules_file": "context_rules.py",
+  "rules_sha256": "d73d94961cc9526b49b5005ca1f078e6cef5f272f4f5173f48bf18cb48ebecaa",
+  "rules_frozen_at": "2026-11-17T23:18:26Z",
+  "holdout_file": "holdout_cases.json",
+  "holdout_sha256": "e74fd20fa16b0ba762ce6f4fc8668b16989e0f3ed41f629578dbea462bb78345",
+  "note": "規則は既存v3だけを見て作成し、保留資料の受領前に固定した。保留資料の結果を見て規則を変えた場合は新しい保留資料で測り直し、この記録を更新する。"
+}

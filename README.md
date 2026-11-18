@@ -64,6 +64,8 @@
 
 [企業の機密データ検知・管理の取り組み事例](research/technology/enterprise_sensitive_data_detection_case_studies_20261116.md)。国内13件、海外の自社構築11件、ベンダー公開の顧客事例14件、事故・行政処分8件を整理。事故の多くは共有範囲の放置が原因であること、誤検知を文脈で補う手法、検知と確定の分離、少段階で安全側の既定ラベル、生成AI導入前の過剰共有是正、段階的導入を横断的な傾向として示し、Google Workspaceの設計への示唆をまとめた。
 
+[事例調査の改善案をDLPの検知精度と是正フローに取り込む検証](research/technology/dlp_case_study_improvements_verification_20261118.md)。文脈で補う検知規則を、規則を見ずに作った独立の評価資料340件でRE2により測り、グループ単位の再現率0.41→0.68・適合率0.93→0.97を確認。提案と確定を分けた是正フローを状態遷移とモデル計算で現行案と比べ、露出・管理者の作業時間・所有者不在の滞留・猶予なしの削除が減る一方、所有者への誤依頼と誤却下が新たに生じることを示した。Google実環境の測定ではない。
+
 [機密情報検知サービスのAPI対応比較](research/technology/dlp_related_services_api_matrix_20261111.md)。BigIDを含む16の製品・機能系統について、検知一覧・検出値・設定変更・人の判定・通知抑制・再検査を比較。Drive接続と外部向け管理API、判定の終了と将来抑制、受付成功と検査完了を区別した。[出典確認記録](research/technology/dlp_related_services_api_sources_20261111.json)。[BigIDの追加精査](research/technology/bigid_dlp_api_constraints_20261111.md)では、資産一覧の1万件打切り、問題の抑制と業務許可、検査停止と正常完了、日本語・形式別の未確認事項を整理した。
 
 [ストレージ等を監視し、Sentryのように警告するシステムの比較](research/technology/telescreen_related_systems_20261009.md)。S3等のオブジェクト保存、ファイル共有、データベース、業務クラウドを含めて調査。50行の製品・機構・部品・参考を整理し、内容分類とアクセス方針、問題集約、担当、修正後再検査、再発、原文の処理・保持を比較した。独立企業50社や実測精度順位を意味しない。[比較CSV](research/technology/telescreen_related_systems_comparison_20261009.csv)、[JSON](research/technology/telescreen_related_systems_comparison_20261009.json)、[レビュー記録](research/technology/telescreen_related_review_summary_20261009.md)。
