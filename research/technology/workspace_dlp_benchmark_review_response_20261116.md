@@ -144,6 +144,26 @@ BigQuery書出しの公開対応版はFrontline Standard/Plus、Enterprise Stand
 
 Gmail・ChatやCloudの検査APIは予備比較として独立した結果表へ置く。ラベル経由の二段構成と自作権限削除も、同じ固定資料・事前共有状態・外部読取経路で比較する。ブラウザーからの貼付け・持出しをすべてDrive DLPだけの保証範囲にせず、Chromeの規則やアクセス制御を扱う試験には別の設定と指標を用意する。[S7]
 
+## 運用Q&A
+
+### 機微情報を指定したフォルダー配下だけに置けるか
+
+Drive DLPの公開仕様では、親フォルダーIDや祖先階層を条件にして、保存先や移動先を強制する機能は確認できない。マイドライブでは所有者の、共有ドライブではそのドライブの規則が適用される。監査で指定先の外にあるファイルを見つけたい場合は、指定先の外にもDLPの対象範囲を広げる。 [Drive DLPの条件と動作](https://knowledge.workspace.google.com/admin/security/about-dlp-for-drive)
+
+| 目的 | 構成 | 実装する範囲 |
+|---|---|---|
+| 日次の配置監査 | DLPで機微ラベルを付け、Drive棚卸しをBigQueryへ出力する。ファイルIDと親IDを使い、SQLで許可フォルダーの子孫をたどる | 標準出力の設定と定期SQLで構成できる。棚卸しは日次または週次で、対応契約と課金設定が必要 |
+| 移動を早く把握 | Drive APIで親を取得し、`changes.list`で変更を追跡する。上位フォルダーが移動したときは配下も再判定する | 台帳の初期作成、差分取得、定期照合が必要 |
+| 保存前に強制 | 管理された受付で書き込み前に検査し、機微情報を許可した共有ドライブやフォルダーにのみ書き込む | 受付処理と権限管理が必要。直接書き込み、移動、コピーは管理できる経路で制限する |
+
+日次レポートではファイルごとに「許可配下」「範囲外」「確認不能」を記録し、範囲外の新規・解消・残件を集計する。棚卸しで親が欠落する場合や棚卸しが古い場合は「確認不能」とする。規則監査ログは検知履歴の補助に使う。保存後の監視には検知遅延、未検査、見逃しがあり、監視結果から組織全体の配置を常時保証することはできない。 [Drive棚卸しの出力設定](https://knowledge.workspace.google.com/admin/reports/export-your-organizations-drive-inventory)・[棚卸しの項目](https://knowledge.workspace.google.com/admin/reports/schema-and-example-queries-for-drive-inventory-exports-in-bigquery)・[Driveの変更追跡](https://developers.google.com/workspace/drive/api/guides/about-changes)
+
+### ファイル作成からDLP検知までどのくらいかかるか
+
+Googleの公開仕様には、個々の新規作成から検知までの期限は記載されていない。規則追加・変更後の既存ファイルの再検査は、件数等によって数時間、1日、またはそれ以上かかる場合がある。規則ログが管理画面に現れるまでの目安はほぼリアルタイムで、標準出力でBigQueryに活動ログが届く目安は通常10分以内である。後者の2つは、検知イベントが発生した後の時間である。 [Drive DLPの検査](https://knowledge.workspace.google.com/admin/security/about-dlp-for-drive)・[監査ログの反映時間](https://knowledge.workspace.google.com/admin/reports/data-retention-and-lag-times)・[BigQueryへの標準出力](https://knowledge.workspace.google.com/admin/reports/set-up-service-log-exports-to-bigquery)
+
+実測では、ファイルの作成時刻かアップロード要求の開始時刻を起点として明示し、初回一致イベントの発生時刻までを測る。ログの取得時刻も別に記録する。検査の開始時刻が公開されない場合、初回一致までの時間を検査開始までの時間として扱わない。観測できた資料の中央値、95パーセンタイル、最大値に加え、対象数と観測期間内に一致を確認できなかった件数を示す。
+
 ## 出典
 
 すべてGoogleの公開公式資料。確認日はいずれも2026年11月16日。実環境の契約・設定を確認した記録ではない。
