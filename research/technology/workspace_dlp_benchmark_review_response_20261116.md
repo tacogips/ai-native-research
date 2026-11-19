@@ -164,6 +164,12 @@ Googleの公開仕様には、個々の新規作成から検知までの期限�
 
 実測では、ファイルの作成時刻かアップロード要求の開始時刻を起点として明示し、初回一致イベントの発生時刻までを測る。ログの取得時刻も別に記録する。検査の開始時刻が公開されない場合、初回一致までの時間を検査開始までの時間として扱わない。観測できた資料の中央値、95パーセンタイル、最大値に加え、対象数と観測期間内に一致を確認できなかった件数を示す。
 
+### 修正依頼をgwsで送る場合、送信元は誰か
+
+Drive DLPの検知ログを起点に、ファイルIDで対象を照合し、作成者や担当者を確定して修正依頼を送る構成を取れる。依頼メールはDLPの標準アラートとは別の処理で、Google Workspace CLIの `gws gmail users messages send` から Gmail API の `users.messages.send` を呼び出す。Gmail APIの送信権限には OAuth の `gmail.send` を使える。 [Google Workspace CLI](https://github.com/googleworkspace/cli)・[Gmail APIの送信仕様](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send)
+
+通常の送信元は、送信認証に使うGmailメールボックスのアドレス。通知専用メールボックスを使う構成なら、そのアドレスを `From` にし、確認した担当者を `To` に入れる。別名を `From` に指定する場合は、そのメールボックスに登録され、利用可能な送信用エイリアスを使う。宛先を確定できないファイルは確認待ちとし、依頼本文には検知した値を載せず、ファイル参照と依頼事項を記載する。 [Gmailの送信元エイリアス仕様](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs)
+
 ## 出典
 
 すべてGoogleの公開公式資料。確認日はいずれも2026年11月16日。実環境の契約・設定を確認した記録ではない。
