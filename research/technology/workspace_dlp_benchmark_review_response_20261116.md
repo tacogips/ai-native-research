@@ -164,6 +164,12 @@ Googleの公開仕様には、個々の新規作成から検知までの期限�
 
 実測では、ファイルの作成時刻かアップロード要求の開始時刻を起点として明示し、初回一致イベントの発生時刻までを測る。ログの取得時刻も別に記録する。検査の開始時刻が公開されない場合、初回一致までの時間を検査開始までの時間として扱わない。観測できた資料の中央値、95パーセンタイル、最大値に加え、対象数と観測期間内に一致を確認できなかった件数を示す。
 
+### 規則監査ログで一致の解消を確認する
+
+架空データを使った検証での管理コンソール表示例。`Content unmatched` は、Driveファイルの内容が規則に一致しなくなったことを示す。時刻は表示例から伏せている。
+
+![Driveの規則監査ログの表示例。イベントは Content unmatched。時刻はマスク済み](images/drive-dlp-audit-log-synthetic-test.png)
+
 ### 修正依頼をgwsで送る場合、送信元は誰か
 
 Drive DLPの検知ログを起点に、ファイルIDで対象を照合し、作成者や担当者を確定して修正依頼を送る構成を取れる。依頼メールはDLPの標準アラートとは別の処理で、Google Workspace CLIの `gws gmail users messages send` から Gmail API の `users.messages.send` を呼び出す。Gmail APIの送信権限には OAuth の `gmail.send` を使える。 [Google Workspace CLI](https://github.com/googleworkspace/cli)・[Gmail APIの送信仕様](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send)
