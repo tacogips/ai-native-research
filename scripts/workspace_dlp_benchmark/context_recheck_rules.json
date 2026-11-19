@@ -1,0 +1,2737 @@
+{
+  "schema_version": 1,
+  "run": "context-recheck-v1",
+  "kind": "Google Cloud Identity Policy API",
+  "rules_and_detectors": [
+    {
+      "key": "clinical_care.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-clinical_care-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(糖尿病|高血圧|うつ病|がん|癌|喘息|肝炎|統合失調症|心筋梗塞)[^\\n]{0,15}(診断|通院|治療|処方|休職|入院|療養))|(?:(既往歴|病歴)[ 　]*[：:][ 　]*[^な＿*\\n])"
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "creed.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-creed-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(信仰|宗教|信条|支持政党)[ 　]*[：:][^\\n]{1,30})|(?:(党員|信者|入信))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "crime_victim.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-crime_victim-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(被害届|の被害を受け|被害に遭|被害を相談))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "criminal_procedure.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-criminal_procedure-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(被疑者として|逮捕され|起訴され|書類送検|少年審判|保護観察処分|勾留))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "criminal_record.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-criminal_record-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(前科|有罪判決|執行猶予|罰金刑|懲役))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "disability.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-disability-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(身体障害者手帳|療育手帳|精神障害者保健福祉手帳))|(?:(身体|知的|精神|発達|視覚|聴覚)障害(の診断|がある|を持つ|と診断))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "health_checkup.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-health_checkup-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(血圧|HbA1c|空腹時血糖|LDLコレステロール|BMI)[ 　]*[0-9０-９])|(?:(要再検査|要精密検査|特定保健指導の対象))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "race.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-race-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(人種|民族|民族的出自)[ 　]*[：:][^\\n]{1,20})"
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "social_status.detector",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}"
+        },
+        "setting": {
+          "type": "settings/detector.regular_expression",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-social_status-detector",
+            "description": "架空データによるDrive DLP再現試験。",
+            "regularExpression": {
+              "expression": "(?:(被差別部落|部落出身))"
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "bank.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "bank.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-bank-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('JAPAN_BANK_ACCOUNT', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "bank.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "bank.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-bank-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('JAPAN_BANK_ACCOUNT', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "card.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "card.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-card-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('CREDIT_CARD_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "card.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "card.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-card-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('CREDIT_CARD_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "clinical_care.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "clinical_care.POSSIBLE.negative",
+        "health_checkup.POSSIBLE.negative",
+        "medical_history.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-clinical_care-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('MEDICAL_CONTEXT', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "clinical_care.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "clinical_care.POSSIBLE.positive",
+        "health_checkup.POSSIBLE.positive",
+        "medical_history.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-clinical_care-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('MEDICAL_CONTEXT', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "clinical_care.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [
+        "clinical_care.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-clinical_care-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:clinical_care.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "clinical_care.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [
+        "clinical_care.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-clinical_care-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:clinical_care.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "creed.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "creed.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "creed.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-creed-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:creed.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "creed.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "creed.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "creed.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-creed-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:creed.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "crime_victim.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "crime_victim.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "crime_victim.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-crime_victim-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:crime_victim.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "crime_victim.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "crime_victim.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "crime_victim.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-crime_victim-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:crime_victim.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "criminal_procedure.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "criminal_procedure.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "criminal_procedure.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-criminal_procedure-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:criminal_procedure.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "criminal_procedure.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "criminal_procedure.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "criminal_procedure.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-criminal_procedure-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:criminal_procedure.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "criminal_record.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "criminal_record.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "criminal_record.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-criminal_record-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:criminal_record.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "criminal_record.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "criminal_record.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "criminal_record.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-criminal_record-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:criminal_record.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "disability.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "disability.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "disability.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-disability-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:disability.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "disability.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "disability.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "disability.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-disability-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:disability.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "email.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "email.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-email-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('EMAIL_ADDRESS', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "email.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "email.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-email-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('EMAIL_ADDRESS', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "filename.CONDITION.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "filename.CONDITION.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-filename-CONDITION-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !file_name.contains('NAMECHECK')"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "filename.CONDITION.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "filename.CONDITION.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-filename-CONDITION-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && file_name.contains('NAMECHECK')"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "health_checkup.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "health_checkup.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "health_checkup.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-health_checkup-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:health_checkup.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "health_checkup.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "health_checkup.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "health_checkup.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-health_checkup-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:health_checkup.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "iban.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "iban.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-iban-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('IBAN_CODE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "iban.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "iban.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-iban-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('IBAN_CODE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "individual.LIKELY.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "individual.LIKELY.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-individual-LIKELY-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('JAPAN_INDIVIDUAL_NUMBER', google.privacy.dlp.v2.Likelihood.LIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "individual.LIKELY.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "individual.LIKELY.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-individual-LIKELY-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('JAPAN_INDIVIDUAL_NUMBER', google.privacy.dlp.v2.Likelihood.LIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "individual.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "individual.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-individual-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('JAPAN_INDIVIDUAL_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "individual.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "individual.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-individual-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('JAPAN_INDIVIDUAL_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "individual.UNLIKELY.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "individual.UNLIKELY.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-individual-UNLIKELY-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('JAPAN_INDIVIDUAL_NUMBER', google.privacy.dlp.v2.Likelihood.UNLIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "individual.UNLIKELY.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "individual.UNLIKELY.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-individual-UNLIKELY-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('JAPAN_INDIVIDUAL_NUMBER', google.privacy.dlp.v2.Likelihood.UNLIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "license.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "license.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-license-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('JAPAN_DRIVERS_LICENSE_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "license.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "license.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-license-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('JAPAN_DRIVERS_LICENSE_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "literal.CONDITION.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "literal.CONDITION.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-literal-CONDITION-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.contains('WORKFLOWCONTROL')"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "literal.CONDITION.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "literal.CONDITION.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-literal-CONDITION-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.contains('WORKFLOWCONTROL')"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "mime.CONDITION.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "mime.CONDITION.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-mime-CONDITION-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !file_type.matches_mime_types(['application/pdf'])"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "mime.CONDITION.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "mime.CONDITION.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-mime-CONDITION-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && file_type.matches_mime_types(['application/pdf'])"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "name.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "name.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-name-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('NAME_OCCURRENCE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "name.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-name-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('NAME_OCCURRENCE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "name.POSSIBLE.positive-2",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "name.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-name-POSSIBLE-positive-2",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('NAME_OCCURRENCE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "passport.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "passport.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-passport-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('JAPAN_PASSPORT', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "passport.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "passport.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-passport-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('JAPAN_PASSPORT', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "password_plain.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "password_plain.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-password_plain-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('PASSWORD', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "password_plain.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "password_plain.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-password_plain-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('PASSWORD', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "phone.LIKELY.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "phone.LIKELY.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-phone-LIKELY-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('PHONE_NUMBER', google.privacy.dlp.v2.Likelihood.LIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "phone.LIKELY.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "phone.LIKELY.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-phone-LIKELY-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('PHONE_NUMBER', google.privacy.dlp.v2.Likelihood.LIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "phone.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "phone.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-phone-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "!body.matches_dlp_detector('PHONE_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "phone.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "phone.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-phone-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.matches_dlp_detector('PHONE_NUMBER', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "alertCenterAction": {},
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "phone.UNLIKELY.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "phone.UNLIKELY.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-phone-UNLIKELY-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('PHONE_NUMBER', google.privacy.dlp.v2.Likelihood.UNLIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "phone.UNLIKELY.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "phone.UNLIKELY.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-phone-UNLIKELY-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('PHONE_NUMBER', google.privacy.dlp.v2.Likelihood.UNLIKELY, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "race.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "race.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-race-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('ETHNIC_GROUP', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "race.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "race.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-race-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('ETHNIC_GROUP', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "race.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [
+        "race.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-race-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:race.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "race.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": false,
+      "scoring_profiles": [],
+      "depends_on": [
+        "race.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-race-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:race.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "key": "scan-control",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-scan-control",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL')"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "social_status.REGEX_1.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "social_status.REGEX_1.negative"
+      ],
+      "depends_on": [
+        "social_status.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-social_status-REGEX_1-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_regex_detector('{{RESOURCE:social_status.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "social_status.REGEX_1.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "social_status.REGEX_1.positive"
+      ],
+      "depends_on": [
+        "social_status.detector"
+      ],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-social_status-REGEX_1-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_regex_detector('{{RESOURCE:social_status.detector}}', {minimum_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "swift.POSSIBLE.negative",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "swift.POSSIBLE.negative"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-swift-POSSIBLE-negative",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && !body.matches_dlp_detector('SWIFT_CODE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "key": "swift.POSSIBLE.positive",
+      "evidence": "readback",
+      "in_current_scoring": true,
+      "scoring_profiles": [
+        "swift.POSSIBLE.positive"
+      ],
+      "depends_on": [],
+      "create_payload": {
+        "customer": "{{CUSTOMER_RESOURCE}}",
+        "policyQuery": {
+          "orgUnit": "{{ORG_UNIT_RESOURCE}}",
+          "query": "entity.org_units.exists(org_unit, org_unit.org_unit_id == orgUnitId('{{ORG_UNIT_ID}}'))"
+        },
+        "setting": {
+          "type": "settings/rule.dlp",
+          "value": {
+            "displayName": "DLPBENCH-{{RUN_TAG}}-swift-POSSIBLE-positive",
+            "description": "架空データによるDrive DLP再現試験。",
+            "triggers": [
+              "google.workspace.drive.file.v1.share"
+            ],
+            "condition": {
+              "contentCondition": "body.contains('{{RUN_MARKER}}') && body.contains('DLPHEAD') && body.contains('DLPTAIL') && body.matches_dlp_detector('SWIFT_CODE', google.privacy.dlp.v2.Likelihood.POSSIBLE, {minimum_match_count: 1, minimum_unique_match_count: 1})"
+            },
+            "action": {
+              "driveAction": {
+                "auditOnly": {}
+              }
+            },
+            "state": "ACTIVE",
+            "ruleTypeMetadata": {
+              "dlpRuleMetadata": {
+                "alertSeverity": "LOW"
+              }
+            }
+          }
+        }
+      },
+      "replay": true
+    }
+  ],
+  "attempted_not_applied": [
+    {
+      "property": "file_extension",
+      "status": "rejected",
+      "http_status": 400,
+      "predicates": [
+        "file_extension.matches_file_extension('pdf')",
+        "file_extension.matches_file_extension(['pdf'])"
+      ]
+    },
+    {
+      "property": "classification_label",
+      "status": "not_created",
+      "reason": "比較用ラベル条件の実設定なし"
+    }
+  ]
+}

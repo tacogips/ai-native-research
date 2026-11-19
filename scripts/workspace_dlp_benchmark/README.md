@@ -229,3 +229,90 @@ uv run --no-project --python 3.12 --with google-re2 python \
 番号形式だけの式は他の業務番号にも反応した。定型見出しを求める式は誤検知を減らした一方、別名・表・離れた行にある社員番号を見逃し、見出し付きの入力例にも反応した。文脈のない対では、本文だけを見る決定的な分類器は、一対の両方に正解できない。この対の50%は構成上の結果で、運用時の精度推定値ではない。
 
 Workspaceで再試験する際は、標準検知器の可能性のしきい値と、独自正規表現の最小一致回数を区別する。[設定の記録方法としきい値別の試験計画](../../research/technology/workspace_dlp_benchmark_review_response_20261116.md#業務番号の検知結果に設定条件を併記する)
+
+
+## 旧試験で再現率100%と表示された項目の対照試験
+
+本文8,768件を再生成する。21項目それぞれに64系列を割り当て、文脈だけを変えた資料を対にする。番号、氏名、パスワードは見出し付き・値のみ・離れた行・別表記を陽性にする。同じ値を在庫番号や訓練用の入力例に置いた資料、末尾1桁だけ検査数字の合わない番号、伏字、書き換えた宛先を対照にする。電話は携帯・固定・IP電話、国内・国際表記を含む。メールは国際化した日本語のローカル部も含む。病歴、診療記録、健診結果、人種・民族などは個人の記録、用語を避けた言い換え、同じ用語を含む公開説明や記入例を比べる。診療記録の対照には、既往歴だけが書かれ、その回の診察や処方がない個人文書も含める。名前・値・事例はすべて架空。個々の番号や宛先が未割当であることは保証しない。試験資料の派生を独立した標本として扱わない。
+
+```sh
+run_dir=/任意の場所/DLP文脈対照
+mkdir "$run_dir"
+python3 scripts/workspace_dlp_benchmark/context_recheck.py make --output "$run_dir/dataset"
+uv run --no-project --python 3.12 --with google-re2 python \
+  scripts/workspace_dlp_benchmark/context_recheck.py evaluate \
+  --dataset "$run_dir/dataset" --report "$run_dir/local-report.json"
+```
+
+出力は `drive_upload/*.txt`、`ground_truth.json`、`rule_plan.json`。正解表と本文の指紋を照合し、各文脈と各項目についてTP・TN・FP・FN、判定保留、適合率、再現率、正解率、F1値をJSONに保存する。本文に番号形式が存在するかと、その用途が保護対象かを別の正解とする。たとえば、ログイン名に転用したメール形式は宛先形式の検知として正解だが、この試験で「連絡先」の閾値評価をする場合は過剰反応と数える。実際のアカウント情報として保護すべきかは別の運用ルールで決める。明示した語句が引用されていれば文字列条件には一致する。ファイル名、拡張子、実体の形式、ラベル条件は内容検知率と区別して検査する。
+
+### ローカル試験の本文用途別の結果
+
+専用の標準検知器がない健診結果・障害・信条などに既存の独自正規表現を適用した。可能性のしきい値は対象外。電話、メール、国内口座、氏名、パスワード、病歴・診療、人種・民族など、標準検知器を使う項目の評価はWorkspace上で行う。
+
+| 項目 | 比較条件 | TP | TN | FP | FN | 適合率 | 再現率 | 正解率 | F1 |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 健康診断結果 | 文脈付きの既存式 | 32 | 64 | 64 | 96 | 33.33% | 25.00% | 37.50% | 28.57% |
+| 障害 | 文脈付きの既存式 | 64 | 64 | 64 | 64 | 50.00% | 50.00% | 50.00% | 50.00% |
+| 信条 | 文脈付きの既存式 | 64 | 64 | 64 | 64 | 50.00% | 50.00% | 50.00% | 50.00% |
+| 社会的身分 | 文脈付きの既存式 | 128 | 0 | 128 | 0 | 50.00% | 100.00% | 50.00% | 66.67% |
+| 犯罪の経歴 | 文脈付きの既存式 | 16 | 96 | 32 | 112 | 33.33% | 12.50% | 43.75% | 18.18% |
+| 刑事・少年事件の手続 | 文脈付きの既存式 | 80 | 0 | 128 | 48 | 38.46% | 62.50% | 31.25% | 47.62% |
+| 犯罪被害 | 文脈付きの既存式 | 80 | 0 | 128 | 48 | 38.46% | 62.50% | 31.25% | 47.62% |
+
+Workspaceでは監査のみの規則を使い、標準検知器の可能性のしきい値、最小一致数、最小一意一致数と、検知器名を照合する。対照の発火と検知条件の肯定または否定の証跡がそろった資料を採点する。肯定・否定の両方が残る資料、ログが未到着の資料、規則の設定を確認できない資料は別に集計する。病歴の標準検知器を健診結果にも当てるときは、医療用語に基づく比較として結果を表示する。判定根拠の原票、設定とファイルの対応、集計値は実環境での観測と分かる形でリポジトリ外に保存する。[標準検知器一覧](https://knowledge.workspace.google.com/admin/security/how-to-use-predefined-content-detectors)・[検知条件の設定仕様](https://docs.cloud.google.com/identity/docs/concepts/supported-policy-api-settings)
+
+### 電話番号と社員番号などの取り違え
+
+`080`・`090` の携帯形式と `0120` の着信課金形式は、同じ値を電話番号欄と社員番号欄、さらに人事側の別名の欄に置く。短い `1234` と `080` で始まる10桁も同じ見出しの対にする。日本の携帯形式と合うか、電話番号として使うのか、社員番号として使うのかを個別に注釈する。社内の短い番号は公衆電話番号としては陰性。短番 `1234` を再利用した資料を、独立した番号の標本には数えない。[日本の携帯電話の書式例](https://www.docomo.ne.jp/service/world/roaming/content/voice/)・[着信課金番号の書式例](https://www.ntt.com/business/services/voice-video/freedial-navidial/freedial/contract_notice.html)
+
+個人番号と運転免許証番号は12桁を共有させ、見出しを入れ替えた場合と見出しのない場合を対照にする。個人番号としての反応を採点する際は、免許証側から転用した値の検査数字を検証する。免許証番号の発行状況は推定しない。国内口座は社員番号、旅券番号は契約番号、カード番号は注文番号、IBANは照会番号、SWIFTは機材型式に見立てた同形の資料を加える。標準検知器が番号の形を拾った場合、形式の観点では一致していても、用途の観点では取り違えと記録する。
+
+社員番号側は組織固有の独自条件が必要なため、320資料で逆方向もローカル試験した。数字列だけを条件にする比較式は、電話番号欄などの陰性128件をすべて拾った。社員番号の見出しを必須にすると陰性128件を正しく除外した一方、人事台帳の別名で書いた陽性64件を見逃した。
+
+| 社員番号の条件 | TP | TN | FP | FN | 適合率 | 再現率 | 正解率 | F1 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 4〜11桁の数字 | 192 | 0 | 128 | 0 | 60.00% | 100.00% | 60.00% | 75.00% |
+| 社員番号の見出し＋4〜11桁 | 128 | 128 | 0 | 64 | 100.00% | 66.67% | 80.00% | 80.00% |
+
+### モックデータの正解注釈と実環境で使用する資料
+
+| 資料の種類 | 目的 | 注釈 |
+|---|---|---|
+| 同じ番号を電話番号欄・社員番号欄・人事台帳の別名欄に記載 | 数字列の用途を取り違えないかを調べる | `role_truth` は電話番号としての用途、`format_truth` は電話形式、`employee_truth` は社員番号としての用途。社内の短番や桁不足は公衆電話番号として陰性 |
+| マイナンバー、免許証、口座、カードなどと同じ形式の業務番号 | 見出しの有無と形式の重なりによる誤検知を調べる | 別用途は `role_truth=0`。形式条件に合えば `format_truth=1`。個人番号・免許証の逆方向は `cross_role_truth` で記録 |
+| 病歴・健診・人種や民族などの個別記録と一般資料 | 同じ用語があっても個人に関する内容かを識別できるか調べる | 個人の記録は用途陽性、解説や記入例は用途陰性。形式を定義しない項目は `format_truth=null` |
+| 文字列、ファイル名、拡張子、ファイル形式、ラベル値 | 本文とは独立した属性条件や指定値の一致を調べる | `rule_plan.json` に個別条件の正解を記録。本文の機微情報の正解と混ぜない |
+| 先頭・末尾の対照語 | 本文の走査を確認し、未観測を陰性にしない | `scan_control` に対照語。監査上の未判定は正解表の陰性と別の状態 |
+
+本文の基礎試験は `family < 32` で、`competing_identifier`、`competing_bare`、`prefix_contact`、`prefix_employee`、`prefix_employee_alias`、`short080_employee`、`short080_contact` を除く3,776資料。番号の取り違えの追加試験はこれら7種類で、電話番号は `family < 64`、その他は `family < 32` とした計768資料。別に文字列・ファイル属性の対照を16資料用意した。次のコマンドで実際に投入した対照を生成できる。クラウド側で表示する名前、送るMIME形式、期待する判定、ファイルのSHA-256は `property_ground_truth.json` にまとまっている。ラベル条件は計画に記録しており、この16資料に含めない。
+
+```sh
+python3 scripts/workspace_dlp_benchmark/recheck_property_fixtures.py \
+  --output "$run_dir/properties" --marker DLPVERIFYABCDEFGH
+```
+本文の試験資料を投入する際は、各資料の先頭の対照語の直後に、今回の規則に指定する試験識別文字列を1行加える。アップロード前後の本文の検査値と、生成した資料番号に対応するファイルIDを記録する。
+
+### Google Drive DLPの規則定義を再現する
+
+[`context_recheck_rules.json`](context_recheck_rules.json) に、試験で参照した60規則と9個の独自検知器を格納した。適用先の式、各検知器と本文等の対象、条件の論理、しきい値と最小一致回数、動作、トリガー、重要度、有効状態、使用した評価区分を含む。 `evidence=readback` はAPIから設定を読み戻したもの、`operation` は作成処理の応答だけが確認できたもの。拡張子のAPI拒否と未作成の分類ラベル条件は `attempted_not_applied` に記録した。既定の再現対象は `replay: true`。標準検知器を使う項目の独自方式などは旧設定として参照できる。
+
+二段階の要求生成は通信を行わない。出力と検知器リソースの対応表は非公開の場所に置く。
+
+```sh
+replay_dir=/非公開の保存先
+mkdir "$replay_dir"
+python3 scripts/workspace_dlp_benchmark/recheck_rule_payloads.py detectors \
+  --customer customers/C11111111 --org-unit orgUnits/EXAMPLE \
+  --run-tag context-review --marker DLPVERIFYABCDEFGH \
+  --output "$replay_dir/detector-requests.json"
+# 各 body を作成要求として送り、操作の完了と設定の読み戻しを確認する。
+# 返却されたリソース名を検知器リクエストの key に対応付け、detector-resources.json に保存する。
+python3 scripts/workspace_dlp_benchmark/recheck_rule_payloads.py rules \
+  --customer customers/C11111111 --org-unit orgUnits/EXAMPLE \
+  --run-tag context-review --marker DLPVERIFYABCDEFGH \
+  --resources "$replay_dir/detector-resources.json" \
+  --output "$replay_dir/rule-requests.json"
+```
+
+上の顧客、組織部門、試験識別文字列は例。組織部門を試験専用にしてから、必要に応じて各 `body` を Cloud Identity Policy API の `policies.create` に送る。各リソースの非同期処理を追い、`policies.get` で動作、範囲、条件式、有効状態を検証する。監査の読み取りでは `Reports API` の `content_matched` をファイルID・規則ID・観測窓で突き合わせる。肯定と否定の両方が記録された資料、対照の発火がない資料は未判定とし、TP・TN・FP・FNとは別に保存する。[Policy APIの作成と更新](https://docs.cloud.google.com/identity/docs/how-to/create-patch-delete-policies)・[規則の監査イベント](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/rules)
