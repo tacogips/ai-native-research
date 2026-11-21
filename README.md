@@ -6,6 +6,10 @@
 
 [7社の比較と日本法への事前調査](research/legal_domain/ai_vendor_ccpa_gdpr_appi_screening_20261109.md)。OpenAI、Anthropic、Microsoft、AWS、Google Cloud、Mistral AIは公開契約本文、Cohereは対応方針と契約締結条件を確認。学習不使用と保存、製品・契約経路、外国への提供を分け、日本の個人情報保護法に向けた確認票を整理した。[比較CSV](research/legal_domain/ai_vendor_ccpa_gdpr_comparison_20261109.csv)、[出典確認台帳](research/legal_domain/ai_vendor_ccpa_gdpr_sources_20261109.json)。各社や全用途の適法性を認定するものではない。
 
+## 個人データの処理活動記録（RoPA）（2026年11月20日）
+
+[RoPAサービスの機能・API・国内外導入事例](research/technology/ropa_services_comparison_20261120.md)。指定9名称を対象に、処理活動の登録・更新、帳票・版管理、APIの公開範囲を比較。デンソーの国内台帳運用やBritish Councilの帳票利用など、実際に公表された用途を整理した。提供元を特定できなかったDataCailは、類似名のDataGrailを参考として掲載した。
+
 ## 全社PCに常駐する機密データ監視（2026年10月16日）
 
 [個人情報検知のための公開データセットの再調査（2026年11月11日）](research/technology/pii_detection_public_datasets_20261111.md)。日本語の直接候補7系統、補助資料4系統、海外中心の参考6系統。新公開のNemotron-PII-Japan 10万文書、Meddies日本語49,604件を追加し、正解の網羅性、利用条件、派生資料の重複、説明と配布件数の不一致を整理した。[出典確認記録](research/technology/pii_detection_public_dataset_sources_20261111.json)。
